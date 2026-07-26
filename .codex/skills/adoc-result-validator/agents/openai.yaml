@@ -1,0 +1,4 @@
+interface:
+  display_name: "DT ADOC Result Validator"
+  short_description: "Validate MaBoSS outputs and scientific claims"
+  default_prompt: "Use $adoc-result-validator to validate a MaBoSS run, its artifacts, and the claims supported by them."

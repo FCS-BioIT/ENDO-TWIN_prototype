@@ -1,0 +1,4 @@
+interface:
+  display_name: "MaBoSS Digital Twin"
+  short_description: "Build and review patient-specific MaBoSS models"
+  default_prompt: "Use $maboss-digital-twin to design or review a patient-specific MaBoSS digital-twin analysis."

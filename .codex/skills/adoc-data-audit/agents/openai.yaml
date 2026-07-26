@@ -1,0 +1,4 @@
+interface:
+  display_name: "DT ADOC Data Audit"
+  short_description: "Audit ADOC inputs and preprocessing evidence"
+  default_prompt: "Use $adoc-data-audit to inspect the ADOC data inputs and define an evidence-preserving preprocessing contract."

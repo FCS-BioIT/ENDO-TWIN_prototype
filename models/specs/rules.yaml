@@ -1,0 +1,351 @@
+{
+  "schema_version": "1.0",
+  "model_id": "adoc_core",
+  "baseline_version": "adoc-core-v0.1.0",
+  "rules": [
+    {
+      "node_id": "IN_E2",
+      "expression": "IN_E2",
+      "evidence_ids": ["SOFIA-HT-001"],
+      "variant_id": "phase1_provisional_core",
+      "status": "provisional",
+      "rationale": "Input nodes self-maintain their configured initial state."
+    },
+    {
+      "node_id": "IN_PROGESTIN",
+      "expression": "IN_PROGESTIN",
+      "evidence_ids": ["SOFIA-HT-001"],
+      "variant_id": "phase1_provisional_core",
+      "status": "provisional",
+      "rationale": "Input nodes self-maintain their configured initial state."
+    },
+    {
+      "node_id": "IN_cAMP",
+      "expression": "IN_cAMP",
+      "evidence_ids": ["SOFIA-HT-001"],
+      "variant_id": "phase1_provisional_core",
+      "status": "provisional",
+      "rationale": "Input nodes self-maintain their configured initial state."
+    },
+    {
+      "node_id": "IN_XAV939",
+      "expression": "IN_XAV939",
+      "evidence_ids": ["SOFIA-HT-001"],
+      "variant_id": "phase1_provisional_core",
+      "status": "provisional",
+      "rationale": "Input nodes self-maintain their configured initial state."
+    },
+    {
+      "node_id": "IN_MIFEPRISTONE",
+      "expression": "IN_MIFEPRISTONE",
+      "evidence_ids": ["SOFIA-HT-002"],
+      "variant_id": "phase1_provisional_core",
+      "status": "provisional",
+      "rationale": "Input nodes self-maintain their configured initial state."
+    },
+    {
+      "node_id": "IN_ANTI_SPP1",
+      "expression": "IN_ANTI_SPP1",
+      "evidence_ids": ["SOFIA-CCC-002"],
+      "variant_id": "phase1_provisional_core",
+      "status": "provisional",
+      "rationale": "Input nodes self-maintain their configured initial state."
+    },
+    {
+      "node_id": "IN_EMBRYO_PRESENT",
+      "expression": "IN_EMBRYO_PRESENT",
+      "evidence_ids": ["SOFIA-ADH-001", "SOFIA-ADH-002", "SOFIA-ADH-003"],
+      "variant_id": "phase1_provisional_core",
+      "status": "provisional",
+      "rationale": "Input nodes self-maintain their configured initial state."
+    },
+    {
+      "node_id": "IN_TROPHECTODERM_COMPETENT",
+      "expression": "IN_TROPHECTODERM_COMPETENT",
+      "evidence_ids": ["SOFIA-ADH-001", "SOFIA-ADH-002", "SOFIA-ADH-003"],
+      "variant_id": "phase1_provisional_core",
+      "status": "provisional",
+      "rationale": "Input nodes self-maintain their configured initial state."
+    },
+    {
+      "node_id": "E_PGR",
+      "expression": "IN_PROGESTIN and not IN_MIFEPRISTONE",
+      "evidence_ids": ["SOFIA-HT-001", "SOFIA-HT-002"],
+      "variant_id": "phase1_provisional_core",
+      "status": "provisional",
+      "rationale": "Progestin exposure activates the epithelial receptor abstraction and mifepristone antagonizes it."
+    },
+    {
+      "node_id": "E_AXIN",
+      "expression": "IN_XAV939",
+      "evidence_ids": ["SOFIA-HT-001"],
+      "variant_id": "phase1_provisional_xav939",
+      "status": "provisional",
+      "rationale": "Minimal XAV939 bridge retained without a fuller WNT module."
+    },
+    {
+      "node_id": "E_IHH",
+      "expression": "E_PGR",
+      "evidence_ids": ["SOFIA-CCC-001"],
+      "variant_id": "phase1_candidate_ihh",
+      "status": "provisional_candidate",
+      "rationale": "Collapsed epithelial IHH bridge used until a fuller SOX17 and GATA2 gate is curated."
+    },
+    {
+      "node_id": "E_SECRETORY_STATE",
+      "expression": "IN_E2 and E_PGR",
+      "evidence_ids": ["SOFIA-HT-001", "SOFIA-SC-001"],
+      "variant_id": "phase1_provisional_core",
+      "status": "provisional",
+      "rationale": "Compact epithelial receptive state requiring staged E2 exposure and progestin signaling; XAV939 dependence is tracked separately as an uncertain-rule variant."
+    },
+    {
+      "node_id": "E_PAEP",
+      "expression": "E_SECRETORY_STATE",
+      "evidence_ids": ["SOFIA-EPI-001", "SOFIA-EPI-002"],
+      "variant_id": "phase1_provisional_core",
+      "status": "provisional",
+      "rationale": "PAEP is treated as a direct readout of the compact epithelial state."
+    },
+    {
+      "node_id": "E_SPP1_EXPR",
+      "expression": "E_SECRETORY_STATE",
+      "evidence_ids": ["SOFIA-SC-001", "SOFIA-CCC-002"],
+      "variant_id": "phase1_candidate_spp1",
+      "status": "provisional_candidate",
+      "rationale": "SPP1 remains part of the epithelial readout and a provisional adhesion ligand source."
+    },
+    {
+      "node_id": "S_PGR",
+      "expression": "IN_PROGESTIN and not IN_MIFEPRISTONE",
+      "evidence_ids": ["SOFIA-HT-001", "SOFIA-HT-002"],
+      "variant_id": "phase1_provisional_core",
+      "status": "provisional",
+      "rationale": "Progestin exposure activates the stromal receptor abstraction and mifepristone antagonizes it."
+    },
+    {
+      "node_id": "S_PKA",
+      "expression": "IN_cAMP",
+      "evidence_ids": ["SOFIA-HT-001"],
+      "variant_id": "phase1_provisional_core",
+      "status": "provisional",
+      "rationale": "Minimal cAMP bridge retained for the decidual core."
+    },
+    {
+      "node_id": "S_CEBPB",
+      "expression": "S_PKA",
+      "evidence_ids": ["SOFIA-HT-001"],
+      "variant_id": "phase1_provisional_core",
+      "status": "provisional_candidate",
+      "rationale": "Compact CEBPB-like bridge connecting cAMP to the decidual readout module."
+    },
+    {
+      "node_id": "S_NR2F2",
+      "expression": "E_IHH and S_PGR",
+      "evidence_ids": ["SOFIA-CCC-001"],
+      "variant_id": "phase1_candidate_ihh",
+      "status": "provisional_candidate",
+      "rationale": "Collapsed stromal IHH-responsive bridge retained until a fuller PTCH-SMO-GLI path is curated."
+    },
+    {
+      "node_id": "S_BMP2",
+      "expression": "(S_PGR and S_PKA) or S_NR2F2",
+      "evidence_ids": ["SOFIA-SC-002", "SOFIA-CCC-001"],
+      "variant_id": "phase1_provisional_core",
+      "status": "provisional",
+      "rationale": "BMP2 can arise from the compact progestin-cAMP decidual module or the retained IHH-NR2F2 crosstalk bridge."
+    },
+    {
+      "node_id": "S_IL11",
+      "expression": "S_BMP2",
+      "evidence_ids": ["SOFIA-SC-002"],
+      "variant_id": "phase1_provisional_core",
+      "status": "provisional",
+      "rationale": "IL11 is treated as a downstream readout of the compact stromal program."
+    },
+    {
+      "node_id": "S_FOXO1",
+      "expression": "S_PGR and S_PKA",
+      "evidence_ids": ["SOFIA-STR-001", "SOFIA-SC-002"],
+      "variant_id": "phase1_provisional_core",
+      "status": "provisional_candidate",
+      "rationale": "Compact FOXO1-like bridge tied directly to the retained progestin-cAMP decidual core in the bounded Phase 1B executable model."
+    },
+    {
+      "node_id": "S_DECIDUALIZED",
+      "expression": "S_PGR and S_PKA and S_BMP2",
+      "evidence_ids": ["SOFIA-STR-001", "SOFIA-SC-002"],
+      "variant_id": "phase1_provisional_core",
+      "status": "provisional",
+      "rationale": "Compact stromal decidual state."
+    },
+    {
+      "node_id": "S_PRL",
+      "expression": "S_DECIDUALIZED",
+      "evidence_ids": ["SOFIA-STR-001"],
+      "variant_id": "phase1_provisional_core",
+      "status": "provisional",
+      "rationale": "PRL is treated as a downstream decidual readout."
+    },
+    {
+      "node_id": "S_IGFBP1",
+      "expression": "S_DECIDUALIZED",
+      "evidence_ids": ["SOFIA-STR-001"],
+      "variant_id": "phase1_provisional_core",
+      "status": "provisional",
+      "rationale": "IGFBP1 is treated as a downstream decidual readout."
+    },
+    {
+      "node_id": "X_SPP1_LUMEN_FREE",
+      "expression": "E_SPP1_EXPR and not IN_ANTI_SPP1",
+      "evidence_ids": ["SOFIA-CCC-002"],
+      "variant_id": "phase1_candidate_spp1",
+      "status": "provisional_candidate",
+      "rationale": "Retains only the free-ligand abstraction needed for the anti-SPP1 perturbation."
+    },
+    {
+      "node_id": "X_MATERNAL_INTERFACE_READY",
+      "expression": "(E_SECRETORY_STATE or S_DECIDUALIZED or S_BMP2) and not IN_MIFEPRISTONE",
+      "evidence_ids": ["SOFIA-CCC-001", "SOFIA-ADH-002"],
+      "variant_id": "phase1_candidate_adhesion_interface",
+      "status": "provisional_candidate",
+      "rationale": "Separates maternal conditioning from the explicit embryo challenge and keeps the interface contract modular in the bounded executable model."
+    },
+    {
+      "node_id": "X_INTERFACE_SPP1_RELAY",
+      "expression": "X_INTERFACE_SPP1_RELAY",
+      "evidence_ids": ["SOFIA-CCC-002"],
+      "variant_id": "phase1_candidate_adhesion_interface",
+      "status": "structural_uncertainty",
+      "rationale": "Bounded stochastic relay used to keep the SPP1-linked route partial without inventing a resolved receptor-specific mechanism."
+    },
+    {
+      "node_id": "X_INTERFACE_REDUNDANT_RELAY",
+      "expression": "X_INTERFACE_REDUNDANT_RELAY",
+      "evidence_ids": ["SOFIA-ADH-002"],
+      "variant_id": "phase1_candidate_adhesion_interface",
+      "status": "structural_uncertainty",
+      "rationale": "Bounded stochastic redundant route that preserves non-zero maternal competence after anti-SPP1 challenge."
+    },
+    {
+      "node_id": "X_INTERFACE_ANTIADHESIVE_RELAY",
+      "expression": "X_INTERFACE_ANTIADHESIVE_RELAY",
+      "evidence_ids": ["SOFIA-ADH-002"],
+      "variant_id": "phase1_candidate_adhesion_interface",
+      "status": "structural_uncertainty",
+      "rationale": "Bounded stochastic antiadhesive route used to allow intermediate adhesion probabilities without assigning unsupported molecular detail."
+    },
+    {
+      "node_id": "X_ADHESION_ROUTE_SPP1",
+      "expression": "X_MATERNAL_INTERFACE_READY and X_SPP1_LUMEN_FREE and X_INTERFACE_SPP1_RELAY",
+      "evidence_ids": ["SOFIA-CCC-002", "SOFIA-ADH-002"],
+      "variant_id": "phase1_candidate_adhesion_interface",
+      "status": "provisional_candidate",
+      "rationale": "SPP1-linked positive adhesion route kept modular so anti-SPP1 only removes one branch."
+    },
+    {
+      "node_id": "X_ADHESION_ROUTE_REDUNDANT",
+      "expression": "X_MATERNAL_INTERFACE_READY and X_INTERFACE_REDUNDANT_RELAY",
+      "evidence_ids": ["SOFIA-ADH-002"],
+      "variant_id": "phase1_candidate_adhesion_interface",
+      "status": "provisional_candidate",
+      "rationale": "Partially redundant positive adhesion branch retained independently of free luminal SPP1."
+    },
+    {
+      "node_id": "X_ANTIADHESIVE_ROUTE",
+      "expression": "X_MATERNAL_INTERFACE_READY and X_INTERFACE_ANTIADHESIVE_RELAY and IN_ANTI_SPP1",
+      "evidence_ids": ["SOFIA-ADH-002"],
+      "variant_id": "phase1_candidate_adhesion_interface",
+      "status": "provisional_candidate",
+      "rationale": "Compact antiadhesive branch opposing the positive interface routes during the anti-SPP1 maternal challenge."
+    },
+    {
+      "node_id": "OUT_EPITHELIAL_RECEPTIVE",
+      "expression": "E_SECRETORY_STATE",
+      "evidence_ids": ["SOFIA-SC-001", "SOFIA-EPI-001", "SOFIA-EPI-002"],
+      "variant_id": "phase1_provisional_core",
+      "status": "provisional",
+      "rationale": "Primary epithelial phenotype in the bounded executable model."
+    },
+    {
+      "node_id": "OUT_EPITHELIAL_SECRETORY",
+      "expression": "E_SECRETORY_STATE",
+      "evidence_ids": ["SOFIA-SC-001"],
+      "variant_id": "phase1_provisional_core",
+      "status": "provisional",
+      "rationale": "Supporting epithelial phenotype alias."
+    },
+    {
+      "node_id": "OUT_STROMAL_DECIDUALIZED",
+      "expression": "S_DECIDUALIZED",
+      "evidence_ids": ["SOFIA-SC-002", "SOFIA-STR-001"],
+      "variant_id": "phase1_provisional_core",
+      "status": "provisional",
+      "rationale": "Primary stromal phenotype in the bounded executable model."
+    },
+    {
+      "node_id": "OUT_CROSSTALK_FUNCTIONAL",
+      "expression": "E_IHH and S_BMP2",
+      "evidence_ids": ["SOFIA-CCC-001"],
+      "variant_id": "phase1_candidate_ihh",
+      "status": "provisional_candidate",
+      "rationale": "Compact crosstalk phenotype used for traceability in the bounded executable model."
+    },
+    {
+      "node_id": "OUT_MATERNAL_ADHESION_COMPETENCE",
+      "expression": "((X_ADHESION_ROUTE_SPP1 or X_ADHESION_ROUTE_REDUNDANT) and not X_ANTIADHESIVE_ROUTE) and not IN_MIFEPRISTONE and (not IN_ANTI_SPP1 or X_ADHESION_ROUTE_REDUNDANT)",
+      "evidence_ids": ["SOFIA-CCC-002", "SOFIA-ADH-002"],
+      "variant_id": "phase1_candidate_adhesion_interface",
+      "status": "provisional_candidate",
+      "rationale": "Separates maternal permissiveness from observed embryo adhesion while keeping SPP1 as one route within a modular interface."
+    },
+    {
+      "node_id": "OUT_STABLE_ADHESION",
+      "expression": "OUT_MATERNAL_ADHESION_COMPETENCE and IN_EMBRYO_PRESENT and IN_TROPHECTODERM_COMPETENT",
+      "evidence_ids": ["SOFIA-ADH-001", "SOFIA-ADH-002", "SOFIA-ADH-003"],
+      "variant_id": "phase1_provisional_core",
+      "status": "provisional",
+      "rationale": "Model-conditional stable adhesion readout."
+    },
+    {
+      "node_id": "OUT_BARRIER_DAMAGED",
+      "expression": "0",
+      "evidence_ids": [],
+      "variant_id": "phase1_placeholder_safety",
+      "status": "structural_placeholder",
+      "rationale": "No explicit damage module is implemented in Phase 1."
+    },
+    {
+      "node_id": "OUT_BARRIER_REMODELED",
+      "expression": "OUT_EPITHELIAL_RECEPTIVE and not OUT_BARRIER_DAMAGED",
+      "evidence_ids": [],
+      "variant_id": "phase1_placeholder_safety",
+      "status": "structural_placeholder",
+      "rationale": "Provisional remodeling placeholder used to keep barrier outputs distinct."
+    },
+    {
+      "node_id": "OUT_BARRIER_MATURE",
+      "expression": "not OUT_BARRIER_DAMAGED and not OUT_BARRIER_REMODELED",
+      "evidence_ids": [],
+      "variant_id": "phase1_placeholder_safety",
+      "status": "structural_placeholder",
+      "rationale": "Complementary placeholder to the remodeled barrier output."
+    },
+    {
+      "node_id": "OUT_EPITHELIAL_VIABLE",
+      "expression": "1",
+      "evidence_ids": [],
+      "variant_id": "phase1_placeholder_safety",
+      "status": "structural_placeholder",
+      "rationale": "No explicit epithelial cell-fate module is implemented in Phase 1."
+    },
+    {
+      "node_id": "OUT_STROMAL_VIABLE",
+      "expression": "1",
+      "evidence_ids": [],
+      "variant_id": "phase1_placeholder_safety",
+      "status": "structural_placeholder",
+      "rationale": "No explicit stromal cell-fate module is implemented in Phase 1."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.1",
+  "baseline_version": "adoc-core-v0.1.0",
+  "scenarios": [
+    {
+      "scenario_id": "phase1b_sequential_relays",
+      "rate_policy": "Use MaBoSS implicit default transition rates. Intermediate adhesion probabilities arise from sequential continuation, finite relative phase horizons, and bounded relay-state initial distributions rather than fitted kinetic parameters.",
+      "simulation_defaults": {
+        "discrete_time": 0,
+        "use_physrandgen": false,
+        "seed_pseudorandom": 1,
+        "sample_count": 2000,
+        "max_time": 4.0,
+        "time_tick": 0.1,
+        "thread_count": 1
+      },
+      "time_units": "relative_only",
+      "relay_initial_states": {
+        "X_INTERFACE_SPP1_RELAY": 0.95,
+        "X_INTERFACE_REDUNDANT_RELAY": 0.01,
+        "X_INTERFACE_ANTIADHESIVE_RELAY": 0.05
+      },
+      "rule_overrides": {},
+      "evidence_ids": ["SOFIA-ADH-002", "SOFIA-CCC-002"],
+      "notes": "Default Phase 1B sequential scenario. Relay states are bounded structural uncertainty, not calibrated receptor occupancies."
+    },
+    {
+      "scenario_id": "phase1b_xav939_required",
+      "rate_policy": "Use MaBoSS implicit default transition rates with the stricter XAV939/E_AXIN secretory-state gate enabled as an uncertain-rule variant.",
+      "simulation_defaults": {
+        "discrete_time": 0,
+        "use_physrandgen": false,
+        "seed_pseudorandom": 1,
+        "sample_count": 2000,
+        "max_time": 4.0,
+        "time_tick": 0.1,
+        "thread_count": 1
+      },
+      "time_units": "relative_only",
+      "relay_initial_states": {
+        "X_INTERFACE_SPP1_RELAY": 0.95,
+        "X_INTERFACE_REDUNDANT_RELAY": 0.01,
+        "X_INTERFACE_ANTIADHESIVE_RELAY": 0.05
+      },
+      "rule_overrides": {
+        "E_SECRETORY_STATE": "IN_E2 and E_PGR and E_AXIN"
+      },
+      "variant_ids": ["phase1_candidate_xav939_gate"],
+      "evidence_ids": ["SOFIA-HT-001", "SOFIA-ADH-002", "SOFIA-CCC-002"],
+      "notes": "Assumption-sensitivity scenario keeping XAV939 as an obligatory permissive gate."
+    }
+  ]
+}

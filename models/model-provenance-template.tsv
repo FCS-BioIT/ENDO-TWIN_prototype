@@ -1,0 +1,4 @@
+record_type	identifier	definition	direction_or_sign	evidence_source	evidence_class	confidence	notes
+node	REPLACE_NODE	Replace with a biological definition	not_applicable	REPLACE_SOURCE	curated_evidence	REPLACE_CONFIDENCE	
+edge	REPLACE_SOURCE_NODE->REPLACE_TARGET_NODE	Replace with interaction definition	activation_or_inhibition	REPLACE_SOURCE	curated_evidence	REPLACE_CONFIDENCE	
+phenotype	REPLACE_PHENOTYPE	Replace with Boolean phenotype definition	not_applicable	REPLACE_SOURCE	model_assumption	REPLACE_CONFIDENCE	

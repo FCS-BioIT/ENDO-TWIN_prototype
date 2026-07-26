@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "baseline_version": "adoc-core-v0.1.0",
+  "variant_groups": [
+    {
+      "variant_id": "phase1_candidate_ihh",
+      "affected_nodes": ["E_IHH", "S_NR2F2", "OUT_CROSSTALK_FUNCTIONAL"],
+      "default_expression_summary": "Collapsed epithelial PGR -> IHH -> stromal NR2F2 bridge.",
+      "alternative_expression_summary": "Future variants may require explicit SOX17 and GATA2 on the epithelial side and PTCH-SMO-GLI on the stromal side.",
+      "evidence_ids": ["SOFIA-CCC-001"],
+      "notes": "Kept executable because the phase-1 question explicitly includes the IHH/COUP-TFII/BMP2 program, but the bridge remains provisional."
+    },
+    {
+      "variant_id": "phase1_candidate_spp1",
+      "affected_nodes": ["E_SPP1_EXPR", "X_SPP1_LUMEN_FREE", "X_ADHESION_ROUTE_SPP1"],
+      "default_expression_summary": "Free luminal SPP1 contributes through one modular positive adhesion route after neutralizing-antibody gating.",
+      "alternative_expression_summary": "Future variants may require a resolved epithelial or embryo-side receptor module before the SPP1-linked route is retained.",
+      "evidence_ids": ["SOFIA-CCC-002"],
+      "notes": "Retained only as a provisional mechanistic perturbation bridge; anti-SPP1 must not zero the whole maternal interface."
+    },
+    {
+      "variant_id": "phase1_candidate_xav939_gate",
+      "affected_nodes": ["E_AXIN", "E_SECRETORY_STATE", "OUT_EPITHELIAL_RECEPTIVE"],
+      "default_expression_summary": "The compact epithelial secretory state does not require XAV939 by default.",
+      "alternative_expression_summary": "A stricter uncertain-rule variant may require E_AXIN/XAV939 as an additional epithelial secretory-state gate.",
+      "evidence_ids": ["SOFIA-HT-001"],
+      "notes": "Moves XAV939 necessity into an explicit uncertainty track instead of treating it as an obligatory core rule."
+    },
+    {
+      "variant_id": "phase1_candidate_adhesion_interface",
+      "affected_nodes": [
+        "X_MATERNAL_INTERFACE_READY",
+        "X_INTERFACE_SPP1_RELAY",
+        "X_INTERFACE_REDUNDANT_RELAY",
+        "X_INTERFACE_ANTIADHESIVE_RELAY",
+        "X_ADHESION_ROUTE_SPP1",
+        "X_ADHESION_ROUTE_REDUNDANT",
+        "X_ANTIADHESIVE_ROUTE",
+        "OUT_MATERNAL_ADHESION_COMPETENCE"
+      ],
+      "default_expression_summary": "Maternal adhesion competence emerges from modular positive and antiadhesive routes with bounded stochastic relay states.",
+      "alternative_expression_summary": "Future variants may replace the bounded relay states with resolved receptor, glycocalyx, and cytoskeletal interface modules.",
+      "evidence_ids": ["SOFIA-CCC-002", "SOFIA-ADH-002"],
+      "notes": "This uncertainty group exists so intermediate adhesion probabilities can emerge without claiming resolved interface biology."
+    },
+    {
+      "variant_id": "phase1_placeholder_safety",
+      "affected_nodes": [
+        "OUT_BARRIER_DAMAGED",
+        "OUT_BARRIER_REMODELED",
+        "OUT_BARRIER_MATURE",
+        "OUT_EPITHELIAL_VIABLE",
+        "OUT_STROMAL_VIABLE"
+      ],
+      "default_expression_summary": "Safety outputs are structural placeholders and not calibrated biological safety phenotypes.",
+      "alternative_expression_summary": "Future variants must replace these placeholders with explicit barrier, apoptosis, inflammation, and senescence modules.",
+      "evidence_ids": [],
+      "notes": "These nodes exist to keep the phenotype contract explicit without inventing unsupported safety biology."
+    }
+  ]
+}

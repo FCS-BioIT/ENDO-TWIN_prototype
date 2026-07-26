@@ -1,0 +1,51 @@
+edge_id	source	target	sign	mechanism	refs	confidence	tier	notes
+EDGE-001	E_SECRETORY_STATE	E_LIF	activation	state_to_ligand	REF-023;REF-024;REF-033;REF-036	7	core_extension	Candidate human-facing abstraction; exact hormonal induction logic remains uncertain.
+EDGE-002	E_KLF12_HIGH	E_LIF	inhibition	transcriptional	REF-037	5	expansion	RIF-associated human mechanism.
+EDGE-003	E_LIF	E_GP130_STAT3	activation	ligand_receptor_pathway	REF-030;REF-032;REF-033;REF-036	9	core_extension	Central attachment pathway.
+EDGE-004	E_GP130_STAT3	E_RECEPTIVE_SURFACE	activation	pathway_to_state	REF-030;REF-032;REF-033	8	core_extension	Junctional/remodeling gate.
+EDGE-005	E_GP130_STAT3	E_CD98_CD9	activation	pathway_to_effector	REF-008	6	core_extension	LIF induction reported in human epithelial adhesion system.
+EDGE-006	E_GP130_STAT3	E_ITGAVB3_5	activation	pathway_to_effector	REF-038	6	core_extension	Human cell-model link.
+EDGE-007	E_GP130_STAT3	E_ANXA2_ACTIN	activation	candidate_pathway_to_effector	REF-009;REF-030	4	uncertain_variant	No direct LIF-to-ANXA2 proof in this inventory; use only as a tested variant.
+EDGE-008	E_IHH	S_NR2F2	activation	paracrine	REF-002;REF-025;REF-026	8	existing_core	Already represented in baseline.
+EDGE-009	S_NR2F2	S_BMP2	activation	transcriptional	REF-026;REF-027	8	existing_core	Already represented in baseline.
+EDGE-010	S_BMP2	S_HAND2	activation	state_to_transcription_factor	REF-027;REF-028;REF-029	7	core_extension	Compact relay; direct ordering may vary by context.
+EDGE-011	S_PGR	S_HAND2	activation	hormone_to_transcription_factor	REF-028;REF-029	8	core_extension	Conserved progesterone-sensitive stromal node.
+EDGE-012	S_HAND2	S_FGF_MITOGENIC	inhibition	transcriptional	REF-028	8	expansion	Family-level FGF collapse.
+EDGE-013	S_FGF_MITOGENIC	E_ESTROGENIC_PROLIFERATION	activation	paracrine	REF-028	8	expansion	Stromal-to-epithelial mitogenic relay.
+EDGE-014	S_HAND2	E_ESTROGENIC_PROLIFERATION	inhibition	cross_compartment	REF-028	8	expansion	Net effect through FGF suppression.
+EDGE-015	E_ESTROGENIC_PROLIFERATION	E_RECEPTIVE_SURFACE	inhibition	state_to_state	REF-025;REF-026;REF-028	8	expansion	Persistent proliferation is nonreceptive.
+EDGE-016	E_SECRETORY_STATE	E_PODXL	inhibition	state_to_barrier	REF-013;REF-014	7	core_extension	PODXL falls in receptive luminal epithelium.
+EDGE-017	E_PODXL	E_RECEPTIVE_SURFACE	inhibition	barrier_to_state	REF-013;REF-014	7	core_extension	Strong human anti-adhesive effect.
+EDGE-018	E_SECRETORY_STATE	E_PC6	activation	state_to_protease	REF-010;REF-011	7	core_extension	Window-specific PC6.
+EDGE-019	E_PC6	E_DAG1_CLEAVED	activation	proteolysis	REF-011	8	core_extension	Direct cleavage evidence.
+EDGE-020	E_PC6	E_DAG1_FULL	inhibition	proteolysis	REF-011	8	core_extension	Removal of alpha-DG N-terminus.
+EDGE-021	E_DAG1_FULL	E_RECEPTIVE_SURFACE	inhibition	barrier_to_state	REF-011	7	core_extension	Full-length form blocks attachment.
+EDGE-022	E_DAG1_CLEAVED	E_RECEPTIVE_SURFACE	activation	surface_to_state	REF-011	7	core_extension	Barrier release.
+EDGE-023	E_SECRETORY_STATE	E_MUC1_BARRIER	inhibition	state_to_glycocalyx	REF-012;REF-025	5	uncertain_variant	Human MUC1 regulation is glycoform-dependent.
+EDGE-024	E_SECRETORY_STATE	E_MUC1_SLEX	activation	state_to_glycoform	REF-012	5	uncertain_variant	Requires a glycosylation program not directly measured.
+EDGE-025	E_MUC1_BARRIER	E_RECEPTIVE_SURFACE	inhibition	glycocalyx_to_state	REF-012;REF-025	6	core_extension	Anti-adhesive branch.
+EDGE-026	E_MUC1_SLEX	E_RECEPTIVE_SURFACE	activation	glycocalyx_to_state	REF-012	6	core_extension	Early-contact rate enhancer.
+EDGE-027	IN_HCG	E_CD98_CD9	activation	external_feedback	REF-008	7	core_extension	Embryo input.
+EDGE-028	IN_HCG	E_CDH1_APICAL	activation	external_feedback	REF-019	8	core_extension	Embryo input.
+EDGE-029	IN_EMBRYO_CONDITIONED_SIGNAL	E_CDH1_APICAL	activation	external_feedback	REF-019	6	core_extension	Fallback external input.
+EDGE-030	E_CD98_CD9	E_RECEPTIVE_SURFACE	activation	effector_to_state	REF-008	7	core_extension	Use as redundant route/rate modifier.
+EDGE-031	E_CDH1_APICAL	E_RECEPTIVE_SURFACE	activation	effector_to_state	REF-019	7	core_extension	Use as first-contact route/rate modifier.
+EDGE-032	E_ANXA2_ACTIN	E_RECEPTIVE_SURFACE	activation	effector_to_state	REF-009	6	core_extension	Cytoskeletal rate modifier.
+EDGE-033	E_SECRETORY_STATE	E_HBEGF	activation	state_to_growth_factor	REF-006	6	core_extension	Receptive phase association.
+EDGE-034	E_HBEGF	E_ITGAVB3_5	activation	growth_factor_to_effector	REF-007	5	uncertain_variant	Reported regulation in epithelial models.
+EDGE-035	E_HBEGF	E_RECEPTIVE_SURFACE	activation	growth_factor_to_state	REF-006;REF-007	6	core_extension	Support/rate modifier.
+EDGE-036	E_SPP1_EXPR	E_RECEPTIVE_SURFACE	activation	ligand_to_state	REF-007;REF-015;REF-022	6	existing_plus_extension	Existing baseline ligand; functional contribution remains provisional.
+EDGE-037	S_DECIDUALIZED	S_SPP1	activation	state_to_ligand	REF-017	6	core_extension	Stromal decidual output.
+EDGE-038	S_DECIDUALIZED	S_TAZ_ECM	activation	state_to_mechanics	REF-035	6	core_extension	Recent causal evidence.
+EDGE-039	S_DECIDUALIZED	S_DECIDUAL_SENESCENCE_BALANCED	activation	state_to_dynamic_program	REF-016	6	expansion	Balanced, time-dependent program.
+EDGE-040	S_TAZ_ECM	X_MECHANICAL_PERMISSIVE_ECM	activation	mechanics	REF-035	6	core_extension	ECM remodeling route.
+EDGE-041	S_DECIDUAL_SENESCENCE_BALANCED	X_MECHANICAL_PERMISSIVE_ECM	activation	dynamic_matrix	REF-016	6	expansion	Dynamic matrix contribution.
+EDGE-042	IN_ER_STRESS_EXCESS	X_MECHANICAL_PERMISSIVE_ECM	inhibition	pathological_input	REF-018	6	core_extension	Excess ER stress prevents normal softening.
+EDGE-043	IN_HIGH_ECM_STIFFNESS	X_MECHANICAL_PERMISSIVE_ECM	inhibition	physical_input	REF-018;REF-035	5	core_extension	Coarse Boolean stiffness state.
+EDGE-044	E_RECEPTIVE_SURFACE	OUT_MATERNAL_ADHESION_COMPETENCE	activation	latent_to_phenotype	REF-001;REF-020;REF-021	7	core_extension	Epithelial gate.
+EDGE-045	S_DECIDUALIZED	OUT_MATERNAL_ADHESION_COMPETENCE	activation	latent_to_phenotype	REF-001;REF-016;REF-020;REF-021	7	core_extension	Stromal gate.
+EDGE-046	X_MECHANICAL_PERMISSIVE_ECM	OUT_MATERNAL_ADHESION_COMPETENCE	activation	latent_to_phenotype	REF-016;REF-018;REF-035	6	core_extension	Mechanical stabilization gate or rate modifier.
+EDGE-047	OUT_MATERNAL_ADHESION_COMPETENCE	OUT_STABLE_ADHESION	activation	phenotype_to_assay	REF-020	9	existing_core	Requires explicit embryo challenge inputs as in baseline.
+EDGE-048	IN_UTERINE_WNT_CUE	IN_TROPHECTODERM_COMPETENT	activation	external_embryo_modifier	REF-034	6	physiboss_later	Maternal cue with embryo-side execution.
+EDGE-049	X_LGALS1_3	E_RECEPTIVE_SURFACE	activation	candidate_interface	REF-015	4	expansion	Computational candidate only.
+EDGE-050	X_BSG_ITGB1	E_RECEPTIVE_SURFACE	activation	candidate_interface	REF-015	4	expansion	Computational candidate only.

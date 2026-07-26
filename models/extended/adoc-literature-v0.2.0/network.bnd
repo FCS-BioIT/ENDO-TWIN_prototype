@@ -1,0 +1,223 @@
+// ADOC literature-supported maternal adhesion extension v0.2.0
+// Internal biology is limited to maternal epithelium and stroma.
+// Embryo-derived presence, competence, contact, hCG, and conditioned cues remain external.
+
+Node IN_E2 {
+  logic = IN_E2;
+}
+
+Node IN_PROGESTIN {
+  logic = IN_PROGESTIN;
+}
+
+Node IN_cAMP {
+  logic = IN_cAMP;
+}
+
+Node IN_XAV939 {
+  logic = IN_XAV939;
+}
+
+Node IN_MIFEPRISTONE {
+  logic = IN_MIFEPRISTONE;
+}
+
+Node IN_ANTI_SPP1 {
+  logic = IN_ANTI_SPP1;
+}
+
+Node IN_EMBRYO_PRESENT {
+  logic = IN_EMBRYO_PRESENT;
+}
+
+Node IN_TROPHECTODERM_COMPETENT {
+  logic = IN_TROPHECTODERM_COMPETENT;
+}
+
+Node IN_EMBRYO_CONTACT {
+  logic = IN_EMBRYO_CONTACT;
+}
+
+Node IN_HCG {
+  logic = IN_HCG;
+}
+
+Node IN_EMBRYO_CONDITIONED_SIGNAL {
+  logic = IN_EMBRYO_CONDITIONED_SIGNAL;
+}
+
+Node IN_ER_STRESS_EXCESS {
+  logic = IN_ER_STRESS_EXCESS;
+}
+
+Node IN_HIGH_ECM_STIFFNESS {
+  logic = IN_HIGH_ECM_STIFFNESS;
+}
+
+Node E_PGR {
+  logic = IN_PROGESTIN and not IN_MIFEPRISTONE;
+}
+
+Node E_IHH {
+  logic = E_PGR;
+}
+
+Node E_SECRETORY_STATE {
+  logic = IN_E2 and E_PGR;
+}
+
+Node E_PAEP {
+  logic = E_SECRETORY_STATE;
+}
+
+Node E_LIF {
+  logic = E_SECRETORY_STATE;
+}
+
+Node E_GP130_STAT3 {
+  logic = E_LIF;
+}
+
+Node E_PODXL {
+  logic = not E_SECRETORY_STATE;
+}
+
+Node E_PC6 {
+  logic = E_SECRETORY_STATE;
+}
+
+Node E_DAG1_FULL {
+  logic = not E_PC6;
+}
+
+Node E_DAG1_CLEAVED {
+  logic = E_PC6;
+}
+
+Node E_MUC1_BARRIER {
+  logic = not E_SECRETORY_STATE;
+}
+
+Node E_MUC1_SLEX {
+  logic = E_SECRETORY_STATE;
+}
+
+Node E_HBEGF {
+  logic = E_SECRETORY_STATE;
+}
+
+Node E_SPP1_EXPR {
+  logic = E_SECRETORY_STATE;
+}
+
+Node E_ITGAVB3_5 {
+  logic = E_LIF or E_HBEGF or E_SECRETORY_STATE;
+}
+
+Node E_CD98_CD9 {
+  logic = E_GP130_STAT3;
+}
+
+Node E_ANXA2_ACTIN {
+  logic = E_SECRETORY_STATE;
+}
+
+Node E_CDH1_APICAL {
+  logic = IN_EMBRYO_CONTACT;
+}
+
+Node E_RECEPTIVE_SURFACE {
+  logic = E_GP130_STAT3 and not E_PODXL and not E_DAG1_FULL and not E_MUC1_BARRIER and (E_CD98_CD9 or E_CDH1_APICAL or E_ANXA2_ACTIN or E_HBEGF or E_DAG1_CLEAVED or E_MUC1_SLEX or E_ITGAVB3_5 or X_SPP1_LUMEN_FREE);
+}
+
+Node S_PGR {
+  logic = IN_PROGESTIN and not IN_MIFEPRISTONE;
+}
+
+Node S_PKA {
+  logic = IN_cAMP;
+}
+
+Node S_NR2F2 {
+  logic = E_IHH and S_PGR;
+}
+
+Node S_BMP2 {
+  logic = (S_PGR and S_PKA) or S_NR2F2;
+}
+
+Node S_HAND2 {
+  logic = S_BMP2 or S_PGR;
+}
+
+Node S_DECIDUALIZED {
+  logic = S_PGR and S_PKA and S_BMP2;
+}
+
+Node S_PRL {
+  logic = S_DECIDUALIZED;
+}
+
+Node S_IGFBP1 {
+  logic = S_DECIDUALIZED;
+}
+
+Node S_SPP1 {
+  logic = S_DECIDUALIZED;
+}
+
+Node S_TAZ_ECM {
+  logic = S_DECIDUALIZED;
+}
+
+Node X_MECHANICAL_STRESS_RELAY {
+  logic = X_MECHANICAL_STRESS_RELAY;
+}
+
+Node X_MECHANICAL_PERMISSIVE_ECM {
+  logic = S_DECIDUALIZED and S_TAZ_ECM and not ((IN_ER_STRESS_EXCESS or IN_HIGH_ECM_STIFFNESS) and X_MECHANICAL_STRESS_RELAY);
+}
+
+Node X_SPP1_LUMEN_FREE {
+  logic = (E_SPP1_EXPR or S_SPP1) and not IN_ANTI_SPP1;
+}
+
+Node X_INTERFACE_SPP1_RELAY {
+  logic = X_INTERFACE_SPP1_RELAY;
+}
+
+Node X_INTERFACE_REDUNDANT_RELAY {
+  logic = X_INTERFACE_REDUNDANT_RELAY;
+}
+
+Node X_INTERFACE_ANTIADHESIVE_RELAY {
+  logic = X_INTERFACE_ANTIADHESIVE_RELAY;
+}
+
+Node X_ADHESION_ROUTE_SPP1 {
+  logic = E_RECEPTIVE_SURFACE and X_SPP1_LUMEN_FREE and E_ITGAVB3_5 and X_INTERFACE_SPP1_RELAY;
+}
+
+Node X_ADHESION_ROUTE_REDUNDANT {
+  logic = E_RECEPTIVE_SURFACE and (E_CD98_CD9 or E_CDH1_APICAL or E_ANXA2_ACTIN or E_HBEGF or E_DAG1_CLEAVED or E_MUC1_SLEX) and X_INTERFACE_REDUNDANT_RELAY;
+}
+
+Node X_ANTIADHESIVE_ROUTE {
+  logic = (E_PODXL or E_DAG1_FULL or E_MUC1_BARRIER) and X_INTERFACE_ANTIADHESIVE_RELAY;
+}
+
+Node OUT_EPITHELIAL_RECEPTIVE {
+  logic = E_RECEPTIVE_SURFACE and E_PAEP;
+}
+
+Node OUT_STROMAL_DECIDUALIZED {
+  logic = S_DECIDUALIZED and S_PRL and S_IGFBP1;
+}
+
+Node OUT_MATERNAL_ADHESION_COMPETENCE {
+  logic = E_RECEPTIVE_SURFACE and S_DECIDUALIZED and X_MECHANICAL_PERMISSIVE_ECM and (X_ADHESION_ROUTE_SPP1 or X_ADHESION_ROUTE_REDUNDANT) and not X_ANTIADHESIVE_ROUTE;
+}
+
+Node OUT_STABLE_ADHESION {
+  logic = OUT_MATERNAL_ADHESION_COMPETENCE and IN_EMBRYO_PRESENT and IN_TROPHECTODERM_COMPETENT and IN_EMBRYO_CONTACT;
+}

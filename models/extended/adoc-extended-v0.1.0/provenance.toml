@@ -1,0 +1,12 @@
+schema_version = "1.0"
+model_id = "adoc_extended"
+baseline_version = "adoc-extended-v0.1.0"
+status = "deferred"
+generated_on = "2026-07-25"
+
+[claim_boundary]
+validation_label = "none"
+claim_ceiling = "Reserved path only. No executable extended topology or condition configs are accepted in Phase 1."
+
+[notes]
+reason = "Extended modules remain out of scope for the bounded Phase 1 implementation."

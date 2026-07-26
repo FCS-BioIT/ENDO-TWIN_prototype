@@ -1,0 +1,121 @@
+schema_version = "1.0"
+model_id = "adoc_literature"
+baseline_version = "adoc-literature-v0.2.0"
+parent_baseline_version = "adoc-core-v0.1.0"
+status = "provisional_literature_extension"
+generated_on = "2026-07-25"
+
+[claim_boundary]
+validation_label = "structural_only"
+claim_ceiling = "Executable maternal-only literature extension with structural and minimal runtime validation only; not a calibrated, patient-specific, or biologically validated digital twin."
+
+[baseline_policy]
+immutable_parent = true
+shared_topology_across_conditions = true
+patient_variants_required_for_personalization = true
+
+[personalization_contract]
+applied = false
+independent_biological_unit = "none_in_this_artifact"
+cohort_inclusion = "not_applicable_condition_level_model"
+notes = "This directory encodes condition-level maternal mechanisms only. Any future patient-contextualized derivative must be versioned separately without editing the parent model in place."
+
+[time_semantics]
+maboss_time_units = "relative_only"
+notes = "No physical time calibration is claimed for this extension."
+
+[simulation_defaults]
+discrete_time = 0
+use_physrandgen = false
+seed_pseudorandom = 1
+sample_count = 20000
+max_time = 4.0
+time_tick = 0.1
+thread_count = 1
+
+[software]
+python = "3.12.x via pixi"
+maboss_python_package = "0.8.15"
+standalone_maboss_binary_on_path = false
+
+[sources]
+parent_network_bnd = "models/baseline/adoc-core-v0.1.0/network.bnd"
+parent_baseline_cfg = "models/baseline/adoc-core-v0.1.0/baseline.cfg"
+parent_node_dictionary = "models/baseline/adoc-core-v0.1.0/node_dictionary.tsv"
+parent_edge_evidence = "models/baseline/adoc-core-v0.1.0/edge_evidence.tsv"
+parent_phenotype_contract = "models/baseline/adoc-core-v0.1.0/phenotype_contract.tsv"
+parent_provenance = "models/baseline/adoc-core-v0.1.0/provenance.toml"
+knowledge_base_yaml = "context/literature/knowledge-base.yaml"
+knowledge_package_readme = "context/literature/README.md"
+knowledge_tarball = "tmp/DT_ADOC_with_embryo_adhesion_knowledge.tar.gz"
+
+[source_hashes]
+parent_network_bnd_sha256 = "807bf0df035524d7e0799af7d2fe713b8cb17ae42ce560b7b1ac4b9a3a525914"
+parent_baseline_cfg_sha256 = "4b7c3251d659daa41c7bdf3c27def878a393f79c1c2ecf86b4e11e1e4e854285"
+parent_node_dictionary_sha256 = "e34c138ed7e890d501cd0bb478f1d8154b109420765321c2a8c4775e71ff9293"
+parent_edge_evidence_sha256 = "44830c85f7a108860e0915ab3d3d3ecc33f67beb8d405b62e233a10ab9185a61"
+parent_phenotype_contract_sha256 = "00f0aea3465973bc0eea95498a8b5b8e7fcc3cdcf3082a0a8ac3ee277ad06c2f"
+knowledge_base_yaml_sha256 = "d812e39c3e23127a3b750bb20e3a89f3bdb3cd5d5b87af1e5a4e9ea426a1b136"
+knowledge_package_readme_sha256 = "c7ba86ccbb24bc8c5cfa3d6f7b3044d8fde64e86cfaa87a66378f06c649fdf72"
+knowledge_tarball_sha256 = "429070e20633cb455c2315963acc2235b7e5b3e12b6c08692d4e9f14a2dd456d"
+
+[evidence_scope]
+maternal_internalized_modules = [
+  "MOD-02 LIF-LIFR/GP130-STAT3 attachment gate",
+  "MOD-04 epithelial anti-adhesive barrier removal",
+  "MOD-06 PCSK5 and dystroglycan processing",
+  "MOD-09 TAZ-Hippo ECM remodeling and stromal mechanics",
+]
+kept_external_inputs = [
+  "IN_EMBRYO_PRESENT",
+  "IN_TROPHECTODERM_COMPETENT",
+  "IN_HCG",
+  "IN_EMBRYO_CONDITIONED_SIGNAL",
+]
+excluded_internal_biology = [
+  "trophoblast",
+  "immune",
+  "endothelial",
+  "unsupported environmental modules",
+]
+
+[condition_suite]
+default_condition_family = "challenge_ready"
+conditions = [
+  "conditions/untreated.cfg",
+  "conditions/hormone_treated.cfg",
+  "conditions/hormone_treated_mifepristone.cfg",
+  "conditions/hormone_treated_anti_spp1.cfg",
+  "conditions/embryo_absent.cfg",
+  "conditions/embryo_incompetent.cfg",
+  "conditions/excess_er_stress.cfg",
+  "conditions/high_ecm_stiffness.cfg",
+]
+perturbations = [
+  "mifepristone",
+  "anti_spp1",
+  "embryo_absent",
+  "embryo_incompetent",
+  "excess_er_stress",
+  "high_ecm_stiffness",
+]
+
+[artifacts]
+network_bnd = "models/extended/adoc-literature-v0.2.0/network.bnd"
+baseline_cfg = "models/extended/adoc-literature-v0.2.0/baseline.cfg"
+node_dictionary = "models/extended/adoc-literature-v0.2.0/node_dictionary.tsv"
+edge_evidence = "models/extended/adoc-literature-v0.2.0/edge_evidence.tsv"
+phenotype_contract = "models/extended/adoc-literature-v0.2.0/phenotype_contract.tsv"
+readme = "models/extended/adoc-literature-v0.2.0/README.md"
+uncertainty_notes = "models/extended/adoc-literature-v0.2.0/uncertainty_notes.md"
+differences_from_baseline = "models/extended/adoc-literature-v0.2.0/differences_from_baseline.md"
+
+[artifact_hashes]
+network_bnd_sha256 = "3839112b68f092ef0f8a026ab4c8f6e5febd31b3ed883a1d844e39e9922af0b6"
+baseline_cfg_sha256 = "ec9871d62e4e15436cd135652f85900b5346e41b8f67117285933f729c670807"
+node_dictionary_sha256 = "0c9f6c3bba215cd729efc07a3ed20f70d83f366e818aed8caaf1a46d0f057cde"
+edge_evidence_sha256 = "1cd20235435e2407f955e08585389177f53614230b886f984cb9014273efbfd6"
+phenotype_contract_sha256 = "d11aca9d21c45e2b36da0366c089244b4ed6338742d320ead3a2c30fff754dc1"
+readme_sha256 = "3b9b7c983fc5c83879f961b1959963ba9509f02a056763d2b9db5a0970fd8daa"
+uncertainty_notes_sha256 = "829a03917ca73e651a7a03bca0dace4fc617d6c1cc9e60ed25ae305c4d304235"
+differences_from_baseline_sha256 = "f0d056bc8c4f97eb4c1b66b954395ddaa7942552fc1da6f80d74024358d7dc57"

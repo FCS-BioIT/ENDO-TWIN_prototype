@@ -1,0 +1,1876 @@
+schema_version: '1.0'
+knowledge_base_id: adoc-embryo-adhesion-literature-v0.1.0
+generated_on: '2026-07-25'
+status: candidate_knowledge_not_canonical_model
+scope:
+  question: Maternal epithelial and stromal mechanisms that alter embryo adhesion or immediate pre-adhesion receptivity.
+  species_priority:
+  - human
+  - mouse
+  - non-human primate
+  - closely related mammalian models
+  included_cell_types:
+  - endometrial epithelium
+  - endometrial stroma
+  excluded_internal_cell_types:
+  - trophoblast/embryo
+  - immune
+  - endothelial
+  externalized_embryo_variables:
+  - embryo presence/contact
+  - trophectoderm competence
+  - hCG
+  - embryo-conditioned signal
+  target_platform: ADOC MaBoSS baseline, with later PhysiBoSS2 spatial coupling
+claim_boundary:
+- This is a curated mechanistic hypothesis inventory, not a clinically validated contraceptive or fertility model.
+- Expression or association alone does not establish a Boolean edge or rate.
+- Candidate nodes and edges must pass repository evidence review before promotion to the executable baseline.
+- Temperature, oxygen and pH remain boundary/QC variables because adhesion-specific causal thresholds are not established
+  in this corpus.
+confidence_scale:
+  '9': replicated causal or direct platform anchor
+  7-8: strong mechanistic evidence with some species/model transfer
+  5-6: plausible and supported but limited replication or indirect transfer
+  1-4: context, hypothesis or unresolved direction
+calibration_anchors:
+  source: REF-020
+  conditions:
+  - condition: untreated
+    stable_adhesion_successes: 0
+    n: 12
+    fraction: 0.0
+    use: baseline calibration
+  - condition: hormone_treated
+    stable_adhesion_successes: 9
+    n: 19
+    fraction: 0.47368421052631576
+    mean_attachment_hours: 34.1
+    sd_attachment_hours: 12.2
+    use: calibration
+  - condition: hormone_treated_mifepristone
+    stable_adhesion_successes: 1
+    n: 8
+    fraction: 0.125
+    use: preferentially held-out validation
+  warning: MaBoSS state occupancy is a simulated trajectory frequency, not a clinical implantation probability. Time is relative
+    unless separately calibrated.
+modules:
+- module_id: MOD-01
+  name: Hormonal receptive-state induction
+  compartments: epithelium;stroma
+  summary: E2, progestin/PGR, cAMP and XAV939 establish the ADOC secretory/decidual state; mifepristone antagonizes PGR and
+    strongly reduces adhesion.
+  evidence: direct ADOC plus conserved uterine biology
+  refs: REF-020;REF-001;REF-002
+  confidence: 9
+  maboss: Keep protocol agents as explicit inputs; do not collapse them into a single hormone switch.
+- module_id: MOD-02
+  name: LIF-LIFR/GP130-STAT3 attachment gate
+  compartments: epithelium;stroma
+  summary: Pre-attachment epithelial/glandular LIF activates GP130/STAT3 to remodel the epithelium and enable attachment;
+    stromal LIF/STAT3 supports later stabilization.
+  evidence: replicated mouse genetics; human expression and cell-model support
+  refs: REF-023;REF-024;REF-030;REF-031;REF-032;REF-033;REF-036;REF-038
+  confidence: 9
+  maboss: Core candidate module; separate epithelial and stromal STAT3 where model size allows.
+- module_id: MOD-03
+  name: PGR-IHH-NR2F2-BMP2-HAND2 relay
+  compartments: epithelium to stroma to epithelium
+  summary: Progesterone induces epithelial IHH; stromal NR2F2/BMP2/HAND2 drives decidualization and restrains epithelial estrogen/FGF
+    proliferation.
+  evidence: replicated mouse conditional genetics; human decidual support
+  refs: REF-002;REF-025;REF-026;REF-027;REF-028;REF-029
+  confidence: 8
+  maboss: Core cross-compartment relay; existing baseline already includes IHH, NR2F2 and BMP2; add HAND2 as first extension.
+- module_id: MOD-04
+  name: Epithelial anti-adhesive glycocalyx/barrier removal
+  compartments: epithelium
+  summary: PODXL, full-length DAG1 and some MUC1 states create a non-receptive barrier; receptivity requires downregulation,
+    cleavage or glycoform switching.
+  evidence: direct human gain-loss and biophysical studies
+  refs: REF-011;REF-012;REF-013;REF-014
+  confidence: 7
+  maboss: Use explicit inhibitory nodes. Split MUC1 barrier and MUC1 sLeX/glyco-permissive states.
+- module_id: MOD-05
+  name: Human epithelial adhesive surface effectors
+  compartments: epithelium
+  summary: CD98/CD9, apical CDH1/CTNND1, ANXA2-RHOA-actin, SPP1-integrins and HB-EGF collectively form a receptive adhesive
+    surface.
+  evidence: human mechanistic, biophysical and descriptive evidence
+  refs: REF-006;REF-007;REF-008;REF-009;REF-019;REF-038
+  confidence: 7
+  maboss: Prefer rate modifiers or redundant OR-gates, not a requirement that every effector be ON.
+- module_id: MOD-06
+  name: PCSK5 membrane and dystroglycan processing
+  compartments: epithelium
+  summary: PCSK5/PC6 cleaves EBP50 and alpha-DAG1 N-terminus, reorganizing membrane-cytoskeletal interactions and releasing
+    an attachment barrier.
+  evidence: direct human knockdown and cleavage studies
+  refs: REF-010;REF-011
+  confidence: 7
+  maboss: Represent PC6 -> DAG1_CLEAVED and DAG1_FULL as an inhibitor.
+- module_id: MOD-07
+  name: SPP1/OPN-integrin adhesion and decidual support
+  compartments: epithelium;stroma;interface
+  summary: Epithelial OPN supports interface adhesion while stromal OPN contributes to decidualization; integrin partners
+    include alphaVbeta3/5 and ITGB1-related routes.
+  evidence: human, primate and cell-model evidence
+  refs: REF-007;REF-015;REF-017;REF-022;REF-038
+  confidence: 7
+  maboss: Keep epithelial and stromal SPP1 separate; anti-SPP1 neutralizes extracellular ligand rather than transcription.
+- module_id: MOD-08
+  name: Decidualization and dynamic senescence balance
+  compartments: stroma with glandular epithelium
+  summary: Decidual transformation and a controlled senescence/remodeling program create a dynamic implantation matrix; complete
+    removal or excess dysfunction is unfavorable.
+  evidence: human assembloid mechanistic evidence
+  refs: REF-016
+  confidence: 6
+  maboss: Use a balanced state or uncertain rule variant, not a simplistic senescence ON=bad rule.
+- module_id: MOD-09
+  name: TAZ-Hippo ECM remodeling and stromal mechanics
+  compartments: stroma
+  summary: TAZ/WWTR1 coordinates collagen/ECM remodeling; normal decidualization softens stroma, while excess ER stress prevents
+    softening and reduces adhesion/expansion.
+  evidence: recent mouse genetics plus human mechanobiology
+  refs: REF-018;REF-035
+  confidence: 6
+  maboss: Add TAZ_ECM and Mechanical_Permissive_ECM; ER stress and excessive stiffness inhibit the mechanical state.
+- module_id: MOD-10
+  name: Cell-type-specific interaction candidates
+  compartments: epithelium;stroma;interface
+  summary: LGALS1, LGALS3, ITGB1, BSG and related interactions are receptive-phase candidates from compartment-resolved human
+    RNA-seq.
+  evidence: human paired cell-type-specific RNA-seq plus in-silico interface inference
+  refs: REF-015
+  confidence: 5
+  maboss: Expansion tier only; use for sensitivity analysis until perturbational evidence exists.
+- module_id: MOD-11
+  name: Embryo-conditioned feedback
+  compartments: external embryo input to epithelium
+  summary: Embryo contact and hCG can induce CD98/CD9 and apical CDH1/CTNND1, stabilizing first contact.
+  evidence: human direct and cell-model evidence
+  refs: REF-008;REF-019;REF-020
+  confidence: 7
+  maboss: Model hCG/contact as exogenous inputs because trophoblast is outside the current MaBoSS cell types.
+- module_id: MOD-12
+  name: Uterine WNT-Ca2+-integrin competence cue
+  compartments: maternal cue;embryo execution
+  summary: Uterine WNT5A/7A rapidly increases embryo alpha5beta1 trafficking and fibronectin binding through CaMKII.
+  evidence: mouse mechanistic attachment assays
+  refs: REF-034
+  confidence: 6
+  maboss: Do not implement as maternal intracellular output in the core model; retain as external embryo-competence modifier
+    or later PhysiBoSS interface field.
+- module_id: MOD-13
+  name: Physical microenvironment and transport
+  compartments: chip/extracellular
+  summary: Flow, oxygen, pH, temperature, ligand presentation and matrix stiffness can alter assay context, transport and
+    tissue state, but direct adhesion-specific causal data are uneven.
+  evidence: project/NAM context plus mechanics papers; limited direct adhesion perturbation for temperature/pH/O2
+  refs: REF-018;REF-020;REF-021
+  confidence: 4
+  maboss: Stiffness/ER stress may modify rates; temperature, pH, oxygen and flow should initially be boundary/QC variables
+    or PhysiCell fields.
+candidate_nodes:
+- node_id: IN_HCG
+  label: Embryo-derived hCG input
+  compartment: external_embryo
+  role: input
+  tier: core_extension
+  sign: positive
+  baseline_mapping: new
+  refs: REF-008;REF-019;REF-020
+  confidence: 7
+  measurable: beta-hCG in outlet medium
+  perturbable: 'yes'
+  logic_hint: self-maintaining external input
+  notes: Do not model trophoblast production internally in the maternal-only network.
+- node_id: IN_EMBRYO_CONDITIONED_SIGNAL
+  label: Generic embryo-conditioned signal
+  compartment: external_embryo
+  role: input
+  tier: core_extension
+  sign: positive
+  baseline_mapping: new
+  refs: REF-008;REF-019;REF-020
+  confidence: 5
+  measurable: conditioned medium or contact state
+  perturbable: 'yes'
+  logic_hint: self-maintaining external input
+  notes: Use only when hCG/contact-specific information is unavailable.
+- node_id: IN_ER_STRESS_EXCESS
+  label: Excess endoplasmic-reticulum stress
+  compartment: stroma_external
+  role: perturbation_input
+  tier: core_extension
+  sign: negative
+  baseline_mapping: new
+  refs: REF-018
+  confidence: 6
+  measurable: UPR/ERS markers
+  perturbable: 'yes'
+  logic_hint: self-maintaining external input
+  notes: Represents pathological excess, not physiological decidual ER stress.
+- node_id: IN_HIGH_ECM_STIFFNESS
+  label: Excessive ECM/stromal stiffness
+  compartment: extracellular
+  role: boundary_input
+  tier: core_extension
+  sign: negative
+  baseline_mapping: new
+  refs: REF-018;REF-035
+  confidence: 5
+  measurable: AFM Young modulus or hydrogel modulus
+  perturbable: 'yes'
+  logic_hint: self-maintaining external input
+  notes: Prefer a graded rate modifier in PhysiBoSS; Boolean input is a coarse sensitivity variable.
+- node_id: E_LIF
+  label: Epithelial/glandular LIF
+  compartment: epithelium
+  role: ligand
+  tier: core_extension
+  sign: positive
+  baseline_mapping: new
+  refs: REF-023;REF-024;REF-033;REF-036;REF-037
+  confidence: 9
+  measurable: LIF secretion/expression
+  perturbable: 'yes'
+  logic_hint: E_SECRETORY_STATE and not E_KLF12_HIGH
+  notes: Hard attachment gate in mouse; direct human causality is weaker.
+- node_id: E_KLF12_HIGH
+  label: High epithelial KLF12
+  compartment: epithelium
+  role: negative_regulator
+  tier: expansion
+  sign: negative
+  baseline_mapping: new
+  refs: REF-037
+  confidence: 5
+  measurable: KLF12 expression
+  perturbable: 'yes'
+  logic_hint: context-specific input or inferred state
+  notes: Human recurrent implantation failure evidence; not required in first extension.
+- node_id: E_GP130_STAT3
+  label: Epithelial LIFR/GP130-STAT3 activity
+  compartment: epithelium
+  role: pathway_state
+  tier: core_extension
+  sign: positive
+  baseline_mapping: new
+  refs: REF-030;REF-031;REF-032;REF-033;REF-036
+  confidence: 9
+  measurable: pSTAT3 and target program
+  perturbable: 'yes'
+  logic_hint: E_LIF
+  notes: Candidate central attachment gate and remodeling driver.
+- node_id: S_STAT3
+  label: Stromal STAT3 activity
+  compartment: stroma
+  role: pathway_state
+  tier: expansion
+  sign: positive
+  baseline_mapping: new
+  refs: REF-031;REF-033
+  confidence: 7
+  measurable: pSTAT3 or regulon
+  perturbable: 'yes'
+  logic_hint: stromal LIF/IL6-family cue and decidual state
+  notes: Later support rather than sole initial attachment gate.
+- node_id: S_HAND2
+  label: Stromal HAND2
+  compartment: stroma
+  role: transcription_factor
+  tier: core_extension
+  sign: positive
+  baseline_mapping: new downstream of S_BMP2
+  refs: REF-028;REF-029
+  confidence: 8
+  measurable: HAND2 expression/activity
+  perturbable: 'yes'
+  logic_hint: S_BMP2 or S_PGR
+  notes: Suppresses stromal FGF output and epithelial proliferative nonreceptivity.
+- node_id: S_FGF_MITOGENIC
+  label: Stromal mitogenic FGF output
+  compartment: stroma
+  role: paracrine_inhibitor_of_receptivity
+  tier: expansion
+  sign: negative
+  baseline_mapping: new
+  refs: REF-028
+  confidence: 7
+  measurable: FGF family expression/secretion
+  perturbable: 'yes'
+  logic_hint: not S_HAND2
+  notes: Collapsed family-level state; avoid selecting a specific FGF without data.
+- node_id: E_ESTROGENIC_PROLIFERATION
+  label: Epithelial estrogen-driven proliferative state
+  compartment: epithelium
+  role: anti_receptive_state
+  tier: expansion
+  sign: negative
+  baseline_mapping: new
+  refs: REF-025;REF-026;REF-028
+  confidence: 8
+  measurable: Ki67/ESR target program
+  perturbable: 'yes'
+  logic_hint: IN_E2 and S_FGF_MITOGENIC and not S_HAND2
+  notes: Should be suppressed during receptivity.
+- node_id: E_PODXL
+  label: Epithelial PODXL barrier
+  compartment: epithelium
+  role: anti_adhesive_surface
+  tier: core_extension
+  sign: negative
+  baseline_mapping: new
+  refs: REF-013;REF-014
+  confidence: 7
+  measurable: apical PODXL
+  perturbable: 'yes'
+  logic_hint: not E_SECRETORY_STATE
+  notes: Forced ON should suppress adhesion competence.
+- node_id: E_CD98_CD9
+  label: Epithelial CD98/CD9 complex
+  compartment: epithelium
+  role: adhesive_effector
+  tier: core_extension
+  sign: positive
+  baseline_mapping: new
+  refs: REF-008
+  confidence: 7
+  measurable: SLC3A2/CD98 and CD9 surface abundance
+  perturbable: 'yes'
+  logic_hint: E_GP130_STAT3 or IN_HCG or IN_E2
+  notes: Use as a rate accelerator or redundant route.
+- node_id: E_CDH1_APICAL
+  label: Apical epithelial CDH1/CTNND1 state
+  compartment: epithelium
+  role: adhesive_effector
+  tier: core_extension
+  sign: positive
+  baseline_mapping: new
+  refs: REF-019
+  confidence: 7
+  measurable: free-apical CDH1 and CTNND1
+  perturbable: 'yes'
+  logic_hint: IN_HCG or IN_EMBRYO_CONDITIONED_SIGNAL
+  notes: Do not conflate apical adhesion CDH1 with lateral junctional CDH1.
+- node_id: E_ANXA2_ACTIN
+  label: ANXA2-RHOA-F-actin remodeling
+  compartment: epithelium
+  role: cytoskeletal_effector
+  tier: core_extension
+  sign: positive
+  baseline_mapping: new
+  refs: REF-009
+  confidence: 6
+  measurable: ANXA2, RHOA-GTP, F-actin architecture
+  perturbable: 'yes'
+  logic_hint: 'uncertain: receptive state or embryo-conditioned activation'
+  notes: Single main mechanistic literature line; keep as rate modifier.
+- node_id: E_HBEGF
+  label: Epithelial HB-EGF
+  compartment: epithelium
+  role: growth_factor_effector
+  tier: core_extension
+  sign: positive
+  baseline_mapping: new
+  refs: REF-006;REF-007
+  confidence: 6
+  measurable: HBEGF expression/secretion
+  perturbable: 'yes'
+  logic_hint: E_SECRETORY_STATE
+  notes: Likely support/rate modifier rather than hard gate.
+- node_id: E_PC6
+  label: Epithelial PCSK5/PC6 activity
+  compartment: epithelium
+  role: protease
+  tier: core_extension
+  sign: positive
+  baseline_mapping: new
+  refs: REF-010;REF-011
+  confidence: 7
+  measurable: PCSK5 expression/activity and cleavage products
+  perturbable: 'yes'
+  logic_hint: E_SECRETORY_STATE
+  notes: Window-specific protease with direct attachment evidence.
+- node_id: E_DAG1_FULL
+  label: Full-length alpha-dystroglycan barrier
+  compartment: epithelium
+  role: anti_adhesive_surface
+  tier: core_extension
+  sign: negative
+  baseline_mapping: new
+  refs: REF-011
+  confidence: 7
+  measurable: cell-surface alpha-DG N-terminus
+  perturbable: 'yes'
+  logic_hint: not E_PC6
+  notes: Barrier state.
+- node_id: E_DAG1_CLEAVED
+  label: PC6-cleaved alpha-dystroglycan state
+  compartment: epithelium
+  role: adhesive_surface_release
+  tier: core_extension
+  sign: positive
+  baseline_mapping: new
+  refs: REF-011
+  confidence: 7
+  measurable: uterine-fluid alpha-DG-N and tissue cleavage
+  perturbable: 'yes'
+  logic_hint: E_PC6
+  notes: Barrier-release state; can be complementary to E_DAG1_FULL.
+- node_id: E_MUC1_BARRIER
+  label: Anti-adhesive MUC1 glycocalyx state
+  compartment: epithelium
+  role: anti_adhesive_surface
+  tier: core_extension
+  sign: negative
+  baseline_mapping: new
+  refs: REF-012;REF-025
+  confidence: 6
+  measurable: MUC1 abundance and non-permissive glycoforms
+  perturbable: 'yes'
+  logic_hint: not E_SECRETORY_STATE or E_ESTROGENIC_PROLIFERATION
+  notes: Avoid a single MUC1 node because human glycoforms can be pro-adhesive.
+- node_id: E_MUC1_SLEX
+  label: Glyco-permissive MUC1 sLeX-like state
+  compartment: epithelium
+  role: adhesive_effector
+  tier: core_extension
+  sign: positive
+  baseline_mapping: new
+  refs: REF-012
+  confidence: 6
+  measurable: MUC1 glycoform/sLeX and force spectroscopy
+  perturbable: 'yes'
+  logic_hint: E_SECRETORY_STATE and glycosylation program
+  notes: Moderate early-contact rate enhancer.
+- node_id: E_ITGAVB3_5
+  label: Epithelial alphaVbeta3/alphaVbeta5 integrin state
+  compartment: epithelium
+  role: adhesive_receptor
+  tier: core_extension
+  sign: positive
+  baseline_mapping: new
+  refs: REF-007;REF-022;REF-038
+  confidence: 6
+  measurable: ITGAV/ITGB3/ITGB5 surface abundance
+  perturbable: 'yes'
+  logic_hint: E_LIF or E_HBEGF or E_SECRETORY_STATE
+  notes: Human cell-model and primate support; receptor-side assignment depends on assay.
+- node_id: S_SPP1
+  label: Stromal SPP1/osteopontin
+  compartment: stroma
+  role: decidual_effector
+  tier: core_extension
+  sign: positive
+  baseline_mapping: new
+  refs: REF-017
+  confidence: 6
+  measurable: SPP1 expression/secretion
+  perturbable: 'yes'
+  logic_hint: S_DECIDUALIZED
+  notes: Separate from existing epithelial E_SPP1_EXPR.
+- node_id: S_TAZ_ECM
+  label: Stromal TAZ/WWTR1 ECM-remodeling state
+  compartment: stroma
+  role: mechanical_regulator
+  tier: core_extension
+  sign: positive
+  baseline_mapping: new
+  refs: REF-035
+  confidence: 6
+  measurable: TAZ activity and collagen/ECM program
+  perturbable: 'yes'
+  logic_hint: S_DECIDUALIZED
+  notes: Recent evidence; use sensitivity analysis.
+- node_id: S_DECIDUAL_SENESCENCE_BALANCED
+  label: Balanced decidual senescence/remodeling state
+  compartment: stroma
+  role: dynamic_matrix_regulator
+  tier: expansion
+  sign: positive_biphasic
+  baseline_mapping: new
+  refs: REF-016
+  confidence: 6
+  measurable: senescence subpopulation and SASP/remodeling markers
+  perturbable: 'yes'
+  logic_hint: S_DECIDUALIZED and not pathological persistence
+  notes: Biphasic; do not equate all senescence with failure.
+- node_id: X_MECHANICAL_PERMISSIVE_ECM
+  label: Mechanical and dynamic ECM permissiveness
+  compartment: extracellular
+  role: latent_state
+  tier: core_extension
+  sign: positive
+  baseline_mapping: new
+  refs: REF-016;REF-018;REF-035
+  confidence: 6
+  measurable: AFM stiffness, matrix dynamics, collagen architecture
+  perturbable: 'yes'
+  logic_hint: S_TAZ_ECM and S_DECIDUALIZED and not IN_ER_STRESS_EXCESS and not IN_HIGH_ECM_STIFFNESS
+  notes: Bridge to later PhysiBoSS matrix fields.
+- node_id: E_RECEPTIVE_SURFACE
+  label: Epithelial receptive adhesive surface
+  compartment: epithelium
+  role: latent_state
+  tier: core_extension
+  sign: positive
+  baseline_mapping: refines OUT_EPITHELIAL_RECEPTIVE
+  refs: REF-006;REF-008;REF-009;REF-010;REF-011;REF-012;REF-013;REF-014;REF-019
+  confidence: 7
+  measurable: composite surface panel
+  perturbable: indirect
+  logic_hint: STAT3 gate, barriers OFF, at least one positive effector ON
+  notes: Human evidence supports a multicomponent surface transition rather than one master receptor.
+- node_id: X_LGALS1_3
+  label: LGALS1/LGALS3 interface state
+  compartment: interface
+  role: candidate_effector
+  tier: expansion
+  sign: positive
+  baseline_mapping: new
+  refs: REF-015
+  confidence: 5
+  measurable: LGALS1/3 secretion/expression
+  perturbable: 'yes'
+  logic_hint: receptive compartment state
+  notes: Computationally prioritized; needs perturbational confirmation.
+- node_id: X_BSG_ITGB1
+  label: BSG-ITGB1 interface state
+  compartment: interface
+  role: candidate_effector
+  tier: expansion
+  sign: positive
+  baseline_mapping: new
+  refs: REF-015
+  confidence: 5
+  measurable: BSG/ITGB1 surface abundance
+  perturbable: 'yes'
+  logic_hint: receptive compartment state
+  notes: Expansion candidate only.
+- node_id: IN_UTERINE_WNT_CUE
+  label: Uterine WNT5A/WNT7A embryo-competence cue
+  compartment: external_interface
+  role: external_input
+  tier: physiboss_later
+  sign: positive
+  baseline_mapping: new
+  refs: REF-034
+  confidence: 6
+  measurable: WNT5A/7A in uterine fluid
+  perturbable: 'yes'
+  logic_hint: external modifier of IN_TROPHECTODERM_COMPETENT
+  notes: Embryo execution is outside the maternal-only MaBoSS network.
+candidate_edges:
+- edge_id: EDGE-001
+  source: E_SECRETORY_STATE
+  target: E_LIF
+  sign: activation
+  mechanism: state_to_ligand
+  refs: REF-023;REF-024;REF-033;REF-036
+  confidence: 7
+  tier: core_extension
+  notes: Candidate human-facing abstraction; exact hormonal induction logic remains uncertain.
+- edge_id: EDGE-002
+  source: E_KLF12_HIGH
+  target: E_LIF
+  sign: inhibition
+  mechanism: transcriptional
+  refs: REF-037
+  confidence: 5
+  tier: expansion
+  notes: RIF-associated human mechanism.
+- edge_id: EDGE-003
+  source: E_LIF
+  target: E_GP130_STAT3
+  sign: activation
+  mechanism: ligand_receptor_pathway
+  refs: REF-030;REF-032;REF-033;REF-036
+  confidence: 9
+  tier: core_extension
+  notes: Central attachment pathway.
+- edge_id: EDGE-004
+  source: E_GP130_STAT3
+  target: E_RECEPTIVE_SURFACE
+  sign: activation
+  mechanism: pathway_to_state
+  refs: REF-030;REF-032;REF-033
+  confidence: 8
+  tier: core_extension
+  notes: Junctional/remodeling gate.
+- edge_id: EDGE-005
+  source: E_GP130_STAT3
+  target: E_CD98_CD9
+  sign: activation
+  mechanism: pathway_to_effector
+  refs: REF-008
+  confidence: 6
+  tier: core_extension
+  notes: LIF induction reported in human epithelial adhesion system.
+- edge_id: EDGE-006
+  source: E_GP130_STAT3
+  target: E_ITGAVB3_5
+  sign: activation
+  mechanism: pathway_to_effector
+  refs: REF-038
+  confidence: 6
+  tier: core_extension
+  notes: Human cell-model link.
+- edge_id: EDGE-007
+  source: E_GP130_STAT3
+  target: E_ANXA2_ACTIN
+  sign: activation
+  mechanism: candidate_pathway_to_effector
+  refs: REF-009;REF-030
+  confidence: 4
+  tier: uncertain_variant
+  notes: No direct LIF-to-ANXA2 proof in this inventory; use only as a tested variant.
+- edge_id: EDGE-008
+  source: E_IHH
+  target: S_NR2F2
+  sign: activation
+  mechanism: paracrine
+  refs: REF-002;REF-025;REF-026
+  confidence: 8
+  tier: existing_core
+  notes: Already represented in baseline.
+- edge_id: EDGE-009
+  source: S_NR2F2
+  target: S_BMP2
+  sign: activation
+  mechanism: transcriptional
+  refs: REF-026;REF-027
+  confidence: 8
+  tier: existing_core
+  notes: Already represented in baseline.
+- edge_id: EDGE-010
+  source: S_BMP2
+  target: S_HAND2
+  sign: activation
+  mechanism: state_to_transcription_factor
+  refs: REF-027;REF-028;REF-029
+  confidence: 7
+  tier: core_extension
+  notes: Compact relay; direct ordering may vary by context.
+- edge_id: EDGE-011
+  source: S_PGR
+  target: S_HAND2
+  sign: activation
+  mechanism: hormone_to_transcription_factor
+  refs: REF-028;REF-029
+  confidence: 8
+  tier: core_extension
+  notes: Conserved progesterone-sensitive stromal node.
+- edge_id: EDGE-012
+  source: S_HAND2
+  target: S_FGF_MITOGENIC
+  sign: inhibition
+  mechanism: transcriptional
+  refs: REF-028
+  confidence: 8
+  tier: expansion
+  notes: Family-level FGF collapse.
+- edge_id: EDGE-013
+  source: S_FGF_MITOGENIC
+  target: E_ESTROGENIC_PROLIFERATION
+  sign: activation
+  mechanism: paracrine
+  refs: REF-028
+  confidence: 8
+  tier: expansion
+  notes: Stromal-to-epithelial mitogenic relay.
+- edge_id: EDGE-014
+  source: S_HAND2
+  target: E_ESTROGENIC_PROLIFERATION
+  sign: inhibition
+  mechanism: cross_compartment
+  refs: REF-028
+  confidence: 8
+  tier: expansion
+  notes: Net effect through FGF suppression.
+- edge_id: EDGE-015
+  source: E_ESTROGENIC_PROLIFERATION
+  target: E_RECEPTIVE_SURFACE
+  sign: inhibition
+  mechanism: state_to_state
+  refs: REF-025;REF-026;REF-028
+  confidence: 8
+  tier: expansion
+  notes: Persistent proliferation is nonreceptive.
+- edge_id: EDGE-016
+  source: E_SECRETORY_STATE
+  target: E_PODXL
+  sign: inhibition
+  mechanism: state_to_barrier
+  refs: REF-013;REF-014
+  confidence: 7
+  tier: core_extension
+  notes: PODXL falls in receptive luminal epithelium.
+- edge_id: EDGE-017
+  source: E_PODXL
+  target: E_RECEPTIVE_SURFACE
+  sign: inhibition
+  mechanism: barrier_to_state
+  refs: REF-013;REF-014
+  confidence: 7
+  tier: core_extension
+  notes: Strong human anti-adhesive effect.
+- edge_id: EDGE-018
+  source: E_SECRETORY_STATE
+  target: E_PC6
+  sign: activation
+  mechanism: state_to_protease
+  refs: REF-010;REF-011
+  confidence: 7
+  tier: core_extension
+  notes: Window-specific PC6.
+- edge_id: EDGE-019
+  source: E_PC6
+  target: E_DAG1_CLEAVED
+  sign: activation
+  mechanism: proteolysis
+  refs: REF-011
+  confidence: 8
+  tier: core_extension
+  notes: Direct cleavage evidence.
+- edge_id: EDGE-020
+  source: E_PC6
+  target: E_DAG1_FULL
+  sign: inhibition
+  mechanism: proteolysis
+  refs: REF-011
+  confidence: 8
+  tier: core_extension
+  notes: Removal of alpha-DG N-terminus.
+- edge_id: EDGE-021
+  source: E_DAG1_FULL
+  target: E_RECEPTIVE_SURFACE
+  sign: inhibition
+  mechanism: barrier_to_state
+  refs: REF-011
+  confidence: 7
+  tier: core_extension
+  notes: Full-length form blocks attachment.
+- edge_id: EDGE-022
+  source: E_DAG1_CLEAVED
+  target: E_RECEPTIVE_SURFACE
+  sign: activation
+  mechanism: surface_to_state
+  refs: REF-011
+  confidence: 7
+  tier: core_extension
+  notes: Barrier release.
+- edge_id: EDGE-023
+  source: E_SECRETORY_STATE
+  target: E_MUC1_BARRIER
+  sign: inhibition
+  mechanism: state_to_glycocalyx
+  refs: REF-012;REF-025
+  confidence: 5
+  tier: uncertain_variant
+  notes: Human MUC1 regulation is glycoform-dependent.
+- edge_id: EDGE-024
+  source: E_SECRETORY_STATE
+  target: E_MUC1_SLEX
+  sign: activation
+  mechanism: state_to_glycoform
+  refs: REF-012
+  confidence: 5
+  tier: uncertain_variant
+  notes: Requires a glycosylation program not directly measured.
+- edge_id: EDGE-025
+  source: E_MUC1_BARRIER
+  target: E_RECEPTIVE_SURFACE
+  sign: inhibition
+  mechanism: glycocalyx_to_state
+  refs: REF-012;REF-025
+  confidence: 6
+  tier: core_extension
+  notes: Anti-adhesive branch.
+- edge_id: EDGE-026
+  source: E_MUC1_SLEX
+  target: E_RECEPTIVE_SURFACE
+  sign: activation
+  mechanism: glycocalyx_to_state
+  refs: REF-012
+  confidence: 6
+  tier: core_extension
+  notes: Early-contact rate enhancer.
+- edge_id: EDGE-027
+  source: IN_HCG
+  target: E_CD98_CD9
+  sign: activation
+  mechanism: external_feedback
+  refs: REF-008
+  confidence: 7
+  tier: core_extension
+  notes: Embryo input.
+- edge_id: EDGE-028
+  source: IN_HCG
+  target: E_CDH1_APICAL
+  sign: activation
+  mechanism: external_feedback
+  refs: REF-019
+  confidence: 8
+  tier: core_extension
+  notes: Embryo input.
+- edge_id: EDGE-029
+  source: IN_EMBRYO_CONDITIONED_SIGNAL
+  target: E_CDH1_APICAL
+  sign: activation
+  mechanism: external_feedback
+  refs: REF-019
+  confidence: 6
+  tier: core_extension
+  notes: Fallback external input.
+- edge_id: EDGE-030
+  source: E_CD98_CD9
+  target: E_RECEPTIVE_SURFACE
+  sign: activation
+  mechanism: effector_to_state
+  refs: REF-008
+  confidence: 7
+  tier: core_extension
+  notes: Use as redundant route/rate modifier.
+- edge_id: EDGE-031
+  source: E_CDH1_APICAL
+  target: E_RECEPTIVE_SURFACE
+  sign: activation
+  mechanism: effector_to_state
+  refs: REF-019
+  confidence: 7
+  tier: core_extension
+  notes: Use as first-contact route/rate modifier.
+- edge_id: EDGE-032
+  source: E_ANXA2_ACTIN
+  target: E_RECEPTIVE_SURFACE
+  sign: activation
+  mechanism: effector_to_state
+  refs: REF-009
+  confidence: 6
+  tier: core_extension
+  notes: Cytoskeletal rate modifier.
+- edge_id: EDGE-033
+  source: E_SECRETORY_STATE
+  target: E_HBEGF
+  sign: activation
+  mechanism: state_to_growth_factor
+  refs: REF-006
+  confidence: 6
+  tier: core_extension
+  notes: Receptive phase association.
+- edge_id: EDGE-034
+  source: E_HBEGF
+  target: E_ITGAVB3_5
+  sign: activation
+  mechanism: growth_factor_to_effector
+  refs: REF-007
+  confidence: 5
+  tier: uncertain_variant
+  notes: Reported regulation in epithelial models.
+- edge_id: EDGE-035
+  source: E_HBEGF
+  target: E_RECEPTIVE_SURFACE
+  sign: activation
+  mechanism: growth_factor_to_state
+  refs: REF-006;REF-007
+  confidence: 6
+  tier: core_extension
+  notes: Support/rate modifier.
+- edge_id: EDGE-036
+  source: E_SPP1_EXPR
+  target: E_RECEPTIVE_SURFACE
+  sign: activation
+  mechanism: ligand_to_state
+  refs: REF-007;REF-015;REF-022
+  confidence: 6
+  tier: existing_plus_extension
+  notes: Existing baseline ligand; functional contribution remains provisional.
+- edge_id: EDGE-037
+  source: S_DECIDUALIZED
+  target: S_SPP1
+  sign: activation
+  mechanism: state_to_ligand
+  refs: REF-017
+  confidence: 6
+  tier: core_extension
+  notes: Stromal decidual output.
+- edge_id: EDGE-038
+  source: S_DECIDUALIZED
+  target: S_TAZ_ECM
+  sign: activation
+  mechanism: state_to_mechanics
+  refs: REF-035
+  confidence: 6
+  tier: core_extension
+  notes: Recent causal evidence.
+- edge_id: EDGE-039
+  source: S_DECIDUALIZED
+  target: S_DECIDUAL_SENESCENCE_BALANCED
+  sign: activation
+  mechanism: state_to_dynamic_program
+  refs: REF-016
+  confidence: 6
+  tier: expansion
+  notes: Balanced, time-dependent program.
+- edge_id: EDGE-040
+  source: S_TAZ_ECM
+  target: X_MECHANICAL_PERMISSIVE_ECM
+  sign: activation
+  mechanism: mechanics
+  refs: REF-035
+  confidence: 6
+  tier: core_extension
+  notes: ECM remodeling route.
+- edge_id: EDGE-041
+  source: S_DECIDUAL_SENESCENCE_BALANCED
+  target: X_MECHANICAL_PERMISSIVE_ECM
+  sign: activation
+  mechanism: dynamic_matrix
+  refs: REF-016
+  confidence: 6
+  tier: expansion
+  notes: Dynamic matrix contribution.
+- edge_id: EDGE-042
+  source: IN_ER_STRESS_EXCESS
+  target: X_MECHANICAL_PERMISSIVE_ECM
+  sign: inhibition
+  mechanism: pathological_input
+  refs: REF-018
+  confidence: 6
+  tier: core_extension
+  notes: Excess ER stress prevents normal softening.
+- edge_id: EDGE-043
+  source: IN_HIGH_ECM_STIFFNESS
+  target: X_MECHANICAL_PERMISSIVE_ECM
+  sign: inhibition
+  mechanism: physical_input
+  refs: REF-018;REF-035
+  confidence: 5
+  tier: core_extension
+  notes: Coarse Boolean stiffness state.
+- edge_id: EDGE-044
+  source: E_RECEPTIVE_SURFACE
+  target: OUT_MATERNAL_ADHESION_COMPETENCE
+  sign: activation
+  mechanism: latent_to_phenotype
+  refs: REF-001;REF-020;REF-021
+  confidence: 7
+  tier: core_extension
+  notes: Epithelial gate.
+- edge_id: EDGE-045
+  source: S_DECIDUALIZED
+  target: OUT_MATERNAL_ADHESION_COMPETENCE
+  sign: activation
+  mechanism: latent_to_phenotype
+  refs: REF-001;REF-016;REF-020;REF-021
+  confidence: 7
+  tier: core_extension
+  notes: Stromal gate.
+- edge_id: EDGE-046
+  source: X_MECHANICAL_PERMISSIVE_ECM
+  target: OUT_MATERNAL_ADHESION_COMPETENCE
+  sign: activation
+  mechanism: latent_to_phenotype
+  refs: REF-016;REF-018;REF-035
+  confidence: 6
+  tier: core_extension
+  notes: Mechanical stabilization gate or rate modifier.
+- edge_id: EDGE-047
+  source: OUT_MATERNAL_ADHESION_COMPETENCE
+  target: OUT_STABLE_ADHESION
+  sign: activation
+  mechanism: phenotype_to_assay
+  refs: REF-020
+  confidence: 9
+  tier: existing_core
+  notes: Requires explicit embryo challenge inputs as in baseline.
+- edge_id: EDGE-048
+  source: IN_UTERINE_WNT_CUE
+  target: IN_TROPHECTODERM_COMPETENT
+  sign: activation
+  mechanism: external_embryo_modifier
+  refs: REF-034
+  confidence: 6
+  tier: physiboss_later
+  notes: Maternal cue with embryo-side execution.
+- edge_id: EDGE-049
+  source: X_LGALS1_3
+  target: E_RECEPTIVE_SURFACE
+  sign: activation
+  mechanism: candidate_interface
+  refs: REF-015
+  confidence: 4
+  tier: expansion
+  notes: Computational candidate only.
+- edge_id: EDGE-050
+  source: X_BSG_ITGB1
+  target: E_RECEPTIVE_SURFACE
+  sign: activation
+  mechanism: candidate_interface
+  refs: REF-015
+  confidence: 4
+  tier: expansion
+  notes: Computational candidate only.
+perturbations:
+- perturbation_id: PERT-001
+  name: Mifepristone
+  target: E_PGR;S_PGR
+  action: inhibit
+  evidence: direct ADOC
+  expected_effect: strong decrease in maternal competence and stable adhesion
+  refs: REF-020
+  confidence: 9
+  implementation: existing IN_MIFEPRISTONE input; preserve partial/context-dependent response during calibration
+- perturbation_id: PERT-002
+  name: Anti-SPP1 neutralization
+  target: free extracellular SPP1
+  action: neutralize
+  evidence: mechanistic hypothesis plus SPP1 literature
+  expected_effect: decrease one adhesion route but not necessarily abolish adhesion
+  refs: REF-007;REF-015;REF-017;REF-022
+  confidence: 6
+  implementation: existing IN_ANTI_SPP1; never set E_SPP1_EXPR OFF as a surrogate for antibody treatment
+- perturbation_id: PERT-003
+  name: LIF or LIFR blockade
+  target: E_LIF/E_GP130_STAT3
+  action: inhibit
+  evidence: mouse knockout and human cell-model support
+  expected_effect: strong decrease in attachment competence
+  refs: REF-023;REF-030;REF-032;REF-033;REF-038
+  confidence: 8
+  implementation: candidate clamp or rate reduction; test epithelial-specific blockade first
+- perturbation_id: PERT-004
+  name: STAT3 inhibition
+  target: E_GP130_STAT3;S_STAT3
+  action: inhibit
+  evidence: mouse compartment-specific genetics
+  expected_effect: attachment failure and impaired remodeling
+  refs: REF-030;REF-031
+  confidence: 8
+  implementation: separate epithelial and stromal interventions to preserve stage interpretation
+- perturbation_id: PERT-005
+  name: Forced PODXL maintenance/overexpression
+  target: E_PODXL
+  action: activate
+  evidence: human gain-function
+  expected_effect: strong decrease in embryo attachment and penetration
+  refs: REF-013;REF-014
+  confidence: 7
+  implementation: force ON or increase OFF-to-ON rate; check barrier/viability counter-readouts
+- perturbation_id: PERT-006
+  name: CD98/SLC3A2 knockdown or blocking
+  target: E_CD98_CD9
+  action: inhibit
+  evidence: human gain-loss adhesion assay
+  expected_effect: decreased attachment
+  refs: REF-008
+  confidence: 7
+  implementation: prefer rate modifier rather than sole hard gate
+- perturbation_id: PERT-007
+  name: Apical CDH1 blockade/knockdown
+  target: E_CDH1_APICAL
+  action: inhibit
+  evidence: human blastocyst/spheroid and AFM
+  expected_effect: decreased first-contact adhesiveness
+  refs: REF-019
+  confidence: 7
+  implementation: do not interpret as global lateral junction disruption unless experiment does so
+- perturbation_id: PERT-008
+  name: ANXA2 knockdown or RHOA/actin interference
+  target: E_ANXA2_ACTIN
+  action: inhibit
+  evidence: human mechanistic cell model
+  expected_effect: decreased epithelial adhesiveness
+  refs: REF-009
+  confidence: 6
+  implementation: medium-priority rate modifier with cytotoxicity/morphology counter-screen
+- perturbation_id: PERT-009
+  name: PCSK5/PC6 inhibition
+  target: E_PC6
+  action: inhibit
+  evidence: human knockdown and substrate cleavage
+  expected_effect: retain DAG1 barrier and reduce attachment
+  refs: REF-010;REF-011
+  confidence: 7
+  implementation: measure alpha-DG-N cleavage product to validate mechanism
+- perturbation_id: PERT-010
+  name: MUC1 abundance/glycosylation perturbation
+  target: E_MUC1_BARRIER;E_MUC1_SLEX
+  action: context_dependent
+  evidence: human force spectroscopy
+  expected_effect: can decrease or increase adhesion depending on glycoform
+  refs: REF-012
+  confidence: 6
+  implementation: never use a single MUC1 knockout rule; measure glycoform and surface density
+- perturbation_id: PERT-011
+  name: SPP1 knockdown
+  target: E_SPP1_EXPR or S_SPP1
+  action: inhibit
+  evidence: human epithelial association and stromal mechanistic evidence
+  expected_effect: decreased adhesion support and/or decidual quality
+  refs: REF-007;REF-017
+  confidence: 6
+  implementation: compartment-specific perturbation required
+- perturbation_id: PERT-012
+  name: TAZ/WWTR1 inhibition
+  target: S_TAZ_ECM
+  action: inhibit
+  evidence: mouse genetics with human-data support
+  expected_effect: defective ECM remodeling and reduced stabilization
+  refs: REF-035
+  confidence: 6
+  implementation: later extension; measure collagen architecture and mechanics
+- perturbation_id: PERT-013
+  name: Excess ER stress (for example thapsigargin)
+  target: IN_ER_STRESS_EXCESS
+  action: activate_pathology
+  evidence: human stromal mechanobiology
+  expected_effect: prevent normal softening and impair spheroid adhesion/expansion
+  refs: REF-018
+  confidence: 6
+  implementation: external perturbation input with toxicity controls
+- perturbation_id: PERT-014
+  name: Increase ECM stiffness
+  target: IN_HIGH_ECM_STIFFNESS
+  action: activate_pathology
+  evidence: mechanics synthesis
+  expected_effect: reduce mechanical permissiveness; effect size requires calibration
+  refs: REF-018;REF-035
+  confidence: 5
+  implementation: prefer continuous PhysiBoSS field or rate scaling over permanent Boolean clamp
+- perturbation_id: PERT-015
+  name: HB-EGF/EGFR-family blockade
+  target: E_HBEGF
+  action: inhibit
+  evidence: human receptive-phase expression and integrin regulation
+  expected_effect: moderate decrease in receptive surface
+  refs: REF-006;REF-007
+  confidence: 5
+  implementation: test as a secondary, non-hard-gate perturbation
+- perturbation_id: PERT-016
+  name: alphaVbeta3/alphaVbeta5 blockade
+  target: E_ITGAVB3_5
+  action: inhibit
+  evidence: human/primate/cell-model evidence
+  expected_effect: decreased interface adhesion
+  refs: REF-007;REF-022;REF-038
+  confidence: 6
+  implementation: clarify maternal versus embryo receptor target in the actual reagent/assay
+- perturbation_id: PERT-017
+  name: WNT5A/7A depletion or sFRP2
+  target: IN_UTERINE_WNT_CUE
+  action: inhibit
+  evidence: mouse attachment assay
+  expected_effect: decrease embryo fibronectin-binding competence
+  refs: REF-034
+  confidence: 6
+  implementation: external embryo-competence modifier, not maternal intracellular core logic
+- perturbation_id: PERT-018
+  name: Temperature, pH or oxygen excursion
+  target: microenvironment
+  action: vary
+  evidence: NAM/QC context; little direct adhesion-specific causal evidence in this inventory
+  expected_effect: unknown direction until measured in ADOC
+  refs: REF-020;REF-021
+  confidence: 3
+  implementation: record as boundary/QC variables; do not invent Boolean edges
+environmental_factors:
+- factor_id: ENV-001
+  factor: Temperature
+  normal_or_reference: approximately 37 C culture/perfusion context
+  evidence_for_adhesion: No robust dose-response for maternal epithelial/stromal adhesion identified in the reviewed corpus.
+  recommended_representation: metadata/QC and later continuous field
+  maboss_action: No causal edge in core model; define IN_TEMPERATURE_STRESS only after ADOC perturbation data.
+  confidence: 3
+- factor_id: ENV-002
+  factor: Dissolved oxygen/hypoxia
+  normal_or_reference: platform-specific oxygenation
+  evidence_for_adhesion: Biologically plausible and monitored in IMPLANT-MOD, but direct adhesion-specific epithelial/stromal
+    thresholds are not established here.
+  recommended_representation: microenvironment boundary condition or PhysiCell substrate
+  maboss_action: Context input only until measured perturbation data support a sign.
+  confidence: 3
+- factor_id: ENV-003
+  factor: pH
+  normal_or_reference: culture-medium physiological range
+  evidence_for_adhesion: No reviewed direct human adhesion dose-response.
+  recommended_representation: QC/boundary variable
+  maboss_action: Do not create pathway rule yet.
+  confidence: 2
+- factor_id: ENV-004
+  factor: Flow and shear/flushing
+  normal_or_reference: ADOC continuous perfusion; flushing defines stable attachment
+  evidence_for_adhesion: Directly part of the assay and attachment-strength validation, but not an intracellular molecular
+    pathway.
+  recommended_representation: assay challenge parameter and later mechanics field
+  maboss_action: Keep stable adhesion phenotype separate from contact; optionally modify detachment rate outside core Boolean
+    logic.
+  confidence: 8
+- factor_id: ENV-005
+  factor: ECM/stromal stiffness
+  normal_or_reference: donor- and decidual-state-dependent
+  evidence_for_adhesion: Human AFM/spheroid and recent TAZ-ECM evidence support a permissive mechanical state.
+  recommended_representation: Boolean coarse state plus continuous PhysiBoSS parameter
+  maboss_action: Use X_MECHANICAL_PERMISSIVE_ECM and sensitivity ranges.
+  confidence: 6
+- factor_id: ENV-006
+  factor: ECM ligand presentation
+  normal_or_reference: SPP1, fibronectin, laminin/RGD-like motifs
+  evidence_for_adhesion: Human/primate/mouse interface evidence supports ligand-specific effects.
+  recommended_representation: extracellular ligand pools
+  maboss_action: Keep free ligand distinct from expression; future PhysiBoSS spatial fields.
+  confidence: 7
+- factor_id: ENV-007
+  factor: Hormone sequence and duration
+  normal_or_reference: 'ADOC: E2 2 d, then E2+MPA+cAMP+XAV939 4 d'
+  evidence_for_adhesion: Direct platform evidence and mifepristone perturbation.
+  recommended_representation: explicit inputs and staged initial conditions
+  maboss_action: Do not collapse into one receptive input.
+  confidence: 9
+- factor_id: ENV-008
+  factor: Embryo contact/quality/competence
+  normal_or_reference: hatched, viable blastocyst challenge
+  evidence_for_adhesion: Directly determines observable adhesion but is outside the current cell-type boundary.
+  recommended_representation: external IN_EMBRYO_PRESENT and IN_TROPHECTODERM_COMPETENT
+  maboss_action: Never infer maternal failure from a negative adhesion event without embryo-side uncertainty.
+  confidence: 9
+- factor_id: ENV-009
+  factor: Epithelial polarization and barrier integrity
+  normal_or_reference: polarized monolayer with tight junctions and microvilli
+  evidence_for_adhesion: ADOC and human surface-mechanism studies.
+  recommended_representation: latent receptive surface plus safety phenotypes
+  maboss_action: Distinguish physiological remodeling from nonspecific barrier damage.
+  confidence: 8
+- factor_id: ENV-010
+  factor: PDMS absorption and effective drug/hormone exposure
+  normal_or_reference: continuous-flow ADOC device
+  evidence_for_adhesion: Technical limitation noted by the ADOC manuscript.
+  recommended_representation: protocol metadata and exposure uncertainty
+  maboss_action: Do not equate nominal concentration with receptor activity; use uncertainty/sensitivity.
+  confidence: 7
+evidence_gaps:
+- gap_id: GAP-001
+  topic: Quantitative human kinetics
+  missing: Compartment-specific rates for P4->IHH, LIF->STAT3 and decidualization->mechanical permissiveness.
+  impact: Absolute MaBoSS time and transition rates are weakly identifiable.
+  priority: high
+  proposed_resolution: Time-course pSTAT3/IHH/BMP2/HAND2 and matched adhesion imaging in ADOC.
+- gap_id: GAP-002
+  topic: Dose-response
+  missing: True human embryo adhesion concentration-response for HBEGF, SPP1, CD98, CDH1, PODXL, PCSK5 and ANXA2.
+  impact: Cannot assign quantitative rate modifiers confidently.
+  priority: high
+  proposed_resolution: Common-dose perturbation panel with the same adhesion endpoints and toxicity controls.
+- gap_id: GAP-003
+  topic: Maternal versus embryo receptor assignment
+  missing: Several integrin, WNT and ligand mechanisms execute partly on trophectoderm.
+  impact: Risk of putting embryo biology inside maternal cells.
+  priority: high
+  proposed_resolution: Use external inputs now; add trophoblast only with identifiable embryo data in PhysiBoSS2.
+- gap_id: GAP-004
+  topic: MUC1 state definition
+  missing: Surface abundance, glycosylation and spatial clearance are not equivalent.
+  impact: Single-node MUC1 rules can reverse the biological interpretation.
+  priority: high
+  proposed_resolution: Measure glycoforms/sLeX and abundance separately; retain dual nodes.
+- gap_id: GAP-005
+  topic: Stromal mechanics
+  missing: Donor-specific AFM/hydrogel stiffness linked directly to human blastocyst adhesion is sparse.
+  impact: Mechanical gate remains qualitative.
+  priority: high
+  proposed_resolution: Paired AFM, stromal state profiling and adhesion assays across donors.
+- gap_id: GAP-006
+  topic: Temperature, oxygen and pH
+  missing: Adhesion-specific causal curves in ADOC.
+  impact: Cannot justify direction or thresholds in MaBoSS.
+  priority: medium
+  proposed_resolution: Small factorial perturbation around physiological ranges with viability/barrier counter-readouts.
+- gap_id: GAP-007
+  topic: Barrier versus adhesion
+  missing: Many perturbations affect junctions, viability or morphology nonspecifically.
+  impact: False anti-adhesion hits may simply damage epithelium.
+  priority: high
+  proposed_resolution: Always pair adhesion with TEER/permeability, viability and reversibility endpoints.
+- gap_id: GAP-008
+  topic: Donor variability
+  missing: Current human embryo sample sizes and donor matching are limited.
+  impact: Network may overfit a pooled average.
+  priority: high
+  proposed_resolution: At least three donors with matched conditions; hierarchical uncertainty and leave-one-donor-out predictions.
+- gap_id: GAP-009
+  topic: Clinical marker prediction
+  missing: Receptivity marker associations do not imply clinical predictive performance.
+  impact: Risk of interpreting PAEP/PRL/IGFBP1 or any single marker as implantation outcome.
+  priority: high
+  proposed_resolution: Use markers as internal state observables only; validate stable adhesion separately.
+references:
+- ref_id: REF-001
+  first_author: Muter
+  year: 2023
+  title: Human embryo implantation
+  journal: Development
+  species: human
+  study_type: review
+  doi: 10.1242/dev.201507
+  pmid: ''
+  evidence_level: consensus
+  compartment: epithelium;stroma
+  key_use: 'Two-gate framing: epithelial attachment plus stromal decidual support.'
+  url: https://doi.org/10.1242/dev.201507
+- ref_id: REF-002
+  first_author: Hantak
+  year: 2014
+  title: Role of uterine stromal-epithelial crosstalk in embryo implantation
+  journal: International Journal of Developmental Biology
+  species: mouse;human
+  study_type: review
+  doi: 10.1387/ijdb.130348mb
+  pmid: ''
+  evidence_level: consensus
+  compartment: epithelium;stroma
+  key_use: PGR-IHH-NR2F2-BMP2-HAND2 cross-compartment backbone.
+  url: https://doi.org/10.1387/ijdb.130348mb
+- ref_id: REF-003
+  first_author: Fukui
+  year: 2019
+  title: 'Uterine receptivity, embryo attachment, and embryo invasion: Multistep processes in embryo implantation'
+  journal: Reproductive Medicine and Biology
+  species: mostly mouse
+  study_type: review
+  doi: 10.1002/rmb2.12280
+  pmid: ''
+  evidence_level: consensus
+  compartment: epithelium;stroma
+  key_use: Separate receptivity, attachment and invasion; FOXA2-LIF and HAND2/BMI1 context.
+  url: https://doi.org/10.1002/rmb2.12280
+- ref_id: REF-004
+  first_author: Craciunas
+  year: 2019
+  title: 'Conventional and modern markers of endometrial receptivity: a systematic review and meta-analysis'
+  journal: Human Reproduction Update
+  species: human
+  study_type: systematic_review_meta_analysis
+  doi: 10.1093/humupd/dmy044
+  pmid: ''
+  evidence_level: consensus
+  compartment: whole endometrium
+  key_use: Markers are mechanistic/context variables, not reliable standalone clinical predictors.
+  url: https://doi.org/10.1093/humupd/dmy044
+- ref_id: REF-005
+  first_author: Hiraoka
+  year: 2026
+  title: 'Toward Implantation-Assisting Technologies: Lessons From In Vivo and Ex Vivo Models'
+  journal: Reproductive Medicine and Biology
+  species: mouse;human models
+  study_type: review
+  doi: 10.1002/rmb2.70042
+  pmid: ''
+  evidence_level: consensus
+  compartment: epithelium;stroma
+  key_use: Stage-specific interpretation of epithelial attachment and stromal post-attachment support.
+  url: https://doi.org/10.1002/rmb2.70042
+- ref_id: REF-006
+  first_author: Leach
+  year: 1999
+  title: Heparin-binding EGF-like growth factor cell-specific expression during the human endometrial cycle and early placentation
+  journal: Journal of Clinical Endocrinology and Metabolism
+  species: human
+  study_type: primary_descriptive
+  doi: 10.1210/jcem.84.9.5980
+  pmid: ''
+  evidence_level: primary_descriptive
+  compartment: epithelium;decidua
+  key_use: HB-EGF as receptive-phase epithelial support and later decidual signal.
+  url: https://doi.org/10.1210/jcem.84.9.5980
+- ref_id: REF-007
+  first_author: Apparao
+  year: 2001
+  title: Osteopontin and its receptor alphavbeta3 integrin are coexpressed in the human endometrium during the menstrual cycle
+    but regulated differentially
+  journal: Journal of Clinical Endocrinology and Metabolism
+  species: human
+  study_type: primary_mechanistic_descriptive
+  doi: 10.1210/jcem.86.10.7906
+  pmid: ''
+  evidence_level: primary_mechanistic
+  compartment: epithelium
+  key_use: SPP1/OPN-integrin adhesive surface; progesterone and EGF-family regulation.
+  url: https://doi.org/10.1210/jcem.86.10.7906
+- ref_id: REF-008
+  first_author: Dominguez
+  year: 2010
+  title: Human endometrial CD98 is essential for blastocyst adhesion
+  journal: PLoS ONE
+  species: human epithelial;mouse blastocyst assay
+  study_type: primary_mechanistic
+  doi: 10.1371/journal.pone.0013380
+  pmid: '20976164'
+  evidence_level: primary_mechanistic
+  compartment: epithelium
+  key_use: CD98/CD9 direct gain-loss evidence; induced by hCG, E2, LIF and EGF.
+  url: https://doi.org/10.1371/journal.pone.0013380
+- ref_id: REF-009
+  first_author: Garrido-Gomez
+  year: 2012
+  title: Annexin A2 is critical for embryo adhesiveness to the human endometrium by RhoA activation through F-actin regulation
+  journal: FASEB Journal
+  species: human cell models
+  study_type: primary_mechanistic
+  doi: 10.1096/fj.12-204008
+  pmid: ''
+  evidence_level: primary_mechanistic
+  compartment: epithelium
+  key_use: ANXA2-RHOA-F-actin remodeling as adhesion rate modulator.
+  url: https://doi.org/10.1096/fj.12-204008
+- ref_id: REF-010
+  first_author: Heng
+  year: 2011
+  title: 'Proprotein convertase 5/6 is critical for embryo implantation in women: regulating receptivity by cleaving EBP50,
+    modulating ezrin binding, and membrane-cytoskeletal interactions'
+  journal: Endocrinology
+  species: human
+  study_type: primary_mechanistic
+  doi: 10.1210/en.2011-1273
+  pmid: '21971156'
+  evidence_level: primary_mechanistic
+  compartment: epithelium;stroma
+  key_use: PCSK5/PC6 controls membrane-cytoskeletal remodeling and attachment.
+  url: https://doi.org/10.1210/en.2011-1273
+- ref_id: REF-011
+  first_author: Heng
+  year: 2015
+  title: Posttranslational removal of alpha-dystroglycan N terminus by PC5/6 cleavage is important for uterine preparation
+    for embryo implantation in women
+  journal: FASEB Journal
+  species: human
+  study_type: primary_mechanistic
+  doi: 10.1096/fj.14-269456
+  pmid: '26077903'
+  evidence_level: primary_mechanistic
+  compartment: epithelium
+  key_use: Full-length DAG1 is a barrier; PC6 cleavage creates an adhesion-permissive form.
+  url: https://doi.org/10.1096/fj.14-269456
+- ref_id: REF-012
+  first_author: Francis
+  year: 2021
+  title: Highly glycosylated MUC1 mediates high affinity L-selectin binding
+  journal: Journal of Nanobiotechnology
+  species: human epithelial model
+  study_type: primary_biophysical
+  doi: 10.1186/s12951-021-00793-9
+  pmid: ''
+  evidence_level: primary_mechanistic
+  compartment: epithelium
+  key_use: 'MUC1 has dual behavior: barrier versus glyco-permissive adhesive state.'
+  url: https://doi.org/10.1186/s12951-021-00793-9
+- ref_id: REF-013
+  first_author: Paule
+  year: 2021
+  title: Podocalyxin is a key negative regulator of human endometrial epithelial receptivity for embryo implantation
+  journal: Human Reproduction
+  species: human
+  study_type: primary_mechanistic
+  doi: 10.1093/humrep/deab032
+  pmid: '33822049'
+  evidence_level: primary_mechanistic
+  compartment: epithelium
+  key_use: PODXL is a major anti-adhesive luminal barrier node.
+  url: https://doi.org/10.1093/humrep/deab032
+- ref_id: REF-014
+  first_author: Heng
+  year: 2021
+  title: Podocalyxin promotes an impermeable epithelium and inhibits pro-implantation factors to negatively regulate endometrial
+    receptivity
+  journal: Scientific Reports
+  species: human epithelial model
+  study_type: primary_mechanistic
+  doi: 10.1038/s41598-021-03425-2
+  pmid: ''
+  evidence_level: primary_mechanistic
+  compartment: epithelium
+  key_use: PODXL strengthens tight/adherens-junction barrier and suppresses LIF, WNT and calcium signaling.
+  url: https://doi.org/10.1038/s41598-021-03425-2
+- ref_id: REF-015
+  first_author: Koel
+  year: 2022
+  title: Human endometrial cell-type-specific RNA sequencing provides new insights into the embryo-endometrium interplay
+  journal: Human Reproduction Open
+  species: human
+  study_type: primary_computational_integrative
+  doi: 10.1093/hropen/hoac043
+  pmid: '36339249'
+  evidence_level: primary_descriptive
+  compartment: epithelium;stroma
+  key_use: LGALS1/3, ITGB1, BSG and SPP1 interaction candidates; 16 paired women and trophectoderm data.
+  url: https://doi.org/10.1093/hropen/hoac043
+- ref_id: REF-016
+  first_author: Rawlings
+  year: 2021
+  title: Modelling the impact of decidual senescence on embryo implantation in human endometrial assembloids
+  journal: eLife
+  species: human assembloid
+  study_type: primary_mechanistic_platform
+  doi: 10.7554/eLife.69603
+  pmid: ''
+  evidence_level: primary_mechanistic
+  compartment: epithelium;stroma
+  key_use: Balanced decidual senescence and dynamic ECM are required; eliminating senescent cells creates a static matrix
+    and failure.
+  url: https://doi.org/10.7554/eLife.69603
+- ref_id: REF-017
+  first_author: Wang
+  year: 2018
+  title: Role of osteopontin in decidualization and pregnancy success
+  journal: Reproduction
+  species: human
+  study_type: primary_mechanistic_clinical
+  doi: 10.1530/REP-17-0782
+  pmid: ''
+  evidence_level: primary_mechanistic
+  compartment: stroma
+  key_use: Stromal SPP1 promotes decidual and angiogenic programs and is lower in implantation failure.
+  url: https://doi.org/10.1530/REP-17-0782
+- ref_id: REF-018
+  first_author: Schafir
+  year: 2026
+  title: How decidualization dysregulation reshapes the nanomechanics of endometrial stromal cells
+  journal: Molecular Human Reproduction
+  species: human stromal model
+  study_type: primary_mechanobiology
+  doi: 10.1093/molehr/gaag037
+  pmid: ''
+  evidence_level: primary_mechanistic
+  compartment: stroma
+  key_use: Decidualization-associated softening; excess ER stress prevents softening and impairs spheroid adhesion/expansion.
+  url: https://doi.org/10.1093/molehr/gaag037
+- ref_id: REF-019
+  first_author: Ruan
+  year: 2026
+  title: Free apical surface hetero-cellular CDH1 homophilic binding is a major mediator of blastocyst-endometrium interaction
+    in humans
+  journal: Human Reproduction
+  species: human
+  study_type: primary_mechanistic_biophysical
+  doi: 10.1093/humrep/deag009
+  pmid: '41704048'
+  evidence_level: primary_mechanistic
+  compartment: epithelium
+  key_use: Embryo/hCG induces apical CDH1 and CTNND1; blocking/knockdown reduces adhesion.
+  url: https://doi.org/10.1093/humrep/deag009
+- ref_id: REF-020
+  first_author: Zaragozano
+  year: 2026
+  title: Modeling human embryo adhesion using a microfluidic platform
+  journal: Science Advances
+  species: human ADOC;mouse validation
+  study_type: primary_platform_mechanistic
+  doi: 10.1126/sciadv.adz2249
+  pmid: ''
+  evidence_level: direct_human_adhesion
+  compartment: epithelium;stroma
+  key_use: 'Best direct human calibration: 9/19 HT, 0/12 untreated, 1/8 mifepristone; mean attachment 34.1 +/- 12.2 h.'
+  url: https://doi.org/10.1126/sciadv.adz2249
+- ref_id: REF-021
+  first_author: Mole
+  year: 2026
+  title: Modeling human embryo implantation in vitro
+  journal: Cell
+  species: human embryo;endometrial model
+  study_type: primary_high_fidelity_platform
+  doi: 10.1016/j.cell.2025.10.027
+  pmid: ''
+  evidence_level: primary_mechanistic
+  compartment: epithelium;stroma
+  key_use: Strong support for explicit stromal coupling and interface perturbation in a human implantation model.
+  url: https://doi.org/10.1016/j.cell.2025.10.027
+- ref_id: REF-022
+  first_author: Fazleabas
+  year: 1997
+  title: Distribution of integrins and the extracellular matrix proteins in the baboon endometrium during the menstrual cycle
+    and early pregnancy
+  journal: Biology of Reproduction
+  species: baboon
+  study_type: primary_comparative
+  doi: 10.1095/biolreprod56.2.348
+  pmid: '9116133'
+  evidence_level: primary_descriptive
+  compartment: epithelium;stroma
+  key_use: Primate support for OPN-integrin and fibronectin/ECM modules.
+  url: https://doi.org/10.1095/biolreprod56.2.348
+- ref_id: REF-023
+  first_author: Stewart
+  year: 1992
+  title: Blastocyst implantation depends on maternal expression of leukaemia inhibitory factor
+  journal: Nature
+  species: mouse
+  study_type: maternal_knockout
+  doi: 10.1038/359076a0
+  pmid: '1522892'
+  evidence_level: foundational_causal
+  compartment: glandular epithelium
+  key_use: Maternal LIF is an essential attachment trigger.
+  url: https://doi.org/10.1038/359076a0
+- ref_id: REF-024
+  first_author: Shen
+  year: 1992
+  title: Leukemia inhibitory factor is expressed by the preimplantation uterus and selectively blocks primitive ectoderm formation
+    in vitro
+  journal: Proceedings of the National Academy of Sciences USA
+  species: mouse
+  study_type: primary_descriptive
+  doi: 10.1073/pnas.89.17.8240
+  pmid: '1518852'
+  evidence_level: primary_descriptive
+  compartment: uterine epithelium
+  key_use: Temporal uterine LIF activation before implantation.
+  url: https://doi.org/10.1073/pnas.89.17.8240
+- ref_id: REF-025
+  first_author: Franco
+  year: 2010
+  title: Ablation of Indian hedgehog in the murine uterus results in aberrant estrogen signaling and infertility
+  journal: Biology of Reproduction
+  species: mouse
+  study_type: uterine_conditional_knockout
+  doi: 10.1095/biolreprod.109.080259
+  pmid: ''
+  evidence_level: foundational_causal
+  compartment: epithelium to stroma
+  key_use: IHH loss causes attachment failure, high epithelial estrogenic signaling and MUC1 persistence.
+  url: https://doi.org/10.1095/biolreprod.109.080259
+- ref_id: REF-026
+  first_author: Kurihara
+  year: 2007
+  title: COUP-TFII mediates progesterone regulation of uterine implantation by controlling ER activity
+  journal: PLoS Genetics
+  species: mouse
+  study_type: uterine_conditional_knockout
+  doi: 10.1371/journal.pgen.0030102
+  pmid: ''
+  evidence_level: foundational_causal
+  compartment: stroma to epithelium
+  key_use: NR2F2 relay downstream of IHH, upstream of BMP2, restraining epithelial estrogenic nonreceptivity.
+  url: https://doi.org/10.1371/journal.pgen.0030102
+- ref_id: REF-027
+  first_author: Lee
+  year: 2007
+  title: Bmp2 is critical for the murine uterine decidual response
+  journal: Molecular and Cellular Biology
+  species: mouse
+  study_type: uterine_conditional_knockout
+  doi: 10.1128/MCB.00342-07
+  pmid: ''
+  evidence_level: foundational_causal
+  compartment: stroma
+  key_use: BMP2 is essential for decidual support; initial attachment may precede stromal failure.
+  url: https://doi.org/10.1128/MCB.00342-07
+- ref_id: REF-028
+  first_author: Li
+  year: 2011
+  title: The antiproliferative action of progesterone in uterine epithelium is mediated by Hand2
+  journal: Science
+  species: mouse
+  study_type: uterine_conditional_knockout
+  doi: 10.1126/science.1197454
+  pmid: '21330545'
+  evidence_level: foundational_causal
+  compartment: stroma to epithelium
+  key_use: HAND2 suppresses stromal FGFs and epithelial estrogen-driven proliferation.
+  url: https://doi.org/10.1126/science.1197454
+- ref_id: REF-029
+  first_author: Huyen
+  year: 2011
+  title: Evidence for a conserved function of heart and neural crest derivatives expressed transcript 2 in mouse and human
+    decidualization
+  journal: Reproduction
+  species: mouse;human
+  study_type: primary_mechanistic
+  doi: 10.1530/REP-11-0060
+  pmid: '21527398'
+  evidence_level: primary_mechanistic
+  compartment: stroma
+  key_use: Conserved HAND2 induction and requirement in decidualization.
+  url: https://doi.org/10.1530/REP-11-0060
+- ref_id: REF-030
+  first_author: Pawar
+  year: 2013
+  title: STAT3 regulates uterine epithelial remodeling and epithelial-stromal crosstalk during implantation
+  journal: Molecular Endocrinology
+  species: mouse
+  study_type: epithelial_conditional_knockout
+  doi: 10.1210/me.2013-1206
+  pmid: ''
+  evidence_level: foundational_causal
+  compartment: epithelium;stroma
+  key_use: STAT3 controls epithelial junction remodeling and paracrine support.
+  url: https://doi.org/10.1210/me.2013-1206
+- ref_id: REF-031
+  first_author: Hiraoka
+  year: 2020
+  title: Differential roles of uterine epithelial and stromal STAT3 coordinate uterine receptivity and embryo attachment
+  journal: Scientific Reports
+  species: mouse
+  study_type: compartment_specific_knockouts
+  doi: 10.1038/s41598-020-72640-0
+  pmid: ''
+  evidence_level: foundational_causal
+  compartment: epithelium;stroma
+  key_use: Represent epithelial and stromal STAT3 separately.
+  url: https://doi.org/10.1038/s41598-020-72640-0
+- ref_id: REF-032
+  first_author: Namiki
+  year: 2023
+  title: Uterine epithelial Gp130 orchestrates hormone response and epithelial remodeling for successful embryo attachment
+    in mice
+  journal: Scientific Reports
+  species: mouse
+  study_type: epithelial_conditional_knockout
+  doi: 10.1038/s41598-023-27859-y
+  pmid: ''
+  evidence_level: foundational_causal
+  compartment: epithelium
+  key_use: GP130 is essential; connects hormone response to SNAI1-like epithelial remodeling.
+  url: https://doi.org/10.1038/s41598-023-27859-y
+- ref_id: REF-033
+  first_author: Aikawa
+  year: 2024
+  title: Spatiotemporal functions of leukemia inhibitory factor in embryo attachment and implantation chamber formation
+  journal: Cell Death Discovery
+  species: mouse
+  study_type: uterine_and_epithelial_knockouts
+  doi: 10.1038/s41420-024-02228-4
+  pmid: '39587062'
+  evidence_level: foundational_causal
+  compartment: epithelium;stroma
+  key_use: Pre-attachment epithelial LIF-STAT3 and later stromal LIF have distinct temporal roles.
+  url: https://doi.org/10.1038/s41420-024-02228-4
+- ref_id: REF-034
+  first_author: Lou
+  year: 2023
+  title: Uterine WNTS modulates fibronectin binding activity required for blastocyst attachment through the WNT/Ca2+ signaling
+    pathway in mice
+  journal: Reproductive Biology and Endocrinology
+  species: mouse
+  study_type: primary_mechanistic
+  doi: 10.1186/s12958-023-01135-0
+  pmid: ''
+  evidence_level: primary_mechanistic
+  compartment: maternal cue;embryo execution
+  key_use: WNT5A/7A uterine cue controls embryo integrin trafficking; external cue in maternal-only model.
+  url: https://doi.org/10.1186/s12958-023-01135-0
+- ref_id: REF-035
+  first_author: He
+  year: 2026
+  title: TAZ integrates ECM remodeling with uterine stromal differentiation
+  journal: Proceedings of the National Academy of Sciences USA
+  species: mouse;human datasets
+  study_type: uterine_genetics_and_integrative
+  doi: 10.1073/pnas.2528309123
+  pmid: ''
+  evidence_level: primary_mechanistic
+  compartment: stroma
+  key_use: TAZ/WWTR1 coordinates collagen/ECM remodeling and decidual function.
+  url: https://doi.org/10.1073/pnas.2528309123
+- ref_id: REF-036
+  first_author: Cullinan
+  year: 1996
+  title: Leukemia inhibitory factor and LIF receptor expression in human endometrium suggests a potential autocrine/paracrine
+    function in regulating embryo implantation
+  journal: Proceedings of the National Academy of Sciences USA
+  species: human
+  study_type: primary_descriptive
+  doi: 10.1073/pnas.93.7.3115
+  pmid: '8610178'
+  evidence_level: primary_descriptive
+  compartment: glandular epithelium
+  key_use: Human secretory-phase LIF/LIFR/GP130 expression support.
+  url: https://doi.org/10.1073/pnas.93.7.3115
+- ref_id: REF-037
+  first_author: Huang
+  year: 2018
+  title: Increased KLF12 impairs embryo attachment via downregulation of leukemia inhibitory factor in women with recurrent
+    implantation failure
+  journal: Cell Death Discovery
+  species: human
+  study_type: primary_mechanistic_clinical
+  doi: 10.1038/s41420-018-0088-8
+  pmid: '30109142'
+  evidence_level: primary_mechanistic
+  compartment: epithelium
+  key_use: KLF12 as a negative upstream regulator of LIF; extension candidate.
+  url: https://doi.org/10.1038/s41420-018-0088-8
+- ref_id: REF-038
+  first_author: Chung
+  year: 2016
+  title: Integrin alphaVbeta3 and alphaVbeta5 are required for leukemia inhibitory factor-mediated adhesion of trophoblast
+    cells to endometrial cells
+  journal: Biochemical and Biophysical Research Communications
+  species: human cell models
+  study_type: primary_mechanistic
+  doi: 10.1016/j.bbrc.2015.12.103
+  pmid: '26723254'
+  evidence_level: primary_mechanistic
+  compartment: epithelium;interface
+  key_use: LIF-to-integrin connection and attachment in human cell models.
+  url: https://doi.org/10.1016/j.bbrc.2015.12.103
+implementation_priority:
+  first_extension:
+  - E_LIF
+  - E_GP130_STAT3
+  - S_HAND2
+  - E_PODXL
+  - E_CD98_CD9
+  - E_CDH1_APICAL
+  - E_PC6
+  - E_DAG1_FULL
+  - E_DAG1_CLEAVED
+  - S_TAZ_ECM
+  - X_MECHANICAL_PERMISSIVE_ECM
+  second_extension:
+  - E_MUC1_BARRIER
+  - E_MUC1_SLEX
+  - E_ANXA2_ACTIN
+  - E_HBEGF
+  - E_ITGAVB3_5
+  - S_SPP1
+  - S_STAT3
+  - S_DECIDUAL_SENESCENCE_BALANCED
+  discovery_only:
+  - E_KLF12_HIGH
+  - S_FGF_MITOGENIC
+  - E_ESTROGENIC_PROLIFERATION
+  - X_LGALS1_3
+  - X_BSG_ITGB1
+  - IN_UTERINE_WNT_CUE
+source_provenance:
+- source_id: SRC-001
+  title: Embryo Adhesion in Endometrial Epithelium and Stroma for MaBoSS
+  source_type: derived_deep_research_report
+  status: input synthesis
+  role: Base literature inventory and prior mechanistic synthesis
+  location: ChatGPT File Library; not duplicated as a binary file in this archive
+  notes: All scientific claims were decomposed into REF-* entries and candidate mechanism rows.
+- source_id: SRC-002
+  title: IMPLANT-MOD Part B
+  source_type: project_proposal_pdf
+  status: non-peer-reviewed project context
+  role: ADOC/INVADE/PhysiBoSS2 scope, readout strategy, biosensing and physical boundary context
+  location: User-provided IMPLANT-MOD_PartB.pdf; excluded from share archive by source-data policy
+  notes: Used for platform architecture and context, not as causal molecular evidence.
+- source_id: SRC-003
+  title: Modeling human embryo adhesion using a microfluidic platform - local manuscript and supplement
+  source_type: local_manuscript_sources
+  status: source documents
+  role: ADOC protocol, endpoints, calibration counts and assay definitions
+  location: Original repository data paths referenced in config/data_manifest.tsv; binaries excluded from share archive
+  notes: Final scientific citation is REF-020.
+- source_id: SRC-004
+  title: Consensus and primary-source metadata verification
+  source_type: search_provenance
+  status: completed 2026-07-26
+  role: Locate literature and verify recent publication metadata/DOIs
+  location: External search results are represented by canonical DOI/PMID URLs in references.tsv
+  notes: This package is comprehensive for the prior report scope but is not claimed to be a PRISMA-complete systematic review.

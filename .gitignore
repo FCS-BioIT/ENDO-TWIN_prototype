@@ -1,0 +1,52 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.DS_Store
+
+# Environments and local secrets
+.pixi/
+.venv/
+.env
+.env.*
+!.env.example
+
+# Generated outputs
+output/
+outputs/
+results/
+logs/
+tmp/
+chatgpt_results_with_figures.tar.gz
+
+# Local-only large source artifacts
+data/combined-dataset-patient-integration.rds
+
+# MaBoSS generated artifacts
+*.probtraj.csv
+*.statdist.csv
+*.fp.csv
+*.run.log
+
+# Literature PDFs: never committed. Only extracted, attributed
+# claim-level assertions and bibliographic records belong in the repo.
+context/literature/pdfs/
+context/literature/supplements/
+
+# Local-only annotation source. Manifested in config/data_manifest.tsv and
+# pinned by sha256 -- exactly like the RDS above -- but never committed:
+# xl/sharedStrings.xml carries the lab's own cell-source codes and a collection
+# date, and this repository has a shared GitHub remote and an external-bundle
+# export path (scripts/make_chatgpt_results_bundle.sh copies config/, context/,
+# docs/ and input_tables/). Only opaque repository-local donor-group labels plus
+# source-cell coordinates are committed; the crosswalk deliberately does not
+# exist here. See config/source_contract.yaml local_only_verification.
+#
+# Accepted consequence: a clone without this file cannot pass
+# check_data_manifest.py --check-hashes. Already true for the RDS above.
+# Path is NFC -- an editor normalizing it to NFD silently stops matching.
+data/secreción proteinas ADOC anotaciones.xlsx
+
+# Local editor settings, not part of the project contract.
+.vscode/

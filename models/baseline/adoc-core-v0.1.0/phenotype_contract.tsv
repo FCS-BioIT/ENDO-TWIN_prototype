@@ -1,0 +1,18 @@
+phenotype_id	category	executable	expression	planned_use	evidence_ids	notes
+OUT_EPITHELIAL_RECEPTIVE	primary	true	OUT_EPITHELIAL_RECEPTIVE	construction_or_calibration	SOFIA-SC-001;SOFIA-EPI-001;SOFIA-EPI-002	Compact secretory epithelial state aligned to Phase 1 readouts.
+OUT_EPITHELIAL_SECRETORY	supporting	true	OUT_EPITHELIAL_SECRETORY	supporting_state	SOFIA-SC-001	Alias of the compact secretory-state module used for traceable reporting.
+OUT_STROMAL_DECIDUALIZED	primary	true	OUT_STROMAL_DECIDUALIZED	construction_or_calibration	SOFIA-SC-002;SOFIA-STR-001	Tracks the conservative stromal decidual core only.
+OUT_CROSSTALK_FUNCTIONAL	primary	true	OUT_CROSSTALK_FUNCTIONAL	mechanistic_intermediate	SOFIA-CCC-001	Provisional epithelial-IHH to stromal-NR2F2/BMP2 bridge.
+OUT_MATERNAL_ADHESION_COMPETENCE	primary	true	OUT_MATERNAL_ADHESION_COMPETENCE	mechanistic_intermediate	SOFIA-CCC-002;SOFIA-ADH-002	Separates maternal permissiveness from observed embryo adhesion.
+OUT_STABLE_ADHESION	primary	true	OUT_STABLE_ADHESION	calibration_or_validation	SOFIA-ADH-001;SOFIA-ADH-002;SOFIA-ADH-003	Requires embryo-challenge inputs and remains a model-conditional probability.
+OUT_BARRIER_MATURE	safety	true	OUT_BARRIER_MATURE	structural_placeholder		Conservative placeholder derived from the absence of explicit damage logic in Phase 1.
+OUT_BARRIER_REMODELED	safety	true	OUT_BARRIER_REMODELED	structural_placeholder		Tracks receptor-associated epithelial remodeling without claiming a permeability fit.
+OUT_BARRIER_DAMAGED	safety	true	OUT_BARRIER_DAMAGED	structural_placeholder		Hard-coded absent in Phase 1 because no damage module is yet evidence-backed.
+OUT_EPITHELIAL_VIABLE	safety	true	OUT_EPITHELIAL_VIABLE	structural_placeholder		Hard-coded viable placeholder pending explicit apoptosis and DNA-damage modules.
+OUT_STROMAL_VIABLE	safety	true	OUT_STROMAL_VIABLE	structural_placeholder		Hard-coded viable placeholder pending explicit apoptosis and DNA-damage modules.
+OUT_CHRONIC_INFLAMMATION	safety	false		deferred		Deferred until an explicit inflammation module is evidence-backed.
+OUT_PERSISTENT_SENESCENCE	safety	false		deferred		Deferred until an explicit senescence module is evidence-backed.
+OUT_DNA_DAMAGE	safety	false		deferred		Deferred until an explicit DNA-damage module is evidence-backed.
+OUT_APOPTOSIS	safety	false		deferred		Deferred until an explicit apoptosis module is evidence-backed.
+OUT_METABOLIC_HEALTH	supporting	false		deferred		Deferred until the metabolic support module is implemented.
+OUT_RECOVERY_AFTER_WASHOUT	safety	false		deferred		Deferred because the Phase 1 washout protocol does not yet encode recovery-memory logic.

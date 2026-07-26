@@ -1,0 +1,175 @@
+// Provisional Phase 1 ADOC baseline model.
+// Topology shared across maternal-state and embryo adhesion-challenge protocols.
+// Node-specific rates are intentionally omitted; MaBoSS implicit logic-driven defaults apply.
+
+Node IN_E2 {
+  logic = IN_E2;
+}
+
+Node IN_PROGESTIN {
+  logic = IN_PROGESTIN;
+}
+
+Node IN_cAMP {
+  logic = IN_cAMP;
+}
+
+Node IN_XAV939 {
+  logic = IN_XAV939;
+}
+
+Node IN_MIFEPRISTONE {
+  logic = IN_MIFEPRISTONE;
+}
+
+Node IN_ANTI_SPP1 {
+  logic = IN_ANTI_SPP1;
+}
+
+Node IN_EMBRYO_PRESENT {
+  logic = IN_EMBRYO_PRESENT;
+}
+
+Node IN_TROPHECTODERM_COMPETENT {
+  logic = IN_TROPHECTODERM_COMPETENT;
+}
+
+Node E_PGR {
+  logic = IN_PROGESTIN and not IN_MIFEPRISTONE;
+}
+
+Node E_AXIN {
+  logic = IN_XAV939;
+}
+
+Node E_IHH {
+  logic = E_PGR;
+}
+
+Node E_SECRETORY_STATE {
+  logic = IN_E2 and E_PGR;
+}
+
+Node E_PAEP {
+  logic = E_SECRETORY_STATE;
+}
+
+Node E_SPP1_EXPR {
+  logic = E_SECRETORY_STATE;
+}
+
+Node S_PGR {
+  logic = IN_PROGESTIN and not IN_MIFEPRISTONE;
+}
+
+Node S_PKA {
+  logic = IN_cAMP;
+}
+
+Node S_CEBPB {
+  logic = S_PKA;
+}
+
+Node S_NR2F2 {
+  logic = E_IHH and S_PGR;
+}
+
+Node S_BMP2 {
+  logic = (S_PGR and S_PKA) or S_NR2F2;
+}
+
+Node S_IL11 {
+  logic = S_BMP2;
+}
+
+Node S_FOXO1 {
+  logic = S_PGR and S_PKA;
+}
+
+Node S_DECIDUALIZED {
+  logic = S_PGR and S_PKA and S_BMP2;
+}
+
+Node S_PRL {
+  logic = S_DECIDUALIZED;
+}
+
+Node S_IGFBP1 {
+  logic = S_DECIDUALIZED;
+}
+
+Node X_SPP1_LUMEN_FREE {
+  logic = E_SPP1_EXPR and not IN_ANTI_SPP1;
+}
+
+Node X_MATERNAL_INTERFACE_READY {
+  logic = (E_SECRETORY_STATE or S_DECIDUALIZED or S_BMP2) and not IN_MIFEPRISTONE;
+}
+
+Node X_INTERFACE_SPP1_RELAY {
+  logic = X_INTERFACE_SPP1_RELAY;
+}
+
+Node X_INTERFACE_REDUNDANT_RELAY {
+  logic = X_INTERFACE_REDUNDANT_RELAY;
+}
+
+Node X_INTERFACE_ANTIADHESIVE_RELAY {
+  logic = X_INTERFACE_ANTIADHESIVE_RELAY;
+}
+
+Node X_ADHESION_ROUTE_SPP1 {
+  logic = X_MATERNAL_INTERFACE_READY and X_SPP1_LUMEN_FREE and X_INTERFACE_SPP1_RELAY;
+}
+
+Node X_ADHESION_ROUTE_REDUNDANT {
+  logic = X_MATERNAL_INTERFACE_READY and X_INTERFACE_REDUNDANT_RELAY;
+}
+
+Node X_ANTIADHESIVE_ROUTE {
+  logic = X_MATERNAL_INTERFACE_READY and X_INTERFACE_ANTIADHESIVE_RELAY and IN_ANTI_SPP1;
+}
+
+Node OUT_EPITHELIAL_RECEPTIVE {
+  logic = E_SECRETORY_STATE;
+}
+
+Node OUT_EPITHELIAL_SECRETORY {
+  logic = E_SECRETORY_STATE;
+}
+
+Node OUT_STROMAL_DECIDUALIZED {
+  logic = S_DECIDUALIZED;
+}
+
+Node OUT_CROSSTALK_FUNCTIONAL {
+  logic = E_IHH and S_BMP2;
+}
+
+Node OUT_MATERNAL_ADHESION_COMPETENCE {
+  logic = ((X_ADHESION_ROUTE_SPP1 or X_ADHESION_ROUTE_REDUNDANT) and not X_ANTIADHESIVE_ROUTE) and not IN_MIFEPRISTONE and (not IN_ANTI_SPP1 or X_ADHESION_ROUTE_REDUNDANT);
+}
+
+Node OUT_STABLE_ADHESION {
+  logic = OUT_MATERNAL_ADHESION_COMPETENCE and IN_EMBRYO_PRESENT and IN_TROPHECTODERM_COMPETENT;
+}
+
+Node OUT_BARRIER_MATURE {
+  logic = not OUT_BARRIER_DAMAGED and not OUT_BARRIER_REMODELED;
+}
+
+Node OUT_BARRIER_REMODELED {
+  logic = OUT_EPITHELIAL_RECEPTIVE and not OUT_BARRIER_DAMAGED;
+}
+
+Node OUT_BARRIER_DAMAGED {
+  logic = 0;
+}
+
+Node OUT_EPITHELIAL_VIABLE {
+  logic = 1;
+}
+
+Node OUT_STROMAL_VIABLE {
+  logic = 1;
+}

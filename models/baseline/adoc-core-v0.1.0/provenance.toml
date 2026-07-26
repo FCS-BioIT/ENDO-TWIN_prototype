@@ -1,0 +1,53 @@
+schema_version = "1.0"
+model_id = "adoc_core"
+baseline_version = "adoc-core-v0.1.0"
+status = "provisional_phase1"
+generated_on = "2026-07-25"
+
+[claim_boundary]
+validation_label = "structural_only"
+claim_ceiling = "Executable provisional research model and condition configs only; not a calibrated or biologically validated digital twin."
+
+[baseline_policy]
+immutable = true
+shared_topology_across_conditions = true
+patient_variants_required_for_personalization = true
+
+[time_semantics]
+maboss_time_units = "relative_only"
+simulation_defaults_source = "models/specs/parameter_scenarios.yaml"
+notes = "MaBoSS time is not calibrated to experimental hours or days."
+
+[sources]
+project_context = "context/project-context.md"
+evidence_register = "context/evidence-register.tsv"
+node_candidates = "context/node-candidates.tsv"
+phase1_readouts = "context/phase1-readouts.tsv"
+implementation_reference = "context/references/adoc-maboss-model-specification.user-provided.md"
+
+[source_hashes]
+project_context_sha256 = "11d1099d5a1edeb04fbbfd720b859187f28f5f8b3e4b20bb3f7d1ba85792a3f2"
+evidence_register_sha256 = "0145fcec25f5a2b028844f035c21b9a81147446dc2427cd1500fb42ab2e687d3"
+node_candidates_sha256 = "b8b4bfd2802bc1bb75972820c1cb499b44a34f1656f6a41b3835d5e54431b0a0"
+phase1_readouts_sha256 = "be6234a69bc5128b34719bddb530df02e81fb168036712f3e7b266c1e1651606"
+implementation_reference_sha256 = "a17b40b5277cdad1080677485f180b5fd40c60a95a4ad3bd3e60b6ef32442c7b"
+
+[assumptions]
+ihh_bridge_variant = "phase1_candidate_ihh"
+spp1_bridge_variant = "phase1_candidate_spp1"
+safety_outputs = "phase1_placeholder_safety"
+washout_scope = "Input reversion only; no recovery-memory module."
+
+[artifacts]
+network_bnd = "models/baseline/adoc-core-v0.1.0/network.bnd"
+baseline_cfg = "models/baseline/adoc-core-v0.1.0/baseline.cfg"
+node_dictionary = "models/baseline/adoc-core-v0.1.0/node_dictionary.tsv"
+edge_evidence = "models/baseline/adoc-core-v0.1.0/edge_evidence.tsv"
+phenotype_contract = "models/baseline/adoc-core-v0.1.0/phenotype_contract.tsv"
+
+[artifact_hashes]
+network_bnd_sha256 = "807bf0df035524d7e0799af7d2fe713b8cb17ae42ce560b7b1ac4b9a3a525914"
+baseline_cfg_sha256 = "4b7c3251d659daa41c7bdf3c27def878a393f79c1c2ecf86b4e11e1e4e854285"
+node_dictionary_sha256 = "e34c138ed7e890d501cd0bb478f1d8154b109420765321c2a8c4775e71ff9293"
+edge_evidence_sha256 = "44830c85f7a108860e0915ab3d3d3ecc33f67beb8d405b62e233a10ab9185a61"
+phenotype_contract_sha256 = "00f0aea3465973bc0eea95498a8b5b8e7fcc3cdcf3082a0a8ac3ee277ad06c2f"

@@ -1,0 +1,59 @@
+edge_id	source	target	sign	evidence_id	confidence	variant_id	notes
+E001	IN_PROGESTIN	E_PGR	activation	SOFIA-HT-001	verified	phase1_provisional_core	Published protocol encodes progestin exposure.
+E002	IN_MIFEPRISTONE	E_PGR	inhibition	SOFIA-HT-002	verified	phase1_provisional_core	Mifepristone reduces the effective epithelial PGR state in the perturbation condition.
+E003	IN_XAV939	E_AXIN	activation	SOFIA-HT-001	candidate	phase1_provisional_xav939	Minimal XAV939 abstraction retained without a full beta-catenin submodule.
+E004	IN_E2	E_SECRETORY_STATE	activation	SOFIA-HT-001	candidate	phase1_provisional_core	Published HT protocol includes staged E2 exposure before secretory-state readouts.
+E005	E_PGR	E_SECRETORY_STATE	activation	SOFIA-SC-001	candidate	phase1_provisional_core	Compact epithelial state requires progestin signaling in this provisional executable baseline.
+E006	E_AXIN	E_SECRETORY_STATE	activation	SOFIA-HT-001	candidate	phase1_candidate_xav939_gate	Represents the stricter uncertain-rule variant in which XAV939 remains an added epithelial permissive gate.
+E007	E_SECRETORY_STATE	E_PAEP	activation	SOFIA-EPI-001	verified	phase1_provisional_core	PAEP is treated as a direct readout of the compact epithelial secretory state.
+E008	E_SECRETORY_STATE	E_SPP1_EXPR	activation	SOFIA-SC-001	candidate	phase1_provisional_spp1	SPP1 remains a readout plus provisional functional ligand.
+E009	IN_PROGESTIN	S_PGR	activation	SOFIA-HT-001	verified	phase1_provisional_core	Published protocol encodes progestin exposure.
+E010	IN_MIFEPRISTONE	S_PGR	inhibition	SOFIA-HT-002	verified	phase1_provisional_core	Mifepristone reduces the effective stromal PGR state in the perturbation condition.
+E011	IN_cAMP	S_PKA	activation	SOFIA-HT-001	verified	phase1_provisional_core	Minimal cAMP bridge for the stromal program.
+E012	S_PKA	S_CEBPB	activation	SOFIA-HT-001	candidate	phase1_provisional_core	Compact decidual bridge needed to connect cAMP to PRL and IGFBP1.
+E013	E_PGR	E_IHH	activation	SOFIA-CCC-001	candidate	phase1_candidate_ihh	Collapsed epithelial IHH bridge pending fuller SOX17 and GATA2 support.
+E014	E_IHH	S_NR2F2	activation	SOFIA-CCC-001	candidate	phase1_candidate_ihh	Collapsed IHH to NR2F2 bridge used for the executable provisional baseline.
+E015	S_PGR	S_NR2F2	activation	SOFIA-CCC-001	candidate	phase1_candidate_ihh	Stromal progesterone signaling is retained as a contextual requirement in the compact bridge.
+E016	S_PGR	S_BMP2	activation	SOFIA-SC-002	verified	phase1_provisional_core	BMP2 is part of the HT stromal program.
+E017	S_NR2F2	S_BMP2	activation	SOFIA-CCC-001	candidate	phase1_candidate_ihh	Retains the manuscript IHH-NR2F2-BMP2 direction as a provisional executable bridge.
+E018	S_BMP2	S_IL11	activation	SOFIA-SC-002	verified	phase1_provisional_core	IL11 is treated as a downstream stromal-program readout in the compact model.
+E019	S_CEBPB	S_FOXO1	activation	SOFIA-STR-001	candidate	phase1_provisional_core	Compact mechanistic bridge.
+E020	S_BMP2	S_FOXO1	activation	SOFIA-SC-002	candidate	phase1_provisional_core	Compact mechanistic bridge.
+E021	S_PGR	S_DECIDUALIZED	activation	SOFIA-STR-001	verified	phase1_provisional_core	Compact stromal state requires progesterone signaling.
+E022	S_FOXO1	S_DECIDUALIZED	activation	SOFIA-STR-001	candidate	phase1_provisional_core	Compact stromal state requires the FOXO1-like bridge in the provisional model.
+E023	S_BMP2	S_DECIDUALIZED	activation	SOFIA-SC-002	verified	phase1_provisional_core	BMP2 is retained as part of the minimal stromal-decidual core.
+E024	S_DECIDUALIZED	S_PRL	activation	SOFIA-STR-001	verified	phase1_provisional_core	PRL is treated as a downstream decidual readout.
+E025	S_FOXO1	S_PRL	activation	SOFIA-STR-001	candidate	phase1_provisional_core	Compact mechanistic bridge.
+E026	S_DECIDUALIZED	S_IGFBP1	activation	SOFIA-STR-001	verified	phase1_provisional_core	IGFBP1 is treated as a downstream decidual readout.
+E027	S_FOXO1	S_IGFBP1	activation	SOFIA-STR-001	candidate	phase1_provisional_core	Compact mechanistic bridge.
+E028	E_SPP1_EXPR	X_SPP1_LUMEN_FREE	activation	SOFIA-CCC-002	candidate	phase1_candidate_spp1	Free-ligand abstraction retained for the anti-SPP1 perturbation.
+E029	IN_ANTI_SPP1	X_SPP1_LUMEN_FREE	inhibition	SOFIA-CCC-002	candidate	phase1_candidate_spp1	Encodes free-ligand neutralization only; no transcriptional effect is assumed.
+E029A	OUT_EPITHELIAL_RECEPTIVE	X_MATERNAL_INTERFACE_READY	activation	SOFIA-ADH-002	candidate	phase1_candidate_adhesion_interface	Maternal interface readiness requires epithelial receptivity.
+E029B	OUT_STROMAL_DECIDUALIZED	X_MATERNAL_INTERFACE_READY	activation	SOFIA-ADH-002	candidate	phase1_candidate_adhesion_interface	Maternal interface readiness requires stromal decidualization.
+E029C	OUT_CROSSTALK_FUNCTIONAL	X_MATERNAL_INTERFACE_READY	activation	SOFIA-CCC-001	candidate	phase1_candidate_adhesion_interface	Maternal interface readiness retains the provisional epithelial-stromal crosstalk bridge.
+E029D	X_MATERNAL_INTERFACE_READY	X_ADHESION_ROUTE_SPP1	activation	SOFIA-ADH-002	candidate	phase1_candidate_adhesion_interface	The SPP1-linked route requires a conditioned maternal interface.
+E029E	X_SPP1_LUMEN_FREE	X_ADHESION_ROUTE_SPP1	activation	SOFIA-CCC-002	candidate	phase1_candidate_adhesion_interface	Free luminal SPP1 contributes only one positive adhesion route.
+E029F	X_INTERFACE_SPP1_RELAY	X_ADHESION_ROUTE_SPP1	activation	SOFIA-CCC-002	assumption	phase1_candidate_adhesion_interface	Bounded structural relay keeps the SPP1-linked route partial.
+E029G	X_MATERNAL_INTERFACE_READY	X_ADHESION_ROUTE_REDUNDANT	activation	SOFIA-ADH-002	candidate	phase1_candidate_adhesion_interface	Redundant route requires a conditioned maternal interface.
+E029H	X_INTERFACE_REDUNDANT_RELAY	X_ADHESION_ROUTE_REDUNDANT	activation	SOFIA-ADH-002	assumption	phase1_candidate_adhesion_interface	Bounded structural relay keeps a non-SPP1 positive route available.
+E029I	X_MATERNAL_INTERFACE_READY	X_ANTIADHESIVE_ROUTE	activation	SOFIA-ADH-002	candidate	phase1_candidate_adhesion_interface	Antiadhesive route is only meaningful after maternal conditioning.
+E029J	X_INTERFACE_ANTIADHESIVE_RELAY	X_ANTIADHESIVE_ROUTE	activation	SOFIA-ADH-002	assumption	phase1_candidate_adhesion_interface	Bounded structural relay opposes the positive interface routes.
+E030	E_SECRETORY_STATE	OUT_EPITHELIAL_SECRETORY	activation	SOFIA-SC-001	verified	phase1_provisional_core	Direct phenotype alias for reporting.
+E031	E_SECRETORY_STATE	OUT_EPITHELIAL_RECEPTIVE	activation	SOFIA-SC-001	verified	phase1_provisional_core	Compact epithelial phenotype requires the secretory state.
+E032	E_PAEP	OUT_EPITHELIAL_RECEPTIVE	activation	SOFIA-EPI-001	verified	phase1_provisional_core	PAEP provides the direct epithelial readout gate.
+E033	S_DECIDUALIZED	OUT_STROMAL_DECIDUALIZED	activation	SOFIA-STR-001	verified	phase1_provisional_core	Compact stromal phenotype requires the decidual state.
+E034	S_PRL	OUT_STROMAL_DECIDUALIZED	activation	SOFIA-STR-001	verified	phase1_provisional_core	PRL contributes a direct readout gate.
+E035	S_IGFBP1	OUT_STROMAL_DECIDUALIZED	activation	SOFIA-STR-001	verified	phase1_provisional_core	IGFBP1 contributes a direct readout gate.
+E036	E_IHH	OUT_CROSSTALK_FUNCTIONAL	activation	SOFIA-CCC-001	candidate	phase1_candidate_ihh	Compact crosstalk phenotype gate.
+E037	S_NR2F2	OUT_CROSSTALK_FUNCTIONAL	activation	SOFIA-CCC-001	candidate	phase1_candidate_ihh	Compact crosstalk phenotype gate.
+E038	S_BMP2	OUT_CROSSTALK_FUNCTIONAL	activation	SOFIA-CCC-001	candidate	phase1_candidate_ihh	Compact crosstalk phenotype gate.
+E039	X_ADHESION_ROUTE_SPP1	OUT_MATERNAL_ADHESION_COMPETENCE	activation	SOFIA-ADH-002	candidate	phase1_candidate_adhesion_interface	SPP1-linked route is one sufficient positive contributor within the modular interface.
+E040	X_ADHESION_ROUTE_REDUNDANT	OUT_MATERNAL_ADHESION_COMPETENCE	activation	SOFIA-ADH-002	candidate	phase1_candidate_adhesion_interface	Redundant route keeps maternal competence non-zero after anti-SPP1 challenge.
+E041	X_ANTIADHESIVE_ROUTE	OUT_MATERNAL_ADHESION_COMPETENCE	inhibition	SOFIA-ADH-002	candidate	phase1_candidate_adhesion_interface	Antiadhesive route opposes the positive interface routes.
+E042	X_MATERNAL_INTERFACE_READY	OUT_MATERNAL_ADHESION_COMPETENCE	activation	SOFIA-ADH-002	candidate	phase1_candidate_adhesion_interface	Maternal competence remains conditional on the upstream conditioned interface.
+E043	OUT_EPITHELIAL_RECEPTIVE	OUT_BARRIER_REMODELED	activation		assumption	phase1_placeholder_safety	Phase 1 placeholder only.
+E044	OUT_BARRIER_DAMAGED	OUT_BARRIER_MATURE	inhibition		assumption	phase1_placeholder_safety	Phase 1 placeholder only.
+E045	OUT_BARRIER_REMODELED	OUT_BARRIER_MATURE	inhibition		assumption	phase1_placeholder_safety	Phase 1 placeholder only.
+E046	OUT_MATERNAL_ADHESION_COMPETENCE	OUT_STABLE_ADHESION	activation	SOFIA-ADH-001	candidate	phase1_provisional_core	Observed stable adhesion is modeled as a gated consequence of maternal competence plus assay inputs.
+E047	IN_EMBRYO_PRESENT	OUT_STABLE_ADHESION	activation	SOFIA-ADH-001	verified	phase1_provisional_core	Keeps embryo challenge explicit.
+E048	IN_TROPHECTODERM_COMPETENT	OUT_STABLE_ADHESION	activation	SOFIA-ADH-001	candidate	phase1_provisional_core	Embryo-side competence remains an explicit assay abstraction.

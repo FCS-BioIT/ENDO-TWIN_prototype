@@ -1,0 +1,41 @@
+schema_version: "1.0"
+captured_at: "2026-07-25"
+sources:
+  - name: PROFILE
+    url: "https://github.com/sysbio-curie/PROFILE"
+    revision: "87db279aa064efd5c923560f0aefac653a79a9e6"
+    commit_date: "2025-12-02T16:54:01+01:00"
+    license: "BSD-3-Clause"
+    inspected_paths:
+      - "README.md"
+      - "example1_Linux.sh"
+      - "example2_Linux.sh"
+      - "Scripts/Simulations/MaBoSS_specific.py"
+    notes:
+      - "Tutorial and workflow are R plus Python plus Perl plus shell orchestration around MaBoSS."
+      - "Uses strict node variants from binary mutation/CNA tables and soft variants from normalized RNA tables."
+      - "Defaults unregulated inputs to 0.5 initial ON probability."
+      - "Uses multiplicative rate scaling via a user-provided rates factor."
+      - "Assumes model-specific directory structure and bundled cohort assets that DT_ADOC must not copy."
+  - name: PROFILE_v2
+    url: "https://github.com/ArnauMontagud/PROFILE_v2"
+    revision: "c3e8c39dacb0cad1ff21a79aa871667356b6bf42"
+    commit_date: "2025-11-05T23:22:52+01:00"
+    license: "BSD-3-Clause"
+    inspected_paths:
+      - "README.md"
+      - "Gradient inhibition of nodes/PROFILE_DrugSim.py"
+      - "Gradient inhibition of nodes/drugs_loop_single.sh"
+      - "Gradient inhibition of nodes/drugs_loop_double.sh"
+    notes:
+      - "Implements graded inhibition by adding anti-node controls and writing many modified BND/CFG files."
+      - "Uses shell-script generation, bundled executables, and R analysis scripts that DT_ADOC must not copy."
+      - "Uses engagement grid values such as 0.0 to 1.0 in 0.2 steps for single and double inhibition screens."
+      - "Calculates downstream efficacy/synergy summaries in R over generated simulation outputs."
+runtime_selection:
+  maboss_python_package:
+    package_name: "maboss"
+    version_checked: "0.8.15"
+    source: "official GitHub releases and PyPI metadata checked on 2026-07-25"
+  notes:
+    - "Final Pixi pin and executable verification remain implementation-time gates."

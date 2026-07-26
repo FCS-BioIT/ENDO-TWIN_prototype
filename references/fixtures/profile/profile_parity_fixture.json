@@ -1,0 +1,25 @@
+{
+  "fixture_id": "profile_soft_mapping_example1",
+  "upstream_revision": "87db279aa064efd5c923560f0aefac653a79a9e6",
+  "upstream_paths": [
+    "example1_Linux.sh",
+    "Scripts/Simulations/MaBoSS_specific.py"
+  ],
+  "alpha": 1.5,
+  "scores": [
+    {
+      "node_id": "E_PAEP",
+      "score": 0.2,
+      "expected_initial_probability": 0.2,
+      "expected_rate_up": 0.6376281516217733,
+      "expected_rate_down": 1.568312185490169
+    },
+    {
+      "node_id": "S_PRL",
+      "score": 0.8,
+      "expected_initial_probability": 0.8,
+      "expected_rate_up": 1.5683121854901687,
+      "expected_rate_down": 0.6376281516217733
+    }
+  ]
+}

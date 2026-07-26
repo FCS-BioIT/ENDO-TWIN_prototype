@@ -1,0 +1,16 @@
+{
+  "fixture_id": "profile_v2_gradient_inhibition_example",
+  "upstream_revision": "c3e8c39dacb0cad1ff21a79aa871667356b6bf42",
+  "upstream_paths": [
+    "Gradient inhibition of nodes/PROFILE_DrugSim.py",
+    "Gradient inhibition of nodes/drugs_loop_single.sh",
+    "Gradient inhibition of nodes/drugs_loop_double.sh"
+  ],
+  "levels": [1.0, 0.5, 0.0],
+  "mode": "inhibit",
+  "target_a": "E_PGR",
+  "target_b": "S_PGR",
+  "expected_grid": [0.0, 0.5, 1.0],
+  "expected_single_count": 3,
+  "expected_pair_count": 9
+}

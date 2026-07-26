@@ -1,0 +1,268 @@
+[workspace]
+authors = ["PROTOTYPE contributors"]
+channels = ["conda-forge"]
+name = "adoc-prototype"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[dependencies]
+openpyxl = ">=3.1,<4"
+python = "3.12.*"
+pyyaml = ">=6.0,<7"
+ruff = ">=0.12,<1"
+
+[pypi-dependencies]
+maboss = "==0.8.15"
+# Declared explicitly rather than relied on as transitive maboss dependencies:
+# the pathway-dynamics renderer imports them directly. Kept on PyPI (not
+# conda-forge) so the existing wheel resolution is preserved and no conda GUI
+# toolchain is pulled into the environment.
+matplotlib = ">=3.10,<4"
+networkx = ">=3.4,<4"
+numpy = ">=2.0,<3"
+pandas = ">=2.2,<4"
+pillow = ">=11,<14"
+
+[tasks.harness-check]
+cmd = "aih doctor --cwd ."
+description = "Validate global Agent Harness installation and PROTOTYPE integration"
+
+[tasks.chatgpt-results-bundle]
+cmd = "bash scripts/make_chatgpt_results_bundle.sh"
+description = "Create and validate a compact ChatGPT archive containing source, documentation, context, models, and available results"
+
+[tasks.chatgpt-results-bundle-test]
+cmd = "PYTHONDONTWRITEBYTECODE=1 python -B -m unittest tests.test_chatgpt_bundle -v"
+description = "Run focused tests for ChatGPT bundle inclusion, exclusion, manifest, and extraction contracts"
+
+[tasks.test]
+cmd = "PYTHONDONTWRITEBYTECODE=1 python -B -m unittest discover -s tests -v"
+description = "Run the complete PROTOTYPE suite: every directory under tests/, integration and biological constraints included. This is the required pre-merge check; `discover -s tests/unit` is not a substitute"
+
+[tasks.test-guards]
+cmd = "PYTHONDONTWRITEBYTECODE=1 python -B scripts/run_test_guards.py"
+description = "Run the fast integrity and provenance guards listed in scripts/test_guards.txt (implementation digests, line endings, frozen evidence, closed phases, the PCSK5 correction, committed-table regeneration). Fails on any failure, failing subtest or skip, or any change to the checkout, and prints the exact number of tests run. Not a substitute for `pixi run test`"
+
+[tasks.test-parallel]
+cmd = "PYTHONDONTWRITEBYTECODE=1 python -B scripts/run_test_parallel.py"
+description = "Optional: run exactly the `pixi run test` suite as two workers (test_phase2b_contract alone, then everything else), each started through `pixi run` in a 40G memory-capped scope. Fails unless every discovered test ran once, passed and the checkout is unchanged. Not a substitute for `pixi run test`, the required serial pre-merge check"
+
+[tasks.perturb-cascade]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.cli perturb cascade"
+description = "Per-trajectory response order after a declared perturbation, with a matched control (pass --spec or --start/--set)"
+
+[tasks.run-record]
+cmd = "PYTHONDONTWRITEBYTECODE=1 python -B scripts/run_record.py write"
+description = "Run lint, format-check, test-guards and the complete serial test suite on the committed HEAD of a clean tree, and write docs/verification/runs/<commit>.json with the gzipped test log; commit both with the PR (pass --suite parallel to record test-parallel instead)"
+
+[tasks.check-run-record]
+cmd = "PYTHONDONTWRITEBYTECODE=1 python -B scripts/run_record.py check"
+description = "Pass only if a committed run record covers the code at HEAD: tested at HEAD or an ancestor with only docs/verification/runs/ changed since, every check exited 0, and the committed log matches its SHA-256"
+
+[tasks.lint]
+cmd = "ruff check src tests"
+description = "Run static lint checks on PROTOTYPE source and tests"
+
+[tasks.format-check]
+cmd = "ruff format --check src tests"
+description = "Check Python formatting for PROTOTYPE source and tests"
+
+[tasks.compile-models]
+cmd = "bash -lc 'set -euo pipefail; export PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1; python -B -m dt_adoc.model.compile --emit-bnd > /dev/null; for protocol in basal e2_priming hormone_treated hormone_treated_mifepristone hormone_treated_anti_spp1 washout adhesion_challenge_basal adhesion_challenge_hormone_treated adhesion_challenge_hormone_treated_mifepristone adhesion_challenge_hormone_treated_anti_spp1 adhesion_challenge_washout; do python -B -m dt_adoc.model.compile --emit-condition \"$protocol\" > /dev/null; done'"
+description = "Render the committed baseline model and all Phase 1 condition configs from the source-of-truth specs"
+
+[tasks.validate-models]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.cli validate-models --json"
+description = "Run static PROTOTYPE Phase 1 model-contract validation"
+
+[tasks.smoke]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.cli smoke --run-id phase1-structural-smoke"
+description = "Run the bounded PROTOTYPE Phase 1 structural smoke via the cmaboss backend"
+
+[tasks.validate-smoke]
+cmd = "python -B .codex/skills/adoc-result-validator/scripts/validate_run_manifest.py output/smoke/phase1-structural-smoke/run_manifest.json --root ."
+description = "Validate the Phase 1 structural smoke manifest and referenced artifacts"
+
+[tasks.report-smoke]
+cmd = "bash -lc 'test -f output/smoke/phase1-structural-smoke/report/smoke_report.md'"
+description = "Check that the Phase 1 structural smoke report exists"
+
+[tasks.verify-citations]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.cli verify-citations --checked-on $(date -u +%Y-%m-%d)"
+description = "Resolve every bibliography DOI against Crossref and refresh the citation verification cache"
+
+[tasks.validate-evidence-assertions]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.evidence.assertions"
+description = "Regenerate models/superset/adoc-literature-superset-v0.3.0/edge_evidence_assertions.tsv from context sources and validate relation-level evidence provenance"
+
+[tasks.build-edge-evidence]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.evidence.experimental build"
+description = "Merge-regenerate context/evidence/edge_experimental_evidence.tsv (one row per experimental evidence piece per edge of adoc-literature-superset-v0.6.0) and validate it; curated cells are never overwritten and rows are never dropped (docs/evidence_grading.md)"
+
+[tasks.check-edge-evidence]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.evidence.experimental check"
+description = "Require context/evidence/edge_experimental_evidence.tsv to validate and to equal what build-edge-evidence would write (writes nothing)"
+
+[tasks.build-protein-table]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.cli build-protein-table"
+description = "Build the canonical ADOC secreted-protein input table and validation report from the source workbook"
+
+[tasks.render-dynamics-demo]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.cli render-dynamics --model adoc-literature-v0.2.0 --protocol-suite reference-sequence --view full --figure-width 20 --figure-height 11 --dpi 150 --node-fontsize 7.2 --font-scale 1.7 --readme-max-width 3000 --output docs/assets/adoc_maboss_pathway_dynamics.gif"
+description = "Regenerate the ARCHIVED v0.2.0 pathway-dynamics animation (frozen 55-node/88-edge model). Historical artifact only; the README primary figure comes from render-dynamics-superset"
+
+[tasks.render-dynamics-superset]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.cli render-dynamics --model adoc-literature-superset-v0.6.0 --protocol-suite reference-sequence --terminal-protocol adhesion_challenge_hormone_treated --view full --phase-horizon 25.0 --trajectories 20000 --frame-stride 15 --figure-width 23 --figure-height 13.6 --dpi 150 --node-fontsize 7.0 --font-scale 1.75 --readme-max-width 1900 --no-full-resolution --run-id readme-superset-v060 --output docs/assets/adoc_superset_pathway_dynamics_v0.6.0.gif --trajectory-dir docs/assets/adoc_superset_pathway_dynamics_v0.6.0_trajectories"
+description = "Regenerate the CURRENT README exploratory pathway-dynamics animation from adoc-literature-superset-v0.6.0 (markerless; 56 nodes, 89 dependencies; protocols from config/protocols_markerless.yaml) at the converged readout horizon, with the declared durations marked in-frame. MaBoSS relative time, not days. The superseded v0.4.0 animation is kept as a committed reproducibility artifact; its command is in git history (9afc10d)"
+
+[tasks.build-variant-discrimination]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.experiments.variant_discrimination"
+description = "Gate 3a: regenerate docs/experiments/variant_discrimination.{md,tsv} by applying each candidate rule variant to the committed network in memory and computing which maternal observation separates each competing pair (no MaBoSS run)"
+
+[tasks.build-target-level-rederivation]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.reporting.target_levels"
+description = "U4/TI016: regenerate docs/gate2_target_level_rederivation.{md,tsv} by running the Gate 2 separability criterion twice over the same Boolean-function classes -- once with the catalog's free-text target_class, once with a closed vocabulary of biological levels -- and reporting every changed verdict plus how many relabellings each signal is from flipping (no MaBoSS run, no catalog edit)"
+
+[tasks.build-u6-semantics]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.scrna.observability --u6-semantics"
+description = "U6: regenerate docs/u6_semantics/node_semantics.tsv (the three semantic axes for all 59 nodes) and docs/u6_semantics/component_map.tsv (roles, symbol status and the recorded HGNC renames) from the committed observation map, node-support contract and frozen audit. Leaves config/scrna_observation_map.tsv untouched (no MaBoSS run, no expression data)"
+
+[tasks.build-u6b-muc1-family]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.reporting.u6b_muc1_family"
+description = "U6b/TI-02: regenerate docs/u6b_muc1_reconciliation/ -- the E_MUC1_BARRIER rule family evaluated as in-memory variants of v0.5.1 (rule-variant catalog in the model rule_variants.tsv schema, structure, alias moves, fixed-point endpoints, identifiability, design-alias, evidence status per rule element). Evaluation only: writes no network.bnd and no model version (no MaBoSS run)"
+
+[tasks.build-u8-stage3-rerank]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.experiments.u8_stage3_rerank"
+description = "U8: rerun the unchanged Stage-3 computation against adopted adoc-literature-superset-v0.5.1 and write docs/experiments/u8_stage3_rerank/ -- the v0.5.1 design, the per-arm and per-pair delta against the frozen v0.4 TSV (read, never written), the computed premises of the frozen ordering on both models, cause attribution and the D1 dependency (no MaBoSS run)"
+
+[tasks.build-phase2a-contract]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.personalization.phase2a_contract"
+description = "Phase 2A donor-contextualization input contract: write docs/phase2a/ -- data-grain audit, one personalization-map row per v0.5.1 node, donor x condition x compartment summaries for eligible nodes, the external-reference gate, the frozen initial-probability mapping specification, the provenance contract and the derived status. Reads committed artifacts only (no R, no MaBoSS run); writes no .bnd/.cfg"
+
+[tasks.extract-phase2a-metadata]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.personalization.phase2a_contract --rds"
+description = "Re-read the E-MTAB-15842 object's meta.data only (append the local RDS path and --rscript <R>), commit aggregate counts to docs/phase2a/scrna_metadata_extraction.json, then rebuild docs/phase2a/"
+
+[tasks.build-c2-attribution]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.observations.compartment_attribution"
+description = "C2: validate context/observation_compartment_attribution.tsv against the frozen config/observation_model_map.tsv and write docs/c2_observation_compartments/ -- the compartment interpretation each outlet measurement licenses, with input hashes. An interpretation overlay: changes no map row, activation status, weight, objective or model rule (no MaBoSS run)"
+
+[tasks.c3a-plan]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.reporting.c3a_kinetic_readout"
+description = "C3a dry run: check the section 3 pair construction and print the phase plan, task counts and seed ranges of docs/c3_kinetic_readouts/preregistration.md. Spends no seed. The run itself is the same module with --execute, launched only after independent implementation review, as a capped systemd-run service"
+
+[tasks.validate-direct-effects]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.perturbations.adjudication validate"
+description = "O8b/O8c and Stage 4b: load the intervention library with every licence (C1-C8 included), validate config/direct_effect_adjudications.tsv, config/direct_effect_target_policy.tsv, config/node_entity_map.tsv and config/direct_effect_target_declarations.tsv, and require docs/o8b_direct_effect_governance/v060_target_audit.tsv and both docs/stage4b expressivity artefacts to be current (no MaBoSS run). Subcommands of the same module: write-audit, digests"
+
+[tasks.identifiability-design]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.reporting.identifiability_design write"
+description = "Identifiability-driven experimental design (analysis only, no MaBoSS run): regenerate docs/identifiability_design/ - the alias pairs with a derived collapse reason, each readout's structural value, the perturbation x readout matrix, the nested-panel frontier, the registered rule variants arm by arm, and each named design's EXPERIMENTAL yield. Structural resolvability and experimental yield are separate tables on purpose"
+
+[tasks.identifiability-design-check]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.reporting.identifiability_design check"
+description = "Require all seven docs/identifiability_design/ tables to be current -- alias_pairs, readout_value, perturbation_readout_matrix, minimal_identifying_panel, panel_structural_value, variant_arm_discrimination and design_yield. Companion document: docs/identifiability_experiment_design.md"
+
+[tasks.veto-expressivity]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.reporting.veto_expressivity check"
+description = "Stage 4b §5: require both committed artefacts to be current (no MaBoSS run) - v060_veto_expressivity.tsv, the exact asymptotic veto classes of the O8b-eligible targets under the declared conditions, and v060_veto_invariance.tsv, the same classes under every one of the 65536 free-variable assignments. Regenerate with the module's write command"
+
+[tasks.replay-closed-phases]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.closure_replay"
+description = "Rebuild the closed Phase 1B, 2A and 2B analyses against their closure-time models/ snapshot and require every committed output byte for byte (writes nothing). Their whole-tree guards are closure-time invariants: run directly on the post-closure tree, build-phase1b-closure / build-phase2a-contract / build-phase2b-audit fail by design once a later model version exists"
+
+[tasks.build-phase2b-audit]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.personalization.phase2b.audit"
+description = "Phase 2B step 1: audit the Phase-2A starting state at the Phase-2B base commit and now, and refuse if any frozen Phase-1B/Phase-2A/v0.5.1/config file changed without the owner's D2 approval; write docs/phase2b/phase2a_audit.json. Value-blind: opens no expression file"
+
+[tasks.build-phase1b-closure]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.experiments.phase1b_closure"
+description = "Phase-1B closure audit and prospective dropout_e2 handoff: write docs/phase1b_closure/ -- exit-gate and claim ledgers, sensitivity inventory, the handoff (every value checked against the frozen Stage-3 text, config/protocols.yaml and the canonical protein table) and the owner's pre-run analysis addendum. Exact fixed-point premises on adoc-literature-superset-v0.5.1 (no MaBoSS run)"
+
+[tasks.build-stage3-design]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.experiments.stage3_design"
+description = "Stage 3: regenerate docs/experiments/stage3_experiment_design.{md,tsv} and stage3_decision_tables.md by conditioning the committed network, and each competing mechanism class in memory, on every candidate single-intervention experiment. The decision tables are the ones docs/stage3_experiment_selection.md cites instead of restating (no MaBoSS run)"
+
+[tasks.build-calibration-candidates]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.experiments.calibration_candidates"
+description = "Regenerate docs/experiments/calibration_candidates.{md,_derived.tsv} from the curated candidate table plus the committed model, coupling adjudication, identifiability, observation layer and reference list (no MaBoSS run)"
+
+[tasks.build-concordance]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.concordance.build"
+description = "Regenerate the model-data concordance table, mechanism tables, figure source data and run provenance for the ACTIVE superset (runs MaBoSS: 6 arms x 2 horizons x 5 seeds)"
+
+[tasks.render-concordance]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.concordance.render_cli"
+description = "Redraw the concordance figure from the tracked figure source data (no simulation)"
+
+[tasks.build-rna-endpoint-concordance]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.scrna.rna_endpoint_concordance"
+description = "Regenerate docs/rna_endpoint_concordance/concordance.{tsv,png}: the adopted v0.5.1 model's predicted CNT->HT endpoint change beside the committed node-support audit's per-donor RNA calls (no expression object, no MaBoSS run, no new threshold). The figure is drawn from the TSV alone; pass --render-only to redraw it"
+
+[tasks.audit-scrna-object]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.concordance.scrna_audit_cli"
+description = "Stream the local integrated Seurat RDS and record which metadata it holds and whether the paper's final annotations are present (minutes; no R, no Seurat)"
+
+[tasks.verify-scrna-object]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.scrna.verify_rds"
+description = "Re-verify the DEPOSITED annotated object against config/external_data_manifest.tsv. Needs a local 2.9 GB copy and an R with SeuratObject, both passed on the command line; it never downloads and the test suite never runs it"
+
+[tasks.derive-klf12-state]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.scrna.klf12_state"
+description = "Run the pre-registered KLF12 state battery and rewrite docs/scrna/klf12_state_*. Pass --rds with an R (extraction), or --from-per-cell to re-derive every committed number with neither"
+
+[tasks.derive-klf12-raw-umi]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.scrna.klf12_raw_umi"
+description = "Run the pre-registered raw-UMI sensitivity and rewrite docs/scrna/klf12_raw_umi_*. Needs --reduced (per-sample reduced tables from the accession's filtered matrices) and --cells (a per-cell table carrying cell/sample_id/celltype_v2); neither is tracked, both carry row-level metadata"
+
+[tasks.sweep-klf12-conditioning]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.scrna.klf12_conditioning"
+description = "Sweep E_KLF12_HIGH initial-state priors over the concordance arms and rewrite docs/scrna/klf12_conditioning_*. An arbitrary-threshold sensitivity analysis, not a conditioned twin; tens of minutes at the default trajectory count"
+
+[tasks.render-identifiability]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.cli render-identifiability --model adoc-literature-superset-v0.4.0"
+description = "Render the experimental-identifiability figure and its analysis tables"
+
+[tasks.render-design-alias]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.cli render-design-alias"
+description = "Render the design-equivalence figures and tables for the planned experimental arms"
+
+[tasks.render-network]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -c \"from dt_adoc.reporting.network_overview import render_network_overview_artifact as render; m = render('adoc-literature-superset-v0.6.0', None); print('figure  ', m['figure']['path'], m['figure']['sha256'][:12]); print('metadata', m['metadata_path'])\""
+description = "Render the CURRENT README network overview (docs/assets/adoc_network_overview_v0.6.0.png) from the markerless v0.6.0 network.bnd (no MaBoSS, deterministic). No parent-identity statement: v0.6.0 is not executable-identical to v0.5.2; its increment is recorded in the model's provenance.toml and docs/intervention_layer_stage3.md. Interventions are not drawn: they are applied by the protocol layer"
+
+[tasks.render-network-v050]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.reporting.network_overview"
+description = "Regenerate the HISTORICAL v0.5.0 network overview (docs/assets/adoc_network_overview_v0.5.0.png) with executable-identity provenance against v0.4.0. Reproducibility artifact only; the README figure comes from render-network"
+
+[tasks.build-endpoint-replicates]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.reporting.endpoint_replicates --replicates 50 --trajectories 20000 --workers 4"
+description = "Run 50 complete MaBoSS lineages per adhesion arm and horizon on disjoint seed blocks into docs/endpoint/. ~100 CPU-minutes; each worker can reach 11-14 GB, so run it capped: systemd-run --user -p MemoryMax=60G -p MemorySwapMax=0 ... (see docs/endpoint/README.md)"
+
+[tasks.probe-seed-structure]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.reporting.seed_structure"
+description = "Measure how the installed MaBoSS seeds trajectories (shift test on a dynamic protocol) into docs/endpoint/seed_structure_probe.json; seconds, single process"
+
+[tasks.render-endpoint]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.reporting.endpoint_figure"
+description = "Render the functional-endpoint figure and its source table from docs/endpoint/ (no MaBoSS)"
+
+[tasks.u5-structural-audit]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.reporting.u5_structural_audit"
+description = "U5: recompute the structural, identifiability and design-alias audit on v0.5.0 and v0.4.0 and write docs/u5_structural_audit/ (no MaBoSS)"
+
+[tasks.render-structure]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.cli render-structure --model adoc-literature-superset-v0.4.0 --output docs/assets/adoc_superset_structure_v0.4.0.png"
+description = "Regenerate the committed static structural topology figure for the active superset model (no MaBoSS, deterministic)"
+
+[tasks.test-visualization]
+cmd = "PYTHONDONTWRITEBYTECODE=1 python -B -m unittest tests.unit.test_dynamic_visualization tests.unit.test_render_output_paths tests.unit.test_trajectory_contract tests.integration.test_dynamic_visualization_runtime tests.integration.test_trajectory_runtime -v"
+description = "Run the focused visualization and node-probability trajectory tests"
+
+[tasks.profile-parity]
+cmd = "bash -lc 'set -euo pipefail; PYTHONDONTWRITEBYTECODE=1 python -B -m unittest tests.regression_profile.test_profile_parity -v; PYTHONDONTWRITEBYTECODE=1 python -B -m unittest tests.regression_profile_v2.test_profile_v2_parity -v'"
+description = "Run the bounded PROFILE and PROFILE_v2 local parity fixtures"
+
+[tasks.all-checks]
+cmd = "bash -lc 'set -euo pipefail; pixi run harness-check; python -B .codex/skills/adoc-data-audit/scripts/check_data_manifest.py --root . --check-hashes; pixi run lint; pixi run format-check; pixi run test; pixi run compile-models; pixi run validate-models; pixi run profile-parity; pixi run smoke; pixi run validate-smoke; pixi run report-smoke'"
+description = "Run bounded Phase 0 and Phase 1 validation gates without triggering any full screening workflow"

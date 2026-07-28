@@ -1,0 +1,10 @@
+schema_version = "1.0"
+model_id = "adoc_literature_superset_module_expansion_proliferative_feedback"
+baseline_version = "adoc-literature-superset-v0.3.0-module_expansion_proliferative_feedback"
+parent_baseline_version = "adoc-literature-superset-v0.3.0"
+status = "phase1d_generated_family_member"
+generated_on = "2026-07-26"
+
+[claim_boundary]
+validation_label = "structural_only"
+claim_ceiling = "Generated family member retained for structural comparison only."

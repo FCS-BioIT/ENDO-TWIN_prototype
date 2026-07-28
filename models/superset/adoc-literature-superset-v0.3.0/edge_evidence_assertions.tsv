@@ -1,0 +1,268 @@
+assertion_id	edge_id	evidence_origin	reference_id	source_observation_id	species_evidence	target_species	species_transfer_required	species_transfer_rationale	compartment	experimental_system	directness	support_type	evidence_grade	direction_supported	context_dependence	implementation_class	curation_status	support_rationale
+ASRT-LE001-SOFIA-HT-001	LE001	in_house_experiment		SOFIA-HT-001	ADOC epithelial and stromal compartments	human	unknown		ADOC epithelial and stromal compartments	ADOC epithelial and stromal compartments	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE002-SOFIA-HT-002	LE002	in_house_experiment		SOFIA-HT-002	ADOC epithelial and stromal compartments	human	unknown		ADOC epithelial and stromal compartments	ADOC epithelial and stromal compartments	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE003-REF-002	LE003	bibliographic	REF-002		mouse;human	human	true		epithelium;stroma	review	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE003-REF-025	LE003	bibliographic	REF-025		mouse	human	true		epithelium to stroma	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE003-REF-026	LE003	bibliographic	REF-026		mouse	human	true		stroma to epithelium	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE003-REF-027	LE003	bibliographic	REF-027		mouse	human	true		stroma	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE003-REF-029	LE003	bibliographic	REF-029		mouse;human	human	true		stroma	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE004-SOFIA-HT-001	LE004	in_house_experiment		SOFIA-HT-001	ADOC epithelial and stromal compartments	human	unknown		ADOC epithelial and stromal compartments	ADOC epithelial and stromal compartments	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE005-SOFIA-SC-001	LE005	in_house_experiment		SOFIA-SC-001	ADOC epithelium	human	unknown		ADOC epithelium	ADOC epithelium	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE006-SOFIA-EPI-001	LE006	in_house_experiment		SOFIA-EPI-001	ADOC epithelium	human	unknown		ADOC epithelium	ADOC epithelium	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE007-REF-023	LE007	bibliographic	REF-023		mouse	human	true		glandular epithelium	maternal_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE007-REF-024	LE007	bibliographic	REF-024		mouse	human	true		uterine epithelium	primary_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE007-REF-030	LE007	bibliographic	REF-030		mouse	human	true		epithelium;stroma	epithelial_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE007-REF-031	LE007	bibliographic	REF-031		mouse	human	true		epithelium;stroma	compartment_specific_knockouts	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE007-REF-032	LE007	bibliographic	REF-032		mouse	human	true		epithelium	epithelial_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE007-REF-033	LE007	bibliographic	REF-033		mouse	human	true		epithelium;stroma	uterine_and_epithelial_knockouts	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE007-REF-036	LE007	bibliographic	REF-036		human	human	unknown		glandular epithelium	primary_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE007-REF-038	LE007	bibliographic	REF-038		human cell models	human	unknown		epithelium;interface	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE008-REF-023	LE008	bibliographic	REF-023		mouse	human	true		glandular epithelium	maternal_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE008-REF-024	LE008	bibliographic	REF-024		mouse	human	true		uterine epithelium	primary_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE008-REF-030	LE008	bibliographic	REF-030		mouse	human	true		epithelium;stroma	epithelial_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE008-REF-031	LE008	bibliographic	REF-031		mouse	human	true		epithelium;stroma	compartment_specific_knockouts	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE008-REF-032	LE008	bibliographic	REF-032		mouse	human	true		epithelium	epithelial_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE008-REF-033	LE008	bibliographic	REF-033		mouse	human	true		epithelium;stroma	uterine_and_epithelial_knockouts	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE008-REF-036	LE008	bibliographic	REF-036		human	human	unknown		glandular epithelium	primary_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE008-REF-038	LE008	bibliographic	REF-038		human cell models	human	unknown		epithelium;interface	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE009-REF-012	LE009	bibliographic	REF-012		human epithelial model	human	unknown		epithelium	primary_biophysical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE009-REF-013	LE009	bibliographic	REF-013		human	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE009-REF-014	LE009	bibliographic	REF-014		human epithelial model	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE010-REF-010	LE010	bibliographic	REF-010		human	human	unknown		epithelium;stroma	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE010-REF-011	LE010	bibliographic	REF-011		human	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE011-REF-010	LE011	bibliographic	REF-010		human	human	unknown		epithelium;stroma	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE011-REF-011	LE011	bibliographic	REF-011		human	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE012-REF-010	LE012	bibliographic	REF-010		human	human	unknown		epithelium;stroma	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE012-REF-011	LE012	bibliographic	REF-011		human	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE013-REF-012	LE013	bibliographic	REF-012		human epithelial model	human	unknown		epithelium	primary_biophysical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE013-REF-013	LE013	bibliographic	REF-013		human	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE013-REF-014	LE013	bibliographic	REF-014		human epithelial model	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE013-REF-067	LE013	bibliographic	REF-067		human	human	unknown		epithelium	primary_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE013-REF-068	LE013	bibliographic	REF-068		human	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE014-REF-012	LE014	bibliographic	REF-012		human epithelial model	human	unknown		epithelium	primary_biophysical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE014-REF-013	LE014	bibliographic	REF-013		human	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE014-REF-014	LE014	bibliographic	REF-014		human epithelial model	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE015-REF-006	LE015	bibliographic	REF-006		human	human	unknown		epithelium;decidua	primary_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE015-REF-042	LE015	bibliographic	REF-042		human	human	unknown		epithelium and stroma	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE016-REF-007	LE016	bibliographic	REF-007		human	human	unknown		epithelium	primary_mechanistic_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE016-REF-015	LE016	bibliographic	REF-015		human	human	unknown		epithelium;stroma	primary_computational_integrative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE016-REF-017	LE016	bibliographic	REF-017		human	human	unknown		stroma	primary_mechanistic_clinical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE016-REF-022	LE016	bibliographic	REF-022		baboon	human	true		epithelium;stroma	primary_comparative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE016-REF-038	LE016	bibliographic	REF-038		human cell models	human	unknown		epithelium;interface	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE017-REF-038	LE017	bibliographic	REF-038		human cell models	human	unknown		epithelium;interface	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE018-REF-006	LE018	bibliographic	REF-006		human	human	unknown		epithelium;decidua	primary_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE018-REF-007	LE018	bibliographic	REF-007		human	human	unknown		epithelium	primary_mechanistic_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE019-REF-008	LE019	bibliographic	REF-008		human epithelial;mouse blastocyst assay	human	true		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE021-REF-009	LE021	bibliographic	REF-009		human cell models	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE024-REF-019	LE024	bibliographic	REF-019		human	human	unknown		epithelium	primary_mechanistic_biophysical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE025-REF-023	LE025	bibliographic	REF-023		mouse	human	true		glandular epithelium	maternal_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE025-REF-024	LE025	bibliographic	REF-024		mouse	human	true		uterine epithelium	primary_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE025-REF-030	LE025	bibliographic	REF-030		mouse	human	true		epithelium;stroma	epithelial_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE025-REF-031	LE025	bibliographic	REF-031		mouse	human	true		epithelium;stroma	compartment_specific_knockouts	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE025-REF-032	LE025	bibliographic	REF-032		mouse	human	true		epithelium	epithelial_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE025-REF-033	LE025	bibliographic	REF-033		mouse	human	true		epithelium;stroma	uterine_and_epithelial_knockouts	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE025-REF-036	LE025	bibliographic	REF-036		human	human	unknown		glandular epithelium	primary_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE025-REF-038	LE025	bibliographic	REF-038		human cell models	human	unknown		epithelium;interface	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE026-REF-012	LE026	bibliographic	REF-012		human epithelial model	human	unknown		epithelium	primary_biophysical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE026-REF-013	LE026	bibliographic	REF-013		human	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE026-REF-014	LE026	bibliographic	REF-014		human epithelial model	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE027-REF-010	LE027	bibliographic	REF-010		human	human	unknown		epithelium;stroma	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE027-REF-011	LE027	bibliographic	REF-011		human	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE028-REF-012	LE028	bibliographic	REF-012		human epithelial model	human	unknown		epithelium	primary_biophysical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE028-REF-013	LE028	bibliographic	REF-013		human	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE028-REF-014	LE028	bibliographic	REF-014		human epithelial model	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE029-REF-008	LE029	bibliographic	REF-008		human epithelial;mouse blastocyst assay	human	true		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE030-REF-019	LE030	bibliographic	REF-019		human	human	unknown		epithelium	primary_mechanistic_biophysical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE031-REF-009	LE031	bibliographic	REF-009		human cell models	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE032-REF-006	LE032	bibliographic	REF-006		human	human	unknown		epithelium;decidua	primary_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE032-REF-007	LE032	bibliographic	REF-007		human	human	unknown		epithelium	primary_mechanistic_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE033-REF-010	LE033	bibliographic	REF-010		human	human	unknown		epithelium;stroma	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE033-REF-011	LE033	bibliographic	REF-011		human	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE034-REF-012	LE034	bibliographic	REF-012		human epithelial model	human	unknown		epithelium	primary_biophysical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE034-REF-013	LE034	bibliographic	REF-013		human	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE034-REF-014	LE034	bibliographic	REF-014		human epithelial model	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE035-REF-007	LE035	bibliographic	REF-007		human	human	unknown		epithelium	primary_mechanistic_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE035-REF-015	LE035	bibliographic	REF-015		human	human	unknown		epithelium;stroma	primary_computational_integrative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE035-REF-017	LE035	bibliographic	REF-017		human	human	unknown		stroma	primary_mechanistic_clinical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE035-REF-022	LE035	bibliographic	REF-022		baboon	human	true		epithelium;stroma	primary_comparative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE035-REF-038	LE035	bibliographic	REF-038		human cell models	human	unknown		epithelium;interface	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE036-REF-007	LE036	bibliographic	REF-007		human	human	unknown		epithelium	primary_mechanistic_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE036-REF-015	LE036	bibliographic	REF-015		human	human	unknown		epithelium;stroma	primary_computational_integrative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE036-REF-017	LE036	bibliographic	REF-017		human	human	unknown		stroma	primary_mechanistic_clinical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE036-REF-022	LE036	bibliographic	REF-022		baboon	human	true		epithelium;stroma	primary_comparative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE036-REF-038	LE036	bibliographic	REF-038		human cell models	human	unknown		epithelium;interface	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE037-SOFIA-HT-001	LE037	in_house_experiment		SOFIA-HT-001	ADOC epithelial and stromal compartments	human	unknown		ADOC epithelial and stromal compartments	ADOC epithelial and stromal compartments	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE038-SOFIA-HT-002	LE038	in_house_experiment		SOFIA-HT-002	ADOC epithelial and stromal compartments	human	unknown		ADOC epithelial and stromal compartments	ADOC epithelial and stromal compartments	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE039-SOFIA-HT-001	LE039	in_house_experiment		SOFIA-HT-001	ADOC epithelial and stromal compartments	human	unknown		ADOC epithelial and stromal compartments	ADOC epithelial and stromal compartments	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE040-REF-002	LE040	bibliographic	REF-002		mouse;human	human	true		epithelium;stroma	review	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE040-REF-025	LE040	bibliographic	REF-025		mouse	human	true		epithelium to stroma	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE040-REF-026	LE040	bibliographic	REF-026		mouse	human	true		stroma to epithelium	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE040-REF-027	LE040	bibliographic	REF-027		mouse	human	true		stroma	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE040-REF-029	LE040	bibliographic	REF-029		mouse;human	human	true		stroma	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE041-REF-002	LE041	bibliographic	REF-002		mouse;human	human	true		epithelium;stroma	review	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE041-REF-025	LE041	bibliographic	REF-025		mouse	human	true		epithelium to stroma	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE041-REF-026	LE041	bibliographic	REF-026		mouse	human	true		stroma to epithelium	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE041-REF-027	LE041	bibliographic	REF-027		mouse	human	true		stroma	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE041-REF-029	LE041	bibliographic	REF-029		mouse;human	human	true		stroma	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE042-SOFIA-SC-002	LE042	in_house_experiment		SOFIA-SC-002	ADOC stroma	human	unknown		ADOC stroma	ADOC stroma	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE043-REF-002	LE043	bibliographic	REF-002		mouse;human	human	true		epithelium;stroma	review	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE043-REF-025	LE043	bibliographic	REF-025		mouse	human	true		epithelium to stroma	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE043-REF-026	LE043	bibliographic	REF-026		mouse	human	true		stroma to epithelium	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE043-REF-027	LE043	bibliographic	REF-027		mouse	human	true		stroma	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE043-REF-029	LE043	bibliographic	REF-029		mouse;human	human	true		stroma	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE044-REF-002	LE044	bibliographic	REF-002		mouse;human	human	true		epithelium;stroma	review	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE044-REF-025	LE044	bibliographic	REF-025		mouse	human	true		epithelium to stroma	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE044-REF-027	LE044	bibliographic	REF-027		mouse	human	true		stroma	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE044-REF-028	LE044	bibliographic	REF-028		mouse	human	true		stroma to epithelium	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE044-REF-029	LE044	bibliographic	REF-029		mouse;human	human	true		stroma	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE045-REF-002	LE045	bibliographic	REF-002		mouse;human	human	true		epithelium;stroma	review	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE045-REF-025	LE045	bibliographic	REF-025		mouse	human	true		epithelium to stroma	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE045-REF-027	LE045	bibliographic	REF-027		mouse	human	true		stroma	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE045-REF-028	LE045	bibliographic	REF-028		mouse	human	true		stroma to epithelium	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE045-REF-029	LE045	bibliographic	REF-029		mouse;human	human	true		stroma	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE046-REF-016	LE046	bibliographic	REF-016		human assembloid	human	unknown		epithelium;stroma	primary_mechanistic_platform	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE046-REF-017	LE046	bibliographic	REF-017		human	human	unknown		stroma	primary_mechanistic_clinical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE047-REF-016	LE047	bibliographic	REF-016		human assembloid	human	unknown		epithelium;stroma	primary_mechanistic_platform	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE047-REF-017	LE047	bibliographic	REF-017		human	human	unknown		stroma	primary_mechanistic_clinical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE048-REF-002	LE048	bibliographic	REF-002		mouse;human	human	true		epithelium;stroma	review	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE048-REF-025	LE048	bibliographic	REF-025		mouse	human	true		epithelium to stroma	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE048-REF-026	LE048	bibliographic	REF-026		mouse	human	true		stroma to epithelium	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE048-REF-027	LE048	bibliographic	REF-027		mouse	human	true		stroma	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE048-REF-029	LE048	bibliographic	REF-029		mouse;human	human	true		stroma	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE049-SOFIA-STR-001	LE049	in_house_experiment		SOFIA-STR-001	ADOC stroma	human	unknown		ADOC stroma	ADOC stroma	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE050-SOFIA-STR-001	LE050	in_house_experiment		SOFIA-STR-001	ADOC stroma	human	unknown		ADOC stroma	ADOC stroma	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE051-REF-016	LE051	bibliographic	REF-016		human assembloid	human	unknown		epithelium;stroma	primary_mechanistic_platform	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE051-REF-017	LE051	bibliographic	REF-017		human	human	unknown		stroma	primary_mechanistic_clinical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE052-REF-018	LE052	bibliographic	REF-018		human stromal model	human	unknown		stroma	primary_mechanobiology	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE052-REF-035	LE052	bibliographic	REF-035		mouse;human datasets	human	true		stroma	uterine_genetics_and_integrative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE053A-REF-018	LE053A	bibliographic	REF-018		human stromal model	human	unknown		stroma	primary_mechanobiology	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE053A-REF-035	LE053A	bibliographic	REF-035		mouse;human datasets	human	true		stroma	uterine_genetics_and_integrative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE053-REF-018	LE053	bibliographic	REF-018		human stromal model	human	unknown		stroma	primary_mechanobiology	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE053-REF-035	LE053	bibliographic	REF-035		mouse;human datasets	human	true		stroma	uterine_genetics_and_integrative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE054-REF-018	LE054	bibliographic	REF-018		human stromal model	human	unknown		stroma	primary_mechanobiology	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE054-REF-035	LE054	bibliographic	REF-035		mouse;human datasets	human	true		stroma	uterine_genetics_and_integrative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE055-REF-018	LE055	bibliographic	REF-018		human stromal model	human	unknown		stroma	primary_mechanobiology	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE055-REF-035	LE055	bibliographic	REF-035		mouse;human datasets	human	true		stroma	uterine_genetics_and_integrative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE056-REF-018	LE056	bibliographic	REF-018		human stromal model	human	unknown		stroma	primary_mechanobiology	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE056-REF-035	LE056	bibliographic	REF-035		mouse;human datasets	human	true		stroma	uterine_genetics_and_integrative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE057-REF-007	LE057	bibliographic	REF-007		human	human	unknown		epithelium	primary_mechanistic_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE057-REF-015	LE057	bibliographic	REF-015		human	human	unknown		epithelium;stroma	primary_computational_integrative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE057-REF-017	LE057	bibliographic	REF-017		human	human	unknown		stroma	primary_mechanistic_clinical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE057-REF-022	LE057	bibliographic	REF-022		baboon	human	true		epithelium;stroma	primary_comparative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE057-REF-038	LE057	bibliographic	REF-038		human cell models	human	unknown		epithelium;interface	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE058-REF-007	LE058	bibliographic	REF-007		human	human	unknown		epithelium	primary_mechanistic_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE058-REF-015	LE058	bibliographic	REF-015		human	human	unknown		epithelium;stroma	primary_computational_integrative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE058-REF-017	LE058	bibliographic	REF-017		human	human	unknown		stroma	primary_mechanistic_clinical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE058-REF-022	LE058	bibliographic	REF-022		baboon	human	true		epithelium;stroma	primary_comparative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE058-REF-038	LE058	bibliographic	REF-038		human cell models	human	unknown		epithelium;interface	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE059-REF-007	LE059	bibliographic	REF-007		human	human	unknown		epithelium	primary_mechanistic_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE059-REF-015	LE059	bibliographic	REF-015		human	human	unknown		epithelium;stroma	primary_computational_integrative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE059-REF-017	LE059	bibliographic	REF-017		human	human	unknown		stroma	primary_mechanistic_clinical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE059-REF-022	LE059	bibliographic	REF-022		baboon	human	true		epithelium;stroma	primary_comparative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE059-REF-038	LE059	bibliographic	REF-038		human cell models	human	unknown		epithelium;interface	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE060-REF-007	LE060	bibliographic	REF-007		human	human	unknown		epithelium	primary_mechanistic_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE060-REF-015	LE060	bibliographic	REF-015		human	human	unknown		epithelium;stroma	primary_computational_integrative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE060-REF-017	LE060	bibliographic	REF-017		human	human	unknown		stroma	primary_mechanistic_clinical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE060-REF-022	LE060	bibliographic	REF-022		baboon	human	true		epithelium;stroma	primary_comparative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE060-REF-038	LE060	bibliographic	REF-038		human cell models	human	unknown		epithelium;interface	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE061-REF-007	LE061	bibliographic	REF-007		human	human	unknown		epithelium	primary_mechanistic_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE061-REF-015	LE061	bibliographic	REF-015		human	human	unknown		epithelium;stroma	primary_computational_integrative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE061-REF-017	LE061	bibliographic	REF-017		human	human	unknown		stroma	primary_mechanistic_clinical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE061-REF-022	LE061	bibliographic	REF-022		baboon	human	true		epithelium;stroma	primary_comparative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE061-REF-038	LE061	bibliographic	REF-038		human cell models	human	unknown		epithelium;interface	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE062-REF-007	LE062	bibliographic	REF-007		human	human	unknown		epithelium	primary_mechanistic_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE062-REF-015	LE062	bibliographic	REF-015		human	human	unknown		epithelium;stroma	primary_computational_integrative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE062-REF-017	LE062	bibliographic	REF-017		human	human	unknown		stroma	primary_mechanistic_clinical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE062-REF-022	LE062	bibliographic	REF-022		baboon	human	true		epithelium;stroma	primary_comparative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE062-REF-038	LE062	bibliographic	REF-038		human cell models	human	unknown		epithelium;interface	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE063-REF-007	LE063	bibliographic	REF-007		human	human	unknown		epithelium	primary_mechanistic_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE063-REF-015	LE063	bibliographic	REF-015		human	human	unknown		epithelium;stroma	primary_computational_integrative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE063-REF-017	LE063	bibliographic	REF-017		human	human	unknown		stroma	primary_mechanistic_clinical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE063-REF-022	LE063	bibliographic	REF-022		baboon	human	true		epithelium;stroma	primary_comparative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE063-REF-038	LE063	bibliographic	REF-038		human cell models	human	unknown		epithelium;interface	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE064-REF-008	LE064	bibliographic	REF-008		human epithelial;mouse blastocyst assay	human	true		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE065-REF-008	LE065	bibliographic	REF-008		human epithelial;mouse blastocyst assay	human	true		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE066-REF-019	LE066	bibliographic	REF-019		human	human	unknown		epithelium	primary_mechanistic_biophysical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE067-REF-009	LE067	bibliographic	REF-009		human cell models	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE068-REF-006	LE068	bibliographic	REF-006		human	human	unknown		epithelium;decidua	primary_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE068-REF-007	LE068	bibliographic	REF-007		human	human	unknown		epithelium	primary_mechanistic_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE069-REF-010	LE069	bibliographic	REF-010		human	human	unknown		epithelium;stroma	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE069-REF-011	LE069	bibliographic	REF-011		human	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE070-REF-012	LE070	bibliographic	REF-012		human epithelial model	human	unknown		epithelium	primary_biophysical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE070-REF-013	LE070	bibliographic	REF-013		human	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE070-REF-014	LE070	bibliographic	REF-014		human epithelial model	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE071-REF-008	LE071	bibliographic	REF-008		human epithelial;mouse blastocyst assay	human	true		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE072-REF-012	LE072	bibliographic	REF-012		human epithelial model	human	unknown		epithelium	primary_biophysical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE072-REF-013	LE072	bibliographic	REF-013		human	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE072-REF-014	LE072	bibliographic	REF-014		human epithelial model	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE073-REF-010	LE073	bibliographic	REF-010		human	human	unknown		epithelium;stroma	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE073-REF-011	LE073	bibliographic	REF-011		human	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE074-REF-012	LE074	bibliographic	REF-012		human epithelial model	human	unknown		epithelium	primary_biophysical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE074-REF-013	LE074	bibliographic	REF-013		human	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE074-REF-014	LE074	bibliographic	REF-014		human epithelial model	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE075-REF-011	LE075	bibliographic	REF-011		human	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE075-REF-012	LE075	bibliographic	REF-012		human epithelial model	human	unknown		epithelium	primary_biophysical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE075-REF-013	LE075	bibliographic	REF-013		human	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE075-REF-014	LE075	bibliographic	REF-014		human epithelial model	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE076-REF-023	LE076	bibliographic	REF-023		mouse	human	true		glandular epithelium	maternal_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE076-REF-024	LE076	bibliographic	REF-024		mouse	human	true		uterine epithelium	primary_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE076-REF-030	LE076	bibliographic	REF-030		mouse	human	true		epithelium;stroma	epithelial_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE076-REF-031	LE076	bibliographic	REF-031		mouse	human	true		epithelium;stroma	compartment_specific_knockouts	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE076-REF-032	LE076	bibliographic	REF-032		mouse	human	true		epithelium	epithelial_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE076-REF-033	LE076	bibliographic	REF-033		mouse	human	true		epithelium;stroma	uterine_and_epithelial_knockouts	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE076-REF-036	LE076	bibliographic	REF-036		human	human	unknown		glandular epithelium	primary_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE076-REF-038	LE076	bibliographic	REF-038		human cell models	human	unknown		epithelium;interface	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE077-SOFIA-EPI-001	LE077	in_house_experiment		SOFIA-EPI-001	ADOC epithelium	human	unknown		ADOC epithelium	ADOC epithelium	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE078-REF-016	LE078	bibliographic	REF-016		human assembloid	human	unknown		epithelium;stroma	primary_mechanistic_platform	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE078-REF-017	LE078	bibliographic	REF-017		human	human	unknown		stroma	primary_mechanistic_clinical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE079-SOFIA-STR-001	LE079	in_house_experiment		SOFIA-STR-001	ADOC stroma	human	unknown		ADOC stroma	ADOC stroma	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE080-SOFIA-STR-001	LE080	in_house_experiment		SOFIA-STR-001	ADOC stroma	human	unknown		ADOC stroma	ADOC stroma	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE081-REF-023	LE081	bibliographic	REF-023		mouse	human	true		glandular epithelium	maternal_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE081-REF-024	LE081	bibliographic	REF-024		mouse	human	true		uterine epithelium	primary_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE081-REF-030	LE081	bibliographic	REF-030		mouse	human	true		epithelium;stroma	epithelial_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE081-REF-031	LE081	bibliographic	REF-031		mouse	human	true		epithelium;stroma	compartment_specific_knockouts	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE081-REF-032	LE081	bibliographic	REF-032		mouse	human	true		epithelium	epithelial_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE081-REF-033	LE081	bibliographic	REF-033		mouse	human	true		epithelium;stroma	uterine_and_epithelial_knockouts	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE081-REF-036	LE081	bibliographic	REF-036		human	human	unknown		glandular epithelium	primary_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE081-REF-038	LE081	bibliographic	REF-038		human cell models	human	unknown		epithelium;interface	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE082-REF-016	LE082	bibliographic	REF-016		human assembloid	human	unknown		epithelium;stroma	primary_mechanistic_platform	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE082-REF-017	LE082	bibliographic	REF-017		human	human	unknown		stroma	primary_mechanistic_clinical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE083-REF-018	LE083	bibliographic	REF-018		human stromal model	human	unknown		stroma	primary_mechanobiology	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE083-REF-035	LE083	bibliographic	REF-035		mouse;human datasets	human	true		stroma	uterine_genetics_and_integrative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE084-REF-007	LE084	bibliographic	REF-007		human	human	unknown		epithelium	primary_mechanistic_descriptive	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE084-REF-015	LE084	bibliographic	REF-015		human	human	unknown		epithelium;stroma	primary_computational_integrative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE084-REF-017	LE084	bibliographic	REF-017		human	human	unknown		stroma	primary_mechanistic_clinical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE084-REF-022	LE084	bibliographic	REF-022		baboon	human	true		epithelium;stroma	primary_comparative	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE084-REF-038	LE084	bibliographic	REF-038		human cell models	human	unknown		epithelium;interface	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE085-REF-008	LE085	bibliographic	REF-008		human epithelial;mouse blastocyst assay	human	true		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE086-REF-011	LE086	bibliographic	REF-011		human	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE086-REF-012	LE086	bibliographic	REF-012		human epithelial model	human	unknown		epithelium	primary_biophysical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE086-REF-013	LE086	bibliographic	REF-013		human	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE086-REF-014	LE086	bibliographic	REF-014		human epithelial model	human	unknown		epithelium	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE087-SOFIA-ADH-002	LE087	in_house_experiment		SOFIA-ADH-002	human blastocyst on ADOC	human	unknown		human blastocyst on ADOC	human blastocyst on ADOC	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE088-SOFIA-ADH-001	LE088	in_house_experiment		SOFIA-ADH-001	human blastocyst on ADOC	human	unknown		human blastocyst on ADOC	human blastocyst on ADOC	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE089-SOFIA-ADH-001	LE089	in_house_experiment		SOFIA-ADH-001	human blastocyst on ADOC	human	unknown		human blastocyst on ADOC	human blastocyst on ADOC	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE090-REF-019	LE090	bibliographic	REF-019		human	human	unknown		epithelium	primary_mechanistic_biophysical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE091-REF-037	LE091	bibliographic	REF-037		human	human	unknown		epithelium	primary_mechanistic_clinical	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE092-REF-002	LE092	bibliographic	REF-002		mouse;human	human	true		epithelium;stroma	review	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE092-REF-025	LE092	bibliographic	REF-025		mouse	human	true		epithelium to stroma	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE092-REF-027	LE092	bibliographic	REF-027		mouse	human	true		stroma	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE092-REF-028	LE092	bibliographic	REF-028		mouse	human	true		stroma to epithelium	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE092-REF-029	LE092	bibliographic	REF-029		mouse;human	human	true		stroma	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE092-REF-062	LE092	bibliographic	REF-062		human	human	unknown		stroma	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE093-REF-002	LE093	bibliographic	REF-002		mouse;human	human	true		epithelium;stroma	review	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE093-REF-025	LE093	bibliographic	REF-025		mouse	human	true		epithelium to stroma	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE093-REF-027	LE093	bibliographic	REF-027		mouse	human	true		stroma	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE093-REF-028	LE093	bibliographic	REF-028		mouse	human	true		stroma to epithelium	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE093-REF-029	LE093	bibliographic	REF-029		mouse;human	human	true		stroma	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE094-REF-002	LE094	bibliographic	REF-002		mouse;human	human	true		epithelium;stroma	review	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE094-REF-025	LE094	bibliographic	REF-025		mouse	human	true		epithelium to stroma	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE094-REF-027	LE094	bibliographic	REF-027		mouse	human	true		stroma	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE094-REF-028	LE094	bibliographic	REF-028		mouse	human	true		stroma to epithelium	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE094-REF-029	LE094	bibliographic	REF-029		mouse;human	human	true		stroma	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE095-REF-002	LE095	bibliographic	REF-002		mouse;human	human	true		epithelium;stroma	review	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE095-REF-025	LE095	bibliographic	REF-025		mouse	human	true		epithelium to stroma	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE095-REF-026	LE095	bibliographic	REF-026		mouse	human	true		stroma to epithelium	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE095-REF-027	LE095	bibliographic	REF-027		mouse	human	true		stroma	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE095-REF-028	LE095	bibliographic	REF-028		mouse	human	true		stroma to epithelium	uterine_conditional_knockout	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	
+ASRT-LE095-REF-029	LE095	bibliographic	REF-029		mouse;human	human	true		stroma	primary_mechanistic	unknown	unknown	not_yet_graded	not_assessed		executable_core	not_yet_curated	

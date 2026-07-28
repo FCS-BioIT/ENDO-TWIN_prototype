@@ -1,0 +1,44 @@
+edge_id	source	target	sign	evidence_id	confidence	variant_id	candidate_edge_ids	mapping_type	notes
+SUPEDGE-014	E_IHH	S_NR2F2	activation	LIT-IHH-001;SOFIA-CCC-001	moderate	default	EDGE-008	implemented_exact	Already represented in baseline. | Collapsed IHH to NR2F2 bridge used for the executable provisional baseline. | Compact epithelial-to-stromal relay.
+SUPEDGE-017	S_NR2F2	S_BMP2	activation	LIT-IHH-001;SOFIA-CCC-001	moderate	default	EDGE-009	implemented_exact	Already represented in baseline. | Promoted stromal relay. | Retains the manuscript IHH-NR2F2-BMP2 direction as a provisional executable bridge.
+SUPEDGE-028	E_SPP1_EXPR	X_SPP1_LUMEN_FREE	activation	LIT-SPP1-001;SOFIA-CCC-002	moderate	default			Epithelial maternal ligand source. | Free-ligand abstraction retained for the anti-SPP1 perturbation.
+SUPEDGE-056	OUT_MATERNAL_ADHESION_COMPETENCE	OUT_STABLE_ADHESION	activation	SOFIA-ADH-001;SOFIA-ADH-002	moderate	default	EDGE-047	implemented_exact	Maternal competence prerequisite. | Observed stable adhesion is modeled as a gated consequence of maternal competence plus assay inputs. | Requires explicit embryo challenge inputs as in baseline.
+SUPEDGE-060	E_LIF	E_GP130_STAT3	activation	LIT-LIF-001	moderate	default	EDGE-003	implemented_exact	Central attachment pathway. | Promoted epithelial GP130-STAT3 gate.
+SUPEDGE-061	E_SECRETORY_STATE	E_PODXL	inhibition	LIT-BARRIER-001	moderate	default	EDGE-016	implemented_exact	PODXL falls in receptive luminal epithelium. | Receptive state lowers PODXL.
+SUPEDGE-062	E_SECRETORY_STATE	E_PC6	activation	LIT-PC6-001	moderate	default	EDGE-018	implemented_exact	PC6-mediated barrier-release branch. | Window-specific PC6.
+SUPEDGE-063	E_PC6	E_DAG1_FULL	inhibition	LIT-PC6-001	moderate	default	EDGE-020	implemented_exact	PC6 removes the full-length DAG1 barrier. | Removal of alpha-DG N-terminus.
+SUPEDGE-064	E_PC6	E_DAG1_CLEAVED	activation	LIT-PC6-001	moderate	default	EDGE-019	implemented_exact	Direct cleavage evidence. | PC6-linked DAG1 cleavage state.
+SUPEDGE-065	E_SECRETORY_STATE	E_MUC1_BARRIER	inhibition	LIT-BARRIER-001	moderate	default	EDGE-023	implemented_exact	Human MUC1 regulation is glycoform-dependent. | Nonpermissive MUC1 falls in receptive epithelium.
+SUPEDGE-066	E_SECRETORY_STATE	E_MUC1_SLEX	activation	LIT-BARRIER-001	moderate	default	EDGE-024	implemented_exact	Glyco-permissive MUC1 branch. | Requires a glycosylation program not directly measured.
+SUPEDGE-067	E_SECRETORY_STATE	E_HBEGF	activation	LIT-HBEGF-001	moderate	default	EDGE-033	implemented_exact	HB-EGF support route. | Receptive phase association.
+SUPEDGE-069	E_HBEGF	E_ITGAVB3_5	activation	LIT-HBEGF-001	moderate	default	EDGE-034	implemented_exact	HB-EGF provides a supportive alternative integrin route. | Reported regulation in epithelial models.
+SUPEDGE-070	E_GP130_STAT3	E_CD98_CD9	activation	LIT-CD98-001	moderate	default	EDGE-005	implemented_exact	Human gain-loss epithelial support route. | LIF induction reported in human epithelial adhesion system.
+SUPEDGE-073	E_GP130_STAT3	E_RECEPTIVE_SURFACE	activation	LIT-LIF-001	moderate	default	EDGE-004	implemented_exact	Core epithelial attachment-remodeling gate. | Junctional/remodeling gate.
+SUPEDGE-074	E_PODXL	E_RECEPTIVE_SURFACE	inhibition	LIT-BARRIER-001	moderate	default	EDGE-017	implemented_exact	PODXL opposes the receptive surface. | Strong human anti-adhesive effect.
+SUPEDGE-075	E_DAG1_FULL	E_RECEPTIVE_SURFACE	inhibition	LIT-PC6-001	moderate	default	EDGE-021	implemented_exact	Full-length DAG1 remains anti-adhesive. | Full-length form blocks attachment.
+SUPEDGE-076	E_MUC1_BARRIER	E_RECEPTIVE_SURFACE	inhibition	LIT-BARRIER-001	moderate	default	EDGE-025	implemented_exact	Anti-adhesive branch. | Nonpermissive MUC1 opposes the receptive surface.
+SUPEDGE-077	E_CD98_CD9	E_RECEPTIVE_SURFACE	activation	LIT-CD98-001	moderate	default	EDGE-030	implemented_exact	Redundant positive epithelial route. | Use as redundant route/rate modifier.
+SUPEDGE-078	E_CDH1_APICAL	E_RECEPTIVE_SURFACE	activation	LIT-CDH1-001	moderate	default	EDGE-031	implemented_exact	First-contact positive epithelial route. | Use as first-contact route/rate modifier.
+SUPEDGE-079	E_ANXA2_ACTIN	E_RECEPTIVE_SURFACE	activation	LIT-ANXA2-001	moderate	default	EDGE-032	implemented_exact	Cytoskeletal positive epithelial route. | Cytoskeletal rate modifier.
+SUPEDGE-080	E_HBEGF	E_RECEPTIVE_SURFACE	activation	LIT-HBEGF-001	moderate	default	EDGE-035	implemented_exact	Growth-factor support route. | Support/rate modifier.
+SUPEDGE-081	E_DAG1_CLEAVED	E_RECEPTIVE_SURFACE	activation	LIT-PC6-001	moderate	default	EDGE-022	implemented_exact	Barrier release. | Barrier-release support route.
+SUPEDGE-082	E_MUC1_SLEX	E_RECEPTIVE_SURFACE	activation	LIT-BARRIER-001	moderate	default	EDGE-026	implemented_exact	Early-contact rate enhancer. | Permissive MUC1 support route.
+SUPEDGE-085	S_BMP2	S_HAND2	activation	LIT-IHH-001	moderate	default	EDGE-010	implemented_exact	Compact relay |  direct ordering may vary by context. | Promoted HAND2 extension.
+SUPEDGE-086	S_PGR	S_HAND2	activation	LIT-IHH-001	moderate	default	EDGE-011	implemented_exact	Conserved progesterone-sensitive stromal node. | Parallel progesterone-sensitive HAND2 support route.
+SUPEDGE-088	S_DECIDUALIZED	S_SPP1	activation	LIT-DECID-001	moderate	default	EDGE-037	implemented_exact	Promoted stromal SPP1 support node. | Stromal decidual output.
+SUPEDGE-089	S_DECIDUALIZED	S_TAZ_ECM	activation	LIT-MECH-001	moderate	default	EDGE-038	implemented_exact	Promoted stromal ECM-remodeling route. | Recent causal evidence.
+SUPEDGE-092	S_TAZ_ECM	X_MECHANICAL_PERMISSIVE_ECM	activation	LIT-MECH-001	moderate	default	EDGE-040	implemented_exact	ECM remodeling route. | TAZ-linked ECM remodeling contributes to mechanical permissiveness.
+SUPEDGE-093	IN_ER_STRESS_EXCESS	X_MECHANICAL_PERMISSIVE_ECM	inhibition	LIT-MECH-001	moderate	default	EDGE-042	implemented_exact	Excess ER stress activates the bounded adverse-mechanics branch rather than a deterministic kill switch. | Excess ER stress prevents normal softening.
+SUPEDGE-094	IN_HIGH_ECM_STIFFNESS	X_MECHANICAL_PERMISSIVE_ECM	inhibition	LIT-MECH-001	moderate	default	EDGE-043	implemented_exact	Coarse Boolean stiffness state. | Excessive stiffness activates the bounded adverse-mechanics branch rather than a deterministic kill switch.
+SUPEDGE-109	E_RECEPTIVE_SURFACE	OUT_MATERNAL_ADHESION_COMPETENCE	activation	LIT-LIF-001	moderate	default	EDGE-044	implemented_exact	Epithelial gate. | Epithelial permissive contribution is carried by the mechanistic receptive-surface state rather than the downstream reporting phenotype.
+SUPEDGE-110	S_DECIDUALIZED	OUT_MATERNAL_ADHESION_COMPETENCE	activation	LIT-DECID-001	moderate	default	EDGE-045	implemented_exact	Stromal gate. | Stromal permissive contribution is carried by the mechanistic decidual state rather than the downstream reporting phenotype.
+SUPEDGE-111	X_MECHANICAL_PERMISSIVE_ECM	OUT_MATERNAL_ADHESION_COMPETENCE	activation	LIT-MECH-001	moderate	default	EDGE-046	implemented_exact	Mechanical stabilization contribution. | Mechanical stabilization gate or rate modifier.
+SUPEDGE-114	E_GP130_STAT3	E_ITGAVB3_5	activation		moderate	default	EDGE-006	implemented_exact	Human cell-model link.
+SUPEDGE-115	E_GP130_STAT3	E_ANXA2_ACTIN	activation		low	anxa2_stat3_link	EDGE-007	implemented_variant	No direct LIF-to-ANXA2 proof in this inventory |  use only as a tested variant.
+SUPEDGE-116	S_HAND2	S_FGF_MITOGENIC	inhibition		high	default	EDGE-012	implemented_exact	Family-level FGF collapse.
+SUPEDGE-117	S_FGF_MITOGENIC	E_ESTROGENIC_PROLIFERATION	activation		high	default	EDGE-013	implemented_exact	Stromal-to-epithelial mitogenic relay.
+SUPEDGE-118	S_HAND2	E_ESTROGENIC_PROLIFERATION	inhibition		high	default	EDGE-014	implemented_exact	Net effect through FGF suppression.
+SUPEDGE-119	E_ESTROGENIC_PROLIFERATION	E_RECEPTIVE_SURFACE	inhibition		high	default	EDGE-015	implemented_exact	Persistent proliferation is nonreceptive.
+SUPEDGE-120	IN_HCG	E_CD98_CD9	activation		moderate	default	EDGE-027	implemented_exact	Embryo input.
+SUPEDGE-121	IN_HCG	E_CDH1_APICAL	activation		high	cdh1	EDGE-028	implemented_variant	Embryo input.
+SUPEDGE-122	IN_EMBRYO_CONDITIONED_SIGNAL	E_CDH1_APICAL	activation		moderate	cdh1	EDGE-029	implemented_variant	Fallback external input.

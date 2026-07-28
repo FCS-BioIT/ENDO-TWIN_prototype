@@ -1,0 +1,94 @@
+edge_id	source	target	sign	evidence_id	confidence	variant_id	notes
+LE001	IN_PROGESTIN	E_PGR	activation	SOFIA-HT-001	verified	adoc_literature_v020_core	Published ADOC hormone protocol input.
+LE002	IN_MIFEPRISTONE	E_PGR	inhibition	SOFIA-HT-002	verified	adoc_literature_v020_core	Effective epithelial PGR antagonism.
+LE003	E_PGR	E_IHH	activation	LIT-IHH-001	candidate	adoc_literature_v020_core	Promoted epithelial-to-stromal relay.
+LE004	IN_E2	E_SECRETORY_STATE	activation	SOFIA-HT-001	verified	adoc_literature_v020_core	ADOC priming input.
+LE005	E_PGR	E_SECRETORY_STATE	activation	SOFIA-SC-001	verified	adoc_literature_v020_core	Default secretory-state gate without obligatory XAV939.
+LE006	E_SECRETORY_STATE	E_PAEP	activation	SOFIA-EPI-001	verified	adoc_literature_v020_core	ADOC epithelial readout projection.
+LE007	E_SECRETORY_STATE	E_LIF	activation	LIT-LIF-001	candidate	adoc_literature_v020_core	Promoted epithelial LIF gate.
+LE008	E_LIF	E_GP130_STAT3	activation	LIT-LIF-001	candidate	adoc_literature_v020_core	Promoted epithelial GP130-STAT3 gate.
+LE009	E_SECRETORY_STATE	E_PODXL	inhibition	LIT-BARRIER-001	candidate	adoc_literature_v020_core	Receptive state lowers PODXL.
+LE010	E_SECRETORY_STATE	E_PC6	activation	LIT-PC6-001	candidate	adoc_literature_v020_core	PC6-mediated barrier-release branch.
+LE011	E_PC6	E_DAG1_FULL	inhibition	LIT-PC6-001	candidate	adoc_literature_v020_core	PC6 removes the full-length DAG1 barrier.
+LE012	E_PC6	E_DAG1_CLEAVED	activation	LIT-PC6-001	candidate	adoc_literature_v020_core	PC6-linked DAG1 cleavage state.
+LE013	E_SECRETORY_STATE	E_MUC1_BARRIER	inhibition	LIT-BARRIER-001	candidate	adoc_literature_v020_core	Nonpermissive MUC1 falls in receptive epithelium.
+LE014	E_SECRETORY_STATE	E_MUC1_SLEX	activation	LIT-BARRIER-001	candidate	adoc_literature_v020_core	Glyco-permissive MUC1 branch.
+LE015	E_SECRETORY_STATE	E_HBEGF	activation	LIT-HBEGF-001	candidate	adoc_literature_v020_core	HB-EGF support route.
+LE016	E_SECRETORY_STATE	E_SPP1_EXPR	activation	LIT-SPP1-001	candidate	adoc_literature_v020_core	Maternal epithelial SPP1 source.
+LE017	E_LIF	E_ITGAVB3_5	activation	LIT-SPP1-001	candidate	adoc_literature_v020_core	Integrin support route.
+LE018	E_HBEGF	E_ITGAVB3_5	activation	LIT-HBEGF-001	candidate	adoc_literature_v020_alternative	HB-EGF provides a supportive alternative integrin route.
+LE019	E_GP130_STAT3	E_CD98_CD9	activation	LIT-CD98-001	candidate	adoc_literature_v020_core	Human gain-loss epithelial support route.
+LE021	E_SECRETORY_STATE	E_ANXA2_ACTIN	activation	LIT-ANXA2-001	candidate	adoc_literature_v020_core	Cytoskeletal support route.
+LE024	IN_EMBRYO_CONTACT	E_CDH1_APICAL	activation	LIT-CDH1-001	candidate	adoc_literature_v020_core	Contact-associated apical CDH1 support.
+LE025	E_GP130_STAT3	E_RECEPTIVE_SURFACE	activation	LIT-LIF-001	candidate	adoc_literature_v020_core	Core epithelial attachment-remodeling gate.
+LE026	E_PODXL	E_RECEPTIVE_SURFACE	inhibition	LIT-BARRIER-001	candidate	adoc_literature_v020_core	PODXL opposes the receptive surface.
+LE027	E_DAG1_FULL	E_RECEPTIVE_SURFACE	inhibition	LIT-PC6-001	candidate	adoc_literature_v020_core	Full-length DAG1 remains anti-adhesive.
+LE028	E_MUC1_BARRIER	E_RECEPTIVE_SURFACE	inhibition	LIT-BARRIER-001	candidate	adoc_literature_v020_core	Nonpermissive MUC1 opposes the receptive surface.
+LE029	E_CD98_CD9	E_RECEPTIVE_SURFACE	activation	LIT-CD98-001	candidate	adoc_literature_v020_core	Redundant positive epithelial route.
+LE030	E_CDH1_APICAL	E_RECEPTIVE_SURFACE	activation	LIT-CDH1-001	candidate	adoc_literature_v020_core	First-contact positive epithelial route.
+LE031	E_ANXA2_ACTIN	E_RECEPTIVE_SURFACE	activation	LIT-ANXA2-001	candidate	adoc_literature_v020_core	Cytoskeletal positive epithelial route.
+LE032	E_HBEGF	E_RECEPTIVE_SURFACE	activation	LIT-HBEGF-001	candidate	adoc_literature_v020_core	Growth-factor support route.
+LE033	E_DAG1_CLEAVED	E_RECEPTIVE_SURFACE	activation	LIT-PC6-001	candidate	adoc_literature_v020_core	Barrier-release support route.
+LE034	E_MUC1_SLEX	E_RECEPTIVE_SURFACE	activation	LIT-BARRIER-001	candidate	adoc_literature_v020_core	Permissive MUC1 support route.
+LE035	E_ITGAVB3_5	E_RECEPTIVE_SURFACE	activation	LIT-SPP1-001	candidate	adoc_literature_v020_core	Integrin-linked support route.
+LE036	X_SPP1_LUMEN_FREE	E_RECEPTIVE_SURFACE	activation	LIT-SPP1-001	candidate	adoc_literature_v020_core	Free maternal SPP1 contributes one positive branch.
+LE037	IN_PROGESTIN	S_PGR	activation	SOFIA-HT-001	verified	adoc_literature_v020_core	Published ADOC hormone protocol input.
+LE038	IN_MIFEPRISTONE	S_PGR	inhibition	SOFIA-HT-002	verified	adoc_literature_v020_core	Effective stromal PGR antagonism.
+LE039	IN_cAMP	S_PKA	activation	SOFIA-HT-001	verified	adoc_literature_v020_core	Published ADOC stromal cAMP input.
+LE040	E_IHH	S_NR2F2	activation	LIT-IHH-001	candidate	adoc_literature_v020_core	Compact epithelial-to-stromal relay.
+LE041	S_PGR	S_NR2F2	activation	LIT-IHH-001	candidate	adoc_literature_v020_core	Contextual progesterone requirement.
+LE042	S_PGR	S_BMP2	activation	SOFIA-SC-002	verified	adoc_literature_v020_core	ADOC stromal program edge.
+LE043	S_NR2F2	S_BMP2	activation	LIT-IHH-001	candidate	adoc_literature_v020_core	Promoted stromal relay.
+LE044	S_BMP2	S_HAND2	activation	LIT-IHH-001	candidate	adoc_literature_v020_core	Promoted HAND2 extension.
+LE045	S_PGR	S_HAND2	activation	LIT-IHH-001	candidate	adoc_literature_v020_alternative	Parallel progesterone-sensitive HAND2 support route.
+LE046	S_PGR	S_DECIDUALIZED	activation	LIT-DECID-001	candidate	adoc_literature_v020_core	Compact decidual-state requirement.
+LE047	S_PKA	S_DECIDUALIZED	activation	LIT-DECID-001	candidate	adoc_literature_v020_core	cAMP-linked decidual support.
+LE048	S_BMP2	S_DECIDUALIZED	activation	LIT-IHH-001	candidate	adoc_literature_v020_core	Relay-to-state decidual support.
+LE049	S_DECIDUALIZED	S_PRL	activation	SOFIA-STR-001	verified	adoc_literature_v020_core	ADOC stromal readout.
+LE050	S_DECIDUALIZED	S_IGFBP1	activation	SOFIA-STR-001	verified	adoc_literature_v020_core	ADOC stromal readout.
+LE051	S_DECIDUALIZED	S_SPP1	activation	LIT-DECID-001	candidate	adoc_literature_v020_core	Promoted stromal SPP1 support node.
+LE052	S_DECIDUALIZED	S_TAZ_ECM	activation	LIT-MECH-001	candidate	adoc_literature_v020_core	Promoted stromal ECM-remodeling route.
+LE053A	X_MECHANICAL_STRESS_RELAY	X_MECHANICAL_PERMISSIVE_ECM	inhibition	LIT-MECH-001	assumption	adoc_literature_v020_core	Bounded structural sensitivity relay for adverse ER-stress or stiffness effects.
+LE053	S_DECIDUALIZED	X_MECHANICAL_PERMISSIVE_ECM	activation	LIT-MECH-001	candidate	adoc_literature_v020_core	Decidual state contributes to mechanical permissiveness.
+LE054	S_TAZ_ECM	X_MECHANICAL_PERMISSIVE_ECM	activation	LIT-MECH-001	candidate	adoc_literature_v020_core	TAZ-linked ECM remodeling contributes to mechanical permissiveness.
+LE055	IN_ER_STRESS_EXCESS	X_MECHANICAL_PERMISSIVE_ECM	inhibition	LIT-MECH-001	candidate	adoc_literature_v020_core	Excess ER stress activates the bounded adverse-mechanics branch rather than a deterministic kill switch.
+LE056	IN_HIGH_ECM_STIFFNESS	X_MECHANICAL_PERMISSIVE_ECM	inhibition	LIT-MECH-001	candidate	adoc_literature_v020_core	Excessive stiffness activates the bounded adverse-mechanics branch rather than a deterministic kill switch.
+LE057	E_SPP1_EXPR	X_SPP1_LUMEN_FREE	activation	LIT-SPP1-001	candidate	adoc_literature_v020_core	Epithelial maternal ligand source.
+LE058	S_SPP1	X_SPP1_LUMEN_FREE	activation	LIT-SPP1-001	candidate	adoc_literature_v020_core	Stromal maternal ligand source.
+LE059	IN_ANTI_SPP1	X_SPP1_LUMEN_FREE	inhibition	LIT-SPP1-001	candidate	adoc_literature_v020_core	Anti-SPP1 acts on free ligand only.
+LE060	E_RECEPTIVE_SURFACE	X_ADHESION_ROUTE_SPP1	activation	LIT-SPP1-001	candidate	adoc_literature_v020_core	SPP1-linked interface route requires the receptive surface.
+LE061	X_SPP1_LUMEN_FREE	X_ADHESION_ROUTE_SPP1	activation	LIT-SPP1-001	candidate	adoc_literature_v020_core	Free maternal SPP1 contributes one positive route.
+LE062	E_ITGAVB3_5	X_ADHESION_ROUTE_SPP1	activation	LIT-SPP1-001	candidate	adoc_literature_v020_core	Integrin support for the SPP1-linked route.
+LE063	X_INTERFACE_SPP1_RELAY	X_ADHESION_ROUTE_SPP1	activation	LIT-SPP1-001	assumption	adoc_literature_v020_core	Bounded structural uncertainty relay.
+LE064	E_RECEPTIVE_SURFACE	X_ADHESION_ROUTE_REDUNDANT	activation	LIT-CD98-001	candidate	adoc_literature_v020_core	Redundant route requires the receptive surface.
+LE065	E_CD98_CD9	X_ADHESION_ROUTE_REDUNDANT	activation	LIT-CD98-001	candidate	adoc_literature_v020_core	Positive redundant epithelial route.
+LE066	E_CDH1_APICAL	X_ADHESION_ROUTE_REDUNDANT	activation	LIT-CDH1-001	candidate	adoc_literature_v020_core	Positive redundant epithelial route.
+LE067	E_ANXA2_ACTIN	X_ADHESION_ROUTE_REDUNDANT	activation	LIT-ANXA2-001	candidate	adoc_literature_v020_core	Positive redundant epithelial route.
+LE068	E_HBEGF	X_ADHESION_ROUTE_REDUNDANT	activation	LIT-HBEGF-001	candidate	adoc_literature_v020_core	Positive redundant epithelial route.
+LE069	E_DAG1_CLEAVED	X_ADHESION_ROUTE_REDUNDANT	activation	LIT-PC6-001	candidate	adoc_literature_v020_core	Barrier-release support route.
+LE070	E_MUC1_SLEX	X_ADHESION_ROUTE_REDUNDANT	activation	LIT-BARRIER-001	candidate	adoc_literature_v020_core	Permissive MUC1 support route.
+LE071	X_INTERFACE_REDUNDANT_RELAY	X_ADHESION_ROUTE_REDUNDANT	activation	LIT-CD98-001	assumption	adoc_literature_v020_core	Bounded structural uncertainty relay.
+LE072	E_PODXL	X_ANTIADHESIVE_ROUTE	activation	LIT-BARRIER-001	candidate	adoc_literature_v020_core	Anti-adhesive barrier route.
+LE073	E_DAG1_FULL	X_ANTIADHESIVE_ROUTE	activation	LIT-PC6-001	candidate	adoc_literature_v020_core	Anti-adhesive barrier route.
+LE074	E_MUC1_BARRIER	X_ANTIADHESIVE_ROUTE	activation	LIT-BARRIER-001	candidate	adoc_literature_v020_core	Anti-adhesive barrier route.
+LE075	X_INTERFACE_ANTIADHESIVE_RELAY	X_ANTIADHESIVE_ROUTE	activation	LIT-BARRIER-001	assumption	adoc_literature_v020_core	Bounded structural uncertainty relay.
+LE076	E_RECEPTIVE_SURFACE	OUT_EPITHELIAL_RECEPTIVE	activation	LIT-LIF-001	candidate	adoc_literature_v020_core	Composite epithelial phenotype projection.
+LE077	E_PAEP	OUT_EPITHELIAL_RECEPTIVE	activation	SOFIA-EPI-001	verified	adoc_literature_v020_core	ADOC continuity readout gate.
+LE078	S_DECIDUALIZED	OUT_STROMAL_DECIDUALIZED	activation	LIT-DECID-001	candidate	adoc_literature_v020_core	Composite stromal phenotype projection.
+LE079	S_PRL	OUT_STROMAL_DECIDUALIZED	activation	SOFIA-STR-001	verified	adoc_literature_v020_core	ADOC continuity readout gate.
+LE080	S_IGFBP1	OUT_STROMAL_DECIDUALIZED	activation	SOFIA-STR-001	verified	adoc_literature_v020_core	ADOC continuity readout gate.
+LE081	E_RECEPTIVE_SURFACE	OUT_MATERNAL_ADHESION_COMPETENCE	activation	LIT-LIF-001	candidate	adoc_literature_v020_core	Epithelial permissive contribution is carried by the mechanistic receptive-surface state rather than the downstream reporting phenotype.
+LE082	S_DECIDUALIZED	OUT_MATERNAL_ADHESION_COMPETENCE	activation	LIT-DECID-001	candidate	adoc_literature_v020_core	Stromal permissive contribution is carried by the mechanistic decidual state rather than the downstream reporting phenotype.
+LE083	X_MECHANICAL_PERMISSIVE_ECM	OUT_MATERNAL_ADHESION_COMPETENCE	activation	LIT-MECH-001	candidate	adoc_literature_v020_core	Mechanical stabilization contribution.
+LE084	X_ADHESION_ROUTE_SPP1	OUT_MATERNAL_ADHESION_COMPETENCE	activation	LIT-SPP1-001	candidate	adoc_literature_v020_core	SPP1-linked positive interface route.
+LE085	X_ADHESION_ROUTE_REDUNDANT	OUT_MATERNAL_ADHESION_COMPETENCE	activation	LIT-CD98-001	candidate	adoc_literature_v020_core	Redundant positive interface route.
+LE086	X_ANTIADHESIVE_ROUTE	OUT_MATERNAL_ADHESION_COMPETENCE	inhibition	LIT-BARRIER-001	candidate	adoc_literature_v020_core	Anti-adhesive penalty route.
+LE087	OUT_MATERNAL_ADHESION_COMPETENCE	OUT_STABLE_ADHESION	activation	SOFIA-ADH-002	verified	adoc_literature_v020_core	Maternal competence prerequisite.
+LE088	IN_EMBRYO_PRESENT	OUT_STABLE_ADHESION	activation	SOFIA-ADH-001	verified	adoc_literature_v020_core	External embryo presence gate.
+LE089	IN_TROPHECTODERM_COMPETENT	OUT_STABLE_ADHESION	activation	SOFIA-ADH-001	candidate	adoc_literature_v020_core	External embryo competence gate.
+LE090	IN_EMBRYO_CONTACT	OUT_STABLE_ADHESION	activation	LIT-CDH1-001	candidate	adoc_literature_v020_core	Explicit contact gate.
+LE091	E_KLF12_HIGH	E_LIF	inhibition	LIT-LIF-001	candidate	adoc_literature_superset_v030	Contextual KLF12-high state restrains the epithelial LIF gate.
+LE092	S_HAND2	S_FGF_MITOGENIC	inhibition	LIT-IHH-001	candidate	adoc_literature_superset_v030	HAND2 restrains mitogenic stromal FGF output in the expansion branch.
+LE093	S_FGF_MITOGENIC	E_ESTROGENIC_PROLIFERATION	activation	LIT-IHH-001	candidate	adoc_literature_superset_v030	Stromal mitogenic relay supports persistent epithelial proliferation.
+LE094	S_HAND2	E_ESTROGENIC_PROLIFERATION	inhibition	LIT-IHH-001	candidate	adoc_literature_superset_v030	HAND2 directly suppresses the anti-receptive epithelial proliferation branch.
+LE095	E_ESTROGENIC_PROLIFERATION	E_RECEPTIVE_SURFACE	inhibition	LIT-IHH-001	candidate	adoc_literature_superset_v030	Persistent epithelial proliferation opposes the receptive surface.

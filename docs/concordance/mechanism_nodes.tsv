@@ -1,0 +1,60 @@
+node_id	label	compartment	evidence_class	declared_confidence	phenotype_inert	alias_of
+IN_E2	Estradiol input	input	protocol_input	verified	false	
+IN_PROGESTIN	Progestin input	input	protocol_input	verified	false	
+IN_cAMP	cAMP input	input	protocol_input	verified	false	S_PKA
+IN_XAV939	XAV939 input	input	protocol_input	verified	true	
+IN_MIFEPRISTONE	Mifepristone input	input	protocol_input	verified	false	
+IN_ANTI_SPP1	Anti-SPP1 input	input	protocol_input	medium	false	
+IN_EMBRYO_PRESENT	Embryo present	input	protocol_input	verified	false	
+IN_TROPHECTODERM_COMPETENT	Embryo competence	input	protocol_input	medium	false	
+IN_EMBRYO_CONTACT	Embryo contact input	input	protocol_input	medium	false	E_CDH1_APICAL
+IN_HCG	Embryo-derived hCG input	input	protocol_input	medium	true	
+IN_EMBRYO_CONDITIONED_SIGNAL	Embryo-conditioned signal	input	protocol_input	medium	true	
+IN_HAND2_LOSS	Stromal HAND2 loss-of-function input	input	protocol_input	medium	false	
+IN_ER_STRESS_EXCESS	Excess ER stress input	input	protocol_input	medium	false	
+IN_HIGH_ECM_STIFFNESS	High ECM stiffness input	input	protocol_input	medium	false	
+E_PGR	Epithelial PGR activity	epithelial	literature_derived	verified	false	E_IHH;S_PGR;S_NR2F2;S_BMP2
+E_IHH	Epithelial IHH	epithelial	literature_derived	medium	true	E_PGR;S_PGR;S_NR2F2;S_BMP2
+E_SECRETORY_STATE	Compact epithelial secretory state	epithelial	literature_derived	verified	false	E_PAEP;E_PC6;E_DAG1_CLEAVED;E_MUC1_SLEX;E_HBEGF;E_SPP1_EXPR;E_ITGAVB3_5;E_ANXA2_ACTIN
+E_PAEP	Epithelial PAEP output	epithelial	adoc_measured	verified	false	E_SECRETORY_STATE;E_PC6;E_DAG1_CLEAVED;E_MUC1_SLEX;E_HBEGF;E_SPP1_EXPR;E_ITGAVB3_5;E_ANXA2_ACTIN
+E_KLF12_HIGH	High epithelial KLF12	epithelial	hand_set_free	medium	false	
+E_LIF	Epithelial or glandular LIF	epithelial	literature_derived	high	false	E_GP130_STAT3;E_CD98_CD9
+E_GP130_STAT3	Epithelial LIFR or GP130 to STAT3 state	epithelial	literature_derived	high	false	E_LIF;E_CD98_CD9
+E_ESTROGENIC_PROLIFERATION	Epithelial estrogenic proliferation	epithelial	literature_derived	medium	false	
+E_PODXL	Epithelial PODXL barrier	epithelial	literature_derived	high	false	E_DAG1_FULL;E_MUC1_BARRIER
+E_PC6	Epithelial PCSK5 or PC6	epithelial	literature_derived	high	false	E_SECRETORY_STATE;E_PAEP;E_DAG1_CLEAVED;E_MUC1_SLEX;E_HBEGF;E_SPP1_EXPR;E_ITGAVB3_5;E_ANXA2_ACTIN
+E_DAG1_FULL	Full-length DAG1 barrier	epithelial	literature_derived	high	false	E_PODXL;E_MUC1_BARRIER
+E_DAG1_CLEAVED	PC6-cleaved DAG1 state	epithelial	literature_derived	high	true	E_SECRETORY_STATE;E_PAEP;E_PC6;E_MUC1_SLEX;E_HBEGF;E_SPP1_EXPR;E_ITGAVB3_5;E_ANXA2_ACTIN
+E_MUC1_BARRIER	Nonpermissive MUC1 state	epithelial	literature_derived	medium	false	E_PODXL;E_DAG1_FULL
+E_MUC1_SLEX	Glyco-permissive MUC1 state	epithelial	literature_derived	medium	true	E_SECRETORY_STATE;E_PAEP;E_PC6;E_DAG1_CLEAVED;E_HBEGF;E_SPP1_EXPR;E_ITGAVB3_5;E_ANXA2_ACTIN
+E_HBEGF	Epithelial HB-EGF	epithelial	literature_derived	medium	true	E_SECRETORY_STATE;E_PAEP;E_PC6;E_DAG1_CLEAVED;E_MUC1_SLEX;E_SPP1_EXPR;E_ITGAVB3_5;E_ANXA2_ACTIN
+E_SPP1_EXPR	Epithelial SPP1	epithelial	literature_derived	medium	true	E_SECRETORY_STATE;E_PAEP;E_PC6;E_DAG1_CLEAVED;E_MUC1_SLEX;E_HBEGF;E_ITGAVB3_5;E_ANXA2_ACTIN
+E_ITGAVB3_5	Epithelial integrin state	epithelial	literature_derived	medium	false	E_SECRETORY_STATE;E_PAEP;E_PC6;E_DAG1_CLEAVED;E_MUC1_SLEX;E_HBEGF;E_SPP1_EXPR;E_ANXA2_ACTIN
+E_CD98_CD9	Epithelial CD98 or CD9 route	epithelial	literature_derived	high	true	E_LIF;E_GP130_STAT3
+E_ANXA2_ACTIN	ANXA2-RHOA-actin remodeling	epithelial	literature_derived	medium	true	E_SECRETORY_STATE;E_PAEP;E_PC6;E_DAG1_CLEAVED;E_MUC1_SLEX;E_HBEGF;E_SPP1_EXPR;E_ITGAVB3_5
+E_CDH1_APICAL	Apical CDH1 or CTNND1 state	epithelial	literature_derived	high	true	IN_EMBRYO_CONTACT
+E_RECEPTIVE_SURFACE	Composite receptive adhesive surface	epithelial	literature_derived	high	false	OUT_EPITHELIAL_RECEPTIVE
+S_PGR	Stromal PGR activity	stromal	literature_derived	verified	false	E_PGR;E_IHH;S_NR2F2;S_BMP2
+S_PKA	Stromal cAMP or PKA state	stromal	literature_derived	verified	false	IN_cAMP
+S_NR2F2	Stromal NR2F2 or COUP-TFII	stromal	literature_derived	medium	true	E_PGR;E_IHH;S_PGR;S_BMP2
+S_BMP2	Stromal BMP2	stromal	literature_derived	high	false	E_PGR;E_IHH;S_PGR;S_NR2F2
+S_HAND2	Stromal HAND2	stromal	literature_derived	high	false	
+S_FGF_MITOGENIC	Stromal mitogenic FGF output	stromal	literature_derived	medium	false	
+S_DECIDUALIZED	Compact stromal decidual state	stromal	literature_derived	high	false	S_PRL;S_IGFBP1;S_SPP1;S_TAZ_ECM;OUT_STROMAL_DECIDUALIZED
+S_PRL	Stromal PRL output	stromal	literature_derived	verified	false	S_DECIDUALIZED;S_IGFBP1;S_SPP1;S_TAZ_ECM;OUT_STROMAL_DECIDUALIZED
+S_IGFBP1	Stromal IGFBP1 output	stromal	adoc_measured	verified	false	S_DECIDUALIZED;S_PRL;S_SPP1;S_TAZ_ECM;OUT_STROMAL_DECIDUALIZED
+S_SPP1	Stromal SPP1	stromal	literature_derived	medium	true	S_DECIDUALIZED;S_PRL;S_IGFBP1;S_TAZ_ECM;OUT_STROMAL_DECIDUALIZED
+S_TAZ_ECM	Stromal TAZ or WWTR1 ECM-remodeling state	stromal	literature_derived	medium	false	S_DECIDUALIZED;S_PRL;S_IGFBP1;S_SPP1;OUT_STROMAL_DECIDUALIZED
+X_MECHANICAL_STRESS_RELAY	Mechanical stress sensitivity relay	extracellular	hand_set_free	assumption	false	
+X_MECHANICAL_PERMISSIVE_ECM	Mechanical permissiveness of decidual ECM	extracellular	literature_derived	medium	false	
+X_SPP1_LUMEN_FREE	Free maternal SPP1 pool	extracellular	literature_derived	medium	false	
+X_INTERFACE_SPP1_RELAY	SPP1-linked interface relay	extracellular	hand_set_free	assumption	false	
+X_INTERFACE_REDUNDANT_RELAY	Redundant positive route relay	extracellular	hand_set_free	assumption	false	
+X_INTERFACE_ANTIADHESIVE_RELAY	Anti-adhesive route relay	extracellular	hand_set_free	assumption	true	
+X_ADHESION_ROUTE_SPP1	SPP1-linked adhesion route	extracellular	literature_derived	medium	false	
+X_ADHESION_ROUTE_REDUNDANT	Redundant positive adhesion route	extracellular	literature_derived	medium	false	
+X_ANTIADHESIVE_ROUTE	Anti-adhesive interface route	extracellular	literature_derived	medium	false	
+OUT_EPITHELIAL_RECEPTIVE	Epithelial receptivity phenotype	output	composite_output	high	false	E_RECEPTIVE_SURFACE
+OUT_STROMAL_DECIDUALIZED	Stromal decidual phenotype	output	composite_output	high	false	S_DECIDUALIZED;S_PRL;S_IGFBP1;S_SPP1;S_TAZ_ECM
+OUT_MATERNAL_ADHESION_COMPETENCE	Maternal adhesion competence phenotype	output	composite_output	medium	false	
+OUT_STABLE_ADHESION	Stable embryo adhesion phenotype	output	composite_output	verified	false	

@@ -1,0 +1,76 @@
+panel	arm	quantity	value	ci_low	ci_high	n	unit	evidence_role	source
+A	untreated	observed_proportion	0.000000	0.000000	0.242501	0/12	embryo (per-embryo binary outcome)	calibration	config/calibration.yaml adhesion_objective
+A	untreated	simulated_converged	0.000000			20000 trajectories x 5 seeds; across-seed spread 0.000000 (DIAGNOSTIC ONLY, not a validated uncertainty)	MaBoSS trajectory frequency (dimensionless); NO interval is given, because this repository has no validated characterisation of this estimator	calibration	docs/concordance/run_settings.json
+A	untreated	simulated_declared	0.000000			20000 trajectories x 5 seeds; across-seed spread 0.000000 (DIAGNOSTIC ONLY, not a validated uncertainty)	MaBoSS trajectory frequency (dimensionless); NO interval is given, because this repository has no validated characterisation of this estimator	calibration	docs/concordance/run_settings.json
+A	hormone_treated	observed_proportion	0.473684	0.273295	0.682925	9/19	embryo (per-embryo binary outcome)	calibration	config/calibration.yaml adhesion_objective
+A	hormone_treated	simulated_converged	0.820130			20000 trajectories x 5 seeds; across-seed spread 0.000024 (DIAGNOSTIC ONLY, not a validated uncertainty)	MaBoSS trajectory frequency (dimensionless); NO interval is given, because this repository has no validated characterisation of this estimator	calibration	docs/concordance/run_settings.json
+A	hormone_treated	simulated_declared	0.000000			20000 trajectories x 5 seeds; across-seed spread 0.000000 (DIAGNOSTIC ONLY, not a validated uncertainty)	MaBoSS trajectory frequency (dimensionless); NO interval is given, because this repository has no validated characterisation of this estimator	calibration	docs/concordance/run_settings.json
+A	mifepristone	observed_proportion	0.125000	0.022417	0.470895	1/8	embryo (per-embryo binary outcome)	held out	config/calibration.yaml adhesion_objective
+A	mifepristone	simulated_converged	0.000000			20000 trajectories x 5 seeds; across-seed spread 0.000000 (DIAGNOSTIC ONLY, not a validated uncertainty)	MaBoSS trajectory frequency (dimensionless); NO interval is given, because this repository has no validated characterisation of this estimator	held out	docs/concordance/run_settings.json
+A	mifepristone	simulated_declared	0.000020			20000 trajectories x 5 seeds; across-seed spread 0.000025 (DIAGNOSTIC ONLY, not a validated uncertainty)	MaBoSS trajectory frequency (dimensionless); NO interval is given, because this repository has no validated characterisation of this estimator	held out	docs/concordance/run_settings.json
+B	E_PAEP	direction_only_scorecard (R15b)	direction agrees - but circular				direction only; no validated observation model	calibration (OM-001 feasibility gate)	docs/concordance/concordance_table.tsv
+B	S_IGFBP1	direction_only_scorecard (R12b)	direction agrees - but circular				direction only; no validated observation model	calibration (OM-002 diagnostic)	docs/concordance/concordance_table.tsv
+B	S_PRL	direction_only_scorecard (R12c)	NOT ASSESSABLE				direction only; no validated observation model	OM-006/014/015 provisional or context_only	docs/concordance/concordance_table.tsv
+B	(none)	direction_only_scorecard (R23)	NOT ASSESSABLE				direction only; no validated observation model	not assessable	docs/concordance/concordance_table.tsv
+C	IN_E2	mechanism_node	E2			1	protocol_input; box_kind=alias	IN_E2	docs/concordance/mechanism_nodes.tsv
+C	IN_PROGESTIN	mechanism_node	Progestin\n(MPA)			1	protocol_input; box_kind=alias	IN_PROGESTIN	docs/concordance/mechanism_nodes.tsv
+C	IN_cAMP	mechanism_node	cAMP\n= S_PKA			2	protocol_input; box_kind=alias	IN_cAMP;S_PKA	docs/concordance/mechanism_nodes.tsv
+C	IN_MIFEPRISTONE	mechanism_node	Mifepristone			1	protocol_input; box_kind=alias	IN_MIFEPRISTONE	docs/concordance/mechanism_nodes.tsv
+C	IN_EMBRYO	mechanism_node	Embryo present /\ncompetent / contact			3	protocol_input; box_kind=grouping	IN_EMBRYO_PRESENT;IN_TROPHECTODERM_COMPETENT;IN_EMBRYO_CONTACT	docs/concordance/mechanism_nodes.tsv
+C	PGR_CLASS	mechanism_node	PGR arm\nE_PGR = E_IHH = S_PGR\n= S_NR2F2 = S_BMP2			5	literature_derived; box_kind=alias	E_PGR;E_IHH;S_PGR;S_NR2F2;S_BMP2	docs/concordance/mechanism_nodes.tsv
+C	SECRETORY_CLASS	mechanism_node	Epithelial secretory program\nE_SECRETORY_STATE = E_PAEP\n= PC6 = HBEGF = SPP1 = ITGAVB3/5 ...			9	adoc_measured; box_kind=alias	E_SECRETORY_STATE;E_PAEP;E_PC6;E_DAG1_CLEAVED;E_MUC1_SLEX;E_HBEGF;E_SPP1_EXPR;E_ITGAVB3_5;E_ANXA2_ACTIN	docs/concordance/mechanism_nodes.tsv
+C	DECIDUAL_CLASS	mechanism_node	Stromal decidual program\nS_DECIDUALIZED = S_PRL\n= S_IGFBP1 = S_SPP1 = S_TAZ_ECM			6	adoc_measured; box_kind=alias	S_DECIDUALIZED;S_PRL;S_IGFBP1;S_SPP1;S_TAZ_ECM;OUT_STROMAL_DECIDUALIZED	docs/concordance/mechanism_nodes.tsv
+C	S_HAND2	mechanism_node	S_HAND2			1	literature_derived; box_kind=alias	S_HAND2	docs/concordance/mechanism_nodes.tsv
+C	LIF_CLASS	mechanism_node	LIF axis\nE_LIF = E_GP130_STAT3\n= E_CD98_CD9			3	literature_derived; box_kind=alias	E_LIF;E_GP130_STAT3;E_CD98_CD9	docs/concordance/mechanism_nodes.tsv
+C	ANTIADH_CLASS	mechanism_node	Anti-adhesive surface\nE_PODXL = E_DAG1_FULL\n= E_MUC1_BARRIER			3	literature_derived; box_kind=alias	E_PODXL;E_DAG1_FULL;E_MUC1_BARRIER	docs/concordance/mechanism_nodes.tsv
+C	RELAY_SPP1	mechanism_node	SPP1 relay\nistate 0.70			1	hand_set_free; box_kind=alias	X_INTERFACE_SPP1_RELAY	docs/concordance/mechanism_nodes.tsv
+C	X_SPP1_LUMEN_FREE	mechanism_node	X_SPP1_\nLUMEN_FREE			1	literature_derived; box_kind=alias	X_SPP1_LUMEN_FREE	docs/concordance/mechanism_nodes.tsv
+C	RELAY_REDUNDANT	mechanism_node	Redundant relay\nistate 0.40			1	hand_set_free; box_kind=alias	X_INTERFACE_REDUNDANT_RELAY	docs/concordance/mechanism_nodes.tsv
+C	X_MECH_ECM	mechanism_node	X_MECHANICAL_\nPERMISSIVE_ECM			1	literature_derived; box_kind=alias	X_MECHANICAL_PERMISSIVE_ECM	docs/concordance/mechanism_nodes.tsv
+C	RECEPTIVE_CLASS	mechanism_node	E_RECEPTIVE_SURFACE\n= OUT_EPITHELIAL_RECEPTIVE			2	composite_output; box_kind=alias	E_RECEPTIVE_SURFACE;OUT_EPITHELIAL_RECEPTIVE	docs/concordance/mechanism_nodes.tsv
+C	X_ANTIADH_ROUTE	mechanism_node	X_ANTIADHESIVE_\nROUTE			1	literature_derived; box_kind=alias	X_ANTIADHESIVE_ROUTE	docs/concordance/mechanism_nodes.tsv
+C	X_ROUTE_SPP1	mechanism_node	X_ADHESION_\nROUTE_SPP1			1	literature_derived; box_kind=alias	X_ADHESION_ROUTE_SPP1	docs/concordance/mechanism_nodes.tsv
+C	X_ROUTE_REDUNDANT	mechanism_node	X_ADHESION_ROUTE_\nREDUNDANT			1	literature_derived; box_kind=alias	X_ADHESION_ROUTE_REDUNDANT	docs/concordance/mechanism_nodes.tsv
+C	OUT_COMPETENCE	mechanism_node	OUT_MATERNAL_\nADHESION_COMPETENCE			1	composite_output; box_kind=alias	OUT_MATERNAL_ADHESION_COMPETENCE	docs/concordance/mechanism_nodes.tsv
+C	OUT_ADHESION	mechanism_node	OUT_STABLE_\nADHESION			1	composite_output; box_kind=alias	OUT_STABLE_ADHESION	docs/concordance/mechanism_nodes.tsv
+C	IN_PROGESTIN->PGR_CLASS	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	IN_MIFEPRISTONE->PGR_CLASS	mechanism_edge	inhibition				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	IN_E2->SECRETORY_CLASS	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	PGR_CLASS->SECRETORY_CLASS	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	PGR_CLASS->DECIDUAL_CLASS	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	IN_cAMP->DECIDUAL_CLASS	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	PGR_CLASS->S_HAND2	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	SECRETORY_CLASS->LIF_CLASS	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	SECRETORY_CLASS->ANTIADH_CLASS	mechanism_edge	inhibition				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	SECRETORY_CLASS->X_SPP1_LUMEN_FREE	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	DECIDUAL_CLASS->X_SPP1_LUMEN_FREE	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	DECIDUAL_CLASS->X_MECH_ECM	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	LIF_CLASS->RECEPTIVE_CLASS	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	SECRETORY_CLASS->RECEPTIVE_CLASS	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	ANTIADH_CLASS->X_ANTIADH_ROUTE	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	RECEPTIVE_CLASS->X_ROUTE_SPP1	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	X_SPP1_LUMEN_FREE->X_ROUTE_SPP1	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	RELAY_SPP1->X_ROUTE_SPP1	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	RECEPTIVE_CLASS->X_ROUTE_REDUNDANT	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	RELAY_REDUNDANT->X_ROUTE_REDUNDANT	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	X_ROUTE_SPP1->OUT_COMPETENCE	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	X_ROUTE_REDUNDANT->OUT_COMPETENCE	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	RECEPTIVE_CLASS->OUT_COMPETENCE	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	DECIDUAL_CLASS->OUT_COMPETENCE	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	X_MECH_ECM->OUT_COMPETENCE	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	X_ANTIADH_ROUTE->OUT_COMPETENCE	mechanism_edge	never_binding				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	OUT_COMPETENCE->OUT_ADHESION	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	IN_EMBRYO->OUT_ADHESION	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	IN_cAMP->PGR_CLASS	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	LIF_CLASS->SECRETORY_CLASS	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	X_SPP1_LUMEN_FREE->RECEPTIVE_CLASS	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	SECRETORY_CLASS->X_ROUTE_SPP1	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	SECRETORY_CLASS->X_ROUTE_REDUNDANT	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	LIF_CLASS->X_ROUTE_REDUNDANT	mechanism_edge	activation				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+C	ANTIADH_CLASS->RECEPTIVE_CLASS	mechanism_edge	never_binding				dependency		models/superset/adoc-literature-superset-v0.4.0/network.bnd
+D	calibration_circular_agreement	curated_row_count	4			60 rows total	matrix row		docs/concordance/concordance_table.tsv
+D	directional_agreement	curated_row_count	3			60 rows total	matrix row		docs/concordance/concordance_table.tsv
+D	disagreement	curated_row_count	1			60 rows total	matrix row		docs/concordance/concordance_table.tsv
+D	not_assessable_with_current_data	curated_row_count	15			60 rows total	matrix row		docs/concordance/concordance_table.tsv
+D	not_expressible_by_model_class	curated_row_count	36			60 rows total	matrix row		docs/concordance/concordance_table.tsv
+D	partial_agreement	curated_row_count	1			60 rows total	matrix row		docs/concordance/concordance_table.tsv

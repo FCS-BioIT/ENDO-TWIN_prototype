@@ -1,0 +1,163 @@
+schema_version: "1.0"
+independent_units:
+  sc_rna_seq_primary: donor
+  adhesion_assay_primary: embryo_challenge_observation
+  # NOT "pending final mapping" any more: the collaborator confirmed on
+  # 2026-07-29 that a chip is not one independent patient, that chips can share
+  # patient sources, and that the column-to-chip mapping for IGFBP-1 and PRL is
+  # lost and unrecoverable. The independent biological unit for these assays is
+  # therefore not identifiable at all -- it is not merely unmapped. See
+  # config/adoc_chip_donor_provenance.tsv and the
+  # biological_independence_contract block of
+  # config/secreted_protein_contract.yaml (SOFIA-COMM-005).
+  outlet_assays_primary: not_identifiable_chip_is_not_an_independent_patient
+source_artifacts:
+  - relative_path: "data/combined-dataset-patient-integration.rds"
+    sha256: "ceb88fe67eb0cc4bdfd1cbbf7d87e45cc19d2ad95e438d01a63100489c913462"
+    role: "intermediate_integrated_scRNA_object"
+    audited_state: "schema_audited"
+    known_fields:
+      - donor
+      - condition
+      - barcode
+    unresolved:
+      - "final manuscript cell labels are not present in the local object"
+  - relative_path: "data/proteinas secretadas ADOC.xlsx"
+    sha256: "e60f73c45746b7e1bde46f9d41fb8e55885fcbf33802ef2f4427f0700e161192"
+    role: "secreted_protein_measurements"
+    audited_state: "sheet_structure_audited"
+    sheets:
+      - name: "PAEP"
+      - name: "IGFBP-1"
+      - name: "PRL "
+    unresolved:
+      - "donor identity per chip is unknown; only pairwise relations are known, and the column-to-chip mapping for IGFBP-1 and PRL is lost (see config/adoc_chip_donor_provenance.tsv)"
+      - "which outlet the PAEP sheet was sampled from -- now the ONLY unverified outlet assignment (the PRL half was answered by SOFIA-COMM-006: the whole sheet is BOTTOM)"
+      - "dilution factor and assay detection limits"
+      - "whether day-6 samples were collected for all five IGFBP-1 chips"
+    resolved_2026_07_29:
+      - "units are pg/mL (SOFIA-COMM-001)"
+      - "a stored zero is a measured non-detect, not a missing or censored value (SOFIA-COMM-002)"
+      - "TOP = apical/epithelial, BOTTOM = basal/stromal, and the IGFBP-1 'Day 7' label is day 6 (SOFIA-COMM-003)"
+      - "protocol day anchoring and the true condition E2 + MPA + cAMP + XAV939 (SOFIA-COMM-004)"
+      - "replicate semantics: chips are not independent biological replicates (SOFIA-COMM-005)"
+      - "PRL was measured from the BOTTOM outlet: all six columns are basal/stromal and no apical PRL series exists (SOFIA-COMM-006). This constrains rather than licenses -- see the count mismatch against the 3 named chip families in LOST-002"
+  - relative_path: "data/secreción proteinas ADOC anotaciones.xlsx"
+    sha256: "400e291b773d95eba30e288be4d18d9ad530df4d2f2ea0f16ee13146e57e7481"
+    size_bytes: 12697
+    role: "secreted_protein_annotation_metadata"
+    audited_state: "annotation_legends_extracted_donor_structure_partial"
+    received_on: "2026-07-29"
+    # LOCAL-ONLY: gitignored, manifested anyway. See local_only_verification.
+    committed_to_git: false
+    excluded_from_external_bundle: true
+    # NOT an independent measurement. Every numeric cell is byte-identical to
+    # data/proteinas secretadas ADOC.xlsx (verified: 10 PAEP, 30 IGFBP-1,
+    # 18 PRL). This file may supply ANNOTATION only, never a value.
+    canonical_measurement_source: false
+    measurement_values_identical_to: "data/proteinas secretadas ADOC.xlsx"
+    annotates: "data/proteinas secretadas ADOC.xlsx"
+    sheets:
+      - name: "PAEP"
+        data_block: "B17:F19"
+      - name: "IGFBP-1"
+        data_block: "B26:K29"
+      - name: "PRL"
+        data_block: "B22:G24"
+    # Why cell references are NOT interchangeable between the two workbooks.
+    structural_differences_from_measurement_workbook:
+      - "third sheet is named 'PRL' with NO trailing space; the measurement workbook stores 'PRL ' (the trailing space is literal there). Anything keyed on sheet name must not assume one form."
+      - "PAEP is column-compacted: 5 headers at B17:F17. The measurement workbook has 7 at B2:H2 including S2 and S1, whose data cells are styled but valueless. A naive positional comparison of the two PAEP blocks yields 8 mismatches; keyed by chip label it yields 0."
+      - "data blocks are row-offset: PAEP 2:4 -> 17:19; IGFBP-1 2:5 -> 26:29; PRL 3:5 -> 22:24."
+      - "no xl/externalLinks/ part: the two cached ELISA standard curves exist only in the measurement workbook."
+    unresolved:
+      - "collected volume 1 mL and flow rate 30 uL/h are mutually inconsistent with the stated windows: 1000 uL / 30 uL/h = 33.3 h, neither 48 h nor 96 h. No secretion rate may be derived; the collection regime is unrecorded."
+      - "the day-3/day-6 legends say 'progesterona y estradiol' and omit cAMP and XAV939, contradicting SOFIA-COMM-004. Treated as loose shorthand, NOT as a correction; unratified."
+      - "day-0 collection window: the legend says 'medio de 48 h o 96 h' -- a disjunction, unresolved."
+      - "the zero legend is on the IGFBP-1 sheet only; PAEP and PRL zeros have no file-backed note."
+      - "the zero legend says which number was entered, not that an absorbance read exists, so SOFIA-COMM-002's interpolation clause stays collaborator-only."
+      - "the four IGFBP-1 day-6 paired zeros are not addressed; the dropout question stays open."
+      - "PAEP!I8 holds a DATE-FORMATTED value directly under a cell-source code line: Excel appears to have autoformatted a code of the DD/MM form. The value is not transcribed into any committed artifact (a single collection date is a quasi-identifier and adds nothing over the relational day anchors), and the original token is never reconstructed. See ANNO-001 in config/adoc_chip_donor_provenance.tsv."
+      - "PRL still has no TOP/BOTTOM header row; the outlet split stays unverified."
+      - "no detection limit and no dilution factor anywhere; the PAEP 1/69 factor is unexplained."
+  - relative_path: "data/2 Zaragozano et alClean copy.docx"
+    sha256: "d56d52d5965fb56e3a6c66ba315bd05205c81a6518f7a1b7456738c42589d7fb"
+    role: "phase1_manuscript_context"
+    audited_state: "phase1_evidence_extracted"
+# Sources the repository was once TOLD about but did not hold. RETAINED AFTER
+# RESOLUTION rather than deleted, following the "Resolved -- full text supplied,
+# no longer blocking" pattern in docs/paywalled_papers_needed.md. The audit
+# trail is the point: five evidence records (SOFIA-COMM-001..005) were created
+# while this file was absent and were therefore file-less by construction, and
+# that must stay visible now that the file exists.
+previously_declared_unavailable_artifacts:
+  - referenced_name: "secreción proteinas ADOC anotaciones.xlsx"
+    referenced_by: "user request, 2026-07-29"
+    expected_role: "annotation metadata for data/proteinas secretadas ADOC.xlsx"
+    availability: received_2026_07_29
+    resolved_to: "data/secreción proteinas ADOC anotaciones.xlsx"
+    availability_history:
+      - state: never_received
+        asserted_on: "2026-07-29"
+        sha256: ""
+        sha256_basis: "the file was not available to this repository, so no hash could exist"
+      - state: received
+        asserted_on: "2026-07-29"
+        sha256: "400e291b773d95eba30e288be4d18d9ad530df4d2f2ea0f16ee13146e57e7481"
+        sha256_basis: "computed on receipt; see config/data_manifest.tsv"
+    # These five were the sole support for units, zero semantics, compartment
+    # semantics, day anchoring and replicate structure while no file existed.
+    # Each is now corroborated by a SOFIA-ANNO-* record naming a specific cell,
+    # but none of them BECAME file-sourced: they were built on the
+    # collaborator's word, and that stays historically true.
+    evidence_records_created_while_file_less:
+      - SOFIA-COMM-001
+      - SOFIA-COMM-002
+      - SOFIA-COMM-003
+      - SOFIA-COMM-004
+      - SOFIA-COMM-005
+    reverification_required_on_arrival: true
+    reverification_performed_on: "2026-07-29"
+    reverification_outcome: "corroborated_with_one_unratified_shorthand_conflict"
+    reverification_path: "docs/collaborator_metadata_2026-07-29.md#re-verification-path"
+
+# Committed artifacts containing rows that cannot be verified without a source
+# file this repository deliberately does not carry. Each such row names its
+# dependency in `verification_requires_source_file`; the sha256 below pins what
+# "having the file" means, so a reader who obtains it verifies the same bytes.
+#
+# The trade-off, stated so it is auditable rather than assumed: third-party
+# verifiability of the donor-structure rows is traded for the privacy of the
+# lab's cell-source codes. This is acceptable ONLY because every claim those
+# rows touch is a PROHIBITION -- forbidden_claims, replicate ceilings, donor_id
+# staying empty. An unverifiable ceiling errs toward claiming less. An
+# unverifiable row that SUPPORTED a model claim would not be acceptable on these
+# terms, and none does.
+local_only_verification:
+  - source: "data/secreción proteinas ADOC anotaciones.xlsx"
+    sha256: "400e291b773d95eba30e288be4d18d9ad530df4d2f2ea0f16ee13146e57e7481"
+    dependent_artifacts:
+      - "config/adoc_chip_donor_provenance.tsv"
+      - "config/adoc_outlet_conditions.tsv"
+    reason: "the source carries the lab's own cell-source codes and a collection date; only opaque repository-local labels are committed, and no date is transcribed"
+    obtain_from: "Sofía Zaragozano / FCS-BioIT internal"
+donor_label_scheme:
+  labels_are: repository_local_opaque
+  crosswalk_committed: false
+  rule: "Never commit a lab cell-source or sample code. Never reconstruct the crosswalk in this repository -- not in tables, comments, notes, commit messages, or test fixtures."
+missingness_states:
+  # Kept aligned with controlled_vocabularies.measurement_state in
+  # config/secreted_protein_contract.yaml; a test asserts the two agree.
+  # no_detectable_secretion is a MEASUREMENT (absorbance read, interpolated to
+  # nothing) and must never be conflated with below_detection or numeric_zero.
+  - numeric_zero
+  - no_detectable_secretion
+  - blank
+  - below_detection
+  - missing
+  - excluded
+rules:
+  - "Never overwrite or normalize away raw source values."
+  - "Do not use workbook values for quantitative calibration until units and sample mapping are explicit."
+  - "Do not use the intermediate RDS as if it were the final paper analysis object."
+  - "Never treat an ADOC chip as an independent biological replicate, and never invent the lost IGFBP-1/PRL column-to-chip or column-to-patient mapping."

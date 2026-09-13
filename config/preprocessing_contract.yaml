@@ -1,0 +1,46 @@
+schema_version: "1.0"
+status: "provisional_phase0"
+source_to_model_policy:
+  raw_values_separate_from_transformed: true
+  qc_flags_separate_from_model_inputs: true
+  donor_is_independent_unit_for_sc_rna: true
+  blanks_not_equal_zero: true
+  below_detection_not_equal_zero: true
+operations:
+  - name: source_manifest_validation
+    input: "config/data_manifest.tsv"
+    output: "immutable-source validation JSON in command log"
+    deterministic: true
+  - name: workbook_sheet_audit
+    input: "data/proteinas secretadas ADOC.xlsx"
+    output: "sheet structure and unresolved-unit notes"
+    deterministic: true
+  - name: evidence_role_freeze
+    input:
+      - "context/evidence-register.tsv"
+      - "context/phase1-readouts.tsv"
+    output: "config/evidence_roles.yaml"
+    deterministic: true
+mapping_rules:
+  - field: "PAEP"
+    target: "epithelial secretory calibration readout"
+    allowed_mapping_layers:
+      - summary_readout
+    blocked_layers:
+      - direct_topology
+      - direct_rate_calibration_without_bridge
+  - field: "PRL"
+    target: "stromal decidualization calibration readout"
+    allowed_mapping_layers:
+      - summary_readout
+    blocked_layers:
+      - direct_topology
+  - field: "IGFBP-1"
+    target: "stromal decidualization calibration readout"
+    allowed_mapping_layers:
+      - summary_readout
+    blocked_layers:
+      - direct_topology
+open_issues:
+  - "Workbook donor/sample/channel/unit/replicate mappings remain incomplete."
+  - "No donor-specific personalization is permitted until the reference and mapping contract are fully specified."

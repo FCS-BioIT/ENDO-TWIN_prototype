@@ -1,0 +1,241 @@
+{
+  "schema_version": "1.0",
+  "plan_id": "adoc_four_arm_plan",
+  "plan_label": "Practical four-arm ADOC plan",
+  "variant": "maternal_phase_only",
+  "summary": {
+    "model_version": "adoc-literature-superset-v0.4.0",
+    "plan_id": "adoc_four_arm_plan",
+    "named_nodes": 59,
+    "global_effective_states": 35,
+    "design_effective_states": 17,
+    "planned_conditions": 4,
+    "planned_cfgs": 4,
+    "largest_design_class": 22,
+    "design_classes_larger_than_one": 6,
+    "planned_not_recorded": [
+      "hormone_treated_mifepristone",
+      "hormone_treated_anti_spp1"
+    ],
+    "inputs_isolated_without_a_shared_readout": [
+      "IN_ANTI_SPP1",
+      "IN_MIFEPRISTONE"
+    ],
+    "recorded_not_planned": [
+      "adhesion_challenge_basal",
+      "adhesion_challenge_hormone_treated",
+      "adhesion_challenge_hormone_treated_mifepristone",
+      "e2_primed_maternal"
+    ],
+    "categories": {
+      "interface_placeholder": 4,
+      "latent_biological": 1,
+      "structural_alias": 32,
+      "design_alias": 16,
+      "resolved_singleton": 6
+    },
+    "candidates_evaluated": 56,
+    "best_fifth_arm_gain": 5,
+    "best_fifth_arms": [
+      "hormone_treated_maternal__IN_HAND2_LOSS",
+      "hormone_treated_anti_spp1__IN_HAND2_LOSS"
+    ],
+    "measured_nodes": [
+      "E_PAEP",
+      "OUT_STABLE_ADHESION",
+      "S_IGFBP1"
+    ],
+    "candidates_separating_two_measured_nodes": 4,
+    "best_gain_among_arms_separating_measured_nodes": 3,
+    "arms_separating_measured_nodes": [
+      "dropout_IN_E2__hormone_treated_anti_spp1",
+      "dropout_IN_E2__hormone_treated_maternal"
+    ]
+  },
+  "claim_boundaries": [
+    "Same colour means experimentally indistinguishable under the declared plan, never biologically equivalent.",
+    "A design-equivalence class is a property of the arms, not of the biology; a measured divergence inside a class falsifies the aliasing.",
+    "No simulation, horizon, rate or fitted parameter enters any class: every partition is exhaustive enumeration over the model's free variables.",
+    "The plan is declared in config/planned_design.yaml, not recorded evidence; arms with no recorded observation are listed as planned_not_recorded.",
+    "Latent placeholders are unknown in every arm. They are not resolved and they are not aliased."
+  ],
+  "class_colors": {
+    "E_ANXA2_ACTIN": {
+      "fill": "#ADD2E6",
+      "border": "#0072B2",
+      "size": 22,
+      "members": [
+        "E_ANXA2_ACTIN",
+        "E_DAG1_CLEAVED",
+        "E_HBEGF",
+        "E_IHH",
+        "E_ITGAVB3_5",
+        "E_MUC1_SLEX",
+        "E_PAEP",
+        "E_PC6",
+        "E_PGR",
+        "E_SECRETORY_STATE",
+        "E_SPP1_EXPR",
+        "OUT_STROMAL_DECIDUALIZED",
+        "S_BMP2",
+        "S_DECIDUALIZED",
+        "S_HAND2",
+        "S_IGFBP1",
+        "S_NR2F2",
+        "S_PGR",
+        "S_PRL",
+        "S_SPP1",
+        "S_TAZ_ECM",
+        "X_MECHANICAL_PERMISSIVE_ECM"
+      ]
+    },
+    "E_CDH1_APICAL": {
+      "fill": "#F2CBAD",
+      "border": "#D55E00",
+      "size": 10,
+      "members": [
+        "E_CDH1_APICAL",
+        "IN_EMBRYO_CONDITIONED_SIGNAL",
+        "IN_EMBRYO_CONTACT",
+        "IN_EMBRYO_PRESENT",
+        "IN_ER_STRESS_EXCESS",
+        "IN_HAND2_LOSS",
+        "IN_HCG",
+        "IN_HIGH_ECM_STIFFNESS",
+        "IN_TROPHECTODERM_COMPETENT",
+        "OUT_STABLE_ADHESION"
+      ]
+    },
+    "E_CD98_CD9": {
+      "fill": "#ADE0D2",
+      "border": "#009E73",
+      "size": 5,
+      "members": [
+        "E_CD98_CD9",
+        "E_GP130_STAT3",
+        "E_LIF",
+        "E_RECEPTIVE_SURFACE",
+        "OUT_EPITHELIAL_RECEPTIVE"
+      ]
+    },
+    "IN_E2": {
+      "fill": "#EFD4E3",
+      "border": "#CC79A7",
+      "size": 5,
+      "members": [
+        "IN_E2",
+        "IN_PROGESTIN",
+        "IN_XAV939",
+        "IN_cAMP",
+        "S_PKA"
+      ]
+    },
+    "E_DAG1_FULL": {
+      "fill": "#F7E0AD",
+      "border": "#E69F00",
+      "size": 4,
+      "members": [
+        "E_DAG1_FULL",
+        "E_MUC1_BARRIER",
+        "E_PODXL",
+        "S_FGF_MITOGENIC"
+      ]
+    },
+    "E_ESTROGENIC_PROLIFERATION": {
+      "fill": "#C9E7F8",
+      "border": "#56B4E9",
+      "size": 2,
+      "members": [
+        "E_ESTROGENIC_PROLIFERATION",
+        "IN_MIFEPRISTONE"
+      ]
+    }
+  },
+  "figures": [
+    {
+      "path": "docs/assets/adoc_design_alias_adoc-literature-superset-v0.4.0_maternal_phase_only_A.svg",
+      "sha256": "1e7541e8f2dd988c6ecf9f28e7c37d9e1b455ba787741058af0a7121a2f55554"
+    },
+    {
+      "path": "docs/assets/adoc_design_alias_adoc-literature-superset-v0.4.0_maternal_phase_only_A.pdf",
+      "sha256": "3360d7097f752645aab76e2ac5662fc5c0dc6576a09a2c4c29ce9fde8fb951bd"
+    },
+    {
+      "path": "docs/assets/adoc_design_alias_adoc-literature-superset-v0.4.0_maternal_phase_only_A.png",
+      "sha256": "60fd13cc4d0c2bcbd67bfb822c19e20fe7ebfb7f7256ae86685c5dbe2987e8ae"
+    },
+    {
+      "path": "docs/assets/adoc_design_alias_adoc-literature-superset-v0.4.0_maternal_phase_only_B.svg",
+      "sha256": "fabc71a55f16a7ad43a205c0c54dd21cda2b2b991fc14a59d3ef92574466c480"
+    },
+    {
+      "path": "docs/assets/adoc_design_alias_adoc-literature-superset-v0.4.0_maternal_phase_only_B.pdf",
+      "sha256": "b24fb4ecb1f62b775e7edcc307983856077326efd92cc90c6776abd808435493"
+    },
+    {
+      "path": "docs/assets/adoc_design_alias_adoc-literature-superset-v0.4.0_maternal_phase_only_B.png",
+      "sha256": "05273a9964309dadc3bc8c091b2875286a8ac2dc7c5cd30356d6a48057793b5b"
+    }
+  ],
+  "tables": [
+    {
+      "path": "docs/design_alias/node_design_classes_maternal_phase_only.tsv",
+      "sha256": "03d51a0b397df1d040067f2d83fa450a1a10554c53d6fdbe4fb2c3a7e7882f5e",
+      "rows": "59"
+    },
+    {
+      "path": "docs/design_alias/planned_arms_maternal_phase_only.tsv",
+      "sha256": "72d9227ff0f0edaa3fd1bb4de0c0c4851a647eedd1e77b90b6c2b775965b49ed",
+      "rows": "4"
+    },
+    {
+      "path": "docs/design_alias/candidate_fifth_arms_maternal_phase_only.tsv",
+      "sha256": "d9b27f305a42000cf095ca1f0c48649194aaf26582d26a52aefff4b5347692d5",
+      "rows": "56"
+    }
+  ],
+  "provenance": {
+    "model_version": "adoc-literature-superset-v0.4.0",
+    "git_commit": "bef8b7590b3e988acaef4d2cc652add836deab85",
+    "git_tree_dirty": true,
+    "source_commit": "bef8b75-dirty",
+    "python_version": "3.12.13",
+    "matplotlib_version": "3.11.1",
+    "implementation_files": [
+      "src/dt_adoc/reporting/design_alias.py",
+      "src/dt_adoc/reporting/design_alias_figure.py",
+      "src/dt_adoc/reporting/identifiability.py",
+      "src/dt_adoc/reporting/structure.py",
+      "src/dt_adoc/reporting/dynamics.py"
+    ],
+    "implementation_digest": "81f50400580cbf6bf13a6712a15d7edd90fff8325d779da436c5ef9bbe7a3732",
+    "network_bnd_sha256": "09e3b26aeb4e2f3b0339ef852764f5de4b922984df0b0a1014c91b4a17a36637",
+    "baseline_cfg_sha256": "4d42bdcbcfcceaedaafeeb96fe76400700175c969cec15bff9e02f360ff4f41c",
+    "node_dictionary_sha256": "a566d2abba87f8b019857a33b34a03d63ba5310aeb285f59412aaf91de516828",
+    "planned_design_yaml_sha256": "007b1a287f928e48746c1005a6d1bdc89bccc31d23dcd25ae89c960792d284eb",
+    "visualization_yaml_sha256": "8c1dcb6d6a7e0a4bba27aed956851f10d6f9f0d3cac98c9ade1f90de3ee63beb",
+    "condition_cfg_sha256": {
+      "adhesion_challenge_basal.cfg": "1cde2d12c5fb95b3680eb10d7a7160002b79f339af16d4f64b15fe98e67d27fa",
+      "adhesion_challenge_excess_er_stress.cfg": "21a7f0570ed0b73cadba710cb4a778ad3552a07e06102ce28cce931e7369f1f1",
+      "adhesion_challenge_high_ecm_stiffness.cfg": "65a5d9f237baa51be310343b410d1a76f499832a1495bb8785ff0c01b19f1b4c",
+      "adhesion_challenge_hormone_treated.cfg": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+      "adhesion_challenge_hormone_treated_anti_spp1.cfg": "f1a307764f8f06a69941f5d637ccecb4bb18992481b50784b7f3615617a2068a",
+      "adhesion_challenge_hormone_treated_hand2_loss.cfg": "610c2f675656e56e833ee3e98da5f72fe41d9574b3eb03437b6c4a5b81ad5a7a",
+      "adhesion_challenge_hormone_treated_mifepristone.cfg": "4881de9c5a5a89ed81aca919b38cb4a546425cee28b74a5cb9f3c5ff399e6162",
+      "adhesion_challenge_washout.cfg": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+      "basal_maternal.cfg": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+      "e2_primed_maternal.cfg": "93006ce97fa5244594593d3f500f1c8d9699ae547030608079856f0d1f190bbe",
+      "embryo_absent.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "embryo_incompetent.cfg": "77a4afb84e58268c2af3fab9e636beb678939b8c89a0ec8432716b5f071ff64f",
+      "excess_er_stress.cfg": "e3bbc93b2e48c732634c0fbc5cf2f7d634a03f8a93333ccb58182679d12d5c62",
+      "high_ecm_stiffness.cfg": "f0ca6146c32624e73052a995c0f54f3d7fe56b6865cb95b81cac6566ffa483c0",
+      "hormone_treated.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "hormone_treated_anti_spp1.cfg": "d0e7e3c5d484e60ee58ea4961a9bef7e6084ab80257dfe177cd80c456cdc725d",
+      "hormone_treated_hand2_loss.cfg": "30b949013ab6b195cbfbc6aff8efcec4e4edda6df319b49bdbb2585992e7ad1f",
+      "hormone_treated_maternal.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "hormone_treated_mifepristone.cfg": "91ebe467a4adaba0f35b76943c429f134bcc36e8d15f38daebf3aacfb94f76bd",
+      "untreated.cfg": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+      "washout.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9"
+    }
+  }
+}

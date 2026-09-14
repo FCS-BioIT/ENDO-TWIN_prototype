@@ -1,0 +1,5 @@
+arm_id	label	condition_cfgs	has_recorded_observation	observation_sources	interpretation
+untreated_control	Untreated / control	maternal:basal_maternal;challenge:adhesion_challenge_basal	true	config/calibration.yaml adhesion_objective;config/observation_model_map.tsv OM-002	
+hormone_treated	Hormone treatment	maternal:hormone_treated_maternal;challenge:adhesion_challenge_hormone_treated	true	config/calibration.yaml adhesion_objective;config/observation_model_map.tsv OM-001;config/observation_model_map.tsv OM-002	
+hormone_treated_mifepristone	Hormone treatment + mifepristone	maternal:hormone_treated_mifepristone;challenge:adhesion_challenge_hormone_treated_mifepristone	true	config/calibration.yaml adhesion_objective	
+hormone_treated_anti_spp1	Anti-SPP1	maternal:hormone_treated_anti_spp1;challenge:adhesion_challenge_hormone_treated_anti_spp1	false	(none)	anti-SPP1 on the hormone-treated background, per config/perturbations.yaml anti_spp1_after_ht

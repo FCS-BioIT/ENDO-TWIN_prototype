@@ -1,0 +1,10 @@
+staging_file	canonical_target	action	when	blocking_review
+deep_research_adhesion_model_2026-09-11.yaml	context/literature/reviews/deep_research_adhesion_model_2026-09-11.yaml	copy	now	None; provenance only.
+references.tsv	context/literature/references.tsv	deduplicate_then_append	after citation verification	Deduplicate by DOI/PMID and preserve existing REF ids when source already exists.
+candidate_nodes.tsv	context/literature/candidate-nodes.tsv	review_then_merge	after reference mapping	Check node collisions, compartment, direct/inferred status and whether current v0.4 already contains equivalent biology.
+candidate_edges.tsv	context/literature/candidate-edges.tsv	review_then_merge	after node review	Confirm sign, species/context and whether edge is direct versus compressed pathway.
+mechanisms.tsv	context/literature/mechanisms.tsv	review_then_merge	after node/edge review	Map DRMOD ids to canonical MOD ids or create new ids only when genuinely distinct.
+edge_evidence.tsv	models/superset/adoc-literature-superset-v0.5.0/edge_evidence.tsv	merge_only_if_promoted	after v0.5 design gate	Do not write into v0.4.0; promoted edges require canonical evidence IDs.
+rule_variants.tsv	models/superset/adoc-literature-superset-v0.5.0/rule_variants.tsv	merge_only_if_promoted	during v0.5 ensemble design	Compile/test every expression and retain competing variants where evidence is unresolved.
+unresolved_mechanisms.tsv	models/superset/adoc-literature-superset-v0.5.0/unresolved_mechanisms.tsv	merge_or_map_to_gap_register	during v0.5 design	Do not promote unresolved rows into executable rules.
+drug_target_catalog.tsv	models/superset/adoc-literature-superset-v0.5.0/drug_target_catalog.tsv	review_then_merge	after target-engagement design	Add potency/exposure only from curated pharmacology; no efficacy claims from topology alone.

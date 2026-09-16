@@ -1,0 +1,21 @@
+edge_id	source	target	sign	mechanism	refs	confidence	tier	notes
+DR20260911-EDGE-001	S_BMP2	S_BMP_SMAD	activation	ligand_to_pathway	DRREF-001;DRREF-009	9	core_extension	High-confidence human decidualization abstraction.
+DR20260911-EDGE-002	S_BMP_SMAD	S_WNT4_CTNNB1	activation	pathway_to_pathway	DRREF-001	9	core_extension	Human HESC mechanistic evidence places WNT4 downstream of BMP2/BMP signaling.
+DR20260911-EDGE-003	S_WNT4_CTNNB1	S_FOXO1	activation	pathway_to_transcription_factor	DRREF-001	8	core_extension	FOXO1 reported as common downstream mediator; exact Boolean necessity remains a variant.
+DR20260911-EDGE-004	S_PKA	S_FOXO1	activation	pathway_to_transcription_factor	DRREF-002	9	core_extension	FOXO1 is an early PKA-regulated decidual factor in human stromal cells.
+DR20260911-EDGE-005	S_FOXO1	S_DECIDUALIZED	activation	transcription_factor_to_state	DRREF-002	9	core_extension	Human functional evidence supports FOXO1 as a core decidual regulator.
+DR20260911-EDGE-006	S_BMP_SMAD	S_DECIDUALIZED	activation	pathway_to_state	DRREF-001;DRREF-009	9	core_extension	BMP/SMAD activity supports decidualization and rescue in human models.
+DR20260911-EDGE-007	S_DECIDUALIZED	X_IL11	activation	state_to_ligand	DRREF-003	6	uncertain_variant	Useful bounded first approximation, but exact maternal source/timing in ADOC needs verification.
+DR20260911-EDGE-008	X_IL11	E_GP130_STAT3	activation	paracrine_ligand_to_pathway	DRREF-003	8	core_extension	Human epithelial adhesion is STAT3-dependent under IL11 stimulation.
+DR20260911-EDGE-009	X_IL11	E_ITGA2B1	activation	ligand_to_effector	DRREF-003	8	core_extension	IL11 increased epithelial integrin alpha2 expression/protein.
+DR20260911-EDGE-010	E_GP130_STAT3	E_ITGA2B1	activation	pathway_to_effector	DRREF-003	8	core_extension	STAT3 dependence supports cytokine-to-integrin route; exact directness is compressed.
+DR20260911-EDGE-011	E_ITGA2B1	E_RECEPTIVE_SURFACE	activation	receptor_to_state	DRREF-003	7	core_extension	Prefer as adhesion-rate contributor rather than mandatory gate.
+DR20260911-EDGE-012	E_SECRETORY_STATE	E_SOX17	activation	state_to_transcription_factor	DRREF-004	8	core_extension	Combined estrogen/progesterone increases SOX17 in human epithelial cells.
+DR20260911-EDGE-013	E_SOX17	E_RECEPTIVE_SURFACE	activation	transcription_factor_to_state	DRREF-004	8	core_extension	Functional human perturbation supports a positive adhesion contribution.
+DR20260911-EDGE-014	E_GLYCOSYLATION_PROGRAM	E_SLEX_SURFACE	activation	glycosylation_to_surface	DRREF-005;DRREF-006	9	core_extension	Mechanistically identifies sLeX as the output of FUT3/ST3GAL3-like programs.
+DR20260911-EDGE-015	E_SLEX_SURFACE	E_RECEPTIVE_SURFACE	activation	surface_to_state	DRREF-005;DRREF-006	8	core_extension	sLeX blockade/perturbation reduces adhesive capacity.
+DR20260911-EDGE-016	S_DECIDUALIZED	X_ECM_FN1_COL4	activation	state_to_matrix	DRREF-003;DRREF-008	5	uncertain_variant	Biological source rule is plausible but not directly established by these adhesion experiments.
+DR20260911-EDGE-017	X_ECM_FN1_COL4	E_ITGA2B1	activation	matrix_to_receptor_route	DRREF-003;DRREF-008	7	core_extension	Represents availability of collagen-IV/fibronectin substrate for integrin-mediated adhesion.
+DR20260911-EDGE-018	IN_E2	E_ESR1_ACTIVITY	activation	hormone_to_pathway	REF-020	8	expansion	Mechanistic target-engagement abstraction for estrogen-directed compounds.
+DR20260911-EDGE-019	E_ESR1_ACTIVITY	E_SECRETORY_STATE	activation	pathway_to_state	REF-020	6	uncertain_variant	Needed for pharmacological decomposition, but exact secretory integration should be calibrated.
+DR20260911-EDGE-020	E_JAG1_NOTCH3	E_RECEPTIVE_SURFACE	activation	pathway_to_state	DRREF-007	8	expansion	Human JAG1 knockdown reduces trophoblast-spheroid adhesion; upstream activation remains unresolved.

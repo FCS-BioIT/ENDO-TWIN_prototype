@@ -1,0 +1,41 @@
+# Line endings: FREEZE what is committed. Do not renormalize.
+#
+# Settled in U1 of the v0.5 mechanistic-integration plan (T-K). The repository
+# had no .gitattributes and no core.autocrlf, so every blob has been stored
+# exactly as written. Of 133 tracked .tsv files: 61 are CRLF and 72 are LF, and
+# none is mixed. `context/literature/pdf_manifest.tsv` was the one mixed file and
+# was normalised to CRLF on 2026-09-18 by the unit that appended to it, which is
+# what the note below asks a unit with a substantive reason to do.
+#
+# tests/unit/test_line_endings.py is authoritative for those figures, not this
+# comment. An earlier revision of it said 46 CRLF -- the count before the same
+# commit added the 14 CRLF tables under
+# models/superset/adoc-literature-superset-v0.5.0/ -- which left a reader
+# reconciling 46 here against 60 in PINNED_CRLF_BY_DIRECTORY with no way to tell
+# which was current. If the two ever disagree again, the test is right.
+# See docs/v05_line_endings.md for the reasoning.
+#
+# The obvious fix -- `*.tsv text eol=lf` -- is WRONG here and must not be added.
+# Two of the four artifacts pinned to the frozen scRNA evidence root 91f79ed are
+# CRLF (docs/scrna/node_support_evidence.tsv, 1429 lines;
+# docs/scrna/node_rna_interpretability.tsv, 28 lines), as is
+# docs/scrna/node_support_qc.tsv. Declaring eol=lf rewrites those blobs on the
+# next checkout, which silently breaks the digests T-G exists to enforce -- and
+# it does so without appearing in any commit diff, because the change happens at
+# checkout rather than at edit. Provenance is not a formatting preference.
+#
+# `-text` means: never convert, in either direction, in any working tree. Bytes
+# in the index are the bytes on disk. That is what keeps the freeze honest, and
+# it is what tests/unit/test_line_endings.py asserts.
+* -text
+
+# Binary types, declared so git does not attempt textual diffs or merges on
+# them. This changes presentation only; -text above already prevents conversion.
+# data/ is immutable source evidence (AGENTS.md) and is protected here without
+# being modified: one tracked PDF contains byte sequences that a text-mode
+# checkout on another platform could otherwise mangle.
+*.pdf   binary
+*.png   binary
+*.gif   binary
+*.docx  binary
+*.xlsx  binary

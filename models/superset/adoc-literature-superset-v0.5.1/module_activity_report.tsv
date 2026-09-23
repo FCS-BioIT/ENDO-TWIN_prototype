@@ -1,0 +1,14 @@
+model_key	module_id	activity_status	evidence	notes
+adoc_literature_superset_v040	MOD-01	functionally_active	static_structural_classification	Hormone and protocol inputs drive executable epithelial and stromal state transitions.
+adoc_literature_superset_v040	MOD-02	functionally_active	static_structural_classification	Epithelial LIF-LIFR/GP130-STAT3 gate is executable with the optional KLF12 inhibitor kept OFF by default.
+adoc_literature_superset_v040	MOD-03	functionally_active	static_structural_classification	Executable HAND2-FGF-estrogen branch is bounded and can suppress receptivity when context inputs are enabled.
+adoc_literature_superset_v040	MOD-04	functionally_active	static_structural_classification	Anti-adhesive barrier removal remains executable.
+adoc_literature_superset_v040	MOD-05	functionally_active	static_structural_classification	Redundant epithelial adhesive effectors remain executable.
+adoc_literature_superset_v040	MOD-06	functionally_active	static_structural_classification	PC6 and DAG1 processing remain executable.
+adoc_literature_superset_v040	MOD-07	functionally_active	static_structural_classification	Maternal SPP1 and interface routing remain executable.
+adoc_literature_superset_v040	MOD-08	unparameterized	static_structural_classification	Balanced senescence lacks a bounded counter-persistence rule.
+adoc_literature_superset_v040	MOD-09	functionally_active	static_structural_classification	Bounded TAZ-ECM and adverse-mechanics sensitivity remain executable.
+adoc_literature_superset_v040	MOD-10	structurally_disconnected	static_structural_classification	Interface candidate nodes lack bounded upstream rules.
+adoc_literature_superset_v040	MOD-11	contextually_inactive	static_structural_classification	Embryo-conditioned cues remain available but OFF in the required condition suite.
+adoc_literature_superset_v040	MOD-12	spatially_blocked	static_structural_classification	Embryo-side WNT competence execution remains external by contract.
+adoc_literature_superset_v040	MOD-13	functionally_active	static_structural_classification	Only the bounded stiffness and ER-stress sensitivity subset is executable; other fields remain external.

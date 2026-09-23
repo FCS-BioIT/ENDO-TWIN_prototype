@@ -1,0 +1,2176 @@
+{
+  "audited": {
+    "design_alias": {
+      "as_declared": {
+        "candidate_gains": [
+          [
+            "adhesion_challenge_basal__IN_EMBRYO_CONDITIONED_SIGNAL",
+            1,
+            []
+          ],
+          [
+            "adhesion_challenge_basal__IN_ER_STRESS_EXCESS",
+            1,
+            []
+          ],
+          [
+            "adhesion_challenge_basal__IN_HAND2_LOSS",
+            1,
+            []
+          ],
+          [
+            "adhesion_challenge_basal__IN_HCG",
+            1,
+            []
+          ],
+          [
+            "adhesion_challenge_basal__IN_HIGH_ECM_STIFFNESS",
+            1,
+            []
+          ],
+          [
+            "adhesion_challenge_hormone_treated__IN_EMBRYO_CONDITIONED_SIGNAL",
+            1,
+            []
+          ],
+          [
+            "adhesion_challenge_hormone_treated__IN_ER_STRESS_EXCESS",
+            2,
+            []
+          ],
+          [
+            "adhesion_challenge_hormone_treated__IN_HAND2_LOSS",
+            5,
+            []
+          ],
+          [
+            "adhesion_challenge_hormone_treated__IN_HCG",
+            1,
+            []
+          ],
+          [
+            "adhesion_challenge_hormone_treated__IN_HIGH_ECM_STIFFNESS",
+            2,
+            []
+          ],
+          [
+            "adhesion_challenge_hormone_treated_anti_spp1__IN_EMBRYO_CONDITIONED_SIGNAL",
+            1,
+            []
+          ],
+          [
+            "adhesion_challenge_hormone_treated_anti_spp1__IN_ER_STRESS_EXCESS",
+            2,
+            []
+          ],
+          [
+            "adhesion_challenge_hormone_treated_anti_spp1__IN_HAND2_LOSS",
+            5,
+            []
+          ],
+          [
+            "adhesion_challenge_hormone_treated_anti_spp1__IN_HCG",
+            1,
+            []
+          ],
+          [
+            "adhesion_challenge_hormone_treated_anti_spp1__IN_HIGH_ECM_STIFFNESS",
+            2,
+            []
+          ],
+          [
+            "adhesion_challenge_hormone_treated_mifepristone__IN_EMBRYO_CONDITIONED_SIGNAL",
+            1,
+            []
+          ],
+          [
+            "adhesion_challenge_hormone_treated_mifepristone__IN_ER_STRESS_EXCESS",
+            1,
+            []
+          ],
+          [
+            "adhesion_challenge_hormone_treated_mifepristone__IN_HAND2_LOSS",
+            1,
+            []
+          ],
+          [
+            "adhesion_challenge_hormone_treated_mifepristone__IN_HCG",
+            1,
+            []
+          ],
+          [
+            "adhesion_challenge_hormone_treated_mifepristone__IN_HIGH_ECM_STIFFNESS",
+            1,
+            []
+          ],
+          [
+            "basal_maternal__IN_EMBRYO_CONDITIONED_SIGNAL",
+            1,
+            []
+          ],
+          [
+            "basal_maternal__IN_ER_STRESS_EXCESS",
+            1,
+            []
+          ],
+          [
+            "basal_maternal__IN_HAND2_LOSS",
+            1,
+            []
+          ],
+          [
+            "basal_maternal__IN_HCG",
+            1,
+            []
+          ],
+          [
+            "basal_maternal__IN_HIGH_ECM_STIFFNESS",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_E2__adhesion_challenge_hormone_treated",
+            3,
+            [
+              [
+                "E_PAEP",
+                "S_IGFBP1"
+              ]
+            ]
+          ],
+          [
+            "dropout_IN_E2__adhesion_challenge_hormone_treated_anti_spp1",
+            3,
+            [
+              [
+                "E_PAEP",
+                "S_IGFBP1"
+              ]
+            ]
+          ],
+          [
+            "dropout_IN_E2__adhesion_challenge_hormone_treated_mifepristone",
+            2,
+            []
+          ],
+          [
+            "dropout_IN_E2__hormone_treated_anti_spp1",
+            3,
+            [
+              [
+                "E_PAEP",
+                "S_IGFBP1"
+              ]
+            ]
+          ],
+          [
+            "dropout_IN_E2__hormone_treated_maternal",
+            3,
+            [
+              [
+                "E_PAEP",
+                "S_IGFBP1"
+              ]
+            ]
+          ],
+          [
+            "dropout_IN_E2__hormone_treated_mifepristone",
+            2,
+            []
+          ],
+          [
+            "dropout_IN_EMBRYO_CONTACT__adhesion_challenge_basal",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_EMBRYO_CONTACT__adhesion_challenge_hormone_treated",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_EMBRYO_CONTACT__adhesion_challenge_hormone_treated_anti_spp1",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_EMBRYO_CONTACT__adhesion_challenge_hormone_treated_mifepristone",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_EMBRYO_PRESENT__adhesion_challenge_basal",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_EMBRYO_PRESENT__adhesion_challenge_hormone_treated",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_EMBRYO_PRESENT__adhesion_challenge_hormone_treated_anti_spp1",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_EMBRYO_PRESENT__adhesion_challenge_hormone_treated_mifepristone",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_PROGESTIN__adhesion_challenge_hormone_treated",
+            2,
+            []
+          ],
+          [
+            "dropout_IN_PROGESTIN__adhesion_challenge_hormone_treated_anti_spp1",
+            2,
+            []
+          ],
+          [
+            "dropout_IN_PROGESTIN__adhesion_challenge_hormone_treated_mifepristone",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_PROGESTIN__hormone_treated_anti_spp1",
+            2,
+            []
+          ],
+          [
+            "dropout_IN_PROGESTIN__hormone_treated_maternal",
+            2,
+            []
+          ],
+          [
+            "dropout_IN_PROGESTIN__hormone_treated_mifepristone",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_TROPHECTODERM_COMPETENT__adhesion_challenge_basal",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_TROPHECTODERM_COMPETENT__adhesion_challenge_hormone_treated",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_TROPHECTODERM_COMPETENT__adhesion_challenge_hormone_treated_anti_spp1",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_TROPHECTODERM_COMPETENT__adhesion_challenge_hormone_treated_mifepristone",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_XAV939__adhesion_challenge_hormone_treated",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_XAV939__adhesion_challenge_hormone_treated_anti_spp1",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_XAV939__adhesion_challenge_hormone_treated_mifepristone",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_XAV939__hormone_treated_anti_spp1",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_XAV939__hormone_treated_maternal",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_XAV939__hormone_treated_mifepristone",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_cAMP__adhesion_challenge_hormone_treated",
+            2,
+            [
+              [
+                "E_PAEP",
+                "S_IGFBP1"
+              ]
+            ]
+          ],
+          [
+            "dropout_IN_cAMP__adhesion_challenge_hormone_treated_anti_spp1",
+            2,
+            [
+              [
+                "E_PAEP",
+                "S_IGFBP1"
+              ]
+            ]
+          ],
+          [
+            "dropout_IN_cAMP__adhesion_challenge_hormone_treated_mifepristone",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_cAMP__hormone_treated_anti_spp1",
+            2,
+            [
+              [
+                "E_PAEP",
+                "S_IGFBP1"
+              ]
+            ]
+          ],
+          [
+            "dropout_IN_cAMP__hormone_treated_maternal",
+            2,
+            [
+              [
+                "E_PAEP",
+                "S_IGFBP1"
+              ]
+            ]
+          ],
+          [
+            "dropout_IN_cAMP__hormone_treated_mifepristone",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_anti_spp1__IN_EMBRYO_CONDITIONED_SIGNAL",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_anti_spp1__IN_ER_STRESS_EXCESS",
+            2,
+            []
+          ],
+          [
+            "hormone_treated_anti_spp1__IN_HAND2_LOSS",
+            5,
+            []
+          ],
+          [
+            "hormone_treated_anti_spp1__IN_HCG",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_anti_spp1__IN_HIGH_ECM_STIFFNESS",
+            2,
+            []
+          ],
+          [
+            "hormone_treated_maternal__IN_EMBRYO_CONDITIONED_SIGNAL",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_maternal__IN_ER_STRESS_EXCESS",
+            2,
+            []
+          ],
+          [
+            "hormone_treated_maternal__IN_HAND2_LOSS",
+            5,
+            []
+          ],
+          [
+            "hormone_treated_maternal__IN_HCG",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_maternal__IN_HIGH_ECM_STIFFNESS",
+            2,
+            []
+          ],
+          [
+            "hormone_treated_mifepristone__IN_EMBRYO_CONDITIONED_SIGNAL",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_mifepristone__IN_ER_STRESS_EXCESS",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_mifepristone__IN_HAND2_LOSS",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_mifepristone__IN_HCG",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_mifepristone__IN_HIGH_ECM_STIFFNESS",
+            1,
+            []
+          ],
+          [
+            "solo_IN_E2__adhesion_challenge_hormone_treated",
+            2,
+            []
+          ],
+          [
+            "solo_IN_E2__adhesion_challenge_hormone_treated_anti_spp1",
+            2,
+            []
+          ],
+          [
+            "solo_IN_E2__adhesion_challenge_hormone_treated_mifepristone",
+            1,
+            []
+          ],
+          [
+            "solo_IN_E2__hormone_treated_anti_spp1",
+            2,
+            []
+          ],
+          [
+            "solo_IN_E2__hormone_treated_maternal",
+            2,
+            []
+          ],
+          [
+            "solo_IN_E2__hormone_treated_mifepristone",
+            1,
+            []
+          ],
+          [
+            "solo_IN_EMBRYO_CONTACT__adhesion_challenge_basal",
+            1,
+            []
+          ],
+          [
+            "solo_IN_EMBRYO_CONTACT__adhesion_challenge_hormone_treated",
+            1,
+            []
+          ],
+          [
+            "solo_IN_EMBRYO_CONTACT__adhesion_challenge_hormone_treated_anti_spp1",
+            1,
+            []
+          ],
+          [
+            "solo_IN_EMBRYO_CONTACT__adhesion_challenge_hormone_treated_mifepristone",
+            1,
+            []
+          ],
+          [
+            "solo_IN_EMBRYO_PRESENT__adhesion_challenge_basal",
+            1,
+            []
+          ],
+          [
+            "solo_IN_EMBRYO_PRESENT__adhesion_challenge_hormone_treated",
+            1,
+            []
+          ],
+          [
+            "solo_IN_EMBRYO_PRESENT__adhesion_challenge_hormone_treated_anti_spp1",
+            1,
+            []
+          ],
+          [
+            "solo_IN_EMBRYO_PRESENT__adhesion_challenge_hormone_treated_mifepristone",
+            1,
+            []
+          ],
+          [
+            "solo_IN_PROGESTIN__adhesion_challenge_hormone_treated",
+            3,
+            []
+          ],
+          [
+            "solo_IN_PROGESTIN__adhesion_challenge_hormone_treated_anti_spp1",
+            3,
+            []
+          ],
+          [
+            "solo_IN_PROGESTIN__adhesion_challenge_hormone_treated_mifepristone",
+            2,
+            []
+          ],
+          [
+            "solo_IN_PROGESTIN__hormone_treated_anti_spp1",
+            3,
+            []
+          ],
+          [
+            "solo_IN_PROGESTIN__hormone_treated_maternal",
+            3,
+            []
+          ],
+          [
+            "solo_IN_PROGESTIN__hormone_treated_mifepristone",
+            2,
+            []
+          ],
+          [
+            "solo_IN_TROPHECTODERM_COMPETENT__adhesion_challenge_basal",
+            1,
+            []
+          ],
+          [
+            "solo_IN_TROPHECTODERM_COMPETENT__adhesion_challenge_hormone_treated",
+            1,
+            []
+          ],
+          [
+            "solo_IN_TROPHECTODERM_COMPETENT__adhesion_challenge_hormone_treated_anti_spp1",
+            1,
+            []
+          ],
+          [
+            "solo_IN_TROPHECTODERM_COMPETENT__adhesion_challenge_hormone_treated_mifepristone",
+            1,
+            []
+          ],
+          [
+            "solo_IN_XAV939__adhesion_challenge_hormone_treated",
+            1,
+            []
+          ],
+          [
+            "solo_IN_XAV939__adhesion_challenge_hormone_treated_anti_spp1",
+            1,
+            []
+          ],
+          [
+            "solo_IN_XAV939__adhesion_challenge_hormone_treated_mifepristone",
+            2,
+            []
+          ],
+          [
+            "solo_IN_XAV939__hormone_treated_anti_spp1",
+            1,
+            []
+          ],
+          [
+            "solo_IN_XAV939__hormone_treated_maternal",
+            1,
+            []
+          ],
+          [
+            "solo_IN_XAV939__hormone_treated_mifepristone",
+            2,
+            []
+          ],
+          [
+            "solo_IN_cAMP__adhesion_challenge_hormone_treated",
+            1,
+            []
+          ],
+          [
+            "solo_IN_cAMP__adhesion_challenge_hormone_treated_anti_spp1",
+            1,
+            []
+          ],
+          [
+            "solo_IN_cAMP__adhesion_challenge_hormone_treated_mifepristone",
+            2,
+            []
+          ],
+          [
+            "solo_IN_cAMP__hormone_treated_anti_spp1",
+            1,
+            []
+          ],
+          [
+            "solo_IN_cAMP__hormone_treated_maternal",
+            1,
+            []
+          ],
+          [
+            "solo_IN_cAMP__hormone_treated_mifepristone",
+            2,
+            []
+          ]
+        ],
+        "category": {
+          "E_ANXA2_ACTIN": "structural_alias",
+          "E_CD98_CD9": "structural_alias",
+          "E_CDH1_APICAL": "structural_alias",
+          "E_DAG1_CLEAVED": "structural_alias",
+          "E_DAG1_FULL": "structural_alias",
+          "E_ESTROGENIC_PROLIFERATION": "design_alias",
+          "E_GP130_STAT3": "structural_alias",
+          "E_HBEGF": "structural_alias",
+          "E_IHH": "structural_alias",
+          "E_ITGAVB3_5": "structural_alias",
+          "E_KLF12_HIGH": "latent_biological",
+          "E_LIF": "structural_alias",
+          "E_MUC1_BARRIER": "structural_alias",
+          "E_MUC1_SLEX": "structural_alias",
+          "E_PAEP": "structural_alias",
+          "E_PC6": "structural_alias",
+          "E_PGR": "structural_alias",
+          "E_PODXL": "structural_alias",
+          "E_RECEPTIVE_SURFACE": "structural_alias",
+          "E_SECRETORY_STATE": "structural_alias",
+          "E_SPP1_EXPR": "structural_alias",
+          "IN_ANTI_SPP1": "resolved_singleton",
+          "IN_E2": "design_alias",
+          "IN_EMBRYO_CONDITIONED_SIGNAL": "design_alias",
+          "IN_EMBRYO_CONTACT": "structural_alias",
+          "IN_EMBRYO_PRESENT": "design_alias",
+          "IN_ER_STRESS_EXCESS": "design_alias",
+          "IN_HAND2_LOSS": "design_alias",
+          "IN_HCG": "design_alias",
+          "IN_HIGH_ECM_STIFFNESS": "design_alias",
+          "IN_MIFEPRISTONE": "design_alias",
+          "IN_PROGESTIN": "design_alias",
+          "IN_TROPHECTODERM_COMPETENT": "design_alias",
+          "IN_XAV939": "design_alias",
+          "IN_cAMP": "structural_alias",
+          "OUT_EPITHELIAL_RECEPTIVE": "structural_alias",
+          "OUT_MATERNAL_ADHESION_COMPETENCE": "resolved_singleton",
+          "OUT_STABLE_ADHESION": "resolved_singleton",
+          "OUT_STROMAL_DECIDUALIZED": "structural_alias",
+          "S_BMP2": "structural_alias",
+          "S_DECIDUALIZED": "structural_alias",
+          "S_FGF_MITOGENIC": "design_alias",
+          "S_HAND2": "design_alias",
+          "S_IGFBP1": "structural_alias",
+          "S_NR2F2": "structural_alias",
+          "S_PGR": "structural_alias",
+          "S_PKA": "structural_alias",
+          "S_PRL": "structural_alias",
+          "S_SPP1": "structural_alias",
+          "S_TAZ_ECM": "structural_alias",
+          "X_ADHESION_ROUTE_REDUNDANT": "resolved_singleton",
+          "X_ADHESION_ROUTE_SPP1": "resolved_singleton",
+          "X_ANTIADHESIVE_ROUTE": "resolved_singleton",
+          "X_INTERFACE_ANTIADHESIVE_RELAY": "interface_placeholder",
+          "X_INTERFACE_REDUNDANT_RELAY": "interface_placeholder",
+          "X_INTERFACE_SPP1_RELAY": "interface_placeholder",
+          "X_MECHANICAL_PERMISSIVE_ECM": "design_alias",
+          "X_MECHANICAL_STRESS_RELAY": "interface_placeholder",
+          "X_SPP1_LUMEN_FREE": "resolved_singleton"
+        },
+        "design_classes": [
+          [
+            "E_ANXA2_ACTIN",
+            "E_DAG1_CLEAVED",
+            "E_HBEGF",
+            "E_IHH",
+            "E_ITGAVB3_5",
+            "E_MUC1_SLEX",
+            "E_PAEP",
+            "E_PC6",
+            "E_PGR",
+            "E_SECRETORY_STATE",
+            "E_SPP1_EXPR",
+            "OUT_STROMAL_DECIDUALIZED",
+            "S_BMP2",
+            "S_DECIDUALIZED",
+            "S_HAND2",
+            "S_IGFBP1",
+            "S_NR2F2",
+            "S_PGR",
+            "S_PRL",
+            "S_SPP1",
+            "S_TAZ_ECM",
+            "X_MECHANICAL_PERMISSIVE_ECM"
+          ],
+          [
+            "E_CD98_CD9",
+            "E_GP130_STAT3",
+            "E_LIF",
+            "E_RECEPTIVE_SURFACE",
+            "OUT_EPITHELIAL_RECEPTIVE"
+          ],
+          [
+            "E_CDH1_APICAL",
+            "IN_EMBRYO_CONTACT",
+            "IN_EMBRYO_PRESENT",
+            "IN_TROPHECTODERM_COMPETENT"
+          ],
+          [
+            "E_DAG1_FULL",
+            "E_MUC1_BARRIER",
+            "E_PODXL",
+            "S_FGF_MITOGENIC"
+          ],
+          [
+            "E_ESTROGENIC_PROLIFERATION",
+            "IN_MIFEPRISTONE"
+          ],
+          [
+            "E_KLF12_HIGH"
+          ],
+          [
+            "IN_ANTI_SPP1"
+          ],
+          [
+            "IN_E2",
+            "IN_PROGESTIN",
+            "IN_XAV939",
+            "IN_cAMP",
+            "S_PKA"
+          ],
+          [
+            "IN_EMBRYO_CONDITIONED_SIGNAL",
+            "IN_ER_STRESS_EXCESS",
+            "IN_HAND2_LOSS",
+            "IN_HCG",
+            "IN_HIGH_ECM_STIFFNESS"
+          ],
+          [
+            "OUT_MATERNAL_ADHESION_COMPETENCE"
+          ],
+          [
+            "OUT_STABLE_ADHESION"
+          ],
+          [
+            "X_ADHESION_ROUTE_REDUNDANT"
+          ],
+          [
+            "X_ADHESION_ROUTE_SPP1"
+          ],
+          [
+            "X_ANTIADHESIVE_ROUTE"
+          ],
+          [
+            "X_INTERFACE_ANTIADHESIVE_RELAY"
+          ],
+          [
+            "X_INTERFACE_REDUNDANT_RELAY"
+          ],
+          [
+            "X_INTERFACE_SPP1_RELAY"
+          ],
+          [
+            "X_MECHANICAL_STRESS_RELAY"
+          ],
+          [
+            "X_SPP1_LUMEN_FREE"
+          ]
+        ],
+        "matched_unit_caveat": "MATCHED-UNIT CONDITIONAL. Design-equivalence classes, observation classes, information statuses and proposed-panel counts assume one biological unit carries a single latent assignment through every arm and assay. ADOC does not provide that: adhesion is an aggregate per-embryo count, the secreted-protein mappings are unpaired, chips can share donors and epithelial and stromal cells in one chip may come from different donors, and the column-to-chip mapping for IGFBP-1 and PRL was lost (config/adoc_chip_donor_provenance.tsv). These numbers describe what a matched-unit design of this shape could identify, NOT what the current data identify.",
+        "summary": {
+          "arms_separating_measured_nodes": [
+            "dropout_IN_E2__adhesion_challenge_hormone_treated",
+            "dropout_IN_E2__adhesion_challenge_hormone_treated_anti_spp1",
+            "dropout_IN_E2__hormone_treated_anti_spp1",
+            "dropout_IN_E2__hormone_treated_maternal"
+          ],
+          "best_fifth_arm_gain": 5,
+          "best_fifth_arms": [
+            "adhesion_challenge_hormone_treated__IN_HAND2_LOSS",
+            "hormone_treated_maternal__IN_HAND2_LOSS",
+            "adhesion_challenge_hormone_treated_anti_spp1__IN_HAND2_LOSS",
+            "hormone_treated_anti_spp1__IN_HAND2_LOSS"
+          ],
+          "best_gain_among_arms_separating_measured_nodes": 3,
+          "candidates_evaluated": 112,
+          "candidates_separating_two_measured_nodes": 8,
+          "categories": {
+            "design_alias": 15,
+            "interface_placeholder": 4,
+            "latent_biological": 1,
+            "resolved_singleton": 7,
+            "structural_alias": 32
+          },
+          "design_classes_larger_than_one": 7,
+          "design_effective_states": 19,
+          "global_effective_states": 35,
+          "inputs_isolated_without_a_shared_readout": [
+            "IN_ANTI_SPP1"
+          ],
+          "largest_design_class": 22,
+          "measured_nodes": [
+            "E_PAEP",
+            "OUT_STABLE_ADHESION",
+            "S_IGFBP1"
+          ],
+          "model_version": "adoc-literature-superset-v0.5.0",
+          "named_nodes": 59,
+          "plan_id": "adoc_four_arm_plan",
+          "planned_cfgs": 8,
+          "planned_conditions": 4,
+          "planned_not_recorded": [
+            "hormone_treated_anti_spp1"
+          ],
+          "recorded_not_planned": [
+            "e2_primed_maternal"
+          ]
+        },
+        "variant": "as_declared"
+      },
+      "maternal_phase_only": {
+        "candidate_gains": [
+          [
+            "basal_maternal__IN_EMBRYO_CONDITIONED_SIGNAL",
+            1,
+            []
+          ],
+          [
+            "basal_maternal__IN_EMBRYO_CONTACT",
+            1,
+            []
+          ],
+          [
+            "basal_maternal__IN_EMBRYO_PRESENT",
+            1,
+            []
+          ],
+          [
+            "basal_maternal__IN_ER_STRESS_EXCESS",
+            1,
+            []
+          ],
+          [
+            "basal_maternal__IN_HAND2_LOSS",
+            1,
+            []
+          ],
+          [
+            "basal_maternal__IN_HCG",
+            1,
+            []
+          ],
+          [
+            "basal_maternal__IN_HIGH_ECM_STIFFNESS",
+            1,
+            []
+          ],
+          [
+            "basal_maternal__IN_TROPHECTODERM_COMPETENT",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_E2__hormone_treated_anti_spp1",
+            3,
+            [
+              [
+                "E_PAEP",
+                "S_IGFBP1"
+              ]
+            ]
+          ],
+          [
+            "dropout_IN_E2__hormone_treated_maternal",
+            3,
+            [
+              [
+                "E_PAEP",
+                "S_IGFBP1"
+              ]
+            ]
+          ],
+          [
+            "dropout_IN_E2__hormone_treated_mifepristone",
+            2,
+            []
+          ],
+          [
+            "dropout_IN_PROGESTIN__hormone_treated_anti_spp1",
+            2,
+            []
+          ],
+          [
+            "dropout_IN_PROGESTIN__hormone_treated_maternal",
+            2,
+            []
+          ],
+          [
+            "dropout_IN_PROGESTIN__hormone_treated_mifepristone",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_XAV939__hormone_treated_anti_spp1",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_XAV939__hormone_treated_maternal",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_XAV939__hormone_treated_mifepristone",
+            1,
+            []
+          ],
+          [
+            "dropout_IN_cAMP__hormone_treated_anti_spp1",
+            2,
+            [
+              [
+                "E_PAEP",
+                "S_IGFBP1"
+              ]
+            ]
+          ],
+          [
+            "dropout_IN_cAMP__hormone_treated_maternal",
+            2,
+            [
+              [
+                "E_PAEP",
+                "S_IGFBP1"
+              ]
+            ]
+          ],
+          [
+            "dropout_IN_cAMP__hormone_treated_mifepristone",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_anti_spp1__IN_EMBRYO_CONDITIONED_SIGNAL",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_anti_spp1__IN_EMBRYO_CONTACT",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_anti_spp1__IN_EMBRYO_PRESENT",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_anti_spp1__IN_ER_STRESS_EXCESS",
+            2,
+            []
+          ],
+          [
+            "hormone_treated_anti_spp1__IN_HAND2_LOSS",
+            5,
+            []
+          ],
+          [
+            "hormone_treated_anti_spp1__IN_HCG",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_anti_spp1__IN_HIGH_ECM_STIFFNESS",
+            2,
+            []
+          ],
+          [
+            "hormone_treated_anti_spp1__IN_TROPHECTODERM_COMPETENT",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_maternal__IN_EMBRYO_CONDITIONED_SIGNAL",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_maternal__IN_EMBRYO_CONTACT",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_maternal__IN_EMBRYO_PRESENT",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_maternal__IN_ER_STRESS_EXCESS",
+            2,
+            []
+          ],
+          [
+            "hormone_treated_maternal__IN_HAND2_LOSS",
+            5,
+            []
+          ],
+          [
+            "hormone_treated_maternal__IN_HCG",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_maternal__IN_HIGH_ECM_STIFFNESS",
+            2,
+            []
+          ],
+          [
+            "hormone_treated_maternal__IN_TROPHECTODERM_COMPETENT",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_mifepristone__IN_EMBRYO_CONDITIONED_SIGNAL",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_mifepristone__IN_EMBRYO_CONTACT",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_mifepristone__IN_EMBRYO_PRESENT",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_mifepristone__IN_ER_STRESS_EXCESS",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_mifepristone__IN_HAND2_LOSS",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_mifepristone__IN_HCG",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_mifepristone__IN_HIGH_ECM_STIFFNESS",
+            1,
+            []
+          ],
+          [
+            "hormone_treated_mifepristone__IN_TROPHECTODERM_COMPETENT",
+            1,
+            []
+          ],
+          [
+            "solo_IN_E2__hormone_treated_anti_spp1",
+            2,
+            []
+          ],
+          [
+            "solo_IN_E2__hormone_treated_maternal",
+            2,
+            []
+          ],
+          [
+            "solo_IN_E2__hormone_treated_mifepristone",
+            1,
+            []
+          ],
+          [
+            "solo_IN_PROGESTIN__hormone_treated_anti_spp1",
+            3,
+            []
+          ],
+          [
+            "solo_IN_PROGESTIN__hormone_treated_maternal",
+            3,
+            []
+          ],
+          [
+            "solo_IN_PROGESTIN__hormone_treated_mifepristone",
+            2,
+            []
+          ],
+          [
+            "solo_IN_XAV939__hormone_treated_anti_spp1",
+            1,
+            []
+          ],
+          [
+            "solo_IN_XAV939__hormone_treated_maternal",
+            1,
+            []
+          ],
+          [
+            "solo_IN_XAV939__hormone_treated_mifepristone",
+            2,
+            []
+          ],
+          [
+            "solo_IN_cAMP__hormone_treated_anti_spp1",
+            1,
+            []
+          ],
+          [
+            "solo_IN_cAMP__hormone_treated_maternal",
+            1,
+            []
+          ],
+          [
+            "solo_IN_cAMP__hormone_treated_mifepristone",
+            2,
+            []
+          ]
+        ],
+        "category": {
+          "E_ANXA2_ACTIN": "structural_alias",
+          "E_CD98_CD9": "structural_alias",
+          "E_CDH1_APICAL": "structural_alias",
+          "E_DAG1_CLEAVED": "structural_alias",
+          "E_DAG1_FULL": "structural_alias",
+          "E_ESTROGENIC_PROLIFERATION": "design_alias",
+          "E_GP130_STAT3": "structural_alias",
+          "E_HBEGF": "structural_alias",
+          "E_IHH": "structural_alias",
+          "E_ITGAVB3_5": "structural_alias",
+          "E_KLF12_HIGH": "latent_biological",
+          "E_LIF": "structural_alias",
+          "E_MUC1_BARRIER": "structural_alias",
+          "E_MUC1_SLEX": "structural_alias",
+          "E_PAEP": "structural_alias",
+          "E_PC6": "structural_alias",
+          "E_PGR": "structural_alias",
+          "E_PODXL": "structural_alias",
+          "E_RECEPTIVE_SURFACE": "structural_alias",
+          "E_SECRETORY_STATE": "structural_alias",
+          "E_SPP1_EXPR": "structural_alias",
+          "IN_ANTI_SPP1": "resolved_singleton",
+          "IN_E2": "design_alias",
+          "IN_EMBRYO_CONDITIONED_SIGNAL": "design_alias",
+          "IN_EMBRYO_CONTACT": "structural_alias",
+          "IN_EMBRYO_PRESENT": "design_alias",
+          "IN_ER_STRESS_EXCESS": "design_alias",
+          "IN_HAND2_LOSS": "design_alias",
+          "IN_HCG": "design_alias",
+          "IN_HIGH_ECM_STIFFNESS": "design_alias",
+          "IN_MIFEPRISTONE": "design_alias",
+          "IN_PROGESTIN": "design_alias",
+          "IN_TROPHECTODERM_COMPETENT": "design_alias",
+          "IN_XAV939": "design_alias",
+          "IN_cAMP": "structural_alias",
+          "OUT_EPITHELIAL_RECEPTIVE": "structural_alias",
+          "OUT_MATERNAL_ADHESION_COMPETENCE": "resolved_singleton",
+          "OUT_STABLE_ADHESION": "design_alias",
+          "OUT_STROMAL_DECIDUALIZED": "structural_alias",
+          "S_BMP2": "structural_alias",
+          "S_DECIDUALIZED": "structural_alias",
+          "S_FGF_MITOGENIC": "design_alias",
+          "S_HAND2": "design_alias",
+          "S_IGFBP1": "structural_alias",
+          "S_NR2F2": "structural_alias",
+          "S_PGR": "structural_alias",
+          "S_PKA": "structural_alias",
+          "S_PRL": "structural_alias",
+          "S_SPP1": "structural_alias",
+          "S_TAZ_ECM": "structural_alias",
+          "X_ADHESION_ROUTE_REDUNDANT": "resolved_singleton",
+          "X_ADHESION_ROUTE_SPP1": "resolved_singleton",
+          "X_ANTIADHESIVE_ROUTE": "resolved_singleton",
+          "X_INTERFACE_ANTIADHESIVE_RELAY": "interface_placeholder",
+          "X_INTERFACE_REDUNDANT_RELAY": "interface_placeholder",
+          "X_INTERFACE_SPP1_RELAY": "interface_placeholder",
+          "X_MECHANICAL_PERMISSIVE_ECM": "design_alias",
+          "X_MECHANICAL_STRESS_RELAY": "interface_placeholder",
+          "X_SPP1_LUMEN_FREE": "resolved_singleton"
+        },
+        "design_classes": [
+          [
+            "E_ANXA2_ACTIN",
+            "E_DAG1_CLEAVED",
+            "E_HBEGF",
+            "E_IHH",
+            "E_ITGAVB3_5",
+            "E_MUC1_SLEX",
+            "E_PAEP",
+            "E_PC6",
+            "E_PGR",
+            "E_SECRETORY_STATE",
+            "E_SPP1_EXPR",
+            "OUT_STROMAL_DECIDUALIZED",
+            "S_BMP2",
+            "S_DECIDUALIZED",
+            "S_HAND2",
+            "S_IGFBP1",
+            "S_NR2F2",
+            "S_PGR",
+            "S_PRL",
+            "S_SPP1",
+            "S_TAZ_ECM",
+            "X_MECHANICAL_PERMISSIVE_ECM"
+          ],
+          [
+            "E_CD98_CD9",
+            "E_GP130_STAT3",
+            "E_LIF",
+            "E_RECEPTIVE_SURFACE",
+            "OUT_EPITHELIAL_RECEPTIVE"
+          ],
+          [
+            "E_CDH1_APICAL",
+            "IN_EMBRYO_CONDITIONED_SIGNAL",
+            "IN_EMBRYO_CONTACT",
+            "IN_EMBRYO_PRESENT",
+            "IN_ER_STRESS_EXCESS",
+            "IN_HAND2_LOSS",
+            "IN_HCG",
+            "IN_HIGH_ECM_STIFFNESS",
+            "IN_TROPHECTODERM_COMPETENT",
+            "OUT_STABLE_ADHESION"
+          ],
+          [
+            "E_DAG1_FULL",
+            "E_MUC1_BARRIER",
+            "E_PODXL",
+            "S_FGF_MITOGENIC"
+          ],
+          [
+            "E_ESTROGENIC_PROLIFERATION",
+            "IN_MIFEPRISTONE"
+          ],
+          [
+            "E_KLF12_HIGH"
+          ],
+          [
+            "IN_ANTI_SPP1"
+          ],
+          [
+            "IN_E2",
+            "IN_PROGESTIN",
+            "IN_XAV939",
+            "IN_cAMP",
+            "S_PKA"
+          ],
+          [
+            "OUT_MATERNAL_ADHESION_COMPETENCE"
+          ],
+          [
+            "X_ADHESION_ROUTE_REDUNDANT"
+          ],
+          [
+            "X_ADHESION_ROUTE_SPP1"
+          ],
+          [
+            "X_ANTIADHESIVE_ROUTE"
+          ],
+          [
+            "X_INTERFACE_ANTIADHESIVE_RELAY"
+          ],
+          [
+            "X_INTERFACE_REDUNDANT_RELAY"
+          ],
+          [
+            "X_INTERFACE_SPP1_RELAY"
+          ],
+          [
+            "X_MECHANICAL_STRESS_RELAY"
+          ],
+          [
+            "X_SPP1_LUMEN_FREE"
+          ]
+        ],
+        "matched_unit_caveat": "MATCHED-UNIT CONDITIONAL. Design-equivalence classes, observation classes, information statuses and proposed-panel counts assume one biological unit carries a single latent assignment through every arm and assay. ADOC does not provide that: adhesion is an aggregate per-embryo count, the secreted-protein mappings are unpaired, chips can share donors and epithelial and stromal cells in one chip may come from different donors, and the column-to-chip mapping for IGFBP-1 and PRL was lost (config/adoc_chip_donor_provenance.tsv). These numbers describe what a matched-unit design of this shape could identify, NOT what the current data identify.",
+        "summary": {
+          "arms_separating_measured_nodes": [
+            "dropout_IN_E2__hormone_treated_anti_spp1",
+            "dropout_IN_E2__hormone_treated_maternal"
+          ],
+          "best_fifth_arm_gain": 5,
+          "best_fifth_arms": [
+            "hormone_treated_maternal__IN_HAND2_LOSS",
+            "hormone_treated_anti_spp1__IN_HAND2_LOSS"
+          ],
+          "best_gain_among_arms_separating_measured_nodes": 3,
+          "candidates_evaluated": 56,
+          "candidates_separating_two_measured_nodes": 4,
+          "categories": {
+            "design_alias": 16,
+            "interface_placeholder": 4,
+            "latent_biological": 1,
+            "resolved_singleton": 6,
+            "structural_alias": 32
+          },
+          "design_classes_larger_than_one": 6,
+          "design_effective_states": 17,
+          "global_effective_states": 35,
+          "inputs_isolated_without_a_shared_readout": [
+            "IN_ANTI_SPP1",
+            "IN_MIFEPRISTONE"
+          ],
+          "largest_design_class": 22,
+          "measured_nodes": [
+            "E_PAEP",
+            "OUT_STABLE_ADHESION",
+            "S_IGFBP1"
+          ],
+          "model_version": "adoc-literature-superset-v0.5.0",
+          "named_nodes": 59,
+          "plan_id": "adoc_four_arm_plan",
+          "planned_cfgs": 4,
+          "planned_conditions": 4,
+          "planned_not_recorded": [
+            "hormone_treated_mifepristone",
+            "hormone_treated_anti_spp1"
+          ],
+          "recorded_not_planned": [
+            "adhesion_challenge_basal",
+            "adhesion_challenge_hormone_treated",
+            "adhesion_challenge_hormone_treated_mifepristone",
+            "e2_primed_maternal"
+          ]
+        },
+        "variant": "maternal_phase_only"
+      }
+    },
+    "identifiability": {
+      "adhesion_endpoint": {
+        "analytic_value": 0.82,
+        "arm": "adhesion_challenge_hormone_treated",
+        "carrier_priors": {
+          "X_INTERFACE_REDUNDANT_RELAY": 0.4,
+          "X_INTERFACE_SPP1_RELAY": 0.7
+        },
+        "carrier_relays": [
+          "X_INTERFACE_SPP1_RELAY",
+          "X_INTERFACE_REDUNDANT_RELAY"
+        ],
+        "endpoint_equals_disjunction_of_carriers": true,
+        "pinned_latent": {
+          "E_KLF12_HIGH": false
+        }
+      },
+      "ceilings": {
+        "design_states_ceiling": 35,
+        "design_states_now": 19,
+        "design_states_with_proposed_arms": 34,
+        "observation_classes_assayable_ceiling": 8,
+        "observation_classes_ceiling": 32,
+        "observation_classes_now": 2
+      },
+      "design_classes": [
+        [
+          "E_ANXA2_ACTIN",
+          "E_DAG1_CLEAVED",
+          "E_HBEGF",
+          "E_IHH",
+          "E_ITGAVB3_5",
+          "E_MUC1_SLEX",
+          "E_PAEP",
+          "E_PC6",
+          "E_PGR",
+          "E_SECRETORY_STATE",
+          "E_SPP1_EXPR",
+          "OUT_STROMAL_DECIDUALIZED",
+          "S_BMP2",
+          "S_DECIDUALIZED",
+          "S_HAND2",
+          "S_IGFBP1",
+          "S_NR2F2",
+          "S_PGR",
+          "S_PRL",
+          "S_SPP1",
+          "S_TAZ_ECM",
+          "X_MECHANICAL_PERMISSIVE_ECM",
+          "X_SPP1_LUMEN_FREE"
+        ],
+        [
+          "E_CD98_CD9",
+          "E_GP130_STAT3",
+          "E_LIF",
+          "E_RECEPTIVE_SURFACE",
+          "OUT_EPITHELIAL_RECEPTIVE"
+        ],
+        [
+          "E_CDH1_APICAL",
+          "IN_EMBRYO_CONTACT",
+          "IN_EMBRYO_PRESENT",
+          "IN_TROPHECTODERM_COMPETENT"
+        ],
+        [
+          "E_DAG1_FULL",
+          "E_MUC1_BARRIER",
+          "E_PODXL",
+          "S_FGF_MITOGENIC"
+        ],
+        [
+          "E_ESTROGENIC_PROLIFERATION"
+        ],
+        [
+          "E_KLF12_HIGH"
+        ],
+        [
+          "IN_ANTI_SPP1",
+          "IN_EMBRYO_CONDITIONED_SIGNAL",
+          "IN_ER_STRESS_EXCESS",
+          "IN_HAND2_LOSS",
+          "IN_HCG",
+          "IN_HIGH_ECM_STIFFNESS"
+        ],
+        [
+          "IN_E2"
+        ],
+        [
+          "IN_MIFEPRISTONE"
+        ],
+        [
+          "IN_PROGESTIN",
+          "IN_XAV939",
+          "IN_cAMP",
+          "S_PKA"
+        ],
+        [
+          "OUT_MATERNAL_ADHESION_COMPETENCE"
+        ],
+        [
+          "OUT_STABLE_ADHESION"
+        ],
+        [
+          "X_ADHESION_ROUTE_REDUNDANT"
+        ],
+        [
+          "X_ADHESION_ROUTE_SPP1"
+        ],
+        [
+          "X_ANTIADHESIVE_ROUTE"
+        ],
+        [
+          "X_INTERFACE_ANTIADHESIVE_RELAY"
+        ],
+        [
+          "X_INTERFACE_REDUNDANT_RELAY"
+        ],
+        [
+          "X_INTERFACE_SPP1_RELAY"
+        ],
+        [
+          "X_MECHANICAL_STRESS_RELAY"
+        ]
+      ],
+      "greedy_arms": [
+        [
+          "hormone_treated_maternal__IN_HAND2_LOSS",
+          23,
+          2
+        ],
+        [
+          "adhesion_challenge_hormone_treated__IN_HIGH_ECM_STIFFNESS",
+          25,
+          3
+        ],
+        [
+          "adhesion_challenge_hormone_treated__IN_ANTI_SPP1",
+          27,
+          5
+        ],
+        [
+          "solo_IN_PROGESTIN",
+          29,
+          5
+        ],
+        [
+          "solo_IN_cAMP",
+          30,
+          5
+        ],
+        [
+          "solo_IN_TROPHECTODERM_COMPETENT",
+          31,
+          5
+        ],
+        [
+          "solo_IN_EMBRYO_PRESENT",
+          32,
+          5
+        ],
+        [
+          "hormone_treated_maternal__IN_HCG",
+          33,
+          5
+        ],
+        [
+          "hormone_treated_maternal__IN_ER_STRESS_EXCESS",
+          34,
+          5
+        ]
+      ],
+      "greedy_readouts": [
+        [
+          "X_MECHANICAL_PERMISSIVE_ECM",
+          6
+        ],
+        [
+          "OUT_EPITHELIAL_RECEPTIVE",
+          8
+        ]
+      ],
+      "independently_perturbed": [
+        "IN_MIFEPRISTONE"
+      ],
+      "information_status": {
+        "E_ANXA2_ACTIN": "design_aliased_to_measured",
+        "E_CD98_CD9": "latent_unresolved",
+        "E_CDH1_APICAL": "model_asserted_untested",
+        "E_DAG1_CLEAVED": "design_aliased_to_measured",
+        "E_DAG1_FULL": "model_asserted_untested",
+        "E_ESTROGENIC_PROLIFERATION": "model_asserted_untested",
+        "E_GP130_STAT3": "latent_unresolved",
+        "E_HBEGF": "design_aliased_to_measured",
+        "E_IHH": "design_aliased_to_measured",
+        "E_ITGAVB3_5": "design_aliased_to_measured",
+        "E_KLF12_HIGH": "latent_unresolved",
+        "E_LIF": "latent_unresolved",
+        "E_MUC1_BARRIER": "model_asserted_untested",
+        "E_MUC1_SLEX": "design_aliased_to_measured",
+        "E_PAEP": "directly_measured",
+        "E_PC6": "design_aliased_to_measured",
+        "E_PGR": "design_aliased_to_measured",
+        "E_PODXL": "model_asserted_untested",
+        "E_RECEPTIVE_SURFACE": "latent_unresolved",
+        "E_SECRETORY_STATE": "design_aliased_to_measured",
+        "E_SPP1_EXPR": "design_aliased_to_measured",
+        "IN_ANTI_SPP1": "model_asserted_untested",
+        "IN_E2": "model_asserted_untested",
+        "IN_EMBRYO_CONDITIONED_SIGNAL": "model_asserted_untested",
+        "IN_EMBRYO_CONTACT": "model_asserted_untested",
+        "IN_EMBRYO_PRESENT": "model_asserted_untested",
+        "IN_ER_STRESS_EXCESS": "model_asserted_untested",
+        "IN_HAND2_LOSS": "model_asserted_untested",
+        "IN_HCG": "model_asserted_untested",
+        "IN_HIGH_ECM_STIFFNESS": "model_asserted_untested",
+        "IN_MIFEPRISTONE": "model_asserted_untested",
+        "IN_PROGESTIN": "model_asserted_untested",
+        "IN_TROPHECTODERM_COMPETENT": "model_asserted_untested",
+        "IN_XAV939": "model_asserted_untested",
+        "IN_cAMP": "model_asserted_untested",
+        "OUT_EPITHELIAL_RECEPTIVE": "latent_unresolved",
+        "OUT_MATERNAL_ADHESION_COMPETENCE": "indirectly_constrained",
+        "OUT_STABLE_ADHESION": "directly_measured",
+        "OUT_STROMAL_DECIDUALIZED": "design_aliased_to_measured",
+        "S_BMP2": "design_aliased_to_measured",
+        "S_DECIDUALIZED": "design_aliased_to_measured",
+        "S_FGF_MITOGENIC": "model_asserted_untested",
+        "S_HAND2": "design_aliased_to_measured",
+        "S_IGFBP1": "directly_measured",
+        "S_NR2F2": "design_aliased_to_measured",
+        "S_PGR": "design_aliased_to_measured",
+        "S_PKA": "model_asserted_untested",
+        "S_PRL": "design_aliased_to_measured",
+        "S_SPP1": "design_aliased_to_measured",
+        "S_TAZ_ECM": "design_aliased_to_measured",
+        "X_ADHESION_ROUTE_REDUNDANT": "latent_unresolved",
+        "X_ADHESION_ROUTE_SPP1": "latent_unresolved",
+        "X_ANTIADHESIVE_ROUTE": "latent_unresolved",
+        "X_INTERFACE_ANTIADHESIVE_RELAY": "latent_unresolved",
+        "X_INTERFACE_REDUNDANT_RELAY": "latent_unresolved",
+        "X_INTERFACE_SPP1_RELAY": "latent_unresolved",
+        "X_MECHANICAL_PERMISSIVE_ECM": "design_aliased_to_measured",
+        "X_MECHANICAL_STRESS_RELAY": "latent_unresolved",
+        "X_SPP1_LUMEN_FREE": "design_aliased_to_measured"
+      },
+      "latent": [
+        "E_KLF12_HIGH",
+        "X_MECHANICAL_STRESS_RELAY",
+        "X_INTERFACE_SPP1_RELAY",
+        "X_INTERFACE_REDUNDANT_RELAY",
+        "X_INTERFACE_ANTIADHESIVE_RELAY"
+      ],
+      "matched_unit_caveat": "MATCHED-UNIT CONDITIONAL. Design-equivalence classes, observation classes, information statuses and proposed-panel counts assume one biological unit carries a single latent assignment through every arm and assay. ADOC does not provide that: adhesion is an aggregate per-embryo count, the secreted-protein mappings are unpaired, chips can share donors and epithelial and stromal cells in one chip may come from different donors, and the column-to-chip mapping for IGFBP-1 and PRL was lost (config/adoc_chip_donor_provenance.tsv). These numbers describe what a matched-unit design of this shape could identify, NOT what the current data identify.",
+      "perturbation_status": {
+        "E_ANXA2_ACTIN": "not_an_input",
+        "E_CD98_CD9": "not_an_input",
+        "E_CDH1_APICAL": "not_an_input",
+        "E_DAG1_CLEAVED": "not_an_input",
+        "E_DAG1_FULL": "not_an_input",
+        "E_ESTROGENIC_PROLIFERATION": "not_an_input",
+        "E_GP130_STAT3": "not_an_input",
+        "E_HBEGF": "not_an_input",
+        "E_IHH": "not_an_input",
+        "E_ITGAVB3_5": "not_an_input",
+        "E_KLF12_HIGH": "latent_not_settable",
+        "E_LIF": "not_an_input",
+        "E_MUC1_BARRIER": "not_an_input",
+        "E_MUC1_SLEX": "not_an_input",
+        "E_PAEP": "not_an_input",
+        "E_PC6": "not_an_input",
+        "E_PGR": "not_an_input",
+        "E_PODXL": "not_an_input",
+        "E_RECEPTIVE_SURFACE": "not_an_input",
+        "E_SECRETORY_STATE": "not_an_input",
+        "E_SPP1_EXPR": "not_an_input",
+        "IN_ANTI_SPP1": "never_perturbed",
+        "IN_E2": "set_alone_no_shared_readout",
+        "IN_EMBRYO_CONDITIONED_SIGNAL": "never_perturbed",
+        "IN_EMBRYO_CONTACT": "bundled_perturbed",
+        "IN_EMBRYO_PRESENT": "bundled_perturbed",
+        "IN_ER_STRESS_EXCESS": "never_perturbed",
+        "IN_HAND2_LOSS": "never_perturbed",
+        "IN_HCG": "never_perturbed",
+        "IN_HIGH_ECM_STIFFNESS": "never_perturbed",
+        "IN_MIFEPRISTONE": "independently_perturbed",
+        "IN_PROGESTIN": "bundled_perturbed",
+        "IN_TROPHECTODERM_COMPETENT": "bundled_perturbed",
+        "IN_XAV939": "bundled_perturbed",
+        "IN_cAMP": "bundled_perturbed",
+        "OUT_EPITHELIAL_RECEPTIVE": "not_an_input",
+        "OUT_MATERNAL_ADHESION_COMPETENCE": "not_an_input",
+        "OUT_STABLE_ADHESION": "not_an_input",
+        "OUT_STROMAL_DECIDUALIZED": "not_an_input",
+        "S_BMP2": "not_an_input",
+        "S_DECIDUALIZED": "not_an_input",
+        "S_FGF_MITOGENIC": "not_an_input",
+        "S_HAND2": "not_an_input",
+        "S_IGFBP1": "not_an_input",
+        "S_NR2F2": "not_an_input",
+        "S_PGR": "not_an_input",
+        "S_PKA": "not_an_input",
+        "S_PRL": "not_an_input",
+        "S_SPP1": "not_an_input",
+        "S_TAZ_ECM": "not_an_input",
+        "X_ADHESION_ROUTE_REDUNDANT": "not_an_input",
+        "X_ADHESION_ROUTE_SPP1": "not_an_input",
+        "X_ANTIADHESIVE_ROUTE": "not_an_input",
+        "X_INTERFACE_ANTIADHESIVE_RELAY": "latent_not_settable",
+        "X_INTERFACE_REDUNDANT_RELAY": "latent_not_settable",
+        "X_INTERFACE_SPP1_RELAY": "latent_not_settable",
+        "X_MECHANICAL_PERMISSIVE_ECM": "not_an_input",
+        "X_MECHANICAL_STRESS_RELAY": "latent_not_settable",
+        "X_SPP1_LUMEN_FREE": "not_an_input"
+      },
+      "set_alone_no_shared_readout": [
+        "IN_E2"
+      ],
+      "summary": {
+        "assayable_nodes": 43,
+        "bundled_perturbed_inputs": 6,
+        "declared_inputs": 14,
+        "design_effective_states": 19,
+        "global_effective_states": 35,
+        "independently_perturbed_inputs": 1,
+        "latent_assignments": 32,
+        "latent_variables": 5,
+        "measured_nodes": 3,
+        "model_version": "adoc-literature-superset-v0.5.0",
+        "named_nodes": 59,
+        "never_perturbed_inputs": 6,
+        "observation_classes": 2,
+        "phenotype_inert_nodes": 14,
+        "run_arms": 6,
+        "set_alone_no_shared_readout_inputs": 1,
+        "states_lost_to_design_bundling": 16,
+        "states_lost_to_rule_encoding": 24,
+        "status_design_aliased_to_measured": 21,
+        "status_directly_measured": 3,
+        "status_indirectly_constrained": 1,
+        "status_latent_unresolved": 13,
+        "status_model_asserted_untested": 21,
+        "unit_assumption": "MATCHED-UNIT (hypothetical). Every fibre, observation class, information status and proposed-panel count assumes one biological unit carries a single latent assignment through every arm and assay. The current data do not provide that: adhesion is an aggregate per-embryo count, the secretion mappings are explicitly unpaired, and the unit mapping is not recoverable. These counts therefore describe what a matched-unit design of this shape could identify, and are NOT claims about what the current data identify.",
+        "unread_inputs": 3
+      }
+    },
+    "structural": {
+      "absorbed_dependencies": [
+        [
+          "E_ANXA2_ACTIN",
+          "E_RECEPTIVE_SURFACE"
+        ],
+        [
+          "E_ANXA2_ACTIN",
+          "X_ADHESION_ROUTE_REDUNDANT"
+        ],
+        [
+          "E_CD98_CD9",
+          "E_RECEPTIVE_SURFACE"
+        ],
+        [
+          "E_CD98_CD9",
+          "X_ADHESION_ROUTE_REDUNDANT"
+        ],
+        [
+          "E_CDH1_APICAL",
+          "E_RECEPTIVE_SURFACE"
+        ],
+        [
+          "E_CDH1_APICAL",
+          "X_ADHESION_ROUTE_REDUNDANT"
+        ],
+        [
+          "E_DAG1_CLEAVED",
+          "E_RECEPTIVE_SURFACE"
+        ],
+        [
+          "E_DAG1_CLEAVED",
+          "X_ADHESION_ROUTE_REDUNDANT"
+        ],
+        [
+          "E_HBEGF",
+          "E_RECEPTIVE_SURFACE"
+        ],
+        [
+          "E_HBEGF",
+          "X_ADHESION_ROUTE_REDUNDANT"
+        ],
+        [
+          "E_ITGAVB3_5",
+          "E_RECEPTIVE_SURFACE"
+        ],
+        [
+          "E_MUC1_SLEX",
+          "E_RECEPTIVE_SURFACE"
+        ],
+        [
+          "E_MUC1_SLEX",
+          "X_ADHESION_ROUTE_REDUNDANT"
+        ],
+        [
+          "S_PKA",
+          "S_BMP2"
+        ],
+        [
+          "X_SPP1_LUMEN_FREE",
+          "E_RECEPTIVE_SURFACE"
+        ]
+      ],
+      "absorbed_or_never_binding_dependencies": 19,
+      "alias_classes": [
+        [
+          "E_ANXA2_ACTIN",
+          "E_DAG1_CLEAVED",
+          "E_HBEGF",
+          "E_ITGAVB3_5",
+          "E_MUC1_SLEX",
+          "E_PAEP",
+          "E_PC6",
+          "E_SECRETORY_STATE",
+          "E_SPP1_EXPR"
+        ],
+        [
+          "E_CD98_CD9",
+          "E_GP130_STAT3",
+          "E_LIF"
+        ],
+        [
+          "E_CDH1_APICAL",
+          "IN_EMBRYO_CONTACT"
+        ],
+        [
+          "E_DAG1_FULL",
+          "E_MUC1_BARRIER",
+          "E_PODXL"
+        ],
+        [
+          "E_IHH",
+          "E_PGR",
+          "S_BMP2",
+          "S_NR2F2",
+          "S_PGR"
+        ],
+        [
+          "E_RECEPTIVE_SURFACE",
+          "OUT_EPITHELIAL_RECEPTIVE"
+        ],
+        [
+          "IN_cAMP",
+          "S_PKA"
+        ],
+        [
+          "OUT_STROMAL_DECIDUALIZED",
+          "S_DECIDUALIZED",
+          "S_IGFBP1",
+          "S_PRL",
+          "S_SPP1",
+          "S_TAZ_ECM"
+        ]
+      ],
+      "complement_pairs": [
+        [
+          "E_ANXA2_ACTIN",
+          "E_PODXL"
+        ],
+        [
+          "E_DAG1_CLEAVED",
+          "E_PODXL"
+        ],
+        [
+          "E_DAG1_FULL",
+          "E_SECRETORY_STATE"
+        ],
+        [
+          "E_HBEGF",
+          "E_PODXL"
+        ],
+        [
+          "E_ITGAVB3_5",
+          "E_PODXL"
+        ],
+        [
+          "E_MUC1_BARRIER",
+          "E_SECRETORY_STATE"
+        ],
+        [
+          "E_MUC1_SLEX",
+          "E_PODXL"
+        ],
+        [
+          "E_PAEP",
+          "E_PODXL"
+        ],
+        [
+          "E_PC6",
+          "E_PODXL"
+        ],
+        [
+          "E_PODXL",
+          "E_SECRETORY_STATE"
+        ],
+        [
+          "E_PODXL",
+          "E_SPP1_EXPR"
+        ],
+        [
+          "S_FGF_MITOGENIC",
+          "S_HAND2"
+        ]
+      ],
+      "free_variables": [
+        "E_KLF12_HIGH",
+        "IN_ANTI_SPP1",
+        "IN_E2",
+        "IN_EMBRYO_CONDITIONED_SIGNAL",
+        "IN_EMBRYO_CONTACT",
+        "IN_EMBRYO_PRESENT",
+        "IN_ER_STRESS_EXCESS",
+        "IN_HAND2_LOSS",
+        "IN_HCG",
+        "IN_HIGH_ECM_STIFFNESS",
+        "IN_MIFEPRISTONE",
+        "IN_PROGESTIN",
+        "IN_TROPHECTODERM_COMPETENT",
+        "IN_XAV939",
+        "IN_cAMP",
+        "X_INTERFACE_ANTIADHESIVE_RELAY",
+        "X_INTERFACE_REDUNDANT_RELAY",
+        "X_INTERFACE_SPP1_RELAY",
+        "X_MECHANICAL_STRESS_RELAY"
+      ],
+      "measurement_tiers": {
+        "E_PAEP": "active_observation_mapping",
+        "OUT_EPITHELIAL_RECEPTIVE": "reported_composite_no_source_rows",
+        "OUT_STABLE_ADHESION": "functional_endpoint_ordinal_only",
+        "OUT_STROMAL_DECIDUALIZED": "reported_composite_no_source_rows",
+        "S_IGFBP1": "active_observation_mapping",
+        "S_PRL": "assayed_mapping_not_activated"
+      },
+      "never_binding_inhibitions": [
+        [
+          "E_DAG1_FULL",
+          "E_RECEPTIVE_SURFACE"
+        ],
+        [
+          "E_MUC1_BARRIER",
+          "E_RECEPTIVE_SURFACE"
+        ],
+        [
+          "E_PODXL",
+          "E_RECEPTIVE_SURFACE"
+        ],
+        [
+          "X_ANTIADHESIVE_ROUTE",
+          "OUT_MATERNAL_ADHESION_COMPETENCE"
+        ]
+      ],
+      "phenotype_inert_nodes": [
+        "E_ANXA2_ACTIN",
+        "E_CD98_CD9",
+        "E_CDH1_APICAL",
+        "E_DAG1_CLEAVED",
+        "E_HBEGF",
+        "E_IHH",
+        "E_MUC1_SLEX",
+        "E_SPP1_EXPR",
+        "IN_EMBRYO_CONDITIONED_SIGNAL",
+        "IN_HCG",
+        "IN_XAV939",
+        "S_NR2F2",
+        "S_SPP1",
+        "X_INTERFACE_ANTIADHESIVE_RELAY"
+      ],
+      "summary": {
+        "absorbed_dependencies": 15,
+        "alias_classes": 8,
+        "dependencies": 97,
+        "derived_nodes": 40,
+        "distinct_functions": 35,
+        "enumerated_states": 524288,
+        "free_variables": 19,
+        "max_depth": 11,
+        "measured_nodes": 2,
+        "model_version": "adoc-literature-superset-v0.5.0",
+        "never_binding_inhibitions": 4,
+        "nodes": 59,
+        "phenotype_inert_nodes": 14,
+        "unread_inputs": 3
+      },
+      "unread_inputs": [
+        "IN_EMBRYO_CONDITIONED_SIGNAL",
+        "IN_HCG",
+        "IN_XAV939"
+      ]
+    }
+  },
+  "audited_model": "adoc-literature-superset-v0.5.0",
+  "baseline_model": "adoc-literature-superset-v0.4.0",
+  "claim_boundary": "Structural and design-identifiability facts computed by exhaustive enumeration over the model's free variables. No simulation, rate, horizon or fitted parameter enters. Design and identifiability blocks carry the matched-unit caveat; the structural block does not need it.",
+  "comparison": {
+    "alias_classes_broken": [],
+    "alias_classes_new": [],
+    "baseline_distinct_boolean_functions": 35,
+    "delta_distinct_boolean_functions": 0,
+    "recomputed_blocks_identical": {
+      "design_alias.as_declared": true,
+      "design_alias.maternal_phase_only": true,
+      "identifiability": true,
+      "structural": true
+    }
+  },
+  "file_identity": {
+    "audited_dir": "models/superset/adoc-literature-superset-v0.5.0",
+    "baseline_dir": "models/superset/adoc-literature-superset-v0.4.0",
+    "differing": [
+      "README.md",
+      "executable_model_manifest.tsv",
+      "provenance.toml"
+    ],
+    "executable_byte_identical": true,
+    "files_compared": 41,
+    "identical": 38,
+    "network_bnd_sha256": "09e3b26aeb4e2f3b0339ef852764f5de4b922984df0b0a1014c91b4a17a36637",
+    "present_in_one_only": [],
+    "unexpected_differences": []
+  },
+  "generator_files": {
+    "src/dt_adoc/reporting/design_alias.py": "8d93c823906fa6bc1c8ee7c22d445f18b4d8ede72fa433cde71acaa510381dd0",
+    "src/dt_adoc/reporting/identifiability.py": "93f774f06e8d09875c87a43e33fbf24f259149d52c9cd5e82efa2dd96349c486",
+    "src/dt_adoc/reporting/network_overview.py": "c5b30ce295af94c05ae8b1189a9440abe206d048c0e1560765c35e547f492b89",
+    "src/dt_adoc/reporting/structure.py": "1cba9b5f4df299055d20be976ce564c862b073b27a616771df709e3ce3355b99",
+    "src/dt_adoc/reporting/u5_structural_audit.py": "8110e4ce665fe7b7b0740b4d45c8dc01de1d54ed3219d3f6fa0ddd0b376e8832"
+  },
+  "inputs": {
+    "config/calibration.yaml": "8fd4662ae17e6a112545e086831b5d46dab46746f00157136ededf962ee27a0b",
+    "config/observation_model_map.tsv": "74f0d5d0896beba57a0a03960239ad2fc039f315fa42a2209a65e228bfa3aff5",
+    "config/planned_design.yaml": "007b1a287f928e48746c1005a6d1bdc89bccc31d23dcd25ae89c960792d284eb",
+    "config/visualization.yaml": "8c1dcb6d6a7e0a4bba27aed956851f10d6f9f0d3cac98c9ade1f90de3ee63beb"
+  },
+  "matched_unit_caveat": "MATCHED-UNIT CONDITIONAL. Design-equivalence classes, observation classes, information statuses and proposed-panel counts assume one biological unit carries a single latent assignment through every arm and assay. ADOC does not provide that: adhesion is an aggregate per-embryo count, the secreted-protein mappings are unpaired, chips can share donors and epithelial and stromal cells in one chip may come from different donors, and the column-to-chip mapping for IGFBP-1 and PRL was lost (config/adoc_chip_donor_provenance.tsv). These numbers describe what a matched-unit design of this shape could identify, NOT what the current data identify.",
+  "measured_node_implications": [
+    {
+      "design_class_as_declared_plan": [
+        "E_ANXA2_ACTIN",
+        "E_DAG1_CLEAVED",
+        "E_HBEGF",
+        "E_IHH",
+        "E_ITGAVB3_5",
+        "E_MUC1_SLEX",
+        "E_PAEP",
+        "E_PC6",
+        "E_PGR",
+        "E_SECRETORY_STATE",
+        "E_SPP1_EXPR",
+        "OUT_STROMAL_DECIDUALIZED",
+        "S_BMP2",
+        "S_DECIDUALIZED",
+        "S_HAND2",
+        "S_IGFBP1",
+        "S_NR2F2",
+        "S_PGR",
+        "S_PRL",
+        "S_SPP1",
+        "S_TAZ_ECM",
+        "X_MECHANICAL_PERMISSIVE_ECM"
+      ],
+      "information_status": "directly_measured",
+      "matched_unit_conditional_fields": [
+        "design_class_as_declared_plan",
+        "information_status"
+      ],
+      "measurement_tier": "active_observation_mapping",
+      "node_id": "E_PAEP",
+      "structural_alias_class": [
+        "E_ANXA2_ACTIN",
+        "E_DAG1_CLEAVED",
+        "E_HBEGF",
+        "E_ITGAVB3_5",
+        "E_MUC1_SLEX",
+        "E_PAEP",
+        "E_PC6",
+        "E_SECRETORY_STATE",
+        "E_SPP1_EXPR"
+      ]
+    },
+    {
+      "design_class_as_declared_plan": [
+        "E_CD98_CD9",
+        "E_GP130_STAT3",
+        "E_LIF",
+        "E_RECEPTIVE_SURFACE",
+        "OUT_EPITHELIAL_RECEPTIVE"
+      ],
+      "information_status": "latent_unresolved",
+      "matched_unit_conditional_fields": [
+        "design_class_as_declared_plan",
+        "information_status"
+      ],
+      "measurement_tier": "reported_composite_no_source_rows",
+      "node_id": "OUT_EPITHELIAL_RECEPTIVE",
+      "structural_alias_class": [
+        "E_RECEPTIVE_SURFACE",
+        "OUT_EPITHELIAL_RECEPTIVE"
+      ]
+    },
+    {
+      "design_class_as_declared_plan": [
+        "OUT_STABLE_ADHESION"
+      ],
+      "information_status": "directly_measured",
+      "matched_unit_conditional_fields": [
+        "design_class_as_declared_plan",
+        "information_status"
+      ],
+      "measurement_tier": "functional_endpoint_ordinal_only",
+      "node_id": "OUT_STABLE_ADHESION",
+      "structural_alias_class": [
+        "OUT_STABLE_ADHESION"
+      ]
+    },
+    {
+      "design_class_as_declared_plan": [
+        "E_ANXA2_ACTIN",
+        "E_DAG1_CLEAVED",
+        "E_HBEGF",
+        "E_IHH",
+        "E_ITGAVB3_5",
+        "E_MUC1_SLEX",
+        "E_PAEP",
+        "E_PC6",
+        "E_PGR",
+        "E_SECRETORY_STATE",
+        "E_SPP1_EXPR",
+        "OUT_STROMAL_DECIDUALIZED",
+        "S_BMP2",
+        "S_DECIDUALIZED",
+        "S_HAND2",
+        "S_IGFBP1",
+        "S_NR2F2",
+        "S_PGR",
+        "S_PRL",
+        "S_SPP1",
+        "S_TAZ_ECM",
+        "X_MECHANICAL_PERMISSIVE_ECM"
+      ],
+      "information_status": "design_aliased_to_measured",
+      "matched_unit_conditional_fields": [
+        "design_class_as_declared_plan",
+        "information_status"
+      ],
+      "measurement_tier": "reported_composite_no_source_rows",
+      "node_id": "OUT_STROMAL_DECIDUALIZED",
+      "structural_alias_class": [
+        "OUT_STROMAL_DECIDUALIZED",
+        "S_DECIDUALIZED",
+        "S_IGFBP1",
+        "S_PRL",
+        "S_SPP1",
+        "S_TAZ_ECM"
+      ]
+    },
+    {
+      "design_class_as_declared_plan": [
+        "E_ANXA2_ACTIN",
+        "E_DAG1_CLEAVED",
+        "E_HBEGF",
+        "E_IHH",
+        "E_ITGAVB3_5",
+        "E_MUC1_SLEX",
+        "E_PAEP",
+        "E_PC6",
+        "E_PGR",
+        "E_SECRETORY_STATE",
+        "E_SPP1_EXPR",
+        "OUT_STROMAL_DECIDUALIZED",
+        "S_BMP2",
+        "S_DECIDUALIZED",
+        "S_HAND2",
+        "S_IGFBP1",
+        "S_NR2F2",
+        "S_PGR",
+        "S_PRL",
+        "S_SPP1",
+        "S_TAZ_ECM",
+        "X_MECHANICAL_PERMISSIVE_ECM"
+      ],
+      "information_status": "directly_measured",
+      "matched_unit_conditional_fields": [
+        "design_class_as_declared_plan",
+        "information_status"
+      ],
+      "measurement_tier": "active_observation_mapping",
+      "node_id": "S_IGFBP1",
+      "structural_alias_class": [
+        "OUT_STROMAL_DECIDUALIZED",
+        "S_DECIDUALIZED",
+        "S_IGFBP1",
+        "S_PRL",
+        "S_SPP1",
+        "S_TAZ_ECM"
+      ]
+    },
+    {
+      "design_class_as_declared_plan": [
+        "E_ANXA2_ACTIN",
+        "E_DAG1_CLEAVED",
+        "E_HBEGF",
+        "E_IHH",
+        "E_ITGAVB3_5",
+        "E_MUC1_SLEX",
+        "E_PAEP",
+        "E_PC6",
+        "E_PGR",
+        "E_SECRETORY_STATE",
+        "E_SPP1_EXPR",
+        "OUT_STROMAL_DECIDUALIZED",
+        "S_BMP2",
+        "S_DECIDUALIZED",
+        "S_HAND2",
+        "S_IGFBP1",
+        "S_NR2F2",
+        "S_PGR",
+        "S_PRL",
+        "S_SPP1",
+        "S_TAZ_ECM",
+        "X_MECHANICAL_PERMISSIVE_ECM"
+      ],
+      "information_status": "design_aliased_to_measured",
+      "matched_unit_conditional_fields": [
+        "design_class_as_declared_plan",
+        "information_status"
+      ],
+      "measurement_tier": "assayed_mapping_not_activated",
+      "node_id": "S_PRL",
+      "structural_alias_class": [
+        "OUT_STROMAL_DECIDUALIZED",
+        "S_DECIDUALIZED",
+        "S_IGFBP1",
+        "S_PRL",
+        "S_SPP1",
+        "S_TAZ_ECM"
+      ]
+    }
+  ],
+  "plan": "docs/v05_mechanistic_integration_plan.md \u00a717 U5",
+  "schema_version": "1.0",
+  "unit": "U5"
+}

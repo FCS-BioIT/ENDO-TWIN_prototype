@@ -1,0 +1,265 @@
+{
+  "addendum": {
+    "decided_on": "2026-09-24",
+    "gaps": [
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G5",
+      "G6",
+      "G7",
+      "G8",
+      "P0",
+      "RQ1",
+      "RQ2",
+      "RQ3",
+      "RQ4",
+      "RQ5",
+      "RQ6",
+      "G3R",
+      "G4R",
+      "MS1",
+      "SPB1",
+      "AL1",
+      "RAT1",
+      "SPP1X"
+    ],
+    "precedence": [
+      "technical validity",
+      "compartment integrity",
+      "contemporaneous expected-state confirmation",
+      "molecular ordinal call",
+      "SEC-class mapping"
+    ],
+    "record_type": "OWNER_DECISION / PRE_RUN_ADDENDUM"
+  },
+  "exit_gate": {
+    "E1": "PARTIALLY_SATISFIED",
+    "E2": "NOT_SATISFIED",
+    "E3": "NOT_SATISFIED",
+    "E4": "NOT_SATISFIED"
+  },
+  "frozen_boundaries": {
+    "IGFBP1_OFF_UPPER": 551.2605,
+    "IGFBP1_ON_LOWER": 8118.142,
+    "PAEP_LOW_UPPER": 25469.5652,
+    "PAEP_ON_LOWER": 178072.464
+  },
+  "frozen_table_c": {
+    "SEC-a": [
+      "OFF",
+      "ON"
+    ],
+    "SEC-b": [
+      "ON",
+      "ON"
+    ],
+    "SEC-c": [
+      "ON",
+      "ON"
+    ],
+    "SEC-d": [
+      "OFF",
+      "OFF"
+    ],
+    "SEC-e": [
+      "OFF",
+      "ON"
+    ]
+  },
+  "lineage": {
+    "frozen_stage3_sha256": {
+      "docs/experiments/stage3_decision_tables.md": "a2cc7291adfaf130f79f345201a30556ab16c9391c8598315a5735d6b0c3305b",
+      "docs/experiments/stage3_experiment_design.md": "7368b1f85007f677cd16c5f308d9571f9573a83771b3dfdb2bb34b593b068520",
+      "docs/experiments/stage3_experiment_design.tsv": "987d75644925346fab73e7251067094d04c01883af783a83c3775705b444ee74",
+      "docs/stage3_experiment_selection.md": "e6a5fa558bede27f20b329cfbfe7bd3ec90d4d41c0f5091ed52e3dd4cbdb113c"
+    },
+    "inputs_sha256": {
+      "config/calibration.yaml": "8fd4662ae17e6a112545e086831b5d46dab46746f00157136ededf962ee27a0b",
+      "config/observation_model_map.tsv": "74f0d5d0896beba57a0a03960239ad2fc039f315fa42a2209a65e228bfa3aff5",
+      "config/protocols.yaml": "243887238ee927770e53b8d5116c8f464c864abb84ddd8b0b4214b7146019f1a",
+      "docs/experiments/u8_stage3_rerank/u8_rerank_summary.json": "32c04bf6c006c9772ca6396358941e53b114a5e371b7980f83390be90d22d057",
+      "input_tables/adoc_secreted_proteins.tsv": "f203c10eb1dd9a917a985ed3bdf91451966b07888c09e2ec405330e10da63bdb"
+    },
+    "models_tree_sha256": "de1bddba2be91e837fefbd784c21790531790ec0ee85c5babd7d4dd2844657b5",
+    "roadmap_phase1b_section_sha256": "d07caefda698a6dc041c726557529de759e1d5b56921b0be627aaff33844e1e6"
+  },
+  "mifepristone": {
+    "direction": "NOT_APPLICABLE: constructed from SOFIA-HT-002 (LE002, LE038); not held out",
+    "magnitude": {
+      "exact_fixed_point_probability": 0,
+      "observed_successes": 1,
+      "observed_trials": 8,
+      "protocol_id": "adhesion_challenge_hormone_treated_mifepristone",
+      "rankable": false,
+      "role": "validation_if_held_out",
+      "structural_verdict": "structurally_contradicted"
+    },
+    "validation_claim": "none: structurally_contradicted and quantitatively_unscorable_for_ranking; cannot identify or justify a maternal-rule change"
+  },
+  "model_version": "adoc-literature-superset-v0.5.1",
+  "operational_prerequisites": {
+    "allocation_manifest": "docs/phase1b_closure/prospective_allocation_manifest_template.tsv",
+    "assay_metadata": "docs/phase1b_closure/prospective_assay_metadata_template.tsv",
+    "classification_ready": false,
+    "treatment_may_start": false
+  },
+  "overall_status_rule": "Computed from the exit-gate rows (kind=exit_gate) only; roadmap-item rows are the work that feeds them and are reported, not gated. CLOSED iff every exit-gate row is SATISFIED or NOT_APPLICABLE. Otherwise BLOCKED iff at least one unmet exit-gate row has unblock_route=NO_SCHEDULED_ROUTE, i.e. nothing in the current plan can supply what it needs. Otherwise PARTIAL (every unmet row has a scheduled route: in-repository work or the frozen prospective experiment).",
+  "phase1b_overall_status": "BLOCKED",
+  "premises": {
+    "adhesion_arms": {
+      "hormone_treated": {
+        "exact_fixed_point_probability": 0.82,
+        "observed_successes": 9,
+        "observed_trials": 19,
+        "protocol_id": "adhesion_challenge_hormone_treated",
+        "rankable": true,
+        "role": "calibration",
+        "structural_verdict": "consistent"
+      },
+      "hormone_treated_mifepristone": {
+        "exact_fixed_point_probability": 0,
+        "observed_successes": 1,
+        "observed_trials": 8,
+        "protocol_id": "adhesion_challenge_hormone_treated_mifepristone",
+        "rankable": false,
+        "role": "validation_if_held_out",
+        "structural_verdict": "structurally_contradicted"
+      },
+      "untreated": {
+        "exact_fixed_point_probability": 0,
+        "observed_successes": 0,
+        "observed_trials": 12,
+        "protocol_id": "adhesion_challenge_basal",
+        "rankable": true,
+        "role": "calibration",
+        "structural_verdict": "consistent"
+      }
+    },
+    "contract": {
+      "active_constraint_nodes": [
+        "E_PAEP"
+      ],
+      "active_constraints": [
+        "OM-001"
+      ],
+      "active_diagnostic_nodes": [
+        "S_IGFBP1"
+      ],
+      "active_diagnostics": [
+        "OM-002"
+      ],
+      "adhesion_role": "diagnostic_ordinal",
+      "calibrated_physical_time": false,
+      "duration_units": "relative_only",
+      "magnitude_fitted": false,
+      "mifepristone_role": "validation_if_held_out",
+      "no_quantitative_objective": true,
+      "prl_rows": {
+        "OM-006": {
+          "activation_status": "provisional",
+          "calibration_role": "context_only",
+          "objective_treatment": "not_used"
+        },
+        "OM-007": {
+          "activation_status": "rejected",
+          "calibration_role": "rejected",
+          "objective_treatment": "rejected_no_objective_term"
+        },
+        "OM-014": {
+          "activation_status": "provisional",
+          "calibration_role": "context_only",
+          "objective_treatment": "provisional_no_objective_term"
+        },
+        "OM-015": {
+          "activation_status": "reported_only",
+          "calibration_role": "context_only",
+          "objective_treatment": "reported_only_no_objective_term"
+        }
+      }
+    },
+    "fixed_point_values_binary": true,
+    "maternal_fixed_point": {
+      "basal_maternal": {
+        "E_PAEP": 0,
+        "S_IGFBP1": 0,
+        "S_PRL": 0
+      },
+      "e2_primed_maternal": {
+        "E_PAEP": 0,
+        "S_IGFBP1": 0,
+        "S_PRL": 0
+      },
+      "hormone_treated_maternal": {
+        "E_PAEP": 1.0,
+        "S_IGFBP1": 1.0,
+        "S_PRL": 1.0
+      }
+    },
+    "model_version": "adoc-literature-superset-v0.5.1",
+    "om001_direction_holds": true,
+    "om002_non_inversion_holds": true,
+    "ordinal_claim": {
+      "holds_as": "an expectation over the latent priors, not per assignment",
+      "holds_on_adopted_model": true,
+      "mifepristone_on_in_any_assignment": false,
+      "recorded_status": "satisfied_by_v0_4",
+      "statement": "untreated < hormone_treated > hormone_treated_mifepristone",
+      "untreated_on_in_any_assignment": false
+    },
+    "s_prl_rule_equals_s_igfbp1_rule": true,
+    "structure": {
+      "acyclic_given_free_variables": true,
+      "free_variables": 19,
+      "nodes": 59,
+      "ordered_non_free_nodes": 40
+    }
+  },
+  "reference_bands": {
+    "igfbp1_day0": {
+      "exact_zeros": 1,
+      "n": 5,
+      "nonzero_max": 551.2605,
+      "nonzero_min": 37.89854
+    },
+    "igfbp1_day6": {
+      "exact_zeros": 2,
+      "n": 5,
+      "nonzero_max": 14284.54,
+      "nonzero_min": 8118.142
+    },
+    "paep_e2_only": {
+      "max": 25469.5652,
+      "min": 10165.2174,
+      "n": 5
+    },
+    "paep_full_cocktail": {
+      "max": 585608.696,
+      "min": 178072.464,
+      "n": 5
+    },
+    "paep_rows_carry_a_sampling_day": false,
+    "source_sha256": "f203c10eb1dd9a917a985ed3bdf91451966b07888c09e2ec405330e10da63bdb"
+  },
+  "residual_pre_run_questions": [],
+  "roadmap_items": {
+    "R1": "PARTIALLY_SATISFIED",
+    "R2": "PARTIALLY_SATISFIED",
+    "R3a": "NOT_SATISFIED",
+    "R3b": "NOT_APPLICABLE",
+    "R3c": "PARTIALLY_SATISFIED",
+    "R3d": "PARTIALLY_SATISFIED",
+    "R3e": "NOT_SATISFIED",
+    "R4a": "NOT_APPLICABLE",
+    "R4b": "NOT_SATISFIED",
+    "R5": "PARTIALLY_SATISFIED"
+  },
+  "task": "build-phase1b-closure",
+  "unmet_exit_criteria_without_scheduled_route": [
+    "E1",
+    "E2",
+    "E3",
+    "E4"
+  ]
+}

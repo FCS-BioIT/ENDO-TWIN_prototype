@@ -1,0 +1,21 @@
+claim_id	permission	statement	basis	ceiling_source
+C01	MAY	The adopted model's prior-weighted expected fixed-point occupancy of adhesion orders untreated < hormone_treated > hormone_treated_mifepristone. This holds in expectation, not assignment by assignment; no latent assignment inverts it.	computed premise (exact enumeration, v0.5.1)	config/calibration.yaml retained_ordinal_claim
+C02	MAY	Full cocktail (E2 + MPA + cAMP + XAV939) > E2-only priming on E_PAEP (OM-001), as a binary feasibility gate at the fixed point.	computed premise; OM-001 active_constraint	OM-001 claim_ceiling
+C03	MAY	S_IGFBP1 does not invert between basal and hormone-treated maternal states (OM-002, non-exclusionary diagnostic).	computed premise; OM-002 active_diagnostic	OM-002 claim_ceiling
+C04	MAY	The held-out mifepristone magnitude is structurally_contradicted (observed 1/8, model P exactly 0 at the fixed point) and quantitatively_unscorable_for_ranking. It cannot identify or justify a maternal-rule change.	computed premise; structural_verdict	config/calibration.yaml structural_contradiction_policy
+C05	MAY	What cannot be identified is stated: SEC-a vs SEC-e on every usable assay; S_PRL = S_IGFBP1; the recorded alias classes.	docs/experiments/stage3_decision_tables.md; computed premise	docs/stage3_experiment_selection.md §7
+C06	MAY	dropout_e2 remains the first-ranked prospective experiment on v0.5.1, conditional on the frozen Stage-3 criteria and on the D1 call.	docs/experiments/u8_stage3_rerank/u8_rerank_summary.json	docs/v05_u8_stage3_rerank.md §1, §4
+N01	MAY_NOT	Any quantitative or magnitude-fitted calibration, or any fitted objective, including a replacement for the demoted adhesion likelihood.	config/calibration.yaml no_replacement_objective	config/calibration.yaml; config/observation_model_map.tsv
+N02	MAY_NOT	That mifepristone is a successful validation, or that the model predicts the held-out perturbation.	R4b, E3	config/calibration.yaml structural_contradiction_policy
+N03	MAY_NOT	That the mifepristone direction is an independent prediction.	R4a (LE002/LE038 cite SOFIA-HT-002)	docs/results_reproducibility_matrix.md
+N04	MAY_NOT	That the maternal model is falsified by, or correct at, the mifepristone arm.	R4b	config/calibration.yaml structural_contradiction_policy
+N05	MAY_NOT	Any physical time, day count, delay or transition rate. MaBoSS time is dimensionless and the fixed-point horizon is not a day.	calibrated_physical_time = false; duration_units = relative_only	config/calibration.yaml time_units
+N06	MAY_NOT	Graded molecular agreement or ranking power at the fixed point: E_PAEP and S_IGFBP1 are binary there.	computed premise	config/calibration.yaml horizon_note
+N07	MAY_NOT	The registered P1-PAEP 'HT versus untreated' claim; no untreated PAEP arm exists.	OM-001	OM-001 claim_ceiling
+N08	MAY_NOT	PRL as a calibration or validation term, or the IGFBP-1-before-PRL onset order as model behaviour.	OM-006/OM-014/OM-016; S_PRL = S_IGFBP1	OM-006 exclusion_reason ('No numeric weight, ever.')
+N09	MAY_NOT	Any patient-level variance, standard error, confidence interval, paired-donor test or personalization claim.	chips are not independent units	config/adoc_chip_donor_provenance.tsv; SOFIA-COMM-005
+N10	MAY_NOT	Attribution of any effect to MPA, cAMP or XAV939 individually.	OM-017	OM-017
+N11	MAY_NOT	That the model is robust to its uncertain assumptions, or has been through one-at-a-time or global sensitivity analysis.	R3a, R3e, E4	this audit
+N12	MAY_NOT	That simulated adhesion probabilities are experimental or clinical attachment probabilities, or that the model is a validated patient replica.	AGENTS.md model and claim boundaries	docs/endpoint/README.md
+N13	MAY_NOT	That a future dropout_e2 result validates the model. It is construction and discrimination evidence for the SEC fork.	E3	AGENTS.md leakage control
+N14	MAY_NOT	That Phase 1B is closed.	derive_overall_status	this audit

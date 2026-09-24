@@ -1,0 +1,383 @@
+{
+  "artifact": "adoc_functional_endpoint_replicates",
+  "claim_boundary": "Simulated values are MaBoSS time-averaged node occupancies (docs/maboss_estimator_semantics.md), not clinical or experimental adhesion probabilities. The across-replicate SD is run-to-run reproducibility of the estimator on disjoint seed blocks: not an experimental, biological or model-structure uncertainty, and not an i.i.d. Monte Carlo SE.",
+  "converged_phase_horizon": 25.0,
+  "declared_horizon": "config/protocols.yaml relative_duration per phase (dimensionless MaBoSS time; ~4000x short of the endpoint fixed point, docs/endpoint_convergence_finding.md)",
+  "exact_converged": {
+    "hormone_treated": {
+      "exact_converged_value": 0.82,
+      "latent_free_variables": [
+        "E_KLF12_HIGH",
+        "X_MECHANICAL_STRESS_RELAY",
+        "X_INTERFACE_SPP1_RELAY",
+        "X_INTERFACE_REDUNDANT_RELAY",
+        "X_INTERFACE_ANTIADHESIVE_RELAY"
+      ],
+      "latent_priors": {
+        "X_INTERFACE_ANTIADHESIVE_RELAY": 0.2,
+        "X_INTERFACE_REDUNDANT_RELAY": 0.4,
+        "X_INTERFACE_SPP1_RELAY": 0.7,
+        "X_MECHANICAL_STRESS_RELAY": 0.3
+      },
+      "protocol_id": "adhesion_challenge_hormone_treated"
+    },
+    "mifepristone": {
+      "exact_converged_value": 0,
+      "latent_free_variables": [
+        "E_KLF12_HIGH",
+        "X_MECHANICAL_STRESS_RELAY",
+        "X_INTERFACE_SPP1_RELAY",
+        "X_INTERFACE_REDUNDANT_RELAY",
+        "X_INTERFACE_ANTIADHESIVE_RELAY"
+      ],
+      "latent_priors": {
+        "X_INTERFACE_ANTIADHESIVE_RELAY": 0.2,
+        "X_INTERFACE_REDUNDANT_RELAY": 0.4,
+        "X_INTERFACE_SPP1_RELAY": 0.7,
+        "X_MECHANICAL_STRESS_RELAY": 0.3
+      },
+      "protocol_id": "adhesion_challenge_hormone_treated_mifepristone"
+    },
+    "untreated": {
+      "exact_converged_value": 0,
+      "latent_free_variables": [
+        "E_KLF12_HIGH",
+        "X_MECHANICAL_STRESS_RELAY",
+        "X_INTERFACE_SPP1_RELAY",
+        "X_INTERFACE_REDUNDANT_RELAY",
+        "X_INTERFACE_ANTIADHESIVE_RELAY"
+      ],
+      "latent_priors": {
+        "X_INTERFACE_ANTIADHESIVE_RELAY": 0.2,
+        "X_INTERFACE_REDUNDANT_RELAY": 0.4,
+        "X_INTERFACE_SPP1_RELAY": 0.7,
+        "X_MECHANICAL_STRESS_RELAY": 0.3
+      },
+      "protocol_id": "adhesion_challenge_basal"
+    }
+  },
+  "executable_identical_to_parent": true,
+  "executable_identity": {
+    "baseline_cfg": {
+      "adoc-literature-superset-v0.4.0": "4d42bdcbcfcceaedaafeeb96fe76400700175c969cec15bff9e02f360ff4f41c",
+      "adoc-literature-superset-v0.5.0": "4d42bdcbcfcceaedaafeeb96fe76400700175c969cec15bff9e02f360ff4f41c"
+    },
+    "conditions/adhesion_challenge_basal.cfg": {
+      "adoc-literature-superset-v0.4.0": "1cde2d12c5fb95b3680eb10d7a7160002b79f339af16d4f64b15fe98e67d27fa",
+      "adoc-literature-superset-v0.5.0": "1cde2d12c5fb95b3680eb10d7a7160002b79f339af16d4f64b15fe98e67d27fa"
+    },
+    "conditions/adhesion_challenge_excess_er_stress.cfg": {
+      "adoc-literature-superset-v0.4.0": "21a7f0570ed0b73cadba710cb4a778ad3552a07e06102ce28cce931e7369f1f1",
+      "adoc-literature-superset-v0.5.0": "21a7f0570ed0b73cadba710cb4a778ad3552a07e06102ce28cce931e7369f1f1"
+    },
+    "conditions/adhesion_challenge_high_ecm_stiffness.cfg": {
+      "adoc-literature-superset-v0.4.0": "65a5d9f237baa51be310343b410d1a76f499832a1495bb8785ff0c01b19f1b4c",
+      "adoc-literature-superset-v0.5.0": "65a5d9f237baa51be310343b410d1a76f499832a1495bb8785ff0c01b19f1b4c"
+    },
+    "conditions/adhesion_challenge_hormone_treated.cfg": {
+      "adoc-literature-superset-v0.4.0": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+      "adoc-literature-superset-v0.5.0": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688"
+    },
+    "conditions/adhesion_challenge_hormone_treated_anti_spp1.cfg": {
+      "adoc-literature-superset-v0.4.0": "f1a307764f8f06a69941f5d637ccecb4bb18992481b50784b7f3615617a2068a",
+      "adoc-literature-superset-v0.5.0": "f1a307764f8f06a69941f5d637ccecb4bb18992481b50784b7f3615617a2068a"
+    },
+    "conditions/adhesion_challenge_hormone_treated_hand2_loss.cfg": {
+      "adoc-literature-superset-v0.4.0": "610c2f675656e56e833ee3e98da5f72fe41d9574b3eb03437b6c4a5b81ad5a7a",
+      "adoc-literature-superset-v0.5.0": "610c2f675656e56e833ee3e98da5f72fe41d9574b3eb03437b6c4a5b81ad5a7a"
+    },
+    "conditions/adhesion_challenge_hormone_treated_mifepristone.cfg": {
+      "adoc-literature-superset-v0.4.0": "4881de9c5a5a89ed81aca919b38cb4a546425cee28b74a5cb9f3c5ff399e6162",
+      "adoc-literature-superset-v0.5.0": "4881de9c5a5a89ed81aca919b38cb4a546425cee28b74a5cb9f3c5ff399e6162"
+    },
+    "conditions/adhesion_challenge_washout.cfg": {
+      "adoc-literature-superset-v0.4.0": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+      "adoc-literature-superset-v0.5.0": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688"
+    },
+    "conditions/basal_maternal.cfg": {
+      "adoc-literature-superset-v0.4.0": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+      "adoc-literature-superset-v0.5.0": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183"
+    },
+    "conditions/e2_primed_maternal.cfg": {
+      "adoc-literature-superset-v0.4.0": "93006ce97fa5244594593d3f500f1c8d9699ae547030608079856f0d1f190bbe",
+      "adoc-literature-superset-v0.5.0": "93006ce97fa5244594593d3f500f1c8d9699ae547030608079856f0d1f190bbe"
+    },
+    "conditions/embryo_absent.cfg": {
+      "adoc-literature-superset-v0.4.0": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "adoc-literature-superset-v0.5.0": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9"
+    },
+    "conditions/embryo_incompetent.cfg": {
+      "adoc-literature-superset-v0.4.0": "77a4afb84e58268c2af3fab9e636beb678939b8c89a0ec8432716b5f071ff64f",
+      "adoc-literature-superset-v0.5.0": "77a4afb84e58268c2af3fab9e636beb678939b8c89a0ec8432716b5f071ff64f"
+    },
+    "conditions/excess_er_stress.cfg": {
+      "adoc-literature-superset-v0.4.0": "e3bbc93b2e48c732634c0fbc5cf2f7d634a03f8a93333ccb58182679d12d5c62",
+      "adoc-literature-superset-v0.5.0": "e3bbc93b2e48c732634c0fbc5cf2f7d634a03f8a93333ccb58182679d12d5c62"
+    },
+    "conditions/high_ecm_stiffness.cfg": {
+      "adoc-literature-superset-v0.4.0": "f0ca6146c32624e73052a995c0f54f3d7fe56b6865cb95b81cac6566ffa483c0",
+      "adoc-literature-superset-v0.5.0": "f0ca6146c32624e73052a995c0f54f3d7fe56b6865cb95b81cac6566ffa483c0"
+    },
+    "conditions/hormone_treated.cfg": {
+      "adoc-literature-superset-v0.4.0": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "adoc-literature-superset-v0.5.0": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9"
+    },
+    "conditions/hormone_treated_anti_spp1.cfg": {
+      "adoc-literature-superset-v0.4.0": "d0e7e3c5d484e60ee58ea4961a9bef7e6084ab80257dfe177cd80c456cdc725d",
+      "adoc-literature-superset-v0.5.0": "d0e7e3c5d484e60ee58ea4961a9bef7e6084ab80257dfe177cd80c456cdc725d"
+    },
+    "conditions/hormone_treated_hand2_loss.cfg": {
+      "adoc-literature-superset-v0.4.0": "30b949013ab6b195cbfbc6aff8efcec4e4edda6df319b49bdbb2585992e7ad1f",
+      "adoc-literature-superset-v0.5.0": "30b949013ab6b195cbfbc6aff8efcec4e4edda6df319b49bdbb2585992e7ad1f"
+    },
+    "conditions/hormone_treated_maternal.cfg": {
+      "adoc-literature-superset-v0.4.0": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "adoc-literature-superset-v0.5.0": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9"
+    },
+    "conditions/hormone_treated_mifepristone.cfg": {
+      "adoc-literature-superset-v0.4.0": "91ebe467a4adaba0f35b76943c429f134bcc36e8d15f38daebf3aacfb94f76bd",
+      "adoc-literature-superset-v0.5.0": "91ebe467a4adaba0f35b76943c429f134bcc36e8d15f38daebf3aacfb94f76bd"
+    },
+    "conditions/untreated.cfg": {
+      "adoc-literature-superset-v0.4.0": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+      "adoc-literature-superset-v0.5.0": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183"
+    },
+    "conditions/washout.cfg": {
+      "adoc-literature-superset-v0.4.0": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "adoc-literature-superset-v0.5.0": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9"
+    },
+    "network_bnd": {
+      "adoc-literature-superset-v0.4.0": "09e3b26aeb4e2f3b0339ef852764f5de4b922984df0b0a1014c91b4a17a36637",
+      "adoc-literature-superset-v0.5.0": "09e3b26aeb4e2f3b0339ef852764f5de4b922984df0b0a1014c91b4a17a36637"
+    }
+  },
+  "generator_files": {
+    "src/dt_adoc/concordance/simulate.py": "4eba7fe6f42b57403b8abdb57490ae5e1bf1b039617645b66453ae34607c2fdc",
+    "src/dt_adoc/protocols/conditions.py": "a867c94207b4799ef28dd3c6d23eae23478dc77c4215dad3d8e3aeaecfa81bf6",
+    "src/dt_adoc/reporting/endpoint_replicates.py": "043db7cbc1c9cc1a79f51c5a440040a1185ebba25b3d42a6b43cbd0c54814940",
+    "src/dt_adoc/simulation/runner.py": "0de4c52bbb8a68495623f281a691fbefcf1c626ed6183751123414bf49f07449"
+  },
+  "lineages": {
+    "hormone_treated": [
+      "basal_maternal",
+      "e2_primed_maternal",
+      "hormone_treated_maternal",
+      "adhesion_challenge_hormone_treated"
+    ],
+    "mifepristone": [
+      "basal_maternal",
+      "e2_primed_maternal",
+      "hormone_treated_maternal",
+      "hormone_treated_mifepristone",
+      "adhesion_challenge_hormone_treated_mifepristone"
+    ],
+    "untreated": [
+      "basal_maternal",
+      "adhesion_challenge_basal"
+    ]
+  },
+  "model_version": "adoc-literature-superset-v0.5.0",
+  "observed": {
+    "hormone_treated": {
+      "magnitude_fitted": false,
+      "objective_role": "diagnostic_ordinal",
+      "protocol_id": "adhesion_challenge_hormone_treated",
+      "role": "calibration",
+      "successes": 9,
+      "trials": 19
+    },
+    "mifepristone": {
+      "magnitude_fitted": false,
+      "objective_role": "diagnostic_ordinal",
+      "protocol_id": "adhesion_challenge_hormone_treated_mifepristone",
+      "role": "validation_if_held_out",
+      "successes": 1,
+      "trials": 8
+    },
+    "untreated": {
+      "magnitude_fitted": false,
+      "objective_role": "diagnostic_ordinal",
+      "protocol_id": "adhesion_challenge_basal",
+      "role": "calibration",
+      "successes": 0,
+      "trials": 12
+    }
+  },
+  "parent_model_version": "adoc-literature-superset-v0.4.0",
+  "provenance": {
+    "git_commit": "7a7eb34a4f7e5fe0ecaf8462ee3216296746846a",
+    "git_tree_dirty": true,
+    "implementation_digest": "57ce705a868d28f6b385efa66c39f8b5445ce62db9677a124d29c09d67c613cf",
+    "maboss_python_version": "0.8.15",
+    "protocols_yaml_sha256": "243887238ee927770e53b8d5116c8f464c864abb84ddd8b0b4214b7146019f1a",
+    "time_tick": 0.1
+  },
+  "python_version": "3.12.13",
+  "recorded_nodes": [
+    "OUT_STABLE_ADHESION",
+    "OUT_MATERNAL_ADHESION_COMPETENCE",
+    "X_INTERFACE_SPP1_RELAY",
+    "X_INTERFACE_REDUNDANT_RELAY"
+  ],
+  "replicates": 50,
+  "replicates_tsv": "docs/endpoint/endpoint_replicates.tsv",
+  "replicates_tsv_sha256": "9fa3fb526f51f62866b3c3b6e2697b74e53d6ac880122db766d6c5d7a1c63671",
+  "schema_version": "1.0",
+  "seed_rule": "seed_r = 1 + r * trajectory_count; trajectory k of replicate r is seeded seed_r + k, so replicate seed ranges are disjoint",
+  "seed_structure_probe": {
+    "disjoint_control": {
+      "max_abs_diff_node_table": 0.42499999999999966,
+      "seeds": [
+        1,
+        41
+      ],
+      "trajectories": 40
+    },
+    "horizon": "declared",
+    "probe_protocol": "hormone_treated_maternal",
+    "relay_disjoint_blocks": {
+      "100": {
+        "block_seeds": [
+          1,
+          101,
+          201,
+          301,
+          401,
+          501,
+          601,
+          701,
+          801,
+          901
+        ],
+        "iid_binomial_sd_reference": 0.0458257569495584,
+        "observed_sd": 0.009944289260117535,
+        "relay_occupancy": [
+          0.68,
+          0.7100000000000002,
+          0.7000000000000002,
+          0.7100000000000001,
+          0.7,
+          0.6900000000000002,
+          0.7000000000000002,
+          0.7100000000000001,
+          0.7000000000000002,
+          0.7100000000000001
+        ]
+      },
+      "20000": {
+        "block_seeds": [
+          1,
+          20001,
+          40001,
+          60001,
+          80001,
+          100001,
+          120001,
+          140001,
+          160001,
+          180001
+        ],
+        "iid_binomial_sd_reference": 0.00324037034920393,
+        "observed_sd": 7.817359599704855e-05,
+        "relay_occupancy": [
+          0.7000000000000144,
+          0.7000000000000144,
+          0.6999500000000145,
+          0.7001000000000145,
+          0.6999500000000145,
+          0.7001000000000145,
+          0.6999000000000144,
+          0.7001000000000143,
+          0.6999000000000144,
+          0.7000000000000145
+        ]
+      }
+    },
+    "relay_node": "X_INTERFACE_SPP1_RELAY",
+    "relay_prior": 0.7,
+    "relay_single_trajectory_draws_seeds_1_to_block": "1011011101101110110110111011011001101101",
+    "run_equals_union_of_consecutive_single_seed_runs": true,
+    "tolerance": 1e-12,
+    "union_tests": [
+      {
+        "joint_states_at_last_tick": 65,
+        "max_abs_diff_joint_states": 0.0,
+        "max_abs_diff_node_table": 8.881784197001252e-16,
+        "node_table_shape": [
+          40,
+          46
+        ],
+        "seed": 1,
+        "single_run_seeds": "1..40",
+        "trajectories": 40,
+        "transient_node_tick_cells": 1299
+      },
+      {
+        "joint_states_at_last_tick": 67,
+        "max_abs_diff_joint_states": 0.0,
+        "max_abs_diff_node_table": 8.881784197001252e-16,
+        "node_table_shape": [
+          40,
+          46
+        ],
+        "seed": 2,
+        "single_run_seeds": "2..41",
+        "trajectories": 40,
+        "transient_node_tick_cells": 1299
+      }
+    ]
+  },
+  "seeds": [
+    1,
+    20001,
+    40001,
+    60001,
+    80001,
+    100001,
+    120001,
+    140001,
+    160001,
+    180001,
+    200001,
+    220001,
+    240001,
+    260001,
+    280001,
+    300001,
+    320001,
+    340001,
+    360001,
+    380001,
+    400001,
+    420001,
+    440001,
+    460001,
+    480001,
+    500001,
+    520001,
+    540001,
+    560001,
+    580001,
+    600001,
+    620001,
+    640001,
+    660001,
+    680001,
+    700001,
+    720001,
+    740001,
+    760001,
+    780001,
+    800001,
+    820001,
+    840001,
+    860001,
+    880001,
+    900001,
+    920001,
+    940001,
+    960001,
+    980001
+  ],
+  "trajectory_count": 20000
+}

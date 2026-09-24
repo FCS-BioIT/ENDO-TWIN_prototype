@@ -1,0 +1,1201 @@
+arm_id	protocol_id	horizon_class	phase_horizon	replicate	seed	trajectory_seed_range	trajectory_count	node_id	value
+untreated	adhesion_challenge_basal	converged	25.0	0	1	1..20000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	0	1	1..20000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	0	1	1..20000	20000	X_INTERFACE_SPP1_RELAY	0.6999500000000144
+untreated	adhesion_challenge_basal	converged	25.0	0	1	1..20000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3999999999999987
+untreated	adhesion_challenge_basal	converged	25.0	1	20001	20001..40000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	1	20001	20001..40000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	1	20001	20001..40000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000144
+untreated	adhesion_challenge_basal	converged	25.0	1	20001	20001..40000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3998999999999979
+untreated	adhesion_challenge_basal	converged	25.0	2	40001	40001..60000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	2	40001	40001..60000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	2	40001	40001..60000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000146
+untreated	adhesion_challenge_basal	converged	25.0	2	40001	40001..60000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000499999999986
+untreated	adhesion_challenge_basal	converged	25.0	3	60001	60001..80000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	3	60001	60001..80000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	3	60001	60001..80000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000145
+untreated	adhesion_challenge_basal	converged	25.0	3	60001	60001..80000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39989999999999865
+untreated	adhesion_challenge_basal	converged	25.0	4	80001	80001..100000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	4	80001	80001..100000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	4	80001	80001..100000	20000	X_INTERFACE_SPP1_RELAY	0.7000500000000145
+untreated	adhesion_challenge_basal	converged	25.0	4	80001	80001..100000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3999999999999984
+untreated	adhesion_challenge_basal	converged	25.0	5	100001	100001..120000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	5	100001	100001..120000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	5	100001	100001..120000	20000	X_INTERFACE_SPP1_RELAY	0.7000500000000145
+untreated	adhesion_challenge_basal	converged	25.0	5	100001	100001..120000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3999999999999991
+untreated	adhesion_challenge_basal	converged	25.0	6	120001	120001..140000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	6	120001	120001..140000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	6	120001	120001..140000	20000	X_INTERFACE_SPP1_RELAY	0.6999000000000144
+untreated	adhesion_challenge_basal	converged	25.0	6	120001	120001..140000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000499999999981
+untreated	adhesion_challenge_basal	converged	25.0	7	140001	140001..160000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	7	140001	140001..160000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	7	140001	140001..160000	20000	X_INTERFACE_SPP1_RELAY	0.7001000000000143
+untreated	adhesion_challenge_basal	converged	25.0	7	140001	140001..160000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000499999999985
+untreated	adhesion_challenge_basal	converged	25.0	8	160001	160001..180000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	8	160001	160001..180000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	8	160001	160001..180000	20000	X_INTERFACE_SPP1_RELAY	0.6999000000000144
+untreated	adhesion_challenge_basal	converged	25.0	8	160001	160001..180000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3999499999999978
+untreated	adhesion_challenge_basal	converged	25.0	9	180001	180001..200000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	9	180001	180001..200000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	9	180001	180001..200000	20000	X_INTERFACE_SPP1_RELAY	0.6999500000000144
+untreated	adhesion_challenge_basal	converged	25.0	9	180001	180001..200000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40004999999999874
+untreated	adhesion_challenge_basal	converged	25.0	10	200001	200001..220000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	10	200001	200001..220000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	10	200001	200001..220000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000142
+untreated	adhesion_challenge_basal	converged	25.0	10	200001	200001..220000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39994999999999814
+untreated	adhesion_challenge_basal	converged	25.0	11	220001	220001..240000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	11	220001	220001..240000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	11	220001	220001..240000	20000	X_INTERFACE_SPP1_RELAY	0.6999000000000144
+untreated	adhesion_challenge_basal	converged	25.0	11	220001	220001..240000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40004999999999846
+untreated	adhesion_challenge_basal	converged	25.0	12	240001	240001..260000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	12	240001	240001..260000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	12	240001	240001..260000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000144
+untreated	adhesion_challenge_basal	converged	25.0	12	240001	240001..260000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39999999999999875
+untreated	adhesion_challenge_basal	converged	25.0	13	260001	260001..280000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	13	260001	260001..280000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	13	260001	260001..280000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000145
+untreated	adhesion_challenge_basal	converged	25.0	13	260001	260001..280000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40024999999999805
+untreated	adhesion_challenge_basal	converged	25.0	14	280001	280001..300000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	14	280001	280001..300000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	14	280001	280001..300000	20000	X_INTERFACE_SPP1_RELAY	0.7000500000000143
+untreated	adhesion_challenge_basal	converged	25.0	14	280001	280001..300000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39979999999999866
+untreated	adhesion_challenge_basal	converged	25.0	15	300001	300001..320000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	15	300001	300001..320000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	15	300001	300001..320000	20000	X_INTERFACE_SPP1_RELAY	0.7000500000000143
+untreated	adhesion_challenge_basal	converged	25.0	15	300001	300001..320000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40004999999999763
+untreated	adhesion_challenge_basal	converged	25.0	16	320001	320001..340000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	16	320001	320001..340000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	16	320001	320001..340000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000144
+untreated	adhesion_challenge_basal	converged	25.0	16	320001	320001..340000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40004999999999874
+untreated	adhesion_challenge_basal	converged	25.0	17	340001	340001..360000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	17	340001	340001..360000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	17	340001	340001..360000	20000	X_INTERFACE_SPP1_RELAY	0.6999500000000143
+untreated	adhesion_challenge_basal	converged	25.0	17	340001	340001..360000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39989999999999803
+untreated	adhesion_challenge_basal	converged	25.0	18	360001	360001..380000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	18	360001	360001..380000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	18	360001	360001..380000	20000	X_INTERFACE_SPP1_RELAY	0.7000500000000143
+untreated	adhesion_challenge_basal	converged	25.0	18	360001	360001..380000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000499999999989
+untreated	adhesion_challenge_basal	converged	25.0	19	380001	380001..400000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	19	380001	380001..400000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	19	380001	380001..400000	20000	X_INTERFACE_SPP1_RELAY	0.6998500000000144
+untreated	adhesion_challenge_basal	converged	25.0	19	380001	380001..400000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3999999999999986
+untreated	adhesion_challenge_basal	converged	25.0	20	400001	400001..420000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	20	400001	400001..420000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	20	400001	400001..420000	20000	X_INTERFACE_SPP1_RELAY	0.7001500000000146
+untreated	adhesion_challenge_basal	converged	25.0	20	400001	400001..420000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3999999999999982
+untreated	adhesion_challenge_basal	converged	25.0	21	420001	420001..440000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	21	420001	420001..440000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	21	420001	420001..440000	20000	X_INTERFACE_SPP1_RELAY	0.6998500000000145
+untreated	adhesion_challenge_basal	converged	25.0	21	420001	420001..440000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3999999999999986
+untreated	adhesion_challenge_basal	converged	25.0	22	440001	440001..460000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	22	440001	440001..460000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	22	440001	440001..460000	20000	X_INTERFACE_SPP1_RELAY	0.7001500000000145
+untreated	adhesion_challenge_basal	converged	25.0	22	440001	440001..460000	20000	X_INTERFACE_REDUNDANT_RELAY	0.400049999999998
+untreated	adhesion_challenge_basal	converged	25.0	23	460001	460001..480000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	23	460001	460001..480000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	23	460001	460001..480000	20000	X_INTERFACE_SPP1_RELAY	0.6999000000000144
+untreated	adhesion_challenge_basal	converged	25.0	23	460001	460001..480000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40009999999999885
+untreated	adhesion_challenge_basal	converged	25.0	24	480001	480001..500000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	24	480001	480001..500000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	24	480001	480001..500000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000144
+untreated	adhesion_challenge_basal	converged	25.0	24	480001	480001..500000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39974999999999833
+untreated	adhesion_challenge_basal	converged	25.0	25	500001	500001..520000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	25	500001	500001..520000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	25	500001	500001..520000	20000	X_INTERFACE_SPP1_RELAY	0.7001500000000143
+untreated	adhesion_challenge_basal	converged	25.0	25	500001	500001..520000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000999999999987
+untreated	adhesion_challenge_basal	converged	25.0	26	520001	520001..540000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	26	520001	520001..540000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	26	520001	520001..540000	20000	X_INTERFACE_SPP1_RELAY	0.6998500000000143
+untreated	adhesion_challenge_basal	converged	25.0	26	520001	520001..540000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39994999999999853
+untreated	adhesion_challenge_basal	converged	25.0	27	540001	540001..560000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	27	540001	540001..560000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	27	540001	540001..560000	20000	X_INTERFACE_SPP1_RELAY	0.7002000000000145
+untreated	adhesion_challenge_basal	converged	25.0	27	540001	540001..560000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40009999999999835
+untreated	adhesion_challenge_basal	converged	25.0	28	560001	560001..580000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	28	560001	560001..580000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	28	560001	560001..580000	20000	X_INTERFACE_SPP1_RELAY	0.6998000000000144
+untreated	adhesion_challenge_basal	converged	25.0	28	560001	560001..580000	20000	X_INTERFACE_REDUNDANT_RELAY	0.399799999999999
+untreated	adhesion_challenge_basal	converged	25.0	29	580001	580001..600000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	29	580001	580001..600000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	29	580001	580001..600000	20000	X_INTERFACE_SPP1_RELAY	0.7001500000000145
+untreated	adhesion_challenge_basal	converged	25.0	29	580001	580001..600000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40009999999999823
+untreated	adhesion_challenge_basal	converged	25.0	30	600001	600001..620000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	30	600001	600001..620000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	30	600001	600001..620000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000145
+untreated	adhesion_challenge_basal	converged	25.0	30	600001	600001..620000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000499999999987
+untreated	adhesion_challenge_basal	converged	25.0	31	620001	620001..640000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	31	620001	620001..640000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	31	620001	620001..640000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000144
+untreated	adhesion_challenge_basal	converged	25.0	31	620001	620001..640000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3997999999999982
+untreated	adhesion_challenge_basal	converged	25.0	32	640001	640001..660000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	32	640001	640001..660000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	32	640001	640001..660000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000144
+untreated	adhesion_challenge_basal	converged	25.0	32	640001	640001..660000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4001499999999985
+untreated	adhesion_challenge_basal	converged	25.0	33	660001	660001..680000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	33	660001	660001..680000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	33	660001	660001..680000	20000	X_INTERFACE_SPP1_RELAY	0.6999000000000144
+untreated	adhesion_challenge_basal	converged	25.0	33	660001	660001..680000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3999999999999987
+untreated	adhesion_challenge_basal	converged	25.0	34	680001	680001..700000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	34	680001	680001..700000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	34	680001	680001..700000	20000	X_INTERFACE_SPP1_RELAY	0.7001000000000144
+untreated	adhesion_challenge_basal	converged	25.0	34	680001	680001..700000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3998999999999982
+untreated	adhesion_challenge_basal	converged	25.0	35	700001	700001..720000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	35	700001	700001..720000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	35	700001	700001..720000	20000	X_INTERFACE_SPP1_RELAY	0.6998000000000143
+untreated	adhesion_challenge_basal	converged	25.0	35	700001	700001..720000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000499999999987
+untreated	adhesion_challenge_basal	converged	25.0	36	720001	720001..740000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	36	720001	720001..740000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	36	720001	720001..740000	20000	X_INTERFACE_SPP1_RELAY	0.7001500000000146
+untreated	adhesion_challenge_basal	converged	25.0	36	720001	720001..740000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3999999999999978
+untreated	adhesion_challenge_basal	converged	25.0	37	740001	740001..760000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	37	740001	740001..760000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	37	740001	740001..760000	20000	X_INTERFACE_SPP1_RELAY	0.6999000000000144
+untreated	adhesion_challenge_basal	converged	25.0	37	740001	740001..760000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000999999999988
+untreated	adhesion_challenge_basal	converged	25.0	38	760001	760001..780000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	38	760001	760001..780000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	38	760001	760001..780000	20000	X_INTERFACE_SPP1_RELAY	0.7001500000000143
+untreated	adhesion_challenge_basal	converged	25.0	38	760001	760001..780000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3998999999999981
+untreated	adhesion_challenge_basal	converged	25.0	39	780001	780001..800000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	39	780001	780001..800000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	39	780001	780001..800000	20000	X_INTERFACE_SPP1_RELAY	0.6999000000000143
+untreated	adhesion_challenge_basal	converged	25.0	39	780001	780001..800000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3998999999999988
+untreated	adhesion_challenge_basal	converged	25.0	40	800001	800001..820000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	40	800001	800001..820000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	40	800001	800001..820000	20000	X_INTERFACE_SPP1_RELAY	0.7000500000000142
+untreated	adhesion_challenge_basal	converged	25.0	40	800001	800001..820000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3999999999999979
+untreated	adhesion_challenge_basal	converged	25.0	41	820001	820001..840000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	41	820001	820001..840000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	41	820001	820001..840000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000143
+untreated	adhesion_challenge_basal	converged	25.0	41	820001	820001..840000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3999999999999982
+untreated	adhesion_challenge_basal	converged	25.0	42	840001	840001..860000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	42	840001	840001..860000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	42	840001	840001..860000	20000	X_INTERFACE_SPP1_RELAY	0.6999500000000143
+untreated	adhesion_challenge_basal	converged	25.0	42	840001	840001..860000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39994999999999853
+untreated	adhesion_challenge_basal	converged	25.0	43	860001	860001..880000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	43	860001	860001..880000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	43	860001	860001..880000	20000	X_INTERFACE_SPP1_RELAY	0.7001500000000145
+untreated	adhesion_challenge_basal	converged	25.0	43	860001	860001..880000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39999999999999797
+untreated	adhesion_challenge_basal	converged	25.0	44	880001	880001..900000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	44	880001	880001..900000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	44	880001	880001..900000	20000	X_INTERFACE_SPP1_RELAY	0.6997000000000145
+untreated	adhesion_challenge_basal	converged	25.0	44	880001	880001..900000	20000	X_INTERFACE_REDUNDANT_RELAY	0.400099999999999
+untreated	adhesion_challenge_basal	converged	25.0	45	900001	900001..920000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	45	900001	900001..920000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	45	900001	900001..920000	20000	X_INTERFACE_SPP1_RELAY	0.7002000000000144
+untreated	adhesion_challenge_basal	converged	25.0	45	900001	900001..920000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39984999999999793
+untreated	adhesion_challenge_basal	converged	25.0	46	920001	920001..940000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	46	920001	920001..940000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	46	920001	920001..940000	20000	X_INTERFACE_SPP1_RELAY	0.6999500000000143
+untreated	adhesion_challenge_basal	converged	25.0	46	920001	920001..940000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4001499999999987
+untreated	adhesion_challenge_basal	converged	25.0	47	940001	940001..960000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	47	940001	940001..960000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	47	940001	940001..960000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000144
+untreated	adhesion_challenge_basal	converged	25.0	47	940001	940001..960000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39994999999999814
+untreated	adhesion_challenge_basal	converged	25.0	48	960001	960001..980000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	48	960001	960001..980000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	48	960001	960001..980000	20000	X_INTERFACE_SPP1_RELAY	0.7001000000000145
+untreated	adhesion_challenge_basal	converged	25.0	48	960001	960001..980000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39994999999999836
+untreated	adhesion_challenge_basal	converged	25.0	49	980001	980001..1000000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	converged	25.0	49	980001	980001..1000000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	converged	25.0	49	980001	980001..1000000	20000	X_INTERFACE_SPP1_RELAY	0.6998500000000144
+untreated	adhesion_challenge_basal	converged	25.0	49	980001	980001..1000000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40004999999999846
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	0	1	1..20000	20000	OUT_STABLE_ADHESION	0.8201000000000129
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	0	1	1..20000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8201000000000129
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	0	1	1..20000	20000	X_INTERFACE_SPP1_RELAY	0.6999500000000143
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	0	1	1..20000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40009999999999873
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	1	20001	20001..40000	20000	OUT_STABLE_ADHESION	0.8205000000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	1	20001	20001..40000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8205000000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	1	20001	20001..40000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000144
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	1	20001	20001..40000	20000	X_INTERFACE_REDUNDANT_RELAY	0.399799999999998
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	2	40001	40001..60000	20000	OUT_STABLE_ADHESION	0.821000000000013
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	2	40001	40001..60000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8210500000000132
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	2	40001	40001..60000	20000	X_INTERFACE_SPP1_RELAY	0.7001000000000145
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	2	40001	40001..60000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000499999999986
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	3	60001	60001..80000	20000	OUT_STABLE_ADHESION	0.8190500000000134
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	3	60001	60001..80000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8191000000000133
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	3	60001	60001..80000	20000	X_INTERFACE_SPP1_RELAY	0.6998000000000146
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	3	60001	60001..80000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39969999999999867
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	4	80001	80001..100000	20000	OUT_STABLE_ADHESION	0.819150000000013
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	4	80001	80001..100000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.819200000000013
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	4	80001	80001..100000	20000	X_INTERFACE_SPP1_RELAY	0.7002500000000145
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	4	80001	80001..100000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40009999999999835
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	5	100001	100001..120000	20000	OUT_STABLE_ADHESION	0.819050000000013
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	5	100001	100001..120000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8191000000000132
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	5	100001	100001..120000	20000	X_INTERFACE_SPP1_RELAY	0.6999500000000144
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	5	100001	100001..120000	20000	X_INTERFACE_REDUNDANT_RELAY	0.399899999999999
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	6	120001	120001..140000	20000	OUT_STABLE_ADHESION	0.8205000000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	6	120001	120001..140000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8205500000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	6	120001	120001..140000	20000	X_INTERFACE_SPP1_RELAY	0.6999000000000144
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	6	120001	120001..140000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40014999999999806
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	7	140001	140001..160000	20000	OUT_STABLE_ADHESION	0.8211000000000128
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	7	140001	140001..160000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8211500000000129
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	7	140001	140001..160000	20000	X_INTERFACE_SPP1_RELAY	0.7001000000000142
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	7	140001	140001..160000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000999999999985
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	8	160001	160001..180000	20000	OUT_STABLE_ADHESION	0.8200000000000132
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	8	160001	160001..180000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8200000000000132
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	8	160001	160001..180000	20000	X_INTERFACE_SPP1_RELAY	0.6999000000000144
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	8	160001	160001..180000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000499999999979
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	9	180001	180001..200000	20000	OUT_STABLE_ADHESION	0.819600000000013
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	9	180001	180001..200000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8196316407956045
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	9	180001	180001..200000	20000	X_INTERFACE_SPP1_RELAY	0.6998500000000144
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	9	180001	180001..200000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000499999999987
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	10	200001	200001..220000	20000	OUT_STABLE_ADHESION	0.8196500000000129
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	10	200001	200001..220000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.819700000000013
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	10	200001	200001..220000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000143
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	10	200001	200001..220000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3996999999999981
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	11	220001	220001..240000	20000	OUT_STABLE_ADHESION	0.8201500000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	11	220001	220001..240000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8201500000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	11	220001	220001..240000	20000	X_INTERFACE_SPP1_RELAY	0.6999000000000145
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	11	220001	220001..240000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40024999999999855
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	12	240001	240001..260000	20000	OUT_STABLE_ADHESION	0.819850000000013
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	12	240001	240001..260000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.819900000000013
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	12	240001	240001..260000	20000	X_INTERFACE_SPP1_RELAY	0.6998000000000143
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	12	240001	240001..260000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39989999999999876
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	13	260001	260001..280000	20000	OUT_STABLE_ADHESION	0.8196000000000134
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	13	260001	260001..280000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8196500000000133
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	13	260001	260001..280000	20000	X_INTERFACE_SPP1_RELAY	0.7002000000000146
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	13	260001	260001..280000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4004499999999981
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	14	280001	280001..300000	20000	OUT_STABLE_ADHESION	0.8196000000000129
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	14	280001	280001..300000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8196000000000129
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	14	280001	280001..300000	20000	X_INTERFACE_SPP1_RELAY	0.6999500000000143
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	14	280001	280001..300000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3997999999999986
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	15	300001	300001..320000	20000	OUT_STABLE_ADHESION	0.8204000000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	15	300001	300001..320000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8204000000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	15	300001	300001..320000	20000	X_INTERFACE_SPP1_RELAY	0.7000500000000144
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	15	300001	300001..320000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000499999999975
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	16	320001	320001..340000	20000	OUT_STABLE_ADHESION	0.8212500000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	16	320001	320001..340000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8212500000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	16	320001	320001..340000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000144
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	16	320001	320001..340000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40009999999999873
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	17	340001	340001..360000	20000	OUT_STABLE_ADHESION	0.8201000000000132
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	17	340001	340001..360000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8202000000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	17	340001	340001..360000	20000	X_INTERFACE_SPP1_RELAY	0.6997500000000143
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	17	340001	340001..360000	20000	X_INTERFACE_REDUNDANT_RELAY	0.399699999999998
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	18	360001	360001..380000	20000	OUT_STABLE_ADHESION	0.8194500000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	18	360001	360001..380000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8194500000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	18	360001	360001..380000	20000	X_INTERFACE_SPP1_RELAY	0.7002000000000145
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	18	360001	360001..380000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40009999999999896
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	19	380001	380001..400000	20000	OUT_STABLE_ADHESION	0.8189000000000132
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	19	380001	380001..400000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8189000000000132
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	19	380001	380001..400000	20000	X_INTERFACE_SPP1_RELAY	0.6997500000000145
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	19	380001	380001..400000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3998999999999986
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	20	400001	400001..420000	20000	OUT_STABLE_ADHESION	0.8197500000000132
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	20	400001	400001..420000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8198500000000132
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	20	400001	400001..420000	20000	X_INTERFACE_SPP1_RELAY	0.7002500000000145
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	20	400001	400001..420000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40004999999999824
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	21	420001	420001..440000	20000	OUT_STABLE_ADHESION	0.8207175086082295
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	21	420001	420001..440000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8207500000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	21	420001	420001..440000	20000	X_INTERFACE_SPP1_RELAY	0.6998500000000145
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	21	420001	420001..440000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3999999999999986
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	22	440001	440001..460000	20000	OUT_STABLE_ADHESION	0.8204500000000132
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	22	440001	440001..460000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8205000000000132
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	22	440001	440001..460000	20000	X_INTERFACE_SPP1_RELAY	0.7002500000000145
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	22	440001	440001..460000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40009999999999807
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	23	460001	460001..480000	20000	OUT_STABLE_ADHESION	0.8199908893533987
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	23	460001	460001..480000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.820050000000013
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	23	460001	460001..480000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000143
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	23	460001	460001..480000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4001999999999988
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	24	480001	480001..500000	20000	OUT_STABLE_ADHESION	0.8195000000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	24	480001	480001..500000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8196000000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	24	480001	480001..500000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000144
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	24	480001	480001..500000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3995499999999983
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	25	500001	500001..520000	20000	OUT_STABLE_ADHESION	0.820350000000013
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	25	500001	500001..520000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8204500000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	25	500001	500001..520000	20000	X_INTERFACE_SPP1_RELAY	0.7001500000000144
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	25	500001	500001..520000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000999999999987
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	26	520001	520001..540000	20000	OUT_STABLE_ADHESION	0.820050000000013
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	26	520001	520001..540000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.820050000000013
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	26	520001	520001..540000	20000	X_INTERFACE_SPP1_RELAY	0.6997500000000144
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	26	520001	520001..540000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3998499999999985
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	27	540001	540001..560000	20000	OUT_STABLE_ADHESION	0.8197000000000132
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	27	540001	540001..560000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8197000000000132
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	27	540001	540001..560000	20000	X_INTERFACE_SPP1_RELAY	0.7003000000000145
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	27	540001	540001..560000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4002999999999983
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	28	560001	560001..580000	20000	OUT_STABLE_ADHESION	0.818650000000013
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	28	560001	560001..580000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.818650000000013
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	28	560001	560001..580000	20000	X_INTERFACE_SPP1_RELAY	0.6997000000000142
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	28	560001	560001..580000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39959999999999885
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	29	580001	580001..600000	20000	OUT_STABLE_ADHESION	0.8200000000000132
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	29	580001	580001..600000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8200000000000132
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	29	580001	580001..600000	20000	X_INTERFACE_SPP1_RELAY	0.7002500000000145
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	29	580001	580001..600000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4001999999999982
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	30	600001	600001..620000	20000	OUT_STABLE_ADHESION	0.8208000000000132
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	30	600001	600001..620000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8208500000000132
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	30	600001	600001..620000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000146
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	30	600001	600001..620000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40004999999999874
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	31	620001	620001..640000	20000	OUT_STABLE_ADHESION	0.8209500000000133
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	31	620001	620001..640000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8210000000000132
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	31	620001	620001..640000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000144
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	31	620001	620001..640000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39979999999999816
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	32	640001	640001..660000	20000	OUT_STABLE_ADHESION	0.820250000000013
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	32	640001	640001..660000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.820250000000013
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	32	640001	640001..660000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000144
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	32	640001	640001..660000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4002499999999985
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	33	660001	660001..680000	20000	OUT_STABLE_ADHESION	0.8190500000000132
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	33	660001	660001..680000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8190500000000132
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	33	660001	660001..680000	20000	X_INTERFACE_SPP1_RELAY	0.6999000000000145
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	33	660001	660001..680000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39989999999999865
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	34	680001	680001..700000	20000	OUT_STABLE_ADHESION	0.8193000000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	34	680001	680001..700000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8194000000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	34	680001	680001..700000	20000	X_INTERFACE_SPP1_RELAY	0.7002000000000144
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	34	680001	680001..700000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39979999999999816
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	35	700001	700001..720000	20000	OUT_STABLE_ADHESION	0.8200426674916229
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	35	700001	700001..720000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.820050000000013
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	35	700001	700001..720000	20000	X_INTERFACE_SPP1_RELAY	0.6996000000000143
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	35	700001	700001..720000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40014999999999873
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	36	720001	720001..740000	20000	OUT_STABLE_ADHESION	0.8199000000000133
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	36	720001	720001..740000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8199000000000133
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	36	720001	720001..740000	20000	X_INTERFACE_SPP1_RELAY	0.7001500000000146
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	36	720001	720001..740000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3998999999999978
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	37	740001	740001..760000	20000	OUT_STABLE_ADHESION	0.8200500000000129
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	37	740001	740001..760000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8201000000000129
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	37	740001	740001..760000	20000	X_INTERFACE_SPP1_RELAY	0.6999000000000144
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	37	740001	740001..760000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4002499999999988
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	38	760001	760001..780000	20000	OUT_STABLE_ADHESION	0.8196000000000128
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	38	760001	760001..780000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8196500000000129
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	38	760001	760001..780000	20000	X_INTERFACE_SPP1_RELAY	0.7001500000000141
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	38	760001	760001..780000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3997999999999981
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	39	780001	780001..800000	20000	OUT_STABLE_ADHESION	0.820550000000013
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	39	780001	780001..800000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.820550000000013
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	39	780001	780001..800000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000143
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	39	780001	780001..800000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3998999999999988
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	40	800001	800001..820000	20000	OUT_STABLE_ADHESION	0.8208000000000129
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	40	800001	800001..820000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8208000000000129
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	40	800001	800001..820000	20000	X_INTERFACE_SPP1_RELAY	0.6999500000000143
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	40	800001	800001..820000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3998999999999979
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	41	820001	820001..840000	20000	OUT_STABLE_ADHESION	0.819900000000013
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	41	820001	820001..840000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.819950000000013
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	41	820001	820001..840000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000142
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	41	820001	820001..840000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000499999999982
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	42	840001	840001..860000	20000	OUT_STABLE_ADHESION	0.819050000000013
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	42	840001	840001..860000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8191000000000129
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	42	840001	840001..860000	20000	X_INTERFACE_SPP1_RELAY	0.6999500000000143
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	42	840001	840001..860000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3998499999999985
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	43	860001	860001..880000	20000	OUT_STABLE_ADHESION	0.8190500000000133
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	43	860001	860001..880000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8191000000000134
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	43	860001	860001..880000	20000	X_INTERFACE_SPP1_RELAY	0.7002500000000146
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	43	860001	860001..880000	20000	X_INTERFACE_REDUNDANT_RELAY	0.399999999999998
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	44	880001	880001..900000	20000	OUT_STABLE_ADHESION	0.8199000000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	44	880001	880001..900000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8199000000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	44	880001	880001..900000	20000	X_INTERFACE_SPP1_RELAY	0.6995500000000144
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	44	880001	880001..900000	20000	X_INTERFACE_REDUNDANT_RELAY	0.400149999999999
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	45	900001	900001..920000	20000	OUT_STABLE_ADHESION	0.8213500000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	45	900001	900001..920000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8213500000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	45	900001	900001..920000	20000	X_INTERFACE_SPP1_RELAY	0.7003000000000145
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	45	900001	900001..920000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3997499999999979
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	46	920001	920001..940000	20000	OUT_STABLE_ADHESION	0.820600000000013
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	46	920001	920001..940000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.820600000000013
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	46	920001	920001..940000	20000	X_INTERFACE_SPP1_RELAY	0.7000500000000144
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	46	920001	920001..940000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4002499999999988
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	47	940001	940001..960000	20000	OUT_STABLE_ADHESION	0.8194500000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	47	940001	940001..960000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8195000000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	47	940001	940001..960000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000144
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	47	940001	940001..960000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39959999999999807
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	48	960001	960001..980000	20000	OUT_STABLE_ADHESION	0.8196000000000132
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	48	960001	960001..980000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8197000000000132
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	48	960001	960001..980000	20000	X_INTERFACE_SPP1_RELAY	0.7002000000000145
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	48	960001	960001..980000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40004999999999835
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	49	980001	980001..1000000	20000	OUT_STABLE_ADHESION	0.8196500000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	49	980001	980001..1000000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.8197000000000131
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	49	980001	980001..1000000	20000	X_INTERFACE_SPP1_RELAY	0.6996500000000143
+hormone_treated	adhesion_challenge_hormone_treated	converged	25.0	49	980001	980001..1000000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000499999999985
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	0	1	1..20000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	0	1	1..20000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	0	1	1..20000	20000	X_INTERFACE_SPP1_RELAY	0.6999500000000144
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	0	1	1..20000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4001499999999987
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	1	20001	20001..40000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	1	20001	20001..40000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	1	20001	20001..40000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000144
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	1	20001	20001..40000	20000	X_INTERFACE_REDUNDANT_RELAY	0.399749999999998
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	2	40001	40001..60000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	2	40001	40001..60000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	2	40001	40001..60000	20000	X_INTERFACE_SPP1_RELAY	0.7001500000000145
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	2	40001	40001..60000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000499999999986
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	3	60001	60001..80000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	3	60001	60001..80000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	3	60001	60001..80000	20000	X_INTERFACE_SPP1_RELAY	0.6997000000000146
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	3	60001	60001..80000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3995999999999987
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	4	80001	80001..100000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	4	80001	80001..100000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	4	80001	80001..100000	20000	X_INTERFACE_SPP1_RELAY	0.7003500000000146
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	4	80001	80001..100000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40014999999999834
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	5	100001	100001..120000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	5	100001	100001..120000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	5	100001	100001..120000	20000	X_INTERFACE_SPP1_RELAY	0.6999000000000144
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	5	100001	100001..120000	20000	X_INTERFACE_REDUNDANT_RELAY	0.399849999999999
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	6	120001	120001..140000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	6	120001	120001..140000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	6	120001	120001..140000	20000	X_INTERFACE_SPP1_RELAY	0.6999000000000144
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	6	120001	120001..140000	20000	X_INTERFACE_REDUNDANT_RELAY	0.400199999999998
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	7	140001	140001..160000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	7	140001	140001..160000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	7	140001	140001..160000	20000	X_INTERFACE_SPP1_RELAY	0.7001000000000144
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	7	140001	140001..160000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40009999999999857
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	8	160001	160001..180000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	8	160001	160001..180000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	8	160001	160001..180000	20000	X_INTERFACE_SPP1_RELAY	0.6999000000000144
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	8	160001	160001..180000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000999999999979
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	9	180001	180001..200000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	9	180001	180001..200000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	9	180001	180001..200000	20000	X_INTERFACE_SPP1_RELAY	0.6998000000000143
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	9	180001	180001..200000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40004999999999874
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	10	200001	200001..220000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	10	200001	200001..220000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	10	200001	200001..220000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000143
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	10	200001	200001..220000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3995499999999982
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	11	220001	220001..240000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	11	220001	220001..240000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	11	220001	220001..240000	20000	X_INTERFACE_SPP1_RELAY	0.6999000000000144
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	11	220001	220001..240000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40034999999999865
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	12	240001	240001..260000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	12	240001	240001..260000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	12	240001	240001..260000	20000	X_INTERFACE_SPP1_RELAY	0.6997000000000143
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	12	240001	240001..260000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3998499999999988
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	13	260001	260001..280000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	13	260001	260001..280000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	13	260001	260001..280000	20000	X_INTERFACE_SPP1_RELAY	0.7003000000000147
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	13	260001	260001..280000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4005499999999981
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	14	280001	280001..300000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	14	280001	280001..300000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	14	280001	280001..300000	20000	X_INTERFACE_SPP1_RELAY	0.6999000000000142
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	14	280001	280001..300000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3997999999999986
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	15	300001	300001..320000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	15	300001	300001..320000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	15	300001	300001..320000	20000	X_INTERFACE_SPP1_RELAY	0.7000500000000144
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	15	300001	300001..320000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000499999999975
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	16	320001	320001..340000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	16	320001	320001..340000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	16	320001	320001..340000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000145
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	16	320001	320001..340000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40009999999999873
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	17	340001	340001..360000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	17	340001	340001..360000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	17	340001	340001..360000	20000	X_INTERFACE_SPP1_RELAY	0.6996500000000143
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	17	340001	340001..360000	20000	X_INTERFACE_REDUNDANT_RELAY	0.399599999999998
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	18	360001	360001..380000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	18	360001	360001..380000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	18	360001	360001..380000	20000	X_INTERFACE_SPP1_RELAY	0.7003000000000144
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	18	360001	360001..380000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000999999999989
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	19	380001	380001..400000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	19	380001	380001..400000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	19	380001	380001..400000	20000	X_INTERFACE_SPP1_RELAY	0.6997000000000145
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	19	380001	380001..400000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3998499999999986
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	20	400001	400001..420000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	20	400001	400001..420000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	20	400001	400001..420000	20000	X_INTERFACE_SPP1_RELAY	0.7003000000000146
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	20	400001	400001..420000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40004999999999813
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	21	420001	420001..440000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	21	420001	420001..440000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	21	420001	420001..440000	20000	X_INTERFACE_SPP1_RELAY	0.6998500000000145
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	21	420001	420001..440000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3999999999999986
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	22	440001	440001..460000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	22	440001	440001..460000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	22	440001	440001..460000	20000	X_INTERFACE_SPP1_RELAY	0.7003000000000145
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	22	440001	440001..460000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40014999999999806
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	23	460001	460001..480000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	23	460001	460001..480000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	23	460001	460001..480000	20000	X_INTERFACE_SPP1_RELAY	0.7000500000000143
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	23	460001	460001..480000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40024999999999883
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	24	480001	480001..500000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	24	480001	480001..500000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	24	480001	480001..500000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000145
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	24	480001	480001..500000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39944999999999825
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	25	500001	500001..520000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	25	500001	500001..520000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	25	500001	500001..520000	20000	X_INTERFACE_SPP1_RELAY	0.7001500000000143
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	25	500001	500001..520000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000999999999987
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	26	520001	520001..540000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	26	520001	520001..540000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	26	520001	520001..540000	20000	X_INTERFACE_SPP1_RELAY	0.6997000000000143
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	26	520001	520001..540000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3997999999999985
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	27	540001	540001..560000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	27	540001	540001..560000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	27	540001	540001..560000	20000	X_INTERFACE_SPP1_RELAY	0.7003500000000146
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	27	540001	540001..560000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4003999999999983
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	28	560001	560001..580000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	28	560001	560001..580000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	28	560001	560001..580000	20000	X_INTERFACE_SPP1_RELAY	0.6996500000000143
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	28	560001	560001..580000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39954999999999885
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	29	580001	580001..600000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	29	580001	580001..600000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	29	580001	580001..600000	20000	X_INTERFACE_SPP1_RELAY	0.7003000000000146
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	29	580001	580001..600000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4002499999999982
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	30	600001	600001..620000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	30	600001	600001..620000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	30	600001	600001..620000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000146
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	30	600001	600001..620000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000499999999987
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	31	620001	620001..640000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	31	620001	620001..640000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	31	620001	620001..640000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000144
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	31	620001	620001..640000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39979999999999816
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	32	640001	640001..660000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	32	640001	640001..660000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	32	640001	640001..660000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000144
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	32	640001	640001..660000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40029999999999855
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	33	660001	660001..680000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	33	660001	660001..680000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	33	660001	660001..680000	20000	X_INTERFACE_SPP1_RELAY	0.6999000000000144
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	33	660001	660001..680000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3998499999999987
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	34	680001	680001..700000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	34	680001	680001..700000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	34	680001	680001..700000	20000	X_INTERFACE_SPP1_RELAY	0.7002500000000144
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	34	680001	680001..700000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39974999999999816
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	35	700001	700001..720000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	35	700001	700001..720000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	35	700001	700001..720000	20000	X_INTERFACE_SPP1_RELAY	0.6995000000000143
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	35	700001	700001..720000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4001999999999987
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	36	720001	720001..740000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	36	720001	720001..740000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	36	720001	720001..740000	20000	X_INTERFACE_SPP1_RELAY	0.7001500000000146
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	36	720001	720001..740000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3998499999999978
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	37	740001	740001..760000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	37	740001	740001..760000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	37	740001	740001..760000	20000	X_INTERFACE_SPP1_RELAY	0.6999000000000144
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	37	740001	740001..760000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4003499999999987
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	38	760001	760001..780000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	38	760001	760001..780000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	38	760001	760001..780000	20000	X_INTERFACE_SPP1_RELAY	0.7001500000000143
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	38	760001	760001..780000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39974999999999805
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	39	780001	780001..800000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	39	780001	780001..800000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	39	780001	780001..800000	20000	X_INTERFACE_SPP1_RELAY	0.7000500000000143
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	39	780001	780001..800000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39989999999999876
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	40	800001	800001..820000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	40	800001	800001..820000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	40	800001	800001..820000	20000	X_INTERFACE_SPP1_RELAY	0.6999000000000143
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	40	800001	800001..820000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39984999999999793
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	41	820001	820001..840000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	41	820001	820001..840000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	41	820001	820001..840000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000143
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	41	820001	820001..840000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40004999999999813
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	42	840001	840001..860000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	42	840001	840001..860000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	42	840001	840001..860000	20000	X_INTERFACE_SPP1_RELAY	0.6999500000000143
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	42	840001	840001..860000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39979999999999855
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	43	860001	860001..880000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	43	860001	860001..880000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	43	860001	860001..880000	20000	X_INTERFACE_SPP1_RELAY	0.7003000000000146
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	43	860001	860001..880000	20000	X_INTERFACE_REDUNDANT_RELAY	0.399999999999998
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	44	880001	880001..900000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	44	880001	880001..900000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	44	880001	880001..900000	20000	X_INTERFACE_SPP1_RELAY	0.6995000000000146
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	44	880001	880001..900000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40014999999999906
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	45	900001	900001..920000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	45	900001	900001..920000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	45	900001	900001..920000	20000	X_INTERFACE_SPP1_RELAY	0.7003500000000145
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	45	900001	900001..920000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39969999999999783
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	46	920001	920001..940000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	46	920001	920001..940000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	46	920001	920001..940000	20000	X_INTERFACE_SPP1_RELAY	0.7001000000000144
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	46	920001	920001..940000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4002999999999988
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	47	940001	940001..960000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	47	940001	940001..960000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	47	940001	940001..960000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000144
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	47	940001	940001..960000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39939999999999803
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	48	960001	960001..980000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	48	960001	960001..980000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	48	960001	960001..980000	20000	X_INTERFACE_SPP1_RELAY	0.7002500000000145
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	48	960001	960001..980000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40009999999999835
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	49	980001	980001..1000000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	49	980001	980001..1000000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	49	980001	980001..1000000	20000	X_INTERFACE_SPP1_RELAY	0.6995500000000143
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	converged	25.0	49	980001	980001..1000000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40004999999999846
+untreated	adhesion_challenge_basal	declared		0	1	1..20000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		0	1	1..20000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		0	1	1..20000	20000	X_INTERFACE_SPP1_RELAY	0.7001000000000009
+untreated	adhesion_challenge_basal	declared		0	1	1..20000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39979999999999993
+untreated	adhesion_challenge_basal	declared		1	20001	20001..40000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		1	20001	20001..40000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		1	20001	20001..40000	20000	X_INTERFACE_SPP1_RELAY	0.6998500000000009
+untreated	adhesion_challenge_basal	declared		1	20001	20001..40000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000499999999997
+untreated	adhesion_challenge_basal	declared		2	40001	40001..60000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		2	40001	40001..60000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		2	40001	40001..60000	20000	X_INTERFACE_SPP1_RELAY	0.7001
+untreated	adhesion_challenge_basal	declared		2	40001	40001..60000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40005
+untreated	adhesion_challenge_basal	declared		3	60001	60001..80000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		3	60001	60001..80000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		3	60001	60001..80000	20000	X_INTERFACE_SPP1_RELAY	0.6999500000000001
+untreated	adhesion_challenge_basal	declared		3	60001	60001..80000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39985
+untreated	adhesion_challenge_basal	declared		4	80001	80001..100000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		4	80001	80001..100000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		4	80001	80001..100000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000002
+untreated	adhesion_challenge_basal	declared		4	80001	80001..100000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000999999999995
+untreated	adhesion_challenge_basal	declared		5	100001	100001..120000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		5	100001	100001..120000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		5	100001	100001..120000	20000	X_INTERFACE_SPP1_RELAY	0.7000500000000007
+untreated	adhesion_challenge_basal	declared		5	100001	100001..120000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39995
+untreated	adhesion_challenge_basal	declared		6	120001	120001..140000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		6	120001	120001..140000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		6	120001	120001..140000	20000	X_INTERFACE_SPP1_RELAY	0.6999000000000009
+untreated	adhesion_challenge_basal	declared		6	120001	120001..140000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39999999999999997
+untreated	adhesion_challenge_basal	declared		7	140001	140001..160000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		7	140001	140001..160000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		7	140001	140001..160000	20000	X_INTERFACE_SPP1_RELAY	0.700150000000001
+untreated	adhesion_challenge_basal	declared		7	140001	140001..160000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4
+untreated	adhesion_challenge_basal	declared		8	160001	160001..180000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		8	160001	160001..180000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		8	160001	160001..180000	20000	X_INTERFACE_SPP1_RELAY	0.6999000000000004
+untreated	adhesion_challenge_basal	declared		8	160001	160001..180000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39994999999999975
+untreated	adhesion_challenge_basal	declared		9	180001	180001..200000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		9	180001	180001..200000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		9	180001	180001..200000	20000	X_INTERFACE_SPP1_RELAY	0.7001500000000008
+untreated	adhesion_challenge_basal	declared		9	180001	180001..200000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3998999999999997
+untreated	adhesion_challenge_basal	declared		10	200001	200001..220000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		10	200001	200001..220000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		10	200001	200001..220000	20000	X_INTERFACE_SPP1_RELAY	0.69985
+untreated	adhesion_challenge_basal	declared		10	200001	200001..220000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000499999999996
+untreated	adhesion_challenge_basal	declared		11	220001	220001..240000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		11	220001	220001..240000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		11	220001	220001..240000	20000	X_INTERFACE_SPP1_RELAY	0.7000500000000004
+untreated	adhesion_challenge_basal	declared		11	220001	220001..240000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40005000000000007
+untreated	adhesion_challenge_basal	declared		12	240001	240001..260000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		12	240001	240001..260000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		12	240001	240001..260000	20000	X_INTERFACE_SPP1_RELAY	0.6999500000000006
+untreated	adhesion_challenge_basal	declared		12	240001	240001..260000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39990000000000003
+untreated	adhesion_challenge_basal	declared		13	260001	260001..280000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		13	260001	260001..280000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		13	260001	260001..280000	20000	X_INTERFACE_SPP1_RELAY	0.7000500000000005
+untreated	adhesion_challenge_basal	declared		13	260001	260001..280000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4002499999999994
+untreated	adhesion_challenge_basal	declared		14	280001	280001..300000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		14	280001	280001..300000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		14	280001	280001..300000	20000	X_INTERFACE_SPP1_RELAY	0.7001500000000003
+untreated	adhesion_challenge_basal	declared		14	280001	280001..300000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3998499999999997
+untreated	adhesion_challenge_basal	declared		15	300001	300001..320000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		15	300001	300001..320000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		15	300001	300001..320000	20000	X_INTERFACE_SPP1_RELAY	0.6999500000000011
+untreated	adhesion_challenge_basal	declared		15	300001	300001..320000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40025000000000005
+untreated	adhesion_challenge_basal	declared		16	320001	320001..340000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		16	320001	320001..340000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		16	320001	320001..340000	20000	X_INTERFACE_SPP1_RELAY	0.7000500000000007
+untreated	adhesion_challenge_basal	declared		16	320001	320001..340000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3999999999999998
+untreated	adhesion_challenge_basal	declared		17	340001	340001..360000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		17	340001	340001..360000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		17	340001	340001..360000	20000	X_INTERFACE_SPP1_RELAY	0.6998500000000004
+untreated	adhesion_challenge_basal	declared		17	340001	340001..360000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39994999999999997
+untreated	adhesion_challenge_basal	declared		18	360001	360001..380000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		18	360001	360001..380000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		18	360001	360001..380000	20000	X_INTERFACE_SPP1_RELAY	0.7001500000000009
+untreated	adhesion_challenge_basal	declared		18	360001	360001..380000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39999999999999963
+untreated	adhesion_challenge_basal	declared		19	380001	380001..400000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		19	380001	380001..400000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		19	380001	380001..400000	20000	X_INTERFACE_SPP1_RELAY	0.6998500000000005
+untreated	adhesion_challenge_basal	declared		19	380001	380001..400000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3999499999999995
+untreated	adhesion_challenge_basal	declared		20	400001	400001..420000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		20	400001	400001..420000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		20	400001	400001..420000	20000	X_INTERFACE_SPP1_RELAY	0.7002000000000004
+untreated	adhesion_challenge_basal	declared		20	400001	400001..420000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4
+untreated	adhesion_challenge_basal	declared		21	420001	420001..440000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		21	420001	420001..440000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		21	420001	420001..440000	20000	X_INTERFACE_SPP1_RELAY	0.700050000000001
+untreated	adhesion_challenge_basal	declared		21	420001	420001..440000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3998499999999999
+untreated	adhesion_challenge_basal	declared		22	440001	440001..460000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		22	440001	440001..460000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		22	440001	440001..460000	20000	X_INTERFACE_SPP1_RELAY	0.7000499999999996
+untreated	adhesion_challenge_basal	declared		22	440001	440001..460000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40004999999999935
+untreated	adhesion_challenge_basal	declared		23	460001	460001..480000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		23	460001	460001..480000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		23	460001	460001..480000	20000	X_INTERFACE_SPP1_RELAY	0.699950000000001
+untreated	adhesion_challenge_basal	declared		23	460001	460001..480000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000999999999999
+untreated	adhesion_challenge_basal	declared		24	480001	480001..500000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		24	480001	480001..500000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		24	480001	480001..500000	20000	X_INTERFACE_SPP1_RELAY	0.6998500000000004
+untreated	adhesion_challenge_basal	declared		24	480001	480001..500000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39994999999999997
+untreated	adhesion_challenge_basal	declared		25	500001	500001..520000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		25	500001	500001..520000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		25	500001	500001..520000	20000	X_INTERFACE_SPP1_RELAY	0.7002000000000003
+untreated	adhesion_challenge_basal	declared		25	500001	500001..520000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39999999999999974
+untreated	adhesion_challenge_basal	declared		26	520001	520001..540000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		26	520001	520001..540000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		26	520001	520001..540000	20000	X_INTERFACE_SPP1_RELAY	0.6997500000000011
+untreated	adhesion_challenge_basal	declared		26	520001	520001..540000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39989999999999964
+untreated	adhesion_challenge_basal	declared		27	540001	540001..560000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		27	540001	540001..560000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		27	540001	540001..560000	20000	X_INTERFACE_SPP1_RELAY	0.7002500000000006
+untreated	adhesion_challenge_basal	declared		27	540001	540001..560000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40014999999999956
+untreated	adhesion_challenge_basal	declared		28	560001	560001..580000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		28	560001	560001..580000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		28	560001	560001..580000	20000	X_INTERFACE_SPP1_RELAY	0.6998499999999999
+untreated	adhesion_challenge_basal	declared		28	560001	560001..580000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3998499999999997
+untreated	adhesion_challenge_basal	declared		29	580001	580001..600000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		29	580001	580001..600000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		29	580001	580001..600000	20000	X_INTERFACE_SPP1_RELAY	0.7001500000000008
+untreated	adhesion_challenge_basal	declared		29	580001	580001..600000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4001999999999998
+untreated	adhesion_challenge_basal	declared		30	600001	600001..620000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		30	600001	600001..620000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		30	600001	600001..620000	20000	X_INTERFACE_SPP1_RELAY	0.7001500000000008
+untreated	adhesion_challenge_basal	declared		30	600001	600001..620000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3998999999999999
+untreated	adhesion_challenge_basal	declared		31	620001	620001..640000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		31	620001	620001..640000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		31	620001	620001..640000	20000	X_INTERFACE_SPP1_RELAY	0.6999000000000005
+untreated	adhesion_challenge_basal	declared		31	620001	620001..640000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3997999999999997
+untreated	adhesion_challenge_basal	declared		32	640001	640001..660000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		32	640001	640001..660000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		32	640001	640001..660000	20000	X_INTERFACE_SPP1_RELAY	0.7000500000000006
+untreated	adhesion_challenge_basal	declared		32	640001	640001..660000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4001000000000001
+untreated	adhesion_challenge_basal	declared		33	660001	660001..680000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		33	660001	660001..680000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		33	660001	660001..680000	20000	X_INTERFACE_SPP1_RELAY	0.6998500000000001
+untreated	adhesion_challenge_basal	declared		33	660001	660001..680000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39999999999999986
+untreated	adhesion_challenge_basal	declared		34	680001	680001..700000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		34	680001	680001..700000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		34	680001	680001..700000	20000	X_INTERFACE_SPP1_RELAY	0.7001000000000005
+untreated	adhesion_challenge_basal	declared		34	680001	680001..700000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3999999999999999
+untreated	adhesion_challenge_basal	declared		35	700001	700001..720000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		35	700001	700001..720000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		35	700001	700001..720000	20000	X_INTERFACE_SPP1_RELAY	0.6999000000000016
+untreated	adhesion_challenge_basal	declared		35	700001	700001..720000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39994999999999975
+untreated	adhesion_challenge_basal	declared		36	720001	720001..740000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		36	720001	720001..740000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		36	720001	720001..740000	20000	X_INTERFACE_SPP1_RELAY	0.7000500000000002
+untreated	adhesion_challenge_basal	declared		36	720001	720001..740000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39999999999999936
+untreated	adhesion_challenge_basal	declared		37	740001	740001..760000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		37	740001	740001..760000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		37	740001	740001..760000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000004
+untreated	adhesion_challenge_basal	declared		37	740001	740001..760000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000499999999996
+untreated	adhesion_challenge_basal	declared		38	760001	760001..780000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		38	760001	760001..780000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		38	760001	760001..780000	20000	X_INTERFACE_SPP1_RELAY	0.7000500000000006
+untreated	adhesion_challenge_basal	declared		38	760001	760001..780000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39999999999999997
+untreated	adhesion_challenge_basal	declared		39	780001	780001..800000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		39	780001	780001..800000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		39	780001	780001..800000	20000	X_INTERFACE_SPP1_RELAY	0.6999500000000004
+untreated	adhesion_challenge_basal	declared		39	780001	780001..800000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3999499999999999
+untreated	adhesion_challenge_basal	declared		40	800001	800001..820000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		40	800001	800001..820000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		40	800001	800001..820000	20000	X_INTERFACE_SPP1_RELAY	0.7000000000000002
+untreated	adhesion_challenge_basal	declared		40	800001	800001..820000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4001
+untreated	adhesion_challenge_basal	declared		41	820001	820001..840000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		41	820001	820001..840000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		41	820001	820001..840000	20000	X_INTERFACE_SPP1_RELAY	0.7001000000000007
+untreated	adhesion_challenge_basal	declared		41	820001	820001..840000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3999999999999998
+untreated	adhesion_challenge_basal	declared		42	840001	840001..860000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		42	840001	840001..860000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		42	840001	840001..860000	20000	X_INTERFACE_SPP1_RELAY	0.6999500000000005
+untreated	adhesion_challenge_basal	declared		42	840001	840001..860000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39999999999999997
+untreated	adhesion_challenge_basal	declared		43	860001	860001..880000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		43	860001	860001..880000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		43	860001	860001..880000	20000	X_INTERFACE_SPP1_RELAY	0.7001500000000009
+untreated	adhesion_challenge_basal	declared		43	860001	860001..880000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40005
+untreated	adhesion_challenge_basal	declared		44	880001	880001..900000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		44	880001	880001..900000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		44	880001	880001..900000	20000	X_INTERFACE_SPP1_RELAY	0.6997500000000009
+untreated	adhesion_challenge_basal	declared		44	880001	880001..900000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39994999999999964
+untreated	adhesion_challenge_basal	declared		45	900001	900001..920000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		45	900001	900001..920000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		45	900001	900001..920000	20000	X_INTERFACE_SPP1_RELAY	0.7001000000000012
+untreated	adhesion_challenge_basal	declared		45	900001	900001..920000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3999
+untreated	adhesion_challenge_basal	declared		46	920001	920001..940000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		46	920001	920001..940000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		46	920001	920001..940000	20000	X_INTERFACE_SPP1_RELAY	0.7000500000000006
+untreated	adhesion_challenge_basal	declared		46	920001	920001..940000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40014999999999984
+untreated	adhesion_challenge_basal	declared		47	940001	940001..960000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		47	940001	940001..960000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		47	940001	940001..960000	20000	X_INTERFACE_SPP1_RELAY	0.6999500000000005
+untreated	adhesion_challenge_basal	declared		47	940001	940001..960000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000499999999994
+untreated	adhesion_challenge_basal	declared		48	960001	960001..980000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		48	960001	960001..980000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		48	960001	960001..980000	20000	X_INTERFACE_SPP1_RELAY	0.7001000000000002
+untreated	adhesion_challenge_basal	declared		48	960001	960001..980000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39994999999999986
+untreated	adhesion_challenge_basal	declared		49	980001	980001..1000000	20000	OUT_STABLE_ADHESION	0.0
+untreated	adhesion_challenge_basal	declared		49	980001	980001..1000000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0
+untreated	adhesion_challenge_basal	declared		49	980001	980001..1000000	20000	X_INTERFACE_SPP1_RELAY	0.6999000000000003
+untreated	adhesion_challenge_basal	declared		49	980001	980001..1000000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3999499999999995
+hormone_treated	adhesion_challenge_hormone_treated	declared		0	1	1..20000	20000	OUT_STABLE_ADHESION	0.0
+hormone_treated	adhesion_challenge_hormone_treated	declared		0	1	1..20000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00020168003847802245
+hormone_treated	adhesion_challenge_hormone_treated	declared		0	1	1..20000	20000	X_INTERFACE_SPP1_RELAY	0.7008499999999679
+hormone_treated	adhesion_challenge_hormone_treated	declared		0	1	1..20000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000499999999848
+hormone_treated	adhesion_challenge_hormone_treated	declared		1	20001	20001..40000	20000	OUT_STABLE_ADHESION	9.722481608928345e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		1	20001	20001..40000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00028203629428650255
+hormone_treated	adhesion_challenge_hormone_treated	declared		1	20001	20001..40000	20000	X_INTERFACE_SPP1_RELAY	0.6993999999999743
+hormone_treated	adhesion_challenge_hormone_treated	declared		1	20001	20001..40000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3998499999999862
+hormone_treated	adhesion_challenge_hormone_treated	declared		2	40001	40001..60000	20000	OUT_STABLE_ADHESION	7.947625340754856e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		2	40001	40001..60000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00021786765456949158
+hormone_treated	adhesion_challenge_hormone_treated	declared		2	40001	40001..60000	20000	X_INTERFACE_SPP1_RELAY	0.7005999999999697
+hormone_treated	adhesion_challenge_hormone_treated	declared		2	40001	40001..60000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39979999999998583
+hormone_treated	adhesion_challenge_hormone_treated	declared		3	60001	60001..80000	20000	OUT_STABLE_ADHESION	2.284186662982368e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		3	60001	60001..80000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0006502292175440691
+hormone_treated	adhesion_challenge_hormone_treated	declared		3	60001	60001..80000	20000	X_INTERFACE_SPP1_RELAY	0.699999999999973
+hormone_treated	adhesion_challenge_hormone_treated	declared		3	60001	60001..80000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4001499999999847
+hormone_treated	adhesion_challenge_hormone_treated	declared		4	80001	80001..100000	20000	OUT_STABLE_ADHESION	0.00020495347938850436
+hormone_treated	adhesion_challenge_hormone_treated	declared		4	80001	80001..100000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0005999999999999998
+hormone_treated	adhesion_challenge_hormone_treated	declared		4	80001	80001..100000	20000	X_INTERFACE_SPP1_RELAY	0.7001999999999711
+hormone_treated	adhesion_challenge_hormone_treated	declared		4	80001	80001..100000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39989999999998516
+hormone_treated	adhesion_challenge_hormone_treated	declared		5	100001	100001..120000	20000	OUT_STABLE_ADHESION	8.25941572373426e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		5	100001	100001..120000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0004054655075673357
+hormone_treated	adhesion_challenge_hormone_treated	declared		5	100001	100001..120000	20000	X_INTERFACE_SPP1_RELAY	0.7001999999999728
+hormone_treated	adhesion_challenge_hormone_treated	declared		5	100001	100001..120000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3999999999999857
+hormone_treated	adhesion_challenge_hormone_treated	declared		6	120001	120001..140000	20000	OUT_STABLE_ADHESION	7.767631968456157e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		6	120001	120001..140000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00042148598297812027
+hormone_treated	adhesion_challenge_hormone_treated	declared		6	120001	120001..140000	20000	X_INTERFACE_SPP1_RELAY	0.6998999999999748
+hormone_treated	adhesion_challenge_hormone_treated	declared		6	120001	120001..140000	20000	X_INTERFACE_REDUNDANT_RELAY	0.400349999999984
+hormone_treated	adhesion_challenge_hormone_treated	declared		7	140001	140001..160000	20000	OUT_STABLE_ADHESION	2.3481828542317286e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		7	140001	140001..160000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0005257418957631163
+hormone_treated	adhesion_challenge_hormone_treated	declared		7	140001	140001..160000	20000	X_INTERFACE_SPP1_RELAY	0.700249999999972
+hormone_treated	adhesion_challenge_hormone_treated	declared		7	140001	140001..160000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40009999999998386
+hormone_treated	adhesion_challenge_hormone_treated	declared		8	160001	160001..180000	20000	OUT_STABLE_ADHESION	5e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		8	160001	160001..180000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00034125907463926916
+hormone_treated	adhesion_challenge_hormone_treated	declared		8	160001	160001..180000	20000	X_INTERFACE_SPP1_RELAY	0.6998999999999727
+hormone_treated	adhesion_challenge_hormone_treated	declared		8	160001	160001..180000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4002999999999856
+hormone_treated	adhesion_challenge_hormone_treated	declared		9	180001	180001..200000	20000	OUT_STABLE_ADHESION	8.566080865573496e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		9	180001	180001..200000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0004529640750959789
+hormone_treated	adhesion_challenge_hormone_treated	declared		9	180001	180001..200000	20000	X_INTERFACE_SPP1_RELAY	0.7002999999999715
+hormone_treated	adhesion_challenge_hormone_treated	declared		9	180001	180001..200000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3992999999999873
+hormone_treated	adhesion_challenge_hormone_treated	declared		10	200001	200001..220000	20000	OUT_STABLE_ADHESION	2.7216745174923786e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		10	200001	200001..220000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0003826086905147935
+hormone_treated	adhesion_challenge_hormone_treated	declared		10	200001	200001..220000	20000	X_INTERFACE_SPP1_RELAY	0.6998999999999727
+hormone_treated	adhesion_challenge_hormone_treated	declared		10	200001	200001..220000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3999499999999844
+hormone_treated	adhesion_challenge_hormone_treated	declared		11	220001	220001..240000	20000	OUT_STABLE_ADHESION	0.00015
+hormone_treated	adhesion_challenge_hormone_treated	declared		11	220001	220001..240000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0004
+hormone_treated	adhesion_challenge_hormone_treated	declared		11	220001	220001..240000	20000	X_INTERFACE_SPP1_RELAY	0.7007499999999711
+hormone_treated	adhesion_challenge_hormone_treated	declared		11	220001	220001..240000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4003999999999858
+hormone_treated	adhesion_challenge_hormone_treated	declared		12	240001	240001..260000	20000	OUT_STABLE_ADHESION	8.559224931924188e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		12	240001	240001..260000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0004416602209976685
+hormone_treated	adhesion_challenge_hormone_treated	declared		12	240001	240001..260000	20000	X_INTERFACE_SPP1_RELAY	0.6994999999999679
+hormone_treated	adhesion_challenge_hormone_treated	declared		12	240001	240001..260000	20000	X_INTERFACE_REDUNDANT_RELAY	0.400399999999987
+hormone_treated	adhesion_challenge_hormone_treated	declared		13	260001	260001..280000	20000	OUT_STABLE_ADHESION	7.243309399063093e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		13	260001	260001..280000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0005000422114311642
+hormone_treated	adhesion_challenge_hormone_treated	declared		13	260001	260001..280000	20000	X_INTERFACE_SPP1_RELAY	0.7002499999999727
+hormone_treated	adhesion_challenge_hormone_treated	declared		13	260001	260001..280000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4014999999999838
+hormone_treated	adhesion_challenge_hormone_treated	declared		14	280001	280001..300000	20000	OUT_STABLE_ADHESION	3.4834313283965136e-06
+hormone_treated	adhesion_challenge_hormone_treated	declared		14	280001	280001..300000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0005683399216605924
+hormone_treated	adhesion_challenge_hormone_treated	declared		14	280001	280001..300000	20000	X_INTERFACE_SPP1_RELAY	0.700449999999974
+hormone_treated	adhesion_challenge_hormone_treated	declared		14	280001	280001..300000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000499999999849
+hormone_treated	adhesion_challenge_hormone_treated	declared		15	300001	300001..320000	20000	OUT_STABLE_ADHESION	0.00015
+hormone_treated	adhesion_challenge_hormone_treated	declared		15	300001	300001..320000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0004741338811870889
+hormone_treated	adhesion_challenge_hormone_treated	declared		15	300001	300001..320000	20000	X_INTERFACE_SPP1_RELAY	0.6994499999999727
+hormone_treated	adhesion_challenge_hormone_treated	declared		15	300001	300001..320000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4005499999999835
+hormone_treated	adhesion_challenge_hormone_treated	declared		16	320001	320001..340000	20000	OUT_STABLE_ADHESION	9.999999999999999e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		16	320001	320001..340000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00025027637814249205
+hormone_treated	adhesion_challenge_hormone_treated	declared		16	320001	320001..340000	20000	X_INTERFACE_SPP1_RELAY	0.6999999999999696
+hormone_treated	adhesion_challenge_hormone_treated	declared		16	320001	320001..340000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40004999999998603
+hormone_treated	adhesion_challenge_hormone_treated	declared		17	340001	340001..360000	20000	OUT_STABLE_ADHESION	0.000130638088905219
+hormone_treated	adhesion_challenge_hormone_treated	declared		17	340001	340001..360000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00033784954929097076
+hormone_treated	adhesion_challenge_hormone_treated	declared		17	340001	340001..360000	20000	X_INTERFACE_SPP1_RELAY	0.6995999999999706
+hormone_treated	adhesion_challenge_hormone_treated	declared		17	340001	340001..360000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4005499999999841
+hormone_treated	adhesion_challenge_hormone_treated	declared		18	360001	360001..380000	20000	OUT_STABLE_ADHESION	4.999999999999999e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		18	360001	360001..380000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0002720171899043217
+hormone_treated	adhesion_challenge_hormone_treated	declared		18	360001	360001..380000	20000	X_INTERFACE_SPP1_RELAY	0.7004499999999723
+hormone_treated	adhesion_challenge_hormone_treated	declared		18	360001	360001..380000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3993999999999867
+hormone_treated	adhesion_challenge_hormone_treated	declared		19	380001	380001..400000	20000	OUT_STABLE_ADHESION	9.984731297868866e-06
+hormone_treated	adhesion_challenge_hormone_treated	declared		19	380001	380001..400000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00046024909475283403
+hormone_treated	adhesion_challenge_hormone_treated	declared		19	380001	380001..400000	20000	X_INTERFACE_SPP1_RELAY	0.6997499999999683
+hormone_treated	adhesion_challenge_hormone_treated	declared		19	380001	380001..400000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4004499999999862
+hormone_treated	adhesion_challenge_hormone_treated	declared		20	400001	400001..420000	20000	OUT_STABLE_ADHESION	0.00019999999999999998
+hormone_treated	adhesion_challenge_hormone_treated	declared		20	400001	400001..420000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0004625213293997564
+hormone_treated	adhesion_challenge_hormone_treated	declared		20	400001	400001..420000	20000	X_INTERFACE_SPP1_RELAY	0.7004999999999766
+hormone_treated	adhesion_challenge_hormone_treated	declared		20	400001	400001..420000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3989499999999866
+hormone_treated	adhesion_challenge_hormone_treated	declared		21	420001	420001..440000	20000	OUT_STABLE_ADHESION	0.0001534133397007044
+hormone_treated	adhesion_challenge_hormone_treated	declared		21	420001	420001..440000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0007338509031541515
+hormone_treated	adhesion_challenge_hormone_treated	declared		21	420001	420001..440000	20000	X_INTERFACE_SPP1_RELAY	0.6996999999999728
+hormone_treated	adhesion_challenge_hormone_treated	declared		21	420001	420001..440000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39949999999998914
+hormone_treated	adhesion_challenge_hormone_treated	declared		22	440001	440001..460000	20000	OUT_STABLE_ADHESION	0.0001
+hormone_treated	adhesion_challenge_hormone_treated	declared		22	440001	440001..460000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00018498875532781405
+hormone_treated	adhesion_challenge_hormone_treated	declared		22	440001	440001..460000	20000	X_INTERFACE_SPP1_RELAY	0.70039999999997
+hormone_treated	adhesion_challenge_hormone_treated	declared		22	440001	440001..460000	20000	X_INTERFACE_REDUNDANT_RELAY	0.400249999999983
+hormone_treated	adhesion_challenge_hormone_treated	declared		23	460001	460001..480000	20000	OUT_STABLE_ADHESION	0.0
+hormone_treated	adhesion_challenge_hormone_treated	declared		23	460001	460001..480000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	8.025347926972866e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		23	460001	460001..480000	20000	X_INTERFACE_SPP1_RELAY	0.7003999999999704
+hormone_treated	adhesion_challenge_hormone_treated	declared		23	460001	460001..480000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3990499999999871
+hormone_treated	adhesion_challenge_hormone_treated	declared		24	480001	480001..500000	20000	OUT_STABLE_ADHESION	0.0
+hormone_treated	adhesion_challenge_hormone_treated	declared		24	480001	480001..500000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00026696840968976835
+hormone_treated	adhesion_challenge_hormone_treated	declared		24	480001	480001..500000	20000	X_INTERFACE_SPP1_RELAY	0.6996999999999801
+hormone_treated	adhesion_challenge_hormone_treated	declared		24	480001	480001..500000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000499999999855
+hormone_treated	adhesion_challenge_hormone_treated	declared		25	500001	500001..520000	20000	OUT_STABLE_ADHESION	0.0
+hormone_treated	adhesion_challenge_hormone_treated	declared		25	500001	500001..520000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0006073888400654846
+hormone_treated	adhesion_challenge_hormone_treated	declared		25	500001	500001..520000	20000	X_INTERFACE_SPP1_RELAY	0.7007999999999726
+hormone_treated	adhesion_challenge_hormone_treated	declared		25	500001	500001..520000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39929999999998683
+hormone_treated	adhesion_challenge_hormone_treated	declared		26	520001	520001..540000	20000	OUT_STABLE_ADHESION	5e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		26	520001	520001..540000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00025703555731608507
+hormone_treated	adhesion_challenge_hormone_treated	declared		26	520001	520001..540000	20000	X_INTERFACE_SPP1_RELAY	0.699399999999976
+hormone_treated	adhesion_challenge_hormone_treated	declared		26	520001	520001..540000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40014999999998596
+hormone_treated	adhesion_challenge_hormone_treated	declared		27	540001	540001..560000	20000	OUT_STABLE_ADHESION	6.426993641915529e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		27	540001	540001..560000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0004323241105925772
+hormone_treated	adhesion_challenge_hormone_treated	declared		27	540001	540001..560000	20000	X_INTERFACE_SPP1_RELAY	0.6999499999999718
+hormone_treated	adhesion_challenge_hormone_treated	declared		27	540001	540001..560000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40024999999998595
+hormone_treated	adhesion_challenge_hormone_treated	declared		28	560001	560001..580000	20000	OUT_STABLE_ADHESION	0.00012213482560550064
+hormone_treated	adhesion_challenge_hormone_treated	declared		28	560001	560001..580000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0003672656472487886
+hormone_treated	adhesion_challenge_hormone_treated	declared		28	560001	560001..580000	20000	X_INTERFACE_SPP1_RELAY	0.6992499999999712
+hormone_treated	adhesion_challenge_hormone_treated	declared		28	560001	560001..580000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3988999999999857
+hormone_treated	adhesion_challenge_hormone_treated	declared		29	580001	580001..600000	20000	OUT_STABLE_ADHESION	9.999999999999999e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		29	580001	580001..600000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0005117221755922266
+hormone_treated	adhesion_challenge_hormone_treated	declared		29	580001	580001..600000	20000	X_INTERFACE_SPP1_RELAY	0.7000499999999693
+hormone_treated	adhesion_challenge_hormone_treated	declared		29	580001	580001..600000	20000	X_INTERFACE_REDUNDANT_RELAY	0.399999999999985
+hormone_treated	adhesion_challenge_hormone_treated	declared		30	600001	600001..620000	20000	OUT_STABLE_ADHESION	0.00019999999999999998
+hormone_treated	adhesion_challenge_hormone_treated	declared		30	600001	600001..620000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0007034319833818162
+hormone_treated	adhesion_challenge_hormone_treated	declared		30	600001	600001..620000	20000	X_INTERFACE_SPP1_RELAY	0.7006999999999703
+hormone_treated	adhesion_challenge_hormone_treated	declared		30	600001	600001..620000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3996499999999859
+hormone_treated	adhesion_challenge_hormone_treated	declared		31	620001	620001..640000	20000	OUT_STABLE_ADHESION	0.00010588779891873279
+hormone_treated	adhesion_challenge_hormone_treated	declared		31	620001	620001..640000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0002873722108027324
+hormone_treated	adhesion_challenge_hormone_treated	declared		31	620001	620001..640000	20000	X_INTERFACE_SPP1_RELAY	0.699399999999971
+hormone_treated	adhesion_challenge_hormone_treated	declared		31	620001	620001..640000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3995999999999871
+hormone_treated	adhesion_challenge_hormone_treated	declared		32	640001	640001..660000	20000	OUT_STABLE_ADHESION	9.659260863279301e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		32	640001	640001..660000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0003121861909789348
+hormone_treated	adhesion_challenge_hormone_treated	declared		32	640001	640001..660000	20000	X_INTERFACE_SPP1_RELAY	0.700299999999971
+hormone_treated	adhesion_challenge_hormone_treated	declared		32	640001	640001..660000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3997999999999859
+hormone_treated	adhesion_challenge_hormone_treated	declared		33	660001	660001..680000	20000	OUT_STABLE_ADHESION	0.00019764826628678714
+hormone_treated	adhesion_challenge_hormone_treated	declared		33	660001	660001..680000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0007258278851137486
+hormone_treated	adhesion_challenge_hormone_treated	declared		33	660001	660001..680000	20000	X_INTERFACE_SPP1_RELAY	0.7000499999999723
+hormone_treated	adhesion_challenge_hormone_treated	declared		33	660001	660001..680000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40099999999998426
+hormone_treated	adhesion_challenge_hormone_treated	declared		34	680001	680001..700000	20000	OUT_STABLE_ADHESION	0.0
+hormone_treated	adhesion_challenge_hormone_treated	declared		34	680001	680001..700000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00033739611244229257
+hormone_treated	adhesion_challenge_hormone_treated	declared		34	680001	680001..700000	20000	X_INTERFACE_SPP1_RELAY	0.7006999999999731
+hormone_treated	adhesion_challenge_hormone_treated	declared		34	680001	680001..700000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40014999999998674
+hormone_treated	adhesion_challenge_hormone_treated	declared		35	700001	700001..720000	20000	OUT_STABLE_ADHESION	0.0001253678132940687
+hormone_treated	adhesion_challenge_hormone_treated	declared		35	700001	700001..720000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00032589923435834907
+hormone_treated	adhesion_challenge_hormone_treated	declared		35	700001	700001..720000	20000	X_INTERFACE_SPP1_RELAY	0.6996999999999721
+hormone_treated	adhesion_challenge_hormone_treated	declared		35	700001	700001..720000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40079999999998667
+hormone_treated	adhesion_challenge_hormone_treated	declared		36	720001	720001..740000	20000	OUT_STABLE_ADHESION	8.366036870814108e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		36	720001	720001..740000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0005430242399976828
+hormone_treated	adhesion_challenge_hormone_treated	declared		36	720001	720001..740000	20000	X_INTERFACE_SPP1_RELAY	0.7000499999999726
+hormone_treated	adhesion_challenge_hormone_treated	declared		36	720001	720001..740000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3989499999999856
+hormone_treated	adhesion_challenge_hormone_treated	declared		37	740001	740001..760000	20000	OUT_STABLE_ADHESION	0.00021763258358032292
+hormone_treated	adhesion_challenge_hormone_treated	declared		37	740001	740001..760000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00044999999999999993
+hormone_treated	adhesion_challenge_hormone_treated	declared		37	740001	740001..760000	20000	X_INTERFACE_SPP1_RELAY	0.7004999999999737
+hormone_treated	adhesion_challenge_hormone_treated	declared		37	740001	740001..760000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40039999999998627
+hormone_treated	adhesion_challenge_hormone_treated	declared		38	760001	760001..780000	20000	OUT_STABLE_ADHESION	6.563488721157084e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		38	760001	760001..780000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0005482259373847913
+hormone_treated	adhesion_challenge_hormone_treated	declared		38	760001	760001..780000	20000	X_INTERFACE_SPP1_RELAY	0.6992999999999694
+hormone_treated	adhesion_challenge_hormone_treated	declared		38	760001	760001..780000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40104999999998636
+hormone_treated	adhesion_challenge_hormone_treated	declared		39	780001	780001..800000	20000	OUT_STABLE_ADHESION	8.249657328964101e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		39	780001	780001..800000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00026548303666604147
+hormone_treated	adhesion_challenge_hormone_treated	declared		39	780001	780001..800000	20000	X_INTERFACE_SPP1_RELAY	0.7002499999999741
+hormone_treated	adhesion_challenge_hormone_treated	declared		39	780001	780001..800000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3996499999999841
+hormone_treated	adhesion_challenge_hormone_treated	declared		40	800001	800001..820000	20000	OUT_STABLE_ADHESION	9.999999999999996e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		40	800001	800001..820000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0006528036364580208
+hormone_treated	adhesion_challenge_hormone_treated	declared		40	800001	800001..820000	20000	X_INTERFACE_SPP1_RELAY	0.7003999999999698
+hormone_treated	adhesion_challenge_hormone_treated	declared		40	800001	800001..820000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4006999999999863
+hormone_treated	adhesion_challenge_hormone_treated	declared		41	820001	820001..840000	20000	OUT_STABLE_ADHESION	0.00018333776658347812
+hormone_treated	adhesion_challenge_hormone_treated	declared		41	820001	820001..840000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0004508254724214073
+hormone_treated	adhesion_challenge_hormone_treated	declared		41	820001	820001..840000	20000	X_INTERFACE_SPP1_RELAY	0.7003999999999708
+hormone_treated	adhesion_challenge_hormone_treated	declared		41	820001	820001..840000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3998499999999862
+hormone_treated	adhesion_challenge_hormone_treated	declared		42	840001	840001..860000	20000	OUT_STABLE_ADHESION	4.999999999999999e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		42	840001	840001..860000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0002841193448876115
+hormone_treated	adhesion_challenge_hormone_treated	declared		42	840001	840001..860000	20000	X_INTERFACE_SPP1_RELAY	0.6991999999999704
+hormone_treated	adhesion_challenge_hormone_treated	declared		42	840001	840001..860000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4000999999999867
+hormone_treated	adhesion_challenge_hormone_treated	declared		43	860001	860001..880000	20000	OUT_STABLE_ADHESION	9.100980881805711e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		43	860001	860001..880000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00038793747372481587
+hormone_treated	adhesion_challenge_hormone_treated	declared		43	860001	860001..880000	20000	X_INTERFACE_SPP1_RELAY	0.7004499999999766
+hormone_treated	adhesion_challenge_hormone_treated	declared		43	860001	860001..880000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40004999999998386
+hormone_treated	adhesion_challenge_hormone_treated	declared		44	880001	880001..900000	20000	OUT_STABLE_ADHESION	7.933434180152066e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		44	880001	880001..900000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0004088131933984664
+hormone_treated	adhesion_challenge_hormone_treated	declared		44	880001	880001..900000	20000	X_INTERFACE_SPP1_RELAY	0.6992999999999692
+hormone_treated	adhesion_challenge_hormone_treated	declared		44	880001	880001..900000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4004499999999876
+hormone_treated	adhesion_challenge_hormone_treated	declared		45	900001	900001..920000	20000	OUT_STABLE_ADHESION	0.00013577834347534628
+hormone_treated	adhesion_challenge_hormone_treated	declared		45	900001	900001..920000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00032061278739125854
+hormone_treated	adhesion_challenge_hormone_treated	declared		45	900001	900001..920000	20000	X_INTERFACE_SPP1_RELAY	0.7000999999999732
+hormone_treated	adhesion_challenge_hormone_treated	declared		45	900001	900001..920000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3995999999999853
+hormone_treated	adhesion_challenge_hormone_treated	declared		46	920001	920001..940000	20000	OUT_STABLE_ADHESION	5e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		46	920001	920001..940000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0003565751964762039
+hormone_treated	adhesion_challenge_hormone_treated	declared		46	920001	920001..940000	20000	X_INTERFACE_SPP1_RELAY	0.699649999999974
+hormone_treated	adhesion_challenge_hormone_treated	declared		46	920001	920001..940000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40059999999998475
+hormone_treated	adhesion_challenge_hormone_treated	declared		47	940001	940001..960000	20000	OUT_STABLE_ADHESION	4.999999999999999e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		47	940001	940001..960000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0006067823306829913
+hormone_treated	adhesion_challenge_hormone_treated	declared		47	940001	940001..960000	20000	X_INTERFACE_SPP1_RELAY	0.6993999999999737
+hormone_treated	adhesion_challenge_hormone_treated	declared		47	940001	940001..960000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39969999999998534
+hormone_treated	adhesion_challenge_hormone_treated	declared		48	960001	960001..980000	20000	OUT_STABLE_ADHESION	0.0
+hormone_treated	adhesion_challenge_hormone_treated	declared		48	960001	960001..980000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00031190893295634945
+hormone_treated	adhesion_challenge_hormone_treated	declared		48	960001	960001..980000	20000	X_INTERFACE_SPP1_RELAY	0.7005999999999732
+hormone_treated	adhesion_challenge_hormone_treated	declared		48	960001	960001..980000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3994999999999863
+hormone_treated	adhesion_challenge_hormone_treated	declared		49	980001	980001..1000000	20000	OUT_STABLE_ADHESION	6.672070049113345e-05
+hormone_treated	adhesion_challenge_hormone_treated	declared		49	980001	980001..1000000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00045687426257077444
+hormone_treated	adhesion_challenge_hormone_treated	declared		49	980001	980001..1000000	20000	X_INTERFACE_SPP1_RELAY	0.6996999999999732
+hormone_treated	adhesion_challenge_hormone_treated	declared		49	980001	980001..1000000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3997499999999854
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		0	1	1..20000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		0	1	1..20000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00024999999999999995
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		0	1	1..20000	20000	X_INTERFACE_SPP1_RELAY	0.7006999999999729
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		0	1	1..20000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3980999999999847
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		1	20001	20001..40000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		1	20001	20001..40000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00012000193224638979
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		1	20001	20001..40000	20000	X_INTERFACE_SPP1_RELAY	0.7002499999999677
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		1	20001	20001..40000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39714999999998396
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		2	40001	40001..60000	20000	OUT_STABLE_ADHESION	0.00013195644812166518
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		2	40001	40001..60000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00026710773685418286
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		2	40001	40001..60000	20000	X_INTERFACE_SPP1_RELAY	0.7015499999999733
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		2	40001	40001..60000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40184999999998516
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		3	60001	60001..80000	20000	OUT_STABLE_ADHESION	8.6274089103342e-06
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		3	60001	60001..80000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00043042861905354606
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		3	60001	60001..80000	20000	X_INTERFACE_SPP1_RELAY	0.6966499999999726
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		3	60001	60001..80000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4003999999999841
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		4	80001	80001..100000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		4	80001	80001..100000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00025484390771564043
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		4	80001	80001..100000	20000	X_INTERFACE_SPP1_RELAY	0.6984999999999715
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		4	80001	80001..100000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40114999999998646
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		5	100001	100001..120000	20000	OUT_STABLE_ADHESION	1.4200502925690195e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		5	100001	100001..120000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0003087532222005841
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		5	100001	100001..120000	20000	X_INTERFACE_SPP1_RELAY	0.6995999999999709
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		5	100001	100001..120000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4018499999999858
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		6	120001	120001..140000	20000	OUT_STABLE_ADHESION	4.999999999999999e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		6	120001	120001..140000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0002368872283620808
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		6	120001	120001..140000	20000	X_INTERFACE_SPP1_RELAY	0.7008499999999751
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		6	120001	120001..140000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40104999999998364
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		7	140001	140001..160000	20000	OUT_STABLE_ADHESION	7.022757144644555e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		7	140001	140001..160000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00040977727896978776
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		7	140001	140001..160000	20000	X_INTERFACE_SPP1_RELAY	0.7017999999999692
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		7	140001	140001..160000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40164999999998363
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		8	160001	160001..180000	20000	OUT_STABLE_ADHESION	0.0001604504445135159
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		8	160001	160001..180000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00024999999999999995
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		8	160001	160001..180000	20000	X_INTERFACE_SPP1_RELAY	0.6986999999999735
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		8	160001	160001..180000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4004999999999848
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		9	180001	180001..200000	20000	OUT_STABLE_ADHESION	5.7854718873941845e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		9	180001	180001..200000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00027202966454655897
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		9	180001	180001..200000	20000	X_INTERFACE_SPP1_RELAY	0.7004999999999684
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		9	180001	180001..200000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3989999999999848
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		10	200001	200001..220000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		10	200001	200001..220000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	6.47497367934421e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		10	200001	200001..220000	20000	X_INTERFACE_SPP1_RELAY	0.6988499999999734
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		10	200001	200001..220000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4006499999999855
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		11	220001	220001..240000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		11	220001	220001..240000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.000276107974680199
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		11	220001	220001..240000	20000	X_INTERFACE_SPP1_RELAY	0.7018999999999714
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		11	220001	220001..240000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40294999999998315
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		12	240001	240001..260000	20000	OUT_STABLE_ADHESION	5.164472180635378e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		12	240001	240001..260000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0002102891976883562
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		12	240001	240001..260000	20000	X_INTERFACE_SPP1_RELAY	0.6996999999999708
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		12	240001	240001..260000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4018999999999845
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		13	260001	260001..280000	20000	OUT_STABLE_ADHESION	1.6294806876391287e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		13	260001	260001..280000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00023002085218335578
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		13	260001	260001..280000	20000	X_INTERFACE_SPP1_RELAY	0.6993999999999712
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		13	260001	260001..280000	20000	X_INTERFACE_REDUNDANT_RELAY	0.397849999999985
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		14	280001	280001..300000	20000	OUT_STABLE_ADHESION	8.529806469119318e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		14	280001	280001..300000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00024999999999999995
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		14	280001	280001..300000	20000	X_INTERFACE_SPP1_RELAY	0.6990499999999712
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		14	280001	280001..300000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3999999999999838
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		15	300001	300001..320000	20000	OUT_STABLE_ADHESION	4.999999999999999e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		15	300001	300001..320000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00017857288655805562
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		15	300001	300001..320000	20000	X_INTERFACE_SPP1_RELAY	0.6978999999999711
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		15	300001	300001..320000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4002499999999853
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		16	320001	320001..340000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		16	320001	320001..340000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00016076439078572098
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		16	320001	320001..340000	20000	X_INTERFACE_SPP1_RELAY	0.6998499999999674
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		16	320001	320001..340000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4009499999999864
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		17	340001	340001..360000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		17	340001	340001..360000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00025543206257545186
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		17	340001	340001..360000	20000	X_INTERFACE_SPP1_RELAY	0.6979999999999705
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		17	340001	340001..360000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3991999999999854
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		18	360001	360001..380000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		18	360001	360001..380000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0001517415009019452
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		18	360001	360001..380000	20000	X_INTERFACE_SPP1_RELAY	0.7028499999999687
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		18	360001	360001..380000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3988999999999835
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		19	380001	380001..400000	20000	OUT_STABLE_ADHESION	5e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		19	380001	380001..400000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00034999999999999994
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		19	380001	380001..400000	20000	X_INTERFACE_SPP1_RELAY	0.6960499999999746
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		19	380001	380001..400000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4006499999999856
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		20	400001	400001..420000	20000	OUT_STABLE_ADHESION	0.0001
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		20	400001	400001..420000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00020982198396595495
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		20	400001	400001..420000	20000	X_INTERFACE_SPP1_RELAY	0.7030999999999653
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		20	400001	400001..420000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3999999999999847
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		21	420001	420001..440000	20000	OUT_STABLE_ADHESION	8.556003140062989e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		21	420001	420001..440000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0004548855208284936
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		21	420001	420001..440000	20000	X_INTERFACE_SPP1_RELAY	0.7012499999999674
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		21	420001	420001..440000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4018499999999848
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		22	440001	440001..460000	20000	OUT_STABLE_ADHESION	9.300288595054273e-06
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		22	440001	440001..460000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.000174648622142353
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		22	440001	440001..460000	20000	X_INTERFACE_SPP1_RELAY	0.7011999999999696
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		22	440001	440001..460000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3996999999999851
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		23	460001	460001..480000	20000	OUT_STABLE_ADHESION	4.9999999999999996e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		23	460001	460001..480000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00014999999999999996
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		23	460001	460001..480000	20000	X_INTERFACE_SPP1_RELAY	0.7018499999999676
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		23	460001	460001..480000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40084999999998405
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		24	480001	480001..500000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		24	480001	480001..500000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0002086873320516843
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		24	480001	480001..500000	20000	X_INTERFACE_SPP1_RELAY	0.6979499999999689
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		24	480001	480001..500000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3996999999999833
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		25	500001	500001..520000	20000	OUT_STABLE_ADHESION	5e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		25	500001	500001..520000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00010962487067636276
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		25	500001	500001..520000	20000	X_INTERFACE_SPP1_RELAY	0.6986499999999704
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		25	500001	500001..520000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4010999999999837
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		26	520001	520001..540000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		26	520001	520001..540000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0003651277805481968
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		26	520001	520001..540000	20000	X_INTERFACE_SPP1_RELAY	0.7004499999999689
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		26	520001	520001..540000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3997499999999836
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		27	540001	540001..560000	20000	OUT_STABLE_ADHESION	9.999999999999998e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		27	540001	540001..560000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0002999999999999999
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		27	540001	540001..560000	20000	X_INTERFACE_SPP1_RELAY	0.7021999999999708
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		27	540001	540001..560000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39999999999998603
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		28	560001	560001..580000	20000	OUT_STABLE_ADHESION	5e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		28	560001	560001..580000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.000249471096190384
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		28	560001	560001..580000	20000	X_INTERFACE_SPP1_RELAY	0.7013499999999722
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		28	560001	560001..580000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3976999999999846
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		29	580001	580001..600000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		29	580001	580001..600000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00014373164412288832
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		29	580001	580001..600000	20000	X_INTERFACE_SPP1_RELAY	0.7011999999999713
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		29	580001	580001..600000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39929999999998445
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		30	600001	600001..620000	20000	OUT_STABLE_ADHESION	9.999999999999999e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		30	600001	600001..620000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0002716836972698187
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		30	600001	600001..620000	20000	X_INTERFACE_SPP1_RELAY	0.702849999999972
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		30	600001	600001..620000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3987999999999852
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		31	620001	620001..640000	20000	OUT_STABLE_ADHESION	0.00018159306468871922
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		31	620001	620001..640000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00034999999999999994
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		31	620001	620001..640000	20000	X_INTERFACE_SPP1_RELAY	0.6989499999999695
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		31	620001	620001..640000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40209999999998264
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		32	640001	640001..660000	20000	OUT_STABLE_ADHESION	1.85823975736511e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		32	640001	640001..660000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00020165009822439243
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		32	640001	640001..660000	20000	X_INTERFACE_SPP1_RELAY	0.7009999999999685
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		32	640001	640001..660000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40024999999998495
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		33	660001	660001..680000	20000	OUT_STABLE_ADHESION	4.9999999999999996e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		33	660001	660001..680000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00028143574683267385
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		33	660001	660001..680000	20000	X_INTERFACE_SPP1_RELAY	0.6993499999999722
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		33	660001	660001..680000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40119999999998435
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		34	680001	680001..700000	20000	OUT_STABLE_ADHESION	4.999999999999999e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		34	680001	680001..700000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00020758855576295405
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		34	680001	680001..700000	20000	X_INTERFACE_SPP1_RELAY	0.6995499999999727
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		34	680001	680001..700000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40204999999998575
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		35	700001	700001..720000	20000	OUT_STABLE_ADHESION	5e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		35	700001	700001..720000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0002464022456439882
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		35	700001	700001..720000	20000	X_INTERFACE_SPP1_RELAY	0.7024999999999709
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		35	700001	700001..720000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39924999999998284
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		36	720001	720001..740000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		36	720001	720001..740000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0001941688862862236
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		36	720001	720001..740000	20000	X_INTERFACE_SPP1_RELAY	0.6968499999999745
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		36	720001	720001..740000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39769999999998645
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		37	740001	740001..760000	20000	OUT_STABLE_ADHESION	6.636929827248477e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		37	740001	740001..760000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00029163793205499517
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		37	740001	740001..760000	20000	X_INTERFACE_SPP1_RELAY	0.7040499999999708
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		37	740001	740001..760000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40074999999998623
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		38	760001	760001..780000	20000	OUT_STABLE_ADHESION	7.542103936980316e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		38	760001	760001..780000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00016130535869857753
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		38	760001	760001..780000	20000	X_INTERFACE_SPP1_RELAY	0.6987499999999689
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		38	760001	760001..780000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40009999999998364
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		39	780001	780001..800000	20000	OUT_STABLE_ADHESION	5e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		39	780001	780001..800000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00011718131918111687
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		39	780001	780001..800000	20000	X_INTERFACE_SPP1_RELAY	0.7015499999999734
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		39	780001	780001..800000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39764999999998407
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		40	800001	800001..820000	20000	OUT_STABLE_ADHESION	9.999999999999998e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		40	800001	800001..820000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0002646018932122774
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		40	800001	800001..820000	20000	X_INTERFACE_SPP1_RELAY	0.6995999999999722
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		40	800001	800001..820000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39804999999998436
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		41	820001	820001..840000	20000	OUT_STABLE_ADHESION	5.714552900685044e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		41	820001	820001..840000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00027493362193676933
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		41	820001	820001..840000	20000	X_INTERFACE_SPP1_RELAY	0.6985999999999735
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		41	820001	820001..840000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40034999999998366
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		42	840001	840001..860000	20000	OUT_STABLE_ADHESION	0.00015
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		42	840001	840001..860000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0002
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		42	840001	840001..860000	20000	X_INTERFACE_SPP1_RELAY	0.6970499999999739
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		42	840001	840001..860000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4008499999999842
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		43	860001	860001..880000	20000	OUT_STABLE_ADHESION	0.00010108329715346326
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		43	860001	860001..880000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0004824532484576536
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		43	860001	860001..880000	20000	X_INTERFACE_SPP1_RELAY	0.6970999999999674
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		43	860001	860001..880000	20000	X_INTERFACE_REDUNDANT_RELAY	0.3986999999999848
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		44	880001	880001..900000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		44	880001	880001..900000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	8.367316949756649e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		44	880001	880001..900000	20000	X_INTERFACE_SPP1_RELAY	0.7007999999999689
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		44	880001	880001..900000	20000	X_INTERFACE_REDUNDANT_RELAY	0.398699999999986
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		45	900001	900001..920000	20000	OUT_STABLE_ADHESION	1.758078288570686e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		45	900001	900001..920000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0004601457366619072
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		45	900001	900001..920000	20000	X_INTERFACE_SPP1_RELAY	0.6975499999999698
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		45	900001	900001..920000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39879999999998456
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		46	920001	920001..940000	20000	OUT_STABLE_ADHESION	3.085785503499078e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		46	920001	920001..940000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00023547106738562056
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		46	920001	920001..940000	20000	X_INTERFACE_SPP1_RELAY	0.7004499999999717
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		46	920001	920001..940000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39994999999998326
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		47	940001	940001..960000	20000	OUT_STABLE_ADHESION	5e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		47	940001	940001..960000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00030000000000000003
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		47	940001	940001..960000	20000	X_INTERFACE_SPP1_RELAY	0.7004999999999693
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		47	940001	940001..960000	20000	X_INTERFACE_REDUNDANT_RELAY	0.40139999999998544
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		48	960001	960001..980000	20000	OUT_STABLE_ADHESION	5e-05
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		48	960001	960001..980000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.0002999999999999999
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		48	960001	960001..980000	20000	X_INTERFACE_SPP1_RELAY	0.7000999999999703
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		48	960001	960001..980000	20000	X_INTERFACE_REDUNDANT_RELAY	0.39934999999998516
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		49	980001	980001..1000000	20000	OUT_STABLE_ADHESION	0.0
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		49	980001	980001..1000000	20000	OUT_MATERNAL_ADHESION_COMPETENCE	0.00023016709083943833
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		49	980001	980001..1000000	20000	X_INTERFACE_SPP1_RELAY	0.6998499999999725
+mifepristone	adhesion_challenge_hormone_treated_mifepristone	declared		49	980001	980001..1000000	20000	X_INTERFACE_REDUNDANT_RELAY	0.4008999999999838

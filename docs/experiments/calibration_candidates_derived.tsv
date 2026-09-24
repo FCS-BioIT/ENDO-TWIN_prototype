@@ -1,0 +1,15 @@
+candidate_id	status	compartment	perturbation_count	embryo_required	curator_maternal_value	curator_interface_value	has_model_image	scope	nodes_present	nodes_missing	zero_degree_nodes	maternal_nodes_reached	implemented_as	separates_variants	unmeasurable_readouts	evidence_level
+CAND-01	active	epithelial	0	no	high	low	True	maternal_and_downstream	IN_E2;E_PGR;E_GP130_STAT3;E_CD98_CD9			28		CD98-a;CD98-b;CD98-c;GP130-b	surface CD98/CD9	direct_human	True
+CAND-02	active	epithelial	1	no	high	medium	True	maternal_and_downstream	E_LIF;E_GP130_STAT3;E_CD98_CD9			5		CD98-a;CD98-b;CD98-c;GP130-b	pSTAT3;surface CD98/CD9;ITGA2	direct_human	False
+CAND-03	active	epithelial	2	no	high	medium	True	maternal_and_downstream	E_LIF;E_GP130_STAT3			5		CD98-a;CD98-b;CD98-c;GP130-b	pSTAT3;ITGA2;surface CD98/CD9	direct_human	False
+CAND-04	active	epithelial	1	no	medium	medium	True	maternal_and_downstream	E_GP130_STAT3			3		CD98-a;CD98-b;CD98-c;GP130-b	pSTAT3;surface CD98/CD9	transferred_only	False
+CAND-05	active	stromal	1	no	high	low	True	maternal_and_downstream	IN_cAMP;S_PKA;S_DECIDUALIZED;S_PRL;S_IGFBP1			11		IGFBP1-fb		direct_human	True
+CAND-06	active	stromal	1	no	high	low	True	maternal_and_downstream	E_IHH;S_NR2F2;S_BMP2;S_HAND2;E_PGR;S_PGR			29		HH-reception	PTCH1;GLI1;NR2F2;HAND2	human_plus_transferred	False
+CAND-07	active	stromal	1	no	medium	low	True	maternal_and_downstream	S_BMP2;S_DECIDUALIZED;S_PRL;S_IGFBP1			10		IGFBP1-fb		transferred_only	False
+CAND-08	active	epithelial	1	no	medium	medium	True	maternal_and_downstream	E_PC6;E_DAG1_CLEAVED;E_DAG1_FULL			4		PC6-b	PC6/PCSK5;alpha-dystroglycan full-length;alpha-DG N-terminal	direct_human	False
+CAND-09	active	stromal	1	no	high	low	True	maternal_and_downstream	IN_HAND2_LOSS;S_HAND2;S_FGF_MITOGENIC;E_ESTROGENIC_PROLIFERATION			4	hand2_loss_after_ht		HAND2	human_plus_transferred	True
+CAND-10	active	epithelial	1	no	unresolved	low	True	maternal_and_downstream	IN_HCG;E_CD98_CD9;E_CDH1_APICAL		IN_HCG	3		CD98-a;CD98-b;CD98-c;CDH1-b;CDH1-c	surface CD98/CD9;apical CDH1	direct_human	False
+CAND-11	deprioritised	interface	1	yes	low	high	True	maternal_and_downstream	IN_ANTI_SPP1;X_SPP1_LUMEN_FREE;X_ADHESION_ROUTE_SPP1;X_INTERFACE_SPP1_RELAY;X_INTERFACE_REDUNDANT_RELAY			1	anti_spp1_after_ht;anti_spp1_washout		attachment fraction	direct_human	False
+CAND-12	active	both	1	no	unresolved	low	True	maternal_and_downstream	IN_XAV939;E_SECRETORY_STATE;E_PAEP		IN_XAV939	16				none_cited	False
+CAND-13	evidence_gap	unresolved	1	no	unresolved	unresolved	False	no_model_image				0				direct_human	False
+CAND-14	evidence_gap	unresolved	1	no	unresolved	unresolved	False	no_model_image				0				none_cited	False

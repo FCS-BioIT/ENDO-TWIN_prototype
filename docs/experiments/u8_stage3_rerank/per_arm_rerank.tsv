@@ -1,0 +1,17 @@
+experiment	protocol_status	perturbations	v0.4_forks_separated_any	v0.4_forks_separated_usable_assay	v0.4_forks_separated_mapped_composite	v0.4_forks_separated_no_assay_only	v0.4_forks_separated_usable_opposite	v0.4_usable_assay_pairs	v0.4_usable_assay_nodes	v0.4_committed_model_propagates	v0.4_in_candidate_set	v0.5.1_forks_separated_any	v0.5.1_forks_separated_usable_assay	v0.5.1_forks_separated_mapped_composite	v0.5.1_forks_separated_no_assay_only	v0.5.1_forks_separated_usable_opposite	v0.5.1_usable_assay_pairs	v0.5.1_usable_assay_nodes	v0.5.1_committed_model_propagates	v0.5.1_in_candidate_set	changed_fields
+observe_e2_primed	existing_phase_new_sampling	0	CD98,SEC	SEC		CD98	SEC	SEC:SEC-a/SEC-c;SEC:SEC-b/SEC-c;SEC:SEC-c/SEC-d;SEC:SEC-c/SEC-e	E_PAEP	False	True	CD98,SEC	SEC		CD98	SEC	SEC:SEC-a/SEC-c;SEC:SEC-b/SEC-c;SEC:SEC-c/SEC-d;SEC:SEC-c/SEC-e	E_PAEP	False	True	none
+observe_hormone_treated	existing_recorded_state	0	CD98			CD98				False	False	CD98			CD98				False	False	none
+dropout_e2	new_arm	1	CD98,SEC	SEC		CD98	SEC	SEC:SEC-a/SEC-b;SEC:SEC-a/SEC-c;SEC:SEC-a/SEC-d;SEC:SEC-b/SEC-d;SEC:SEC-b/SEC-e;SEC:SEC-c/SEC-d;SEC:SEC-c/SEC-e;SEC:SEC-d/SEC-e	E_PAEP;S_IGFBP1	True	True	CD98,SEC	SEC		CD98	SEC	SEC:SEC-a/SEC-b;SEC:SEC-a/SEC-c;SEC:SEC-a/SEC-d;SEC:SEC-b/SEC-d;SEC:SEC-b/SEC-e;SEC:SEC-c/SEC-d;SEC:SEC-c/SEC-e;SEC:SEC-d/SEC-e	E_PAEP;S_IGFBP1	True	True	none
+dropout_camp	new_arm	1	CAMP,CD98	CAMP		CD98	CAMP	CAMP:CAMP-a/CAMP-b	S_IGFBP1	True	True	CAMP,CD98	CAMP		CD98	CAMP	CAMP:CAMP-a/CAMP-b	S_IGFBP1	True	True	none
+dropout_xav939	new_arm	1	CD98			CD98				False	False	CD98			CD98				False	False	none
+add_hcg_on_hormone_treated	new_arm	1	CD98			CD98				False	False	CD98			CD98				False	False	none
+add_hcg_on_e2	new_arm	1	CD98,SEC	SEC		CD98	SEC	SEC:SEC-a/SEC-c;SEC:SEC-b/SEC-c;SEC:SEC-c/SEC-d;SEC:SEC-c/SEC-e	E_PAEP	False	True	CD98,SEC	SEC		CD98	SEC	SEC:SEC-a/SEC-c;SEC:SEC-b/SEC-c;SEC:SEC-c/SEC-d;SEC:SEC-c/SEC-e	E_PAEP	False	True	none
+add_il11	new_arm	1	CD98,GP130		GP130	CD98				False	False	CD98,GP130		GP130	CD98				False	False	none
+anti_lif	new_arm	1	CD98			CD98				True	False	CD98			CD98				True	False	none
+anti_lif_plus_il11	new_arm	2	CD98,GP130		GP130	CD98				True	False	CD98,GP130		GP130	CD98				True	False	none
+smo_antagonist	new_arm	1	CD98,HH	HH		CD98	HH	HH:HH-a/HH-b	S_IGFBP1	False	True	CD98,HH	HH		CD98	HH	HH:HH-a/HH-b	S_IGFBP1	False	True	none
+bmpr_inhibitor	new_arm	1	CD98			CD98				True	False	CD98			CD98				True	False	none
+pc6_knockdown	new_arm	1	CD98			CD98				True	False	CD98			CD98				True	False	none
+dag1_cleavage_resistant	new_arm	1	CD98,PC6		PC6	CD98				False	False	CD98,PC6		PC6	CD98				False	False	none
+anti_spp1	new_arm	1	CD98			CD98				False	False	CD98			CD98				False	False	none
+hand2_loss	new_arm	1	CD98			CD98				True	False	CD98			CD98				True	False	none

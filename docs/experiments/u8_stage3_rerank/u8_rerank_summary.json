@@ -1,0 +1,561 @@
+{
+  "candidate_set": {
+    "experiments": [
+      "observe_e2_primed",
+      "observe_hormone_treated",
+      "dropout_e2",
+      "dropout_camp",
+      "dropout_xav939",
+      "add_hcg_on_hormone_treated",
+      "add_hcg_on_e2",
+      "add_il11",
+      "anti_lif",
+      "anti_lif_plus_il11",
+      "smo_antagonist",
+      "bmpr_inhibitor",
+      "pc6_knockdown",
+      "dag1_cleavage_resistant",
+      "anti_spp1",
+      "hand2_loss"
+    ],
+    "forks": {
+      "CAMP": [
+        "CAMP-a",
+        "CAMP-b"
+      ],
+      "CD98": [
+        "CD98-a",
+        "CD98-b",
+        "CD98-c",
+        "CD98-x"
+      ],
+      "GP130": [
+        "GP130-a",
+        "GP130-b"
+      ],
+      "HH": [
+        "HH-a",
+        "HH-b"
+      ],
+      "PC6": [
+        "PC6-a",
+        "PC6-b"
+      ],
+      "SEC": [
+        "SEC-a",
+        "SEC-b",
+        "SEC-c",
+        "SEC-d",
+        "SEC-e"
+      ]
+    },
+    "same_objects_for_both_models": true
+  },
+  "cause": {
+    "altered_alias_classes": false,
+    "bookkeeping_only": [
+      "> **Generated file \u2014 do not edit.** Regenerate with `pixi run build-u8-stage3-rerank`. Computed by conditioning the committed `adoc-literature-superset-v0.5.1` network, and each mechanism class's in-memory rule substitution, on every candidate experiment's controlled inputs and intervention clamps. No MaBoSS run; no committed file is modified."
+    ],
+    "changed_model_structure": {
+      "absorbed_edges_only_in_frozen": [],
+      "alias_classes_identical": true,
+      "enters_stage3": false,
+      "phenotype_inert_only_in_adopted": [
+        "S_IGFBP1",
+        "S_PRL"
+      ]
+    },
+    "u5b_executable_rule_change": {
+      "effect_on_ranking": "none",
+      "rule_diff": [
+        {
+          "adoc-literature-superset-v0.4.0": "S_DECIDUALIZED and S_PRL and S_IGFBP1",
+          "adoc-literature-superset-v0.5.1": "S_DECIDUALIZED",
+          "dependencies_added": [],
+          "dependencies_retired": [
+            "S_IGFBP1",
+            "S_PRL"
+          ],
+          "node": "OUT_STROMAL_DECIDUALIZED"
+        }
+      ],
+      "stage3_marginals_changed": 0
+    }
+  },
+  "d1_dependency": {
+    "AC01_class_verdict": "alias_challenged",
+    "counterfactual_verdict_without_D1": "unclassified_by_section_5_4",
+    "depends_on_deviations": [
+      "D1"
+    ],
+    "mandate": "MANDATORY_CONDITIONAL_ON_D1",
+    "reading": "The rerank is owed because AC01 is alias_challenged, and that verdict rests on D1, a post-extraction interpretive call. Without D1, AC01 is unclassified_by_section_5_4 and the rerank is optional. U8 carries this condition and does not re-adjudicate D1.",
+    "registration_status": "post_extraction_semantic_repair",
+    "source": "docs/scrna/node_support_findings.json",
+    "source_sha256": "314487d6c0c1ba922476bcd18e98dead77576c1d12521aa00dc0d0a7b1940b0e"
+  },
+  "dropout_e2_remains_first": true,
+  "frozen_artifacts": {
+    "docs/experiments/stage3_decision_tables.md": "a2cc7291adfaf130f79f345201a30556ab16c9391c8598315a5735d6b0c3305b",
+    "docs/experiments/stage3_experiment_design.md": "7368b1f85007f677cd16c5f308d9571f9573a83771b3dfdb2bb34b593b068520",
+    "docs/experiments/stage3_experiment_design.tsv": "987d75644925346fab73e7251067094d04c01883af783a83c3775705b444ee74",
+    "docs/stage3_experiment_selection.md": "e6a5fa558bede27f20b329cfbfe7bd3ec90d4d41c0f5091ed52e3dd4cbdb113c"
+  },
+  "frozen_tsv_reproduced_by_fresh_v0_4_evaluation": true,
+  "full_state_comparison": {
+    "arms_identical": true,
+    "differing": [],
+    "evaluations_compared": 16080,
+    "latent_identical": true
+  },
+  "models": {
+    "adoc-literature-superset-v0.4.0": {
+      "inputs_sha256": {
+        "config/calibration.yaml": "8fd4662ae17e6a112545e086831b5d46dab46746f00157136ededf962ee27a0b",
+        "config/observation_model_map.tsv": "74f0d5d0896beba57a0a03960239ad2fc039f315fa42a2209a65e228bfa3aff5",
+        "config/visualization.yaml": "8c1dcb6d6a7e0a4bba27aed956851f10d6f9f0d3cac98c9ade1f90de3ee63beb",
+        "models/superset/adoc-literature-superset-v0.4.0/baseline.cfg": "4d42bdcbcfcceaedaafeeb96fe76400700175c969cec15bff9e02f360ff4f41c",
+        "models/superset/adoc-literature-superset-v0.4.0/conditions/adhesion_challenge_basal.cfg": "1cde2d12c5fb95b3680eb10d7a7160002b79f339af16d4f64b15fe98e67d27fa",
+        "models/superset/adoc-literature-superset-v0.4.0/conditions/adhesion_challenge_hormone_treated.cfg": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+        "models/superset/adoc-literature-superset-v0.4.0/conditions/adhesion_challenge_hormone_treated_mifepristone.cfg": "4881de9c5a5a89ed81aca919b38cb4a546425cee28b74a5cb9f3c5ff399e6162",
+        "models/superset/adoc-literature-superset-v0.4.0/conditions/basal_maternal.cfg": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+        "models/superset/adoc-literature-superset-v0.4.0/conditions/e2_primed_maternal.cfg": "93006ce97fa5244594593d3f500f1c8d9699ae547030608079856f0d1f190bbe",
+        "models/superset/adoc-literature-superset-v0.4.0/conditions/hormone_treated_maternal.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+        "models/superset/adoc-literature-superset-v0.4.0/network.bnd": "09e3b26aeb4e2f3b0339ef852764f5de4b922984df0b0a1014c91b4a17a36637",
+        "models/superset/adoc-literature-superset-v0.4.0/node_dictionary.tsv": "a566d2abba87f8b019857a33b34a03d63ba5310aeb285f59412aaf91de516828",
+        "models/superset/adoc-literature-superset-v0.4.0/provenance.toml": "ec1183e474a6970fe3b5f9f4c2e7d8714ef08bdfd196630c2693aab873582484"
+      },
+      "network_bnd": "models/superset/adoc-literature-superset-v0.4.0/network.bnd",
+      "network_bnd_sha256": "09e3b26aeb4e2f3b0339ef852764f5de4b922984df0b0a1014c91b4a17a36637"
+    },
+    "adoc-literature-superset-v0.5.1": {
+      "inputs_sha256": {
+        "config/calibration.yaml": "8fd4662ae17e6a112545e086831b5d46dab46746f00157136ededf962ee27a0b",
+        "config/observation_model_map.tsv": "74f0d5d0896beba57a0a03960239ad2fc039f315fa42a2209a65e228bfa3aff5",
+        "config/visualization.yaml": "8c1dcb6d6a7e0a4bba27aed956851f10d6f9f0d3cac98c9ade1f90de3ee63beb",
+        "models/superset/adoc-literature-superset-v0.5.1/baseline.cfg": "4d42bdcbcfcceaedaafeeb96fe76400700175c969cec15bff9e02f360ff4f41c",
+        "models/superset/adoc-literature-superset-v0.5.1/conditions/adhesion_challenge_basal.cfg": "1cde2d12c5fb95b3680eb10d7a7160002b79f339af16d4f64b15fe98e67d27fa",
+        "models/superset/adoc-literature-superset-v0.5.1/conditions/adhesion_challenge_hormone_treated.cfg": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+        "models/superset/adoc-literature-superset-v0.5.1/conditions/adhesion_challenge_hormone_treated_mifepristone.cfg": "4881de9c5a5a89ed81aca919b38cb4a546425cee28b74a5cb9f3c5ff399e6162",
+        "models/superset/adoc-literature-superset-v0.5.1/conditions/basal_maternal.cfg": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+        "models/superset/adoc-literature-superset-v0.5.1/conditions/e2_primed_maternal.cfg": "93006ce97fa5244594593d3f500f1c8d9699ae547030608079856f0d1f190bbe",
+        "models/superset/adoc-literature-superset-v0.5.1/conditions/hormone_treated_maternal.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+        "models/superset/adoc-literature-superset-v0.5.1/network.bnd": "d7068867429cfdafe89442ee2fb0bc3fb94ae9f985d3d65b1c4be19d01cad063",
+        "models/superset/adoc-literature-superset-v0.5.1/node_dictionary.tsv": "a566d2abba87f8b019857a33b34a03d63ba5310aeb285f59412aaf91de516828",
+        "models/superset/adoc-literature-superset-v0.5.1/provenance.toml": "6f93d37f0a030f5fe1659b3dab9c92863c71919aaf1bdf412ae4f3267a10aa9c"
+      },
+      "network_bnd": "models/superset/adoc-literature-superset-v0.5.1/network.bnd",
+      "network_bnd_sha256": "d7068867429cfdafe89442ee2fb0bc3fb94ae9f985d3d65b1c4be19d01cad063"
+    }
+  },
+  "not_done": [
+    "design_alias 112-arm comparator not recomputed: plan \u00a714 item 4 calls reusing it a deliberate methodological change, not a cross-check",
+    "no MaBoSS run: Stage 3 is exact Boolean evaluation; U7 not needed"
+  ],
+  "pair_separations_changed": 0,
+  "pairs_compared": 320,
+  "premises": [
+    {
+      "adoc-literature-superset-v0.4.0": [
+        "E_PAEP",
+        "S_IGFBP1"
+      ],
+      "adoc-literature-superset-v0.5.1": [
+        "E_PAEP",
+        "S_IGFBP1"
+      ],
+      "cited_by": "\u00a73 Readouts; test_only_two_maternal_nodes_carry_a_usable_assay",
+      "id": "P1_usable_readouts",
+      "unchanged": true
+    },
+    {
+      "adoc-literature-superset-v0.4.0": [
+        "dropout_e2"
+      ],
+      "adoc-literature-superset-v0.5.1": [
+        "dropout_e2"
+      ],
+      "cited_by": "\u00a73 Readouts; test_dropout_e2_is_the_only_arm_separating_both_usable_assays",
+      "id": "P2_only_arm_on_both_usable_readouts",
+      "unchanged": true
+    },
+    {
+      "adoc-literature-superset-v0.4.0": {
+        "SEC-b": [
+          "E_PAEP"
+        ],
+        "SEC-c": [
+          "E_PAEP"
+        ],
+        "SEC-d": [
+          "S_IGFBP1"
+        ]
+      },
+      "adoc-literature-superset-v0.5.1": {
+        "SEC-b": [
+          "E_PAEP"
+        ],
+        "SEC-c": [
+          "E_PAEP"
+        ],
+        "SEC-d": [
+          "S_IGFBP1"
+        ]
+      },
+      "cited_by": "\u00a73 Mechanisms separated; test_dropout_e2_separates_the_committed_class_from_every_other",
+      "id": "P3_dropout_e2_opposite_against_committed",
+      "unchanged": true
+    },
+    {
+      "adoc-literature-superset-v0.4.0": {
+        "arms_at_maximum": [
+          "dropout_e2"
+        ],
+        "counts": {
+          "add_hcg_on_e2": 4,
+          "dropout_e2": 8,
+          "observe_e2_primed": 4
+        }
+      },
+      "adoc-literature-superset-v0.5.1": {
+        "arms_at_maximum": [
+          "dropout_e2"
+        ],
+        "counts": {
+          "add_hcg_on_e2": 4,
+          "dropout_e2": 8,
+          "observe_e2_primed": 4
+        }
+      },
+      "cited_by": "\u00a73 'More SEC class pairs on a usable assay than any other candidate'",
+      "id": "P4_most_sec_pairs_on_usable_assay",
+      "unchanged": true
+    },
+    {
+      "adoc-literature-superset-v0.4.0": {
+        "add_hcg_on_e2": [
+          "SEC-a vs SEC-c",
+          "SEC-b vs SEC-c",
+          "SEC-c vs SEC-d",
+          "SEC-c vs SEC-e"
+        ],
+        "observe_e2_primed": [
+          "SEC-a vs SEC-c",
+          "SEC-b vs SEC-c",
+          "SEC-c vs SEC-d",
+          "SEC-c vs SEC-e"
+        ]
+      },
+      "adoc-literature-superset-v0.5.1": {
+        "add_hcg_on_e2": [
+          "SEC-a vs SEC-c",
+          "SEC-b vs SEC-c",
+          "SEC-c vs SEC-d",
+          "SEC-c vs SEC-e"
+        ],
+        "observe_e2_primed": [
+          "SEC-a vs SEC-c",
+          "SEC-b vs SEC-c",
+          "SEC-c vs SEC-d",
+          "SEC-c vs SEC-e"
+        ]
+      },
+      "cited_by": "\u00a73; test_the_e2_only_arms_resolve_only_whether_sec_c_survives",
+      "id": "P5_e2_only_arms_reach_only_sec_c_pairs",
+      "unchanged": true
+    },
+    {
+      "adoc-literature-superset-v0.4.0": [
+        "SEC:SEC-a vs SEC-e"
+      ],
+      "adoc-literature-superset-v0.5.1": [
+        "SEC:SEC-a vs SEC-e"
+      ],
+      "cited_by": "\u00a73 'exactly one pair unreached'; \u00a77",
+      "id": "P6_sec_pairs_unreached_at_a_readout_that_exists",
+      "unchanged": true
+    },
+    {
+      "adoc-literature-superset-v0.4.0": {
+        "SEC-a": {
+          "E_PAEP": 0.0,
+          "S_IGFBP1": 1.0
+        },
+        "SEC-b": {
+          "E_PAEP": 1.0,
+          "S_IGFBP1": 1.0
+        },
+        "SEC-c": {
+          "E_PAEP": 1.0,
+          "S_IGFBP1": 1.0
+        },
+        "SEC-d": {
+          "E_PAEP": 0.0,
+          "S_IGFBP1": 0.0
+        },
+        "SEC-e": {
+          "E_PAEP": 0.0,
+          "S_IGFBP1": 1.0
+        }
+      },
+      "adoc-literature-superset-v0.5.1": {
+        "SEC-a": {
+          "E_PAEP": 0.0,
+          "S_IGFBP1": 1.0
+        },
+        "SEC-b": {
+          "E_PAEP": 1.0,
+          "S_IGFBP1": 1.0
+        },
+        "SEC-c": {
+          "E_PAEP": 1.0,
+          "S_IGFBP1": 1.0
+        },
+        "SEC-d": {
+          "E_PAEP": 0.0,
+          "S_IGFBP1": 0.0
+        },
+        "SEC-e": {
+          "E_PAEP": 0.0,
+          "S_IGFBP1": 1.0
+        }
+      },
+      "cited_by": "\u00a75; test_the_four_outcome_decision_table_is_what_the_model_predicts",
+      "id": "P7_dropout_e2_decision_table",
+      "unchanged": true
+    },
+    {
+      "adoc-literature-superset-v0.4.0": {
+        "dropout_e2": [
+          "E_ANXA2_ACTIN",
+          "E_CD98_CD9",
+          "E_DAG1_CLEAVED",
+          "E_DAG1_FULL",
+          "E_GP130_STAT3",
+          "E_HBEGF",
+          "E_ITGAVB3_5",
+          "E_LIF",
+          "E_MUC1_BARRIER",
+          "E_MUC1_SLEX",
+          "E_PAEP",
+          "E_PC6",
+          "E_PODXL",
+          "E_RECEPTIVE_SURFACE",
+          "E_SECRETORY_STATE",
+          "E_SPP1_EXPR",
+          "OUT_EPITHELIAL_RECEPTIVE"
+        ],
+        "dropout_xav939": [],
+        "smo_antagonist": []
+      },
+      "adoc-literature-superset-v0.5.1": {
+        "dropout_e2": [
+          "E_ANXA2_ACTIN",
+          "E_CD98_CD9",
+          "E_DAG1_CLEAVED",
+          "E_DAG1_FULL",
+          "E_GP130_STAT3",
+          "E_HBEGF",
+          "E_ITGAVB3_5",
+          "E_LIF",
+          "E_MUC1_BARRIER",
+          "E_MUC1_SLEX",
+          "E_PAEP",
+          "E_PC6",
+          "E_PODXL",
+          "E_RECEPTIVE_SURFACE",
+          "E_SECRETORY_STATE",
+          "E_SPP1_EXPR",
+          "OUT_EPITHELIAL_RECEPTIVE"
+        ],
+        "dropout_xav939": [],
+        "smo_antagonist": []
+      },
+      "cited_by": "\u00a76 point 1 (decisive); test_xav939_and_smo_propagate_nowhere_in_the_committed_model",
+      "id": "P8_runner_up_propagates_nowhere",
+      "unchanged": true
+    },
+    {
+      "adoc-literature-superset-v0.4.0": [
+        "HH-a vs HH-b:S_IGFBP1"
+      ],
+      "adoc-literature-superset-v0.5.1": [
+        "HH-a vs HH-b:S_IGFBP1"
+      ],
+      "cited_by": "\u00a76 'Its separation lands on S_IGFBP1 ... with opposite predictions'",
+      "id": "P9_runner_up_usable_opposite_separation",
+      "unchanged": true
+    },
+    {
+      "adoc-literature-superset-v0.4.0": [
+        "CAMP-a vs CAMP-b:S_IGFBP1"
+      ],
+      "adoc-literature-superset-v0.5.1": [
+        "CAMP-a vs CAMP-b:S_IGFBP1"
+      ],
+      "cited_by": "\u00a76 'separates a pair on a usable assay'",
+      "id": "P10_third_arm_usable_separation",
+      "unchanged": true
+    }
+  ],
+  "question": "Does dropout_e2 remain the preferred prospective experiment after moving from adoc-literature-superset-v0.4.0 to adoc-literature-superset-v0.5.1, under the same Stage-3 readout-tier computation?",
+  "scoring_contract": {
+    "candidate_score_yaml_read": false,
+    "readout_tier_source": "config/observation_model_map.tsv",
+    "readout_tier_source_sha256": "74f0d5d0896beba57a0a03960239ad2fc039f315fa42a2209a65e228bfa3aff5",
+    "readout_tiers": {
+      "E_PAEP": "usable_assay",
+      "OUT_EPITHELIAL_RECEPTIVE": "mapped_composite_not_validating",
+      "OUT_STROMAL_DECIDUALIZED": "mapped_composite_not_validating",
+      "S_IGFBP1": "usable_assay",
+      "S_PRL": "mapped_composite_not_validating"
+    },
+    "readout_tiers_identical_across_models": true,
+    "scrna_activation_statuses": [
+      "provisional",
+      "rejected",
+      "reported_only"
+    ],
+    "scrna_can_promote_a_readout_tier": false,
+    "scrna_map": "config/scrna_observation_map.tsv",
+    "scrna_map_sha256": "1d4323651b6cec3e771cdd99b5b8e3ef68cb0b065a76fa3a03b0e09b9b41d3d4"
+  },
+  "stage3_touched_nodes": {
+    "arm_sets": [
+      "E_DAG1_CLEAVABLE",
+      "E_LIF",
+      "E_PC6",
+      "IN_ANTI_SPP1",
+      "IN_E2",
+      "IN_HAND2_LOSS",
+      "IN_HCG",
+      "IN_XAV939",
+      "IN_cAMP",
+      "S_BMP2",
+      "S_NR2F2",
+      "X_IL11"
+    ],
+    "class_added_free": [
+      "E_DAG1_CLEAVABLE",
+      "X_IL11"
+    ],
+    "class_overrides": [
+      "E_CD98_CD9",
+      "E_DAG1_CLEAVED",
+      "E_DAG1_FULL",
+      "E_GP130_STAT3",
+      "E_PGR",
+      "E_SECRETORY_STATE",
+      "S_BMP2",
+      "S_DECIDUALIZED",
+      "S_PGR"
+    ]
+  },
+  "structure": {
+    "absorbed_edges_only_in_adopted": [],
+    "absorbed_edges_only_in_frozen": [],
+    "adoc-literature-superset-v0.4.0": {
+      "distinct_functions": 35,
+      "free": 19,
+      "nodes": 59
+    },
+    "adoc-literature-superset-v0.5.1": {
+      "distinct_functions": 35,
+      "free": 19,
+      "nodes": 59
+    },
+    "alias_classes_identical": true,
+    "phenotype_inert_only_in_adopted": [
+      "S_IGFBP1",
+      "S_PRL"
+    ],
+    "phenotype_inert_only_in_frozen": []
+  },
+  "three_reported_objects": {
+    "adopted_v0_5_1_ranking": {
+      "candidate_set": [
+        "add_hcg_on_e2",
+        "dropout_camp",
+        "dropout_e2",
+        "observe_e2_primed",
+        "smo_antagonist"
+      ],
+      "ordering": [
+        {
+          "experiment": "dropout_e2",
+          "position": "recommended"
+        },
+        {
+          "experiment": "smo_antagonist",
+          "position": "runner_up"
+        },
+        {
+          "experiment": "dropout_camp",
+          "position": "third_explicitly_not_recommended"
+        },
+        {
+          "experiment": "observe_e2_primed",
+          "position": "prerequisite_registration_not_run"
+        }
+      ],
+      "source": "docs/experiments/u8_stage3_rerank/stage3_experiment_design_v0.5.1.tsv",
+      "status": "CARRIED_OVER_UNCHANGED"
+    },
+    "frozen_v0_4_ranking": {
+      "candidate_set": [
+        "add_hcg_on_e2",
+        "dropout_camp",
+        "dropout_e2",
+        "observe_e2_primed",
+        "smo_antagonist"
+      ],
+      "ordering": [
+        {
+          "experiment": "dropout_e2",
+          "position": "recommended",
+          "source": "docs/stage3_experiment_selection.md \u00a73"
+        },
+        {
+          "experiment": "smo_antagonist",
+          "position": "runner_up",
+          "source": "docs/stage3_experiment_selection.md \u00a76"
+        },
+        {
+          "experiment": "dropout_camp",
+          "position": "third_explicitly_not_recommended",
+          "source": "docs/stage3_experiment_selection.md \u00a76"
+        },
+        {
+          "experiment": "observe_e2_primed",
+          "position": "prerequisite_registration_not_run",
+          "source": "docs/stage3_experiment_selection.md \u00a73"
+        }
+      ],
+      "source": "docs/experiments/stage3_experiment_design.tsv"
+    },
+    "per_arm_delta": {
+      "arms_with_any_changed_field": [],
+      "source": "docs/experiments/u8_stage3_rerank/per_arm_rerank.tsv"
+    }
+  },
+  "u6b_isolation": {
+    "catalog": "docs/u6b_muc1_reconciliation/rule_variants.tsv",
+    "catalog_nodes": [
+      "E_MUC1_ABUNDANCE",
+      "E_MUC1_BARRIER",
+      "E_MUC1_LOCAL_CLEARANCE",
+      "E_RECEPTIVE_SURFACE"
+    ],
+    "catalog_nodes_absent_from_adopted_model": [
+      "E_MUC1_ABUNDANCE",
+      "E_MUC1_LOCAL_CLEARANCE"
+    ],
+    "catalog_statuses": [
+      "catalog_only",
+      "reference_only"
+    ],
+    "stage3_nodes_touching_catalog": []
+  },
+  "unit": "U8",
+  "usable_readout_separations_changed": 0
+}

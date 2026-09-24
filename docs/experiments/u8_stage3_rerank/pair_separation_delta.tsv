@@ -1,0 +1,321 @@
+experiment	fork	left_class	right_class	v0.4_separating_nodes	v0.5.1_separating_nodes	v0.4_usable_assay_nodes	v0.5.1_usable_assay_nodes	v0.4_usable_assay_opposite_nodes	v0.5.1_usable_assay_opposite_nodes	nodes_whose_predicted_values_changed	changed
+observe_e2_primed	SEC	SEC-a	SEC-b								False
+observe_e2_primed	SEC	SEC-a	SEC-c	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_SECRETORY_STATE;E_SPP1_EXPR	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_SECRETORY_STATE;E_SPP1_EXPR	E_PAEP	E_PAEP	E_PAEP	E_PAEP		False
+observe_e2_primed	SEC	SEC-a	SEC-d								False
+observe_e2_primed	SEC	SEC-a	SEC-e								False
+observe_e2_primed	SEC	SEC-b	SEC-c	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_SECRETORY_STATE;E_SPP1_EXPR	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_SECRETORY_STATE;E_SPP1_EXPR	E_PAEP	E_PAEP	E_PAEP	E_PAEP		False
+observe_e2_primed	SEC	SEC-b	SEC-d								False
+observe_e2_primed	SEC	SEC-b	SEC-e								False
+observe_e2_primed	SEC	SEC-c	SEC-d	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_SECRETORY_STATE;E_SPP1_EXPR	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_SECRETORY_STATE;E_SPP1_EXPR	E_PAEP	E_PAEP	E_PAEP	E_PAEP		False
+observe_e2_primed	SEC	SEC-c	SEC-e	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_SECRETORY_STATE;E_SPP1_EXPR	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_SECRETORY_STATE;E_SPP1_EXPR	E_PAEP	E_PAEP	E_PAEP	E_PAEP		False
+observe_e2_primed	SEC	SEC-d	SEC-e								False
+observe_e2_primed	CAMP	CAMP-a	CAMP-b								False
+observe_e2_primed	HH	HH-a	HH-b								False
+observe_e2_primed	GP130	GP130-a	GP130-b								False
+observe_e2_primed	CD98	CD98-a	CD98-b								False
+observe_e2_primed	CD98	CD98-a	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+observe_e2_primed	CD98	CD98-a	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+observe_e2_primed	CD98	CD98-b	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+observe_e2_primed	CD98	CD98-b	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+observe_e2_primed	CD98	CD98-c	CD98-x								False
+observe_e2_primed	PC6	PC6-a	PC6-b								False
+observe_hormone_treated	SEC	SEC-a	SEC-b								False
+observe_hormone_treated	SEC	SEC-a	SEC-c								False
+observe_hormone_treated	SEC	SEC-a	SEC-d								False
+observe_hormone_treated	SEC	SEC-a	SEC-e								False
+observe_hormone_treated	SEC	SEC-b	SEC-c								False
+observe_hormone_treated	SEC	SEC-b	SEC-d								False
+observe_hormone_treated	SEC	SEC-b	SEC-e								False
+observe_hormone_treated	SEC	SEC-c	SEC-d								False
+observe_hormone_treated	SEC	SEC-c	SEC-e								False
+observe_hormone_treated	SEC	SEC-d	SEC-e								False
+observe_hormone_treated	CAMP	CAMP-a	CAMP-b								False
+observe_hormone_treated	HH	HH-a	HH-b								False
+observe_hormone_treated	GP130	GP130-a	GP130-b								False
+observe_hormone_treated	CD98	CD98-a	CD98-b								False
+observe_hormone_treated	CD98	CD98-a	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+observe_hormone_treated	CD98	CD98-a	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+observe_hormone_treated	CD98	CD98-b	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+observe_hormone_treated	CD98	CD98-b	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+observe_hormone_treated	CD98	CD98-c	CD98-x								False
+observe_hormone_treated	PC6	PC6-a	PC6-b								False
+dropout_e2	SEC	SEC-a	SEC-b	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_RECEPTIVE_SURFACE;E_SECRETORY_STATE;E_SPP1_EXPR;OUT_EPITHELIAL_RECEPTIVE	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_RECEPTIVE_SURFACE;E_SECRETORY_STATE;E_SPP1_EXPR;OUT_EPITHELIAL_RECEPTIVE	E_PAEP	E_PAEP	E_PAEP	E_PAEP		False
+dropout_e2	SEC	SEC-a	SEC-c	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_RECEPTIVE_SURFACE;E_SECRETORY_STATE;E_SPP1_EXPR;OUT_EPITHELIAL_RECEPTIVE	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_RECEPTIVE_SURFACE;E_SECRETORY_STATE;E_SPP1_EXPR;OUT_EPITHELIAL_RECEPTIVE	E_PAEP	E_PAEP	E_PAEP	E_PAEP		False
+dropout_e2	SEC	SEC-a	SEC-d	E_IHH;E_PGR;OUT_STROMAL_DECIDUALIZED;S_BMP2;S_DECIDUALIZED;S_FGF_MITOGENIC;S_HAND2;S_IGFBP1;S_NR2F2;S_PGR;S_PRL;S_SPP1;S_TAZ_ECM	E_IHH;E_PGR;OUT_STROMAL_DECIDUALIZED;S_BMP2;S_DECIDUALIZED;S_FGF_MITOGENIC;S_HAND2;S_IGFBP1;S_NR2F2;S_PGR;S_PRL;S_SPP1;S_TAZ_ECM	S_IGFBP1	S_IGFBP1	S_IGFBP1	S_IGFBP1		False
+dropout_e2	SEC	SEC-a	SEC-e	E_IHH;E_PGR;S_NR2F2	E_IHH;E_PGR;S_NR2F2						False
+dropout_e2	SEC	SEC-b	SEC-c								False
+dropout_e2	SEC	SEC-b	SEC-d	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_IHH;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PGR;E_PODXL;E_RECEPTIVE_SURFACE;E_SECRETORY_STATE;E_SPP1_EXPR;OUT_EPITHELIAL_RECEPTIVE;OUT_STROMAL_DECIDUALIZED;S_BMP2;S_DECIDUALIZED;S_FGF_MITOGENIC;S_HAND2;S_IGFBP1;S_NR2F2;S_PGR;S_PRL;S_SPP1;S_TAZ_ECM	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_IHH;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PGR;E_PODXL;E_RECEPTIVE_SURFACE;E_SECRETORY_STATE;E_SPP1_EXPR;OUT_EPITHELIAL_RECEPTIVE;OUT_STROMAL_DECIDUALIZED;S_BMP2;S_DECIDUALIZED;S_FGF_MITOGENIC;S_HAND2;S_IGFBP1;S_NR2F2;S_PGR;S_PRL;S_SPP1;S_TAZ_ECM	E_PAEP;S_IGFBP1	E_PAEP;S_IGFBP1	E_PAEP;S_IGFBP1	E_PAEP;S_IGFBP1		False
+dropout_e2	SEC	SEC-b	SEC-e	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_IHH;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PGR;E_PODXL;E_RECEPTIVE_SURFACE;E_SECRETORY_STATE;E_SPP1_EXPR;OUT_EPITHELIAL_RECEPTIVE;S_NR2F2	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_IHH;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PGR;E_PODXL;E_RECEPTIVE_SURFACE;E_SECRETORY_STATE;E_SPP1_EXPR;OUT_EPITHELIAL_RECEPTIVE;S_NR2F2	E_PAEP	E_PAEP	E_PAEP	E_PAEP		False
+dropout_e2	SEC	SEC-c	SEC-d	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_IHH;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PGR;E_PODXL;E_RECEPTIVE_SURFACE;E_SECRETORY_STATE;E_SPP1_EXPR;OUT_EPITHELIAL_RECEPTIVE;OUT_STROMAL_DECIDUALIZED;S_BMP2;S_DECIDUALIZED;S_FGF_MITOGENIC;S_HAND2;S_IGFBP1;S_NR2F2;S_PGR;S_PRL;S_SPP1;S_TAZ_ECM	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_IHH;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PGR;E_PODXL;E_RECEPTIVE_SURFACE;E_SECRETORY_STATE;E_SPP1_EXPR;OUT_EPITHELIAL_RECEPTIVE;OUT_STROMAL_DECIDUALIZED;S_BMP2;S_DECIDUALIZED;S_FGF_MITOGENIC;S_HAND2;S_IGFBP1;S_NR2F2;S_PGR;S_PRL;S_SPP1;S_TAZ_ECM	E_PAEP;S_IGFBP1	E_PAEP;S_IGFBP1	E_PAEP;S_IGFBP1	E_PAEP;S_IGFBP1		False
+dropout_e2	SEC	SEC-c	SEC-e	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_IHH;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PGR;E_PODXL;E_RECEPTIVE_SURFACE;E_SECRETORY_STATE;E_SPP1_EXPR;OUT_EPITHELIAL_RECEPTIVE;S_NR2F2	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_IHH;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PGR;E_PODXL;E_RECEPTIVE_SURFACE;E_SECRETORY_STATE;E_SPP1_EXPR;OUT_EPITHELIAL_RECEPTIVE;S_NR2F2	E_PAEP	E_PAEP	E_PAEP	E_PAEP		False
+dropout_e2	SEC	SEC-d	SEC-e	OUT_STROMAL_DECIDUALIZED;S_BMP2;S_DECIDUALIZED;S_FGF_MITOGENIC;S_HAND2;S_IGFBP1;S_PGR;S_PRL;S_SPP1;S_TAZ_ECM	OUT_STROMAL_DECIDUALIZED;S_BMP2;S_DECIDUALIZED;S_FGF_MITOGENIC;S_HAND2;S_IGFBP1;S_PGR;S_PRL;S_SPP1;S_TAZ_ECM	S_IGFBP1	S_IGFBP1	S_IGFBP1	S_IGFBP1		False
+dropout_e2	CAMP	CAMP-a	CAMP-b								False
+dropout_e2	HH	HH-a	HH-b								False
+dropout_e2	GP130	GP130-a	GP130-b								False
+dropout_e2	CD98	CD98-a	CD98-b								False
+dropout_e2	CD98	CD98-a	CD98-c								False
+dropout_e2	CD98	CD98-a	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+dropout_e2	CD98	CD98-b	CD98-c								False
+dropout_e2	CD98	CD98-b	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+dropout_e2	CD98	CD98-c	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+dropout_e2	PC6	PC6-a	PC6-b								False
+dropout_camp	SEC	SEC-a	SEC-b								False
+dropout_camp	SEC	SEC-a	SEC-c								False
+dropout_camp	SEC	SEC-a	SEC-d								False
+dropout_camp	SEC	SEC-a	SEC-e								False
+dropout_camp	SEC	SEC-b	SEC-c								False
+dropout_camp	SEC	SEC-b	SEC-d								False
+dropout_camp	SEC	SEC-b	SEC-e								False
+dropout_camp	SEC	SEC-c	SEC-d								False
+dropout_camp	SEC	SEC-c	SEC-e								False
+dropout_camp	SEC	SEC-d	SEC-e								False
+dropout_camp	CAMP	CAMP-a	CAMP-b	OUT_STROMAL_DECIDUALIZED;S_DECIDUALIZED;S_IGFBP1;S_PRL;S_SPP1;S_TAZ_ECM	OUT_STROMAL_DECIDUALIZED;S_DECIDUALIZED;S_IGFBP1;S_PRL;S_SPP1;S_TAZ_ECM	S_IGFBP1	S_IGFBP1	S_IGFBP1	S_IGFBP1		False
+dropout_camp	HH	HH-a	HH-b								False
+dropout_camp	GP130	GP130-a	GP130-b								False
+dropout_camp	CD98	CD98-a	CD98-b								False
+dropout_camp	CD98	CD98-a	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+dropout_camp	CD98	CD98-a	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+dropout_camp	CD98	CD98-b	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+dropout_camp	CD98	CD98-b	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+dropout_camp	CD98	CD98-c	CD98-x								False
+dropout_camp	PC6	PC6-a	PC6-b								False
+dropout_xav939	SEC	SEC-a	SEC-b								False
+dropout_xav939	SEC	SEC-a	SEC-c								False
+dropout_xav939	SEC	SEC-a	SEC-d								False
+dropout_xav939	SEC	SEC-a	SEC-e								False
+dropout_xav939	SEC	SEC-b	SEC-c								False
+dropout_xav939	SEC	SEC-b	SEC-d								False
+dropout_xav939	SEC	SEC-b	SEC-e								False
+dropout_xav939	SEC	SEC-c	SEC-d								False
+dropout_xav939	SEC	SEC-c	SEC-e								False
+dropout_xav939	SEC	SEC-d	SEC-e								False
+dropout_xav939	CAMP	CAMP-a	CAMP-b								False
+dropout_xav939	HH	HH-a	HH-b								False
+dropout_xav939	GP130	GP130-a	GP130-b								False
+dropout_xav939	CD98	CD98-a	CD98-b								False
+dropout_xav939	CD98	CD98-a	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+dropout_xav939	CD98	CD98-a	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+dropout_xav939	CD98	CD98-b	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+dropout_xav939	CD98	CD98-b	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+dropout_xav939	CD98	CD98-c	CD98-x								False
+dropout_xav939	PC6	PC6-a	PC6-b								False
+add_hcg_on_hormone_treated	SEC	SEC-a	SEC-b								False
+add_hcg_on_hormone_treated	SEC	SEC-a	SEC-c								False
+add_hcg_on_hormone_treated	SEC	SEC-a	SEC-d								False
+add_hcg_on_hormone_treated	SEC	SEC-a	SEC-e								False
+add_hcg_on_hormone_treated	SEC	SEC-b	SEC-c								False
+add_hcg_on_hormone_treated	SEC	SEC-b	SEC-d								False
+add_hcg_on_hormone_treated	SEC	SEC-b	SEC-e								False
+add_hcg_on_hormone_treated	SEC	SEC-c	SEC-d								False
+add_hcg_on_hormone_treated	SEC	SEC-c	SEC-e								False
+add_hcg_on_hormone_treated	SEC	SEC-d	SEC-e								False
+add_hcg_on_hormone_treated	CAMP	CAMP-a	CAMP-b								False
+add_hcg_on_hormone_treated	HH	HH-a	HH-b								False
+add_hcg_on_hormone_treated	GP130	GP130-a	GP130-b								False
+add_hcg_on_hormone_treated	CD98	CD98-a	CD98-b	E_CD98_CD9	E_CD98_CD9						False
+add_hcg_on_hormone_treated	CD98	CD98-a	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+add_hcg_on_hormone_treated	CD98	CD98-a	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+add_hcg_on_hormone_treated	CD98	CD98-b	CD98-c								False
+add_hcg_on_hormone_treated	CD98	CD98-b	CD98-x								False
+add_hcg_on_hormone_treated	CD98	CD98-c	CD98-x								False
+add_hcg_on_hormone_treated	PC6	PC6-a	PC6-b								False
+add_hcg_on_e2	SEC	SEC-a	SEC-b								False
+add_hcg_on_e2	SEC	SEC-a	SEC-c	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_SECRETORY_STATE;E_SPP1_EXPR	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_SECRETORY_STATE;E_SPP1_EXPR	E_PAEP	E_PAEP	E_PAEP	E_PAEP		False
+add_hcg_on_e2	SEC	SEC-a	SEC-d								False
+add_hcg_on_e2	SEC	SEC-a	SEC-e								False
+add_hcg_on_e2	SEC	SEC-b	SEC-c	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_SECRETORY_STATE;E_SPP1_EXPR	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_SECRETORY_STATE;E_SPP1_EXPR	E_PAEP	E_PAEP	E_PAEP	E_PAEP		False
+add_hcg_on_e2	SEC	SEC-b	SEC-d								False
+add_hcg_on_e2	SEC	SEC-b	SEC-e								False
+add_hcg_on_e2	SEC	SEC-c	SEC-d	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_SECRETORY_STATE;E_SPP1_EXPR	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_SECRETORY_STATE;E_SPP1_EXPR	E_PAEP	E_PAEP	E_PAEP	E_PAEP		False
+add_hcg_on_e2	SEC	SEC-c	SEC-e	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_SECRETORY_STATE;E_SPP1_EXPR	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_SECRETORY_STATE;E_SPP1_EXPR	E_PAEP	E_PAEP	E_PAEP	E_PAEP		False
+add_hcg_on_e2	SEC	SEC-d	SEC-e								False
+add_hcg_on_e2	CAMP	CAMP-a	CAMP-b								False
+add_hcg_on_e2	HH	HH-a	HH-b								False
+add_hcg_on_e2	GP130	GP130-a	GP130-b								False
+add_hcg_on_e2	CD98	CD98-a	CD98-b	E_CD98_CD9	E_CD98_CD9						False
+add_hcg_on_e2	CD98	CD98-a	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+add_hcg_on_e2	CD98	CD98-a	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+add_hcg_on_e2	CD98	CD98-b	CD98-c								False
+add_hcg_on_e2	CD98	CD98-b	CD98-x								False
+add_hcg_on_e2	CD98	CD98-c	CD98-x								False
+add_hcg_on_e2	PC6	PC6-a	PC6-b								False
+add_il11	SEC	SEC-a	SEC-b								False
+add_il11	SEC	SEC-a	SEC-c								False
+add_il11	SEC	SEC-a	SEC-d								False
+add_il11	SEC	SEC-a	SEC-e								False
+add_il11	SEC	SEC-b	SEC-c								False
+add_il11	SEC	SEC-b	SEC-d								False
+add_il11	SEC	SEC-b	SEC-e								False
+add_il11	SEC	SEC-c	SEC-d								False
+add_il11	SEC	SEC-c	SEC-e								False
+add_il11	SEC	SEC-d	SEC-e								False
+add_il11	CAMP	CAMP-a	CAMP-b								False
+add_il11	HH	HH-a	HH-b								False
+add_il11	GP130	GP130-a	GP130-b	E_CD98_CD9;E_GP130_STAT3;E_RECEPTIVE_SURFACE;OUT_EPITHELIAL_RECEPTIVE	E_CD98_CD9;E_GP130_STAT3;E_RECEPTIVE_SURFACE;OUT_EPITHELIAL_RECEPTIVE						False
+add_il11	CD98	CD98-a	CD98-b								False
+add_il11	CD98	CD98-a	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+add_il11	CD98	CD98-a	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+add_il11	CD98	CD98-b	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+add_il11	CD98	CD98-b	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+add_il11	CD98	CD98-c	CD98-x								False
+add_il11	PC6	PC6-a	PC6-b								False
+anti_lif	SEC	SEC-a	SEC-b								False
+anti_lif	SEC	SEC-a	SEC-c								False
+anti_lif	SEC	SEC-a	SEC-d								False
+anti_lif	SEC	SEC-a	SEC-e								False
+anti_lif	SEC	SEC-b	SEC-c								False
+anti_lif	SEC	SEC-b	SEC-d								False
+anti_lif	SEC	SEC-b	SEC-e								False
+anti_lif	SEC	SEC-c	SEC-d								False
+anti_lif	SEC	SEC-c	SEC-e								False
+anti_lif	SEC	SEC-d	SEC-e								False
+anti_lif	CAMP	CAMP-a	CAMP-b								False
+anti_lif	HH	HH-a	HH-b								False
+anti_lif	GP130	GP130-a	GP130-b								False
+anti_lif	CD98	CD98-a	CD98-b								False
+anti_lif	CD98	CD98-a	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+anti_lif	CD98	CD98-a	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+anti_lif	CD98	CD98-b	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+anti_lif	CD98	CD98-b	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+anti_lif	CD98	CD98-c	CD98-x								False
+anti_lif	PC6	PC6-a	PC6-b								False
+anti_lif_plus_il11	SEC	SEC-a	SEC-b								False
+anti_lif_plus_il11	SEC	SEC-a	SEC-c								False
+anti_lif_plus_il11	SEC	SEC-a	SEC-d								False
+anti_lif_plus_il11	SEC	SEC-a	SEC-e								False
+anti_lif_plus_il11	SEC	SEC-b	SEC-c								False
+anti_lif_plus_il11	SEC	SEC-b	SEC-d								False
+anti_lif_plus_il11	SEC	SEC-b	SEC-e								False
+anti_lif_plus_il11	SEC	SEC-c	SEC-d								False
+anti_lif_plus_il11	SEC	SEC-c	SEC-e								False
+anti_lif_plus_il11	SEC	SEC-d	SEC-e								False
+anti_lif_plus_il11	CAMP	CAMP-a	CAMP-b								False
+anti_lif_plus_il11	HH	HH-a	HH-b								False
+anti_lif_plus_il11	GP130	GP130-a	GP130-b	E_CD98_CD9;E_GP130_STAT3;E_RECEPTIVE_SURFACE;OUT_EPITHELIAL_RECEPTIVE	E_CD98_CD9;E_GP130_STAT3;E_RECEPTIVE_SURFACE;OUT_EPITHELIAL_RECEPTIVE						False
+anti_lif_plus_il11	CD98	CD98-a	CD98-b								False
+anti_lif_plus_il11	CD98	CD98-a	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+anti_lif_plus_il11	CD98	CD98-a	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+anti_lif_plus_il11	CD98	CD98-b	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+anti_lif_plus_il11	CD98	CD98-b	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+anti_lif_plus_il11	CD98	CD98-c	CD98-x								False
+anti_lif_plus_il11	PC6	PC6-a	PC6-b								False
+smo_antagonist	SEC	SEC-a	SEC-b								False
+smo_antagonist	SEC	SEC-a	SEC-c								False
+smo_antagonist	SEC	SEC-a	SEC-d								False
+smo_antagonist	SEC	SEC-a	SEC-e								False
+smo_antagonist	SEC	SEC-b	SEC-c								False
+smo_antagonist	SEC	SEC-b	SEC-d								False
+smo_antagonist	SEC	SEC-b	SEC-e								False
+smo_antagonist	SEC	SEC-c	SEC-d								False
+smo_antagonist	SEC	SEC-c	SEC-e								False
+smo_antagonist	SEC	SEC-d	SEC-e								False
+smo_antagonist	CAMP	CAMP-a	CAMP-b								False
+smo_antagonist	HH	HH-a	HH-b	OUT_STROMAL_DECIDUALIZED;S_BMP2;S_DECIDUALIZED;S_IGFBP1;S_PRL;S_SPP1;S_TAZ_ECM	OUT_STROMAL_DECIDUALIZED;S_BMP2;S_DECIDUALIZED;S_IGFBP1;S_PRL;S_SPP1;S_TAZ_ECM	S_IGFBP1	S_IGFBP1	S_IGFBP1	S_IGFBP1		False
+smo_antagonist	GP130	GP130-a	GP130-b								False
+smo_antagonist	CD98	CD98-a	CD98-b								False
+smo_antagonist	CD98	CD98-a	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+smo_antagonist	CD98	CD98-a	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+smo_antagonist	CD98	CD98-b	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+smo_antagonist	CD98	CD98-b	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+smo_antagonist	CD98	CD98-c	CD98-x								False
+smo_antagonist	PC6	PC6-a	PC6-b								False
+bmpr_inhibitor	SEC	SEC-a	SEC-b								False
+bmpr_inhibitor	SEC	SEC-a	SEC-c								False
+bmpr_inhibitor	SEC	SEC-a	SEC-d								False
+bmpr_inhibitor	SEC	SEC-a	SEC-e								False
+bmpr_inhibitor	SEC	SEC-b	SEC-c								False
+bmpr_inhibitor	SEC	SEC-b	SEC-d								False
+bmpr_inhibitor	SEC	SEC-b	SEC-e								False
+bmpr_inhibitor	SEC	SEC-c	SEC-d								False
+bmpr_inhibitor	SEC	SEC-c	SEC-e								False
+bmpr_inhibitor	SEC	SEC-d	SEC-e								False
+bmpr_inhibitor	CAMP	CAMP-a	CAMP-b								False
+bmpr_inhibitor	HH	HH-a	HH-b								False
+bmpr_inhibitor	GP130	GP130-a	GP130-b								False
+bmpr_inhibitor	CD98	CD98-a	CD98-b								False
+bmpr_inhibitor	CD98	CD98-a	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+bmpr_inhibitor	CD98	CD98-a	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+bmpr_inhibitor	CD98	CD98-b	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+bmpr_inhibitor	CD98	CD98-b	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+bmpr_inhibitor	CD98	CD98-c	CD98-x								False
+bmpr_inhibitor	PC6	PC6-a	PC6-b								False
+pc6_knockdown	SEC	SEC-a	SEC-b								False
+pc6_knockdown	SEC	SEC-a	SEC-c								False
+pc6_knockdown	SEC	SEC-a	SEC-d								False
+pc6_knockdown	SEC	SEC-a	SEC-e								False
+pc6_knockdown	SEC	SEC-b	SEC-c								False
+pc6_knockdown	SEC	SEC-b	SEC-d								False
+pc6_knockdown	SEC	SEC-b	SEC-e								False
+pc6_knockdown	SEC	SEC-c	SEC-d								False
+pc6_knockdown	SEC	SEC-c	SEC-e								False
+pc6_knockdown	SEC	SEC-d	SEC-e								False
+pc6_knockdown	CAMP	CAMP-a	CAMP-b								False
+pc6_knockdown	HH	HH-a	HH-b								False
+pc6_knockdown	GP130	GP130-a	GP130-b								False
+pc6_knockdown	CD98	CD98-a	CD98-b								False
+pc6_knockdown	CD98	CD98-a	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+pc6_knockdown	CD98	CD98-a	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+pc6_knockdown	CD98	CD98-b	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+pc6_knockdown	CD98	CD98-b	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+pc6_knockdown	CD98	CD98-c	CD98-x								False
+pc6_knockdown	PC6	PC6-a	PC6-b								False
+dag1_cleavage_resistant	SEC	SEC-a	SEC-b								False
+dag1_cleavage_resistant	SEC	SEC-a	SEC-c								False
+dag1_cleavage_resistant	SEC	SEC-a	SEC-d								False
+dag1_cleavage_resistant	SEC	SEC-a	SEC-e								False
+dag1_cleavage_resistant	SEC	SEC-b	SEC-c								False
+dag1_cleavage_resistant	SEC	SEC-b	SEC-d								False
+dag1_cleavage_resistant	SEC	SEC-b	SEC-e								False
+dag1_cleavage_resistant	SEC	SEC-c	SEC-d								False
+dag1_cleavage_resistant	SEC	SEC-c	SEC-e								False
+dag1_cleavage_resistant	SEC	SEC-d	SEC-e								False
+dag1_cleavage_resistant	CAMP	CAMP-a	CAMP-b								False
+dag1_cleavage_resistant	HH	HH-a	HH-b								False
+dag1_cleavage_resistant	GP130	GP130-a	GP130-b								False
+dag1_cleavage_resistant	CD98	CD98-a	CD98-b								False
+dag1_cleavage_resistant	CD98	CD98-a	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+dag1_cleavage_resistant	CD98	CD98-a	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+dag1_cleavage_resistant	CD98	CD98-b	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+dag1_cleavage_resistant	CD98	CD98-b	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+dag1_cleavage_resistant	CD98	CD98-c	CD98-x								False
+dag1_cleavage_resistant	PC6	PC6-a	PC6-b	E_DAG1_CLEAVED;E_DAG1_FULL;E_RECEPTIVE_SURFACE;OUT_EPITHELIAL_RECEPTIVE	E_DAG1_CLEAVED;E_DAG1_FULL;E_RECEPTIVE_SURFACE;OUT_EPITHELIAL_RECEPTIVE						False
+anti_spp1	SEC	SEC-a	SEC-b								False
+anti_spp1	SEC	SEC-a	SEC-c								False
+anti_spp1	SEC	SEC-a	SEC-d								False
+anti_spp1	SEC	SEC-a	SEC-e								False
+anti_spp1	SEC	SEC-b	SEC-c								False
+anti_spp1	SEC	SEC-b	SEC-d								False
+anti_spp1	SEC	SEC-b	SEC-e								False
+anti_spp1	SEC	SEC-c	SEC-d								False
+anti_spp1	SEC	SEC-c	SEC-e								False
+anti_spp1	SEC	SEC-d	SEC-e								False
+anti_spp1	CAMP	CAMP-a	CAMP-b								False
+anti_spp1	HH	HH-a	HH-b								False
+anti_spp1	GP130	GP130-a	GP130-b								False
+anti_spp1	CD98	CD98-a	CD98-b								False
+anti_spp1	CD98	CD98-a	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+anti_spp1	CD98	CD98-a	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+anti_spp1	CD98	CD98-b	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+anti_spp1	CD98	CD98-b	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+anti_spp1	CD98	CD98-c	CD98-x								False
+anti_spp1	PC6	PC6-a	PC6-b								False
+hand2_loss	SEC	SEC-a	SEC-b								False
+hand2_loss	SEC	SEC-a	SEC-c								False
+hand2_loss	SEC	SEC-a	SEC-d								False
+hand2_loss	SEC	SEC-a	SEC-e								False
+hand2_loss	SEC	SEC-b	SEC-c								False
+hand2_loss	SEC	SEC-b	SEC-d								False
+hand2_loss	SEC	SEC-b	SEC-e								False
+hand2_loss	SEC	SEC-c	SEC-d								False
+hand2_loss	SEC	SEC-c	SEC-e								False
+hand2_loss	SEC	SEC-d	SEC-e								False
+hand2_loss	CAMP	CAMP-a	CAMP-b								False
+hand2_loss	HH	HH-a	HH-b								False
+hand2_loss	GP130	GP130-a	GP130-b								False
+hand2_loss	CD98	CD98-a	CD98-b								False
+hand2_loss	CD98	CD98-a	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+hand2_loss	CD98	CD98-a	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+hand2_loss	CD98	CD98-b	CD98-c	E_CD98_CD9	E_CD98_CD9						False
+hand2_loss	CD98	CD98-b	CD98-x	E_CD98_CD9	E_CD98_CD9						False
+hand2_loss	CD98	CD98-c	CD98-x								False
+hand2_loss	PC6	PC6-a	PC6-b								False

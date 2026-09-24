@@ -1,0 +1,83 @@
+{
+  "claim_boundary": "A measured behaviour of the installed MaBoSS binary, not a property read from its source. It identifies which single-seed trajectories account for the difference between two pooled runs; it is not a statement about statistical independence of streams.",
+  "consistent_with_per_trajectory_seed_s_plus_k": true,
+  "generator_sha256": "9a68f215c33c8ca35730db743d5068cb42920770fe60ec8db1f48707f99533ce",
+  "horizon": "declared",
+  "maboss_python_version": "0.8.15",
+  "model_version": "adoc-literature-superset-v0.5.0",
+  "node_table_shape": [
+    40,
+    46
+  ],
+  "probe_protocol": "hormone_treated_maternal",
+  "schema_version": "1.0",
+  "shift_tests": [
+    {
+      "entering_single_seeds": [
+        31
+      ],
+      "leaving_single_seeds": [
+        1
+      ],
+      "max_abs_difference_being_explained": 1.0000000000000064,
+      "max_abs_residual": 7.771561172376096e-15,
+      "offset": 1,
+      "pooled_seeds": [
+        1,
+        2
+      ],
+      "wrong_attribution_max_abs_residual": 1.0000000000000067
+    },
+    {
+      "entering_single_seeds": [
+        31,
+        32,
+        33
+      ],
+      "leaving_single_seeds": [
+        1,
+        2,
+        3
+      ],
+      "max_abs_difference_being_explained": 3.0000000000000044,
+      "max_abs_residual": 1.1102230246251565e-14,
+      "offset": 3,
+      "pooled_seeds": [
+        1,
+        4
+      ],
+      "wrong_attribution_max_abs_residual": 1.0000000000000075
+    },
+    {
+      "entering_single_seeds": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "leaving_single_seeds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "max_abs_difference_being_explained": 3.58005353431499,
+      "max_abs_residual": 1.199040866595169e-14,
+      "offset": 7,
+      "pooled_seeds": [
+        1,
+        8
+      ],
+      "wrong_attribution_max_abs_residual": 1.0000000000000095
+    }
+  ],
+  "tolerance": 1e-12,
+  "trajectories": 30,
+  "transient_node_tick_cells": 1288
+}

@@ -1,0 +1,321 @@
+experiment	background	kind	protocol_status	perturbations	fork	left_class	right_class	class_roles	separating_nodes	usable_assay_nodes	usable_assay_opposite_nodes	usable_assay_analytes	committed_model_changes_anything
+observe_e2_primed	e2_primed_maternal	observation_only	existing_phase_new_sampling	0	SEC	SEC-a	SEC-b	committed/adoptable_alternative					False
+observe_e2_primed	e2_primed_maternal	observation_only	existing_phase_new_sampling	0	SEC	SEC-a	SEC-c	committed/adoptable_alternative	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_SECRETORY_STATE;E_SPP1_EXPR	E_PAEP	E_PAEP	PAEP (top outlet)	False
+observe_e2_primed	e2_primed_maternal	observation_only	existing_phase_new_sampling	0	SEC	SEC-a	SEC-d	committed/confounder_only					False
+observe_e2_primed	e2_primed_maternal	observation_only	existing_phase_new_sampling	0	SEC	SEC-a	SEC-e	committed/confounder_only					False
+observe_e2_primed	e2_primed_maternal	observation_only	existing_phase_new_sampling	0	SEC	SEC-b	SEC-c	adoptable_alternative/adoptable_alternative	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_SECRETORY_STATE;E_SPP1_EXPR	E_PAEP	E_PAEP	PAEP (top outlet)	False
+observe_e2_primed	e2_primed_maternal	observation_only	existing_phase_new_sampling	0	SEC	SEC-b	SEC-d	adoptable_alternative/confounder_only					False
+observe_e2_primed	e2_primed_maternal	observation_only	existing_phase_new_sampling	0	SEC	SEC-b	SEC-e	adoptable_alternative/confounder_only					False
+observe_e2_primed	e2_primed_maternal	observation_only	existing_phase_new_sampling	0	SEC	SEC-c	SEC-d	adoptable_alternative/confounder_only	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_SECRETORY_STATE;E_SPP1_EXPR	E_PAEP	E_PAEP	PAEP (top outlet)	False
+observe_e2_primed	e2_primed_maternal	observation_only	existing_phase_new_sampling	0	SEC	SEC-c	SEC-e	adoptable_alternative/confounder_only	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_SECRETORY_STATE;E_SPP1_EXPR	E_PAEP	E_PAEP	PAEP (top outlet)	False
+observe_e2_primed	e2_primed_maternal	observation_only	existing_phase_new_sampling	0	SEC	SEC-d	SEC-e	confounder_only/confounder_only					False
+observe_e2_primed	e2_primed_maternal	observation_only	existing_phase_new_sampling	0	CAMP	CAMP-a	CAMP-b	committed/confounder_only					False
+observe_e2_primed	e2_primed_maternal	observation_only	existing_phase_new_sampling	0	HH	HH-a	HH-b	committed/adoptable_alternative					False
+observe_e2_primed	e2_primed_maternal	observation_only	existing_phase_new_sampling	0	GP130	GP130-a	GP130-b	committed/adoptable_alternative					False
+observe_e2_primed	e2_primed_maternal	observation_only	existing_phase_new_sampling	0	CD98	CD98-a	CD98-b	committed/adoptable_alternative					False
+observe_e2_primed	e2_primed_maternal	observation_only	existing_phase_new_sampling	0	CD98	CD98-a	CD98-c	committed/adoptable_alternative	E_CD98_CD9				False
+observe_e2_primed	e2_primed_maternal	observation_only	existing_phase_new_sampling	0	CD98	CD98-a	CD98-x	committed/confounder_only	E_CD98_CD9				False
+observe_e2_primed	e2_primed_maternal	observation_only	existing_phase_new_sampling	0	CD98	CD98-b	CD98-c	adoptable_alternative/adoptable_alternative	E_CD98_CD9				False
+observe_e2_primed	e2_primed_maternal	observation_only	existing_phase_new_sampling	0	CD98	CD98-b	CD98-x	adoptable_alternative/confounder_only	E_CD98_CD9				False
+observe_e2_primed	e2_primed_maternal	observation_only	existing_phase_new_sampling	0	CD98	CD98-c	CD98-x	adoptable_alternative/confounder_only					False
+observe_e2_primed	e2_primed_maternal	observation_only	existing_phase_new_sampling	0	PC6	PC6-a	PC6-b	committed/adoptable_alternative					False
+observe_hormone_treated	hormone_treated_maternal	observation_only	existing_recorded_state	0	SEC	SEC-a	SEC-b	committed/adoptable_alternative					False
+observe_hormone_treated	hormone_treated_maternal	observation_only	existing_recorded_state	0	SEC	SEC-a	SEC-c	committed/adoptable_alternative					False
+observe_hormone_treated	hormone_treated_maternal	observation_only	existing_recorded_state	0	SEC	SEC-a	SEC-d	committed/confounder_only					False
+observe_hormone_treated	hormone_treated_maternal	observation_only	existing_recorded_state	0	SEC	SEC-a	SEC-e	committed/confounder_only					False
+observe_hormone_treated	hormone_treated_maternal	observation_only	existing_recorded_state	0	SEC	SEC-b	SEC-c	adoptable_alternative/adoptable_alternative					False
+observe_hormone_treated	hormone_treated_maternal	observation_only	existing_recorded_state	0	SEC	SEC-b	SEC-d	adoptable_alternative/confounder_only					False
+observe_hormone_treated	hormone_treated_maternal	observation_only	existing_recorded_state	0	SEC	SEC-b	SEC-e	adoptable_alternative/confounder_only					False
+observe_hormone_treated	hormone_treated_maternal	observation_only	existing_recorded_state	0	SEC	SEC-c	SEC-d	adoptable_alternative/confounder_only					False
+observe_hormone_treated	hormone_treated_maternal	observation_only	existing_recorded_state	0	SEC	SEC-c	SEC-e	adoptable_alternative/confounder_only					False
+observe_hormone_treated	hormone_treated_maternal	observation_only	existing_recorded_state	0	SEC	SEC-d	SEC-e	confounder_only/confounder_only					False
+observe_hormone_treated	hormone_treated_maternal	observation_only	existing_recorded_state	0	CAMP	CAMP-a	CAMP-b	committed/confounder_only					False
+observe_hormone_treated	hormone_treated_maternal	observation_only	existing_recorded_state	0	HH	HH-a	HH-b	committed/adoptable_alternative					False
+observe_hormone_treated	hormone_treated_maternal	observation_only	existing_recorded_state	0	GP130	GP130-a	GP130-b	committed/adoptable_alternative					False
+observe_hormone_treated	hormone_treated_maternal	observation_only	existing_recorded_state	0	CD98	CD98-a	CD98-b	committed/adoptable_alternative					False
+observe_hormone_treated	hormone_treated_maternal	observation_only	existing_recorded_state	0	CD98	CD98-a	CD98-c	committed/adoptable_alternative	E_CD98_CD9				False
+observe_hormone_treated	hormone_treated_maternal	observation_only	existing_recorded_state	0	CD98	CD98-a	CD98-x	committed/confounder_only	E_CD98_CD9				False
+observe_hormone_treated	hormone_treated_maternal	observation_only	existing_recorded_state	0	CD98	CD98-b	CD98-c	adoptable_alternative/adoptable_alternative	E_CD98_CD9				False
+observe_hormone_treated	hormone_treated_maternal	observation_only	existing_recorded_state	0	CD98	CD98-b	CD98-x	adoptable_alternative/confounder_only	E_CD98_CD9				False
+observe_hormone_treated	hormone_treated_maternal	observation_only	existing_recorded_state	0	CD98	CD98-c	CD98-x	adoptable_alternative/confounder_only					False
+observe_hormone_treated	hormone_treated_maternal	observation_only	existing_recorded_state	0	PC6	PC6-a	PC6-b	committed/adoptable_alternative					False
+dropout_e2	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-a	SEC-b	committed/adoptable_alternative	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_RECEPTIVE_SURFACE;E_SECRETORY_STATE;E_SPP1_EXPR;OUT_EPITHELIAL_RECEPTIVE	E_PAEP	E_PAEP	PAEP (top outlet)	True
+dropout_e2	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-a	SEC-c	committed/adoptable_alternative	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_RECEPTIVE_SURFACE;E_SECRETORY_STATE;E_SPP1_EXPR;OUT_EPITHELIAL_RECEPTIVE	E_PAEP	E_PAEP	PAEP (top outlet)	True
+dropout_e2	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-a	SEC-d	committed/confounder_only	E_IHH;E_PGR;OUT_STROMAL_DECIDUALIZED;S_BMP2;S_DECIDUALIZED;S_FGF_MITOGENIC;S_HAND2;S_IGFBP1;S_NR2F2;S_PGR;S_PRL;S_SPP1;S_TAZ_ECM	S_IGFBP1	S_IGFBP1	IGFBP-1 (bottom outlet)	True
+dropout_e2	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-a	SEC-e	committed/confounder_only	E_IHH;E_PGR;S_NR2F2				True
+dropout_e2	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-b	SEC-c	adoptable_alternative/adoptable_alternative					True
+dropout_e2	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-b	SEC-d	adoptable_alternative/confounder_only	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_IHH;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PGR;E_PODXL;E_RECEPTIVE_SURFACE;E_SECRETORY_STATE;E_SPP1_EXPR;OUT_EPITHELIAL_RECEPTIVE;OUT_STROMAL_DECIDUALIZED;S_BMP2;S_DECIDUALIZED;S_FGF_MITOGENIC;S_HAND2;S_IGFBP1;S_NR2F2;S_PGR;S_PRL;S_SPP1;S_TAZ_ECM	E_PAEP;S_IGFBP1	E_PAEP;S_IGFBP1	IGFBP-1 (bottom outlet);PAEP (top outlet)	True
+dropout_e2	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-b	SEC-e	adoptable_alternative/confounder_only	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_IHH;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PGR;E_PODXL;E_RECEPTIVE_SURFACE;E_SECRETORY_STATE;E_SPP1_EXPR;OUT_EPITHELIAL_RECEPTIVE;S_NR2F2	E_PAEP	E_PAEP	PAEP (top outlet)	True
+dropout_e2	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-c	SEC-d	adoptable_alternative/confounder_only	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_IHH;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PGR;E_PODXL;E_RECEPTIVE_SURFACE;E_SECRETORY_STATE;E_SPP1_EXPR;OUT_EPITHELIAL_RECEPTIVE;OUT_STROMAL_DECIDUALIZED;S_BMP2;S_DECIDUALIZED;S_FGF_MITOGENIC;S_HAND2;S_IGFBP1;S_NR2F2;S_PGR;S_PRL;S_SPP1;S_TAZ_ECM	E_PAEP;S_IGFBP1	E_PAEP;S_IGFBP1	IGFBP-1 (bottom outlet);PAEP (top outlet)	True
+dropout_e2	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-c	SEC-e	adoptable_alternative/confounder_only	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_IHH;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PGR;E_PODXL;E_RECEPTIVE_SURFACE;E_SECRETORY_STATE;E_SPP1_EXPR;OUT_EPITHELIAL_RECEPTIVE;S_NR2F2	E_PAEP	E_PAEP	PAEP (top outlet)	True
+dropout_e2	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-d	SEC-e	confounder_only/confounder_only	OUT_STROMAL_DECIDUALIZED;S_BMP2;S_DECIDUALIZED;S_FGF_MITOGENIC;S_HAND2;S_IGFBP1;S_PGR;S_PRL;S_SPP1;S_TAZ_ECM	S_IGFBP1	S_IGFBP1	IGFBP-1 (bottom outlet)	True
+dropout_e2	hormone_treated_maternal	reagent_omission	new_arm	1	CAMP	CAMP-a	CAMP-b	committed/confounder_only					True
+dropout_e2	hormone_treated_maternal	reagent_omission	new_arm	1	HH	HH-a	HH-b	committed/adoptable_alternative					True
+dropout_e2	hormone_treated_maternal	reagent_omission	new_arm	1	GP130	GP130-a	GP130-b	committed/adoptable_alternative					True
+dropout_e2	hormone_treated_maternal	reagent_omission	new_arm	1	CD98	CD98-a	CD98-b	committed/adoptable_alternative					True
+dropout_e2	hormone_treated_maternal	reagent_omission	new_arm	1	CD98	CD98-a	CD98-c	committed/adoptable_alternative					True
+dropout_e2	hormone_treated_maternal	reagent_omission	new_arm	1	CD98	CD98-a	CD98-x	committed/confounder_only	E_CD98_CD9				True
+dropout_e2	hormone_treated_maternal	reagent_omission	new_arm	1	CD98	CD98-b	CD98-c	adoptable_alternative/adoptable_alternative					True
+dropout_e2	hormone_treated_maternal	reagent_omission	new_arm	1	CD98	CD98-b	CD98-x	adoptable_alternative/confounder_only	E_CD98_CD9				True
+dropout_e2	hormone_treated_maternal	reagent_omission	new_arm	1	CD98	CD98-c	CD98-x	adoptable_alternative/confounder_only	E_CD98_CD9				True
+dropout_e2	hormone_treated_maternal	reagent_omission	new_arm	1	PC6	PC6-a	PC6-b	committed/adoptable_alternative					True
+dropout_camp	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-a	SEC-b	committed/adoptable_alternative					True
+dropout_camp	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-a	SEC-c	committed/adoptable_alternative					True
+dropout_camp	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-a	SEC-d	committed/confounder_only					True
+dropout_camp	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-a	SEC-e	committed/confounder_only					True
+dropout_camp	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-b	SEC-c	adoptable_alternative/adoptable_alternative					True
+dropout_camp	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-b	SEC-d	adoptable_alternative/confounder_only					True
+dropout_camp	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-b	SEC-e	adoptable_alternative/confounder_only					True
+dropout_camp	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-c	SEC-d	adoptable_alternative/confounder_only					True
+dropout_camp	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-c	SEC-e	adoptable_alternative/confounder_only					True
+dropout_camp	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-d	SEC-e	confounder_only/confounder_only					True
+dropout_camp	hormone_treated_maternal	reagent_omission	new_arm	1	CAMP	CAMP-a	CAMP-b	committed/confounder_only	OUT_STROMAL_DECIDUALIZED;S_DECIDUALIZED;S_IGFBP1;S_PRL;S_SPP1;S_TAZ_ECM	S_IGFBP1	S_IGFBP1	IGFBP-1 (bottom outlet)	True
+dropout_camp	hormone_treated_maternal	reagent_omission	new_arm	1	HH	HH-a	HH-b	committed/adoptable_alternative					True
+dropout_camp	hormone_treated_maternal	reagent_omission	new_arm	1	GP130	GP130-a	GP130-b	committed/adoptable_alternative					True
+dropout_camp	hormone_treated_maternal	reagent_omission	new_arm	1	CD98	CD98-a	CD98-b	committed/adoptable_alternative					True
+dropout_camp	hormone_treated_maternal	reagent_omission	new_arm	1	CD98	CD98-a	CD98-c	committed/adoptable_alternative	E_CD98_CD9				True
+dropout_camp	hormone_treated_maternal	reagent_omission	new_arm	1	CD98	CD98-a	CD98-x	committed/confounder_only	E_CD98_CD9				True
+dropout_camp	hormone_treated_maternal	reagent_omission	new_arm	1	CD98	CD98-b	CD98-c	adoptable_alternative/adoptable_alternative	E_CD98_CD9				True
+dropout_camp	hormone_treated_maternal	reagent_omission	new_arm	1	CD98	CD98-b	CD98-x	adoptable_alternative/confounder_only	E_CD98_CD9				True
+dropout_camp	hormone_treated_maternal	reagent_omission	new_arm	1	CD98	CD98-c	CD98-x	adoptable_alternative/confounder_only					True
+dropout_camp	hormone_treated_maternal	reagent_omission	new_arm	1	PC6	PC6-a	PC6-b	committed/adoptable_alternative					True
+dropout_xav939	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-a	SEC-b	committed/adoptable_alternative					False
+dropout_xav939	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-a	SEC-c	committed/adoptable_alternative					False
+dropout_xav939	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-a	SEC-d	committed/confounder_only					False
+dropout_xav939	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-a	SEC-e	committed/confounder_only					False
+dropout_xav939	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-b	SEC-c	adoptable_alternative/adoptable_alternative					False
+dropout_xav939	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-b	SEC-d	adoptable_alternative/confounder_only					False
+dropout_xav939	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-b	SEC-e	adoptable_alternative/confounder_only					False
+dropout_xav939	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-c	SEC-d	adoptable_alternative/confounder_only					False
+dropout_xav939	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-c	SEC-e	adoptable_alternative/confounder_only					False
+dropout_xav939	hormone_treated_maternal	reagent_omission	new_arm	1	SEC	SEC-d	SEC-e	confounder_only/confounder_only					False
+dropout_xav939	hormone_treated_maternal	reagent_omission	new_arm	1	CAMP	CAMP-a	CAMP-b	committed/confounder_only					False
+dropout_xav939	hormone_treated_maternal	reagent_omission	new_arm	1	HH	HH-a	HH-b	committed/adoptable_alternative					False
+dropout_xav939	hormone_treated_maternal	reagent_omission	new_arm	1	GP130	GP130-a	GP130-b	committed/adoptable_alternative					False
+dropout_xav939	hormone_treated_maternal	reagent_omission	new_arm	1	CD98	CD98-a	CD98-b	committed/adoptable_alternative					False
+dropout_xav939	hormone_treated_maternal	reagent_omission	new_arm	1	CD98	CD98-a	CD98-c	committed/adoptable_alternative	E_CD98_CD9				False
+dropout_xav939	hormone_treated_maternal	reagent_omission	new_arm	1	CD98	CD98-a	CD98-x	committed/confounder_only	E_CD98_CD9				False
+dropout_xav939	hormone_treated_maternal	reagent_omission	new_arm	1	CD98	CD98-b	CD98-c	adoptable_alternative/adoptable_alternative	E_CD98_CD9				False
+dropout_xav939	hormone_treated_maternal	reagent_omission	new_arm	1	CD98	CD98-b	CD98-x	adoptable_alternative/confounder_only	E_CD98_CD9				False
+dropout_xav939	hormone_treated_maternal	reagent_omission	new_arm	1	CD98	CD98-c	CD98-x	adoptable_alternative/confounder_only					False
+dropout_xav939	hormone_treated_maternal	reagent_omission	new_arm	1	PC6	PC6-a	PC6-b	committed/adoptable_alternative					False
+add_hcg_on_hormone_treated	hormone_treated_maternal	reagent_addition	new_arm	1	SEC	SEC-a	SEC-b	committed/adoptable_alternative					False
+add_hcg_on_hormone_treated	hormone_treated_maternal	reagent_addition	new_arm	1	SEC	SEC-a	SEC-c	committed/adoptable_alternative					False
+add_hcg_on_hormone_treated	hormone_treated_maternal	reagent_addition	new_arm	1	SEC	SEC-a	SEC-d	committed/confounder_only					False
+add_hcg_on_hormone_treated	hormone_treated_maternal	reagent_addition	new_arm	1	SEC	SEC-a	SEC-e	committed/confounder_only					False
+add_hcg_on_hormone_treated	hormone_treated_maternal	reagent_addition	new_arm	1	SEC	SEC-b	SEC-c	adoptable_alternative/adoptable_alternative					False
+add_hcg_on_hormone_treated	hormone_treated_maternal	reagent_addition	new_arm	1	SEC	SEC-b	SEC-d	adoptable_alternative/confounder_only					False
+add_hcg_on_hormone_treated	hormone_treated_maternal	reagent_addition	new_arm	1	SEC	SEC-b	SEC-e	adoptable_alternative/confounder_only					False
+add_hcg_on_hormone_treated	hormone_treated_maternal	reagent_addition	new_arm	1	SEC	SEC-c	SEC-d	adoptable_alternative/confounder_only					False
+add_hcg_on_hormone_treated	hormone_treated_maternal	reagent_addition	new_arm	1	SEC	SEC-c	SEC-e	adoptable_alternative/confounder_only					False
+add_hcg_on_hormone_treated	hormone_treated_maternal	reagent_addition	new_arm	1	SEC	SEC-d	SEC-e	confounder_only/confounder_only					False
+add_hcg_on_hormone_treated	hormone_treated_maternal	reagent_addition	new_arm	1	CAMP	CAMP-a	CAMP-b	committed/confounder_only					False
+add_hcg_on_hormone_treated	hormone_treated_maternal	reagent_addition	new_arm	1	HH	HH-a	HH-b	committed/adoptable_alternative					False
+add_hcg_on_hormone_treated	hormone_treated_maternal	reagent_addition	new_arm	1	GP130	GP130-a	GP130-b	committed/adoptable_alternative					False
+add_hcg_on_hormone_treated	hormone_treated_maternal	reagent_addition	new_arm	1	CD98	CD98-a	CD98-b	committed/adoptable_alternative	E_CD98_CD9				False
+add_hcg_on_hormone_treated	hormone_treated_maternal	reagent_addition	new_arm	1	CD98	CD98-a	CD98-c	committed/adoptable_alternative	E_CD98_CD9				False
+add_hcg_on_hormone_treated	hormone_treated_maternal	reagent_addition	new_arm	1	CD98	CD98-a	CD98-x	committed/confounder_only	E_CD98_CD9				False
+add_hcg_on_hormone_treated	hormone_treated_maternal	reagent_addition	new_arm	1	CD98	CD98-b	CD98-c	adoptable_alternative/adoptable_alternative					False
+add_hcg_on_hormone_treated	hormone_treated_maternal	reagent_addition	new_arm	1	CD98	CD98-b	CD98-x	adoptable_alternative/confounder_only					False
+add_hcg_on_hormone_treated	hormone_treated_maternal	reagent_addition	new_arm	1	CD98	CD98-c	CD98-x	adoptable_alternative/confounder_only					False
+add_hcg_on_hormone_treated	hormone_treated_maternal	reagent_addition	new_arm	1	PC6	PC6-a	PC6-b	committed/adoptable_alternative					False
+add_hcg_on_e2	e2_primed_maternal	reagent_addition	new_arm	1	SEC	SEC-a	SEC-b	committed/adoptable_alternative					False
+add_hcg_on_e2	e2_primed_maternal	reagent_addition	new_arm	1	SEC	SEC-a	SEC-c	committed/adoptable_alternative	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_SECRETORY_STATE;E_SPP1_EXPR	E_PAEP	E_PAEP	PAEP (top outlet)	False
+add_hcg_on_e2	e2_primed_maternal	reagent_addition	new_arm	1	SEC	SEC-a	SEC-d	committed/confounder_only					False
+add_hcg_on_e2	e2_primed_maternal	reagent_addition	new_arm	1	SEC	SEC-a	SEC-e	committed/confounder_only					False
+add_hcg_on_e2	e2_primed_maternal	reagent_addition	new_arm	1	SEC	SEC-b	SEC-c	adoptable_alternative/adoptable_alternative	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_SECRETORY_STATE;E_SPP1_EXPR	E_PAEP	E_PAEP	PAEP (top outlet)	False
+add_hcg_on_e2	e2_primed_maternal	reagent_addition	new_arm	1	SEC	SEC-b	SEC-d	adoptable_alternative/confounder_only					False
+add_hcg_on_e2	e2_primed_maternal	reagent_addition	new_arm	1	SEC	SEC-b	SEC-e	adoptable_alternative/confounder_only					False
+add_hcg_on_e2	e2_primed_maternal	reagent_addition	new_arm	1	SEC	SEC-c	SEC-d	adoptable_alternative/confounder_only	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_SECRETORY_STATE;E_SPP1_EXPR	E_PAEP	E_PAEP	PAEP (top outlet)	False
+add_hcg_on_e2	e2_primed_maternal	reagent_addition	new_arm	1	SEC	SEC-c	SEC-e	adoptable_alternative/confounder_only	E_ANXA2_ACTIN;E_CD98_CD9;E_DAG1_CLEAVED;E_DAG1_FULL;E_GP130_STAT3;E_HBEGF;E_ITGAVB3_5;E_LIF;E_MUC1_BARRIER;E_MUC1_SLEX;E_PAEP;E_PC6;E_PODXL;E_SECRETORY_STATE;E_SPP1_EXPR	E_PAEP	E_PAEP	PAEP (top outlet)	False
+add_hcg_on_e2	e2_primed_maternal	reagent_addition	new_arm	1	SEC	SEC-d	SEC-e	confounder_only/confounder_only					False
+add_hcg_on_e2	e2_primed_maternal	reagent_addition	new_arm	1	CAMP	CAMP-a	CAMP-b	committed/confounder_only					False
+add_hcg_on_e2	e2_primed_maternal	reagent_addition	new_arm	1	HH	HH-a	HH-b	committed/adoptable_alternative					False
+add_hcg_on_e2	e2_primed_maternal	reagent_addition	new_arm	1	GP130	GP130-a	GP130-b	committed/adoptable_alternative					False
+add_hcg_on_e2	e2_primed_maternal	reagent_addition	new_arm	1	CD98	CD98-a	CD98-b	committed/adoptable_alternative	E_CD98_CD9				False
+add_hcg_on_e2	e2_primed_maternal	reagent_addition	new_arm	1	CD98	CD98-a	CD98-c	committed/adoptable_alternative	E_CD98_CD9				False
+add_hcg_on_e2	e2_primed_maternal	reagent_addition	new_arm	1	CD98	CD98-a	CD98-x	committed/confounder_only	E_CD98_CD9				False
+add_hcg_on_e2	e2_primed_maternal	reagent_addition	new_arm	1	CD98	CD98-b	CD98-c	adoptable_alternative/adoptable_alternative					False
+add_hcg_on_e2	e2_primed_maternal	reagent_addition	new_arm	1	CD98	CD98-b	CD98-x	adoptable_alternative/confounder_only					False
+add_hcg_on_e2	e2_primed_maternal	reagent_addition	new_arm	1	CD98	CD98-c	CD98-x	adoptable_alternative/confounder_only					False
+add_hcg_on_e2	e2_primed_maternal	reagent_addition	new_arm	1	PC6	PC6-a	PC6-b	committed/adoptable_alternative					False
+add_il11	hormone_treated_maternal	reagent_addition	new_arm	1	SEC	SEC-a	SEC-b	committed/adoptable_alternative					False
+add_il11	hormone_treated_maternal	reagent_addition	new_arm	1	SEC	SEC-a	SEC-c	committed/adoptable_alternative					False
+add_il11	hormone_treated_maternal	reagent_addition	new_arm	1	SEC	SEC-a	SEC-d	committed/confounder_only					False
+add_il11	hormone_treated_maternal	reagent_addition	new_arm	1	SEC	SEC-a	SEC-e	committed/confounder_only					False
+add_il11	hormone_treated_maternal	reagent_addition	new_arm	1	SEC	SEC-b	SEC-c	adoptable_alternative/adoptable_alternative					False
+add_il11	hormone_treated_maternal	reagent_addition	new_arm	1	SEC	SEC-b	SEC-d	adoptable_alternative/confounder_only					False
+add_il11	hormone_treated_maternal	reagent_addition	new_arm	1	SEC	SEC-b	SEC-e	adoptable_alternative/confounder_only					False
+add_il11	hormone_treated_maternal	reagent_addition	new_arm	1	SEC	SEC-c	SEC-d	adoptable_alternative/confounder_only					False
+add_il11	hormone_treated_maternal	reagent_addition	new_arm	1	SEC	SEC-c	SEC-e	adoptable_alternative/confounder_only					False
+add_il11	hormone_treated_maternal	reagent_addition	new_arm	1	SEC	SEC-d	SEC-e	confounder_only/confounder_only					False
+add_il11	hormone_treated_maternal	reagent_addition	new_arm	1	CAMP	CAMP-a	CAMP-b	committed/confounder_only					False
+add_il11	hormone_treated_maternal	reagent_addition	new_arm	1	HH	HH-a	HH-b	committed/adoptable_alternative					False
+add_il11	hormone_treated_maternal	reagent_addition	new_arm	1	GP130	GP130-a	GP130-b	committed/adoptable_alternative	E_CD98_CD9;E_GP130_STAT3;E_RECEPTIVE_SURFACE;OUT_EPITHELIAL_RECEPTIVE				False
+add_il11	hormone_treated_maternal	reagent_addition	new_arm	1	CD98	CD98-a	CD98-b	committed/adoptable_alternative					False
+add_il11	hormone_treated_maternal	reagent_addition	new_arm	1	CD98	CD98-a	CD98-c	committed/adoptable_alternative	E_CD98_CD9				False
+add_il11	hormone_treated_maternal	reagent_addition	new_arm	1	CD98	CD98-a	CD98-x	committed/confounder_only	E_CD98_CD9				False
+add_il11	hormone_treated_maternal	reagent_addition	new_arm	1	CD98	CD98-b	CD98-c	adoptable_alternative/adoptable_alternative	E_CD98_CD9				False
+add_il11	hormone_treated_maternal	reagent_addition	new_arm	1	CD98	CD98-b	CD98-x	adoptable_alternative/confounder_only	E_CD98_CD9				False
+add_il11	hormone_treated_maternal	reagent_addition	new_arm	1	CD98	CD98-c	CD98-x	adoptable_alternative/confounder_only					False
+add_il11	hormone_treated_maternal	reagent_addition	new_arm	1	PC6	PC6-a	PC6-b	committed/adoptable_alternative					False
+anti_lif	hormone_treated_maternal	biologic	new_arm	1	SEC	SEC-a	SEC-b	committed/adoptable_alternative					True
+anti_lif	hormone_treated_maternal	biologic	new_arm	1	SEC	SEC-a	SEC-c	committed/adoptable_alternative					True
+anti_lif	hormone_treated_maternal	biologic	new_arm	1	SEC	SEC-a	SEC-d	committed/confounder_only					True
+anti_lif	hormone_treated_maternal	biologic	new_arm	1	SEC	SEC-a	SEC-e	committed/confounder_only					True
+anti_lif	hormone_treated_maternal	biologic	new_arm	1	SEC	SEC-b	SEC-c	adoptable_alternative/adoptable_alternative					True
+anti_lif	hormone_treated_maternal	biologic	new_arm	1	SEC	SEC-b	SEC-d	adoptable_alternative/confounder_only					True
+anti_lif	hormone_treated_maternal	biologic	new_arm	1	SEC	SEC-b	SEC-e	adoptable_alternative/confounder_only					True
+anti_lif	hormone_treated_maternal	biologic	new_arm	1	SEC	SEC-c	SEC-d	adoptable_alternative/confounder_only					True
+anti_lif	hormone_treated_maternal	biologic	new_arm	1	SEC	SEC-c	SEC-e	adoptable_alternative/confounder_only					True
+anti_lif	hormone_treated_maternal	biologic	new_arm	1	SEC	SEC-d	SEC-e	confounder_only/confounder_only					True
+anti_lif	hormone_treated_maternal	biologic	new_arm	1	CAMP	CAMP-a	CAMP-b	committed/confounder_only					True
+anti_lif	hormone_treated_maternal	biologic	new_arm	1	HH	HH-a	HH-b	committed/adoptable_alternative					True
+anti_lif	hormone_treated_maternal	biologic	new_arm	1	GP130	GP130-a	GP130-b	committed/adoptable_alternative					True
+anti_lif	hormone_treated_maternal	biologic	new_arm	1	CD98	CD98-a	CD98-b	committed/adoptable_alternative					True
+anti_lif	hormone_treated_maternal	biologic	new_arm	1	CD98	CD98-a	CD98-c	committed/adoptable_alternative	E_CD98_CD9				True
+anti_lif	hormone_treated_maternal	biologic	new_arm	1	CD98	CD98-a	CD98-x	committed/confounder_only	E_CD98_CD9				True
+anti_lif	hormone_treated_maternal	biologic	new_arm	1	CD98	CD98-b	CD98-c	adoptable_alternative/adoptable_alternative	E_CD98_CD9				True
+anti_lif	hormone_treated_maternal	biologic	new_arm	1	CD98	CD98-b	CD98-x	adoptable_alternative/confounder_only	E_CD98_CD9				True
+anti_lif	hormone_treated_maternal	biologic	new_arm	1	CD98	CD98-c	CD98-x	adoptable_alternative/confounder_only					True
+anti_lif	hormone_treated_maternal	biologic	new_arm	1	PC6	PC6-a	PC6-b	committed/adoptable_alternative					True
+anti_lif_plus_il11	hormone_treated_maternal	biologic+reagent_addition	new_arm	2	SEC	SEC-a	SEC-b	committed/adoptable_alternative					True
+anti_lif_plus_il11	hormone_treated_maternal	biologic+reagent_addition	new_arm	2	SEC	SEC-a	SEC-c	committed/adoptable_alternative					True
+anti_lif_plus_il11	hormone_treated_maternal	biologic+reagent_addition	new_arm	2	SEC	SEC-a	SEC-d	committed/confounder_only					True
+anti_lif_plus_il11	hormone_treated_maternal	biologic+reagent_addition	new_arm	2	SEC	SEC-a	SEC-e	committed/confounder_only					True
+anti_lif_plus_il11	hormone_treated_maternal	biologic+reagent_addition	new_arm	2	SEC	SEC-b	SEC-c	adoptable_alternative/adoptable_alternative					True
+anti_lif_plus_il11	hormone_treated_maternal	biologic+reagent_addition	new_arm	2	SEC	SEC-b	SEC-d	adoptable_alternative/confounder_only					True
+anti_lif_plus_il11	hormone_treated_maternal	biologic+reagent_addition	new_arm	2	SEC	SEC-b	SEC-e	adoptable_alternative/confounder_only					True
+anti_lif_plus_il11	hormone_treated_maternal	biologic+reagent_addition	new_arm	2	SEC	SEC-c	SEC-d	adoptable_alternative/confounder_only					True
+anti_lif_plus_il11	hormone_treated_maternal	biologic+reagent_addition	new_arm	2	SEC	SEC-c	SEC-e	adoptable_alternative/confounder_only					True
+anti_lif_plus_il11	hormone_treated_maternal	biologic+reagent_addition	new_arm	2	SEC	SEC-d	SEC-e	confounder_only/confounder_only					True
+anti_lif_plus_il11	hormone_treated_maternal	biologic+reagent_addition	new_arm	2	CAMP	CAMP-a	CAMP-b	committed/confounder_only					True
+anti_lif_plus_il11	hormone_treated_maternal	biologic+reagent_addition	new_arm	2	HH	HH-a	HH-b	committed/adoptable_alternative					True
+anti_lif_plus_il11	hormone_treated_maternal	biologic+reagent_addition	new_arm	2	GP130	GP130-a	GP130-b	committed/adoptable_alternative	E_CD98_CD9;E_GP130_STAT3;E_RECEPTIVE_SURFACE;OUT_EPITHELIAL_RECEPTIVE				True
+anti_lif_plus_il11	hormone_treated_maternal	biologic+reagent_addition	new_arm	2	CD98	CD98-a	CD98-b	committed/adoptable_alternative					True
+anti_lif_plus_il11	hormone_treated_maternal	biologic+reagent_addition	new_arm	2	CD98	CD98-a	CD98-c	committed/adoptable_alternative	E_CD98_CD9				True
+anti_lif_plus_il11	hormone_treated_maternal	biologic+reagent_addition	new_arm	2	CD98	CD98-a	CD98-x	committed/confounder_only	E_CD98_CD9				True
+anti_lif_plus_il11	hormone_treated_maternal	biologic+reagent_addition	new_arm	2	CD98	CD98-b	CD98-c	adoptable_alternative/adoptable_alternative	E_CD98_CD9				True
+anti_lif_plus_il11	hormone_treated_maternal	biologic+reagent_addition	new_arm	2	CD98	CD98-b	CD98-x	adoptable_alternative/confounder_only	E_CD98_CD9				True
+anti_lif_plus_il11	hormone_treated_maternal	biologic+reagent_addition	new_arm	2	CD98	CD98-c	CD98-x	adoptable_alternative/confounder_only					True
+anti_lif_plus_il11	hormone_treated_maternal	biologic+reagent_addition	new_arm	2	PC6	PC6-a	PC6-b	committed/adoptable_alternative					True
+smo_antagonist	hormone_treated_maternal	small_molecule	new_arm	1	SEC	SEC-a	SEC-b	committed/adoptable_alternative					False
+smo_antagonist	hormone_treated_maternal	small_molecule	new_arm	1	SEC	SEC-a	SEC-c	committed/adoptable_alternative					False
+smo_antagonist	hormone_treated_maternal	small_molecule	new_arm	1	SEC	SEC-a	SEC-d	committed/confounder_only					False
+smo_antagonist	hormone_treated_maternal	small_molecule	new_arm	1	SEC	SEC-a	SEC-e	committed/confounder_only					False
+smo_antagonist	hormone_treated_maternal	small_molecule	new_arm	1	SEC	SEC-b	SEC-c	adoptable_alternative/adoptable_alternative					False
+smo_antagonist	hormone_treated_maternal	small_molecule	new_arm	1	SEC	SEC-b	SEC-d	adoptable_alternative/confounder_only					False
+smo_antagonist	hormone_treated_maternal	small_molecule	new_arm	1	SEC	SEC-b	SEC-e	adoptable_alternative/confounder_only					False
+smo_antagonist	hormone_treated_maternal	small_molecule	new_arm	1	SEC	SEC-c	SEC-d	adoptable_alternative/confounder_only					False
+smo_antagonist	hormone_treated_maternal	small_molecule	new_arm	1	SEC	SEC-c	SEC-e	adoptable_alternative/confounder_only					False
+smo_antagonist	hormone_treated_maternal	small_molecule	new_arm	1	SEC	SEC-d	SEC-e	confounder_only/confounder_only					False
+smo_antagonist	hormone_treated_maternal	small_molecule	new_arm	1	CAMP	CAMP-a	CAMP-b	committed/confounder_only					False
+smo_antagonist	hormone_treated_maternal	small_molecule	new_arm	1	HH	HH-a	HH-b	committed/adoptable_alternative	OUT_STROMAL_DECIDUALIZED;S_BMP2;S_DECIDUALIZED;S_IGFBP1;S_PRL;S_SPP1;S_TAZ_ECM	S_IGFBP1	S_IGFBP1	IGFBP-1 (bottom outlet)	False
+smo_antagonist	hormone_treated_maternal	small_molecule	new_arm	1	GP130	GP130-a	GP130-b	committed/adoptable_alternative					False
+smo_antagonist	hormone_treated_maternal	small_molecule	new_arm	1	CD98	CD98-a	CD98-b	committed/adoptable_alternative					False
+smo_antagonist	hormone_treated_maternal	small_molecule	new_arm	1	CD98	CD98-a	CD98-c	committed/adoptable_alternative	E_CD98_CD9				False
+smo_antagonist	hormone_treated_maternal	small_molecule	new_arm	1	CD98	CD98-a	CD98-x	committed/confounder_only	E_CD98_CD9				False
+smo_antagonist	hormone_treated_maternal	small_molecule	new_arm	1	CD98	CD98-b	CD98-c	adoptable_alternative/adoptable_alternative	E_CD98_CD9				False
+smo_antagonist	hormone_treated_maternal	small_molecule	new_arm	1	CD98	CD98-b	CD98-x	adoptable_alternative/confounder_only	E_CD98_CD9				False
+smo_antagonist	hormone_treated_maternal	small_molecule	new_arm	1	CD98	CD98-c	CD98-x	adoptable_alternative/confounder_only					False
+smo_antagonist	hormone_treated_maternal	small_molecule	new_arm	1	PC6	PC6-a	PC6-b	committed/adoptable_alternative					False
+bmpr_inhibitor	hormone_treated_maternal	small_molecule	new_arm	1	SEC	SEC-a	SEC-b	committed/adoptable_alternative					True
+bmpr_inhibitor	hormone_treated_maternal	small_molecule	new_arm	1	SEC	SEC-a	SEC-c	committed/adoptable_alternative					True
+bmpr_inhibitor	hormone_treated_maternal	small_molecule	new_arm	1	SEC	SEC-a	SEC-d	committed/confounder_only					True
+bmpr_inhibitor	hormone_treated_maternal	small_molecule	new_arm	1	SEC	SEC-a	SEC-e	committed/confounder_only					True
+bmpr_inhibitor	hormone_treated_maternal	small_molecule	new_arm	1	SEC	SEC-b	SEC-c	adoptable_alternative/adoptable_alternative					True
+bmpr_inhibitor	hormone_treated_maternal	small_molecule	new_arm	1	SEC	SEC-b	SEC-d	adoptable_alternative/confounder_only					True
+bmpr_inhibitor	hormone_treated_maternal	small_molecule	new_arm	1	SEC	SEC-b	SEC-e	adoptable_alternative/confounder_only					True
+bmpr_inhibitor	hormone_treated_maternal	small_molecule	new_arm	1	SEC	SEC-c	SEC-d	adoptable_alternative/confounder_only					True
+bmpr_inhibitor	hormone_treated_maternal	small_molecule	new_arm	1	SEC	SEC-c	SEC-e	adoptable_alternative/confounder_only					True
+bmpr_inhibitor	hormone_treated_maternal	small_molecule	new_arm	1	SEC	SEC-d	SEC-e	confounder_only/confounder_only					True
+bmpr_inhibitor	hormone_treated_maternal	small_molecule	new_arm	1	CAMP	CAMP-a	CAMP-b	committed/confounder_only					True
+bmpr_inhibitor	hormone_treated_maternal	small_molecule	new_arm	1	HH	HH-a	HH-b	committed/adoptable_alternative					True
+bmpr_inhibitor	hormone_treated_maternal	small_molecule	new_arm	1	GP130	GP130-a	GP130-b	committed/adoptable_alternative					True
+bmpr_inhibitor	hormone_treated_maternal	small_molecule	new_arm	1	CD98	CD98-a	CD98-b	committed/adoptable_alternative					True
+bmpr_inhibitor	hormone_treated_maternal	small_molecule	new_arm	1	CD98	CD98-a	CD98-c	committed/adoptable_alternative	E_CD98_CD9				True
+bmpr_inhibitor	hormone_treated_maternal	small_molecule	new_arm	1	CD98	CD98-a	CD98-x	committed/confounder_only	E_CD98_CD9				True
+bmpr_inhibitor	hormone_treated_maternal	small_molecule	new_arm	1	CD98	CD98-b	CD98-c	adoptable_alternative/adoptable_alternative	E_CD98_CD9				True
+bmpr_inhibitor	hormone_treated_maternal	small_molecule	new_arm	1	CD98	CD98-b	CD98-x	adoptable_alternative/confounder_only	E_CD98_CD9				True
+bmpr_inhibitor	hormone_treated_maternal	small_molecule	new_arm	1	CD98	CD98-c	CD98-x	adoptable_alternative/confounder_only					True
+bmpr_inhibitor	hormone_treated_maternal	small_molecule	new_arm	1	PC6	PC6-a	PC6-b	committed/adoptable_alternative					True
+pc6_knockdown	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-a	SEC-b	committed/adoptable_alternative					True
+pc6_knockdown	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-a	SEC-c	committed/adoptable_alternative					True
+pc6_knockdown	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-a	SEC-d	committed/confounder_only					True
+pc6_knockdown	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-a	SEC-e	committed/confounder_only					True
+pc6_knockdown	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-b	SEC-c	adoptable_alternative/adoptable_alternative					True
+pc6_knockdown	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-b	SEC-d	adoptable_alternative/confounder_only					True
+pc6_knockdown	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-b	SEC-e	adoptable_alternative/confounder_only					True
+pc6_knockdown	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-c	SEC-d	adoptable_alternative/confounder_only					True
+pc6_knockdown	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-c	SEC-e	adoptable_alternative/confounder_only					True
+pc6_knockdown	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-d	SEC-e	confounder_only/confounder_only					True
+pc6_knockdown	hormone_treated_maternal	construct	new_arm	1	CAMP	CAMP-a	CAMP-b	committed/confounder_only					True
+pc6_knockdown	hormone_treated_maternal	construct	new_arm	1	HH	HH-a	HH-b	committed/adoptable_alternative					True
+pc6_knockdown	hormone_treated_maternal	construct	new_arm	1	GP130	GP130-a	GP130-b	committed/adoptable_alternative					True
+pc6_knockdown	hormone_treated_maternal	construct	new_arm	1	CD98	CD98-a	CD98-b	committed/adoptable_alternative					True
+pc6_knockdown	hormone_treated_maternal	construct	new_arm	1	CD98	CD98-a	CD98-c	committed/adoptable_alternative	E_CD98_CD9				True
+pc6_knockdown	hormone_treated_maternal	construct	new_arm	1	CD98	CD98-a	CD98-x	committed/confounder_only	E_CD98_CD9				True
+pc6_knockdown	hormone_treated_maternal	construct	new_arm	1	CD98	CD98-b	CD98-c	adoptable_alternative/adoptable_alternative	E_CD98_CD9				True
+pc6_knockdown	hormone_treated_maternal	construct	new_arm	1	CD98	CD98-b	CD98-x	adoptable_alternative/confounder_only	E_CD98_CD9				True
+pc6_knockdown	hormone_treated_maternal	construct	new_arm	1	CD98	CD98-c	CD98-x	adoptable_alternative/confounder_only					True
+pc6_knockdown	hormone_treated_maternal	construct	new_arm	1	PC6	PC6-a	PC6-b	committed/adoptable_alternative					True
+dag1_cleavage_resistant	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-a	SEC-b	committed/adoptable_alternative					False
+dag1_cleavage_resistant	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-a	SEC-c	committed/adoptable_alternative					False
+dag1_cleavage_resistant	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-a	SEC-d	committed/confounder_only					False
+dag1_cleavage_resistant	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-a	SEC-e	committed/confounder_only					False
+dag1_cleavage_resistant	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-b	SEC-c	adoptable_alternative/adoptable_alternative					False
+dag1_cleavage_resistant	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-b	SEC-d	adoptable_alternative/confounder_only					False
+dag1_cleavage_resistant	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-b	SEC-e	adoptable_alternative/confounder_only					False
+dag1_cleavage_resistant	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-c	SEC-d	adoptable_alternative/confounder_only					False
+dag1_cleavage_resistant	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-c	SEC-e	adoptable_alternative/confounder_only					False
+dag1_cleavage_resistant	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-d	SEC-e	confounder_only/confounder_only					False
+dag1_cleavage_resistant	hormone_treated_maternal	construct	new_arm	1	CAMP	CAMP-a	CAMP-b	committed/confounder_only					False
+dag1_cleavage_resistant	hormone_treated_maternal	construct	new_arm	1	HH	HH-a	HH-b	committed/adoptable_alternative					False
+dag1_cleavage_resistant	hormone_treated_maternal	construct	new_arm	1	GP130	GP130-a	GP130-b	committed/adoptable_alternative					False
+dag1_cleavage_resistant	hormone_treated_maternal	construct	new_arm	1	CD98	CD98-a	CD98-b	committed/adoptable_alternative					False
+dag1_cleavage_resistant	hormone_treated_maternal	construct	new_arm	1	CD98	CD98-a	CD98-c	committed/adoptable_alternative	E_CD98_CD9				False
+dag1_cleavage_resistant	hormone_treated_maternal	construct	new_arm	1	CD98	CD98-a	CD98-x	committed/confounder_only	E_CD98_CD9				False
+dag1_cleavage_resistant	hormone_treated_maternal	construct	new_arm	1	CD98	CD98-b	CD98-c	adoptable_alternative/adoptable_alternative	E_CD98_CD9				False
+dag1_cleavage_resistant	hormone_treated_maternal	construct	new_arm	1	CD98	CD98-b	CD98-x	adoptable_alternative/confounder_only	E_CD98_CD9				False
+dag1_cleavage_resistant	hormone_treated_maternal	construct	new_arm	1	CD98	CD98-c	CD98-x	adoptable_alternative/confounder_only					False
+dag1_cleavage_resistant	hormone_treated_maternal	construct	new_arm	1	PC6	PC6-a	PC6-b	committed/adoptable_alternative	E_DAG1_CLEAVED;E_DAG1_FULL;E_RECEPTIVE_SURFACE;OUT_EPITHELIAL_RECEPTIVE				False
+anti_spp1	hormone_treated_maternal	biologic	new_arm	1	SEC	SEC-a	SEC-b	committed/adoptable_alternative					False
+anti_spp1	hormone_treated_maternal	biologic	new_arm	1	SEC	SEC-a	SEC-c	committed/adoptable_alternative					False
+anti_spp1	hormone_treated_maternal	biologic	new_arm	1	SEC	SEC-a	SEC-d	committed/confounder_only					False
+anti_spp1	hormone_treated_maternal	biologic	new_arm	1	SEC	SEC-a	SEC-e	committed/confounder_only					False
+anti_spp1	hormone_treated_maternal	biologic	new_arm	1	SEC	SEC-b	SEC-c	adoptable_alternative/adoptable_alternative					False
+anti_spp1	hormone_treated_maternal	biologic	new_arm	1	SEC	SEC-b	SEC-d	adoptable_alternative/confounder_only					False
+anti_spp1	hormone_treated_maternal	biologic	new_arm	1	SEC	SEC-b	SEC-e	adoptable_alternative/confounder_only					False
+anti_spp1	hormone_treated_maternal	biologic	new_arm	1	SEC	SEC-c	SEC-d	adoptable_alternative/confounder_only					False
+anti_spp1	hormone_treated_maternal	biologic	new_arm	1	SEC	SEC-c	SEC-e	adoptable_alternative/confounder_only					False
+anti_spp1	hormone_treated_maternal	biologic	new_arm	1	SEC	SEC-d	SEC-e	confounder_only/confounder_only					False
+anti_spp1	hormone_treated_maternal	biologic	new_arm	1	CAMP	CAMP-a	CAMP-b	committed/confounder_only					False
+anti_spp1	hormone_treated_maternal	biologic	new_arm	1	HH	HH-a	HH-b	committed/adoptable_alternative					False
+anti_spp1	hormone_treated_maternal	biologic	new_arm	1	GP130	GP130-a	GP130-b	committed/adoptable_alternative					False
+anti_spp1	hormone_treated_maternal	biologic	new_arm	1	CD98	CD98-a	CD98-b	committed/adoptable_alternative					False
+anti_spp1	hormone_treated_maternal	biologic	new_arm	1	CD98	CD98-a	CD98-c	committed/adoptable_alternative	E_CD98_CD9				False
+anti_spp1	hormone_treated_maternal	biologic	new_arm	1	CD98	CD98-a	CD98-x	committed/confounder_only	E_CD98_CD9				False
+anti_spp1	hormone_treated_maternal	biologic	new_arm	1	CD98	CD98-b	CD98-c	adoptable_alternative/adoptable_alternative	E_CD98_CD9				False
+anti_spp1	hormone_treated_maternal	biologic	new_arm	1	CD98	CD98-b	CD98-x	adoptable_alternative/confounder_only	E_CD98_CD9				False
+anti_spp1	hormone_treated_maternal	biologic	new_arm	1	CD98	CD98-c	CD98-x	adoptable_alternative/confounder_only					False
+anti_spp1	hormone_treated_maternal	biologic	new_arm	1	PC6	PC6-a	PC6-b	committed/adoptable_alternative					False
+hand2_loss	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-a	SEC-b	committed/adoptable_alternative					True
+hand2_loss	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-a	SEC-c	committed/adoptable_alternative					True
+hand2_loss	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-a	SEC-d	committed/confounder_only					True
+hand2_loss	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-a	SEC-e	committed/confounder_only					True
+hand2_loss	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-b	SEC-c	adoptable_alternative/adoptable_alternative					True
+hand2_loss	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-b	SEC-d	adoptable_alternative/confounder_only					True
+hand2_loss	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-b	SEC-e	adoptable_alternative/confounder_only					True
+hand2_loss	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-c	SEC-d	adoptable_alternative/confounder_only					True
+hand2_loss	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-c	SEC-e	adoptable_alternative/confounder_only					True
+hand2_loss	hormone_treated_maternal	construct	new_arm	1	SEC	SEC-d	SEC-e	confounder_only/confounder_only					True
+hand2_loss	hormone_treated_maternal	construct	new_arm	1	CAMP	CAMP-a	CAMP-b	committed/confounder_only					True
+hand2_loss	hormone_treated_maternal	construct	new_arm	1	HH	HH-a	HH-b	committed/adoptable_alternative					True
+hand2_loss	hormone_treated_maternal	construct	new_arm	1	GP130	GP130-a	GP130-b	committed/adoptable_alternative					True
+hand2_loss	hormone_treated_maternal	construct	new_arm	1	CD98	CD98-a	CD98-b	committed/adoptable_alternative					True
+hand2_loss	hormone_treated_maternal	construct	new_arm	1	CD98	CD98-a	CD98-c	committed/adoptable_alternative	E_CD98_CD9				True
+hand2_loss	hormone_treated_maternal	construct	new_arm	1	CD98	CD98-a	CD98-x	committed/confounder_only	E_CD98_CD9				True
+hand2_loss	hormone_treated_maternal	construct	new_arm	1	CD98	CD98-b	CD98-c	adoptable_alternative/adoptable_alternative	E_CD98_CD9				True
+hand2_loss	hormone_treated_maternal	construct	new_arm	1	CD98	CD98-b	CD98-x	adoptable_alternative/confounder_only	E_CD98_CD9				True
+hand2_loss	hormone_treated_maternal	construct	new_arm	1	CD98	CD98-c	CD98-x	adoptable_alternative/confounder_only					True
+hand2_loss	hormone_treated_maternal	construct	new_arm	1	PC6	PC6-a	PC6-b	committed/adoptable_alternative					True

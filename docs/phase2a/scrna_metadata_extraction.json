@@ -1,0 +1,286 @@
+{
+  "asset_id": "EXT-SCRNA-001",
+  "barcode_prefix_equals_sample_id": 28212,
+  "columns": [
+    {
+      "class": "character",
+      "n_distinct": 6,
+      "n_na": 0,
+      "name": "sample_id"
+    },
+    {
+      "class": "character",
+      "n_distinct": 6,
+      "n_na": 0,
+      "name": "orig.ident"
+    },
+    {
+      "class": "character",
+      "n_distinct": 7,
+      "n_na": 0,
+      "name": "celltype_v2"
+    },
+    {
+      "class": "factor",
+      "n_distinct": 10,
+      "n_na": 0,
+      "name": "RNA_snn_res.0.5"
+    },
+    {
+      "class": "factor",
+      "n_distinct": 10,
+      "n_na": 0,
+      "name": "RNA_snn_res.0.6"
+    }
+  ],
+  "extracted": "meta.data only; no expression layer read; aggregated inside R",
+  "groups": [
+    {
+      "celltype_v2": "Cycling epithelium",
+      "n_cells": 993,
+      "orig_ident": "SZ09TE_CNT",
+      "sample_id": "SZ09TE_CNT"
+    },
+    {
+      "celltype_v2": "HT epithelium I",
+      "n_cells": 3,
+      "orig_ident": "SZ09TE_CNT",
+      "sample_id": "SZ09TE_CNT"
+    },
+    {
+      "celltype_v2": "HT epithelium II",
+      "n_cells": 11,
+      "orig_ident": "SZ09TE_CNT",
+      "sample_id": "SZ09TE_CNT"
+    },
+    {
+      "celltype_v2": "HT stroma",
+      "n_cells": 154,
+      "orig_ident": "SZ09TE_CNT",
+      "sample_id": "SZ09TE_CNT"
+    },
+    {
+      "celltype_v2": "Luminal-like epithelium",
+      "n_cells": 2902,
+      "orig_ident": "SZ09TE_CNT",
+      "sample_id": "SZ09TE_CNT"
+    },
+    {
+      "celltype_v2": "Myofibroblast",
+      "n_cells": 96,
+      "orig_ident": "SZ09TE_CNT",
+      "sample_id": "SZ09TE_CNT"
+    },
+    {
+      "celltype_v2": "Stroma",
+      "n_cells": 1446,
+      "orig_ident": "SZ09TE_CNT",
+      "sample_id": "SZ09TE_CNT"
+    },
+    {
+      "celltype_v2": "Cycling epithelium",
+      "n_cells": 237,
+      "orig_ident": "SZ09TE_HT",
+      "sample_id": "SZ09TE_HT"
+    },
+    {
+      "celltype_v2": "HT epithelium I",
+      "n_cells": 1435,
+      "orig_ident": "SZ09TE_HT",
+      "sample_id": "SZ09TE_HT"
+    },
+    {
+      "celltype_v2": "HT epithelium II",
+      "n_cells": 846,
+      "orig_ident": "SZ09TE_HT",
+      "sample_id": "SZ09TE_HT"
+    },
+    {
+      "celltype_v2": "HT stroma",
+      "n_cells": 871,
+      "orig_ident": "SZ09TE_HT",
+      "sample_id": "SZ09TE_HT"
+    },
+    {
+      "celltype_v2": "Luminal-like epithelium",
+      "n_cells": 19,
+      "orig_ident": "SZ09TE_HT",
+      "sample_id": "SZ09TE_HT"
+    },
+    {
+      "celltype_v2": "Cycling epithelium",
+      "n_cells": 839,
+      "orig_ident": "SZ10TE_CNT",
+      "sample_id": "SZ10TE_CNT"
+    },
+    {
+      "celltype_v2": "HT epithelium I",
+      "n_cells": 403,
+      "orig_ident": "SZ10TE_CNT",
+      "sample_id": "SZ10TE_CNT"
+    },
+    {
+      "celltype_v2": "HT epithelium II",
+      "n_cells": 42,
+      "orig_ident": "SZ10TE_CNT",
+      "sample_id": "SZ10TE_CNT"
+    },
+    {
+      "celltype_v2": "HT stroma",
+      "n_cells": 109,
+      "orig_ident": "SZ10TE_CNT",
+      "sample_id": "SZ10TE_CNT"
+    },
+    {
+      "celltype_v2": "Luminal-like epithelium",
+      "n_cells": 2859,
+      "orig_ident": "SZ10TE_CNT",
+      "sample_id": "SZ10TE_CNT"
+    },
+    {
+      "celltype_v2": "Myofibroblast",
+      "n_cells": 180,
+      "orig_ident": "SZ10TE_CNT",
+      "sample_id": "SZ10TE_CNT"
+    },
+    {
+      "celltype_v2": "Stroma",
+      "n_cells": 1980,
+      "orig_ident": "SZ10TE_CNT",
+      "sample_id": "SZ10TE_CNT"
+    },
+    {
+      "celltype_v2": "Cycling epithelium",
+      "n_cells": 147,
+      "orig_ident": "SZ10TE_HT",
+      "sample_id": "SZ10TE_HT"
+    },
+    {
+      "celltype_v2": "HT epithelium I",
+      "n_cells": 1355,
+      "orig_ident": "SZ10TE_HT",
+      "sample_id": "SZ10TE_HT"
+    },
+    {
+      "celltype_v2": "HT epithelium II",
+      "n_cells": 1225,
+      "orig_ident": "SZ10TE_HT",
+      "sample_id": "SZ10TE_HT"
+    },
+    {
+      "celltype_v2": "HT stroma",
+      "n_cells": 1484,
+      "orig_ident": "SZ10TE_HT",
+      "sample_id": "SZ10TE_HT"
+    },
+    {
+      "celltype_v2": "Luminal-like epithelium",
+      "n_cells": 38,
+      "orig_ident": "SZ10TE_HT",
+      "sample_id": "SZ10TE_HT"
+    },
+    {
+      "celltype_v2": "Myofibroblast",
+      "n_cells": 2,
+      "orig_ident": "SZ10TE_HT",
+      "sample_id": "SZ10TE_HT"
+    },
+    {
+      "celltype_v2": "Stroma",
+      "n_cells": 2,
+      "orig_ident": "SZ10TE_HT",
+      "sample_id": "SZ10TE_HT"
+    },
+    {
+      "celltype_v2": "Cycling epithelium",
+      "n_cells": 1540,
+      "orig_ident": "SZ25TE_CNT",
+      "sample_id": "SZ25TE_CNT"
+    },
+    {
+      "celltype_v2": "HT epithelium I",
+      "n_cells": 473,
+      "orig_ident": "SZ25TE_CNT",
+      "sample_id": "SZ25TE_CNT"
+    },
+    {
+      "celltype_v2": "HT epithelium II",
+      "n_cells": 645,
+      "orig_ident": "SZ25TE_CNT",
+      "sample_id": "SZ25TE_CNT"
+    },
+    {
+      "celltype_v2": "HT stroma",
+      "n_cells": 332,
+      "orig_ident": "SZ25TE_CNT",
+      "sample_id": "SZ25TE_CNT"
+    },
+    {
+      "celltype_v2": "Luminal-like epithelium",
+      "n_cells": 3025,
+      "orig_ident": "SZ25TE_CNT",
+      "sample_id": "SZ25TE_CNT"
+    },
+    {
+      "celltype_v2": "Myofibroblast",
+      "n_cells": 6,
+      "orig_ident": "SZ25TE_CNT",
+      "sample_id": "SZ25TE_CNT"
+    },
+    {
+      "celltype_v2": "Stroma",
+      "n_cells": 721,
+      "orig_ident": "SZ25TE_CNT",
+      "sample_id": "SZ25TE_CNT"
+    },
+    {
+      "celltype_v2": "Cycling epithelium",
+      "n_cells": 166,
+      "orig_ident": "SZ25TE_HT",
+      "sample_id": "SZ25TE_HT"
+    },
+    {
+      "celltype_v2": "HT epithelium I",
+      "n_cells": 528,
+      "orig_ident": "SZ25TE_HT",
+      "sample_id": "SZ25TE_HT"
+    },
+    {
+      "celltype_v2": "HT epithelium II",
+      "n_cells": 696,
+      "orig_ident": "SZ25TE_HT",
+      "sample_id": "SZ25TE_HT"
+    },
+    {
+      "celltype_v2": "HT stroma",
+      "n_cells": 275,
+      "orig_ident": "SZ25TE_HT",
+      "sample_id": "SZ25TE_HT"
+    },
+    {
+      "celltype_v2": "Luminal-like epithelium",
+      "n_cells": 14,
+      "orig_ident": "SZ25TE_HT",
+      "sample_id": "SZ25TE_HT"
+    },
+    {
+      "celltype_v2": "Myofibroblast",
+      "n_cells": 81,
+      "orig_ident": "SZ25TE_HT",
+      "sample_id": "SZ25TE_HT"
+    },
+    {
+      "celltype_v2": "Stroma",
+      "n_cells": 32,
+      "orig_ident": "SZ25TE_HT",
+      "sample_id": "SZ25TE_HT"
+    }
+  ],
+  "n_cells": 28212,
+  "orig_ident_equals_sample_id": 28212,
+  "r_version": "R version 4.5.3 (2026-03-11)",
+  "rds_sha256": "504a674db978779b03d02a73224ee425ec46efbf411c148b0903ceef15389a1a",
+  "rds_size_bytes": 2877048290,
+  "schema_version": 1,
+  "seuratobject_version": "5.4.0"
+}

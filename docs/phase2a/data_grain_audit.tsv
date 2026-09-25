@@ -1,0 +1,61 @@
+level	donor	condition	compartment	celltype_v2	sample_id	orig_ident	n_cells	grid_status	node_support_unit_n_cells	independent_unit	replicate_status
+celltype_v2	SZ09	CNT	epithelium	Cycling epithelium	SZ09TE_CNT	SZ09TE_CNT	993	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ09	CNT	epithelium	HT epithelium I	SZ09TE_CNT	SZ09TE_CNT	3	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ09	CNT	epithelium	HT epithelium II	SZ09TE_CNT	SZ09TE_CNT	11	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ09	CNT	stroma	HT stroma	SZ09TE_CNT	SZ09TE_CNT	154	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ09	CNT	epithelium	Luminal-like epithelium	SZ09TE_CNT	SZ09TE_CNT	2902	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ09	CNT	myofibroblast	Myofibroblast	SZ09TE_CNT	SZ09TE_CNT	96	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ09	CNT	stroma	Stroma	SZ09TE_CNT	SZ09TE_CNT	1446	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ09	HT	epithelium	Cycling epithelium	SZ09TE_HT	SZ09TE_HT	237	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ09	HT	epithelium	HT epithelium I	SZ09TE_HT	SZ09TE_HT	1435	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ09	HT	epithelium	HT epithelium II	SZ09TE_HT	SZ09TE_HT	846	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ09	HT	stroma	HT stroma	SZ09TE_HT	SZ09TE_HT	871	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ09	HT	epithelium	Luminal-like epithelium	SZ09TE_HT	SZ09TE_HT	19	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ09	HT	myofibroblast	Myofibroblast	SZ09TE_HT	-	0	empty_combination	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ09	HT	stroma	Stroma	SZ09TE_HT	-	0	empty_combination	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ10	CNT	epithelium	Cycling epithelium	SZ10TE_CNT	SZ10TE_CNT	839	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ10	CNT	epithelium	HT epithelium I	SZ10TE_CNT	SZ10TE_CNT	403	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ10	CNT	epithelium	HT epithelium II	SZ10TE_CNT	SZ10TE_CNT	42	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ10	CNT	stroma	HT stroma	SZ10TE_CNT	SZ10TE_CNT	109	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ10	CNT	epithelium	Luminal-like epithelium	SZ10TE_CNT	SZ10TE_CNT	2859	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ10	CNT	myofibroblast	Myofibroblast	SZ10TE_CNT	SZ10TE_CNT	180	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ10	CNT	stroma	Stroma	SZ10TE_CNT	SZ10TE_CNT	1980	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ10	HT	epithelium	Cycling epithelium	SZ10TE_HT	SZ10TE_HT	147	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ10	HT	epithelium	HT epithelium I	SZ10TE_HT	SZ10TE_HT	1355	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ10	HT	epithelium	HT epithelium II	SZ10TE_HT	SZ10TE_HT	1225	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ10	HT	stroma	HT stroma	SZ10TE_HT	SZ10TE_HT	1484	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ10	HT	epithelium	Luminal-like epithelium	SZ10TE_HT	SZ10TE_HT	38	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ10	HT	myofibroblast	Myofibroblast	SZ10TE_HT	SZ10TE_HT	2	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ10	HT	stroma	Stroma	SZ10TE_HT	SZ10TE_HT	2	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ25	CNT	epithelium	Cycling epithelium	SZ25TE_CNT	SZ25TE_CNT	1540	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ25	CNT	epithelium	HT epithelium I	SZ25TE_CNT	SZ25TE_CNT	473	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ25	CNT	epithelium	HT epithelium II	SZ25TE_CNT	SZ25TE_CNT	645	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ25	CNT	stroma	HT stroma	SZ25TE_CNT	SZ25TE_CNT	332	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ25	CNT	epithelium	Luminal-like epithelium	SZ25TE_CNT	SZ25TE_CNT	3025	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ25	CNT	myofibroblast	Myofibroblast	SZ25TE_CNT	SZ25TE_CNT	6	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ25	CNT	stroma	Stroma	SZ25TE_CNT	SZ25TE_CNT	721	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ25	HT	epithelium	Cycling epithelium	SZ25TE_HT	SZ25TE_HT	166	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ25	HT	epithelium	HT epithelium I	SZ25TE_HT	SZ25TE_HT	528	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ25	HT	epithelium	HT epithelium II	SZ25TE_HT	SZ25TE_HT	696	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ25	HT	stroma	HT stroma	SZ25TE_HT	SZ25TE_HT	275	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ25	HT	epithelium	Luminal-like epithelium	SZ25TE_HT	SZ25TE_HT	14	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ25	HT	myofibroblast	Myofibroblast	SZ25TE_HT	SZ25TE_HT	81	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+celltype_v2	SZ25	HT	stroma	Stroma	SZ25TE_HT	SZ25TE_HT	32	populated	-	donor	cells_are_within_unit_measurement_precision_not_replicates
+compartment_unit	SZ09	CNT	epithelium	-	SZ09TE_CNT	SZ09TE_CNT	3909	populated	3909	donor	cells_are_within_unit_measurement_precision_not_replicates
+compartment_unit	SZ09	CNT	myofibroblast	-	SZ09TE_CNT	SZ09TE_CNT	96	populated	96	donor	cells_are_within_unit_measurement_precision_not_replicates
+compartment_unit	SZ09	CNT	stroma	-	SZ09TE_CNT	SZ09TE_CNT	1600	populated	1600	donor	cells_are_within_unit_measurement_precision_not_replicates
+compartment_unit	SZ09	HT	epithelium	-	SZ09TE_HT	SZ09TE_HT	2537	populated	2537	donor	cells_are_within_unit_measurement_precision_not_replicates
+compartment_unit	SZ09	HT	myofibroblast	-	SZ09TE_HT	-	0	empty_grid_cell	0	donor	cells_are_within_unit_measurement_precision_not_replicates
+compartment_unit	SZ09	HT	stroma	-	SZ09TE_HT	SZ09TE_HT	871	populated	871	donor	cells_are_within_unit_measurement_precision_not_replicates
+compartment_unit	SZ10	CNT	epithelium	-	SZ10TE_CNT	SZ10TE_CNT	4143	populated	4143	donor	cells_are_within_unit_measurement_precision_not_replicates
+compartment_unit	SZ10	CNT	myofibroblast	-	SZ10TE_CNT	SZ10TE_CNT	180	populated	180	donor	cells_are_within_unit_measurement_precision_not_replicates
+compartment_unit	SZ10	CNT	stroma	-	SZ10TE_CNT	SZ10TE_CNT	2089	populated	2089	donor	cells_are_within_unit_measurement_precision_not_replicates
+compartment_unit	SZ10	HT	epithelium	-	SZ10TE_HT	SZ10TE_HT	2765	populated	2765	donor	cells_are_within_unit_measurement_precision_not_replicates
+compartment_unit	SZ10	HT	myofibroblast	-	SZ10TE_HT	SZ10TE_HT	2	populated	2	donor	cells_are_within_unit_measurement_precision_not_replicates
+compartment_unit	SZ10	HT	stroma	-	SZ10TE_HT	SZ10TE_HT	1486	populated	1486	donor	cells_are_within_unit_measurement_precision_not_replicates
+compartment_unit	SZ25	CNT	epithelium	-	SZ25TE_CNT	SZ25TE_CNT	5683	populated	5683	donor	cells_are_within_unit_measurement_precision_not_replicates
+compartment_unit	SZ25	CNT	myofibroblast	-	SZ25TE_CNT	SZ25TE_CNT	6	populated	6	donor	cells_are_within_unit_measurement_precision_not_replicates
+compartment_unit	SZ25	CNT	stroma	-	SZ25TE_CNT	SZ25TE_CNT	1053	populated	1053	donor	cells_are_within_unit_measurement_precision_not_replicates
+compartment_unit	SZ25	HT	epithelium	-	SZ25TE_HT	SZ25TE_HT	1404	populated	1404	donor	cells_are_within_unit_measurement_precision_not_replicates
+compartment_unit	SZ25	HT	myofibroblast	-	SZ25TE_HT	SZ25TE_HT	81	populated	81	donor	cells_are_within_unit_measurement_precision_not_replicates
+compartment_unit	SZ25	HT	stroma	-	SZ25TE_HT	SZ25TE_HT	307	populated	307	donor	cells_are_within_unit_measurement_precision_not_replicates

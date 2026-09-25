@@ -1,0 +1,42 @@
+{
+  "adoc_donors_forbidden_as_reference": [
+    "SZ09",
+    "SZ10",
+    "SZ25"
+  ],
+  "claim_level_if_ready": "assumption_conditioned_scenario",
+  "eligible_nodes": [
+    "E_KLF12_HIGH"
+  ],
+  "forbidden_reference_sha256": [
+    "0d5d5f440ad7ea1151004be3acc03f3221bc5767443c20b24f2b62692c246f8d",
+    "193c7e0ab619bf0fdb8058696dd71b6df21de2a31e8400e62c9b30c6c4cb55cf",
+    "400e291b773d95eba30e288be4d18d9ad530df4d2f2ea0f16ee13146e57e7481",
+    "504a674db978779b03d02a73224ee425ec46efbf411c148b0903ceef15389a1a",
+    "51fe0acb3bacab6196290553e35f72103cc7337c4747e0d64b9ad46734a319f1",
+    "ceb88fe67eb0cc4bdfd1cbbf7d87e45cc19d2ad95e438d01a63100489c913462",
+    "d56d52d5965fb56e3a6c66ba315bd05205c81a6518f7a1b7456738c42589d7fb",
+    "e60f73c45746b7e1bde46f9d41fb8e55885fcbf33802ef2f4427f0700e161192",
+    "ef6c08cc5bf6296a8bee0acc26c031152742d7ec3544bd7eec4f8b7bc69f2241"
+  ],
+  "measured_personalization_rule": "READY_FOR_MEASURED_PERSONALIZATION iff a node meets every applicable requirement of RR01-RR14 (the ordinary reference gate, RR14 included) AND RR13, the bridge-validation requirement that alone can upgrade the claim; otherwise BLOCKED_BRIDGE_UNVALIDATED",
+  "measured_personalization_verdict": "BLOCKED_BRIDGE_UNVALIDATED",
+  "measured_unmet_requirements": {
+    "E_KLF12_HIGH": [
+      "RR01: reference_strategy.reference_path is null",
+      "RR13: no bridge-validation artifact (no reference)"
+    ]
+  },
+  "policy_mode": "external_reference_required",
+  "policy_reference_path": null,
+  "policy_source": "config/personalization.yaml",
+  "ready_nodes": [],
+  "rule": "READY_FOR_MAPPING (of assumption-conditioned scenario values only) iff at least one structurally eligible node has zero unmet RR01-RR12 and RR14 requirements; otherwise BLOCKED_REFERENCE_REQUIRED",
+  "schema_version": 1,
+  "unmet_requirements": {
+    "E_KLF12_HIGH": [
+      "RR01: reference_strategy.reference_path is null"
+    ]
+  },
+  "verdict": "BLOCKED_REFERENCE_REQUIRED"
+}

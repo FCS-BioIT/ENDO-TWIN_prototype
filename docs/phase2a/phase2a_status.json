@@ -1,0 +1,73 @@
+{
+  "adopted_model": "adoc-literature-superset-v0.5.1",
+  "claim_level": "assumption_conditioned_scenario",
+  "gates": {
+    "G1_source_identity_pinned": true,
+    "G2_grain_accounted": true,
+    "G3_one_row_per_v051_node": true,
+    "G4_summaries_for_every_eligible_unit": true,
+    "G5_reference_gate": "BLOCKED_REFERENCE_REQUIRED",
+    "G6_spec_parameters_owner_controlled": true,
+    "G7_models_and_frozen_artifacts_unchanged": true,
+    "G8_no_forbidden_emission": true
+  },
+  "lineage": {
+    "baseline_cfg_sha256": "4d42bdcbcfcceaedaafeeb96fe76400700175c969cec15bff9e02f360ff4f41c",
+    "extraction_sha256": "f12f8cceb1016236dc5cc490afeef15d362aa7187cb781104565d9d0405f16f3",
+    "frozen_stage3_sha256": {
+      "docs/experiments/stage3_decision_tables.md": "a2cc7291adfaf130f79f345201a30556ab16c9391c8598315a5735d6b0c3305b",
+      "docs/experiments/stage3_experiment_design.md": "7368b1f85007f677cd16c5f308d9571f9573a83771b3dfdb2bb34b593b068520",
+      "docs/experiments/stage3_experiment_design.tsv": "987d75644925346fab73e7251067094d04c01883af783a83c3775705b444ee74",
+      "docs/stage3_experiment_selection.md": "e6a5fa558bede27f20b329cfbfe7bd3ec90d4d41c0f5091ed52e3dd4cbdb113c"
+    },
+    "models_tree_sha256": "de1bddba2be91e837fefbd784c21790531790ec0ee85c5babd7d4dd2844657b5",
+    "network_bnd_sha256": "d7068867429cfdafe89442ee2fb0bc3fb94ae9f985d3d65b1c4be19d01cad063",
+    "node_support_evidence_sha256": "32738ab0a1c7442ae6ed6c65fa05e4cbc90c277b94146d5318c931a6d97c6934",
+    "node_support_findings_sha256": "314487d6c0c1ba922476bcd18e98dead77576c1d12521aa00dc0d0a7b1940b0e",
+    "node_support_qc_sha256": "a2d8d040ffd14ab659b8390b8c7bdec2a406d7c2c784b40bfb0368a02a5f49cb",
+    "observation_map_sha256": "1d4323651b6cec3e771cdd99b5b8e3ef68cb0b065a76fa3a03b0e09b9b41d3d4",
+    "personalization_yaml_sha256": "16b2f4e33f305ff280df0cdb78649ad320201511dde236dd39387cd00282c4c7",
+    "rds_sha256": "504a674db978779b03d02a73224ee425ec46efbf411c148b0903ceef15389a1a"
+  },
+  "mapping_eligibility_counts": {
+    "blocked_ambiguous_mapping": 0,
+    "blocked_feature_absent": 0,
+    "blocked_missing_reference": 1,
+    "blocked_wrong_compartment": 0,
+    "context_only": 26,
+    "eligible_initial_probability": 0,
+    "not_RNA_assessable": 32
+  },
+  "measured_personalization": "BLOCKED",
+  "numerical_personalization": "BLOCKED",
+  "owner_decisions_applied": {
+    "B1": "the pre-registered three-step bridge replaces a rank transform: external per-cell high-state definition, unit fraction of high cells, that fraction as the initial probability",
+    "B13": "RR14 (comparability, cited threshold derivation, at least two pre-registered threshold variants, all reported, none selected by ADOC outcomes) gates execution of the scenarios only; it does not satisfy RR13 or upgrade the claim",
+    "B1_claim": "every value is an assumption_conditioned_scenario carrying the bridge assumption; RR13 (independent evidence-backed calibration/validation of fraction-high -> initial ensemble frequency, owner-accepted before the claim is upgraded) is the only route to measured personalization",
+    "D2_min_reference_donors": "min_reference_donors = 3 (owner, 2026-09-25, before any candidate reference value was read): a minimum for assumption-conditioned scenario generation only, not a claim of population adequacy; the donors must be identifiable independent biological donors, and clones or technical replicates do not count",
+    "Q1": "only free variables are eligible for an initial probability",
+    "Q2": "E_KLF12_HIGH eligible pending an external reference; the closed prior finding is not reopened",
+    "Q3": "config/personalization.yaml unchanged; only the initial-probability layer is permitted here",
+    "Q4": "CNT condition class unresolved (composition unrecorded)",
+    "RR12_vocabulary": "published_per_cell_definition and reference_state_separation are accepted as a Phase-2A-local controlled vocabulary; they do not replace or modify the repository-wide evidence-schema vocabularies",
+    "boundary_rule": "for E_KLF12_HIGH a mapped point estimate or uncertainty bound of exactly 0 or 1 stays unresolved and is not written, because the self-loop node would otherwise be functionally hard-clamped; a conservative personalization-interface rule, not evidence that the biological state cannot be all-low or all-high"
+  },
+  "owner_decisions_open": [
+    "which external population and per-cell high-state definition qualify biologically (tissue vs organoid, cycle phase, hormone exposure)",
+    "CNT arm composition, from the depositors"
+  ],
+  "phase2_complete": false,
+  "rule": "G1-G4 and G6-G8 must all hold or nothing is written; the status then follows G5 alone",
+  "schema_version": 1,
+  "status": "STRUCTURAL_MAPPING_READY_BUT_REFERENCE_BLOCKED",
+  "structural_eligibility_counts": {
+    "blocked_ambiguous_mapping": 0,
+    "blocked_feature_absent": 0,
+    "blocked_missing_reference": 0,
+    "blocked_wrong_compartment": 0,
+    "context_only": 26,
+    "eligible_initial_probability": 1,
+    "not_RNA_assessable": 32
+  },
+  "task": "build-phase2a-contract"
+}

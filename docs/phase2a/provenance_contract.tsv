@@ -1,0 +1,12 @@
+stage	lineage_stage	artifact	identity	rule
+1_scrna_source	source	config/external_data_manifest.tsv:EXT-SCRNA-001	sha256 504a674db978779b03d02a73224ee425ec46efbf411c148b0903ceef15389a1a	the object is fetched on demand and never committed; every derived value names this hash
+2_donor_sample	audited	docs/phase2a/data_grain_audit.tsv	docs/phase2a/scrna_metadata_extraction.json sha256 f12f8cceb1016236dc5cc490afeef15d362aa7187cb781104565d9d0405f16f3	donor and condition are parsed from sample_id, the only field that carries them; the donor is the independent unit
+3_compartment	audited	dt_adoc.scrna.node_support_contract.COMPARTMENT_OF_LABEL	frozen in the node-support pre-registration	celltype_v2 -> epithelium/stroma/myofibroblast; only epithelium and stroma are primary
+4_feature	model_mapping	config/scrna_observation_map.tsv	sha256 1d4323651b6cec3e771cdd99b5b8e3ef68cb0b065a76fa3a03b0e09b9b41d3d4	the frozen measurement_features only; absent features are recorded, never aliased
+5_aggregation	analysis_ready	docs/scrna/node_support_evidence.tsv	sha256 32738ab0a1c7442ae6ed6c65fa05e4cbc90c277b94146d5318c931a6d97c6934	donor x condition x compartment pseudobulk f and detection d with within-donor bootstrap intervals; cells are never replicates
+6_external_reference	model_mapping	docs/phase2a/reference_gate.json	reference_path null	RR01-RR12 and RR14; the ADOC donors can never define the high state
+7_transform	model_mapping	docs/phase2a/mapping_specification.json	three-step bridge of docs/scrna/klf12_prior_preregistration.md	external per-cell high-state definition -> fraction of the unit's cells in that state -> initial probability under the declared ensemble-frequency bridge; a 0 or 1 is unresolved, never written
+8_initial_probability	model	none written by Phase 2A	-	a later unit writes `<node>.istate` only, on a shared v0.5.1 topology, and records every value's stage 1-7 identities
+leakage_outcomes	claim	docs/phase2a/mapping_specification.json	outcome_independence	no outcome label (adhesion, pregnancy, secretion, model output) selects a reference, statistic or threshold
+leakage_topology	model	models/superset/adoc-literature-superset-v0.5.1/network.bnd	sha256 d7068867429cfdafe89442ee2fb0bc3fb94ae9f985d3d65b1c4be19d01cad063	one topology shared by every donor; Phase 2A writes no .bnd or .cfg
+leakage_reuse	claim	docs/phase2a/node_personalization_map.tsv	leakage_flags	a feature used to personalize a donor cannot later be cited as independent validation of that donor's model on the same feature without a declared validation design

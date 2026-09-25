@@ -1,0 +1,105 @@
+{
+  "applies_to": "nodes with structural_eligibility=eligible_initial_probability only (free variables)",
+  "boundary": {
+    "rule": "a point estimate or interval bound of exactly 0 or 1 is unresolved and is not written",
+    "why": "E_KLF12_HIGH has logic = E_KLF12_HIGH, so an initial probability of 0 or 1 fixes it in every trajectory: a clamp in effect, which scRNA zeros and dropout may never create"
+  },
+  "bridge_assumption": {
+    "source": "docs/scrna/klf12_prior_preregistration.md",
+    "status": "interpretive assumption with no experimental support in this repository; every conditioned result must carry it",
+    "text": "the ensemble frequency with which the modelled epithelial compartment is initialised in the KLF12-high state equals the estimated fraction of epithelial cells in that state."
+  },
+  "claim_level": "assumption_conditioned_scenario",
+  "claim_rule": "every generated value carries the bridge assumption and claim_level=assumption_conditioned_scenario; it may not be described as measured personalization unless RR13 is met and the owner has accepted it before the claim is upgraded",
+  "clipping": "none: no value is moved into range; an out-of-range or boundary value is refused (config/personalization.yaml clipping [0, 1] is not used)",
+  "forbidden_layers": [
+    "clamp",
+    "rate_modifier",
+    "mutation",
+    "topology"
+  ],
+  "high_state_definition": {
+    "evidence_kinds": [
+      "published_per_cell_definition",
+      "reference_state_separation"
+    ],
+    "file_columns": [
+      "feature",
+      "layer",
+      "per_cell_quantity",
+      "rule",
+      "threshold",
+      "evidence_citation",
+      "evidence_kind",
+      "owner_accepted_on",
+      "comparability",
+      "comparability_evidence",
+      "threshold_derivation",
+      "threshold_variants",
+      "variant_selection"
+    ],
+    "never_from": "the ADOC donors, their per-unit statistics, or any outcome",
+    "per_cell_quantity_definitions": {
+      "count": "the feature's value in the deposited counts layer (node_support per-cell column counts_<gene>)",
+      "count_per_10k": "count / depth_counts * 10^4, where depth_counts is the cell's column sum of the deposited counts layer (node_support per-cell column depth_counts)"
+    },
+    "per_cell_quantity_vocabulary": [
+      "count",
+      "count_per_10k"
+    ],
+    "rule_vocabulary": [
+      ">=",
+      ">"
+    ],
+    "supplied_by": "the external reference only (RR01-RR12 and RR14)"
+  },
+  "missing": {
+    "default_0_5": "never applied implicitly; only as an explicitly declared model assumption with its own provenance, which this contract does not declare",
+    "rule": "a missing, empty, below-minimum or condition-unresolved unit yields initial_on_probability=unresolved and keeps the shared baseline istate",
+    "zero_detection": "a measured zero count is a cell not classified high by the external rule; it is never OFF for the node and never a clamp"
+  },
+  "outcome_independence": "no adhesion, pregnancy, secretion, model output or phenotype value is an input to any parameter or to the high-state definition",
+  "output_field": "initial_on_probability",
+  "parameter_domains": {
+    "min_reference_donors": "integer >= 1"
+  },
+  "parameter_provenance_forbidden": [
+    "owner_decision_pending",
+    "fitted",
+    "tuned_on_outcome",
+    "estimated_from_adoc_donors"
+  ],
+  "parameter_provenance_permitted": [
+    "owner_decided"
+  ],
+  "parameters": {
+    "min_reference_donors": {
+      "provenance": "owner_decided",
+      "value": 3
+    }
+  },
+  "permitted_layer": "initial_probability",
+  "schema_version": 1,
+  "sensitivity": {
+    "claim": "sensitivity variants widen the scenario set; they never satisfy RR13 or upgrade the claim",
+    "rule": "the primary threshold and every pre-registered variant (RR14, at least two) each yield their own scenario value, reported side by side",
+    "selection": "none: no variant is preferred, and none may be selected using ADOC outcomes or model output"
+  },
+  "source": "docs/scrna/klf12_prior_preregistration.md, three steps that must not be collapsed",
+  "steps": {
+    "1_measurement": "the node's feature per cell, on the deposited decontX-corrected counts layer, for every cell of one donor x condition x epithelium unit",
+    "2_latent_state": "each cell is classified high or not by the EXTERNAL reference's per-cell high-state definition (feature, per-cell quantity, rule, threshold); the unit's estimate is the fraction of its cells classified high",
+    "3_conditioning": "initial_on_probability = that fraction, under the bridge assumption"
+  },
+  "uncertainty": {
+    "interval": "within-donor cell bootstrap of the fraction (node-support B and seed)",
+    "meaning": "cell-sampling uncertainty of this donor's unit only; not donor or population inference, never pooled across donors",
+    "shared_baseline": "the unpersonalized v0.5.1 baseline.cfg istate, the matched comparator for any personalized run",
+    "variants_reported": [
+      "point",
+      "cell_bootstrap_lo",
+      "cell_bootstrap_hi",
+      "shared_baseline"
+    ]
+  }
+}

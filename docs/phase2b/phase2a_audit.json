@@ -1,0 +1,95 @@
+{
+  "base_commit": "51b8bd11bc797e4867b895d2c9df3417be422fe3",
+  "frozen_files_changed_since_base": [
+    {
+      "approved_sha256": "6eaccfdad32ed8c708691c1ca2736b09cb902544aaee433ae0df5d418382b482",
+      "owner_approval": "D2: regenerated specification",
+      "path": "docs/phase2a/mapping_specification.json"
+    },
+    {
+      "approved_sha256": "159d647eafb912771bbb303ac120d1a1084d6cd24b60b79dead3b145b4751907",
+      "owner_approval": "D2: prose that said the parameter was open; RR14 schema change (amendment 03)",
+      "path": "docs/phase2a/phase2a_contract.md"
+    },
+    {
+      "approved_sha256": "db5507576480e7cb657e45637b4f167d8ceb63e0177e0680fcbcfd1de2ebdd15",
+      "owner_approval": "D2: regenerated status (decision moved from open to applied)",
+      "path": "docs/phase2a/phase2a_status.json"
+    },
+    {
+      "approved_sha256": "ca8a984bc455a6517c0f8229117bf891165a0fe603364e9774a006e286d6583b",
+      "owner_approval": "D2: regenerated gate (RR11 no longer unmet)",
+      "path": "docs/phase2a/reference_gate.json"
+    },
+    {
+      "approved_sha256": "c7d9a1991449c8c7c7bde315290053a33338d2bb20850ad74ac9059844415868",
+      "owner_approval": "RR14 schema change (owner, amendment 03): regenerated requirement text",
+      "path": "docs/phase2a/reference_requirements.tsv"
+    },
+    {
+      "approved_sha256": "55a743e8940f34d61e012425b528ba13823674d41bc8dbff67a3333b5ea9d053",
+      "owner_approval": "D2: min_reference_donors = 3, owner_decided; and the owner's RR14 schema change (amendments 03-04): a custom threshold method may cite a repository-local artifact by commit, path and sha256",
+      "path": "src/dt_adoc/personalization/phase2a_contract.py"
+    }
+  ],
+  "frozen_prefixes": [
+    "docs/phase2a/",
+    "docs/phase1b_closure/",
+    "docs/scrna/",
+    "docs/experiments/",
+    "models/",
+    "config/",
+    "src/dt_adoc/personalization/phase2a_contract.py"
+  ],
+  "phase2a_at_base": {
+    "claim_level_if_ready": "assumption_conditioned_scenario",
+    "cnt_condition_class": "CNT condition class unresolved (composition unrecorded)",
+    "eligible_nodes": [
+      "E_KLF12_HIGH"
+    ],
+    "measured_personalization_verdict": "BLOCKED_BRIDGE_UNVALIDATED",
+    "min_reference_donors": {
+      "provenance": "owner_decision_pending",
+      "value": null
+    },
+    "numerical_personalization": "BLOCKED",
+    "rr13_is_separate_from_scenario_gate": true,
+    "scenario_gate_verdict": "BLOCKED_REFERENCE_REQUIRED",
+    "scenario_unmet_requirements": {
+      "E_KLF12_HIGH": [
+        "RR01: reference_strategy.reference_path is null",
+        "RR11: parameter min_reference_donors is unset, outside its domain or has provenance 'owner_decision_pending'"
+      ]
+    }
+  },
+  "phase2a_now": {
+    "claim_level_if_ready": "assumption_conditioned_scenario",
+    "cnt_condition_class": "CNT condition class unresolved (composition unrecorded)",
+    "eligible_nodes": [
+      "E_KLF12_HIGH"
+    ],
+    "measured_personalization_verdict": "BLOCKED_BRIDGE_UNVALIDATED",
+    "min_reference_donors": {
+      "provenance": "owner_decided",
+      "value": 3
+    },
+    "numerical_personalization": "BLOCKED",
+    "rr13_is_separate_from_scenario_gate": true,
+    "scenario_gate_verdict": "BLOCKED_REFERENCE_REQUIRED",
+    "scenario_unmet_requirements": {
+      "E_KLF12_HIGH": [
+        "RR01: reference_strategy.reference_path is null"
+      ]
+    }
+  },
+  "repaired": "nothing: Phase 2A is audited, not repaired; the only changes are the owner-approved D2 update and the owner-approved RR14 citation-schema change",
+  "schema_version": 1,
+  "starting_state_checks": {
+    "cnt_condition_class_unresolved": true,
+    "min_reference_donors_intentionally_unset": true,
+    "numerical_personalization_blocked": true,
+    "only_E_KLF12_HIGH_structurally_eligible": true,
+    "rr13_separate_from_scenario_gate": true
+  },
+  "task": "build-phase2b-audit"
+}

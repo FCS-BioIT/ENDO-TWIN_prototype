@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "purpose": "identifiers of the ADOC dataset (E-MTAB-15842) that no Phase-2B reference may carry, matched after NFKC normalisation; metadata only",
+  "retrieved_on": "2026-09-25",
+  "sources": [
+    "https://ftp.ebi.ac.uk/pub/databases/biostudies/E-MTAB-/842/E-MTAB-15842/Files/E-MTAB-15842.sdrf.txt",
+    "https://ftp.ebi.ac.uk/pub/databases/biostudies/E-MTAB-/842/E-MTAB-15842/Files/E-MTAB-15842.idf.txt",
+    "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJEB101736&result=read_run&fields=run_accession,experiment_accession,sample_accession,submitted_md5,submitted_ftp&format=tsv"
+  ],
+  "donors": [
+    "SZ09",
+    "SZ10",
+    "SZ25"
+  ],
+  "accessions": [
+    "E-MTAB-15842",
+    "PRJEB101736",
+    "ERP183140",
+    "ERR15772620",
+    "ERR15772621",
+    "ERR15772622",
+    "ERR15772623",
+    "ERR15772624",
+    "ERR15772625",
+    "ERX15172562",
+    "ERX15172563",
+    "ERX15172564",
+    "ERX15172565",
+    "ERX15172566",
+    "ERX15172567",
+    "SAMEA120442949",
+    "SAMEA120442950",
+    "SAMEA120442951",
+    "SAMEA120442952",
+    "SAMEA120442953",
+    "SAMEA120442954",
+    "ERS27143635",
+    "ERS27143636",
+    "ERS27143637",
+    "ERS27143638",
+    "ERS27143639",
+    "ERS27143640"
+  ],
+  "fastq_submitted_md5": [
+    {
+      "file": "SZ09TE_CNT_I1.fastq.gz",
+      "md5": "be1c1d149a1ddfc3cb53d1fe04c8795c"
+    },
+    {
+      "file": "SZ09TE_CNT_I2.fastq.gz",
+      "md5": "443ff557ec33f5e22e82ca9f5b656027"
+    },
+    {
+      "file": "SZ09TE_CNT_R1.fastq.gz",
+      "md5": "0998c2d972c31458be94c40fa2b612c2"
+    },
+    {
+      "file": "SZ09TE_CNT_R2.fastq.gz",
+      "md5": "5f6d85023322595215525d5308ec9818"
+    },
+    {
+      "file": "SZ09TE_HT_I1.fastq.gz",
+      "md5": "3df03c35a8d8addfc7b9dec179d6786c"
+    },
+    {
+      "file": "SZ09TE_HT_I2.fastq.gz",
+      "md5": "264e4cb080679a89d127a351a77908ae"
+    },
+    {
+      "file": "SZ09TE_HT_R1.fastq.gz",
+      "md5": "7a9fc1b30141510b3c57282a5c9c7d00"
+    },
+    {
+      "file": "SZ09TE_HT_R2.fastq.gz",
+      "md5": "9f7b14fcf5474ed3c8de738870991da5"
+    },
+    {
+      "file": "SZ10TE_CNT_I1.fastq.gz",
+      "md5": "460231dd2415835ee8faa7e3ffca1d47"
+    },
+    {
+      "file": "SZ10TE_CNT_I2.fastq.gz",
+      "md5": "9749361dd7078ac469c6e75eaab65a3b"
+    },
+    {
+      "file": "SZ10TE_CNT_R1.fastq.gz",
+      "md5": "e7f8dcf03f8d24b54157bdfd6b4b6c54"
+    },
+    {
+      "file": "SZ10TE_CNT_R2.fastq.gz",
+      "md5": "95e9e8f33550febd9bde9dadce7db330"
+    },
+    {
+      "file": "SZ10TE_HT_I1.fastq.gz",
+      "md5": "73df0882c8c2332d4326c027b025ae28"
+    },
+    {
+      "file": "SZ10TE_HT_I2.fastq.gz",
+      "md5": "4a5c8d851808553480b1b363872b983a"
+    },
+    {
+      "file": "SZ10TE_HT_R1.fastq.gz",
+      "md5": "6c2fc16223860e99c7d0fd1d1b07f24e"
+    },
+    {
+      "file": "SZ10TE_HT_R2.fastq.gz",
+      "md5": "99747d910616bfa1a3eb4ce953fc2101"
+    },
+    {
+      "file": "SZ25TE_CNT_I1.fastq.gz",
+      "md5": "0fde095afbfaaed3d771cd7fc7e129c5"
+    },
+    {
+      "file": "SZ25TE_CNT_I2.fastq.gz",
+      "md5": "9c711f2ba5f66ae18fa1329e72009e07"
+    },
+    {
+      "file": "SZ25TE_CNT_R1.fastq.gz",
+      "md5": "ba5bdce4f16c56361d616d08c15cbec7"
+    },
+    {
+      "file": "SZ25TE_CNT_R2.fastq.gz",
+      "md5": "c6964b3c171749f7912fb1401950f605"
+    },
+    {
+      "file": "SZ25TE_HT_I1.fastq.gz",
+      "md5": "b6ec1e52ba60e2c76741ba44393266a8"
+    },
+    {
+      "file": "SZ25TE_HT_I2.fastq.gz",
+      "md5": "c9952e20d620d0605cb14a5c47830060"
+    },
+    {
+      "file": "SZ25TE_HT_R1.fastq.gz",
+      "md5": "4c682d058a95dab47c68974b061e8a44"
+    },
+    {
+      "file": "SZ25TE_HT_R2.fastq.gz",
+      "md5": "bf506192c3815ac47e4d9a9058dbfbeb"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "decided_on": "2026-09-25",
+  "decided_by": "project owner",
+  "recorded_before": "any candidate reference KLF12 value was read; the rules pre-registration follows in its own later commit",
+  "decisions": {
+    "D1_biological_context": {
+      "rule": "a gate-qualifying reference is in-vitro hormone-treated human endometrial epithelium; fertile mid-secretory tissue is NOT an automatic RR08 match for hormone_treated and may be used only as contextual evidence or as a fallback requiring a new owner decision",
+      "protocol_tiers": {
+        "T1_exact": "E2 + progestogen + cAMP + XAV939",
+        "T2_one_component_missing": "E2 + progestogen + exactly one of cAMP or XAV939, the missing component recorded explicitly",
+        "T3_context_only": "E2 + progestogen alone; never gate-qualifying"
+      },
+      "neither_camp_nor_xav939_individually_mandatory": true,
+      "cnt": "remains unresolved; never inferred as unstimulated or E2-primed"
+    },
+    "D2_min_reference_donors": {
+      "value": 3,
+      "scope": "a minimum for assumption-conditioned scenario generation only, not a claim of population adequacy",
+      "donor_rule": "identifiable independent biological donors only; clones and technical replicates do not count; every qualifying donor is used when more than three qualify",
+      "canonical_location": "src/dt_adoc/personalization/phase2a_contract.py mapping_specification(), value 3, provenance owner_decided, regenerated into docs/phase2a/; no second Phase-2B-only value"
+    },
+    "D3_threshold_derivation": {
+      "preference_order": [
+        "a genuine published per-cell KLF12-high definition, if one exists",
+        "otherwise a pre-registered empirical state-separation procedure"
+      ],
+      "separation_requirements": "a two-component separation qualifies only if it yields a unique ordered high/low separation and passes a one-state/null-specificity calibration analogous to the previous KLF12 work; a lattice or dropout split is failure, not a threshold",
+      "forbidden": "an arbitrary donor quantile as the primary definition, or labelling one reference_state_separation",
+      "report": "primary boundary plus lower and upper pre-registered sensitivity boundaries, all reported",
+      "failure": "no stable unique separation -> NO_SUITABLE_REFERENCE"
+    },
+    "D4_quantity": {
+      "primary": "count_per_10k",
+      "diagnostic": "count, as a sensitivity only",
+      "rule": "never switch quantities after seeing which gives a nicer separation; the separation and null-calibration criteria still apply after normalization"
+    },
+    "D5_comparability": {
+      "route": "same_pipeline_reprocessed only in this increment",
+      "rule": "raw FASTQ reprocessed through the pinned ADOC processing/reference stack as closely as technically possible; no cross-dataset calibration invented to rescue processed-only candidates",
+      "failure": "same-pipeline processing not achievable -> BLOCKED_COMPARABILITY; if chemistry makes the pinned stack genuinely incompatible, stop rather than accept a different pipeline",
+      "original_study_pipeline_version": "irrelevant once raw FASTQ is reprocessed through ours"
+    },
+    "D6_epithelium": {
+      "rule": "the union of the authors' epithelial annotations, mapped to the broad epithelial compartment using metadata only",
+      "forbidden": "an EPCAM or any other expression threshold"
+    },
+    "D7_candidate_selection": {
+      "hierarchy": [
+        "protocol-context tier",
+        "same-pipeline / raw-data feasibility",
+        "larger number of independent donors",
+        "platform/chemistry proximity to ADOC",
+        "accession lexical order as the deterministic tie-breaker"
+      ],
+      "forbidden_inputs": "KLF12 distribution, model output, downstream scenario behaviour"
+    },
+    "D8_access_and_overlap": {
+      "controlled_access": "EGA/dbGaP datasets excluded from this increment; no access application started to unblock Phase 2B",
+      "fcs_linked": "not permanently excluded, but BLOCKED_DONOR_OVERLAP until donor-code disjointness from SZ09/SZ10/SZ25 is positively documented; independence is never inferred from different accession numbers"
+    },
+    "citation_fields": {
+      "rule": "no DOI is minted merely to satisfy the validator, and a dataset accession is not cited as though it were the source of a threshold method; threshold_derivation cites the actual published methodological source if the method has one",
+      "if_custom": "if the pre-registered derivation is genuinely custom and has no valid DOI or accession, stop and flag that the RR14 citation schema needs an owner-approved adjustment; do not game the field"
+    },
+    "instruction": "proceed with C1 and C2, apply the minimal canonical RR11 update before value access, commit C3 as the value-blind rules pre-registration and stop; report the C3 SHA and the frozen rules before C4"
+  }
+}

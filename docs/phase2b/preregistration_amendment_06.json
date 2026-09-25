@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "kind": "phase2b_rules_amendment",
+  "number": 6,
+  "registered_on": "2026-09-25",
+  "value_blindness": "committed before any KLF12 value of any candidate reference was read; no value-derived artifact exists",
+  "reason": "independent review (reports 20260925T115524Z-fe1366b7aefa and 20260925T115923Z-d132f5992c0c): implementation defects fixed in commit 07649f4, which change pinned files",
+  "changes": {
+    "S5_null_calibration": "the plug-in Poisson null rate is the unique root of the EXPECTED detection fraction mean(1 - exp(-rate * depth / mean depth)) over the donor's depths, not a bisection on one simulated realisation (which was not monotone in the rate); a detection fraction of 0 or 1 cannot be calibrated and S5 fails. This implements the rule as frozen ('calibrated to its detection fraction'); the S5 acceptance rule ratified in amendment 03 is unchanged",
+    "fit_robustness": "the Phase-1B mixture fit is run with exp() saturating to +inf, so a report-only crossing far outside the data cannot crash a converged fit; every non-overflowing value is identical to the frozen fitter's. A genuine failure to fit still counts against the observed separation",
+    "T2": "an unknown cAMP or XAV939 status is 'unresolved_cocktail_metadata' and never qualifies; T2 needs the missing component recorded as missing (owner D1)",
+    "per_cell_input": "a KLF12 count above its cell's depth (relative tolerance 1e-9) is refused"
+  },
+  "changed_pinned_files": [
+    "src/dt_adoc/personalization/phase2b/derivation.py",
+    "src/dt_adoc/personalization/phase2b/qualification.py",
+    "src/dt_adoc/personalization/phase2b/values.py"
+  ],
+  "owner_resolution_B1_B2": {
+    "decided_on": "2026-09-25",
+    "decision": "B1 (the guard) and B2 (the RR14 ancestry check of the frozen citation) are accepted as review-environment incompatibilities, not product defects. Their invariants are defined over the authentic repository DAG, which the aih synthetic two-commit review snapshot does not preserve. Neither the guard nor the RR14 ancestry check is weakened or modified to pass in that snapshot, and neither finding is deferred to the reviewer again",
+    "accepted_evidence": [
+      "in the real checkout, assert_rules_frozen(ROOT) passes on the exact final commit and identifies the real C3 rules commit b586488 and the amendments in order",
+      "the amendment-05 threshold citation keeps its exact frozen path, commit and sha256, and _repository_citation passes in the authentic repository history",
+      "at C5 it must pass again against the actual definition-freeze commit"
+    ]
+  },
+  "implementation_pin_authority": "this amendment (06) supersedes amendment 04 as the implementation-pin authority",
+  "frozen_threshold_derivation_citation": {
+    "value": "repo:docs/phase2b/preregistration_amendment_03.json@d5db35ded71b68b0dd4ceb38ff605de2bb0fde75#sha256:2f83828d5a7c12ed08a605d849fac9c700e7ac92ef2b1fa339199fb55d5318c1",
+    "path": "docs/phase2b/preregistration_amendment_03.json",
+    "commit": "d5db35ded71b68b0dd4ceb38ff605de2bb0fde75",
+    "sha256": "2f83828d5a7c12ed08a605d849fac9c700e7ac92ef2b1fa339199fb55d5318c1",
+    "rule": "at C5 the definition file's threshold_derivation is exactly this string, byte for byte; any other value is a deviation. It must pass Phase 2A RR14's repository-citation check (_repository_citation) against the frozen definition pre-registration"
+  },
+  "unchanged": "every rule of preregistration.json as amended by amendments 01-05, including the amendment-03 owner ratifications and the amendment-05 frozen citation",
+  "derivation": {
+    "constants": {
+      "MIN_DETECTED_CELLS": 20,
+      "NULL_REPLICATES": 99,
+      "NULL_SEED": 20260925,
+      "POSTERIOR_LEVELS": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "RULE": ">="
+    },
+    "variant_selection": "all_reported_none_selected"
+  },
+  "inputs_frozen": {
+    "owner_decisions": {
+      "path": "docs/phase2b/owner_decisions.json",
+      "sha256": "33acc41bb986bdd6a1c55fb29865bc95ac26726cecb480ebf43d95b53c1b2ae3"
+    },
+    "candidate_inventory": {
+      "path": "docs/phase2b/candidate_inventory.tsv",
+      "sha256": "84f92f198a5495d4d51416fcfa234960a629285e183169ee3da38300d3d5063e"
+    },
+    "adoc_identity_denylist": {
+      "path": "docs/phase2b/adoc_identity_denylist.json",
+      "sha256": "0527f985ae3543aad79d44bc30ba916caa890e7b9049af5f1f1fd879fa293687"
+    },
+    "min_reference_donors": {
+      "value": 3,
+      "source": "docs/phase2a/mapping_specification.json parameters (owner D2)"
+    }
+  },
+  "candidate_selection": {
+    "rule": "qualification.select(inventory, min_reference_donors=3): metadata-only D1/D2/D5/D8 qualification, then the D7 order",
+    "selected_in_order": [
+      {
+        "candidate_id": "C03",
+        "accession": "E-MTAB-10283",
+        "arm": "XAV939 + E+P day 6",
+        "libraries": [
+          {
+            "library": "WSSS_END9397531",
+            "ena_run": "ERR5545549"
+          },
+          {
+            "library": "WSSS_END9397535",
+            "ena_run": "ERR5545551"
+          }
+        ]
+      }
+    ],
+    "fallthrough": "a VALUE-BLIND failure of the selected candidate (retrieval checksum, pipeline reproduction, reprocessing, donor-label join, fewer than min_reference_donors donors with cells) passes to the next candidate in the frozen order; a VALUE-AWARE failure (derive() returns NO_STABLE_SEPARATION) never does, because trying candidates until one separates would select a reference by its KLF12 distribution",
+    "next_candidates": "none: C03 is the only metadata-qualified candidate"
+  },
+  "rr14_citations": {
+    "evidence_citation": "E-MTAB-10283 (the reference dataset the state separation is measured in), evidence_kind reference_state_separation",
+    "comparability_evidence": "doi:10.5281/zenodo.17412607 (the ADOC pipeline code and lock file) together with the committed stack-identification result",
+    "threshold_derivation": "repo:docs/phase2b/preregistration_amendment_03.json@d5db35ded71b68b0dd4ceb38ff605de2bb0fde75#sha256:2f83828d5a7c12ed08a605d849fac9c700e7ac92ef2b1fa339199fb55d5318c1"
+  },
+  "verdict_rules": [
+    "NO_SUITABLE_REFERENCE: no candidate qualifies on metadata; or every qualified candidate fails a value-blind check that is not a comparability failure; or derive() returns NO_STABLE_SEPARATION",
+    "BLOCKED_COMPARABILITY: no Cell Ranger stack passes the stack-identification test, or the pinned stack cannot process the selected candidate and no later candidate exists",
+    "BLOCKED_OWNER_DECISION: derive() qualifies but a requirement needs an owner decision not yet taken (owner acceptance under RR12, or activation of config/personalization.yaml)",
+    "QUALIFIED_REFERENCE_FOUND: derive() qualifies and phase2a_contract.evaluate_reference, run on the committed reference files with the manifest named in memory, reports no RR01-RR12 or RR14 failure other than the RR10 activation clause that only the owner's activation commit can satisfy; it enables assumption_conditioned_scenario mapping only, RR13 stays unmet, and no donor-specific model is produced"
+  ],
+  "pinned_implementation_sha256": {
+    "docs/phase2b/adoc_identity_denylist.json": "0527f985ae3543aad79d44bc30ba916caa890e7b9049af5f1f1fd879fa293687",
+    "docs/phase2b/owner_decisions.json": "33acc41bb986bdd6a1c55fb29865bc95ac26726cecb480ebf43d95b53c1b2ae3",
+    "src/dt_adoc/model/topology.py": "2047ed3e2a08470e2342e7f5ca72c50a4a1eb7c06654327b6b137cb001b8a1b3",
+    "src/dt_adoc/personalization/phase2a_contract.py": "55a743e8940f34d61e012425b528ba13823674d41bc8dbff67a3333b5ea9d053",
+    "src/dt_adoc/personalization/phase2b/derivation.py": "0437687eeb00610302c25412922406e11bb1da33a9b1aa87b3726b570f32c8b9",
+    "src/dt_adoc/personalization/phase2b/guard.py": "be8482fed281617c21a21f6f5aeb4d5a8ced60854b6cba2c43a5d31a112dbc3f",
+    "src/dt_adoc/personalization/phase2b/identity.py": "df97e8a301a4b24e42a608aa46b4e317be264a6e7c1f96aec92a29e2614533f6",
+    "src/dt_adoc/personalization/phase2b/qualification.py": "fa6b33c6ff2ae953b8e9469c5f757200a024053a0e567dbebb958305573c1246",
+    "src/dt_adoc/personalization/phase2b/values.py": "5c2883442d2f8b0a9dc47870c24312fa408770c310e6e911b14b1048755c9774",
+    "src/dt_adoc/scrna/klf12_state.py": "3cbf223bd5110e7492e252ab0884fd58b8490b3cc4087a0c9988c324a92e7b3d",
+    "src/dt_adoc/scrna/node_support_contract.py": "8b4d97af07c8c440601b3754a0c66d7a8517827ecfc2aba458b1a41694d5656d",
+    "src/dt_adoc/scrna/verify_rds.py": "4ff18b44d2aa107767ebe3759fa467f25ea6cb09eaf17c8a1640031dce11f36c"
+  }
+}

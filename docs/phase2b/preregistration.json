@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "kind": "phase2b_rules_preregistration",
+  "registered_on": "2026-09-25",
+  "node": "E_KLF12_HIGH",
+  "purpose": "qualify an external reference for the Phase-2A assumption-conditioned E_KLF12_HIGH scenarios only; this is not donor personalization",
+  "value_blindness": {
+    "statement": "written and committed before any KLF12 value of any candidate reference was read, computed or seen",
+    "known_at_writing": [
+      "candidate metadata only: titles, methods, accession pages, SDRF/IDF, ENA run reports, file listings",
+      "the depositor per-cell metadata columns of E-MTAB-10283 WSSS_END9397531/35_cells.tsv (demultiplexed donor label and author Celltype; no gene value)",
+      "the ADOC pipeline code (github.com/FCS-BioIT/single-cell-ADOC at 1f15801ae1820cb2fcec7634a8f522fc1da54e79) and the ADOC deposit's SDRF/IDF and matrix headers",
+      "the already-committed Phase-1B KLF12 findings for the ADOC cells, which contribute nothing to any rule below except the precedent that a stateless null must be tested"
+    ],
+    "enforced_by": "src/dt_adoc/personalization/phase2b/guard.py (assert_rules_frozen), called first by values.open_reference_values"
+  },
+  "inputs_frozen": {
+    "owner_decisions": {
+      "path": "docs/phase2b/owner_decisions.json",
+      "sha256": "33acc41bb986bdd6a1c55fb29865bc95ac26726cecb480ebf43d95b53c1b2ae3"
+    },
+    "candidate_inventory": {
+      "path": "docs/phase2b/candidate_inventory.tsv",
+      "sha256": "84f92f198a5495d4d51416fcfa234960a629285e183169ee3da38300d3d5063e"
+    },
+    "adoc_identity_denylist": {
+      "path": "docs/phase2b/adoc_identity_denylist.json",
+      "sha256": "0527f985ae3543aad79d44bc30ba916caa890e7b9049af5f1f1fd879fa293687"
+    },
+    "min_reference_donors": {
+      "value": 3,
+      "source": "docs/phase2a/mapping_specification.json parameters (owner D2)"
+    }
+  },
+  "condition_matching": {
+    "adoc_units_in_scope": "HT (condition_class hormone_treated) epithelium units only",
+    "cnt": "unresolved (Phase-2A Q4); no CNT unit is matched to any reference and none is mapped",
+    "reference_condition_class": "hormone_treated, by owner D1 tier T1 or T2 only; T3 and tissue never qualify",
+    "recorded_deviations_of_selected_arm_from_adoc_ht": [
+      "P4 1 uM, not MPA 1 uM",
+      "PRL 20 ng/ml added",
+      "R-spondin-1 withdrawn in the WNT-inhibitor arm",
+      "XAV939 2 uM, not 10 uM",
+      "cAMP 100 ug/ml",
+      "organoid culture, not the dual-channel chip",
+      "10x 3' v3, not v3.1",
+      "sequenced on an Illumina NovaSeq 6000 (FASTQ read headers; ENA records HiSeq 4000), not NovaSeq X; read 1 is 28 and read 2 is 91 bases in both libraries, checked on the first FASTQ records, as in ADOC"
+    ]
+  },
+  "candidate_selection": {
+    "rule": "qualification.select(inventory, min_reference_donors=3): metadata-only D1/D2/D5/D8 qualification, then the D7 order",
+    "selected_in_order": [
+      {
+        "candidate_id": "C03",
+        "accession": "E-MTAB-10283",
+        "arm": "XAV939 + E+P day 6",
+        "libraries": [
+          {
+            "library": "WSSS_END9397531",
+            "ena_run": "ERR5545549"
+          },
+          {
+            "library": "WSSS_END9397535",
+            "ena_run": "ERR5545551"
+          }
+        ]
+      }
+    ],
+    "fallthrough": "a VALUE-BLIND failure of the selected candidate (retrieval checksum, pipeline reproduction, reprocessing, donor-label join, fewer than min_reference_donors donors with cells) passes to the next candidate in the frozen order; a VALUE-AWARE failure (derive() returns NO_STABLE_SEPARATION) never does, because trying candidates until one separates would select a reference by its KLF12 distribution",
+    "next_candidates": "none: C03 is the only metadata-qualified candidate"
+  },
+  "donors": {
+    "source": "the depositor's genotype demultiplexing: column 'demultiplexed' of WSSS_END9397531_cells.tsv and WSSS_END9397535_cells.tsv",
+    "depositor_cell_files_sha256": {
+      "WSSS_END9397531_cells.tsv": "b3fcecc60bb3919f6e6b3148a1f70197cb79b9d3f02c3cf5a11b8305d2f7d3e1",
+      "WSSS_END9397535_cells.tsv": "b28e0abba3683455ed1f368814e7f5896bfc0949d20338e9b4ed2415eefcdc35"
+    },
+    "reference_donor_ids": [
+      "B44",
+      "U1",
+      "U2"
+    ],
+    "independence": "three genotypes demultiplexed by the depositors (paper: donors E001, B044, B080); the U1/U2 to E001/B080 mapping is unstated and not needed",
+    "replicate_libraries": "the two libraries are technical replicates of one three-donor pool; cells of both are pooled per donor, and the per-library result is reported as a diagnostic only",
+    "no_own_demultiplexing": "no genotype inference is run by us; a cell without a depositor donor label is dropped"
+  },
+  "population": {
+    "rule": "owner D6: the union of the authors' epithelial annotations, by metadata only",
+    "epithelial_labels": "every author Celltype value in the selected libraries except 'Low QC' (an author quality flag, not a lineage): Ciliated, Estrogen_induced_PGR+, Inflamatory, NH_d2_WNTi, NH_d2_d6, NH_d6, NH_d6_WNTi, Pre-ciliated, Secretory_Ctrl, Secretory_NOTCHi, Secretory_WNTi; any other label found at join time is a deviation and is excluded",
+    "join": "our barcode without its '-1' suffix equals the depositor cell name without its 'WSSS_END<library>_' prefix, within the same library",
+    "forbidden": "any expression-based filter (EPCAM or otherwise), re-clustering, or re-annotation"
+  },
+  "comparability": {
+    "route": "same_pipeline_reprocessed only (owner D5)",
+    "pinned_stack": {
+      "reference_genome": "GRCh38 with GENCODE v47 annotation, as the ADOC IDF states; the built feature table must equal E-MTAB-15842 all_feature_bc_matrix_features.tsv exactly (feature id, name, type, order)",
+      "counting": "Cell Ranger count; the version is unrecorded in the ADOC deposit and is identified by the reproduction test below",
+      "ambient_correction": "src/upstream/decontx_remove_background.R of FCS-BioIT/single-cell-ADOC at 1f15801ae1820cb2fcec7634a8f522fc1da54e79, per library, raw droplets as background, in the envs/decontx.yaml environment (R 4.4.3, celda 1.22.0)",
+      "qc": "the ADOC thresholds of src/scrnaseq-preprocess/qc.R on the decontX counts: nFeature_RNA >= 500, mitoRatio (^MT-, percent) < 15, nCount_RNA >= 1000, then scDblFinder (envs/qc.yaml, scDblFinder 1.20.2, set.seed(47)) doublets removed"
+    },
+    "stack_identification": {
+      "test": "reprocess the ADOC library SZ09TE_CNT (ENA ERR15772621) from its FASTQ; a candidate stack is accepted only if (a) its raw and filtered feature-barcode matrices are identical to the deposited SZ09TE_CNT_raw_feature_bc_matrix and SZ09TE_CNT_filtered_feature_bc_matrix (same barcodes, same non-zero feature-barcode-count triples) and (b) the pinned decontX step on them reproduces the deposited SZ09TE_CNT decontX matrix with identical barcodes and a maximum absolute entrywise difference <= 1e-6",
+      "search_order": "a Cell Ranger version documented by the depositors if the owner supplies one before the test runs; otherwise official Cell Ranger releases in descending order starting at 9.0.1; the first release passing (a) and (b) is the pinned stack",
+      "value_blindness": "the test compares whole matrices for equality; no ADOC or candidate KLF12 value is extracted or summarised",
+      "failure": "no stack passes -> BLOCKED_COMPARABILITY; a candidate the pinned stack cannot process -> BLOCKED_COMPARABILITY for that candidate"
+    },
+    "not_used": "cross_dataset_calibration (owner D5)"
+  },
+  "measurement": {
+    "feature": "KLF12 (HGNC symbol), the node's own feature",
+    "layer": "decontX-corrected counts produced by the pinned stack",
+    "primary_quantity": "count_per_10k = KLF12 decontX count / the cell's decontX column sum x 1e4, exactly as phase2a_contract.per_cell_quantity",
+    "diagnostic_quantity": "count, reported only, never a threshold or variant",
+    "per_cell_table": "columns donor_id, klf12_count, depth only (no barcode), with a provenance sidecar binding it to the input FASTQ md5s (values.PROVENANCE_COLUMNS)"
+  },
+  "derivation": {
+    "module": "src/dt_adoc/personalization/phase2b/derivation.py, function derive(donors, min_reference_donors=3)",
+    "constants": {
+      "MIN_DETECTED_CELLS": 20,
+      "NULL_REPLICATES": 99,
+      "NULL_MIN_FITTED": 80,
+      "NULL_SEED": 20260925,
+      "POSTERIOR_LEVELS": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "RULE": ">="
+    },
+    "per_donor_criteria": {
+      "S1": "exactly one posterior-0.5 crossing inside the detected support, between the component means",
+      "S2": "the fitted two-component density is bimodal",
+      "S3": "the boundary is at least one molecule at the donor's median detected depth (1e4 / median depth)",
+      "posterior_boundaries": "unique in-support roots at posterior 0.25, 0.5, 0.75, strictly ordered",
+      "S5": "Monte Carlo test against a stateless Poisson null at the donor's own depths and detection fraction with its own decontX shrinkage ratios: at least 80 of 99 replicates fitted and the observed Ashman's D strictly above every fitted null replicate's (p <= 0.01)",
+      "D4_diagnostic": "Phase-1B M1(b), the high component excludes at least half the detected cells: reported, not gating"
+    },
+    "aggregation": "every reference donor must qualify (none is dropped) and there must be at least min_reference_donors; primary threshold = median across donors of the posterior-0.5 boundaries; threshold_variants = [median of the 0.25 boundaries, median of the 0.75 boundaries]; rule '>='",
+    "variant_selection": "all_reported_none_selected",
+    "failure": "derive() verdict NO_STABLE_SEPARATION -> NO_SUITABLE_REFERENCE; no alternative quantity, fit, criterion or candidate is tried afterwards"
+  },
+  "rr14_citations": {
+    "evidence_citation": "E-MTAB-10283 (the reference dataset the state separation is measured in), evidence_kind reference_state_separation",
+    "comparability_evidence": "doi:10.5281/zenodo.17412607 (the ADOC pipeline code and lock file) together with the committed stack-identification result",
+    "threshold_derivation": "NONE VALID: the derivation is this pre-registration's own procedure and has no DOI or accession. Under the owner's citation rule no DOI is minted and no dataset is cited as a method; unless the owner approves an RR14 citation-schema adjustment before the definition-freeze commit, the verdict is at most BLOCKED_OWNER_DECISION"
+  },
+  "verdict_rules": [
+    "NO_SUITABLE_REFERENCE: no candidate qualifies on metadata; or every qualified candidate fails a value-blind check that is not a comparability failure; or derive() returns NO_STABLE_SEPARATION",
+    "BLOCKED_COMPARABILITY: no Cell Ranger stack passes the stack-identification test, or the pinned stack cannot process the selected candidate and no later candidate exists",
+    "BLOCKED_OWNER_DECISION: derive() qualifies but a requirement needs an owner decision not yet taken (the RR14 threshold_derivation citation above, owner acceptance under RR12, or activation of config/personalization.yaml)",
+    "QUALIFIED_REFERENCE_FOUND: derive() qualifies and phase2a_contract.evaluate_reference, run on the committed reference files with the manifest named in memory, reports no RR01-RR12 or RR14 failure other than the RR10 activation clause that only the owner's activation commit can satisfy; it enables assumption_conditioned_scenario mapping only, RR13 stays unmet, and no donor-specific model is produced"
+  ],
+  "commit_order": [
+    "C3 (this commit, alone): rules",
+    "C4: retrieval, provenance, stack identification, reprocessing, qualification table, comparability assessment, derivation result, all after the guard passes",
+    "C5 (alone): docs/phase2b/reference/definition_freeze.md naming definition_path/definition_sha256 and nothing else 64-hex (Phase-2A RR10/RR14)",
+    "C6: reference manifest, donors and definition files, the RR01-RR12/RR14 audit and the one verdict",
+    "activation of config/personalization.yaml only if the owner authorises it"
+  ],
+  "forbidden": [
+    "reading any candidate KLF12 value before this commit and a passing guard",
+    "using the ADOC donors, their values or outcomes to set any rule, threshold, candidate or variant",
+    "adhesion, pregnancy, implantation, secretion or model output as an input anywhere",
+    "donor .cfg, probabilities, rate modifiers, clamps, mutations or topology changes",
+    "claiming measured_personalization (RR13 is separately blocked)"
+  ],
+  "deviations": "any departure after values are read is recorded as a numbered deviation with its reason in a separate file; nothing here is edited (guard.py refuses a rewritten rules file)",
+  "pinned_implementation_sha256": {
+    "docs/phase2b/adoc_identity_denylist.json": "0527f985ae3543aad79d44bc30ba916caa890e7b9049af5f1f1fd879fa293687",
+    "docs/phase2b/owner_decisions.json": "33acc41bb986bdd6a1c55fb29865bc95ac26726cecb480ebf43d95b53c1b2ae3",
+    "src/dt_adoc/model/topology.py": "2047ed3e2a08470e2342e7f5ca72c50a4a1eb7c06654327b6b137cb001b8a1b3",
+    "src/dt_adoc/personalization/phase2a_contract.py": "6556344a2c89ae5de3794593729277ef812c95c9fbbd6b7d334241883f3925a8",
+    "src/dt_adoc/personalization/phase2b/derivation.py": "9f55ce6363c0f3f108b6885ec1dc994d8545fba718de036cea97806988a7d467",
+    "src/dt_adoc/personalization/phase2b/guard.py": "e92dc82e57d62a1c64bace3070d44ffb2551d07efd9e398b8607aab8004c6a2c",
+    "src/dt_adoc/personalization/phase2b/identity.py": "df97e8a301a4b24e42a608aa46b4e317be264a6e7c1f96aec92a29e2614533f6",
+    "src/dt_adoc/personalization/phase2b/qualification.py": "797a78c04e706d2517ac8e4fab924e84617240da63cee7f9f3dad30bc0a55f3d",
+    "src/dt_adoc/personalization/phase2b/values.py": "17078c404d1ccd7656725219896b76136f4e6fd71b1bec3376c3a94075a6b442",
+    "src/dt_adoc/scrna/klf12_state.py": "3cbf223bd5110e7492e252ab0884fd58b8490b3cc4087a0c9988c324a92e7b3d",
+    "src/dt_adoc/scrna/node_support_contract.py": "8b4d97af07c8c440601b3754a0c66d7a8517827ecfc2aba458b1a41694d5656d",
+    "src/dt_adoc/scrna/verify_rds.py": "4ff18b44d2aa107767ebe3759fa467f25ea6cb09eaf17c8a1640031dce11f36c"
+  }
+}

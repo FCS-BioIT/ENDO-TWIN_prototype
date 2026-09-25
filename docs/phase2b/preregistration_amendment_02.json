@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "kind": "phase2b_rules_amendment",
+  "number": 2,
+  "registered_on": "2026-09-25",
+  "amends": {
+    "path": "docs/phase2b/preregistration.md",
+    "sha256": "e34a21a61adc1330046b8f8dee8ded8c8530da047a0f5886a2919a0420fef84e",
+    "section": "Operating characteristics, measured on synthetic data only"
+  },
+  "value_blindness": "committed before any KLF12 value of any candidate reference was read; no value-derived artifact exists",
+  "reason": "independent review (report 20260925T093505Z-e14408036faf, finding B2): the operating-characteristic claims in preregistration.md rested on uncommitted probe scripts",
+  "withdrawn": [
+    "'A stateless negative-binomial population (shape 0.5) passes a single donor at about the nominal rate. That rate was about 4% with the earlier 25-replicate null.' -- no committed artifact measures a per-donor rate, and none is claimed"
+  ],
+  "now_backed_by": {
+    "tests/unit/test_phase2b_contract.py::OperatingCharacteristics": "three stateless donors with depth batches at 2x and 4x, with depth-dependent dropout, and with negative-binomial overdispersion at shape 0.5, 1 and 2 each yield NO_STABLE_SEPARATION",
+    "tests/unit/test_phase2b_contract.py::Derivation": "a genuine two-state population qualifies; a stateless Poisson population and a one-molecule lattice do not; a criterion that certifies anything is refused by the null"
+  },
+  "stated_level": "p <= 0.01 per donor holds by construction against the stateless POISSON null (amendment 01); no level is claimed against an overdispersed null, and every donor must pass",
+  "unchanged": "every rule of preregistration.json as amended by amendment 01; no code changes",
+  "derivation": {
+    "constants": {
+      "MIN_DETECTED_CELLS": 20,
+      "NULL_REPLICATES": 99,
+      "NULL_SEED": 20260925,
+      "POSTERIOR_LEVELS": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "RULE": ">="
+    },
+    "variant_selection": "all_reported_none_selected"
+  },
+  "inputs_frozen": {
+    "owner_decisions": {
+      "path": "docs/phase2b/owner_decisions.json",
+      "sha256": "33acc41bb986bdd6a1c55fb29865bc95ac26726cecb480ebf43d95b53c1b2ae3"
+    },
+    "candidate_inventory": {
+      "path": "docs/phase2b/candidate_inventory.tsv",
+      "sha256": "84f92f198a5495d4d51416fcfa234960a629285e183169ee3da38300d3d5063e"
+    },
+    "adoc_identity_denylist": {
+      "path": "docs/phase2b/adoc_identity_denylist.json",
+      "sha256": "0527f985ae3543aad79d44bc30ba916caa890e7b9049af5f1f1fd879fa293687"
+    },
+    "min_reference_donors": {
+      "value": 3,
+      "source": "docs/phase2a/mapping_specification.json parameters (owner D2)"
+    }
+  },
+  "candidate_selection": {
+    "rule": "qualification.select(inventory, min_reference_donors=3): metadata-only D1/D2/D5/D8 qualification, then the D7 order",
+    "selected_in_order": [
+      {
+        "candidate_id": "C03",
+        "accession": "E-MTAB-10283",
+        "arm": "XAV939 + E+P day 6",
+        "libraries": [
+          {
+            "library": "WSSS_END9397531",
+            "ena_run": "ERR5545549"
+          },
+          {
+            "library": "WSSS_END9397535",
+            "ena_run": "ERR5545551"
+          }
+        ]
+      }
+    ],
+    "fallthrough": "a VALUE-BLIND failure of the selected candidate (retrieval checksum, pipeline reproduction, reprocessing, donor-label join, fewer than min_reference_donors donors with cells) passes to the next candidate in the frozen order; a VALUE-AWARE failure (derive() returns NO_STABLE_SEPARATION) never does, because trying candidates until one separates would select a reference by its KLF12 distribution",
+    "next_candidates": "none: C03 is the only metadata-qualified candidate"
+  },
+  "rr14_citations": {
+    "evidence_citation": "E-MTAB-10283 (the reference dataset the state separation is measured in), evidence_kind reference_state_separation",
+    "comparability_evidence": "doi:10.5281/zenodo.17412607 (the ADOC pipeline code and lock file) together with the committed stack-identification result",
+    "threshold_derivation": "NONE VALID: the derivation is this pre-registration's own procedure and has no DOI or accession. Under the owner's citation rule no DOI is minted and no dataset is cited as a method; unless the owner approves an RR14 citation-schema adjustment before the definition-freeze commit, the verdict is at most BLOCKED_OWNER_DECISION"
+  },
+  "pinned_implementation_sha256": {
+    "docs/phase2b/adoc_identity_denylist.json": "0527f985ae3543aad79d44bc30ba916caa890e7b9049af5f1f1fd879fa293687",
+    "docs/phase2b/owner_decisions.json": "33acc41bb986bdd6a1c55fb29865bc95ac26726cecb480ebf43d95b53c1b2ae3",
+    "src/dt_adoc/model/topology.py": "2047ed3e2a08470e2342e7f5ca72c50a4a1eb7c06654327b6b137cb001b8a1b3",
+    "src/dt_adoc/personalization/phase2a_contract.py": "6556344a2c89ae5de3794593729277ef812c95c9fbbd6b7d334241883f3925a8",
+    "src/dt_adoc/personalization/phase2b/derivation.py": "688770e4ba0f95fb3ce8ace03bfa4d6f0937b98054bf752790a530d29323fb91",
+    "src/dt_adoc/personalization/phase2b/guard.py": "ee45d3ebf91044766154e6f0915a97cee980d22ff2322e625d77205e0fd6b64c",
+    "src/dt_adoc/personalization/phase2b/identity.py": "df97e8a301a4b24e42a608aa46b4e317be264a6e7c1f96aec92a29e2614533f6",
+    "src/dt_adoc/personalization/phase2b/qualification.py": "797a78c04e706d2517ac8e4fab924e84617240da63cee7f9f3dad30bc0a55f3d",
+    "src/dt_adoc/personalization/phase2b/values.py": "17078c404d1ccd7656725219896b76136f4e6fd71b1bec3376c3a94075a6b442",
+    "src/dt_adoc/scrna/klf12_state.py": "3cbf223bd5110e7492e252ab0884fd58b8490b3cc4087a0c9988c324a92e7b3d",
+    "src/dt_adoc/scrna/node_support_contract.py": "8b4d97af07c8c440601b3754a0c66d7a8517827ecfc2aba458b1a41694d5656d",
+    "src/dt_adoc/scrna/verify_rds.py": "4ff18b44d2aa107767ebe3759fa467f25ea6cb09eaf17c8a1640031dce11f36c"
+  }
+}

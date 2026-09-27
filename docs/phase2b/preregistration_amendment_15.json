@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "kind": "phase2b_rules_amendment",
+  "number": 15,
+  "registered_on": "2026-09-26",
+  "value_blindness": "committed before any stack-identification matrix comparison and before any KLF12 value of any candidate reference was read. No Cell Ranger reference or count output exists: the amendment-14 mkref (9.0.1, started 2026-09-26 00:49) was terminated at 01:09 before completion. The ADOC per-unit KLF12 values committed before Phase 2A keep their not_blind flag, as before",
+  "decided_by": "project owner, 2026-09-26",
+  "kind_of_change": "semantic: the scientific downstream role of the C4/C5 product. No measurement, comparability, derivation, verdict or stopping rule changes",
+  "reason": "the frozen purpose (preregistration.json 'purpose'; preregistration.md 'What this does and does not do') ties the qualified reference to the Phase-2A assumption-conditioned E_KLF12_HIGH scenario, which Phase 2A maps to a baseline initial_on_probability (docs/phase2a/mapping_specification.json step 3 and uncertainty.shared_baseline = the baseline.cfg istate). The model clock places that istate at t=0, before the simulated E2 priming and hormone treatment (config/protocols.yaml; src/dt_adoc/concordance/simulate.py protocol_lineage). The HT scRNA is an end-of-hormonal-treatment observation (experimental_timeline below). Writing it at t=0 turns a post-treatment observation into a pre-treatment cause of the treatment being simulated, and, because E_KLF12_HIGH has logic = E_KLF12_HIGH, silently asserts that the KLF12 state is unchanged by treatment",
+  "experimental_timeline": {
+    "source": "Zaragozano et al. 2026, Sci. Adv. 12, eadz2249, doi:10.1126/sciadv.adz2249; local copy data/sciadv.adz2249.pdf, sha256 51fe0acb3bacab6196290553e35f72103cc7337c4747e0d64b9ad46734a319f1 (config/data_manifest.tsv)",
+    "authority": "the paper governs what was done experimentally; the repository governs model semantics",
+    "sequence": [
+      "6 days of expansion medium, epithelial and stromal channels",
+      "hormonal treatment day 0-2: E2 10 nM",
+      "hormonal treatment day 2-6: E2 10 nM + MPA 1 uM + cAMP 250 uM + XAV939 10 uM",
+      "scRNA-seq of control and hormone-treated ADOC"
+    ],
+    "quoted": [
+      "Hormonal stimulation drives transcriptional changes in ADOC",
+      "To further underpin the cell complexity of ADOC before and after hormonal treatment, we obtained high-quality transcriptomes from 28,212 individual cells",
+      "stromal and epithelial cells from control and hormone-treated ADOC were collected separately"
+    ],
+    "ht_scrna": "an end-of-hormonal-treatment observation of the HT state. The scRNA experiment contains no embryo; the embryo-adhesion and mifepristone assays are separate, downstream functional assays",
+    "cnt": {
+      "treatment_status": "untreated (the paper's 'nontreated', 'untreated' and 'control')",
+      "harvest_timing": "unresolved: the paper does not state whether CNT chips were harvested at the start of hormonal treatment or time-matched to the HT harvest. It is not treated as resolved, and it is not declared biologically inconsequential",
+      "supersedes": "owner_decisions.json D1 'cnt' as to treatment status only. owner_decisions.json itself is not edited",
+      "c4_scope": "unchanged: CNT units are outside C4 and are matched to nothing. The T1 reference is hormone-treated, so it does not match an untreated unit"
+    }
+  },
+  "downstream_role": {
+    "old": "external KLF12-high definition -> ADOC fraction high -> baseline initial_on_probability for E_KLF12_HIGH (assumption_conditioned_scenario)",
+    "new": "external KLF12-high definition -> endpoint HT KLF12 observation and calibration",
+    "c4_c5_output": "an endpoint KLF12-high measurement definition for hormone-treated epithelium (feature, layer, per-cell quantity, rule, primary threshold and its pre-registered variants), applied to the three HT epithelial units as an end-of-hormonal-treatment observation",
+    "baseline_istate": "retired as the DEFAULT downstream use. It is not forbidden, but it is no longer the default",
+    "persistent_state_condition": "any use of the endpoint measurement as a persistent donor state (a baseline or t=0 istate, or any state held across the simulated protocol) must carry an explicit assumption that KLF12 is unchanged under treatment, or cite future independent validation of that invariance",
+    "claim_ceiling": "unchanged: assumption_conditioned; RR13 stays unmet; no donor-specific model or .cfg is produced",
+    "phase2a_artifacts": "not edited. docs/phase2a/* and src/dt_adoc/personalization/phase2a_contract.py keep their frozen bytes. Redefining the Phase-2A mapping is a later, separate unit"
+  },
+  "verdict_interpretation": "verdict_rules are carried verbatim and computed exactly as before. Only what QUALIFIED_REFERENCE_FOUND licenses downstream changes: by default, the endpoint measurement definition above. The baseline initial_on_probability scenario is licensed only under persistent_state_condition",
+  "unchanged": "everything in amendments 01-14: candidate selection (C03, E-MTAB-10283) and fallthrough; the Cell Ranger stack identification (amendments 13 and 14, including the mkref execution parameters and acceptance criterion); donor and population rules; the KLF12 measurement and quantity (count_per_10k primary, count diagnostic); the derivation, S1-S5, null calibration, thresholds, aggregation and variants (all reported, none selected); stopping and verdict rules; the amendment-05 frozen C5 citation; the owner's B1/B2 resolution. No code changes. Amendment 12's pins are carried verbatim",
+  "changed_pinned_files": [],
+  "implementation_pin_authority": "amendment 12; this amendment carries its pinned_implementation_sha256 verbatim",
+  "frozen_threshold_derivation_citation": {
+    "value": "repo:docs/phase2b/preregistration_amendment_03.json@d5db35ded71b68b0dd4ceb38ff605de2bb0fde75#sha256:2f83828d5a7c12ed08a605d849fac9c700e7ac92ef2b1fa339199fb55d5318c1",
+    "path": "docs/phase2b/preregistration_amendment_03.json",
+    "commit": "d5db35ded71b68b0dd4ceb38ff605de2bb0fde75",
+    "sha256": "2f83828d5a7c12ed08a605d849fac9c700e7ac92ef2b1fa339199fb55d5318c1",
+    "rule": "at C5 the definition file's threshold_derivation is exactly this string, byte for byte; any other value is a deviation. It must pass Phase 2A RR14's repository-citation check (_repository_citation) against the frozen definition pre-registration"
+  },
+  "derivation": {
+    "constants": {
+      "MIN_DETECTED_CELLS": 20,
+      "NULL_REPLICATES": 99,
+      "NULL_SEED": 20260925,
+      "POSTERIOR_LEVELS": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "RULE": ">="
+    },
+    "variant_selection": "all_reported_none_selected"
+  },
+  "inputs_frozen": {
+    "owner_decisions": {
+      "path": "docs/phase2b/owner_decisions.json",
+      "sha256": "33acc41bb986bdd6a1c55fb29865bc95ac26726cecb480ebf43d95b53c1b2ae3"
+    },
+    "candidate_inventory": {
+      "path": "docs/phase2b/candidate_inventory.tsv",
+      "sha256": "84f92f198a5495d4d51416fcfa234960a629285e183169ee3da38300d3d5063e"
+    },
+    "adoc_identity_denylist": {
+      "path": "docs/phase2b/adoc_identity_denylist.json",
+      "sha256": "0527f985ae3543aad79d44bc30ba916caa890e7b9049af5f1f1fd879fa293687"
+    },
+    "min_reference_donors": {
+      "value": 3,
+      "source": "docs/phase2a/mapping_specification.json parameters (owner D2)"
+    }
+  },
+  "candidate_selection": {
+    "rule": "qualification.select(inventory, min_reference_donors=3): metadata-only D1/D2/D5/D8 qualification, then the D7 order",
+    "selected_in_order": [
+      {
+        "candidate_id": "C03",
+        "accession": "E-MTAB-10283",
+        "arm": "XAV939 + E+P day 6",
+        "libraries": [
+          {
+            "library": "WSSS_END9397531",
+            "ena_run": "ERR5545549"
+          },
+          {
+            "library": "WSSS_END9397535",
+            "ena_run": "ERR5545551"
+          }
+        ]
+      }
+    ],
+    "fallthrough": "a VALUE-BLIND failure of the selected candidate (retrieval checksum, pipeline reproduction, reprocessing, donor-label join, fewer than min_reference_donors donors with cells) passes to the next candidate in the frozen order; a VALUE-AWARE failure (derive() returns NO_STABLE_SEPARATION) never does, because trying candidates until one separates would select a reference by its KLF12 distribution",
+    "next_candidates": "none: C03 is the only metadata-qualified candidate"
+  },
+  "rr14_citations": {
+    "evidence_citation": "E-MTAB-10283 (the reference dataset the state separation is measured in), evidence_kind reference_state_separation",
+    "comparability_evidence": "doi:10.5281/zenodo.17412607 (the ADOC pipeline code and lock file) together with the committed stack-identification result",
+    "threshold_derivation": "repo:docs/phase2b/preregistration_amendment_03.json@d5db35ded71b68b0dd4ceb38ff605de2bb0fde75#sha256:2f83828d5a7c12ed08a605d849fac9c700e7ac92ef2b1fa339199fb55d5318c1"
+  },
+  "verdict_rules": [
+    "NO_SUITABLE_REFERENCE: no candidate qualifies on metadata; or every qualified candidate fails a value-blind check that is not a comparability failure; or derive() returns NO_STABLE_SEPARATION",
+    "BLOCKED_COMPARABILITY: no Cell Ranger stack passes the stack-identification test, or the pinned stack cannot process the selected candidate and no later candidate exists",
+    "BLOCKED_OWNER_DECISION: derive() qualifies but a requirement needs an owner decision not yet taken (owner acceptance under RR12, or activation of config/personalization.yaml)",
+    "QUALIFIED_REFERENCE_FOUND: derive() qualifies and phase2a_contract.evaluate_reference, run on the committed reference files with the manifest named in memory, reports no RR01-RR12 or RR14 failure other than the RR10 activation clause that only the owner's activation commit can satisfy; it enables assumption_conditioned_scenario mapping only, RR13 stays unmet, and no donor-specific model is produced"
+  ],
+  "pinned_implementation_sha256": {
+    "docs/phase2b/adoc_identity_denylist.json": "0527f985ae3543aad79d44bc30ba916caa890e7b9049af5f1f1fd879fa293687",
+    "docs/phase2b/owner_decisions.json": "33acc41bb986bdd6a1c55fb29865bc95ac26726cecb480ebf43d95b53c1b2ae3",
+    "src/dt_adoc/model/topology.py": "2047ed3e2a08470e2342e7f5ca72c50a4a1eb7c06654327b6b137cb001b8a1b3",
+    "src/dt_adoc/personalization/phase2a_contract.py": "55a743e8940f34d61e012425b528ba13823674d41bc8dbff67a3333b5ea9d053",
+    "src/dt_adoc/personalization/phase2b/derivation.py": "0437687eeb00610302c25412922406e11bb1da33a9b1aa87b3726b570f32c8b9",
+    "src/dt_adoc/personalization/phase2b/guard.py": "d9835e6523ee9962ec5062acd3118217f34cf5bb0234c9b7cdfe80fbccb1f8d5",
+    "src/dt_adoc/personalization/phase2b/identity.py": "df97e8a301a4b24e42a608aa46b4e317be264a6e7c1f96aec92a29e2614533f6",
+    "src/dt_adoc/personalization/phase2b/qualification.py": "fa6b33c6ff2ae953b8e9469c5f757200a024053a0e567dbebb958305573c1246",
+    "src/dt_adoc/personalization/phase2b/values.py": "5c2883442d2f8b0a9dc47870c24312fa408770c310e6e911b14b1048755c9774",
+    "src/dt_adoc/scrna/klf12_state.py": "3cbf223bd5110e7492e252ab0884fd58b8490b3cc4087a0c9988c324a92e7b3d",
+    "src/dt_adoc/scrna/node_support_contract.py": "8b4d97af07c8c440601b3754a0c66d7a8517827ecfc2aba458b1a41694d5656d",
+    "src/dt_adoc/scrna/verify_rds.py": "4ff18b44d2aa107767ebe3759fa467f25ea6cb09eaf17c8a1640031dce11f36c"
+  }
+}

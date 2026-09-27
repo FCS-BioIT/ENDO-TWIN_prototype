@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "kind": "phase2b_rules_amendment",
+  "number": 12,
+  "registered_on": "2026-09-25",
+  "value_blindness": "committed before any KLF12 value of any candidate reference was read; no value-derived artifact exists",
+  "reason": "stand-in review (report 20260925T214313Z-b97586d5c42b, B2, PROVEN): amendment 11's guard (ece9cdb) changed amendment 07/08's frozen merge-deletion rule for _only_commit, while amendment 11 stated that every rule of amendments 01-10 stood. Owner decision 2026-09-25: restore amendment 07's rule; do not ratify amendment 11's change",
+  "fix_commit": "e05b931ebb12d156507a836eb78feca58804edc3",
+  "kind_of_change": "RESTORATION of a previously frozen acceptance criterion; no new criterion is adopted",
+  "withdrawn": {
+    "amendment": 11,
+    "what": "the unintended _only_commit semantic change (changes.writes_absence_is_a_state as applied to frozen files, and changes.effect_on_only_commit): under amendment 11 a merge dropping a frozen file present in only one parent was not a write. That change is withdrawn, not ratified"
+  },
+  "restored": {
+    "rule": "amendment 07's merge rule, as frozen in amendment 07 (guard_merge_writes) and repeated in amendment 08: for _only_commit a merge counts as writing a frozen file if its tree entry (mode and blob) differs from every parent's, OR the merge drops the file. _writes applies this by default with logic identical to the guard pinned by amendment 10"
+  },
+  "between_check": {
+    "rule": "the between-amendments check alone (amendment 10's merge-aware check) calls _writes with inherited_absence=True: a merge that lacks a docs/phase2b/ file exactly as one of its parents lacks it carries that parent's deletion and is not a new write; a merge that adds a file neither parent holds, or deletes a file every parent holds, or holds novel bytes or a changed mode, is a write between stages",
+    "why": "this is the correction of the false refusal amendment 11 reported against amendment 10's claim, now confined to the between check"
+  },
+  "corrects": {
+    "amendment": 11,
+    "statement": "'a later commit restored it, which is itself a write' (11.md) and 'a later commit restored it, which is itself a write (tested: refused)' (11.json effect_on_only_commit) are too broad",
+    "precise": "a NON-MERGE commit that restores a frozen file is a write. A MERGE that restores it by taking one parent's exact entry is not counted as a write (amendment 07's rule): those bytes are that parent's, and whichever commit first wrote them is itself listed. So no bytes can enter the frozen file without a counted write, but not every restoration is itself a counted write"
+  },
+  "tests": [
+    "_only_commit counts a merge deletion of a frozen file, even when the other parent never held it",
+    "between amendments: an absence inherited from one parent is not a new write (passes)",
+    "between amendments: a merge introducing a new docs/phase2b/ file refuses",
+    "between amendments: a merge deleting a docs/phase2b/ file every parent holds refuses (with a positive control without the deletion)",
+    "novel bytes and mode-only changes in a merge are writes under both rules",
+    "under amendment 11's rule the restored-rule tests fail"
+  ],
+  "changed_pinned_files": [
+    "src/dt_adoc/personalization/phase2b/guard.py"
+  ],
+  "previous_pin": {
+    "src/dt_adoc/personalization/phase2b/guard.py": "d1a73188377728559b843ff4cbe0794f4f9118ec60c4dc8137f9420dad7ee12b"
+  },
+  "unchanged": "the scientific method and the C4 protocol: candidate selection, donors, population, comparability route and stack identification, quantity, derivation, S1-S5, thresholds, variants and verdict rules; the amendment-05 frozen citation and the owner's B1/B2 resolution; amendments 07-11 are not edited",
+  "implementation_pin_authority": "this amendment (12) supersedes amendment 11 as the implementation-pin authority",
+  "frozen_threshold_derivation_citation": {
+    "value": "repo:docs/phase2b/preregistration_amendment_03.json@d5db35ded71b68b0dd4ceb38ff605de2bb0fde75#sha256:2f83828d5a7c12ed08a605d849fac9c700e7ac92ef2b1fa339199fb55d5318c1",
+    "path": "docs/phase2b/preregistration_amendment_03.json",
+    "commit": "d5db35ded71b68b0dd4ceb38ff605de2bb0fde75",
+    "sha256": "2f83828d5a7c12ed08a605d849fac9c700e7ac92ef2b1fa339199fb55d5318c1",
+    "rule": "at C5 the definition file's threshold_derivation is exactly this string, byte for byte; any other value is a deviation. It must pass Phase 2A RR14's repository-citation check (_repository_citation) against the frozen definition pre-registration"
+  },
+  "derivation": {
+    "constants": {
+      "MIN_DETECTED_CELLS": 20,
+      "NULL_REPLICATES": 99,
+      "NULL_SEED": 20260925,
+      "POSTERIOR_LEVELS": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "RULE": ">="
+    },
+    "variant_selection": "all_reported_none_selected"
+  },
+  "inputs_frozen": {
+    "owner_decisions": {
+      "path": "docs/phase2b/owner_decisions.json",
+      "sha256": "33acc41bb986bdd6a1c55fb29865bc95ac26726cecb480ebf43d95b53c1b2ae3"
+    },
+    "candidate_inventory": {
+      "path": "docs/phase2b/candidate_inventory.tsv",
+      "sha256": "84f92f198a5495d4d51416fcfa234960a629285e183169ee3da38300d3d5063e"
+    },
+    "adoc_identity_denylist": {
+      "path": "docs/phase2b/adoc_identity_denylist.json",
+      "sha256": "0527f985ae3543aad79d44bc30ba916caa890e7b9049af5f1f1fd879fa293687"
+    },
+    "min_reference_donors": {
+      "value": 3,
+      "source": "docs/phase2a/mapping_specification.json parameters (owner D2)"
+    }
+  },
+  "candidate_selection": {
+    "rule": "qualification.select(inventory, min_reference_donors=3): metadata-only D1/D2/D5/D8 qualification, then the D7 order",
+    "selected_in_order": [
+      {
+        "candidate_id": "C03",
+        "accession": "E-MTAB-10283",
+        "arm": "XAV939 + E+P day 6",
+        "libraries": [
+          {
+            "library": "WSSS_END9397531",
+            "ena_run": "ERR5545549"
+          },
+          {
+            "library": "WSSS_END9397535",
+            "ena_run": "ERR5545551"
+          }
+        ]
+      }
+    ],
+    "fallthrough": "a VALUE-BLIND failure of the selected candidate (retrieval checksum, pipeline reproduction, reprocessing, donor-label join, fewer than min_reference_donors donors with cells) passes to the next candidate in the frozen order; a VALUE-AWARE failure (derive() returns NO_STABLE_SEPARATION) never does, because trying candidates until one separates would select a reference by its KLF12 distribution",
+    "next_candidates": "none: C03 is the only metadata-qualified candidate"
+  },
+  "rr14_citations": {
+    "evidence_citation": "E-MTAB-10283 (the reference dataset the state separation is measured in), evidence_kind reference_state_separation",
+    "comparability_evidence": "doi:10.5281/zenodo.17412607 (the ADOC pipeline code and lock file) together with the committed stack-identification result",
+    "threshold_derivation": "repo:docs/phase2b/preregistration_amendment_03.json@d5db35ded71b68b0dd4ceb38ff605de2bb0fde75#sha256:2f83828d5a7c12ed08a605d849fac9c700e7ac92ef2b1fa339199fb55d5318c1"
+  },
+  "verdict_rules": [
+    "NO_SUITABLE_REFERENCE: no candidate qualifies on metadata; or every qualified candidate fails a value-blind check that is not a comparability failure; or derive() returns NO_STABLE_SEPARATION",
+    "BLOCKED_COMPARABILITY: no Cell Ranger stack passes the stack-identification test, or the pinned stack cannot process the selected candidate and no later candidate exists",
+    "BLOCKED_OWNER_DECISION: derive() qualifies but a requirement needs an owner decision not yet taken (owner acceptance under RR12, or activation of config/personalization.yaml)",
+    "QUALIFIED_REFERENCE_FOUND: derive() qualifies and phase2a_contract.evaluate_reference, run on the committed reference files with the manifest named in memory, reports no RR01-RR12 or RR14 failure other than the RR10 activation clause that only the owner's activation commit can satisfy; it enables assumption_conditioned_scenario mapping only, RR13 stays unmet, and no donor-specific model is produced"
+  ],
+  "pinned_implementation_sha256": {
+    "docs/phase2b/adoc_identity_denylist.json": "0527f985ae3543aad79d44bc30ba916caa890e7b9049af5f1f1fd879fa293687",
+    "docs/phase2b/owner_decisions.json": "33acc41bb986bdd6a1c55fb29865bc95ac26726cecb480ebf43d95b53c1b2ae3",
+    "src/dt_adoc/model/topology.py": "2047ed3e2a08470e2342e7f5ca72c50a4a1eb7c06654327b6b137cb001b8a1b3",
+    "src/dt_adoc/personalization/phase2a_contract.py": "55a743e8940f34d61e012425b528ba13823674d41bc8dbff67a3333b5ea9d053",
+    "src/dt_adoc/personalization/phase2b/derivation.py": "0437687eeb00610302c25412922406e11bb1da33a9b1aa87b3726b570f32c8b9",
+    "src/dt_adoc/personalization/phase2b/guard.py": "d9835e6523ee9962ec5062acd3118217f34cf5bb0234c9b7cdfe80fbccb1f8d5",
+    "src/dt_adoc/personalization/phase2b/identity.py": "df97e8a301a4b24e42a608aa46b4e317be264a6e7c1f96aec92a29e2614533f6",
+    "src/dt_adoc/personalization/phase2b/qualification.py": "fa6b33c6ff2ae953b8e9469c5f757200a024053a0e567dbebb958305573c1246",
+    "src/dt_adoc/personalization/phase2b/values.py": "5c2883442d2f8b0a9dc47870c24312fa408770c310e6e911b14b1048755c9774",
+    "src/dt_adoc/scrna/klf12_state.py": "3cbf223bd5110e7492e252ab0884fd58b8490b3cc4087a0c9988c324a92e7b3d",
+    "src/dt_adoc/scrna/node_support_contract.py": "8b4d97af07c8c440601b3754a0c66d7a8517827ecfc2aba458b1a41694d5656d",
+    "src/dt_adoc/scrna/verify_rds.py": "4ff18b44d2aa107767ebe3759fa467f25ea6cb09eaf17c8a1640031dce11f36c"
+  }
+}

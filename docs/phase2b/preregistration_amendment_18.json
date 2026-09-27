@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "kind": "phase2b_rules_amendment",
+  "number": 18,
+  "registered_on": "2026-09-27",
+  "value_blindness": "committed before any E-MTAB-10283 read was converted or counted and before any KLF12 value of any candidate reference was read; only BAM header and raw read-structure statistics (tag lengths, N positions, quality alphabet) of the first ~200,000 records of a partial download were inspected",
+  "decided_by": "project owner, 2026-09-27",
+  "kind_of_change": "INPUT RECONSTRUCTION ROUTE only; replaces amendment 17's bamtofastq step, whose gate failed. No rule, criterion, layer, quantity or derivation changes",
+  "gate_result_amendment_17": "FAILED as written: the ENA BAMs are not Cell Ranger BAMs but ENA's unaligned FASTQ packaging (@PG fastq_pre_barcodes --read1 <R2> --index1 <R1> --umi_read index1 --umi_offset 16 --umi_size 12 --cell_read index1 --cell_offset 0 --cell_size 16 --index2 <I1> --sample_read index2 --sample_offset 0 --sample_size 8, then samtools); no @SQ, no 10x @RG/@CO; bamtofastq cannot convert it (not run). No original Cell Ranger version exists in the header",
+  "losslessness_evidence": {
+    "tags": "every inspected record is unmapped (flag 4) with SEQ/QUAL 91/91 (R2), CR/CY 16/16 (cell barcode and qualities), RX/QX 12/12 (UMI and qualities), BC/QT 8/8 (sample index and qualities), on (original Illumina read name, '@' in place of the space), op (== QUAL in 200,000/200,000 records)",
+    "OX_BZ": "absent",
+    "RX_QX_raw": "established as the original uncorrected UMI and qualities: the @PG chain has only the extraction (UMI = R1 bases 17-28) and a samtools conversion, no correction step; CR is uncorrected (301/200,000 barcodes contain N, which correction removes); N calls are cycle-specific (cycles 1, 2, 4, 8; none after cycle 8), so zero N in the UMI (cycles 17-28) is expected of raw reads; qualities are the raw binned alphabet (',', ':', 'F'); no CB/UB corrected tags"
+  },
+  "reconstruction": {
+    "source": "each ENA BAM after its local md5 and size equal ENA's published values (amendment 17)",
+    "tool": "the pinned Cell Ranger 9.0.1's bundled samtools (lib/bin/samtools) `view`, a deterministic text transform, and pigz",
+    "R1": "sequence = CR + RX (16 + 12 = 28 bases); quality = CY + QX",
+    "R2": "sequence/quality = BAM SEQ/QUAL (91 bases)",
+    "I1": "sequence/quality = BC/QT (8 bases)",
+    "names": "the original read name from `on` (text before '@'), with comments '1:N:0:<index>' (R1), '2:N:0:<index>' (R2) and '1:N:0:<index>' (I1) taken from `on` after '@'; identical names in R1/R2/I1 for each record",
+    "files": "<library>_S1_L001_{R1,R2,I1}_001.fastq.gz, in BAM record order",
+    "requirements": "every record must have exactly these tags and lengths (R1 28, R2 91, I1 8); the number of reconstructed reads must equal ENA read_count (ERR5545549: 400,248,540; ERR5545551: 387,051,041); any violation stops C4",
+    "records": "the reconstructed FASTQs are recorded by sha256, uncompressed-content sha256 and read count as intermediates; the provenance sidecar still names the BAMs with computed and published md5 (amendment 17)"
+  },
+  "cross_check": "the ArrayExpress FASTQs are not downloaded unless the reconstruction exposes an ambiguity",
+  "count": "unchanged from amendment 17: the pinned stack of amendment 16 at the amendment-13 count settings, one library at a time",
+  "unchanged": "every rule of amendments 01-17 other than amendment 17's bamtofastq step: the pinned stack and filtered-count layer, QC, candidate, donor and population rules, count_per_10k, the derivation and every constant, variants, stopping and verdict rules, amendment 15's endpoint role, the amendment-05 frozen C5 citation and the owner's B1/B2 resolution. No code changes; amendment 12's pins are carried verbatim",
+  "review_provenance": "the cross-vendor independent reviewer is unavailable; review is degraded and no independent cross-vendor review is claimed",
+  "changed_pinned_files": [],
+  "implementation_pin_authority": "amendment 12; this amendment carries its pinned_implementation_sha256 verbatim",
+  "frozen_threshold_derivation_citation": {
+    "value": "repo:docs/phase2b/preregistration_amendment_03.json@d5db35ded71b68b0dd4ceb38ff605de2bb0fde75#sha256:2f83828d5a7c12ed08a605d849fac9c700e7ac92ef2b1fa339199fb55d5318c1",
+    "path": "docs/phase2b/preregistration_amendment_03.json",
+    "commit": "d5db35ded71b68b0dd4ceb38ff605de2bb0fde75",
+    "sha256": "2f83828d5a7c12ed08a605d849fac9c700e7ac92ef2b1fa339199fb55d5318c1",
+    "rule": "at C5 the definition file's threshold_derivation is exactly this string, byte for byte; any other value is a deviation. It must pass Phase 2A RR14's repository-citation check (_repository_citation) against the frozen definition pre-registration"
+  },
+  "derivation": {
+    "constants": {
+      "MIN_DETECTED_CELLS": 20,
+      "NULL_REPLICATES": 99,
+      "NULL_SEED": 20260925,
+      "POSTERIOR_LEVELS": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "RULE": ">="
+    },
+    "variant_selection": "all_reported_none_selected"
+  },
+  "inputs_frozen": {
+    "owner_decisions": {
+      "path": "docs/phase2b/owner_decisions.json",
+      "sha256": "33acc41bb986bdd6a1c55fb29865bc95ac26726cecb480ebf43d95b53c1b2ae3"
+    },
+    "candidate_inventory": {
+      "path": "docs/phase2b/candidate_inventory.tsv",
+      "sha256": "84f92f198a5495d4d51416fcfa234960a629285e183169ee3da38300d3d5063e"
+    },
+    "adoc_identity_denylist": {
+      "path": "docs/phase2b/adoc_identity_denylist.json",
+      "sha256": "0527f985ae3543aad79d44bc30ba916caa890e7b9049af5f1f1fd879fa293687"
+    },
+    "min_reference_donors": {
+      "value": 3,
+      "source": "docs/phase2a/mapping_specification.json parameters (owner D2)"
+    }
+  },
+  "candidate_selection": {
+    "rule": "qualification.select(inventory, min_reference_donors=3): metadata-only D1/D2/D5/D8 qualification, then the D7 order",
+    "selected_in_order": [
+      {
+        "candidate_id": "C03",
+        "accession": "E-MTAB-10283",
+        "arm": "XAV939 + E+P day 6",
+        "libraries": [
+          {
+            "library": "WSSS_END9397531",
+            "ena_run": "ERR5545549"
+          },
+          {
+            "library": "WSSS_END9397535",
+            "ena_run": "ERR5545551"
+          }
+        ]
+      }
+    ],
+    "fallthrough": "a VALUE-BLIND failure of the selected candidate (retrieval checksum, pipeline reproduction, reprocessing, donor-label join, fewer than min_reference_donors donors with cells) passes to the next candidate in the frozen order; a VALUE-AWARE failure (derive() returns NO_STABLE_SEPARATION) never does, because trying candidates until one separates would select a reference by its KLF12 distribution",
+    "next_candidates": "none: C03 is the only metadata-qualified candidate"
+  },
+  "rr14_citations": {
+    "evidence_citation": "E-MTAB-10283 (the reference dataset the state separation is measured in), evidence_kind reference_state_separation",
+    "comparability_evidence": "doi:10.5281/zenodo.17412607 (the ADOC pipeline code and lock file) together with the committed stack-identification result",
+    "threshold_derivation": "repo:docs/phase2b/preregistration_amendment_03.json@d5db35ded71b68b0dd4ceb38ff605de2bb0fde75#sha256:2f83828d5a7c12ed08a605d849fac9c700e7ac92ef2b1fa339199fb55d5318c1"
+  },
+  "verdict_rules": [
+    "NO_SUITABLE_REFERENCE: no candidate qualifies on metadata; or every qualified candidate fails a value-blind check that is not a comparability failure; or derive() returns NO_STABLE_SEPARATION",
+    "BLOCKED_COMPARABILITY: no Cell Ranger stack passes the stack-identification test, or the pinned stack cannot process the selected candidate and no later candidate exists",
+    "BLOCKED_OWNER_DECISION: derive() qualifies but a requirement needs an owner decision not yet taken (owner acceptance under RR12, or activation of config/personalization.yaml)",
+    "QUALIFIED_REFERENCE_FOUND: derive() qualifies and phase2a_contract.evaluate_reference, run on the committed reference files with the manifest named in memory, reports no RR01-RR12 or RR14 failure other than the RR10 activation clause that only the owner's activation commit can satisfy; it enables assumption_conditioned_scenario mapping only, RR13 stays unmet, and no donor-specific model is produced"
+  ],
+  "pinned_implementation_sha256": {
+    "docs/phase2b/adoc_identity_denylist.json": "0527f985ae3543aad79d44bc30ba916caa890e7b9049af5f1f1fd879fa293687",
+    "docs/phase2b/owner_decisions.json": "33acc41bb986bdd6a1c55fb29865bc95ac26726cecb480ebf43d95b53c1b2ae3",
+    "src/dt_adoc/model/topology.py": "2047ed3e2a08470e2342e7f5ca72c50a4a1eb7c06654327b6b137cb001b8a1b3",
+    "src/dt_adoc/personalization/phase2a_contract.py": "55a743e8940f34d61e012425b528ba13823674d41bc8dbff67a3333b5ea9d053",
+    "src/dt_adoc/personalization/phase2b/derivation.py": "0437687eeb00610302c25412922406e11bb1da33a9b1aa87b3726b570f32c8b9",
+    "src/dt_adoc/personalization/phase2b/guard.py": "d9835e6523ee9962ec5062acd3118217f34cf5bb0234c9b7cdfe80fbccb1f8d5",
+    "src/dt_adoc/personalization/phase2b/identity.py": "df97e8a301a4b24e42a608aa46b4e317be264a6e7c1f96aec92a29e2614533f6",
+    "src/dt_adoc/personalization/phase2b/qualification.py": "fa6b33c6ff2ae953b8e9469c5f757200a024053a0e567dbebb958305573c1246",
+    "src/dt_adoc/personalization/phase2b/values.py": "5c2883442d2f8b0a9dc47870c24312fa408770c310e6e911b14b1048755c9774",
+    "src/dt_adoc/scrna/klf12_state.py": "3cbf223bd5110e7492e252ab0884fd58b8490b3cc4087a0c9988c324a92e7b3d",
+    "src/dt_adoc/scrna/node_support_contract.py": "8b4d97af07c8c440601b3754a0c66d7a8517827ecfc2aba458b1a41694d5656d",
+    "src/dt_adoc/scrna/verify_rds.py": "4ff18b44d2aa107767ebe3759fa467f25ea6cb09eaf17c8a1640031dce11f36c"
+  }
+}

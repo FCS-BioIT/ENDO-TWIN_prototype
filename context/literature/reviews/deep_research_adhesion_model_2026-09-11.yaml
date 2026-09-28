@@ -1,0 +1,45 @@
+review_id: deep_research_adhesion_model_2026-09-11
+date: '2026-09-11'
+purpose: Literature-driven review and staged extension candidates for the ADOC MaBoSS embryo-adhesion model.
+status: evidence_source
+executable: false
+review_required: true
+repository:
+  full_name: fransua-fcs/dt-ADOC_prototype
+  ref_reviewed: main
+  commit_reviewed: 6bceaec7b508c3425cbdd7b14714019fb5c6955f
+  model_reviewed: models/superset/adoc-literature-superset-v0.4.0
+  reported_node_count: 59
+  reported_dependency_count: 97
+  canonical_literature_review: context/literature/embryo-adhesion-review.md
+scope:
+  primary_endpoint: P(stable adhesion after the defined ADOC embryo challenge and flush protocol)
+  primary_system: maternal ADOC epithelium plus stroma, with embryo represented as external challenge inputs
+  excluded_from_core_execution:
+  - full trophoblast intracellular model
+  - immune-cell modules absent from current ADOC
+  - clinical pregnancy/live-birth prediction
+promotion_policy:
+- Do not overwrite v0.4.0.
+- Merge literature candidates into the canonical context tables only after citation and species/context review.
+- Promote executable nodes/edges only into a new version such as v0.5.0.
+- Keep uncertain or context-dependent biology in rule variants or unresolved mechanisms.
+- Do not infer kinetic rates directly from expression values.
+- Do not interpret raw MaBoSS state occupancy as a calibrated biological adhesion probability until fitted to ADOC
+  outcomes.
+priority_changes:
+- Separate PAEP, PRL and IGFBP1 observation nodes from hard phenotype causality.
+- Replace hand-set interface relay priors with finite-time attachment/detachment kinetics.
+- Add stromal BMP-SMAD and FOXO1 as first high-value de-aliasing nodes.
+- Make existing hCG input functional through CD98/CD9 and apical CDH1 variants.
+- Add IL11-STAT3-ITGA2B1 as a mechanistically identified non-SPP1 adhesion route.
+- Add SOX17 and an explicit sLeX/glycosylation state.
+- Add biochemical ECM support (FN1/COL4 abstraction) alongside mechanics.
+- Represent pharmacological perturbations as target-engagement/rate changes where possible, not only Boolean clamps.
+confidence:
+  repository_schema_mapping: 0.95
+  biological_prioritization: 0.85
+  exact_boolean_rules: 0.65
+  quantitative_compound_prediction_before_new_calibration: 0.55
+bundle_note: Files in this bundle are staged deltas with collision-resistant DR20260911 identifiers. They are intended
+  for review and merge, not direct replacement of canonical tables.

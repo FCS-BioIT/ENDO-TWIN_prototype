@@ -1,0 +1,287 @@
+{
+  "schema_version": 1,
+  "kind": "phase2b_c4_stack_identification",
+  "value_blindness": "whole-matrix comparisons only; no feature name, per-feature value or location of a difference was computed for output; no KLF12 value of ADOC or of any candidate was read",
+  "unit": {
+    "library": "SZ09TE_CNT",
+    "ena_run": "ERR15772621",
+    "accession": "E-MTAB-15842"
+  },
+  "host": {
+    "os": "Ubuntu 24.04.5 LTS",
+    "kernel": "Linux 7.0.0-31-generic x86_64"
+  },
+  "reference_inputs": {
+    "checksums_published": "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_47/MD5SUMS",
+    "files": {
+      "GRCh38.primary_assembly.genome.fa.gz": {
+        "published_md5": "0c33152bea6f09b89fb5e3f89558771e",
+        "local_md5": "0c33152bea6f09b89fb5e3f89558771e"
+      },
+      "gencode.v47.annotation.gtf.gz": {
+        "published_md5": "2459f58694fd330740627a8c371fed6a",
+        "local_md5": "2459f58694fd330740627a8c371fed6a"
+      }
+    },
+    "sha256": {
+      "GRCh38.primary_assembly.genome.fa": "e49b92b3e4f321bf254c042f25b726d9931c4d74c7523e8b6bb530e63b0cfd4b",
+      "gencode.v47.annotation.gtf": "e9bfa521b90719b9365bb35c13c2b8b453b713ff97a8933e32bbfc361490009e",
+      "GRCh38.primary_assembly.genome.fa.gz": "fca1b272425c11d5fa3ab11b2052e815d1b00de722b49617d7819cc998eb1fc1",
+      "gencode.v47.annotation.gtf.gz": "df11938c66d2b39f8ebbdb5f1720919321f9cf9d58f02b019753f6a24ca3db24"
+    }
+  },
+  "cellranger": {
+    "version": "cellranger-9.0.1",
+    "tarball_sha256": "d4c5c0138e00dc8d84547402d79cee534a3d3099fd7c2671262e9d3af64ae11a"
+  },
+  "mkref": {
+    "command": "/home/francois/Tools/cellranger-9.0.1/cellranger mkref --genome=GRCh38_gencode_v47 --fasta=/scratch/dt_adoc_phase2b/ref/GRCh38.primary_assembly.genome.fa --genes=/scratch/dt_adoc_phase2b/ref/gencode.v47.annotation.gtf --nthreads=16 --memgb=64 --disable-ui",
+    "reference_json": {
+      "fasta_hash": "b5c78fd6ef56b6094f411af4c316b08469f7dc79",
+      "genomes": [
+        "GRCh38_gencode_v47"
+      ],
+      "gtf_hash.gz": "23e0e4366dd5be56d9bdf6801a1c5fd02f0d4c29",
+      "input_fasta_files": [
+        "GRCh38.primary_assembly.genome.fa"
+      ],
+      "input_gtf_files": [
+        "gencode.v47.annotation.gtf"
+      ],
+      "mem_gb": 64,
+      "mkref_version": "cellranger-9.0.1",
+      "threads": 8,
+      "version": null
+    },
+    "note": "reference.json records threads 8 although --nthreads=16 was passed (amendment 14's fixed parameters)",
+    "reference_files_sha256": {
+      "GRCh38_gencode_v47/fasta/genome.fa": "e49b92b3e4f321bf254c042f25b726d9931c4d74c7523e8b6bb530e63b0cfd4b",
+      "GRCh38_gencode_v47/fasta/genome.fa.fai": "a2c323ea4cff34d7123ace4578f7e122b2d2f5a22f40dc23eb8b97d17723d169",
+      "GRCh38_gencode_v47/genes/genes.gtf.gz": "7e9a77081836f9b4a087d34a539ba1b1e82a1cad15fba5a4a27c36e9d0ce6376",
+      "GRCh38_gencode_v47/reference.json": "c7258fa7a383bed96f43deece0096d67ba034ee32b18de29d1ed95f731478b4a",
+      "GRCh38_gencode_v47/star/chrLength.txt": "d658af0c38effb24ff025667596d331fbd92cf2706bd8824840b54f727a6ea6c",
+      "GRCh38_gencode_v47/star/chrNameLength.txt": "2d8b1126abff7210cdcbeb1076d962d4e28113bea82b9a5ab6181e80b25de74b",
+      "GRCh38_gencode_v47/star/chrName.txt": "2a6ad41315a63770960b8d52773ce6067bbde58388bed67462354a18dc736333",
+      "GRCh38_gencode_v47/star/chrStart.txt": "f61aef4f45ee4f41768bfce5c9879305326b86b342faef778d7670442ed4e853",
+      "GRCh38_gencode_v47/star/exonGeTrInfo.tab": "b4da6946b524b1a4baa725650beefea10253e7e60946c75a0baeb0bbab8c1939",
+      "GRCh38_gencode_v47/star/exonInfo.tab": "aa44ef8171a7a7167d720f5dc86102cb894ceaf845765420005f6533c9e89fa1",
+      "GRCh38_gencode_v47/star/geneInfo.tab": "3b059a4385f203068976f632d46bc3eae8511a2219d0862307c56a6daa18520f",
+      "GRCh38_gencode_v47/star/Genome": "1ebc7b3b37bfa58f3bcfa0fc1032822f815b3d5384fa7bd5a1a072895b8becad",
+      "GRCh38_gencode_v47/star/genomeParameters.txt": "c5bf8987f7431bb4dd2ad88f2202d629cd5e5d7f1b18f7d780ba290a5c759244",
+      "GRCh38_gencode_v47/star/SA": "077d50f63312ffbc4415534767f44a8309603c2074a888322cf079ffc6b992d6",
+      "GRCh38_gencode_v47/star/SAindex": "a24b1ef6bcb67d1165ae2deb4e1d24813f27e4d4939ac0abcd6f6443ad338535",
+      "GRCh38_gencode_v47/star/sjdbInfo.txt": "97e554ab0b9e5df86e53c5e8fc3f81af73fb5235bf25a0c3dea696b0922aaab1",
+      "GRCh38_gencode_v47/star/sjdbList.fromGTF.out.tab": "425b6ef1267288d0aa61d09a9ae95e1fae08d914758711ed105cf92ba395a103",
+      "GRCh38_gencode_v47/star/sjdbList.out.tab": "cf6e95f281be38e80a9bf70c9230b9cb8c225b9b15dad231ea6eb5773715ba7b",
+      "GRCh38_gencode_v47/star/transcriptInfo.tab": "f29567187cea40ec2d0173d307aad4ab9986f5dda0f3b11ff51a0ace31b68d95"
+    }
+  },
+  "adoc_fastqs": {
+    "SZ09TE_CNT_I1.fastq.gz": {
+      "url": "https://ftp.sra.ebi.ac.uk/vol1/run/ERR157/ERR15772621/SZ09TE_CNT_I1.fastq.gz",
+      "published_md5": "be1c1d149a1ddfc3cb53d1fe04c8795c",
+      "local_md5": "be1c1d149a1ddfc3cb53d1fe04c8795c",
+      "bytes": "4239958927",
+      "published_bytes": "4239958927",
+      "status": "MATCH"
+    },
+    "SZ09TE_CNT_I2.fastq.gz": {
+      "url": "https://ftp.sra.ebi.ac.uk/vol1/run/ERR157/ERR15772621/SZ09TE_CNT_I2.fastq.gz",
+      "published_md5": "443ff557ec33f5e22e82ca9f5b656027",
+      "local_md5": "443ff557ec33f5e22e82ca9f5b656027",
+      "bytes": "4069527305",
+      "published_bytes": "4069527305",
+      "status": "MATCH"
+    },
+    "SZ09TE_CNT_R1.fastq.gz": {
+      "url": "https://ftp.sra.ebi.ac.uk/vol1/run/ERR157/ERR15772621/SZ09TE_CNT_R1.fastq.gz",
+      "published_md5": "0998c2d972c31458be94c40fa2b612c2",
+      "local_md5": "0998c2d972c31458be94c40fa2b612c2",
+      "bytes": "53547021893",
+      "published_bytes": "53547021893",
+      "status": "MATCH"
+    },
+    "SZ09TE_CNT_R2.fastq.gz": {
+      "url": "https://ftp.sra.ebi.ac.uk/vol1/run/ERR157/ERR15772621/SZ09TE_CNT_R2.fastq.gz",
+      "published_md5": "5f6d85023322595215525d5308ec9818",
+      "local_md5": "5f6d85023322595215525d5308ec9818",
+      "bytes": "40915642489",
+      "published_bytes": "40915642489",
+      "status": "MATCH"
+    }
+  },
+  "deposited_comparison_files": {
+    "SZ09TE_CNT_decontx_feature_bc_matrix_filtered_matrix.mtx": {
+      "sha256": "712275fbec562d0156a88188ebea8b8b92f02db91eda45f578ddce5f4c78cbda",
+      "bytes": 1208221128,
+      "url": "https://ftp.ebi.ac.uk/pub/databases/biostudies/E-MTAB-/842/E-MTAB-15842/Files/SZ09TE_CNT_decontx_feature_bc_matrix_filtered_matrix.mtx"
+    },
+    "SZ09TE_CNT_filtered_feature_bc_matrix_matrix.mtx": {
+      "sha256": "0b0e7c74434fe669ccd8221d5adb18391ff09232d74e700388d22eb3a2a4ec57",
+      "bytes": 537083654,
+      "url": "https://ftp.ebi.ac.uk/pub/databases/biostudies/E-MTAB-/842/E-MTAB-15842/Files/SZ09TE_CNT_filtered_feature_bc_matrix_matrix.mtx"
+    },
+    "SZ09TE_CNT_raw_feature_bc_matrix_matrix.mtx": {
+      "sha256": "aa4fe2058096b50e5c2095d3c562b8f1a14d2684013f12aab2f0bf7032d60e7b",
+      "bytes": 1182958074,
+      "url": "https://ftp.ebi.ac.uk/pub/databases/biostudies/E-MTAB-/842/E-MTAB-15842/Files/SZ09TE_CNT_raw_feature_bc_matrix_matrix.mtx"
+    },
+    "SZ09TE_CNT_filtered_and_decontx_feature_bc_matrix_filtered_barcodes.tsv": {
+      "sha256": "434cb4efb79cc5eabdf886da2a7efdd1159f3df36456c311e805f6d2d263cc53",
+      "bytes": 220381,
+      "url": "https://ftp.ebi.ac.uk/pub/databases/biostudies/E-MTAB-/842/E-MTAB-15842/Files/SZ09TE_CNT_filtered_and_decontx_feature_bc_matrix_filtered_barcodes.tsv"
+    },
+    "SZ09TE_CNT_filtered_feature_bc_matrix_barcodes.tsv": {
+      "sha256": "434cb4efb79cc5eabdf886da2a7efdd1159f3df36456c311e805f6d2d263cc53",
+      "bytes": 220381,
+      "url": "https://ftp.ebi.ac.uk/pub/databases/biostudies/E-MTAB-/842/E-MTAB-15842/Files/SZ09TE_CNT_filtered_feature_bc_matrix_barcodes.tsv"
+    },
+    "SZ09TE_CNT_raw_feature_bc_matrix_barcodes.tsv": {
+      "sha256": "b597cf2d589394c80b12056bf88472992be5309a21d7f81de18761c762656ec2",
+      "bytes": 32326410,
+      "url": "https://ftp.ebi.ac.uk/pub/databases/biostudies/E-MTAB-/842/E-MTAB-15842/Files/SZ09TE_CNT_raw_feature_bc_matrix_barcodes.tsv"
+    }
+  },
+  "deposited_feature_table": {
+    "file": "all_feature_bc_matrix_features.tsv",
+    "sha256": "61081d3c878637edfa79c9c5caa0a00a0146730b419554a4516f32f9bad2c8dd"
+  },
+  "count": {
+    "command": "/home/francois/Tools/cellranger-9.0.1/cellranger count --id=SZ09TE_CNT --transcriptome=/scratch/dt_adoc_phase2b/ref/cr9.0.1_a14/GRCh38_gencode_v47 --fastqs=/scratch/dt_adoc_phase2b/adoc/stack_cr9.0.1/fastq --sample=SZ09TE_CNT --create-bam=false --disable-ui"
+  },
+  "decontx_route": {
+    "pipeline": "https://github.com/FCS-BioIT/single-cell-ADOC",
+    "commit": "1f15801ae1820cb2fcec7634a8f522fc1da54e79",
+    "scripts_sha256": {
+      "src/upstream/convert_to_h5.R": "90f3f0564fd1bec96ac80676acbef6aba31f571773f059198966b89f26fe8dd2",
+      "src/upstream/decontx_remove_background.R": "2f5574675d5064ed87c3469e9e0773891829e407575c8197b8df9f86de0c5d0d",
+      "envs/decontx.yaml": "f49ed5dd37f293224225c0945949ee6c4e1c4f65d80aa78da04dd75494696ea1"
+    },
+    "environment": {
+      "built_from": "envs/decontx.yaml with its machine-specific prefix line removed",
+      "R": "4.4.3",
+      "celda": "1.22.0",
+      "explicit_spec": "docs/phase2b_c4/decontx_env.explicit.txt",
+      "explicit_spec_sha256": "73917b0bfa8a0a5b1f83d001eac535e80d725819b2f79a75ddcdd95faf602c6d"
+    },
+    "run2_command": "systemd-run --user --unit=dtadoc-decontx-run2 -p MemoryMax=115G -p MemorySwapMax=0 (cwd adoc/stack_cr9.0.1) envs/decontx/bin/Rscript src/single-cell-ADOC/src/upstream/decontx_remove_background.R --input h5/SZ09TE_CNT_filtered.h5 --input_raw h5/SZ09TE_CNT_raw.h5 --output_h5 decontx_run2/SZ09TE_CNT_decontx.h5 --output_csv decontx_run2/SZ09TE_CNT_decontx_metrics.csv"
+  },
+  "c4_scripts_sha256": {
+    "bam_to_fastq.sh": "a991f9a45abe2259a7f639aa41c9f555e91d4173c121c35d8192e0b03e20af58",
+    "build_ref_and_run_stack.sh": "3af229a1637b50c1e255c0f094249ae3c6e97489c1c4d69d068c81bc4b53dd4b",
+    "compare_decontx_runs.R": "697108fef6140f5dece3af2ac632210e216b51377c3b25cdcbe159ee1e081bc6",
+    "compare_stack.R": "370aa47edb22ba358632ed953d5f211cbf3a1e3a693511913ba26238e3387e86",
+    "fetch_adoc_fastq.sh": "6928dfac219029d1b42faed5bca98c1d2bd63a3d75592fbe0e44fd196a19bfae",
+    "fetch_one.sh": "1f62bd7905fd23900bdded291a5fb5818e2593dcc6d9937252831f48fb9c8150",
+    "fetch_one_bam.sh": "cdafbd7a76a7ef2830e8c67c1bbca1b12e339cbed8ea88b56730626dbd38e270",
+    "run_candidate.sh": "e5a4f578161a79b64899a3077e35a9ca6afd748cece291f2619b6f1aaf409808",
+    "run_stack.sh": "35040fc8c28d0569b7388cfddd4eb4e913ff9062f5efe665fb8bb829188afc94"
+  },
+  "outputs_sha256": {
+    "adoc/stack_cr9.0.1/SZ09TE_CNT/outs/raw_feature_bc_matrix/barcodes.tsv.gz": "e8763691303c5a1d52bfeeb35e648517fbcaa67e78481af23c48176dd36193d9",
+    "adoc/stack_cr9.0.1/SZ09TE_CNT/outs/raw_feature_bc_matrix/features.tsv.gz": "48b069e5aff5bf0105612c1e5c5fd9670f87b820af2278bf54c1014572bf7db2",
+    "adoc/stack_cr9.0.1/SZ09TE_CNT/outs/raw_feature_bc_matrix/matrix.mtx.gz": "052233276448c5a5bca095908a0ef60cedc0b83061c60f146cc4f8186fbf2c0e",
+    "adoc/stack_cr9.0.1/SZ09TE_CNT/outs/filtered_feature_bc_matrix/barcodes.tsv.gz": "809757eff0b72194e198b7985f002d6e42842b7ef1f48c8f42f90456e50af328",
+    "adoc/stack_cr9.0.1/SZ09TE_CNT/outs/filtered_feature_bc_matrix/features.tsv.gz": "e28f962abc30f7778c4123d65e038f5ccd762a70f736c377402304c82b448443",
+    "adoc/stack_cr9.0.1/SZ09TE_CNT/outs/filtered_feature_bc_matrix/matrix.mtx.gz": "e52104c157858b054610b7674dbdeff78f4b45dc331e91974fd9930ae2a160a3",
+    "adoc/stack_cr9.0.1/SZ09TE_CNT/outs/metrics_summary.csv": "8d3475f9fc6c6bcc4213284a6c55e6440ebac6975aefd4a818f76fa0b65c2653",
+    "adoc/stack_cr9.0.1/SZ09TE_CNT/outs/raw_feature_bc_matrix.h5": "a6b05fa0278782158137a75503ac8afc0da28846a4b8ce0d3077e1aff8a6cf72",
+    "adoc/stack_cr9.0.1/SZ09TE_CNT/outs/filtered_feature_bc_matrix.h5": "e93f23c8bfe8b21d625569f8c5d5b5da0ccb47805a230ed087119df4f46be635",
+    "decontx/decontx.log": "592b5bf19853d067d8286d61c06df7e2fe3b266f17687cd783056a00772f2c0e",
+    "decontx/SZ09TE_CNT_decontx.h5": "9679db1d8203c9fd78e00e2cc40c8000610315f216d71d57804f1521820cf704",
+    "decontx/SZ09TE_CNT_decontx_metrics.csv": "6b62abacdd81d67e001d44bb09ba8e620a2286aa61d01ae6da5b3820bb997e8b",
+    "h5/SZ09TE_CNT_filtered.h5": "0a094bf0af2e54f24b7fc9ea747ceba2acde3a221c9863f7b16d6090bddf92b3",
+    "h5/SZ09TE_CNT_raw.h5": "2e651f8eea6d970c78505825a58b10c8ee397cb687343ee0c14157b4612f565a",
+    "compare/decontx.json": "5a4ac8b7563632b0b9dc859002a2c36e32c2720f7ffae7cafb89830895599fca",
+    "compare/features.json": "a7a9a56d4bfd8b7b1009f1f7186258ed17ee05865eb52155e407ce33a60c2981",
+    "compare/filtered.json": "31075962497b78768e2fc4ee00f0d170d54011c6e269625210d2fff4101e4d3a",
+    "compare/raw.json": "b9c82626a408b4ec5f7ded1a6c8e09b7c68c3b1cded7c2e869c8109d1f71926b"
+  },
+  "decontx_run2_outputs_sha256": {
+    "decontx_run2/SZ09TE_CNT_decontx.h5": "9679db1d8203c9fd78e00e2cc40c8000610315f216d71d57804f1521820cf704",
+    "decontx_run2/SZ09TE_CNT_decontx_metrics.csv": "6b62abacdd81d67e001d44bb09ba8e620a2286aa61d01ae6da5b3820bb997e8b"
+  },
+  "comparisons": {
+    "features": {
+      "n_ours": 78724,
+      "n_deposit": 78724,
+      "n_gtf": 78724,
+      "names_in_order_equal_deposit": true,
+      "ids_one_to_one_with_gtf_in_order": true,
+      "ids_unique": true,
+      "all_type_gene_expression": true,
+      "pass": true
+    },
+    "raw": {
+      "dims_ours": [
+        78724,
+        1701390
+      ],
+      "dims_deposit": [
+        78724,
+        1701390
+      ],
+      "barcodes_identical_in_order": true,
+      "barcodes_set_equal": true,
+      "nnz_ours": 77689012,
+      "nnz_deposit": 77689012,
+      "triples_identical": true,
+      "pass": true
+    },
+    "filtered": {
+      "dims_ours": [
+        78724,
+        11599
+      ],
+      "dims_deposit": [
+        78724,
+        11599
+      ],
+      "barcodes_identical_in_order": true,
+      "barcodes_set_equal": true,
+      "nnz_ours": 41468953,
+      "nnz_deposit": 41468953,
+      "triples_identical": true,
+      "pass": true
+    },
+    "decontx": {
+      "dims_ours": [
+        78724,
+        11599
+      ],
+      "dims_deposit": [
+        78724,
+        11599
+      ],
+      "barcodes_identical_in_order": true,
+      "barcodes_set_equal": true,
+      "max_abs_entrywise_difference": 2140.5946002333,
+      "pass": false
+    },
+    "decontx_run1_vs_run2": {
+      "dims_run1": [
+        78724,
+        11599
+      ],
+      "dims_run2": [
+        78724,
+        11599
+      ],
+      "nnz_run1": 41468953,
+      "nnz_run2": 41468953,
+      "barcodes_identical_in_order": true,
+      "content_sha256_run1": "cf8a1d5d3d2086c3c13eebee647047263bb4826f84351ba194f3ff652225c474",
+      "content_sha256_run2": "cf8a1d5d3d2086c3c13eebee647047263bb4826f84351ba194f3ff652225c474",
+      "max_abs_entrywise_difference": 0,
+      "within_frozen_1e6": true,
+      "content_identical": true
+    }
+  },
+  "result": {
+    "criterion_a_raw_and_filtered": "PASS (exact)",
+    "criterion_b_decontx_vs_deposit": "FAIL (max abs difference 2140.5946002333 > 1e-6)",
+    "decontx_reproducibility": "run 1 == run 2 bit-identical",
+    "consequence": "amendment 16"
+  },
+  "retained_scratch": "all files above remain under /scratch/dt_adoc_phase2b; nothing deleted"
+}

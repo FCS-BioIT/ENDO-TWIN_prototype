@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "kind": "phase2b_c4_result",
+  "value_awareness": "VALUE-AWARE: candidate KLF12 per-cell values first generated at 2026-09-28T06:56:50Z, read only through values.open_reference_values (guard passed at 62883dc, governing pins amendment 19)",
+  "candidate": "C03 E-MTAB-10283, XAV939 + E+P day 6, donors B44/U1/U2 (depositor labels), libraries pooled per donor",
+  "layer": "Cell Ranger 9.0.1 filtered UMI counts (amendment 16); quantity count_per_10k; count diagnostic only",
+  "derive_verdict": "NO_STABLE_SEPARATION",
+  "c4_verdict": "NO_SUITABLE_REFERENCE",
+  "rule": "preregistration.json derivation.failure / verdict_rules: derive() NO_STABLE_SEPARATION -> NO_SUITABLE_REFERENCE; no alternative quantity, fit, criterion, threshold, donor subset or candidate is tried afterwards; no next candidate exists (C03 is the only metadata-qualified candidate)",
+  "per_donor_primary": {
+    "B44": {
+      "n_cells": 7200,
+      "n_detected": 3428,
+      "ashman_d": 1.2972322764990902,
+      "checks": {
+        "S1_unique_ordered_separation": true,
+        "S2_bimodal": false,
+        "S3_clears_one_molecule": true,
+        "posterior_boundaries_unique_and_ordered": true
+      },
+      "S5_run": false,
+      "qualifies": false
+    },
+    "U1": {
+      "n_cells": 3049,
+      "n_detected": 1010,
+      "ashman_d": 0.44029125469693037,
+      "checks": {
+        "S1_unique_ordered_separation": false,
+        "S2_bimodal": false,
+        "S3_clears_one_molecule": false,
+        "posterior_boundaries_unique_and_ordered": false
+      },
+      "S5_run": false,
+      "qualifies": false
+    },
+    "U2": {
+      "n_cells": 1914,
+      "n_detected": 505,
+      "ashman_d": 0.08022352985169234,
+      "checks": {
+        "S1_unique_ordered_separation": false,
+        "S2_bimodal": false,
+        "S3_clears_one_molecule": false,
+        "posterior_boundaries_unique_and_ordered": false
+      },
+      "S5_run": false,
+      "qualifies": false
+    }
+  },
+  "diagnostic_count_scale_verdict": "NO_STABLE_SEPARATION",
+  "per_library_diagnostic_verdicts": {
+    "WSSS_END9397531": "NO_STABLE_SEPARATION",
+    "WSSS_END9397535": "NO_STABLE_SEPARATION"
+  },
+  "thresholds": "none emitted (derive emits thresholds only when every donor qualifies)",
+  "not_claimed": "no threshold, no KLF12-high definition, no QUALIFIED_REFERENCE_FOUND, no donor model; this says the preregistered separation procedure found no stable two-state KLF12 separation in this reference, not that KLF12 has no biological states",
+  "files_sha256": {
+    "KLF12_FIRST_GENERATED_UTC.txt": "bef4dfd818a706e9ecb1a0e71312ab909777ff5dacfbd674482a5ff079fa0dd7",
+    "derivation_result.json": "9070b0f192d4ddfff4c10125a532de3e8c6061c0107bdda2101f5cbdb3a15e6c",
+    "per_cell_WSSS_END9397531.provenance.json": "f4f98f2055f5d5b48b44e89f55b8973608f880fedb68a3a7844baf3d74780710",
+    "per_cell_WSSS_END9397531.tsv": "a458999966c23ec2f4fc542d099aa99731f7264753b78bd5a3b402e19b70fa9f",
+    "per_cell_WSSS_END9397535.provenance.json": "975e8b3b687619562d220303aea948aa8e2250cde555b7b80b794af510a3c02d",
+    "per_cell_WSSS_END9397535.tsv": "cb93efaf464253f433dc6998a0cf24d9040a8012217ceb7b47535c3c00c84509",
+    "per_cell_pooled.provenance.json": "2bab13ef7faab685a958c9d2933a2c4d76f10d98f6ab5a2e118d3efdc98547a1",
+    "per_cell_pooled.tsv": "0342cf2f39f74a4650af092d5480004e29f3ae29738501a50b8bf1b13765c1e3"
+  }
+}

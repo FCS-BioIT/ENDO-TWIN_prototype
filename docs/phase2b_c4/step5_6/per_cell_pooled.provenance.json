@@ -1,0 +1,16 @@
+{
+  "source_accession": "E-MTAB-10283",
+  "per_cell_table_sha256": "0342cf2f39f74a4650af092d5480004e29f3ae29738501a50b8bf1b13765c1e3",
+  "input_files": [
+    {
+      "name": "WSSS_END9397531.bam",
+      "md5": "983a9ef7eface9c08954cf57375118c6",
+      "published_md5": "983a9ef7eface9c08954cf57375118c6"
+    },
+    {
+      "name": "WSSS_END9397535.bam",
+      "md5": "402e74e892a7355ca568196544080b3b",
+      "published_md5": "402e74e892a7355ca568196544080b3b"
+    }
+  ]
+}

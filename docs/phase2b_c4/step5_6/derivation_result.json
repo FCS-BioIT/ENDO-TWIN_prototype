@@ -1,0 +1,902 @@
+{
+  "pooled": {
+    "table_sha256": "0342cf2f39f74a4650af092d5480004e29f3ae29738501a50b8bf1b13765c1e3",
+    "provenance_sha256": "2bab13ef7faab685a958c9d2933a2c4d76f10d98f6ab5a2e118d3efdc98547a1",
+    "guard_proof": {
+      "rules_commit": "b586488353b7bba5e1072fa5db81fedff4fbd81c",
+      "owner_decisions_commit": "29298598a88d8e262932af5af95595038ace9ed8",
+      "head": "62883dccc61b6647cd06a0417bca3086a17d6b9f",
+      "preregistration_json_sha256": "268b5fe3bbe65e355df135932363de50f5d335966c599020ad998eeaece7439a",
+      "preregistration_md_sha256": "e34a21a61adc1330046b8f8dee8ded8c8530da047a0f5886a2919a0420fef84e",
+      "amendments": "01:d8c8736e492f43b78b3dbae84eaf408d64aa86cf;02:a07256d83439e492f99b01d6f136406b90ff33c7;03:d5db35ded71b68b0dd4ceb38ff605de2bb0fde75;04:aec0413cb706d20520ae8081346219a4f0fb514e;05:5370e0fd10a18d5cd164496bec80099348fcbebf;06:26d86925d955360058a8256d38de84352a2ca38a;07:3a570cdca970a11d92618160b4bd0a6caa772e15;08:4b5aae58dc772f886cd540a2ff53d6ec2a61a2a3;09:ca93c7d45ce31c33d0927208360c6c11b47c0329;10:1c61735606c989983ef5b4fceb4d5f9eeae896a8;11:10569feaf73d8f0d578769ad99c06da158d4017d;12:0ac3ef7221528c51d914141ffc06c61c831d53ce;13:4b49d4ba74df512ea68c9a52770888a481b05518;14:5e3c729e9500f14a95898c742f539a3c52710b67;15:0fb9429763409bb845334d24c497337ddc0ce0ab;16:73ebdc7d4bd2c38b523ad05690a3e6d4d53eb94a;17:af332f8794639c1da8ca147a07dd5de99a39be76;18:061edc942a0aec974a730c6ffd12331462d12787;19:3782a145984409e1ff9585d31da2b92311269cac",
+      "governing_pins": "docs/phase2b/preregistration_amendment_19.json"
+    },
+    "accession": "E-MTAB-10283",
+    "n_cells_by_donor": {
+      "B44": 7200,
+      "U1": 3049,
+      "U2": 1914
+    },
+    "derivation": {
+      "verdict": "NO_STABLE_SEPARATION",
+      "quantity": "count_per_10k",
+      "rule": ">=",
+      "aggregation_unit": "donor",
+      "n_reference_donors": 3,
+      "min_reference_donors": 3,
+      "per_donor": [
+        {
+          "donor_id": "B44",
+          "n_cells": 7200,
+          "observed": {
+            "qualifies": false,
+            "ashman_d": 1.2972322764990902,
+            "checks": {
+              "S1_unique_ordered_separation": true,
+              "S2_bimodal": false,
+              "S3_clears_one_molecule": true,
+              "posterior_boundaries_unique_and_ordered": true
+            },
+            "diagnostics": {
+              "D4_high_excludes_half_of_detected": true
+            },
+            "n_detected": 3428,
+            "one_molecule_floor": 0.9079353550027238,
+            "boundaries": {
+              "0.25": 1.2297152713354023,
+              "0.5": 1.8728962543874066,
+              "0.75": 2.714564309049666
+            },
+            "fit": {
+              "analytic_bimodal": false,
+              "analytic_density_modes": 1,
+              "boundary_log": 0.6274860318517336,
+              "boundary_value": 1.8728962543874066,
+              "density_minimum_log": null,
+              "density_minimum_value": null,
+              "high_component_share_of_detected": 0.27683780630105015,
+              "high_component_weight": 0.3604536393521323,
+              "interior_only_rule_boundary_log": 0.6274860318517336,
+              "interior_only_rule_boundary_value": 1.8728962543874066,
+              "log_mean_high": 0.719711137321516,
+              "log_mean_low": 0.06117101949506196,
+              "log_sd_high": 0.5353377763813992,
+              "log_sd_low": 0.4783625708031217,
+              "n_detected": 3428,
+              "ordered_separation": true
+            }
+          },
+          "null_specificity": null,
+          "qualifies": false
+        },
+        {
+          "donor_id": "U1",
+          "n_cells": 3049,
+          "observed": {
+            "qualifies": false,
+            "ashman_d": 0.44029125469693037,
+            "checks": {
+              "S1_unique_ordered_separation": false,
+              "S2_bimodal": false,
+              "S3_clears_one_molecule": false,
+              "posterior_boundaries_unique_and_ordered": false
+            },
+            "diagnostics": {
+              "D4_high_excludes_half_of_detected": false
+            },
+            "n_detected": 1010,
+            "one_molecule_floor": 0.9767055721052889,
+            "boundaries": {
+              "0.25": null,
+              "0.5": null,
+              "0.75": null
+            },
+            "fit": {
+              "analytic_bimodal": false,
+              "analytic_density_modes": 1,
+              "boundary_log": null,
+              "boundary_value": null,
+              "density_minimum_log": null,
+              "density_minimum_value": null,
+              "high_component_share_of_detected": 1.0,
+              "high_component_weight": 0.7849997315759967,
+              "interior_only_rule_boundary_log": null,
+              "interior_only_rule_boundary_value": null,
+              "log_mean_high": 0.2781547995658777,
+              "log_mean_low": 0.0770365568370306,
+              "log_sd_high": 0.6017137648131573,
+              "log_sd_low": 0.23504211498568056,
+              "n_detected": 1010,
+              "ordered_separation": false
+            }
+          },
+          "null_specificity": null,
+          "qualifies": false
+        },
+        {
+          "donor_id": "U2",
+          "n_cells": 1914,
+          "observed": {
+            "qualifies": false,
+            "ashman_d": 0.08022352985169234,
+            "checks": {
+              "S1_unique_ordered_separation": false,
+              "S2_bimodal": false,
+              "S3_clears_one_molecule": false,
+              "posterior_boundaries_unique_and_ordered": false
+            },
+            "diagnostics": {
+              "D4_high_excludes_half_of_detected": false
+            },
+            "n_detected": 505,
+            "one_molecule_floor": 1.2473493825620556,
+            "boundaries": {
+              "0.25": null,
+              "0.5": null,
+              "0.75": null
+            },
+            "fit": {
+              "analytic_bimodal": false,
+              "analytic_density_modes": 1,
+              "boundary_log": null,
+              "boundary_value": null,
+              "density_minimum_log": null,
+              "density_minimum_value": null,
+              "high_component_share_of_detected": 1.0,
+              "high_component_weight": 0.768279562409976,
+              "interior_only_rule_boundary_log": null,
+              "interior_only_rule_boundary_value": null,
+              "log_mean_high": 0.44449958187567595,
+              "log_mean_low": 0.40744291135611527,
+              "log_sd_high": 0.6096993818780768,
+              "log_sd_low": 0.2345264075035779,
+              "n_detected": 505,
+              "ordered_separation": false
+            }
+          },
+          "null_specificity": null,
+          "qualifies": false
+        }
+      ],
+      "variant_selection": "all_reported_none_selected",
+      "diagnostic_count_scale": {
+        "role": "diagnostic only; never the primary quantity and never a variant",
+        "verdict": "NO_STABLE_SEPARATION",
+        "per_donor": [
+          {
+            "donor_id": "B44",
+            "n_cells": 7200,
+            "observed": {
+              "qualifies": false,
+              "ashman_d": 3.645980388585153,
+              "checks": {
+                "S1_unique_ordered_separation": true,
+                "S2_bimodal": false,
+                "S3_clears_one_molecule": true,
+                "posterior_boundaries_unique_and_ordered": true
+              },
+              "diagnostics": {
+                "D4_high_excludes_half_of_detected": true
+              },
+              "n_detected": 3428,
+              "one_molecule_floor": 1.0,
+              "boundaries": {
+                "0.25": 1.000005524582629,
+                "0.5": 1.0000057199872145,
+                "0.75": 1.0000059089334876
+              },
+              "fit": {
+                "analytic_bimodal": false,
+                "analytic_density_modes": 1,
+                "boundary_log": 5.71997085537253e-06,
+                "boundary_value": 1.0000057199872145,
+                "density_minimum_log": null,
+                "density_minimum_value": null,
+                "high_component_share_of_detected": 0.4579929988331389,
+                "high_component_weight": 0.45799304142733677,
+                "interior_only_rule_boundary_log": 5.71997085537253e-06,
+                "interior_only_rule_boundary_value": 1.0000057199872145,
+                "log_mean_high": 0.9988950154927295,
+                "log_mean_low": 0.0,
+                "log_sd_high": 0.3874543271584038,
+                "log_sd_low": 1e-06,
+                "n_detected": 3428,
+                "ordered_separation": true
+              }
+            },
+            "null_specificity": null,
+            "qualifies": false
+          },
+          {
+            "donor_id": "U1",
+            "n_cells": 3049,
+            "observed": {
+              "qualifies": false,
+              "ashman_d": 4.223133701839755,
+              "checks": {
+                "S1_unique_ordered_separation": true,
+                "S2_bimodal": false,
+                "S3_clears_one_molecule": true,
+                "posterior_boundaries_unique_and_ordered": true
+              },
+              "diagnostics": {
+                "D4_high_excludes_half_of_detected": true
+              },
+              "n_detected": 1010,
+              "one_molecule_floor": 1.0,
+              "boundaries": {
+                "0.25": 1.000005751867322,
+                "0.5": 1.0000059397994678,
+                "0.75": 1.0000061219652459
+              },
+              "fit": {
+                "analytic_bimodal": false,
+                "analytic_density_modes": 1,
+                "boundary_log": 5.9397818272776605e-06,
+                "boundary_value": 1.0000059397994678,
+                "density_minimum_log": null,
+                "density_minimum_value": null,
+                "high_component_share_of_detected": 0.3564356435643564,
+                "high_component_weight": 0.3564356576051671,
+                "interior_only_rule_boundary_log": 5.9397818272776605e-06,
+                "interior_only_rule_boundary_value": 1.0000059397994678,
+                "log_mean_high": 0.8776344480006473,
+                "log_mean_low": 0.0,
+                "log_sd_high": 0.29389610341260536,
+                "log_sd_low": 1e-06,
+                "n_detected": 1010,
+                "ordered_separation": true
+              }
+            },
+            "null_specificity": null,
+            "qualifies": false
+          },
+          {
+            "donor_id": "U2",
+            "n_cells": 1914,
+            "observed": {
+              "qualifies": false,
+              "ashman_d": 3.96696996561641,
+              "checks": {
+                "S1_unique_ordered_separation": true,
+                "S2_bimodal": false,
+                "S3_clears_one_molecule": true,
+                "posterior_boundaries_unique_and_ordered": true
+              },
+              "diagnostics": {
+                "D4_high_excludes_half_of_detected": true
+              },
+              "n_detected": 505,
+              "one_molecule_floor": 1.0,
+              "boundaries": {
+                "0.25": 1.0000057085618144,
+                "0.5": 1.0000058978740543,
+                "0.75": 1.0000060812958693
+              },
+              "fit": {
+                "analytic_bimodal": false,
+                "analytic_density_modes": 1,
+                "boundary_log": 5.897856661944264e-06,
+                "boundary_value": 1.0000058978740543,
+                "density_minimum_log": null,
+                "density_minimum_value": null,
+                "high_component_share_of_detected": 0.31287128712871287,
+                "high_component_weight": 0.3128713063424139,
+                "interior_only_rule_boundary_log": 5.897856661944264e-06,
+                "interior_only_rule_boundary_value": 1.0000058978740543,
+                "log_mean_high": 0.8934942573437509,
+                "log_mean_low": 0.0,
+                "log_sd_high": 0.31852817328689753,
+                "log_sd_low": 1e-06,
+                "n_detected": 505,
+                "ordered_separation": true
+              }
+            },
+            "null_specificity": null,
+            "qualifies": false
+          }
+        ]
+      }
+    }
+  },
+  "WSSS_END9397531": {
+    "table_sha256": "a458999966c23ec2f4fc542d099aa99731f7264753b78bd5a3b402e19b70fa9f",
+    "provenance_sha256": "f4f98f2055f5d5b48b44e89f55b8973608f880fedb68a3a7844baf3d74780710",
+    "guard_proof": {
+      "rules_commit": "b586488353b7bba5e1072fa5db81fedff4fbd81c",
+      "owner_decisions_commit": "29298598a88d8e262932af5af95595038ace9ed8",
+      "head": "62883dccc61b6647cd06a0417bca3086a17d6b9f",
+      "preregistration_json_sha256": "268b5fe3bbe65e355df135932363de50f5d335966c599020ad998eeaece7439a",
+      "preregistration_md_sha256": "e34a21a61adc1330046b8f8dee8ded8c8530da047a0f5886a2919a0420fef84e",
+      "amendments": "01:d8c8736e492f43b78b3dbae84eaf408d64aa86cf;02:a07256d83439e492f99b01d6f136406b90ff33c7;03:d5db35ded71b68b0dd4ceb38ff605de2bb0fde75;04:aec0413cb706d20520ae8081346219a4f0fb514e;05:5370e0fd10a18d5cd164496bec80099348fcbebf;06:26d86925d955360058a8256d38de84352a2ca38a;07:3a570cdca970a11d92618160b4bd0a6caa772e15;08:4b5aae58dc772f886cd540a2ff53d6ec2a61a2a3;09:ca93c7d45ce31c33d0927208360c6c11b47c0329;10:1c61735606c989983ef5b4fceb4d5f9eeae896a8;11:10569feaf73d8f0d578769ad99c06da158d4017d;12:0ac3ef7221528c51d914141ffc06c61c831d53ce;13:4b49d4ba74df512ea68c9a52770888a481b05518;14:5e3c729e9500f14a95898c742f539a3c52710b67;15:0fb9429763409bb845334d24c497337ddc0ce0ab;16:73ebdc7d4bd2c38b523ad05690a3e6d4d53eb94a;17:af332f8794639c1da8ca147a07dd5de99a39be76;18:061edc942a0aec974a730c6ffd12331462d12787;19:3782a145984409e1ff9585d31da2b92311269cac",
+      "governing_pins": "docs/phase2b/preregistration_amendment_19.json"
+    },
+    "accession": "E-MTAB-10283",
+    "n_cells_by_donor": {
+      "B44": 4060,
+      "U1": 1621,
+      "U2": 995
+    },
+    "derivation": {
+      "verdict": "NO_STABLE_SEPARATION",
+      "quantity": "count_per_10k",
+      "rule": ">=",
+      "aggregation_unit": "donor",
+      "n_reference_donors": 3,
+      "min_reference_donors": 3,
+      "per_donor": [
+        {
+          "donor_id": "B44",
+          "n_cells": 4060,
+          "observed": {
+            "qualifies": false,
+            "ashman_d": 1.0871428212729224,
+            "checks": {
+              "S1_unique_ordered_separation": true,
+              "S2_bimodal": false,
+              "S3_clears_one_molecule": true,
+              "posterior_boundaries_unique_and_ordered": true
+            },
+            "diagnostics": {
+              "D4_high_excludes_half_of_detected": true
+            },
+            "n_detected": 1886,
+            "one_molecule_floor": 0.9259687948516135,
+            "boundaries": {
+              "0.25": 1.0026877616204646,
+              "0.5": 1.738786959141486,
+              "0.75": 2.7142479206458843
+            },
+            "fit": {
+              "analytic_bimodal": false,
+              "analytic_density_modes": 1,
+              "boundary_log": 0.5531877201857454,
+              "boundary_value": 1.738786959141486,
+              "density_minimum_log": null,
+              "density_minimum_value": null,
+              "high_component_share_of_detected": 0.3123011664899258,
+              "high_component_weight": 0.413825254128761,
+              "interior_only_rule_boundary_log": 0.5531877201857454,
+              "interior_only_rule_boundary_value": 1.738786959141486,
+              "log_mean_high": 0.6399882671267973,
+              "log_mean_low": 0.056387834178383986,
+              "log_sd_high": 0.5716436490849227,
+              "log_sd_low": 0.4995756199046471,
+              "n_detected": 1886,
+              "ordered_separation": true
+            }
+          },
+          "null_specificity": null,
+          "qualifies": false
+        },
+        {
+          "donor_id": "U1",
+          "n_cells": 1621,
+          "observed": {
+            "qualifies": false,
+            "ashman_d": 0.15388436021431642,
+            "checks": {
+              "S1_unique_ordered_separation": false,
+              "S2_bimodal": false,
+              "S3_clears_one_molecule": false,
+              "posterior_boundaries_unique_and_ordered": false
+            },
+            "diagnostics": {
+              "D4_high_excludes_half_of_detected": false
+            },
+            "n_detected": 488,
+            "one_molecule_floor": 0.989756025139803,
+            "boundaries": {
+              "0.25": null,
+              "0.5": null,
+              "0.75": null
+            },
+            "fit": {
+              "analytic_bimodal": false,
+              "analytic_density_modes": 1,
+              "boundary_log": null,
+              "boundary_value": null,
+              "density_minimum_log": null,
+              "density_minimum_value": null,
+              "high_component_share_of_detected": 1.0,
+              "high_component_weight": 0.8470738905022993,
+              "interior_only_rule_boundary_log": null,
+              "interior_only_rule_boundary_value": null,
+              "log_mean_high": 0.25556878435845576,
+              "log_mean_low": 0.18711737305781984,
+              "log_sd_high": 0.5822506895738234,
+              "log_sd_low": 0.2381604335569037,
+              "n_detected": 488,
+              "ordered_separation": false
+            }
+          },
+          "null_specificity": null,
+          "qualifies": false
+        },
+        {
+          "donor_id": "U2",
+          "n_cells": 995,
+          "observed": {
+            "qualifies": false,
+            "ashman_d": 0.07646848992726248,
+            "checks": {
+              "S1_unique_ordered_separation": false,
+              "S2_bimodal": false,
+              "S3_clears_one_molecule": false,
+              "posterior_boundaries_unique_and_ordered": false
+            },
+            "diagnostics": {
+              "D4_high_excludes_half_of_detected": false
+            },
+            "n_detected": 234,
+            "one_molecule_floor": 1.3476180850347013,
+            "boundaries": {
+              "0.25": null,
+              "0.5": null,
+              "0.75": null
+            },
+            "fit": {
+              "analytic_bimodal": false,
+              "analytic_density_modes": 1,
+              "boundary_log": null,
+              "boundary_value": null,
+              "density_minimum_log": null,
+              "density_minimum_value": null,
+              "high_component_share_of_detected": 0.6452991452991453,
+              "high_component_weight": 0.6635105894167336,
+              "interior_only_rule_boundary_log": null,
+              "interior_only_rule_boundary_value": null,
+              "log_mean_high": 0.46668682661863886,
+              "log_mean_low": 0.4303043312251229,
+              "log_sd_high": 0.6336859343097191,
+              "log_sd_low": 0.22623715265758754,
+              "n_detected": 234,
+              "ordered_separation": false
+            }
+          },
+          "null_specificity": null,
+          "qualifies": false
+        }
+      ],
+      "variant_selection": "all_reported_none_selected",
+      "diagnostic_count_scale": {
+        "role": "diagnostic only; never the primary quantity and never a variant",
+        "verdict": "NO_STABLE_SEPARATION",
+        "per_donor": [
+          {
+            "donor_id": "B44",
+            "n_cells": 4060,
+            "observed": {
+              "qualifies": false,
+              "ashman_d": 3.727023870821713,
+              "checks": {
+                "S1_unique_ordered_separation": true,
+                "S2_bimodal": false,
+                "S3_clears_one_molecule": true,
+                "posterior_boundaries_unique_and_ordered": true
+              },
+              "diagnostics": {
+                "D4_high_excludes_half_of_detected": true
+              },
+              "n_detected": 1886,
+              "one_molecule_floor": 1.0,
+              "boundaries": {
+                "0.25": 1.0000055452542123,
+                "0.5": 1.0000057399551108,
+                "0.75": 1.0000059282649898
+              },
+              "fit": {
+                "analytic_bimodal": false,
+                "analytic_density_modes": 1,
+                "boundary_log": 5.739938637208662e-06,
+                "boundary_value": 1.0000057399551108,
+                "density_minimum_log": null,
+                "density_minimum_value": null,
+                "high_component_share_of_detected": 0.4544008483563097,
+                "high_component_weight": 0.45440088659723316,
+                "interior_only_rule_boundary_log": 5.739938637208662e-06,
+                "interior_only_rule_boundary_value": 1.0000057399551108,
+                "log_mean_high": 0.9718374520961583,
+                "log_mean_low": 0.0,
+                "log_sd_high": 0.3687622491316188,
+                "log_sd_low": 1e-06,
+                "n_detected": 1886,
+                "ordered_separation": true
+              }
+            },
+            "null_specificity": null,
+            "qualifies": false
+          },
+          {
+            "donor_id": "U1",
+            "n_cells": 1621,
+            "observed": {
+              "qualifies": false,
+              "ashman_d": 4.079813567511766,
+              "checks": {
+                "S1_unique_ordered_separation": true,
+                "S2_bimodal": false,
+                "S3_clears_one_molecule": true,
+                "posterior_boundaries_unique_and_ordered": true
+              },
+              "diagnostics": {
+                "D4_high_excludes_half_of_detected": true
+              },
+              "n_detected": 488,
+              "one_molecule_floor": 1.0,
+              "boundaries": {
+                "0.25": 1.0000057183516395,
+                "0.5": 1.0000059073501355,
+                "0.75": 1.0000060904865566
+              },
+              "fit": {
+                "analytic_bimodal": false,
+                "analytic_density_modes": 1,
+                "boundary_log": 5.90733268713345e-06,
+                "boundary_value": 1.0000059073501355,
+                "density_minimum_log": null,
+                "density_minimum_value": null,
+                "high_component_share_of_detected": 0.3401639344262295,
+                "high_component_weight": 0.34016395187302756,
+                "interior_only_rule_boundary_log": 5.90733268713345e-06,
+                "interior_only_rule_boundary_value": 1.0000059073501355,
+                "log_mean_high": 0.8768052177649825,
+                "log_mean_low": 0.0,
+                "log_sd_high": 0.30393296409185633,
+                "log_sd_low": 1e-06,
+                "n_detected": 488,
+                "ordered_separation": true
+              }
+            },
+            "null_specificity": null,
+            "qualifies": false
+          },
+          {
+            "donor_id": "U2",
+            "n_cells": 995,
+            "observed": {
+              "qualifies": false,
+              "ashman_d": 3.7806901570785416,
+              "checks": {
+                "S1_unique_ordered_separation": true,
+                "S2_bimodal": false,
+                "S3_clears_one_molecule": true,
+                "posterior_boundaries_unique_and_ordered": true
+              },
+              "diagnostics": {
+                "D4_high_excludes_half_of_detected": true
+              },
+              "n_detected": 234,
+              "one_molecule_floor": 1.0,
+              "boundaries": {
+                "0.25": 1.0000056598397205,
+                "0.5": 1.0000058507286838,
+                "0.75": 1.0000060355834277
+              },
+              "fit": {
+                "analytic_bimodal": false,
+                "analytic_density_modes": 1,
+                "boundary_log": 5.85071156823008e-06,
+                "boundary_value": 1.0000058507286838,
+                "density_minimum_log": null,
+                "density_minimum_value": null,
+                "high_component_share_of_detected": 0.3034188034188034,
+                "high_component_weight": 0.303418829112219,
+                "interior_only_rule_boundary_log": 5.85071156823008e-06,
+                "interior_only_rule_boundary_value": 1.0000058507286838,
+                "log_mean_high": 0.8858637123222305,
+                "log_mean_low": 0.0,
+                "log_sd_high": 0.33136819583825666,
+                "log_sd_low": 1e-06,
+                "n_detected": 234,
+                "ordered_separation": true
+              }
+            },
+            "null_specificity": null,
+            "qualifies": false
+          }
+        ]
+      }
+    }
+  },
+  "WSSS_END9397535": {
+    "table_sha256": "cb93efaf464253f433dc6998a0cf24d9040a8012217ceb7b47535c3c00c84509",
+    "provenance_sha256": "975e8b3b687619562d220303aea948aa8e2250cde555b7b80b794af510a3c02d",
+    "guard_proof": {
+      "rules_commit": "b586488353b7bba5e1072fa5db81fedff4fbd81c",
+      "owner_decisions_commit": "29298598a88d8e262932af5af95595038ace9ed8",
+      "head": "62883dccc61b6647cd06a0417bca3086a17d6b9f",
+      "preregistration_json_sha256": "268b5fe3bbe65e355df135932363de50f5d335966c599020ad998eeaece7439a",
+      "preregistration_md_sha256": "e34a21a61adc1330046b8f8dee8ded8c8530da047a0f5886a2919a0420fef84e",
+      "amendments": "01:d8c8736e492f43b78b3dbae84eaf408d64aa86cf;02:a07256d83439e492f99b01d6f136406b90ff33c7;03:d5db35ded71b68b0dd4ceb38ff605de2bb0fde75;04:aec0413cb706d20520ae8081346219a4f0fb514e;05:5370e0fd10a18d5cd164496bec80099348fcbebf;06:26d86925d955360058a8256d38de84352a2ca38a;07:3a570cdca970a11d92618160b4bd0a6caa772e15;08:4b5aae58dc772f886cd540a2ff53d6ec2a61a2a3;09:ca93c7d45ce31c33d0927208360c6c11b47c0329;10:1c61735606c989983ef5b4fceb4d5f9eeae896a8;11:10569feaf73d8f0d578769ad99c06da158d4017d;12:0ac3ef7221528c51d914141ffc06c61c831d53ce;13:4b49d4ba74df512ea68c9a52770888a481b05518;14:5e3c729e9500f14a95898c742f539a3c52710b67;15:0fb9429763409bb845334d24c497337ddc0ce0ab;16:73ebdc7d4bd2c38b523ad05690a3e6d4d53eb94a;17:af332f8794639c1da8ca147a07dd5de99a39be76;18:061edc942a0aec974a730c6ffd12331462d12787;19:3782a145984409e1ff9585d31da2b92311269cac",
+      "governing_pins": "docs/phase2b/preregistration_amendment_19.json"
+    },
+    "accession": "E-MTAB-10283",
+    "n_cells_by_donor": {
+      "B44": 3140,
+      "U1": 1428,
+      "U2": 919
+    },
+    "derivation": {
+      "verdict": "NO_STABLE_SEPARATION",
+      "quantity": "count_per_10k",
+      "rule": ">=",
+      "aggregation_unit": "donor",
+      "n_reference_donors": 3,
+      "min_reference_donors": 3,
+      "per_donor": [
+        {
+          "donor_id": "B44",
+          "n_cells": 3140,
+          "observed": {
+            "qualifies": false,
+            "ashman_d": 1.680814419364563,
+            "checks": {
+              "S1_unique_ordered_separation": true,
+              "S2_bimodal": false,
+              "S3_clears_one_molecule": true,
+              "posterior_boundaries_unique_and_ordered": true
+            },
+            "diagnostics": {
+              "D4_high_excludes_half_of_detected": true
+            },
+            "n_detected": 1542,
+            "one_molecule_floor": 0.8934953538241601,
+            "boundaries": {
+              "0.25": 1.5668223877048029,
+              "0.5": 2.1153022804863335,
+              "0.75": 2.839462033639227
+            },
+            "fit": {
+              "analytic_bimodal": false,
+              "analytic_density_modes": 1,
+              "boundary_log": 0.749197724501595,
+              "boundary_value": 2.1153022804863335,
+              "density_minimum_log": null,
+              "density_minimum_value": null,
+              "high_component_share_of_detected": 0.2191958495460441,
+              "high_component_weight": 0.27127297302470055,
+              "interior_only_rule_boundary_log": 0.749197724501595,
+              "interior_only_rule_boundary_value": 2.1153022804863335,
+              "log_mean_high": 0.8666948289734019,
+              "log_mean_low": 0.08813395860718835,
+              "log_sd_high": 0.46911787872042227,
+              "log_sd_low": 0.4572147286341997,
+              "n_detected": 1542,
+              "ordered_separation": true
+            }
+          },
+          "null_specificity": null,
+          "qualifies": false
+        },
+        {
+          "donor_id": "U1",
+          "n_cells": 1428,
+          "observed": {
+            "qualifies": false,
+            "ashman_d": 0.529726605458311,
+            "checks": {
+              "S1_unique_ordered_separation": false,
+              "S2_bimodal": false,
+              "S3_clears_one_molecule": false,
+              "posterior_boundaries_unique_and_ordered": false
+            },
+            "diagnostics": {
+              "D4_high_excludes_half_of_detected": false
+            },
+            "n_detected": 522,
+            "one_molecule_floor": 0.969743987587277,
+            "boundaries": {
+              "0.25": null,
+              "0.5": null,
+              "0.75": null
+            },
+            "fit": {
+              "analytic_bimodal": false,
+              "analytic_density_modes": 1,
+              "boundary_log": null,
+              "boundary_value": null,
+              "density_minimum_log": null,
+              "density_minimum_value": null,
+              "high_component_share_of_detected": 0.8601532567049809,
+              "high_component_weight": 0.7707491938118901,
+              "interior_only_rule_boundary_log": 0.09994500555294486,
+              "interior_only_rule_boundary_value": 1.1051101414833095,
+              "log_mean_high": 0.2804016928224583,
+              "log_mean_low": 0.04044468745125165,
+              "log_sd_high": 0.6145744659512673,
+              "log_sd_low": 0.1807897624577636,
+              "n_detected": 522,
+              "ordered_separation": false
+            }
+          },
+          "null_specificity": null,
+          "qualifies": false
+        },
+        {
+          "donor_id": "U2",
+          "n_cells": 919,
+          "observed": {
+            "qualifies": false,
+            "ashman_d": 3.1165621549501097,
+            "checks": {
+              "S1_unique_ordered_separation": false,
+              "S2_bimodal": true,
+              "S3_clears_one_molecule": false,
+              "posterior_boundaries_unique_and_ordered": false
+            },
+            "diagnostics": {
+              "D4_high_excludes_half_of_detected": true
+            },
+            "n_detected": 271,
+            "one_molecule_floor": 1.1933174224343674,
+            "boundaries": {
+              "0.25": null,
+              "0.5": null,
+              "0.75": null
+            },
+            "fit": {
+              "analytic_bimodal": true,
+              "analytic_density_modes": 2,
+              "boundary_log": null,
+              "boundary_value": null,
+              "density_minimum_log": 1.272288176186779,
+              "density_minimum_value": 3.5690097493747954,
+              "high_component_share_of_detected": 0.07749077490774908,
+              "high_component_weight": 0.06471465269458593,
+              "interior_only_rule_boundary_log": 1.3454187084590958,
+              "interior_only_rule_boundary_value": 3.8397939582682854,
+              "log_mean_high": 1.4648866513742997,
+              "log_mean_low": 0.3476068723063025,
+              "log_sd_high": 0.07801934921033458,
+              "log_sd_low": 0.5009530053914737,
+              "n_detected": 271,
+              "ordered_separation": false
+            }
+          },
+          "null_specificity": null,
+          "qualifies": false
+        }
+      ],
+      "variant_selection": "all_reported_none_selected",
+      "diagnostic_count_scale": {
+        "role": "diagnostic only; never the primary quantity and never a variant",
+        "verdict": "NO_STABLE_SEPARATION",
+        "per_donor": [
+          {
+            "donor_id": "B44",
+            "n_cells": 3140,
+            "observed": {
+              "qualifies": false,
+              "ashman_d": 3.589050085228666,
+              "checks": {
+                "S1_unique_ordered_separation": true,
+                "S2_bimodal": false,
+                "S3_clears_one_molecule": true,
+                "posterior_boundaries_unique_and_ordered": true
+              },
+              "diagnostics": {
+                "D4_high_excludes_half_of_detected": true
+              },
+              "n_detected": 1542,
+              "one_molecule_floor": 1.0,
+              "boundaries": {
+                "0.25": 1.0000055113747948,
+                "0.5": 1.0000057072316189,
+                "0.75": 1.0000058965866472
+              },
+              "fit": {
+                "analytic_bimodal": false,
+                "analytic_density_modes": 1,
+                "boundary_log": 5.707215332563363e-06,
+                "boundary_value": 1.0000057072316189,
+                "density_minimum_log": null,
+                "density_minimum_value": null,
+                "high_component_share_of_detected": 0.46238651102464334,
+                "high_component_weight": 0.4623865564677567,
+                "interior_only_rule_boundary_log": 5.707215332563363e-06,
+                "interior_only_rule_boundary_value": 1.0000057072316189,
+                "log_mean_high": 1.0314172249126583,
+                "log_mean_low": 0.0,
+                "log_sd_high": 0.406415121910831,
+                "log_sd_low": 1e-06,
+                "n_detected": 1542,
+                "ordered_separation": true
+              }
+            },
+            "null_specificity": null,
+            "qualifies": false
+          },
+          {
+            "donor_id": "U1",
+            "n_cells": 1428,
+            "observed": {
+              "qualifies": false,
+              "ashman_d": 4.358087426889495,
+              "checks": {
+                "S1_unique_ordered_separation": true,
+                "S2_bimodal": false,
+                "S3_clears_one_molecule": true,
+                "posterior_boundaries_unique_and_ordered": true
+              },
+              "diagnostics": {
+                "D4_high_excludes_half_of_detected": true
+              },
+              "n_detected": 522,
+              "one_molecule_floor": 1.0,
+              "boundaries": {
+                "0.25": 1.0000057853509432,
+                "0.5": 1.000005972229521,
+                "0.75": 1.0000061534353082
+              },
+              "fit": {
+                "analytic_bimodal": false,
+                "analytic_density_modes": 1,
+                "boundary_log": 5.972211687126786e-06,
+                "boundary_value": 1.000005972229521,
+                "density_minimum_log": null,
+                "density_minimum_value": null,
+                "high_component_share_of_detected": 0.3716475095785441,
+                "high_component_weight": 0.37164752087954217,
+                "interior_only_rule_boundary_log": 5.972211687126786e-06,
+                "interior_only_rule_boundary_value": 1.000005972229521,
+                "log_mean_high": 0.8783439944874333,
+                "log_mean_low": 0.0,
+                "log_sd_high": 0.28502548658414945,
+                "log_sd_low": 1e-06,
+                "n_detected": 522,
+                "ordered_separation": true
+              }
+            },
+            "null_specificity": null,
+            "qualifies": false
+          },
+          {
+            "donor_id": "U2",
+            "n_cells": 919,
+            "observed": {
+              "qualifies": false,
+              "ashman_d": 4.137713919476379,
+              "checks": {
+                "S1_unique_ordered_separation": true,
+                "S2_bimodal": false,
+                "S3_clears_one_molecule": true,
+                "posterior_boundaries_unique_and_ordered": true
+              },
+              "diagnostics": {
+                "D4_high_excludes_half_of_detected": true
+              },
+              "n_detected": 271,
+              "one_molecule_floor": 1.0,
+              "boundaries": {
+                "0.25": 1.00000575619591,
+                "0.5": 1.0000059439912214,
+                "0.75": 1.0000061260323738
+              },
+              "fit": {
+                "analytic_bimodal": false,
+                "analytic_density_modes": 1,
+                "boundary_log": 5.943973555989655e-06,
+                "boundary_value": 1.0000059439912214,
+                "density_minimum_log": null,
+                "density_minimum_value": null,
+                "high_component_share_of_detected": 0.3210332103321033,
+                "high_component_weight": 0.3210332247809613,
+                "interior_only_rule_boundary_log": 5.943973555989655e-06,
+                "interior_only_rule_boundary_value": 1.0000059439912214,
+                "log_mean_high": 0.8997214816771093,
+                "log_mean_low": 0.0,
+                "log_sd_high": 0.3075123960963633,
+                "log_sd_low": 1e-06,
+                "n_detected": 271,
+                "ordered_separation": true
+              }
+            },
+            "null_specificity": null,
+            "qualifies": false
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "kind": "phase2b_c4_candidate_processing_steps_3_4",
+  "value_blindness": "VALUE-BLIND: no KLF12 value of the candidate or of ADOC has been generated or read; Step 4 used only the aggregate QC metrics nCount_RNA, nFeature_RNA and mitoRatio",
+  "candidate": {
+    "id": "C03",
+    "accession": "E-MTAB-10283",
+    "arm": "XAV939 + E+P day 6"
+  },
+  "stack": {
+    "cellranger": "9.0.1",
+    "reference": "ref/cr9.0.1_a14/GRCh38_gencode_v47 (docs/phase2b_c4/stack_identification_cr9.0.1.json)",
+    "input_route": "amendments 17-18"
+  },
+  "libraries": {
+    "WSSS_END9397531": {
+      "ena_run": "ERR5545549",
+      "bam": {
+        "file": "WSSS_END9397531.bam",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/run/ERR554/ERR5545549/WSSS_END9397531.bam",
+        "published_md5": "983a9ef7eface9c08954cf57375118c6",
+        "local_md5": "983a9ef7eface9c08954cf57375118c6",
+        "bytes": "32437071164",
+        "published_bytes": "32437071164",
+        "status": "MATCH"
+      },
+      "reconstructed_fastqs": {
+        "WSSS_END9397531_S1_L001_I1_001.fastq.gz": {
+          "gz_sha256": "156fb8c2ae9a40ea54242964777b2330952cad44a80111f69b3fd73d541a6fa3",
+          "content_sha256": "0f085b195348897b4c41d957ed14676ae9fa1816de01c7003f5ffe0413c6dc87"
+        },
+        "WSSS_END9397531_S1_L001_R1_001.fastq.gz": {
+          "gz_sha256": "18363008c156ace5abbfa1b29f1446e2918511c2f01eb7168f895c4ccaafc789",
+          "content_sha256": "748fb4d16ee0ea6854af033e895b4584acfa815d8b9186e6a10b2fc9b73beeaa"
+        },
+        "WSSS_END9397531_S1_L001_R2_001.fastq.gz": {
+          "gz_sha256": "af63f281ba703d74c2589d11c2dd7522ce4a0e120a38f46e1973bee41db24e29",
+          "content_sha256": "db78bf42a007f08d5231867c11d5c214ebab0060f5795fa43d875946ef66d34a"
+        }
+      },
+      "reconstructed_read_count": 400248540,
+      "count_command": "/home/francois/Tools/cellranger-9.0.1/cellranger count --id=WSSS_END9397531 --transcriptome=/scratch/dt_adoc_phase2b/ref/cr9.0.1_a14/GRCh38_gencode_v47 --fastqs=/scratch/dt_adoc_phase2b/candidate/fastq_WSSS_END9397531 --sample=WSSS_END9397531 --create-bam=false --disable-ui",
+      "chemistry_detected": "Single Cell 3' v3 (polyA)",
+      "metrics_summary": {
+        "Estimated Number of Cells": "24,665",
+        "Number of Reads": "400,248,540",
+        "Valid Barcodes": "97.2%",
+        "Reads Mapped Confidently to Genome": "91.0%",
+        "Reads Mapped Confidently to Transcriptome": "74.8%",
+        "Fraction Reads in Cells": "73.5%",
+        "Median UMI Counts per Cell": "4,446"
+      },
+      "outputs_sha256": {
+        "candidate/count_WSSS_END9397531/WSSS_END9397531/outs/filtered_feature_bc_matrix/barcodes.tsv.gz": "5f999d8ff3e791851c072fe8294abdef3c9cc7c14b2a95413a2e323d5d385ae8",
+        "candidate/count_WSSS_END9397531/WSSS_END9397531/outs/filtered_feature_bc_matrix/features.tsv.gz": "0b96d130788d63aefafb539cf0c868fc5468da9dcb3143499022964d4e941f87",
+        "candidate/count_WSSS_END9397531/WSSS_END9397531/outs/filtered_feature_bc_matrix/matrix.mtx.gz": "eb7692d8c4dec807ce065f556fc067bcc56d0c682a4a69b49c3901783b43b984",
+        "candidate/count_WSSS_END9397531/WSSS_END9397531/outs/raw_feature_bc_matrix/barcodes.tsv.gz": "286e781c6f67d75169575ff3a5bbbc9e099964b0edbf96f566d96f25e7943dd7",
+        "candidate/count_WSSS_END9397531/WSSS_END9397531/outs/raw_feature_bc_matrix/features.tsv.gz": "48b069e5aff5bf0105612c1e5c5fd9670f87b820af2278bf54c1014572bf7db2",
+        "candidate/count_WSSS_END9397531/WSSS_END9397531/outs/raw_feature_bc_matrix/matrix.mtx.gz": "cbfc5c948df69dda223f4508d0d6a4d19d46b5c7f9c63b0047cfee9af2bb3613",
+        "candidate/count_WSSS_END9397531/WSSS_END9397531/outs/metrics_summary.csv": "b0629715127dbe0df95e5a43d75e65523b7acab4db2eb5df93f0ac6dcaa15df4",
+        "candidate/count_WSSS_END9397531/WSSS_END9397531/outs/filtered_feature_bc_matrix.h5": "43b55410260ebbad911556847e626c68b990828c832bf798e9701a0c14b94840",
+        "candidate/count_WSSS_END9397531/WSSS_END9397531/outs/raw_feature_bc_matrix.h5": "fbd82ec927f58244ead348e8cbd25570c5e96ec440c222fad98dee74d0fee6df"
+      }
+    },
+    "WSSS_END9397535": {
+      "ena_run": "ERR5545551",
+      "bam": {
+        "file": "WSSS_END9397535.bam",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/run/ERR554/ERR5545551/WSSS_END9397535.bam",
+        "published_md5": "402e74e892a7355ca568196544080b3b",
+        "local_md5": "402e74e892a7355ca568196544080b3b",
+        "bytes": "31142707276",
+        "published_bytes": "31142707276",
+        "status": "MATCH"
+      },
+      "reconstructed_fastqs": {
+        "WSSS_END9397535_S1_L001_I1_001.fastq.gz": {
+          "gz_sha256": "57c7f6caed493a50a3f73c846d476af7385383a708023beb76f86019c4062751",
+          "content_sha256": "763966f41c764c1e6f09ede8aa8d927ee388f41e0f6d722e32a48b6ed6e1c728"
+        },
+        "WSSS_END9397535_S1_L001_R1_001.fastq.gz": {
+          "gz_sha256": "797665fbb4933d6f081830525fba705f98f4cee6227bb22597174a780d3d55be",
+          "content_sha256": "314d026edf90d40c5701209cf1dee4c745f2e69ea294cdcf385d68acea6aec19"
+        },
+        "WSSS_END9397535_S1_L001_R2_001.fastq.gz": {
+          "gz_sha256": "de5c52fca5f7267d1e99b83647517b50e83bf01c2019deb69a2b4761a7e4bf3c",
+          "content_sha256": "f4491a971ccf4bb4d7e3c195c75cf7eec972f4f395a344bdbf71552a66dc4576"
+        }
+      },
+      "reconstructed_read_count": 387051041,
+      "count_command": "/home/francois/Tools/cellranger-9.0.1/cellranger count --id=WSSS_END9397535 --transcriptome=/scratch/dt_adoc_phase2b/ref/cr9.0.1_a14/GRCh38_gencode_v47 --fastqs=/scratch/dt_adoc_phase2b/candidate/fastq_WSSS_END9397535 --sample=WSSS_END9397535 --create-bam=false --disable-ui",
+      "chemistry_detected": "Single Cell 3' v3 (polyA)",
+      "metrics_summary": {
+        "Estimated Number of Cells": "21,088",
+        "Number of Reads": "387,051,041",
+        "Valid Barcodes": "97.6%",
+        "Reads Mapped Confidently to Genome": "90.9%",
+        "Reads Mapped Confidently to Transcriptome": "76.7%",
+        "Fraction Reads in Cells": "68.5%",
+        "Median UMI Counts per Cell": "4,458"
+      },
+      "outputs_sha256": {
+        "candidate/count_WSSS_END9397535/WSSS_END9397535/outs/filtered_feature_bc_matrix/barcodes.tsv.gz": "da2500151ad3dcf04a0e7f3f4f165ae19d87d8726e0d528dc8ea6241590c55a9",
+        "candidate/count_WSSS_END9397535/WSSS_END9397535/outs/filtered_feature_bc_matrix/features.tsv.gz": "8cce8a4a5603becca82735d05c0843c3205ef202b019406d3a43c4013a3664fc",
+        "candidate/count_WSSS_END9397535/WSSS_END9397535/outs/filtered_feature_bc_matrix/matrix.mtx.gz": "0b407579aea254597ba0fc3ad8b209ca75d060ebdc80455da6031b6d6309e12f",
+        "candidate/count_WSSS_END9397535/WSSS_END9397535/outs/raw_feature_bc_matrix/barcodes.tsv.gz": "7502dc86f0335071e8ea04461d84cb82a9d39bddcf49a8c7eb117beb84573d24",
+        "candidate/count_WSSS_END9397535/WSSS_END9397535/outs/raw_feature_bc_matrix/features.tsv.gz": "48b069e5aff5bf0105612c1e5c5fd9670f87b820af2278bf54c1014572bf7db2",
+        "candidate/count_WSSS_END9397535/WSSS_END9397535/outs/raw_feature_bc_matrix/matrix.mtx.gz": "38e3603df0c2c44422c5b9568da4add54407f9948176a31fdb78b0b1db7e93a2",
+        "candidate/count_WSSS_END9397535/WSSS_END9397535/outs/metrics_summary.csv": "c931ba1c9b934ebd4610fa705c6d490d4811c73b609ff6f64da436781aa6c66f",
+        "candidate/count_WSSS_END9397535/WSSS_END9397535/outs/filtered_feature_bc_matrix.h5": "a5392a02833d7053516955c551bfacc7edf4c0c63b67c3db167812fcaccaf549",
+        "candidate/count_WSSS_END9397535/WSSS_END9397535/outs/raw_feature_bc_matrix.h5": "8b710a6ceb90e1f1b35c5877f4965f9b8f95528a0aacb158614a6a5166fae3c1"
+      }
+    }
+  },
+  "step4": {
+    "script": "scripts/phase2b_c4/step4_cells.R",
+    "script_sha256": "28a9873719bf0842e4ca22e4d7024008ea9f94e33430a4231a22c7290d0400f3",
+    "depositor_cell_files_sha256": {
+      "WSSS_END9397531_cells.tsv": "b3fcecc60bb3919f6e6b3148a1f70197cb79b9d3f02c3cf5a11b8305d2f7d3e1",
+      "WSSS_END9397535_cells.tsv": "b28e0abba3683455ed1f368814e7f5896bfc0949d20338e9b4ed2415eefcdc35"
+    },
+    "summary": {
+      "WSSS_END9397531": {
+        "cellranger_cells": 24665,
+        "nonfinite_mito": 0,
+        "qc_pass": 9448,
+        "singlets_after_scdblfinder": 8517,
+        "depositor_cells": 9043,
+        "depositor_cells_matched": 9043,
+        "depositor_donor_labels": {
+          "B44": 5284,
+          "U1": 2374,
+          "U2": 1385
+        },
+        "depositor_celltypes_found": [
+          "Ciliated",
+          "Estrogen_induced_PGR+",
+          "Inflamatory",
+          "Low QC",
+          "NH_d2_d6",
+          "NH_d2_WNTi",
+          "NH_d6",
+          "NH_d6_WNTi",
+          "Pre-ciliated",
+          "Secretory_Ctrl",
+          "Secretory_NOTCHi",
+          "Secretory_WNTi"
+        ],
+        "celltypes_outside_frozen_list": [],
+        "included": 6676,
+        "included_by_donor": {
+          "B44": 4060,
+          "U1": 1621,
+          "U2": 995
+        }
+      },
+      "WSSS_END9397535": {
+        "cellranger_cells": 21088,
+        "nonfinite_mito": 0,
+        "qc_pass": 7419,
+        "singlets_after_scdblfinder": 6775,
+        "depositor_cells": 7430,
+        "depositor_cells_matched": 7430,
+        "depositor_donor_labels": {
+          "B44": 3983,
+          "U1": 2105,
+          "U2": 1342
+        },
+        "depositor_celltypes_found": [
+          "Ciliated",
+          "Estrogen_induced_PGR+",
+          "Inflamatory",
+          "Low QC",
+          "NH_d2_WNTi",
+          "NH_d6_WNTi",
+          "Pre-ciliated",
+          "Secretory_Ctrl",
+          "Secretory_NOTCHi",
+          "Secretory_WNTi"
+        ],
+        "celltypes_outside_frozen_list": [],
+        "included": 5487,
+        "included_by_donor": {
+          "B44": 3140,
+          "U1": 1428,
+          "U2": 919
+        }
+      },
+      "pooled_included_by_donor": {
+        "B44": 7200,
+        "U1": 3049,
+        "U2": 1914
+      },
+      "donors_with_cells": 3,
+      "min_reference_donors_met": true,
+      "versions": {
+        "R": "R version 4.4.3 (2025-02-28)",
+        "Seurat": "5.3.0",
+        "SeuratObject": "5.2.0",
+        "scDblFinder": "1.20.2"
+      }
+    },
+    "cell_manifest": {
+      "path_scratch": "candidate/step4_cell_manifest.tsv",
+      "sha256": "1afa4fe360f24b6256920c993ef7856f813c27847a10484f6f94bbbd8afeb410",
+      "note": "barcode-level metadata only (QC flags, depositor donor and Celltype); retained on scratch, not committed"
+    },
+    "environment": {
+      "pinned": "FCS-BioIT/single-cell-ADOC@1f15801 envs/qc.yaml (R 4.4.3, Seurat 5.3.0, SeuratObject 5.2.0, scDblFinder 1.20.2)",
+      "execution_note": "the environment built from envs/qc.yaml as written could not load Seurat: its unpinned r-vctrs (0.7.3) and r-ellipsis (0.3.3) resolved to versions requiring rlang >= 1.1.7 against the yaml's own r-rlang=1.1.6 pin. qc_v2 keeps every qc.yaml pin and adds only r-vctrs=0.6.5 and r-ellipsis=0.3.2, the versions the pipeline's sibling envs/decontx.yaml pins at the same commit alongside r-rlang 1.1.6. No QC threshold, seed or tool version changed",
+      "qc_v2_yaml": "docs/phase2b_c4/qc_v2.yaml",
+      "qc_v2_yaml_sha256": "e95d503dc1bc074fc2e0662065a000abbff431f4cf31e87815ddddbad9cc7b99",
+      "explicit_spec": "docs/phase2b_c4/qc_v2_env.explicit.txt",
+      "explicit_spec_sha256": "977839beba623aa7ffe5a55039f1ff48aa44991a68e6332de7d9ae4cc1503418"
+    },
+    "doublet_rng_note": "set.seed(47) once, libraries in order 9397531 then 9397535; ADOC qc.R's atlas label transfer (plots only, filters nothing) is not run, so the RNG stream before scDblFinder differs from ADOC's and doublet calls cannot follow ADOC's exact random path"
+  },
+  "retained_scratch": "BAMs, reconstructed FASTQs, count outputs, manifest and logs remain under /scratch/dt_adoc_phase2b; nothing deleted"
+}

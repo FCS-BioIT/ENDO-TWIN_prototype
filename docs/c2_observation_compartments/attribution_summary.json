@@ -1,0 +1,67 @@
+{
+  "attributed_map_rows": 13,
+  "attribution_version": "C2-v1",
+  "attributions": {
+    "CA-001": {
+      "analyte": "PRL",
+      "compartment_attribution": "stromal_attributed",
+      "mapping_ids": [
+        "OM-006",
+        "OM-007",
+        "OM-014",
+        "OM-015",
+        "OM-016"
+      ]
+    },
+    "CA-002": {
+      "analyte": "IGFBP-1",
+      "compartment_attribution": "epithelial_and_stromal_ambiguous",
+      "mapping_ids": [
+        "OM-002",
+        "OM-003",
+        "OM-004",
+        "OM-005",
+        "OM-016"
+      ]
+    },
+    "CA-003": {
+      "analyte": "IGFBP-1",
+      "compartment_attribution": "epithelial_and_stromal_ambiguous",
+      "mapping_ids": [
+        "OM-008",
+        "OM-012",
+        "OM-013"
+      ]
+    },
+    "CA-004": {
+      "analyte": "PAEP",
+      "compartment_attribution": "secretory_epithelial_compartment_uncertain",
+      "mapping_ids": [
+        "OM-001"
+      ]
+    },
+    "CA-005": {
+      "analyte": "SPP1",
+      "compartment_attribution": "mixed_source_free_ligand_pool",
+      "mapping_ids": []
+    }
+  },
+  "changes_to_activation_weight_objective_or_model": "none",
+  "inputs_sha256": {
+    "config/observation_model_map.tsv": "74f0d5d0896beba57a0a03960239ad2fc039f315fa42a2209a65e228bfa3aff5",
+    "context/evidence-register.tsv": "ea4360673c3db3719d3e609af2e40e4fd47737e3f5141d44869c11f585641597",
+    "context/literature/references.tsv": "fb7cca42e3080fcdbf71a511749e3c6c0d32971b9065f351a935710d409dd6c5",
+    "context/literature/source-provenance.tsv": "1078a04b7a03ef5666b12c7e9edb0bf98e4aeb693bd50ac5aa2de9b3b31f0929",
+    "context/observation_compartment_attribution.tsv": "399803ea83a4f2eee3565d53c2ebec236f1d9308fbd3de1b469f562eeb692418",
+    "src/dt_adoc/observations/compartment_attribution.py": "377fc7da02c3552ebd28df90f070fbce18e8915cc03c81fe2611266f8897cef0"
+  },
+  "observation_map_is_phase1b_frozen_bytes": true,
+  "unattributed_map_rows": [
+    "OM-009",
+    "OM-010",
+    "OM-011",
+    "OM-017"
+  ],
+  "unattributed_measured_rows": [],
+  "unit": "C2 observation compartment attribution"
+}

@@ -1,0 +1,677 @@
+{
+  "artifact": "c3a_kinetic_readouts",
+  "attempt_id": "attempt_20260929T174746194150Z",
+  "binding": {
+    "addendum_commit": "ef34c1079267650f1359635d3b8b60ce48518546",
+    "input_sha256_at_start": {
+      "bound": {
+        "config/protocols.yaml": "243887238ee927770e53b8d5116c8f464c864abb84ddd8b0b4214b7146019f1a",
+        "docs/c3_kinetic_readouts/preregistration.md": "dda602d506930ed272792589a69ae5c4986f9cabd9b3fc6fd14adc930c7b5440",
+        "docs/c3_kinetic_readouts/preregistration_addendum_01.md": "c8ce498aecadd14f52b1faa374457633f84a6b4ff5f241e1ac82f90802b30064",
+        "models/specs/parameter_scenarios.yaml": "e30f6072ed7d4d03228e127e61902c0224fb4bd1f688790da73004e3ad8e39de",
+        "models/superset/adoc-literature-superset-v0.5.2/README.md": "536b7a75db52476418f917d65ddf3b62107da403ba77e33cfd8c51abdaffadca",
+        "models/superset/adoc-literature-superset-v0.5.2/baseline.cfg": "4d42bdcbcfcceaedaafeeb96fe76400700175c969cec15bff9e02f360ff4f41c",
+        "models/superset/adoc-literature-superset-v0.5.2/complete_edges.tsv": "ac39e95012688d8de7314a7486056fa3eab93f1784f523c8dbd00be309b14e00",
+        "models/superset/adoc-literature-superset-v0.5.2/complete_nodes.tsv": "efacf3b7437e3a381ef2a5cfeb08f8ea552ca9d5a30af1b2247066eb15c67d9a",
+        "models/superset/adoc-literature-superset-v0.5.2/conditions/adhesion_challenge_basal.cfg": "1cde2d12c5fb95b3680eb10d7a7160002b79f339af16d4f64b15fe98e67d27fa",
+        "models/superset/adoc-literature-superset-v0.5.2/conditions/adhesion_challenge_excess_er_stress.cfg": "21a7f0570ed0b73cadba710cb4a778ad3552a07e06102ce28cce931e7369f1f1",
+        "models/superset/adoc-literature-superset-v0.5.2/conditions/adhesion_challenge_high_ecm_stiffness.cfg": "65a5d9f237baa51be310343b410d1a76f499832a1495bb8785ff0c01b19f1b4c",
+        "models/superset/adoc-literature-superset-v0.5.2/conditions/adhesion_challenge_hormone_treated.cfg": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+        "models/superset/adoc-literature-superset-v0.5.2/conditions/adhesion_challenge_hormone_treated_anti_spp1.cfg": "f1a307764f8f06a69941f5d637ccecb4bb18992481b50784b7f3615617a2068a",
+        "models/superset/adoc-literature-superset-v0.5.2/conditions/adhesion_challenge_hormone_treated_hand2_loss.cfg": "610c2f675656e56e833ee3e98da5f72fe41d9574b3eb03437b6c4a5b81ad5a7a",
+        "models/superset/adoc-literature-superset-v0.5.2/conditions/adhesion_challenge_hormone_treated_mifepristone.cfg": "4881de9c5a5a89ed81aca919b38cb4a546425cee28b74a5cb9f3c5ff399e6162",
+        "models/superset/adoc-literature-superset-v0.5.2/conditions/adhesion_challenge_washout.cfg": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+        "models/superset/adoc-literature-superset-v0.5.2/conditions/basal_maternal.cfg": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+        "models/superset/adoc-literature-superset-v0.5.2/conditions/e2_primed_maternal.cfg": "93006ce97fa5244594593d3f500f1c8d9699ae547030608079856f0d1f190bbe",
+        "models/superset/adoc-literature-superset-v0.5.2/conditions/embryo_absent.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+        "models/superset/adoc-literature-superset-v0.5.2/conditions/embryo_incompetent.cfg": "77a4afb84e58268c2af3fab9e636beb678939b8c89a0ec8432716b5f071ff64f",
+        "models/superset/adoc-literature-superset-v0.5.2/conditions/excess_er_stress.cfg": "e3bbc93b2e48c732634c0fbc5cf2f7d634a03f8a93333ccb58182679d12d5c62",
+        "models/superset/adoc-literature-superset-v0.5.2/conditions/high_ecm_stiffness.cfg": "f0ca6146c32624e73052a995c0f54f3d7fe56b6865cb95b81cac6566ffa483c0",
+        "models/superset/adoc-literature-superset-v0.5.2/conditions/hormone_treated.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+        "models/superset/adoc-literature-superset-v0.5.2/conditions/hormone_treated_anti_spp1.cfg": "d0e7e3c5d484e60ee58ea4961a9bef7e6084ab80257dfe177cd80c456cdc725d",
+        "models/superset/adoc-literature-superset-v0.5.2/conditions/hormone_treated_hand2_loss.cfg": "30b949013ab6b195cbfbc6aff8efcec4e4edda6df319b49bdbb2585992e7ad1f",
+        "models/superset/adoc-literature-superset-v0.5.2/conditions/hormone_treated_maternal.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+        "models/superset/adoc-literature-superset-v0.5.2/conditions/hormone_treated_mifepristone.cfg": "91ebe467a4adaba0f35b76943c429f134bcc36e8d15f38daebf3aacfb94f76bd",
+        "models/superset/adoc-literature-superset-v0.5.2/conditions/untreated.cfg": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+        "models/superset/adoc-literature-superset-v0.5.2/conditions/washout.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+        "models/superset/adoc-literature-superset-v0.5.2/drug_target_catalog.tsv": "6f15497fbe7b93dc85d8c749d1a0883bdaa3b2834f576faf1aacb1f03fdbbc14",
+        "models/superset/adoc-literature-superset-v0.5.2/edge_evidence.tsv": "cac102405fb7a0ccf15a4254fa37c427bfa8902e5bd5fd4550c0720b53a42fe4",
+        "models/superset/adoc-literature-superset-v0.5.2/ensemble_definition.tsv": "63452a3d6b8ac7832b7981656c2bfa19bff898090116f8e19cdf88c3692d1944",
+        "models/superset/adoc-literature-superset-v0.5.2/executable_model_manifest.tsv": "15c2480e8c860b36f5c556ce91d7134b9e6a9594f34b87ee62930cc21267201b",
+        "models/superset/adoc-literature-superset-v0.5.2/executable_modules_network.mmd": "a7df134c1affc70ce746241127769f7f56db2177775b95b1c6c7a9080d56a3db",
+        "models/superset/adoc-literature-superset-v0.5.2/interface_contract.tsv": "052414ce3fe3e535ddfc18a14f3e7005ee0f33d368659a2cd52da966d9332090",
+        "models/superset/adoc-literature-superset-v0.5.2/literature_superset_network.mmd": "6f03110cb630491630a3351e05d87d9cf07a4aec4a97b0298665b076806c24c8",
+        "models/superset/adoc-literature-superset-v0.5.2/module_activity_report.tsv": "70856e7f307d3c2fddff712e13fe6593b3c49c5980b653006c9f646d13fe1914",
+        "models/superset/adoc-literature-superset-v0.5.2/modules.tsv": "1cea79e6548c613112d52b3ca23d77a28eb635db0bb6c0ec8f1711387fe0f764",
+        "models/superset/adoc-literature-superset-v0.5.2/network.bnd": "7a73529c28ab7533c25c0673744bad7496ee8d75d7849fe3971838dbcf2d7b25",
+        "models/superset/adoc-literature-superset-v0.5.2/node_dictionary.tsv": "a566d2abba87f8b019857a33b34a03d63ba5310aeb285f59412aaf91de516828",
+        "models/superset/adoc-literature-superset-v0.5.2/phenotype_contract.tsv": "4df11861ae82612876dd28d4269a5d06f39a941b29d029d4bb8fe72e63dd22d5",
+        "models/superset/adoc-literature-superset-v0.5.2/provenance.toml": "8fa3b408ee0b9384b51ab60b4648e913226444280565b0a4b81e3907117f9fe1",
+        "models/superset/adoc-literature-superset-v0.5.2/rule_variants.tsv": "a5e6be6afb3d0f95c51d12ac06a128ed9f8789791b6d6556fcc39b94a535a839",
+        "models/superset/adoc-literature-superset-v0.5.2/topology.tsv": "8b1decdded658fc7f87a8540b3498ca8325f38aad94fa79229c75fa574e7f3e0",
+        "models/superset/adoc-literature-superset-v0.5.2/topology_increment_adjudications.tsv": "b1a1e510610029c2c773d07aa059227a41b62a537e534dda77f28c1c8a4954aa",
+        "models/superset/adoc-literature-superset-v0.5.2/unresolved_mechanisms.tsv": "94ea4d8ff6e7be104c89d95efb0abb75f56056190338adf958a1824d255cf630"
+      },
+      "generator": {
+        "src/dt_adoc/__init__.py": "f3bad63e1ff08e27bab52a01280225729f4d99add307ae38941e9517b2d0d21a",
+        "src/dt_adoc/calibration/__init__.py": "533b8dcbdaae8e5036b8e80e387d1c9da38b52146069c923ce8ef61f4aa6f60f",
+        "src/dt_adoc/calibration/adhesion_likelihood.py": "94b838dbbe72d4c2b80050f2cb64aefc867a1c6a840ab69e14424920322b7558",
+        "src/dt_adoc/calibration/objectives.py": "9e824c32542fb33643e8527fe1dcca8904671e59b52879e057ae3e49eb4b6e06",
+        "src/dt_adoc/calibration/observation_map.py": "c176f42ba3c25045dde2dbae745d4ea84f6bb72aa7262379775e5f7055e7dbf7",
+        "src/dt_adoc/calibration/search.py": "4004794efabff37b88b5708c7580e258e094a902b677204a204e84fe60ee7c84",
+        "src/dt_adoc/cli.py": "718979d9519d3d9d02a8d819ea8b63fa81a4e865a3ae5063a1f246facba1fec4",
+        "src/dt_adoc/closure_replay.py": "3dea642db668a008fa1aec9215b625513eaffc359ce53e133bf862885fc4e13c",
+        "src/dt_adoc/concordance/__init__.py": "0c6559d186b4897337d520a4d1e9a789919048ebd764752fed60bf25b3073811",
+        "src/dt_adoc/concordance/build.py": "32e46b0799975859ff787c2d5865d023291460cc98b2305dbe4af4b5998cbf36",
+        "src/dt_adoc/concordance/figure.py": "3c0c2fbf38f86e257c817c2cfa4a5bd40124bc43231475ec895b7e7c8aab014f",
+        "src/dt_adoc/concordance/mechanism.py": "257ffd4e4962ba48cb6493c39f6caae7341dc41981ce1453fdce9de4285cae49",
+        "src/dt_adoc/concordance/render.py": "10cd68726e9eb4a6c754416f1e7f9e73a70ef7678d4c73b3c99c4a5ac25b8f2a",
+        "src/dt_adoc/concordance/render_cli.py": "72af10b47b6ef534fb511135584dda66dcebc40235b5dc9d1cbbd7f77e39363b",
+        "src/dt_adoc/concordance/scrna_audit.py": "82a1fe6aa376f2ec1d1c24507424632709da4515d6fc6d950d0cff3173968209",
+        "src/dt_adoc/concordance/scrna_audit_cli.py": "aff32d7a3463de431e38178054eaa1dda719c8f01dbdf299592983806f3c133c",
+        "src/dt_adoc/concordance/simulate.py": "91cce354044baad2112666974577753080156f754231c14813398d50d73c6c92",
+        "src/dt_adoc/concordance/table.py": "198b85b8f1f2906a765ce80f682894a96b681b213dc10c3124583c40b83db81c",
+        "src/dt_adoc/data/__init__.py": "bb5276c08bc1b2fd0d1a94aa34753bcabfabe8e907b776d52413407fe4a3ef96",
+        "src/dt_adoc/data/secreted_proteins.py": "3b4f4aca7c5504182bf767007740cdcea3de0351c1f01f22156e8fb4d6fd3c7f",
+        "src/dt_adoc/evidence/__init__.py": "3051dcaf35532def56da9f4899c2a6d552c0f488d8b1100a11f160bea5ed50b5",
+        "src/dt_adoc/evidence/assertions.py": "888964117fb637cbb0d39fbba4a0aca7b971b770f2998ebb5bd874284b1996a6",
+        "src/dt_adoc/evidence/citation_adjudications.py": "5593ec66d58391b9bf7cd44cdb4be591d732e14b7323a584b0d3fcfc26459b79",
+        "src/dt_adoc/evidence/citations.py": "1c389af1d29e1fcfe041ff13ae96b63dc7eb0cb7b31ef61fe9275a375da27458",
+        "src/dt_adoc/experiments/__init__.py": "50dcf2e19adf5f1188f3c79e4a6ea29c1b304d3d230f3d31c9ebb0115510aba6",
+        "src/dt_adoc/experiments/calibration_candidates.py": "671fbcb3d3d770c1a9a7fa48df96af7a945f589d4a58255f602c058d25668b2a",
+        "src/dt_adoc/experiments/phase1b_closure.py": "77ac010dbacab8cbd9518fda0ecd2f73489155d1b7f0ed613e030b991d35bd42",
+        "src/dt_adoc/experiments/stage3_design.py": "9ee07f47e0cf0028775993649898cb11b9b82d73e3a0cff232202d61fcaadb5a",
+        "src/dt_adoc/experiments/u8_stage3_rerank.py": "d4498114180c34cef1582c3e4781bddb28ec89d3ebbddcd875e9bd015fe3339a",
+        "src/dt_adoc/experiments/variant_discrimination.py": "93f85f80d058aa2da18d6dcb49e26986d4050c71c62b06da5ad3cb4717e9c08c",
+        "src/dt_adoc/maboss_adapter.py": "9169c05e7a35282699c89841d80d61593b5ea8527807d4147e2c2612ccfe7f13",
+        "src/dt_adoc/model/__init__.py": "1a37f01a8b1bb0ec864f31802e693f6730899675dc53282977778741fa25abf4",
+        "src/dt_adoc/model/catalog.py": "89c2866c78b8c23307bf1e499ed22934d60219d5c7227b3c05b8f3dcd39f3004",
+        "src/dt_adoc/model/compile.py": "da9450d4cf3c44f727004f1bcc37db204eba55819fc785bbe8d3e81273029a25",
+        "src/dt_adoc/model/provenance.py": "27660649c73e40d2e40fe24f40ba5f30457a1d0471bbf4d4f320e96b8266835d",
+        "src/dt_adoc/model/runtime.py": "ed1adad1698b6366544daa65b4897c5ee0d0f7d7f69f38990a5b7d9e39f0b9d1",
+        "src/dt_adoc/model/superset_family.py": "6af06a1ece7a1f8d3531b00ef73c44edcaacae94f401d982c64185579559d7f6",
+        "src/dt_adoc/model/topology.py": "2047ed3e2a08470e2342e7f5ca72c50a4a1eb7c06654327b6b137cb001b8a1b3",
+        "src/dt_adoc/model/validate.py": "4b18c5d290450049fc25e462740b815c7c1bb1fa5f95535b6e16c11c4cdcb09f",
+        "src/dt_adoc/observations/__init__.py": "9e7a1d35716abd60409fa39f01c0545f65a38e53c1cf36e6b72f53f46cffd17b",
+        "src/dt_adoc/observations/checkpoints.py": "7b6000dd800c88f11695c8e98e01ffe52172e89623b20064a81f353a3c9dab9c",
+        "src/dt_adoc/observations/compartment_attribution.py": "43bd33f2f024eccd500c5909f2c46a9bdb287b4402415b14e91b12db2e71dcdf",
+        "src/dt_adoc/personalization/__init__.py": "8f474fe3cf2711bd8c0390bdda1ee79dab59cca8177f2331afe59bb9b804f5eb",
+        "src/dt_adoc/personalization/mapping.py": "411dfb75d7c9051711dc345a00e115be0d9c6d7a9211d8af8faad81917929bad",
+        "src/dt_adoc/personalization/phase2a_contract.py": "55a743e8940f34d61e012425b528ba13823674d41bc8dbff67a3333b5ea9d053",
+        "src/dt_adoc/personalization/phase2b/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/dt_adoc/personalization/phase2b/audit.py": "581767dd3b2fd84ec7d7b9af0cfb056aea8801b7c1e677367a2ec7320303ea21",
+        "src/dt_adoc/personalization/phase2b/derivation.py": "0437687eeb00610302c25412922406e11bb1da33a9b1aa87b3726b570f32c8b9",
+        "src/dt_adoc/personalization/phase2b/guard.py": "d9835e6523ee9962ec5062acd3118217f34cf5bb0234c9b7cdfe80fbccb1f8d5",
+        "src/dt_adoc/personalization/phase2b/identity.py": "df97e8a301a4b24e42a608aa46b4e317be264a6e7c1f96aec92a29e2614533f6",
+        "src/dt_adoc/personalization/phase2b/qualification.py": "fa6b33c6ff2ae953b8e9469c5f757200a024053a0e567dbebb958305573c1246",
+        "src/dt_adoc/personalization/phase2b/values.py": "5c2883442d2f8b0a9dc47870c24312fa408770c310e6e911b14b1048755c9774",
+        "src/dt_adoc/personalization/reference.py": "7c6b8bda69973e679042230d63bcfebab7fc74205cce22f6b2ef29a3a1407e23",
+        "src/dt_adoc/personalization/soft_nv.py": "76825bb97b2b68909857ce84602c4c2b0003a1feb90a130d9af2e60fcbef8313",
+        "src/dt_adoc/personalization/strict_nv.py": "f3666b50bdf42c3dbba6fcd476d7ce0387642c59da790f52555ed685a5d90069",
+        "src/dt_adoc/perturbations/__init__.py": "fad0c313ba4177679deeb2d0f66764bedee9342d924386407c2427589dd6b0eb",
+        "src/dt_adoc/perturbations/combinations.py": "40015bb4069f9f761f014ce65d66bd4b25acbb7e2bdb76db0f59d78f92265435",
+        "src/dt_adoc/perturbations/single.py": "fa62a6b086e3ece57a02a11b3af603816ec6cdf89146091abc529ed539cc3919",
+        "src/dt_adoc/perturbations/synergy.py": "45b39a220e74025fc346a8aa396a21c793b1861fbbbda478b0280f29c62f69ac",
+        "src/dt_adoc/perturbations/target_engagement.py": "b7634ee12516e98bec36c5f2e536dba6df3ea83e8b6a315de4199a6877ca5cc4",
+        "src/dt_adoc/protocols/__init__.py": "3abf20973c9095d2a3bb415534ee1f5d06385d2703b0e708c03de44a3b917317",
+        "src/dt_adoc/protocols/conditions.py": "c0e79de290e0d6a7360aa9d7e0fd8c6f1eefa6c6d63bb1d107683986b19eb1c9",
+        "src/dt_adoc/protocols/runner.py": "1567ad63370c229c1a447304a1dc1f42c9ca62f84dc9d9cbc65a3a540376844b",
+        "src/dt_adoc/protocols/schema.py": "5bc85ef0a9edc4dbd0b584adb7599f809bfa760f20e24cde7c4a53f1b4ccfb0d",
+        "src/dt_adoc/reporting/__init__.py": "ba3a6b6d378629b68808fe9fc81105be5636a834f034e41113ce138e97f34339",
+        "src/dt_adoc/reporting/c3a_kinetic_readout.py": "ece0f5b9dcb6b1926239c808f195efd8167ea9e007bd5cdde106fa792c87809d",
+        "src/dt_adoc/reporting/coupling.py": "f17447abee7d43577e946772b49e2627019a27f6e6214f15224fae4e57132e1b",
+        "src/dt_adoc/reporting/design_alias.py": "8d93c823906fa6bc1c8ee7c22d445f18b4d8ede72fa433cde71acaa510381dd0",
+        "src/dt_adoc/reporting/design_alias_figure.py": "50baaaa0b6e7253f78260a6bc4d8761a7d9a986c1f5f9dbf791240df1c9ba34e",
+        "src/dt_adoc/reporting/dynamics.py": "734427d45825042c6991093667d317add15f94e65dde6ec9e1ed4941f19351fb",
+        "src/dt_adoc/reporting/endpoint_figure.py": "4e3bc7d749ee335376ee9650d0afc97562cec5c28d55fcc0ea78292c7dc0fcb3",
+        "src/dt_adoc/reporting/endpoint_replicates.py": "043db7cbc1c9cc1a79f51c5a440040a1185ebba25b3d42a6b43cbd0c54814940",
+        "src/dt_adoc/reporting/figures.py": "5bb95c3c1b9cf46a071132556973fcfc37c2f71ed73cf9baac10ed380807759d",
+        "src/dt_adoc/reporting/identifiability.py": "93f774f06e8d09875c87a43e33fbf24f259149d52c9cd5e82efa2dd96349c486",
+        "src/dt_adoc/reporting/identifiability_figure.py": "cd6ee91be618e7915da18805d0cabfac20ed963f6770d47b8b9adfb10fd79821",
+        "src/dt_adoc/reporting/network_figure.py": "3ae0132edad0cbf173fe732f97d9583dcc12fd4ef181027ef01d5346ba3cdd63",
+        "src/dt_adoc/reporting/network_overview.py": "c5b30ce295af94c05ae8b1189a9440abe206d048c0e1560765c35e547f492b89",
+        "src/dt_adoc/reporting/render_dynamics.py": "4e227fb6938b73ee692c972afea9225b39fb0deffb1f85ae0550369c25ea4843",
+        "src/dt_adoc/reporting/report.py": "38286102bd45a161da16884f7ef1235119bbb4e2d6d3d01f6dda9345427c1f07",
+        "src/dt_adoc/reporting/seed_structure.py": "9a68f215c33c8ca35730db743d5068cb42920770fe60ec8db1f48707f99533ce",
+        "src/dt_adoc/reporting/structure.py": "1cba9b5f4df299055d20be976ce564c862b073b27a616771df709e3ce3355b99",
+        "src/dt_adoc/reporting/structure_figure.py": "901f28c4d9c0d76ae7fd34f90da813b75420925f2d351831ae08f5549cea2fc4",
+        "src/dt_adoc/reporting/tables.py": "0f2b990e58ef8f7e4576a25a0c67d390b291cb4e7bf244e4d59daa5ca1eb53f4",
+        "src/dt_adoc/reporting/target_levels.py": "eff26c984e530d2a7ff46536bdffc4d6b889aa4f7fd8c5d21efbf7266a4d1e8e",
+        "src/dt_adoc/reporting/u5_structural_audit.py": "8110e4ce665fe7b7b0740b4d45c8dc01de1d54ed3219d3f6fa0ddd0b376e8832",
+        "src/dt_adoc/reporting/u5b_increment.py": "13557cb45410d4d6d233b0d7e42c6457d20e610562a3a741b52cbe227652b628",
+        "src/dt_adoc/reporting/u5b_readout_transient.py": "af0e04520f66f5247ec40cf4d90ea3bef643d01f4500632dd38a2904ff5f0ea2",
+        "src/dt_adoc/reporting/u6b_muc1_family.py": "d11f562fe20b700866b9777bf8c107dbc7b692bf420577a6a200faacc20ec5fd",
+        "src/dt_adoc/reporting/v052_increment.py": "de707e091b54bdbb53a05528f9bf5dac2375fe316b5c141fdec2ea6bbfe61a31",
+        "src/dt_adoc/reporting/v052_interventions.py": "419dfb9057fff137ec569db6e1ccd1da8549c374286dfd31b643d0dcba929f39",
+        "src/dt_adoc/reporting/v052_transient.py": "183ccd88c3c03aaee5ad2ec37275091657a565495ad4daee6e1df44c41c7018d",
+        "src/dt_adoc/scoring/__init__.py": "5ec6fe9ff2b3cae86878a11f0f0e60067fb0a12037a97e34d33232888f524b1b",
+        "src/dt_adoc/scoring/candidates.py": "9f9b0f9738aacfb322b1d2d7cb38b7d0fdccd62917618b7e0412b7e9be0cc8af",
+        "src/dt_adoc/scoring/phenotypes.py": "f371f7d1213a0a51b41c90482d1b95e5880cd112fbd64cff6aaadb5a836b7443",
+        "src/dt_adoc/scoring/safety.py": "7e1c424a28dbb13a430ab15ee36d9d028f697cc7d43da00e22c2bda3a0d13fe9",
+        "src/dt_adoc/scrna/__init__.py": "c4edce5fea2b9605a3864dc7995fd79140cedf9e76571098f52f0a92cc29b300",
+        "src/dt_adoc/scrna/components.py": "1ffc2b66ea8bd3baf2c902a68126988ec0a55efefe0156df488fb96ce130229b",
+        "src/dt_adoc/scrna/klf12_conditioning.py": "c071ce6b9d58b96418ff33a226a3a8fdfecd5fb73a0dba5057ebfda4e17080e1",
+        "src/dt_adoc/scrna/klf12_raw_umi.py": "503cc99cec265e8ec819c9f5691b653189e6ac86fdac359d44f5d7c835ddd2c3",
+        "src/dt_adoc/scrna/klf12_state.py": "3cbf223bd5110e7492e252ab0884fd58b8490b3cc4087a0c9988c324a92e7b3d",
+        "src/dt_adoc/scrna/node_support.py": "8314766732eb412dcf27d932f947236e09457f960997db1618095bb1c789e53c",
+        "src/dt_adoc/scrna/node_support_contract.py": "8b4d97af07c8c440601b3754a0c66d7a8517827ecfc2aba458b1a41694d5656d",
+        "src/dt_adoc/scrna/node_support_expectations.py": "45ca196cfd13fe04e6331a7bde82410d64335739f9a2937dbc53707bb37774de",
+        "src/dt_adoc/scrna/node_support_raw_sensitivity.py": "1b6bf5a5b3354eaddafb2958f483ea35531fcef9225874d2f27e8ea1375a4e02",
+        "src/dt_adoc/scrna/observability.py": "e8b7bcc7279258c197b889d0e58d6e69f0609a6f562cb02581b568a7d876001e",
+        "src/dt_adoc/scrna/rna_endpoint_concordance.py": "418be1fc5c34ecefc3680baf6364a54e4e460e84a2fac2a4a829592334128263",
+        "src/dt_adoc/scrna/verify_rds.py": "4ff18b44d2aa107767ebe3759fa467f25ea6cb09eaf17c8a1640031dce11f36c",
+        "src/dt_adoc/simulation/__init__.py": "7843602e5ca862cedbc8adef7fc357f23eafc88017e6f3a408561b02cd5c79d1",
+        "src/dt_adoc/simulation/manifests.py": "9335c9a11c5209958f776f6bcf725ae1245afc25fe4ea278080f86914698f17a",
+        "src/dt_adoc/simulation/runner.py": "7555cea1ea3653f2647b121ba66fa3a213648c0c133a25e833314c4aaa8023f9",
+        "src/dt_adoc/simulation/sensitivity.py": "4167eeffa23131cd604d73b7b1128f6cbc4e1510bfab9500aa33874876bff203",
+        "src/dt_adoc/simulation/stability.py": "19cd07ea9b6e8a20b1e2daa8c46de7e1da6e210985d592046f25b0e7d29fcbee",
+        "src/dt_adoc/simulation/timeline.py": "6a39123daabab4decf8a9c9ddcf6e0bddf643eb71604171dfe9c097eb6814a56"
+      }
+    },
+    "prereg_commit": "0c7da9c174b69a58b97292572684f86e2cbdb185",
+    "start_dirty_paths": [],
+    "start_head": "c5081b0af0530dfbda1bf9f11360900ecd48fca1",
+    "start_tree": "f45cb615971cd18b83dd7fe306ca6eb3826cac47"
+  },
+  "claim_boundary": "Paired differences of MaBoSS readout occupancy on adoc-literature-superset-v0.5.2 under default (unit) rates, in dimensionless relative time, between a perturbed lineage and its schedule-matched unperturbed twin. Bands are empirical paired-block reproducibility bands across 20 disjoint seed blocks: no confidence-interval coverage or family-wise error control is claimed. PERSISTENT_SUPPRESSION is never a literal block, and NO_ON_OCCUPANCY_OBSERVED_AT_RECORDED_TICKS licenses no statement of unreachability. No biological, clinical, kinetic or physical-time claim; no rate value; the HT extension is a model counterfactual, not an ADOC condition.",
+  "classes": {
+    "hand2_loss:OUT_MATERNAL_ADHESION_COMPETENCE": "PERSISTENT_SUPPRESSION",
+    "hand2_loss:OUT_STABLE_ADHESION": "PERSISTENT_SUPPRESSION",
+    "mifepristone:OUT_MATERNAL_ADHESION_COMPETENCE": "PERSISTENT_SUPPRESSION",
+    "mifepristone:OUT_STABLE_ADHESION": "PERSISTENT_SUPPRESSION"
+  },
+  "construction": {
+    "hand2_loss": {
+      "control": [
+        "basal_maternal",
+        "e2_primed_maternal",
+        "hormone_treated_maternal",
+        "adhesion_challenge_hormone_treated"
+      ],
+      "differing_input": "IN_HAND2_LOSS",
+      "differing_phases": [
+        2,
+        3
+      ],
+      "durations": [
+        1.0,
+        2.0,
+        4.0,
+        1.0
+      ],
+      "perturbed": [
+        "basal_maternal",
+        "e2_primed_maternal",
+        "hormone_treated_hand2_loss",
+        "adhesion_challenge_hormone_treated_hand2_loss"
+      ]
+    },
+    "mifepristone": {
+      "control": [
+        "basal_maternal",
+        "e2_primed_maternal",
+        "hormone_treated_maternal",
+        "hormone_treated_maternal",
+        "adhesion_challenge_hormone_treated"
+      ],
+      "differing_input": "IN_MIFEPRISTONE",
+      "differing_phases": [
+        3,
+        4
+      ],
+      "durations": [
+        1.0,
+        2.0,
+        4.0,
+        2.0,
+        1.0
+      ],
+      "perturbed": [
+        "basal_maternal",
+        "e2_primed_maternal",
+        "hormone_treated_maternal",
+        "hormone_treated_mifepristone",
+        "adhesion_challenge_hormone_treated_mifepristone"
+      ]
+    }
+  },
+  "converged_phase_horizon": 25.0,
+  "delta": 0.005,
+  "elapsed_seconds": 2076.038805961609,
+  "environment": {
+    "cmaboss": "1.0.0b32",
+    "maboss": "0.8.15",
+    "numpy": "2.5.1",
+    "pandas": "3.0.5",
+    "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+    "python": "3.12.13",
+    "scipy": "1.18.0"
+  },
+  "errors": [],
+  "governing_trajectory_count": 20000,
+  "input_sha256_at_end": {
+    "bound": {
+      "config/protocols.yaml": "243887238ee927770e53b8d5116c8f464c864abb84ddd8b0b4214b7146019f1a",
+      "docs/c3_kinetic_readouts/preregistration.md": "dda602d506930ed272792589a69ae5c4986f9cabd9b3fc6fd14adc930c7b5440",
+      "docs/c3_kinetic_readouts/preregistration_addendum_01.md": "c8ce498aecadd14f52b1faa374457633f84a6b4ff5f241e1ac82f90802b30064",
+      "models/specs/parameter_scenarios.yaml": "e30f6072ed7d4d03228e127e61902c0224fb4bd1f688790da73004e3ad8e39de",
+      "models/superset/adoc-literature-superset-v0.5.2/README.md": "536b7a75db52476418f917d65ddf3b62107da403ba77e33cfd8c51abdaffadca",
+      "models/superset/adoc-literature-superset-v0.5.2/baseline.cfg": "4d42bdcbcfcceaedaafeeb96fe76400700175c969cec15bff9e02f360ff4f41c",
+      "models/superset/adoc-literature-superset-v0.5.2/complete_edges.tsv": "ac39e95012688d8de7314a7486056fa3eab93f1784f523c8dbd00be309b14e00",
+      "models/superset/adoc-literature-superset-v0.5.2/complete_nodes.tsv": "efacf3b7437e3a381ef2a5cfeb08f8ea552ca9d5a30af1b2247066eb15c67d9a",
+      "models/superset/adoc-literature-superset-v0.5.2/conditions/adhesion_challenge_basal.cfg": "1cde2d12c5fb95b3680eb10d7a7160002b79f339af16d4f64b15fe98e67d27fa",
+      "models/superset/adoc-literature-superset-v0.5.2/conditions/adhesion_challenge_excess_er_stress.cfg": "21a7f0570ed0b73cadba710cb4a778ad3552a07e06102ce28cce931e7369f1f1",
+      "models/superset/adoc-literature-superset-v0.5.2/conditions/adhesion_challenge_high_ecm_stiffness.cfg": "65a5d9f237baa51be310343b410d1a76f499832a1495bb8785ff0c01b19f1b4c",
+      "models/superset/adoc-literature-superset-v0.5.2/conditions/adhesion_challenge_hormone_treated.cfg": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+      "models/superset/adoc-literature-superset-v0.5.2/conditions/adhesion_challenge_hormone_treated_anti_spp1.cfg": "f1a307764f8f06a69941f5d637ccecb4bb18992481b50784b7f3615617a2068a",
+      "models/superset/adoc-literature-superset-v0.5.2/conditions/adhesion_challenge_hormone_treated_hand2_loss.cfg": "610c2f675656e56e833ee3e98da5f72fe41d9574b3eb03437b6c4a5b81ad5a7a",
+      "models/superset/adoc-literature-superset-v0.5.2/conditions/adhesion_challenge_hormone_treated_mifepristone.cfg": "4881de9c5a5a89ed81aca919b38cb4a546425cee28b74a5cb9f3c5ff399e6162",
+      "models/superset/adoc-literature-superset-v0.5.2/conditions/adhesion_challenge_washout.cfg": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+      "models/superset/adoc-literature-superset-v0.5.2/conditions/basal_maternal.cfg": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+      "models/superset/adoc-literature-superset-v0.5.2/conditions/e2_primed_maternal.cfg": "93006ce97fa5244594593d3f500f1c8d9699ae547030608079856f0d1f190bbe",
+      "models/superset/adoc-literature-superset-v0.5.2/conditions/embryo_absent.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "models/superset/adoc-literature-superset-v0.5.2/conditions/embryo_incompetent.cfg": "77a4afb84e58268c2af3fab9e636beb678939b8c89a0ec8432716b5f071ff64f",
+      "models/superset/adoc-literature-superset-v0.5.2/conditions/excess_er_stress.cfg": "e3bbc93b2e48c732634c0fbc5cf2f7d634a03f8a93333ccb58182679d12d5c62",
+      "models/superset/adoc-literature-superset-v0.5.2/conditions/high_ecm_stiffness.cfg": "f0ca6146c32624e73052a995c0f54f3d7fe56b6865cb95b81cac6566ffa483c0",
+      "models/superset/adoc-literature-superset-v0.5.2/conditions/hormone_treated.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "models/superset/adoc-literature-superset-v0.5.2/conditions/hormone_treated_anti_spp1.cfg": "d0e7e3c5d484e60ee58ea4961a9bef7e6084ab80257dfe177cd80c456cdc725d",
+      "models/superset/adoc-literature-superset-v0.5.2/conditions/hormone_treated_hand2_loss.cfg": "30b949013ab6b195cbfbc6aff8efcec4e4edda6df319b49bdbb2585992e7ad1f",
+      "models/superset/adoc-literature-superset-v0.5.2/conditions/hormone_treated_maternal.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "models/superset/adoc-literature-superset-v0.5.2/conditions/hormone_treated_mifepristone.cfg": "91ebe467a4adaba0f35b76943c429f134bcc36e8d15f38daebf3aacfb94f76bd",
+      "models/superset/adoc-literature-superset-v0.5.2/conditions/untreated.cfg": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+      "models/superset/adoc-literature-superset-v0.5.2/conditions/washout.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "models/superset/adoc-literature-superset-v0.5.2/drug_target_catalog.tsv": "6f15497fbe7b93dc85d8c749d1a0883bdaa3b2834f576faf1aacb1f03fdbbc14",
+      "models/superset/adoc-literature-superset-v0.5.2/edge_evidence.tsv": "cac102405fb7a0ccf15a4254fa37c427bfa8902e5bd5fd4550c0720b53a42fe4",
+      "models/superset/adoc-literature-superset-v0.5.2/ensemble_definition.tsv": "63452a3d6b8ac7832b7981656c2bfa19bff898090116f8e19cdf88c3692d1944",
+      "models/superset/adoc-literature-superset-v0.5.2/executable_model_manifest.tsv": "15c2480e8c860b36f5c556ce91d7134b9e6a9594f34b87ee62930cc21267201b",
+      "models/superset/adoc-literature-superset-v0.5.2/executable_modules_network.mmd": "a7df134c1affc70ce746241127769f7f56db2177775b95b1c6c7a9080d56a3db",
+      "models/superset/adoc-literature-superset-v0.5.2/interface_contract.tsv": "052414ce3fe3e535ddfc18a14f3e7005ee0f33d368659a2cd52da966d9332090",
+      "models/superset/adoc-literature-superset-v0.5.2/literature_superset_network.mmd": "6f03110cb630491630a3351e05d87d9cf07a4aec4a97b0298665b076806c24c8",
+      "models/superset/adoc-literature-superset-v0.5.2/module_activity_report.tsv": "70856e7f307d3c2fddff712e13fe6593b3c49c5980b653006c9f646d13fe1914",
+      "models/superset/adoc-literature-superset-v0.5.2/modules.tsv": "1cea79e6548c613112d52b3ca23d77a28eb635db0bb6c0ec8f1711387fe0f764",
+      "models/superset/adoc-literature-superset-v0.5.2/network.bnd": "7a73529c28ab7533c25c0673744bad7496ee8d75d7849fe3971838dbcf2d7b25",
+      "models/superset/adoc-literature-superset-v0.5.2/node_dictionary.tsv": "a566d2abba87f8b019857a33b34a03d63ba5310aeb285f59412aaf91de516828",
+      "models/superset/adoc-literature-superset-v0.5.2/phenotype_contract.tsv": "4df11861ae82612876dd28d4269a5d06f39a941b29d029d4bb8fe72e63dd22d5",
+      "models/superset/adoc-literature-superset-v0.5.2/provenance.toml": "8fa3b408ee0b9384b51ab60b4648e913226444280565b0a4b81e3907117f9fe1",
+      "models/superset/adoc-literature-superset-v0.5.2/rule_variants.tsv": "a5e6be6afb3d0f95c51d12ac06a128ed9f8789791b6d6556fcc39b94a535a839",
+      "models/superset/adoc-literature-superset-v0.5.2/topology.tsv": "8b1decdded658fc7f87a8540b3498ca8325f38aad94fa79229c75fa574e7f3e0",
+      "models/superset/adoc-literature-superset-v0.5.2/topology_increment_adjudications.tsv": "b1a1e510610029c2c773d07aa059227a41b62a537e534dda77f28c1c8a4954aa",
+      "models/superset/adoc-literature-superset-v0.5.2/unresolved_mechanisms.tsv": "94ea4d8ff6e7be104c89d95efb0abb75f56056190338adf958a1824d255cf630"
+    },
+    "generator": {
+      "src/dt_adoc/__init__.py": "f3bad63e1ff08e27bab52a01280225729f4d99add307ae38941e9517b2d0d21a",
+      "src/dt_adoc/calibration/__init__.py": "533b8dcbdaae8e5036b8e80e387d1c9da38b52146069c923ce8ef61f4aa6f60f",
+      "src/dt_adoc/calibration/adhesion_likelihood.py": "94b838dbbe72d4c2b80050f2cb64aefc867a1c6a840ab69e14424920322b7558",
+      "src/dt_adoc/calibration/objectives.py": "9e824c32542fb33643e8527fe1dcca8904671e59b52879e057ae3e49eb4b6e06",
+      "src/dt_adoc/calibration/observation_map.py": "c176f42ba3c25045dde2dbae745d4ea84f6bb72aa7262379775e5f7055e7dbf7",
+      "src/dt_adoc/calibration/search.py": "4004794efabff37b88b5708c7580e258e094a902b677204a204e84fe60ee7c84",
+      "src/dt_adoc/cli.py": "718979d9519d3d9d02a8d819ea8b63fa81a4e865a3ae5063a1f246facba1fec4",
+      "src/dt_adoc/closure_replay.py": "3dea642db668a008fa1aec9215b625513eaffc359ce53e133bf862885fc4e13c",
+      "src/dt_adoc/concordance/__init__.py": "0c6559d186b4897337d520a4d1e9a789919048ebd764752fed60bf25b3073811",
+      "src/dt_adoc/concordance/build.py": "32e46b0799975859ff787c2d5865d023291460cc98b2305dbe4af4b5998cbf36",
+      "src/dt_adoc/concordance/figure.py": "3c0c2fbf38f86e257c817c2cfa4a5bd40124bc43231475ec895b7e7c8aab014f",
+      "src/dt_adoc/concordance/mechanism.py": "257ffd4e4962ba48cb6493c39f6caae7341dc41981ce1453fdce9de4285cae49",
+      "src/dt_adoc/concordance/render.py": "10cd68726e9eb4a6c754416f1e7f9e73a70ef7678d4c73b3c99c4a5ac25b8f2a",
+      "src/dt_adoc/concordance/render_cli.py": "72af10b47b6ef534fb511135584dda66dcebc40235b5dc9d1cbbd7f77e39363b",
+      "src/dt_adoc/concordance/scrna_audit.py": "82a1fe6aa376f2ec1d1c24507424632709da4515d6fc6d950d0cff3173968209",
+      "src/dt_adoc/concordance/scrna_audit_cli.py": "aff32d7a3463de431e38178054eaa1dda719c8f01dbdf299592983806f3c133c",
+      "src/dt_adoc/concordance/simulate.py": "91cce354044baad2112666974577753080156f754231c14813398d50d73c6c92",
+      "src/dt_adoc/concordance/table.py": "198b85b8f1f2906a765ce80f682894a96b681b213dc10c3124583c40b83db81c",
+      "src/dt_adoc/data/__init__.py": "bb5276c08bc1b2fd0d1a94aa34753bcabfabe8e907b776d52413407fe4a3ef96",
+      "src/dt_adoc/data/secreted_proteins.py": "3b4f4aca7c5504182bf767007740cdcea3de0351c1f01f22156e8fb4d6fd3c7f",
+      "src/dt_adoc/evidence/__init__.py": "3051dcaf35532def56da9f4899c2a6d552c0f488d8b1100a11f160bea5ed50b5",
+      "src/dt_adoc/evidence/assertions.py": "888964117fb637cbb0d39fbba4a0aca7b971b770f2998ebb5bd874284b1996a6",
+      "src/dt_adoc/evidence/citation_adjudications.py": "5593ec66d58391b9bf7cd44cdb4be591d732e14b7323a584b0d3fcfc26459b79",
+      "src/dt_adoc/evidence/citations.py": "1c389af1d29e1fcfe041ff13ae96b63dc7eb0cb7b31ef61fe9275a375da27458",
+      "src/dt_adoc/experiments/__init__.py": "50dcf2e19adf5f1188f3c79e4a6ea29c1b304d3d230f3d31c9ebb0115510aba6",
+      "src/dt_adoc/experiments/calibration_candidates.py": "671fbcb3d3d770c1a9a7fa48df96af7a945f589d4a58255f602c058d25668b2a",
+      "src/dt_adoc/experiments/phase1b_closure.py": "77ac010dbacab8cbd9518fda0ecd2f73489155d1b7f0ed613e030b991d35bd42",
+      "src/dt_adoc/experiments/stage3_design.py": "9ee07f47e0cf0028775993649898cb11b9b82d73e3a0cff232202d61fcaadb5a",
+      "src/dt_adoc/experiments/u8_stage3_rerank.py": "d4498114180c34cef1582c3e4781bddb28ec89d3ebbddcd875e9bd015fe3339a",
+      "src/dt_adoc/experiments/variant_discrimination.py": "93f85f80d058aa2da18d6dcb49e26986d4050c71c62b06da5ad3cb4717e9c08c",
+      "src/dt_adoc/maboss_adapter.py": "9169c05e7a35282699c89841d80d61593b5ea8527807d4147e2c2612ccfe7f13",
+      "src/dt_adoc/model/__init__.py": "1a37f01a8b1bb0ec864f31802e693f6730899675dc53282977778741fa25abf4",
+      "src/dt_adoc/model/catalog.py": "89c2866c78b8c23307bf1e499ed22934d60219d5c7227b3c05b8f3dcd39f3004",
+      "src/dt_adoc/model/compile.py": "da9450d4cf3c44f727004f1bcc37db204eba55819fc785bbe8d3e81273029a25",
+      "src/dt_adoc/model/provenance.py": "27660649c73e40d2e40fe24f40ba5f30457a1d0471bbf4d4f320e96b8266835d",
+      "src/dt_adoc/model/runtime.py": "ed1adad1698b6366544daa65b4897c5ee0d0f7d7f69f38990a5b7d9e39f0b9d1",
+      "src/dt_adoc/model/superset_family.py": "6af06a1ece7a1f8d3531b00ef73c44edcaacae94f401d982c64185579559d7f6",
+      "src/dt_adoc/model/topology.py": "2047ed3e2a08470e2342e7f5ca72c50a4a1eb7c06654327b6b137cb001b8a1b3",
+      "src/dt_adoc/model/validate.py": "4b18c5d290450049fc25e462740b815c7c1bb1fa5f95535b6e16c11c4cdcb09f",
+      "src/dt_adoc/observations/__init__.py": "9e7a1d35716abd60409fa39f01c0545f65a38e53c1cf36e6b72f53f46cffd17b",
+      "src/dt_adoc/observations/checkpoints.py": "7b6000dd800c88f11695c8e98e01ffe52172e89623b20064a81f353a3c9dab9c",
+      "src/dt_adoc/observations/compartment_attribution.py": "43bd33f2f024eccd500c5909f2c46a9bdb287b4402415b14e91b12db2e71dcdf",
+      "src/dt_adoc/personalization/__init__.py": "8f474fe3cf2711bd8c0390bdda1ee79dab59cca8177f2331afe59bb9b804f5eb",
+      "src/dt_adoc/personalization/mapping.py": "411dfb75d7c9051711dc345a00e115be0d9c6d7a9211d8af8faad81917929bad",
+      "src/dt_adoc/personalization/phase2a_contract.py": "55a743e8940f34d61e012425b528ba13823674d41bc8dbff67a3333b5ea9d053",
+      "src/dt_adoc/personalization/phase2b/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/dt_adoc/personalization/phase2b/audit.py": "581767dd3b2fd84ec7d7b9af0cfb056aea8801b7c1e677367a2ec7320303ea21",
+      "src/dt_adoc/personalization/phase2b/derivation.py": "0437687eeb00610302c25412922406e11bb1da33a9b1aa87b3726b570f32c8b9",
+      "src/dt_adoc/personalization/phase2b/guard.py": "d9835e6523ee9962ec5062acd3118217f34cf5bb0234c9b7cdfe80fbccb1f8d5",
+      "src/dt_adoc/personalization/phase2b/identity.py": "df97e8a301a4b24e42a608aa46b4e317be264a6e7c1f96aec92a29e2614533f6",
+      "src/dt_adoc/personalization/phase2b/qualification.py": "fa6b33c6ff2ae953b8e9469c5f757200a024053a0e567dbebb958305573c1246",
+      "src/dt_adoc/personalization/phase2b/values.py": "5c2883442d2f8b0a9dc47870c24312fa408770c310e6e911b14b1048755c9774",
+      "src/dt_adoc/personalization/reference.py": "7c6b8bda69973e679042230d63bcfebab7fc74205cce22f6b2ef29a3a1407e23",
+      "src/dt_adoc/personalization/soft_nv.py": "76825bb97b2b68909857ce84602c4c2b0003a1feb90a130d9af2e60fcbef8313",
+      "src/dt_adoc/personalization/strict_nv.py": "f3666b50bdf42c3dbba6fcd476d7ce0387642c59da790f52555ed685a5d90069",
+      "src/dt_adoc/perturbations/__init__.py": "fad0c313ba4177679deeb2d0f66764bedee9342d924386407c2427589dd6b0eb",
+      "src/dt_adoc/perturbations/combinations.py": "40015bb4069f9f761f014ce65d66bd4b25acbb7e2bdb76db0f59d78f92265435",
+      "src/dt_adoc/perturbations/single.py": "fa62a6b086e3ece57a02a11b3af603816ec6cdf89146091abc529ed539cc3919",
+      "src/dt_adoc/perturbations/synergy.py": "45b39a220e74025fc346a8aa396a21c793b1861fbbbda478b0280f29c62f69ac",
+      "src/dt_adoc/perturbations/target_engagement.py": "b7634ee12516e98bec36c5f2e536dba6df3ea83e8b6a315de4199a6877ca5cc4",
+      "src/dt_adoc/protocols/__init__.py": "3abf20973c9095d2a3bb415534ee1f5d06385d2703b0e708c03de44a3b917317",
+      "src/dt_adoc/protocols/conditions.py": "c0e79de290e0d6a7360aa9d7e0fd8c6f1eefa6c6d63bb1d107683986b19eb1c9",
+      "src/dt_adoc/protocols/runner.py": "1567ad63370c229c1a447304a1dc1f42c9ca62f84dc9d9cbc65a3a540376844b",
+      "src/dt_adoc/protocols/schema.py": "5bc85ef0a9edc4dbd0b584adb7599f809bfa760f20e24cde7c4a53f1b4ccfb0d",
+      "src/dt_adoc/reporting/__init__.py": "ba3a6b6d378629b68808fe9fc81105be5636a834f034e41113ce138e97f34339",
+      "src/dt_adoc/reporting/c3a_kinetic_readout.py": "ece0f5b9dcb6b1926239c808f195efd8167ea9e007bd5cdde106fa792c87809d",
+      "src/dt_adoc/reporting/coupling.py": "f17447abee7d43577e946772b49e2627019a27f6e6214f15224fae4e57132e1b",
+      "src/dt_adoc/reporting/design_alias.py": "8d93c823906fa6bc1c8ee7c22d445f18b4d8ede72fa433cde71acaa510381dd0",
+      "src/dt_adoc/reporting/design_alias_figure.py": "50baaaa0b6e7253f78260a6bc4d8761a7d9a986c1f5f9dbf791240df1c9ba34e",
+      "src/dt_adoc/reporting/dynamics.py": "734427d45825042c6991093667d317add15f94e65dde6ec9e1ed4941f19351fb",
+      "src/dt_adoc/reporting/endpoint_figure.py": "4e3bc7d749ee335376ee9650d0afc97562cec5c28d55fcc0ea78292c7dc0fcb3",
+      "src/dt_adoc/reporting/endpoint_replicates.py": "043db7cbc1c9cc1a79f51c5a440040a1185ebba25b3d42a6b43cbd0c54814940",
+      "src/dt_adoc/reporting/figures.py": "5bb95c3c1b9cf46a071132556973fcfc37c2f71ed73cf9baac10ed380807759d",
+      "src/dt_adoc/reporting/identifiability.py": "93f774f06e8d09875c87a43e33fbf24f259149d52c9cd5e82efa2dd96349c486",
+      "src/dt_adoc/reporting/identifiability_figure.py": "cd6ee91be618e7915da18805d0cabfac20ed963f6770d47b8b9adfb10fd79821",
+      "src/dt_adoc/reporting/network_figure.py": "3ae0132edad0cbf173fe732f97d9583dcc12fd4ef181027ef01d5346ba3cdd63",
+      "src/dt_adoc/reporting/network_overview.py": "c5b30ce295af94c05ae8b1189a9440abe206d048c0e1560765c35e547f492b89",
+      "src/dt_adoc/reporting/render_dynamics.py": "4e227fb6938b73ee692c972afea9225b39fb0deffb1f85ae0550369c25ea4843",
+      "src/dt_adoc/reporting/report.py": "38286102bd45a161da16884f7ef1235119bbb4e2d6d3d01f6dda9345427c1f07",
+      "src/dt_adoc/reporting/seed_structure.py": "9a68f215c33c8ca35730db743d5068cb42920770fe60ec8db1f48707f99533ce",
+      "src/dt_adoc/reporting/structure.py": "1cba9b5f4df299055d20be976ce564c862b073b27a616771df709e3ce3355b99",
+      "src/dt_adoc/reporting/structure_figure.py": "901f28c4d9c0d76ae7fd34f90da813b75420925f2d351831ae08f5549cea2fc4",
+      "src/dt_adoc/reporting/tables.py": "0f2b990e58ef8f7e4576a25a0c67d390b291cb4e7bf244e4d59daa5ca1eb53f4",
+      "src/dt_adoc/reporting/target_levels.py": "eff26c984e530d2a7ff46536bdffc4d6b889aa4f7fd8c5d21efbf7266a4d1e8e",
+      "src/dt_adoc/reporting/u5_structural_audit.py": "8110e4ce665fe7b7b0740b4d45c8dc01de1d54ed3219d3f6fa0ddd0b376e8832",
+      "src/dt_adoc/reporting/u5b_increment.py": "13557cb45410d4d6d233b0d7e42c6457d20e610562a3a741b52cbe227652b628",
+      "src/dt_adoc/reporting/u5b_readout_transient.py": "af0e04520f66f5247ec40cf4d90ea3bef643d01f4500632dd38a2904ff5f0ea2",
+      "src/dt_adoc/reporting/u6b_muc1_family.py": "d11f562fe20b700866b9777bf8c107dbc7b692bf420577a6a200faacc20ec5fd",
+      "src/dt_adoc/reporting/v052_increment.py": "de707e091b54bdbb53a05528f9bf5dac2375fe316b5c141fdec2ea6bbfe61a31",
+      "src/dt_adoc/reporting/v052_interventions.py": "419dfb9057fff137ec569db6e1ccd1da8549c374286dfd31b643d0dcba929f39",
+      "src/dt_adoc/reporting/v052_transient.py": "183ccd88c3c03aaee5ad2ec37275091657a565495ad4daee6e1df44c41c7018d",
+      "src/dt_adoc/scoring/__init__.py": "5ec6fe9ff2b3cae86878a11f0f0e60067fb0a12037a97e34d33232888f524b1b",
+      "src/dt_adoc/scoring/candidates.py": "9f9b0f9738aacfb322b1d2d7cb38b7d0fdccd62917618b7e0412b7e9be0cc8af",
+      "src/dt_adoc/scoring/phenotypes.py": "f371f7d1213a0a51b41c90482d1b95e5880cd112fbd64cff6aaadb5a836b7443",
+      "src/dt_adoc/scoring/safety.py": "7e1c424a28dbb13a430ab15ee36d9d028f697cc7d43da00e22c2bda3a0d13fe9",
+      "src/dt_adoc/scrna/__init__.py": "c4edce5fea2b9605a3864dc7995fd79140cedf9e76571098f52f0a92cc29b300",
+      "src/dt_adoc/scrna/components.py": "1ffc2b66ea8bd3baf2c902a68126988ec0a55efefe0156df488fb96ce130229b",
+      "src/dt_adoc/scrna/klf12_conditioning.py": "c071ce6b9d58b96418ff33a226a3a8fdfecd5fb73a0dba5057ebfda4e17080e1",
+      "src/dt_adoc/scrna/klf12_raw_umi.py": "503cc99cec265e8ec819c9f5691b653189e6ac86fdac359d44f5d7c835ddd2c3",
+      "src/dt_adoc/scrna/klf12_state.py": "3cbf223bd5110e7492e252ab0884fd58b8490b3cc4087a0c9988c324a92e7b3d",
+      "src/dt_adoc/scrna/node_support.py": "8314766732eb412dcf27d932f947236e09457f960997db1618095bb1c789e53c",
+      "src/dt_adoc/scrna/node_support_contract.py": "8b4d97af07c8c440601b3754a0c66d7a8517827ecfc2aba458b1a41694d5656d",
+      "src/dt_adoc/scrna/node_support_expectations.py": "45ca196cfd13fe04e6331a7bde82410d64335739f9a2937dbc53707bb37774de",
+      "src/dt_adoc/scrna/node_support_raw_sensitivity.py": "1b6bf5a5b3354eaddafb2958f483ea35531fcef9225874d2f27e8ea1375a4e02",
+      "src/dt_adoc/scrna/observability.py": "e8b7bcc7279258c197b889d0e58d6e69f0609a6f562cb02581b568a7d876001e",
+      "src/dt_adoc/scrna/rna_endpoint_concordance.py": "418be1fc5c34ecefc3680baf6364a54e4e460e84a2fac2a4a829592334128263",
+      "src/dt_adoc/scrna/verify_rds.py": "4ff18b44d2aa107767ebe3759fa467f25ea6cb09eaf17c8a1640031dce11f36c",
+      "src/dt_adoc/simulation/__init__.py": "7843602e5ca862cedbc8adef7fc357f23eafc88017e6f3a408561b02cd5c79d1",
+      "src/dt_adoc/simulation/manifests.py": "9335c9a11c5209958f776f6bcf725ae1245afc25fe4ea278080f86914698f17a",
+      "src/dt_adoc/simulation/runner.py": "7555cea1ea3653f2647b121ba66fa3a213648c0c133a25e833314c4aaa8023f9",
+      "src/dt_adoc/simulation/sensitivity.py": "4167eeffa23131cd604d73b7b1128f6cbc4e1510bfab9500aa33874876bff203",
+      "src/dt_adoc/simulation/stability.py": "19cd07ea9b6e8a20b1e2daa8c46de7e1da6e210985d592046f25b0e7d29fcbee",
+      "src/dt_adoc/simulation/timeline.py": "6a39123daabab4decf8a9c9ddcf6e0bddf643eb71604171dfe9c097eb6814a56"
+    }
+  },
+  "model_version": "adoc-literature-superset-v0.5.2",
+  "outputs_sha256": {
+    "docs/c3_kinetic_readouts/bands.tsv": "8bababe2ce1d1ccdfb2389e7825269bf6143a146cec2c7d19f49eedc839f48bc",
+    "docs/c3_kinetic_readouts/blocks.tsv": "70a799de989004206ad2975944dad61b96e79ff9ffdc8c31f2304dc0eca64f34",
+    "docs/c3_kinetic_readouts/classification.tsv": "5f507299194ec5f8506f271750818e42a42d8cbe7af57d218ac0410fc3102844",
+    "docs/c3_kinetic_readouts/curves.tsv": "6cf1370a4eb7414a1bea0adae22ccecb6464fd6c656a40b1bd6febded15e318f"
+  },
+  "pairs": {
+    "hand2_loss": [
+      "twin",
+      "hand2_loss",
+      "IN_HAND2_LOSS"
+    ],
+    "mifepristone": [
+      "control_ext",
+      "mifepristone",
+      "IN_MIFEPRISTONE"
+    ]
+  },
+  "preregistration": [
+    "docs/c3_kinetic_readouts/preregistration.md",
+    "docs/c3_kinetic_readouts/preregistration_addendum_01.md"
+  ],
+  "q": 2.497705,
+  "readouts": {
+    "primary": "OUT_STABLE_ADHESION",
+    "secondary": "OUT_MATERNAL_ADHESION_COMPETENCE"
+  },
+  "replicates": 20,
+  "seeds_per_block": [
+    {
+      "replicate": 0,
+      "seed": 2000001,
+      "trajectory_count": 20000
+    },
+    {
+      "replicate": 1,
+      "seed": 2020001,
+      "trajectory_count": 20000
+    },
+    {
+      "replicate": 2,
+      "seed": 2040001,
+      "trajectory_count": 20000
+    },
+    {
+      "replicate": 3,
+      "seed": 2060001,
+      "trajectory_count": 20000
+    },
+    {
+      "replicate": 4,
+      "seed": 2080001,
+      "trajectory_count": 20000
+    },
+    {
+      "replicate": 5,
+      "seed": 2100001,
+      "trajectory_count": 20000
+    },
+    {
+      "replicate": 6,
+      "seed": 2120001,
+      "trajectory_count": 20000
+    },
+    {
+      "replicate": 7,
+      "seed": 2140001,
+      "trajectory_count": 20000
+    },
+    {
+      "replicate": 8,
+      "seed": 2160001,
+      "trajectory_count": 20000
+    },
+    {
+      "replicate": 9,
+      "seed": 2180001,
+      "trajectory_count": 20000
+    },
+    {
+      "replicate": 10,
+      "seed": 2200001,
+      "trajectory_count": 20000
+    },
+    {
+      "replicate": 11,
+      "seed": 2220001,
+      "trajectory_count": 20000
+    },
+    {
+      "replicate": 12,
+      "seed": 2240001,
+      "trajectory_count": 20000
+    },
+    {
+      "replicate": 13,
+      "seed": 2260001,
+      "trajectory_count": 20000
+    },
+    {
+      "replicate": 14,
+      "seed": 2280001,
+      "trajectory_count": 20000
+    },
+    {
+      "replicate": 15,
+      "seed": 2300001,
+      "trajectory_count": 20000
+    },
+    {
+      "replicate": 16,
+      "seed": 2320001,
+      "trajectory_count": 20000
+    },
+    {
+      "replicate": 17,
+      "seed": 2340001,
+      "trajectory_count": 20000
+    },
+    {
+      "replicate": 18,
+      "seed": 2360001,
+      "trajectory_count": 20000
+    },
+    {
+      "replicate": 19,
+      "seed": 2380001,
+      "trajectory_count": 20000
+    },
+    {
+      "replicate": 0,
+      "seed": 2400001,
+      "trajectory_count": 2000
+    },
+    {
+      "replicate": 1,
+      "seed": 2402001,
+      "trajectory_count": 2000
+    },
+    {
+      "replicate": 2,
+      "seed": 2404001,
+      "trajectory_count": 2000
+    },
+    {
+      "replicate": 3,
+      "seed": 2406001,
+      "trajectory_count": 2000
+    },
+    {
+      "replicate": 4,
+      "seed": 2408001,
+      "trajectory_count": 2000
+    },
+    {
+      "replicate": 5,
+      "seed": 2410001,
+      "trajectory_count": 2000
+    },
+    {
+      "replicate": 6,
+      "seed": 2412001,
+      "trajectory_count": 2000
+    },
+    {
+      "replicate": 7,
+      "seed": 2414001,
+      "trajectory_count": 2000
+    },
+    {
+      "replicate": 8,
+      "seed": 2416001,
+      "trajectory_count": 2000
+    },
+    {
+      "replicate": 9,
+      "seed": 2418001,
+      "trajectory_count": 2000
+    },
+    {
+      "replicate": 10,
+      "seed": 2420001,
+      "trajectory_count": 2000
+    },
+    {
+      "replicate": 11,
+      "seed": 2422001,
+      "trajectory_count": 2000
+    },
+    {
+      "replicate": 12,
+      "seed": 2424001,
+      "trajectory_count": 2000
+    },
+    {
+      "replicate": 13,
+      "seed": 2426001,
+      "trajectory_count": 2000
+    },
+    {
+      "replicate": 14,
+      "seed": 2428001,
+      "trajectory_count": 2000
+    },
+    {
+      "replicate": 15,
+      "seed": 2430001,
+      "trajectory_count": 2000
+    },
+    {
+      "replicate": 16,
+      "seed": 2432001,
+      "trajectory_count": 2000
+    },
+    {
+      "replicate": 17,
+      "seed": 2434001,
+      "trajectory_count": 2000
+    },
+    {
+      "replicate": 18,
+      "seed": 2436001,
+      "trajectory_count": 2000
+    },
+    {
+      "replicate": 19,
+      "seed": 2438001,
+      "trajectory_count": 2000
+    }
+  ],
+  "snap": 1e-12,
+  "t19": 2.758586,
+  "time_settings": {
+    "max_time_per_phase": {
+      "basal": 1.0,
+      "control_ext@converged": 25.0,
+      "control_ext@declared": 1.0,
+      "e2": 2.0,
+      "hand2_loss@converged": 25.0,
+      "hand2_loss@declared": 1.0,
+      "hand2_loss_maternal": 4.0,
+      "ht": 4.0,
+      "ht_extension": 2.0,
+      "mifepristone@converged": 25.0,
+      "mifepristone@declared": 1.0,
+      "mifepristone_maternal": 2.0,
+      "twin@converged": 25.0,
+      "twin@declared": 1.0
+    },
+    "time_semantics": "dimensionless MaBoSS relative time; no physical-time mapping",
+    "time_tick": 0.1
+  },
+  "trajectory_counts": [
+    20000,
+    2000
+  ],
+  "validation_level": "full_preregistered_execution",
+  "warnings": {},
+  "workers": 3
+}

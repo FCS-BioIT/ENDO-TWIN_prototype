@@ -1,0 +1,1301 @@
+{
+  "arms": [
+    "adhesion_challenge_basal",
+    "adhesion_challenge_hormone_treated",
+    "adhesion_challenge_hormone_treated_mifepristone",
+    "adhesion_challenge_washout"
+  ],
+  "artifact": "v052_transient_comparison",
+  "cells": [
+    "adhesion_challenge_basal",
+    "adhesion_challenge_hormone_treated",
+    "adhesion_challenge_hormone_treated_mifepristone",
+    "adhesion_challenge_washout",
+    "basal_maternal",
+    "e2_primed_maternal",
+    "hormone_treated_anti_spp1",
+    "hormone_treated_maternal",
+    "hormone_treated_mifepristone",
+    "washout"
+  ],
+  "claim_boundary": "Paired differences of MaBoSS phase-averaged and final-tick node occupancies between model versions on common random numbers, at each phase's declared dimensionless horizon. The interval is the run-to-run reproducibility of the paired estimator on disjoint seed blocks: not an i.i.d. Monte Carlo SE, not a biological, experimental or kinetic uncertainty, and no statement about days. WITHIN_TOLERANCE means no detected transient change at this precision, never no change.",
+  "comparisons": {
+    "c1only_vs_v051": {
+      "changes": [
+        "C1"
+      ],
+      "new_version": "adoc-literature-superset-v0.5.2-c1only",
+      "trajectory_counts": [
+        20000
+      ]
+    },
+    "c5only_vs_v051": {
+      "changes": [
+        "C5"
+      ],
+      "new_version": "adoc-literature-superset-v0.5.2-c5only",
+      "trajectory_counts": [
+        20000
+      ]
+    },
+    "v052_vs_v051": {
+      "changes": [
+        "C1",
+        "C5"
+      ],
+      "new_version": "adoc-literature-superset-v0.5.2",
+      "trajectory_counts": [
+        20000,
+        2000
+      ]
+    }
+  },
+  "expectations": {
+    "1_exact_identity_where_rules_never_disagree": {
+      "c1only_vs_v051": {
+        "held": true,
+        "per_cell": {
+          "adhesion_challenge_basal": true,
+          "basal_maternal": true,
+          "e2_primed_maternal": true
+        }
+      },
+      "c5only_vs_v051": {
+        "held": false,
+        "per_cell": {
+          "adhesion_challenge_basal": false,
+          "basal_maternal": false,
+          "e2_primed_maternal": false
+        }
+      },
+      "v052_vs_v051": {
+        "held": false,
+        "per_cell": {
+          "adhesion_challenge_basal": false,
+          "basal_maternal": false,
+          "e2_primed_maternal": false
+        }
+      }
+    },
+    "2_unaffected_family_same_law": {
+      "c1only_vs_v051": {
+        "defect_beyond_tolerance": 0,
+        "intervals": 860,
+        "max_abs_interval_end": 0.007554061474126189,
+        "max_abs_mean": 0.0017559941087256614,
+        "not_certified_indeterminate": 18,
+        "status": "NOT_MET_AT_THIS_PRECISION",
+        "verdict_counts": {
+          "EXACTLY_IDENTICAL": 298,
+          "INDETERMINATE": 18,
+          "WITHIN_TOLERANCE": 544
+        }
+      },
+      "c5only_vs_v051": {
+        "defect_beyond_tolerance": 0,
+        "intervals": 780,
+        "max_abs_interval_end": 0.00799010556052265,
+        "max_abs_mean": 0.0021497029483469434,
+        "not_certified_indeterminate": 39,
+        "status": "NOT_MET_AT_THIS_PRECISION",
+        "verdict_counts": {
+          "EXACTLY_IDENTICAL": 218,
+          "INDETERMINATE": 39,
+          "WITHIN_TOLERANCE": 523
+        }
+      },
+      "v052_vs_v051": {
+        "defect_beyond_tolerance": 0,
+        "intervals": 780,
+        "max_abs_interval_end": 0.00745866452284909,
+        "max_abs_mean": 0.0024485868087634477,
+        "not_certified_indeterminate": 55,
+        "status": "NOT_MET_AT_THIS_PRECISION",
+        "verdict_counts": {
+          "EXACTLY_IDENTICAL": 218,
+          "INDETERMINATE": 55,
+          "WITHIN_TOLERANCE": 507
+        }
+      }
+    },
+    "3_attribution_directions": {
+      "c1only_vs_v051": {
+        "falsified_in_cells": [],
+        "held": true,
+        "node_id": "OUT_EPITHELIAL_RECEPTIVE",
+        "per_cell": {
+          "adhesion_challenge_basal": {
+            "high": 0.0,
+            "low": 0.0,
+            "mean": 0.0
+          },
+          "adhesion_challenge_hormone_treated": {
+            "high": 0.0433833473837746,
+            "low": 0.040438140036250375,
+            "mean": 0.04191074371001249
+          },
+          "adhesion_challenge_hormone_treated_mifepristone": {
+            "high": 0.09804200085554503,
+            "low": 0.09445848599001887,
+            "mean": 0.09625024342278195
+          },
+          "adhesion_challenge_washout": {
+            "high": 0.16749959147638283,
+            "low": 0.16428190985287855,
+            "mean": 0.1658907506646307
+          },
+          "basal_maternal": {
+            "high": 0.0,
+            "low": 0.0,
+            "mean": 0.0
+          },
+          "e2_primed_maternal": {
+            "high": 0.0,
+            "low": 0.0,
+            "mean": 0.0
+          },
+          "hormone_treated_anti_spp1": {
+            "high": 0.06457477559895251,
+            "low": 0.06191866948543694,
+            "mean": 0.06324672254219472
+          },
+          "hormone_treated_maternal": {
+            "high": 0.0009243339693661986,
+            "low": 0.0007605031561027791,
+            "mean": 0.0008424185627344888
+          },
+          "hormone_treated_mifepristone": {
+            "high": 0.07000590737968679,
+            "low": 0.0670926018184842,
+            "mean": 0.0685492545990855
+          },
+          "washout": {
+            "high": 0.14299431819978983,
+            "low": 0.13969981875772705,
+            "mean": 0.14134706847875844
+          }
+        },
+        "statement": "phase-averaged difference >= 0 in every cell"
+      },
+      "c5only_vs_v051": {
+        "falsified_in_cells": [],
+        "held": true,
+        "node_id": "E_ESTROGENIC_PROLIFERATION",
+        "per_cell": {
+          "adhesion_challenge_basal": {
+            "high": 0.0,
+            "low": 0.0,
+            "mean": 0.0
+          },
+          "adhesion_challenge_hormone_treated": {
+            "high": 0.16889729186522548,
+            "low": 0.1642344057678741,
+            "mean": 0.1665658488165498
+          },
+          "adhesion_challenge_hormone_treated_mifepristone": {
+            "high": 0.062433954395996014,
+            "low": 0.058474951045801735,
+            "mean": 0.060454452720898874
+          },
+          "adhesion_challenge_washout": {
+            "high": 0.044397859740006644,
+            "low": 0.04137048964318709,
+            "mean": 0.04288417469159687
+          },
+          "basal_maternal": {
+            "high": 0.0,
+            "low": 0.0,
+            "mean": 0.0
+          },
+          "e2_primed_maternal": {
+            "high": 3.9318116258755823e-17,
+            "low": -3.3038417275719774e-17,
+            "mean": 3.1398494915180217e-18
+          },
+          "hormone_treated_anti_spp1": {
+            "high": 0.1440540658261173,
+            "low": 0.14033332239159724,
+            "mean": 0.14219369410885727
+          },
+          "hormone_treated_maternal": {
+            "high": 0.1403135820740906,
+            "low": 0.13722920395151064,
+            "mean": 0.13877139301280061
+          },
+          "hormone_treated_mifepristone": {
+            "high": 0.13972102406468281,
+            "low": 0.13567942857081142,
+            "mean": 0.13770022631774712
+          },
+          "washout": {
+            "high": 0.0746805846498788,
+            "low": 0.07140144663048704,
+            "mean": 0.07304101564018292
+          }
+        },
+        "statement": "phase-averaged difference >= 0 in every cell"
+      }
+    }
+  },
+  "families": {
+    "alpha_per_interval": {
+      "c1only_vs_v051:downstream": 0.00125,
+      "c1only_vs_v051:primary": 0.0025,
+      "c1only_vs_v051:unaffected": 5.8139534883720933e-05,
+      "c5only_vs_v051:downstream": 0.0004166666666666667,
+      "c5only_vs_v051:primary": 0.0025,
+      "c5only_vs_v051:unaffected": 6.41025641025641e-05,
+      "v052_vs_v051:downstream": 0.0005,
+      "v052_vs_v051:primary": 0.00125,
+      "v052_vs_v051:unaffected": 6.41025641025641e-05
+    },
+    "interpretation": "Families per comparison are derived from that comparison's own rules: primary = the changed node(s), downstream = their transitive readers, unaffected = every other node. For v052_vs_v051 this is exactly the pre-registered 2 + 5 + 52 split; for the attribution arms it is the reading of section 3's 'defined the same way' as the same derivation.",
+    "intervals_per_count": {
+      "c1only_vs_v051:downstream": 40,
+      "c1only_vs_v051:primary": 20,
+      "c1only_vs_v051:unaffected": 860,
+      "c5only_vs_v051:downstream": 120,
+      "c5only_vs_v051:primary": 20,
+      "c5only_vs_v051:unaffected": 780,
+      "v052_vs_v051:downstream": 100,
+      "v052_vs_v051:primary": 40,
+      "v052_vs_v051:unaffected": 780
+    },
+    "members": {
+      "c1only_vs_v051": {
+        "downstream": [
+          "OUT_MATERNAL_ADHESION_COMPETENCE",
+          "OUT_STABLE_ADHESION"
+        ],
+        "primary": [
+          "OUT_EPITHELIAL_RECEPTIVE"
+        ],
+        "unaffected": [
+          "E_ANXA2_ACTIN",
+          "E_CD98_CD9",
+          "E_CDH1_APICAL",
+          "E_DAG1_CLEAVED",
+          "E_DAG1_FULL",
+          "E_ESTROGENIC_PROLIFERATION",
+          "E_GP130_STAT3",
+          "E_HBEGF",
+          "E_IHH",
+          "E_ITGAVB3_5",
+          "E_KLF12_HIGH",
+          "E_LIF",
+          "E_MUC1_BARRIER",
+          "E_MUC1_SLEX",
+          "E_PAEP",
+          "E_PC6",
+          "E_PGR",
+          "E_PODXL",
+          "E_RECEPTIVE_SURFACE",
+          "E_SECRETORY_STATE",
+          "E_SPP1_EXPR",
+          "IN_ANTI_SPP1",
+          "IN_E2",
+          "IN_EMBRYO_CONDITIONED_SIGNAL",
+          "IN_EMBRYO_CONTACT",
+          "IN_EMBRYO_PRESENT",
+          "IN_ER_STRESS_EXCESS",
+          "IN_HAND2_LOSS",
+          "IN_HCG",
+          "IN_HIGH_ECM_STIFFNESS",
+          "IN_MIFEPRISTONE",
+          "IN_PROGESTIN",
+          "IN_TROPHECTODERM_COMPETENT",
+          "IN_XAV939",
+          "IN_cAMP",
+          "OUT_STROMAL_DECIDUALIZED",
+          "S_BMP2",
+          "S_DECIDUALIZED",
+          "S_FGF_MITOGENIC",
+          "S_HAND2",
+          "S_IGFBP1",
+          "S_NR2F2",
+          "S_PGR",
+          "S_PKA",
+          "S_PRL",
+          "S_SPP1",
+          "S_TAZ_ECM",
+          "X_ADHESION_ROUTE_REDUNDANT",
+          "X_ADHESION_ROUTE_SPP1",
+          "X_ANTIADHESIVE_ROUTE",
+          "X_INTERFACE_ANTIADHESIVE_RELAY",
+          "X_INTERFACE_REDUNDANT_RELAY",
+          "X_INTERFACE_SPP1_RELAY",
+          "X_MECHANICAL_PERMISSIVE_ECM",
+          "X_MECHANICAL_STRESS_RELAY",
+          "X_SPP1_LUMEN_FREE"
+        ]
+      },
+      "c5only_vs_v051": {
+        "downstream": [
+          "E_RECEPTIVE_SURFACE",
+          "OUT_EPITHELIAL_RECEPTIVE",
+          "OUT_MATERNAL_ADHESION_COMPETENCE",
+          "OUT_STABLE_ADHESION",
+          "X_ADHESION_ROUTE_REDUNDANT",
+          "X_ADHESION_ROUTE_SPP1"
+        ],
+        "primary": [
+          "E_ESTROGENIC_PROLIFERATION"
+        ],
+        "unaffected": [
+          "E_ANXA2_ACTIN",
+          "E_CD98_CD9",
+          "E_CDH1_APICAL",
+          "E_DAG1_CLEAVED",
+          "E_DAG1_FULL",
+          "E_GP130_STAT3",
+          "E_HBEGF",
+          "E_IHH",
+          "E_ITGAVB3_5",
+          "E_KLF12_HIGH",
+          "E_LIF",
+          "E_MUC1_BARRIER",
+          "E_MUC1_SLEX",
+          "E_PAEP",
+          "E_PC6",
+          "E_PGR",
+          "E_PODXL",
+          "E_SECRETORY_STATE",
+          "E_SPP1_EXPR",
+          "IN_ANTI_SPP1",
+          "IN_E2",
+          "IN_EMBRYO_CONDITIONED_SIGNAL",
+          "IN_EMBRYO_CONTACT",
+          "IN_EMBRYO_PRESENT",
+          "IN_ER_STRESS_EXCESS",
+          "IN_HAND2_LOSS",
+          "IN_HCG",
+          "IN_HIGH_ECM_STIFFNESS",
+          "IN_MIFEPRISTONE",
+          "IN_PROGESTIN",
+          "IN_TROPHECTODERM_COMPETENT",
+          "IN_XAV939",
+          "IN_cAMP",
+          "OUT_STROMAL_DECIDUALIZED",
+          "S_BMP2",
+          "S_DECIDUALIZED",
+          "S_FGF_MITOGENIC",
+          "S_HAND2",
+          "S_IGFBP1",
+          "S_NR2F2",
+          "S_PGR",
+          "S_PKA",
+          "S_PRL",
+          "S_SPP1",
+          "S_TAZ_ECM",
+          "X_ANTIADHESIVE_ROUTE",
+          "X_INTERFACE_ANTIADHESIVE_RELAY",
+          "X_INTERFACE_REDUNDANT_RELAY",
+          "X_INTERFACE_SPP1_RELAY",
+          "X_MECHANICAL_PERMISSIVE_ECM",
+          "X_MECHANICAL_STRESS_RELAY",
+          "X_SPP1_LUMEN_FREE"
+        ]
+      },
+      "v052_vs_v051": {
+        "downstream": [
+          "E_RECEPTIVE_SURFACE",
+          "OUT_MATERNAL_ADHESION_COMPETENCE",
+          "OUT_STABLE_ADHESION",
+          "X_ADHESION_ROUTE_REDUNDANT",
+          "X_ADHESION_ROUTE_SPP1"
+        ],
+        "primary": [
+          "E_ESTROGENIC_PROLIFERATION",
+          "OUT_EPITHELIAL_RECEPTIVE"
+        ],
+        "unaffected": [
+          "E_ANXA2_ACTIN",
+          "E_CD98_CD9",
+          "E_CDH1_APICAL",
+          "E_DAG1_CLEAVED",
+          "E_DAG1_FULL",
+          "E_GP130_STAT3",
+          "E_HBEGF",
+          "E_IHH",
+          "E_ITGAVB3_5",
+          "E_KLF12_HIGH",
+          "E_LIF",
+          "E_MUC1_BARRIER",
+          "E_MUC1_SLEX",
+          "E_PAEP",
+          "E_PC6",
+          "E_PGR",
+          "E_PODXL",
+          "E_SECRETORY_STATE",
+          "E_SPP1_EXPR",
+          "IN_ANTI_SPP1",
+          "IN_E2",
+          "IN_EMBRYO_CONDITIONED_SIGNAL",
+          "IN_EMBRYO_CONTACT",
+          "IN_EMBRYO_PRESENT",
+          "IN_ER_STRESS_EXCESS",
+          "IN_HAND2_LOSS",
+          "IN_HCG",
+          "IN_HIGH_ECM_STIFFNESS",
+          "IN_MIFEPRISTONE",
+          "IN_PROGESTIN",
+          "IN_TROPHECTODERM_COMPETENT",
+          "IN_XAV939",
+          "IN_cAMP",
+          "OUT_STROMAL_DECIDUALIZED",
+          "S_BMP2",
+          "S_DECIDUALIZED",
+          "S_FGF_MITOGENIC",
+          "S_HAND2",
+          "S_IGFBP1",
+          "S_NR2F2",
+          "S_PGR",
+          "S_PKA",
+          "S_PRL",
+          "S_SPP1",
+          "S_TAZ_ECM",
+          "X_ANTIADHESIVE_ROUTE",
+          "X_INTERFACE_ANTIADHESIVE_RELAY",
+          "X_INTERFACE_REDUNDANT_RELAY",
+          "X_INTERFACE_SPP1_RELAY",
+          "X_MECHANICAL_PERMISSIVE_ECM",
+          "X_MECHANICAL_STRESS_RELAY",
+          "X_SPP1_LUMEN_FREE"
+        ]
+      }
+    },
+    "normal_quantile_for_stability": 3.2272184259631627,
+    "pointwise_trace_t_quantile": 2.0930240544083087,
+    "t_quantile": {
+      "c1only_vs_v051:downstream": 3.7856672364941275,
+      "c1only_vs_v051:primary": 3.481150847255481,
+      "c1only_vs_v051:unaffected": 5.140539000183026,
+      "c5only_vs_v051:downstream": 4.266881386693862,
+      "c5only_vs_v051:primary": 3.481150847255481,
+      "c5only_vs_v051:unaffected": 5.096596966741779,
+      "v052_vs_v051:downstream": 4.186935258796953,
+      "v052_vs_v051:primary": 3.7856672364941275,
+      "v052_vs_v051:unaffected": 5.096596966741779
+    }
+  },
+  "family_alpha": 0.05,
+  "governing_trajectory_count": 20000,
+  "horizon": "declared relative_duration per phase (dimensionless MaBoSS time)",
+  "model_version": "adoc-literature-superset-v0.5.2",
+  "parent_model_version": "adoc-literature-superset-v0.5.1",
+  "preregistration": "docs/v052_paep_hand2/transient_preregistration.md",
+  "primary_reported_verdicts": {
+    "adhesion_challenge_basal:E_ESTROGENIC_PROLIFERATION:final_tick": "EXACTLY_IDENTICAL",
+    "adhesion_challenge_basal:E_ESTROGENIC_PROLIFERATION:time_averaged": "EXACTLY_IDENTICAL",
+    "adhesion_challenge_basal:OUT_EPITHELIAL_RECEPTIVE:final_tick": "EXACTLY_IDENTICAL",
+    "adhesion_challenge_basal:OUT_EPITHELIAL_RECEPTIVE:time_averaged": "EXACTLY_IDENTICAL",
+    "adhesion_challenge_hormone_treated:E_ESTROGENIC_PROLIFERATION:final_tick": "BEYOND_TOLERANCE",
+    "adhesion_challenge_hormone_treated:E_ESTROGENIC_PROLIFERATION:time_averaged": "BEYOND_TOLERANCE",
+    "adhesion_challenge_hormone_treated:OUT_EPITHELIAL_RECEPTIVE:final_tick": "BEYOND_TOLERANCE",
+    "adhesion_challenge_hormone_treated:OUT_EPITHELIAL_RECEPTIVE:time_averaged": "BEYOND_TOLERANCE",
+    "adhesion_challenge_hormone_treated_mifepristone:E_ESTROGENIC_PROLIFERATION:final_tick": "BEYOND_TOLERANCE",
+    "adhesion_challenge_hormone_treated_mifepristone:E_ESTROGENIC_PROLIFERATION:time_averaged": "BEYOND_TOLERANCE",
+    "adhesion_challenge_hormone_treated_mifepristone:OUT_EPITHELIAL_RECEPTIVE:final_tick": "BEYOND_TOLERANCE",
+    "adhesion_challenge_hormone_treated_mifepristone:OUT_EPITHELIAL_RECEPTIVE:time_averaged": "BEYOND_TOLERANCE",
+    "adhesion_challenge_washout:E_ESTROGENIC_PROLIFERATION:final_tick": "BEYOND_TOLERANCE",
+    "adhesion_challenge_washout:E_ESTROGENIC_PROLIFERATION:time_averaged": "BEYOND_TOLERANCE",
+    "adhesion_challenge_washout:OUT_EPITHELIAL_RECEPTIVE:final_tick": "BEYOND_TOLERANCE",
+    "adhesion_challenge_washout:OUT_EPITHELIAL_RECEPTIVE:time_averaged": "BEYOND_TOLERANCE",
+    "basal_maternal:E_ESTROGENIC_PROLIFERATION:final_tick": "EXACTLY_IDENTICAL",
+    "basal_maternal:E_ESTROGENIC_PROLIFERATION:time_averaged": "EXACTLY_IDENTICAL",
+    "basal_maternal:OUT_EPITHELIAL_RECEPTIVE:final_tick": "EXACTLY_IDENTICAL",
+    "basal_maternal:OUT_EPITHELIAL_RECEPTIVE:time_averaged": "EXACTLY_IDENTICAL",
+    "e2_primed_maternal:E_ESTROGENIC_PROLIFERATION:final_tick": "UNSTABLE",
+    "e2_primed_maternal:E_ESTROGENIC_PROLIFERATION:time_averaged": "WITHIN_TOLERANCE",
+    "e2_primed_maternal:OUT_EPITHELIAL_RECEPTIVE:final_tick": "EXACTLY_IDENTICAL",
+    "e2_primed_maternal:OUT_EPITHELIAL_RECEPTIVE:time_averaged": "EXACTLY_IDENTICAL",
+    "hormone_treated_anti_spp1:E_ESTROGENIC_PROLIFERATION:final_tick": "BEYOND_TOLERANCE",
+    "hormone_treated_anti_spp1:E_ESTROGENIC_PROLIFERATION:time_averaged": "BEYOND_TOLERANCE",
+    "hormone_treated_anti_spp1:OUT_EPITHELIAL_RECEPTIVE:final_tick": "BEYOND_TOLERANCE",
+    "hormone_treated_anti_spp1:OUT_EPITHELIAL_RECEPTIVE:time_averaged": "BEYOND_TOLERANCE",
+    "hormone_treated_maternal:E_ESTROGENIC_PROLIFERATION:final_tick": "BEYOND_TOLERANCE",
+    "hormone_treated_maternal:E_ESTROGENIC_PROLIFERATION:time_averaged": "BEYOND_TOLERANCE",
+    "hormone_treated_maternal:OUT_EPITHELIAL_RECEPTIVE:final_tick": "BEYOND_TOLERANCE",
+    "hormone_treated_maternal:OUT_EPITHELIAL_RECEPTIVE:time_averaged": "WITHIN_TOLERANCE",
+    "hormone_treated_mifepristone:E_ESTROGENIC_PROLIFERATION:final_tick": "BEYOND_TOLERANCE",
+    "hormone_treated_mifepristone:E_ESTROGENIC_PROLIFERATION:time_averaged": "BEYOND_TOLERANCE",
+    "hormone_treated_mifepristone:OUT_EPITHELIAL_RECEPTIVE:final_tick": "BEYOND_TOLERANCE",
+    "hormone_treated_mifepristone:OUT_EPITHELIAL_RECEPTIVE:time_averaged": "BEYOND_TOLERANCE",
+    "washout:E_ESTROGENIC_PROLIFERATION:final_tick": "BEYOND_TOLERANCE",
+    "washout:E_ESTROGENIC_PROLIFERATION:time_averaged": "BEYOND_TOLERANCE",
+    "washout:OUT_EPITHELIAL_RECEPTIVE:final_tick": "BEYOND_TOLERANCE",
+    "washout:OUT_EPITHELIAL_RECEPTIVE:time_averaged": "BEYOND_TOLERANCE"
+  },
+  "provenance": {
+    "attribution_models_not_committed": {
+      "adoc-literature-superset-v0.5.2-c1only": {
+        "baseline_cfg_sha256": "4d42bdcbcfcceaedaafeeb96fe76400700175c969cec15bff9e02f360ff4f41c",
+        "conditions_sha256": {
+          "adhesion_challenge_basal.cfg": "1cde2d12c5fb95b3680eb10d7a7160002b79f339af16d4f64b15fe98e67d27fa",
+          "adhesion_challenge_excess_er_stress.cfg": "21a7f0570ed0b73cadba710cb4a778ad3552a07e06102ce28cce931e7369f1f1",
+          "adhesion_challenge_high_ecm_stiffness.cfg": "65a5d9f237baa51be310343b410d1a76f499832a1495bb8785ff0c01b19f1b4c",
+          "adhesion_challenge_hormone_treated.cfg": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+          "adhesion_challenge_hormone_treated_anti_spp1.cfg": "f1a307764f8f06a69941f5d637ccecb4bb18992481b50784b7f3615617a2068a",
+          "adhesion_challenge_hormone_treated_hand2_loss.cfg": "610c2f675656e56e833ee3e98da5f72fe41d9574b3eb03437b6c4a5b81ad5a7a",
+          "adhesion_challenge_hormone_treated_mifepristone.cfg": "4881de9c5a5a89ed81aca919b38cb4a546425cee28b74a5cb9f3c5ff399e6162",
+          "adhesion_challenge_washout.cfg": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+          "basal_maternal.cfg": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+          "e2_primed_maternal.cfg": "93006ce97fa5244594593d3f500f1c8d9699ae547030608079856f0d1f190bbe",
+          "embryo_absent.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+          "embryo_incompetent.cfg": "77a4afb84e58268c2af3fab9e636beb678939b8c89a0ec8432716b5f071ff64f",
+          "excess_er_stress.cfg": "e3bbc93b2e48c732634c0fbc5cf2f7d634a03f8a93333ccb58182679d12d5c62",
+          "high_ecm_stiffness.cfg": "f0ca6146c32624e73052a995c0f54f3d7fe56b6865cb95b81cac6566ffa483c0",
+          "hormone_treated.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+          "hormone_treated_anti_spp1.cfg": "d0e7e3c5d484e60ee58ea4961a9bef7e6084ab80257dfe177cd80c456cdc725d",
+          "hormone_treated_hand2_loss.cfg": "30b949013ab6b195cbfbc6aff8efcec4e4edda6df319b49bdbb2585992e7ad1f",
+          "hormone_treated_maternal.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+          "hormone_treated_mifepristone.cfg": "91ebe467a4adaba0f35b76943c429f134bcc36e8d15f38daebf3aacfb94f76bd",
+          "untreated.cfg": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+          "washout.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9"
+        },
+        "network_bnd_sha256": "c98282b658349e0f7afe08dc9bb851390839279aa6c3bfec65581eaa0f49df47",
+        "provenance_toml_sha256": "e450a341a559b08b1b93176f4bbdeece68d3ac2bdeea146ddfd5fb73ea950abd"
+      },
+      "adoc-literature-superset-v0.5.2-c5only": {
+        "baseline_cfg_sha256": "4d42bdcbcfcceaedaafeeb96fe76400700175c969cec15bff9e02f360ff4f41c",
+        "conditions_sha256": {
+          "adhesion_challenge_basal.cfg": "1cde2d12c5fb95b3680eb10d7a7160002b79f339af16d4f64b15fe98e67d27fa",
+          "adhesion_challenge_excess_er_stress.cfg": "21a7f0570ed0b73cadba710cb4a778ad3552a07e06102ce28cce931e7369f1f1",
+          "adhesion_challenge_high_ecm_stiffness.cfg": "65a5d9f237baa51be310343b410d1a76f499832a1495bb8785ff0c01b19f1b4c",
+          "adhesion_challenge_hormone_treated.cfg": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+          "adhesion_challenge_hormone_treated_anti_spp1.cfg": "f1a307764f8f06a69941f5d637ccecb4bb18992481b50784b7f3615617a2068a",
+          "adhesion_challenge_hormone_treated_hand2_loss.cfg": "610c2f675656e56e833ee3e98da5f72fe41d9574b3eb03437b6c4a5b81ad5a7a",
+          "adhesion_challenge_hormone_treated_mifepristone.cfg": "4881de9c5a5a89ed81aca919b38cb4a546425cee28b74a5cb9f3c5ff399e6162",
+          "adhesion_challenge_washout.cfg": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+          "basal_maternal.cfg": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+          "e2_primed_maternal.cfg": "93006ce97fa5244594593d3f500f1c8d9699ae547030608079856f0d1f190bbe",
+          "embryo_absent.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+          "embryo_incompetent.cfg": "77a4afb84e58268c2af3fab9e636beb678939b8c89a0ec8432716b5f071ff64f",
+          "excess_er_stress.cfg": "e3bbc93b2e48c732634c0fbc5cf2f7d634a03f8a93333ccb58182679d12d5c62",
+          "high_ecm_stiffness.cfg": "f0ca6146c32624e73052a995c0f54f3d7fe56b6865cb95b81cac6566ffa483c0",
+          "hormone_treated.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+          "hormone_treated_anti_spp1.cfg": "d0e7e3c5d484e60ee58ea4961a9bef7e6084ab80257dfe177cd80c456cdc725d",
+          "hormone_treated_hand2_loss.cfg": "30b949013ab6b195cbfbc6aff8efcec4e4edda6df319b49bdbb2585992e7ad1f",
+          "hormone_treated_maternal.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+          "hormone_treated_mifepristone.cfg": "91ebe467a4adaba0f35b76943c429f134bcc36e8d15f38daebf3aacfb94f76bd",
+          "untreated.cfg": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+          "washout.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9"
+        },
+        "network_bnd_sha256": "a2ef4fdf049b1c4fd24cc84a3cc72d2c0a8674349560bd9702da3822642c92f1",
+        "provenance_toml_sha256": "6e1cf04b8113e17aee2854529c4c3ae7fb19c52a0ccdcceb4c742aca443fb7da"
+      }
+    },
+    "generator_files": {
+      "src/dt_adoc/concordance/simulate.py": "91cce354044baad2112666974577753080156f754231c14813398d50d73c6c92",
+      "src/dt_adoc/protocols/conditions.py": "c0e79de290e0d6a7360aa9d7e0fd8c6f1eefa6c6d63bb1d107683986b19eb1c9",
+      "src/dt_adoc/reporting/u5b_readout_transient.py": "af0e04520f66f5247ec40cf4d90ea3bef643d01f4500632dd38a2904ff5f0ea2",
+      "src/dt_adoc/reporting/v052_increment.py": "521ed2a9e0ea2ab8a4adfd8a79981c8579c7e8d7f74e9e19e91ecf2dfacd15e6",
+      "src/dt_adoc/reporting/v052_transient.py": "b389fe3451446d9054bf3689237f574d92b4da94788a31a1717babd342a8bd5d",
+      "src/dt_adoc/simulation/runner.py": "7555cea1ea3653f2647b121ba66fa3a213648c0c133a25e833314c4aaa8023f9"
+    },
+    "git_commit": "969d1febb3073551a3f7c564ec834720337cb435",
+    "maboss_python_package": "unknown",
+    "models": {
+      "adoc-literature-superset-v0.5.1": {
+        "baseline_cfg_sha256": "4d42bdcbcfcceaedaafeeb96fe76400700175c969cec15bff9e02f360ff4f41c",
+        "conditions_sha256": {
+          "adhesion_challenge_basal.cfg": "1cde2d12c5fb95b3680eb10d7a7160002b79f339af16d4f64b15fe98e67d27fa",
+          "adhesion_challenge_excess_er_stress.cfg": "21a7f0570ed0b73cadba710cb4a778ad3552a07e06102ce28cce931e7369f1f1",
+          "adhesion_challenge_high_ecm_stiffness.cfg": "65a5d9f237baa51be310343b410d1a76f499832a1495bb8785ff0c01b19f1b4c",
+          "adhesion_challenge_hormone_treated.cfg": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+          "adhesion_challenge_hormone_treated_anti_spp1.cfg": "f1a307764f8f06a69941f5d637ccecb4bb18992481b50784b7f3615617a2068a",
+          "adhesion_challenge_hormone_treated_hand2_loss.cfg": "610c2f675656e56e833ee3e98da5f72fe41d9574b3eb03437b6c4a5b81ad5a7a",
+          "adhesion_challenge_hormone_treated_mifepristone.cfg": "4881de9c5a5a89ed81aca919b38cb4a546425cee28b74a5cb9f3c5ff399e6162",
+          "adhesion_challenge_washout.cfg": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+          "basal_maternal.cfg": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+          "e2_primed_maternal.cfg": "93006ce97fa5244594593d3f500f1c8d9699ae547030608079856f0d1f190bbe",
+          "embryo_absent.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+          "embryo_incompetent.cfg": "77a4afb84e58268c2af3fab9e636beb678939b8c89a0ec8432716b5f071ff64f",
+          "excess_er_stress.cfg": "e3bbc93b2e48c732634c0fbc5cf2f7d634a03f8a93333ccb58182679d12d5c62",
+          "high_ecm_stiffness.cfg": "f0ca6146c32624e73052a995c0f54f3d7fe56b6865cb95b81cac6566ffa483c0",
+          "hormone_treated.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+          "hormone_treated_anti_spp1.cfg": "d0e7e3c5d484e60ee58ea4961a9bef7e6084ab80257dfe177cd80c456cdc725d",
+          "hormone_treated_hand2_loss.cfg": "30b949013ab6b195cbfbc6aff8efcec4e4edda6df319b49bdbb2585992e7ad1f",
+          "hormone_treated_maternal.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+          "hormone_treated_mifepristone.cfg": "91ebe467a4adaba0f35b76943c429f134bcc36e8d15f38daebf3aacfb94f76bd",
+          "untreated.cfg": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+          "washout.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9"
+        },
+        "network_bnd_sha256": "d7068867429cfdafe89442ee2fb0bc3fb94ae9f985d3d65b1c4be19d01cad063",
+        "provenance_toml_sha256": "6f93d37f0a030f5fe1659b3dab9c92863c71919aaf1bdf412ae4f3267a10aa9c"
+      },
+      "adoc-literature-superset-v0.5.2": {
+        "baseline_cfg_sha256": "4d42bdcbcfcceaedaafeeb96fe76400700175c969cec15bff9e02f360ff4f41c",
+        "conditions_sha256": {
+          "adhesion_challenge_basal.cfg": "1cde2d12c5fb95b3680eb10d7a7160002b79f339af16d4f64b15fe98e67d27fa",
+          "adhesion_challenge_excess_er_stress.cfg": "21a7f0570ed0b73cadba710cb4a778ad3552a07e06102ce28cce931e7369f1f1",
+          "adhesion_challenge_high_ecm_stiffness.cfg": "65a5d9f237baa51be310343b410d1a76f499832a1495bb8785ff0c01b19f1b4c",
+          "adhesion_challenge_hormone_treated.cfg": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+          "adhesion_challenge_hormone_treated_anti_spp1.cfg": "f1a307764f8f06a69941f5d637ccecb4bb18992481b50784b7f3615617a2068a",
+          "adhesion_challenge_hormone_treated_hand2_loss.cfg": "610c2f675656e56e833ee3e98da5f72fe41d9574b3eb03437b6c4a5b81ad5a7a",
+          "adhesion_challenge_hormone_treated_mifepristone.cfg": "4881de9c5a5a89ed81aca919b38cb4a546425cee28b74a5cb9f3c5ff399e6162",
+          "adhesion_challenge_washout.cfg": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+          "basal_maternal.cfg": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+          "e2_primed_maternal.cfg": "93006ce97fa5244594593d3f500f1c8d9699ae547030608079856f0d1f190bbe",
+          "embryo_absent.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+          "embryo_incompetent.cfg": "77a4afb84e58268c2af3fab9e636beb678939b8c89a0ec8432716b5f071ff64f",
+          "excess_er_stress.cfg": "e3bbc93b2e48c732634c0fbc5cf2f7d634a03f8a93333ccb58182679d12d5c62",
+          "high_ecm_stiffness.cfg": "f0ca6146c32624e73052a995c0f54f3d7fe56b6865cb95b81cac6566ffa483c0",
+          "hormone_treated.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+          "hormone_treated_anti_spp1.cfg": "d0e7e3c5d484e60ee58ea4961a9bef7e6084ab80257dfe177cd80c456cdc725d",
+          "hormone_treated_hand2_loss.cfg": "30b949013ab6b195cbfbc6aff8efcec4e4edda6df319b49bdbb2585992e7ad1f",
+          "hormone_treated_maternal.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+          "hormone_treated_mifepristone.cfg": "91ebe467a4adaba0f35b76943c429f134bcc36e8d15f38daebf3aacfb94f76bd",
+          "untreated.cfg": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+          "washout.cfg": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9"
+        },
+        "network_bnd_sha256": "7a73529c28ab7533c25c0673744bad7496ee8d75d7849fe3971838dbcf2d7b25",
+        "provenance_toml_sha256": "2ac5d2c0ee1254d72ba216c79e912ffb8cf183c6862f89e78f2fa8c153dde06b"
+      }
+    },
+    "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+    "preregistration_sha256": "03cb1029530a8b0d08fbe53cb41b334db34444c619d6043888f1179cbbe9d901",
+    "protocols_yaml_sha256": "243887238ee927770e53b8d5116c8f464c864abb84ddd8b0b4214b7146019f1a",
+    "python": "3.12.13"
+  },
+  "replicates": 20,
+  "seed_rule": {
+    "2000": "400001 + r * 2000",
+    "20000": "1 + r * 20000"
+  },
+  "stability": [
+    {
+      "absolute_gap": 0.0,
+      "bound": 0.0,
+      "cell": "adhesion_challenge_basal",
+      "estimand": "time_averaged",
+      "mean_check": 0.0,
+      "mean_governing": 0.0,
+      "node_id": "E_ESTROGENIC_PROLIFERATION",
+      "reported_verdict": "EXACTLY_IDENTICAL",
+      "se_ratio_check_over_governing": null,
+      "stable": true,
+      "verdict_check": "EXACTLY_IDENTICAL",
+      "verdict_governing": "EXACTLY_IDENTICAL"
+    },
+    {
+      "absolute_gap": 0.0,
+      "bound": 0.0,
+      "cell": "adhesion_challenge_basal",
+      "estimand": "final_tick",
+      "mean_check": 0.0,
+      "mean_governing": 0.0,
+      "node_id": "E_ESTROGENIC_PROLIFERATION",
+      "reported_verdict": "EXACTLY_IDENTICAL",
+      "se_ratio_check_over_governing": null,
+      "stable": true,
+      "verdict_check": "EXACTLY_IDENTICAL",
+      "verdict_governing": "EXACTLY_IDENTICAL"
+    },
+    {
+      "absolute_gap": 0.0,
+      "bound": 0.0,
+      "cell": "adhesion_challenge_basal",
+      "estimand": "time_averaged",
+      "mean_check": 0.0,
+      "mean_governing": 0.0,
+      "node_id": "OUT_EPITHELIAL_RECEPTIVE",
+      "reported_verdict": "EXACTLY_IDENTICAL",
+      "se_ratio_check_over_governing": null,
+      "stable": true,
+      "verdict_check": "EXACTLY_IDENTICAL",
+      "verdict_governing": "EXACTLY_IDENTICAL"
+    },
+    {
+      "absolute_gap": 0.0,
+      "bound": 0.0,
+      "cell": "adhesion_challenge_basal",
+      "estimand": "final_tick",
+      "mean_check": 0.0,
+      "mean_governing": 0.0,
+      "node_id": "OUT_EPITHELIAL_RECEPTIVE",
+      "reported_verdict": "EXACTLY_IDENTICAL",
+      "se_ratio_check_over_governing": null,
+      "stable": true,
+      "verdict_check": "EXACTLY_IDENTICAL",
+      "verdict_governing": "EXACTLY_IDENTICAL"
+    },
+    {
+      "absolute_gap": 0.0017171320687312253,
+      "bound": 0.010445446165734852,
+      "cell": "adhesion_challenge_hormone_treated",
+      "estimand": "time_averaged",
+      "mean_check": 0.168389128160884,
+      "mean_governing": 0.16667199609215277,
+      "node_id": "E_ESTROGENIC_PROLIFERATION",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 4.611386604941186,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.0012812978708209855,
+      "bound": 0.010657465399745804,
+      "cell": "adhesion_challenge_hormone_treated",
+      "estimand": "final_tick",
+      "mean_check": 0.14051634698991367,
+      "mean_governing": 0.13923504911909268,
+      "node_id": "E_ESTROGENIC_PROLIFERATION",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 4.46902105323967,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.00023344864126522216,
+      "bound": 0.0033774251017425878,
+      "cell": "adhesion_challenge_hormone_treated",
+      "estimand": "time_averaged",
+      "mean_check": 0.02607660139973,
+      "mean_governing": 0.026310050040995223,
+      "node_id": "OUT_EPITHELIAL_RECEPTIVE",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 2.302076371603664,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.00025072380288182483,
+      "bound": 0.00659003690931485,
+      "cell": "adhesion_challenge_hormone_treated",
+      "estimand": "final_tick",
+      "mean_check": 0.04187388799824037,
+      "mean_governing": 0.041623164195358546,
+      "node_id": "OUT_EPITHELIAL_RECEPTIVE",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 3.632981520149449,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.00266854945357161,
+      "bound": 0.006080681883733291,
+      "cell": "adhesion_challenge_hormone_treated_mifepristone",
+      "estimand": "time_averaged",
+      "mean_check": 0.06300944268749224,
+      "mean_governing": 0.06034089323392063,
+      "node_id": "E_ESTROGENIC_PROLIFERATION",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 3.1004466973494242,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.0025661874194287115,
+      "bound": 0.0065690578954750905,
+      "cell": "adhesion_challenge_hormone_treated_mifepristone",
+      "estimand": "final_tick",
+      "mean_check": 0.046014377788269625,
+      "mean_governing": 0.043448190368840914,
+      "node_id": "E_ESTROGENIC_PROLIFERATION",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 2.0410203154849964,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.0018222211858885257,
+      "bound": 0.003950181437720097,
+      "cell": "adhesion_challenge_hormone_treated_mifepristone",
+      "estimand": "time_averaged",
+      "mean_check": 0.07971075530716526,
+      "mean_governing": 0.08153297649305379,
+      "node_id": "OUT_EPITHELIAL_RECEPTIVE",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 2.136835129510589,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.0031688196735562696,
+      "bound": 0.006810918812787742,
+      "cell": "adhesion_challenge_hormone_treated_mifepristone",
+      "estimand": "final_tick",
+      "mean_check": 0.11730728942517868,
+      "mean_governing": 0.12047610909873495,
+      "node_id": "OUT_EPITHELIAL_RECEPTIVE",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 2.831843019334694,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.0006595500128910928,
+      "bound": 0.004467655933491936,
+      "cell": "adhesion_challenge_washout",
+      "estimand": "time_averaged",
+      "mean_check": 0.04151461347651747,
+      "mean_governing": 0.04217416348940856,
+      "node_id": "E_ESTROGENIC_PROLIFERATION",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 3.007598692181752,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.0004386987795613542,
+      "bound": 0.003969797231364297,
+      "cell": "adhesion_challenge_washout",
+      "estimand": "final_tick",
+      "mean_check": 0.031324945750351975,
+      "mean_governing": 0.03176364452991333,
+      "node_id": "E_ESTROGENIC_PROLIFERATION",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 2.867434673232872,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.0005091821793564155,
+      "bound": 0.005669992488371832,
+      "cell": "adhesion_challenge_washout",
+      "estimand": "time_averaged",
+      "mean_check": 0.14850146447938622,
+      "mean_governing": 0.1479922823000298,
+      "node_id": "OUT_EPITHELIAL_RECEPTIVE",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 6.300171754849685,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.00022825414490448837,
+      "bound": 0.00871692098482648,
+      "cell": "adhesion_challenge_washout",
+      "estimand": "final_tick",
+      "mean_check": 0.21038680155362738,
+      "mean_governing": 0.21061505569853187,
+      "node_id": "OUT_EPITHELIAL_RECEPTIVE",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 4.273524909796323,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.0,
+      "bound": 0.0,
+      "cell": "basal_maternal",
+      "estimand": "time_averaged",
+      "mean_check": 0.0,
+      "mean_governing": 0.0,
+      "node_id": "E_ESTROGENIC_PROLIFERATION",
+      "reported_verdict": "EXACTLY_IDENTICAL",
+      "se_ratio_check_over_governing": null,
+      "stable": true,
+      "verdict_check": "EXACTLY_IDENTICAL",
+      "verdict_governing": "EXACTLY_IDENTICAL"
+    },
+    {
+      "absolute_gap": 0.0,
+      "bound": 0.0,
+      "cell": "basal_maternal",
+      "estimand": "final_tick",
+      "mean_check": 0.0,
+      "mean_governing": 0.0,
+      "node_id": "E_ESTROGENIC_PROLIFERATION",
+      "reported_verdict": "EXACTLY_IDENTICAL",
+      "se_ratio_check_over_governing": null,
+      "stable": true,
+      "verdict_check": "EXACTLY_IDENTICAL",
+      "verdict_governing": "EXACTLY_IDENTICAL"
+    },
+    {
+      "absolute_gap": 0.0,
+      "bound": 0.0,
+      "cell": "basal_maternal",
+      "estimand": "time_averaged",
+      "mean_check": 0.0,
+      "mean_governing": 0.0,
+      "node_id": "OUT_EPITHELIAL_RECEPTIVE",
+      "reported_verdict": "EXACTLY_IDENTICAL",
+      "se_ratio_check_over_governing": null,
+      "stable": true,
+      "verdict_check": "EXACTLY_IDENTICAL",
+      "verdict_governing": "EXACTLY_IDENTICAL"
+    },
+    {
+      "absolute_gap": 0.0,
+      "bound": 0.0,
+      "cell": "basal_maternal",
+      "estimand": "final_tick",
+      "mean_check": 0.0,
+      "mean_governing": 0.0,
+      "node_id": "OUT_EPITHELIAL_RECEPTIVE",
+      "reported_verdict": "EXACTLY_IDENTICAL",
+      "se_ratio_check_over_governing": null,
+      "stable": true,
+      "verdict_check": "EXACTLY_IDENTICAL",
+      "verdict_governing": "EXACTLY_IDENTICAL"
+    },
+    {
+      "absolute_gap": 3.231789835744792e-17,
+      "bound": 4.869739464781354e-17,
+      "cell": "e2_primed_maternal",
+      "estimand": "time_averaged",
+      "mean_check": 3.545774784896594e-17,
+      "mean_governing": 3.1398494915180217e-18,
+      "node_id": "E_ESTROGENIC_PROLIFERATION",
+      "reported_verdict": "WITHIN_TOLERANCE",
+      "se_ratio_check_over_governing": 1.0526948671577494,
+      "stable": true,
+      "verdict_check": "WITHIN_TOLERANCE",
+      "verdict_governing": "WITHIN_TOLERANCE"
+    },
+    {
+      "absolute_gap": 6.272760089132135e-16,
+      "bound": 3.431463119296185e-16,
+      "cell": "e2_primed_maternal",
+      "estimand": "final_tick",
+      "mean_check": -5.828670879282072e-16,
+      "mean_governing": 4.4408920985006264e-17,
+      "node_id": "E_ESTROGENIC_PROLIFERATION",
+      "reported_verdict": "UNSTABLE",
+      "se_ratio_check_over_governing": 1.5250766468036792,
+      "stable": false,
+      "verdict_check": "WITHIN_TOLERANCE",
+      "verdict_governing": "WITHIN_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.0,
+      "bound": 0.0,
+      "cell": "e2_primed_maternal",
+      "estimand": "time_averaged",
+      "mean_check": 0.0,
+      "mean_governing": 0.0,
+      "node_id": "OUT_EPITHELIAL_RECEPTIVE",
+      "reported_verdict": "EXACTLY_IDENTICAL",
+      "se_ratio_check_over_governing": null,
+      "stable": true,
+      "verdict_check": "EXACTLY_IDENTICAL",
+      "verdict_governing": "EXACTLY_IDENTICAL"
+    },
+    {
+      "absolute_gap": 0.0,
+      "bound": 0.0,
+      "cell": "e2_primed_maternal",
+      "estimand": "final_tick",
+      "mean_check": 0.0,
+      "mean_governing": 0.0,
+      "node_id": "OUT_EPITHELIAL_RECEPTIVE",
+      "reported_verdict": "EXACTLY_IDENTICAL",
+      "se_ratio_check_over_governing": null,
+      "stable": true,
+      "verdict_check": "EXACTLY_IDENTICAL",
+      "verdict_governing": "EXACTLY_IDENTICAL"
+    },
+    {
+      "absolute_gap": 0.0004789477885100979,
+      "bound": 0.008256579323938485,
+      "cell": "hormone_treated_anti_spp1",
+      "estimand": "time_averaged",
+      "mean_check": 0.14265765587639004,
+      "mean_governing": 0.14217870808787994,
+      "node_id": "E_ESTROGENIC_PROLIFERATION",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 4.490575514860303,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.00018124665813532004,
+      "bound": 0.007677064136259801,
+      "cell": "hormone_treated_anti_spp1",
+      "estimand": "final_tick",
+      "mean_check": 0.09258395119750842,
+      "mean_governing": 0.09276519785564374,
+      "node_id": "E_ESTROGENIC_PROLIFERATION",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 4.8429594662194075,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.00022596147360647023,
+      "bound": 0.0053956532937021635,
+      "cell": "hormone_treated_anti_spp1",
+      "estimand": "time_averaged",
+      "mean_check": 0.031017920000953016,
+      "mean_governing": 0.031243881474559487,
+      "node_id": "OUT_EPITHELIAL_RECEPTIVE",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 5.094907110909178,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.00011446004719752739,
+      "bound": 0.008901208607402475,
+      "cell": "hormone_treated_anti_spp1",
+      "estimand": "final_tick",
+      "mean_check": 0.025918309376833794,
+      "mean_governing": 0.025803849329636266,
+      "node_id": "OUT_EPITHELIAL_RECEPTIVE",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 3.683554091827595,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.00017057257217170663,
+      "bound": 0.004896999827945868,
+      "cell": "hormone_treated_maternal",
+      "estimand": "time_averaged",
+      "mean_check": 0.1386041857944408,
+      "mean_governing": 0.13877475836661252,
+      "node_id": "E_ESTROGENIC_PROLIFERATION",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 3.259109841612482,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.00011619064160012238,
+      "bound": 0.011003161779816311,
+      "cell": "hormone_treated_maternal",
+      "estimand": "final_tick",
+      "mean_check": 0.1952285342351129,
+      "mean_governing": 0.1951123435935128,
+      "node_id": "E_ESTROGENIC_PROLIFERATION",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 4.648020267062964,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.0004968706880721062,
+      "bound": 0.0006169392604528105,
+      "cell": "hormone_treated_maternal",
+      "estimand": "time_averaged",
+      "mean_check": -0.00274652672539434,
+      "mean_governing": -0.002249656037322234,
+      "node_id": "OUT_EPITHELIAL_RECEPTIVE",
+      "reported_verdict": "WITHIN_TOLERANCE",
+      "se_ratio_check_over_governing": 2.4548400606150866,
+      "stable": true,
+      "verdict_check": "WITHIN_TOLERANCE",
+      "verdict_governing": "WITHIN_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.0012973144487694425,
+      "bound": 0.0029232560009007725,
+      "cell": "hormone_treated_maternal",
+      "estimand": "final_tick",
+      "mean_check": -0.015493983562473376,
+      "mean_governing": -0.014196669113703934,
+      "node_id": "OUT_EPITHELIAL_RECEPTIVE",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 2.120087792487014,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.002678695596236347,
+      "bound": 0.007939400982948368,
+      "cell": "hormone_treated_mifepristone",
+      "estimand": "time_averaged",
+      "mean_check": 0.14023129039021584,
+      "mean_governing": 0.1375525947939795,
+      "node_id": "E_ESTROGENIC_PROLIFERATION",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 4.138297980170561,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.004432076567597545,
+      "bound": 0.008129864724092595,
+      "cell": "hormone_treated_mifepristone",
+      "estimand": "final_tick",
+      "mean_check": 0.08674277453401205,
+      "mean_governing": 0.0823106979664145,
+      "node_id": "E_ESTROGENIC_PROLIFERATION",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 3.86025253628584,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.0027430997757133604,
+      "bound": 0.005049872604466979,
+      "cell": "hormone_treated_mifepristone",
+      "estimand": "time_averaged",
+      "mean_check": 0.0366515793218678,
+      "mean_governing": 0.03939467909758116,
+      "node_id": "OUT_EPITHELIAL_RECEPTIVE",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 4.24339484511695,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.00599169890966398,
+      "bound": 0.009059364160206293,
+      "cell": "hormone_treated_mifepristone",
+      "estimand": "final_tick",
+      "mean_check": 0.047563040110052385,
+      "mean_governing": 0.053554739019716364,
+      "node_id": "OUT_EPITHELIAL_RECEPTIVE",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 3.930476770408735,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.00010005687743672165,
+      "bound": 0.006109349964012592,
+      "cell": "washout",
+      "estimand": "time_averaged",
+      "mean_check": 0.07232510478967738,
+      "mean_governing": 0.07222504791224066,
+      "node_id": "E_ESTROGENIC_PROLIFERATION",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 4.251272163008239,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.0008281013901971918,
+      "bound": 0.0052837201284618605,
+      "cell": "washout",
+      "estimand": "final_tick",
+      "mean_check": 0.05498485444649294,
+      "mean_governing": 0.05581295583669013,
+      "node_id": "E_ESTROGENIC_PROLIFERATION",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 3.1172678205880135,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.0007802177269937288,
+      "bound": 0.004529309286278903,
+      "cell": "washout",
+      "estimand": "time_averaged",
+      "mean_check": 0.11772841108918423,
+      "mean_governing": 0.1169481933621905,
+      "node_id": "OUT_EPITHELIAL_RECEPTIVE",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 2.6790216700671836,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    },
+    {
+      "absolute_gap": 0.0012187797556429403,
+      "bound": 0.005783918282019107,
+      "cell": "washout",
+      "estimand": "final_tick",
+      "mean_check": 0.1691754710793514,
+      "mean_governing": 0.16795669132370847,
+      "node_id": "OUT_EPITHELIAL_RECEPTIVE",
+      "reported_verdict": "BEYOND_TOLERANCE",
+      "se_ratio_check_over_governing": 2.3219970279635422,
+      "stable": true,
+      "verdict_check": "BEYOND_TOLERANCE",
+      "verdict_governing": "BEYOND_TOLERANCE"
+    }
+  ],
+  "structural_identity": {
+    "affected_nodes": [
+      "E_ESTROGENIC_PROLIFERATION",
+      "E_RECEPTIVE_SURFACE",
+      "OUT_EPITHELIAL_RECEPTIVE",
+      "OUT_MATERNAL_ADHESION_COMPETENCE",
+      "OUT_STABLE_ADHESION",
+      "X_ADHESION_ROUTE_REDUNDANT",
+      "X_ADHESION_ROUTE_SPP1"
+    ],
+    "enumerated_assignments": 524288,
+    "free_variables": [
+      "IN_E2",
+      "IN_PROGESTIN",
+      "IN_cAMP",
+      "IN_XAV939",
+      "IN_MIFEPRISTONE",
+      "IN_ANTI_SPP1",
+      "IN_EMBRYO_PRESENT",
+      "IN_TROPHECTODERM_COMPETENT",
+      "IN_EMBRYO_CONTACT",
+      "IN_HCG",
+      "IN_EMBRYO_CONDITIONED_SIGNAL",
+      "IN_HAND2_LOSS",
+      "IN_ER_STRESS_EXCESS",
+      "IN_HIGH_ECM_STIFFNESS",
+      "E_KLF12_HIGH",
+      "X_MECHANICAL_STRESS_RELAY",
+      "X_INTERFACE_SPP1_RELAY",
+      "X_INTERFACE_REDUNDANT_RELAY",
+      "X_INTERFACE_ANTIADHESIVE_RELAY"
+    ],
+    "free_variables_parent": [
+      "IN_E2",
+      "IN_PROGESTIN",
+      "IN_cAMP",
+      "IN_XAV939",
+      "IN_MIFEPRISTONE",
+      "IN_ANTI_SPP1",
+      "IN_EMBRYO_PRESENT",
+      "IN_TROPHECTODERM_COMPETENT",
+      "IN_EMBRYO_CONTACT",
+      "IN_HCG",
+      "IN_EMBRYO_CONDITIONED_SIGNAL",
+      "IN_HAND2_LOSS",
+      "IN_ER_STRESS_EXCESS",
+      "IN_HIGH_ECM_STIFFNESS",
+      "E_KLF12_HIGH",
+      "X_MECHANICAL_STRESS_RELAY",
+      "X_INTERFACE_SPP1_RELAY",
+      "X_INTERFACE_REDUNDANT_RELAY",
+      "X_INTERFACE_ANTIADHESIVE_RELAY"
+    ],
+    "nodes": 59,
+    "nodes_whose_composed_function_differs": [],
+    "readers_of_changed_nodes": {
+      "E_ESTROGENIC_PROLIFERATION": [
+        "E_RECEPTIVE_SURFACE"
+      ],
+      "OUT_EPITHELIAL_RECEPTIVE": [
+        "OUT_MATERNAL_ADHESION_COMPETENCE"
+      ]
+    },
+    "rules_changed": [
+      "E_ESTROGENIC_PROLIFERATION",
+      "OUT_EPITHELIAL_RECEPTIVE"
+    ]
+  },
+  "tolerance": 0.005,
+  "trajectory_counts": [
+    20000,
+    2000
+  ]
+}

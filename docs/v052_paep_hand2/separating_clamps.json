@@ -1,0 +1,55 @@
+{
+  "artifact": "v052_separating_single_node_clamps",
+  "claim_boundary": "Exhaustive over every non-free node of adoc-literature-superset-v0.5.1 clamped ON and OFF, comparing each node's composed Boolean function over all free-variable assignments between v0.5.1 and v0.5.2. A listed clamp is one under which the two versions' steady-state predictions differ. It is a property of the models, not biological evidence.",
+  "generator_sha256": "419dfb9057fff137ec569db6e1ccd1da8549c374286dfd31b643d0dcba929f39",
+  "network_bnd_sha256": "7a73529c28ab7533c25c0673744bad7496ee8d75d7849fe3971838dbcf2d7b25",
+  "parent_network_bnd_sha256": "d7068867429cfdafe89442ee2fb0bc3fb94ae9f985d3d65b1c4be19d01cad063",
+  "separating_clamps": [
+    {
+      "clamped_node": "E_PAEP",
+      "nodes_whose_function_differs": [
+        "OUT_EPITHELIAL_RECEPTIVE",
+        "OUT_MATERNAL_ADHESION_COMPETENCE",
+        "OUT_STABLE_ADHESION"
+      ],
+      "phenotypes_that_differ": [
+        "OUT_EPITHELIAL_RECEPTIVE",
+        "OUT_MATERNAL_ADHESION_COMPETENCE",
+        "OUT_STABLE_ADHESION"
+      ],
+      "value": 0
+    },
+    {
+      "clamped_node": "E_RECEPTIVE_SURFACE",
+      "nodes_whose_function_differs": [
+        "OUT_EPITHELIAL_RECEPTIVE",
+        "OUT_MATERNAL_ADHESION_COMPETENCE",
+        "OUT_STABLE_ADHESION"
+      ],
+      "phenotypes_that_differ": [
+        "OUT_EPITHELIAL_RECEPTIVE",
+        "OUT_MATERNAL_ADHESION_COMPETENCE",
+        "OUT_STABLE_ADHESION"
+      ],
+      "value": 1
+    },
+    {
+      "clamped_node": "S_FGF_MITOGENIC",
+      "nodes_whose_function_differs": [
+        "E_ESTROGENIC_PROLIFERATION",
+        "E_RECEPTIVE_SURFACE",
+        "OUT_EPITHELIAL_RECEPTIVE",
+        "OUT_MATERNAL_ADHESION_COMPETENCE",
+        "OUT_STABLE_ADHESION",
+        "X_ADHESION_ROUTE_REDUNDANT",
+        "X_ADHESION_ROUTE_SPP1"
+      ],
+      "phenotypes_that_differ": [
+        "OUT_EPITHELIAL_RECEPTIVE",
+        "OUT_MATERNAL_ADHESION_COMPETENCE",
+        "OUT_STABLE_ADHESION"
+      ],
+      "value": 1
+    }
+  ]
+}

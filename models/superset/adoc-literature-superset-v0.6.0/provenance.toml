@@ -1,0 +1,249 @@
+schema_version = "1.0"
+family_id = "adoc_literature_superset_v060"
+model_version = "adoc-literature-superset-v0.6.0"
+generated_on = "2026-10-03"
+generator_module = "dt_adoc.reporting.v060_increment"
+generator_note = "Emitted from adoc-literature-superset-v0.5.2 by dt_adoc.reporting.v060_increment as that version without its intervention-marker nodes. dt_adoc.model.superset_family.MODEL_VERSION still targets v0.4.0 and emits no v0.5 or v0.6 directory."
+
+[claim_boundary]
+validation_label = "structural_only"
+claim_ceiling = "Provisional executable literature superset with bounded structural validation only; not a calibrated, patient-specific, or biologically validated digital twin."
+
+[baseline_policy]
+immutable_parent = true
+shared_topology_across_conditions = true
+patient_variants_required_for_personalization = true
+
+[personalization_contract]
+applied = false
+independent_biological_unit = "not_applicable_condition_level_model"
+cohort_inclusion = "not_applicable_condition_level_model"
+notes = "This family encodes condition-level maternal mechanisms only. Patient variants must be versioned separately and must not overwrite this baseline."
+
+[time_semantics]
+maboss_time_units = "relative_only"
+notes = "No physical time calibration is claimed for this superset family."
+
+[simulation_defaults]
+discrete_time = 0
+use_physrandgen = false
+seed_pseudorandom = 1
+sample_count = 5000
+max_time = 20.0
+time_tick = 0.1
+thread_count = 1
+
+[software]
+python = "3.12.13"
+maboss_python_package = "0.8.15"
+pixi_python = "3.12.13"
+pixi_maboss_python_package = "0.8.15"
+standalone_maboss_binary_on_path = false
+
+[sources]
+candidate_nodes = "context/literature/candidate-nodes.tsv"
+candidate_edges = "context/literature/candidate-edges.tsv"
+mechanisms = "context/literature/mechanisms.tsv"
+evidence_register = "context/evidence-register.tsv"
+parent_network = "models/extended/adoc-literature-v0.2.0/network.bnd"
+parent_baseline_cfg = "models/extended/adoc-literature-v0.2.0/baseline.cfg"
+parent_node_dictionary = "models/extended/adoc-literature-v0.2.0/node_dictionary.tsv"
+parent_edge_evidence = "models/extended/adoc-literature-v0.2.0/edge_evidence.tsv"
+parent_phenotype_contract = "models/extended/adoc-literature-v0.2.0/phenotype_contract.tsv"
+parent_provenance = "models/extended/adoc-literature-v0.2.0/provenance.toml"
+
+[source_hashes]
+candidate_nodes_sha256 = "9d6025f03c8c41fd6e5c119d8f05b348b25b5e5db94f1f3af9b68a71f28020ef"
+candidate_edges_sha256 = "e56ba165fefcdb835a2c5b6688d4185906598c74ce496721b04bf532a3e295ee"
+mechanisms_sha256 = "4765505695ffb676d3e7297e13cff673add3198f0a0971c009d37d7136a5b3da"
+evidence_register_sha256 = "a50e97dc6f7765b555a5219284fe1c6423d4e7dcabcc9800ac00d68d950cbb96"
+parent_network_sha256 = "28dd1c8748cec1ad296a3eeeb4f4db3d8d9ba3da3928058075507f1763475fe6"
+parent_baseline_cfg_sha256 = "ec9871d62e4e15436cd135652f85900b5346e41b8f67117285933f729c670807"
+parent_node_dictionary_sha256 = "032904f608d356e8835f1ec0d551727d9dda01f85250f0acab5acb867f4ce3ca"
+parent_edge_evidence_sha256 = "cb0182f3cd8cf72e3bfe457124dbe7a2636abc42f930105afd1a0c6de24227c1"
+parent_phenotype_contract_sha256 = "d11aca9d21c45e2b36da0366c089244b4ed6338742d320ead3a2c30fff754dc1"
+parent_provenance_sha256 = "377e4de9bc77eea2f81cb393d46f82c222e71d36a5446f3f401494c4b30050d4"
+topology_adjudications_sha256 = "bece362b98ae2ee6951a8898801dc070db5aff09703211b2db64c703fe5ff2cc"
+topology_increment_adjudications_sha256 = "c53e1716813c98a8617836ef79d69040e29966d54fccddbd5af55b1bd6f491ea"
+
+[evidence_scope]
+executable_extensions = [
+  "E_KLF12_HIGH inhibitory LIF context",
+  "S_FGF_MITOGENIC HAND2-restrained stromal relay",
+  "E_ESTROGENIC_PROLIFERATION anti-receptive branch",
+]
+catalog_only_or_external = [
+  "S_STAT3",
+  "S_DECIDUAL_SENESCENCE_BALANCED",
+  "X_LGALS1_3",
+  "X_BSG_ITGB1",
+  "IN_UTERINE_WNT_CUE",
+]
+
+[condition_suite]
+default_condition_family = "challenge_ready"
+conditions = [
+  "conditions/adhesion_challenge_basal.cfg",
+  "conditions/adhesion_challenge_excess_er_stress.cfg",
+  "conditions/adhesion_challenge_high_ecm_stiffness.cfg",
+  "conditions/adhesion_challenge_hormone_treated.cfg",
+  "conditions/adhesion_challenge_hormone_treated_anti_spp1.cfg",
+  "conditions/adhesion_challenge_hormone_treated_hand2_loss.cfg",
+  "conditions/adhesion_challenge_hormone_treated_mifepristone.cfg",
+  "conditions/adhesion_challenge_washout.cfg",
+  "conditions/basal_maternal.cfg",
+  "conditions/e2_primed_maternal.cfg",
+  "conditions/embryo_absent.cfg",
+  "conditions/embryo_incompetent.cfg",
+  "conditions/excess_er_stress.cfg",
+  "conditions/high_ecm_stiffness.cfg",
+  "conditions/hormone_treated.cfg",
+  "conditions/hormone_treated_anti_spp1.cfg",
+  "conditions/hormone_treated_hand2_loss.cfg",
+  "conditions/hormone_treated_maternal.cfg",
+  "conditions/hormone_treated_mifepristone.cfg",
+  "conditions/untreated.cfg",
+  "conditions/washout.cfg",
+]
+perturbations = [
+  "mifepristone",
+  "anti_spp1",
+  "embryo_absent",
+  "embryo_incompetent",
+  "excess_er_stress",
+  "high_ecm_stiffness",
+]
+
+[artifacts]
+complete_nodes = "models/superset/adoc-literature-superset-v0.6.0/complete_nodes.tsv"
+complete_edges = "models/superset/adoc-literature-superset-v0.6.0/complete_edges.tsv"
+modules = "models/superset/adoc-literature-superset-v0.6.0/modules.tsv"
+module_activity_report = "models/superset/adoc-literature-superset-v0.6.0/module_activity_report.tsv"
+rule_variants = "models/superset/adoc-literature-superset-v0.6.0/rule_variants.tsv"
+interface_contract = "models/superset/adoc-literature-superset-v0.6.0/interface_contract.tsv"
+drug_target_catalog = "models/superset/adoc-literature-superset-v0.6.0/drug_target_catalog.tsv"
+executable_model_manifest = "models/superset/adoc-literature-superset-v0.6.0/executable_model_manifest.tsv"
+ensemble_definition = "models/superset/adoc-literature-superset-v0.6.0/ensemble_definition.tsv"
+unresolved_mechanisms = "models/superset/adoc-literature-superset-v0.6.0/unresolved_mechanisms.tsv"
+literature_superset_network = "models/superset/adoc-literature-superset-v0.6.0/literature_superset_network.mmd"
+executable_modules_network = "models/superset/adoc-literature-superset-v0.6.0/executable_modules_network.mmd"
+network_bnd = "models/superset/adoc-literature-superset-v0.6.0/network.bnd"
+baseline_cfg = "models/superset/adoc-literature-superset-v0.6.0/baseline.cfg"
+node_dictionary = "models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv"
+edge_evidence = "models/superset/adoc-literature-superset-v0.6.0/edge_evidence.tsv"
+phenotype_contract = "models/superset/adoc-literature-superset-v0.6.0/phenotype_contract.tsv"
+readme = "models/superset/adoc-literature-superset-v0.6.0/README.md"
+
+[artifact_hashes]
+complete_nodes_sha256 = "efacf3b7437e3a381ef2a5cfeb08f8ea552ca9d5a30af1b2247066eb15c67d9a"
+complete_edges_sha256 = "ac39e95012688d8de7314a7486056fa3eab93f1784f523c8dbd00be309b14e00"
+modules_sha256 = "1cea79e6548c613112d52b3ca23d77a28eb635db0bb6c0ec8f1711387fe0f764"
+module_activity_report_sha256 = "70856e7f307d3c2fddff712e13fe6593b3c49c5980b653006c9f646d13fe1914"
+rule_variants_sha256 = "a5e6be6afb3d0f95c51d12ac06a128ed9f8789791b6d6556fcc39b94a535a839"
+interface_contract_sha256 = "67072af1d716b0488e14ecc30d5821096346fc1ef2d0798b1a2a7e7dc36730da"
+drug_target_catalog_sha256 = "87e39490b3d0715ae9d575bca0076b58f92e5d1580acec2825145ed3f64bf1e2"
+executable_model_manifest_sha256 = "366f4f598b5e1a71b2e2a013a31dddf2c3ad27b0aeef1946a2797641b1869284"
+ensemble_definition_sha256 = "63452a3d6b8ac7832b7981656c2bfa19bff898090116f8e19cdf88c3692d1944"
+unresolved_mechanisms_sha256 = "94ea4d8ff6e7be104c89d95efb0abb75f56056190338adf958a1824d255cf630"
+literature_superset_network_sha256 = "6f03110cb630491630a3351e05d87d9cf07a4aec4a97b0298665b076806c24c8"
+executable_modules_network_sha256 = "9e0cf6e19d2346c201df31559825cfe4e68307a4563cf286c826aa7326364026"
+network_bnd_sha256 = "64b5a3aa02394593bef5991b25005a71a27161ec75aefb6f80dbe7a1e347de27"
+baseline_cfg_sha256 = "e39cbabb7056efa3eca732aec98b68ba0d9e650aef0f4d82a4efac83daff527b"
+node_dictionary_sha256 = "7019da7eed02e8e2c9860b0558552347b9687201287c9f649fbd0b8898bd4a5b"
+edge_evidence_sha256 = "cac102405fb7a0ccf15a4254fa37c427bfa8902e5bd5fd4550c0720b53a42fe4"
+topology_sha256 = "0a6b9f4a0b02871dba69c98301c6c1e2b1c4331e5e6a0d7aab6e067889636fdc"
+phenotype_contract_sha256 = "4df11861ae82612876dd28d4269a5d06f39a941b29d029d4bb8fe72e63dd22d5"
+readme_sha256 = "69fc24320365d34cf81903db2081b6ac8d67443b212e3c67c55905b814d9e601"
+
+[condition_hashes]
+adhesion_challenge_basal_cfg_sha256 = "1f98e358e259c5f9ffd6231a56a5367a23933912f172abc450a112cf8afd92f3"
+adhesion_challenge_excess_er_stress_cfg_sha256 = "2fe3e08561d11259b511badb69c3ffccebcf26cad0b3ed4e4617fe4fc4b6b443"
+adhesion_challenge_high_ecm_stiffness_cfg_sha256 = "797cb152eaceb108517c484449e314d273e9f532006f806f3282e67fb4ddc7aa"
+adhesion_challenge_hormone_treated_cfg_sha256 = "0875521c3ca3e11309c7a6d17d726419d157683c6c94a051b303e0f9a2da40fc"
+adhesion_challenge_hormone_treated_anti_spp1_cfg_sha256 = "0875521c3ca3e11309c7a6d17d726419d157683c6c94a051b303e0f9a2da40fc"
+adhesion_challenge_hormone_treated_hand2_loss_cfg_sha256 = "0875521c3ca3e11309c7a6d17d726419d157683c6c94a051b303e0f9a2da40fc"
+adhesion_challenge_hormone_treated_mifepristone_cfg_sha256 = "0875521c3ca3e11309c7a6d17d726419d157683c6c94a051b303e0f9a2da40fc"
+adhesion_challenge_washout_cfg_sha256 = "0875521c3ca3e11309c7a6d17d726419d157683c6c94a051b303e0f9a2da40fc"
+basal_maternal_cfg_sha256 = "798f2db832d56711d083497c3f5f33b923e034561038c1b52f8bfb97ce3126d0"
+e2_primed_maternal_cfg_sha256 = "364fd5e322f02b83bc63cd78cb287b08c023253e29d49ef6577241b47c0cd07e"
+embryo_absent_cfg_sha256 = "f262da7632824958b75877f7d9889a919cb5acea320878450010a2ea7e8b6dc7"
+embryo_incompetent_cfg_sha256 = "65a8bb2196c586c9c3fb746c127318708703fc6b978187f0f02d646e5ed35ee1"
+excess_er_stress_cfg_sha256 = "050b1915c4737fef7ff98c407f50de0870a618a10797e4ff6f882153bf46893c"
+high_ecm_stiffness_cfg_sha256 = "16ea51c5c4546e984d882f29307939c017ba12dde997ace868e9b0e876c59cbc"
+hormone_treated_cfg_sha256 = "f262da7632824958b75877f7d9889a919cb5acea320878450010a2ea7e8b6dc7"
+hormone_treated_anti_spp1_cfg_sha256 = "f262da7632824958b75877f7d9889a919cb5acea320878450010a2ea7e8b6dc7"
+hormone_treated_hand2_loss_cfg_sha256 = "f262da7632824958b75877f7d9889a919cb5acea320878450010a2ea7e8b6dc7"
+hormone_treated_maternal_cfg_sha256 = "f262da7632824958b75877f7d9889a919cb5acea320878450010a2ea7e8b6dc7"
+hormone_treated_mifepristone_cfg_sha256 = "f262da7632824958b75877f7d9889a919cb5acea320878450010a2ea7e8b6dc7"
+untreated_cfg_sha256 = "798f2db832d56711d083497c3f5f33b923e034561038c1b52f8bfb97ce3126d0"
+washout_cfg_sha256 = "f262da7632824958b75877f7d9889a919cb5acea320878450010a2ea7e8b6dc7"
+
+
+
+
+[increment]
+# v0.6.0: adoc-literature-superset-v0.5.2 without its intervention-marker nodes; this block
+# records what it is an increment OF and what moved. It replaces the parent's own
+# [increment] block, which stays readable through parent_provenance_sha256.
+role = "increment"
+claim_boundary = "intervention_marker_removal_no_new_biological_claim"
+parent = "models/superset/adoc-literature-superset-v0.5.2"
+parent_model_version = "adoc-literature-superset-v0.5.2"
+emitted_on = "2026-10-03"
+emitted_by = "dt_adoc.reporting.v060_increment"
+transformation = "intervention_marker_removal"
+# No other rule, node, threshold, rate, phenotype or memory policy differs.
+deleted_nodes = ["IN_MIFEPRISTONE", "IN_ANTI_SPP1", "IN_HAND2_LOSS"]
+kept_reagent_inputs = ["IN_XAV939"]
+e_pgr_logic_before = "IN_PROGESTIN and not IN_MIFEPRISTONE"
+e_pgr_logic_after = "IN_PROGESTIN"
+s_pgr_logic_before = "IN_PROGESTIN and not IN_MIFEPRISTONE"
+s_pgr_logic_after = "IN_PROGESTIN"
+x_spp1_lumen_free_logic_before = "(E_SPP1_EXPR or S_SPP1) and not IN_ANTI_SPP1"
+x_spp1_lumen_free_logic_after = "E_SPP1_EXPR or S_SPP1"
+s_hand2_logic_before = "(S_BMP2 or S_PGR) and not IN_HAND2_LOSS"
+s_hand2_logic_after = "S_BMP2 or S_PGR"
+migrated_interventions = { IN_MIFEPRISTONE = "mifepristone", IN_ANTI_SPP1 = "anti_spp1", IN_HAND2_LOSS = "hand2_loss" }
+migrated_protocols = "config/protocols_markerless.yaml"
+migrated_protocols_sha256 = "1efd7995f2770d7bebbbf4b41e0e7199e76d3225f83676d410dcc5cdead93420"
+retired_edges = ["LE002", "LE038", "LE059", "LE096"]
+equivalence_gate = "G8"
+design = "docs/intervention_layer_stage3.md"
+files_differing_from_parent = [
+  "README.md",
+  "baseline.cfg",
+  "conditions/adhesion_challenge_basal.cfg",
+  "conditions/adhesion_challenge_excess_er_stress.cfg",
+  "conditions/adhesion_challenge_high_ecm_stiffness.cfg",
+  "conditions/adhesion_challenge_hormone_treated.cfg",
+  "conditions/adhesion_challenge_hormone_treated_anti_spp1.cfg",
+  "conditions/adhesion_challenge_hormone_treated_hand2_loss.cfg",
+  "conditions/adhesion_challenge_hormone_treated_mifepristone.cfg",
+  "conditions/adhesion_challenge_washout.cfg",
+  "conditions/basal_maternal.cfg",
+  "conditions/e2_primed_maternal.cfg",
+  "conditions/embryo_absent.cfg",
+  "conditions/embryo_incompetent.cfg",
+  "conditions/excess_er_stress.cfg",
+  "conditions/high_ecm_stiffness.cfg",
+  "conditions/hormone_treated.cfg",
+  "conditions/hormone_treated_anti_spp1.cfg",
+  "conditions/hormone_treated_hand2_loss.cfg",
+  "conditions/hormone_treated_maternal.cfg",
+  "conditions/hormone_treated_mifepristone.cfg",
+  "conditions/untreated.cfg",
+  "conditions/washout.cfg",
+  "drug_target_catalog.tsv",
+  "executable_model_manifest.tsv",
+  "executable_modules_network.mmd",
+  "interface_contract.tsv",
+  "network.bnd",
+  "node_dictionary.tsv",
+  "provenance.toml",
+  "topology.tsv",
+  "topology_increment_adjudications.tsv",
+]
+files_added = []
+parent_provenance_sha256 = "8fa3b408ee0b9384b51ab60b4648e913226444280565b0a4b81e3907117f9fe1"
+parent_network_bnd_sha256 = "7a73529c28ab7533c25c0673744bad7496ee8d75d7849fe3971838dbcf2d7b25"
+parent_baseline_cfg_sha256 = "4d42bdcbcfcceaedaafeeb96fe76400700175c969cec15bff9e02f360ff4f41c"

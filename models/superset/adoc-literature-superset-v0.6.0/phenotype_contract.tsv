@@ -1,0 +1,5 @@
+phenotype_id	category	executable	expression	planned_use	evidence_ids	notes
+OUT_EPITHELIAL_RECEPTIVE	primary	true	OUT_EPITHELIAL_RECEPTIVE	construction_or_calibration	SOFIA-SC-001;LIT-LIF-001;LIT-BARRIER-001;LIT-IHH-001	Refined epithelial receptivity phenotype requiring both the inherited secretory program, the receptive surface, and suppression of the expansion anti-receptive proliferation branch.
+OUT_STROMAL_DECIDUALIZED	primary	true	OUT_STROMAL_DECIDUALIZED	construction_or_calibration	SOFIA-SC-002;SOFIA-STR-001;LIT-DECID-001	Tracks the compact stromal decidual core retained in the executable model.
+OUT_MATERNAL_ADHESION_COMPETENCE	primary	true	OUT_MATERNAL_ADHESION_COMPETENCE	mechanistic_intermediate	SOFIA-ADH-002;LIT-SPP1-001;LIT-MECH-001;LIT-IHH-001	Separates maternal permissiveness from the observed embryo outcome and includes the bounded anti-receptive proliferation penalty.
+OUT_STABLE_ADHESION	primary	true	OUT_STABLE_ADHESION	calibration_or_validation	SOFIA-ADH-001;SOFIA-ADH-002;SOFIA-ADH-003	Requires explicit embryo-challenge inputs and remains a model-conditional trajectory frequency rather than a clinical probability.

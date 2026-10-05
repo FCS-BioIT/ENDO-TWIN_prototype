@@ -1,0 +1,345 @@
+{
+  "alias_classes_equal": false,
+  "computed_by": "dt_adoc.reporting.structure.load_structure",
+  "design": "docs/intervention_layer_stage3.md",
+  "removed_inputs": [
+    "IN_ANTI_SPP1",
+    "IN_HAND2_LOSS",
+    "IN_MIFEPRISTONE"
+  ],
+  "versions": {
+    "adoc-literature-superset-v0.5.2": {
+      "alias_class_count": 8,
+      "alias_classes": [
+        [
+          "E_ANXA2_ACTIN",
+          "E_DAG1_CLEAVED",
+          "E_HBEGF",
+          "E_ITGAVB3_5",
+          "E_MUC1_SLEX",
+          "E_PAEP",
+          "E_PC6",
+          "E_SECRETORY_STATE",
+          "E_SPP1_EXPR"
+        ],
+        [
+          "E_CD98_CD9",
+          "E_GP130_STAT3",
+          "E_LIF"
+        ],
+        [
+          "E_CDH1_APICAL",
+          "IN_EMBRYO_CONTACT"
+        ],
+        [
+          "E_DAG1_FULL",
+          "E_MUC1_BARRIER",
+          "E_PODXL"
+        ],
+        [
+          "E_IHH",
+          "E_PGR",
+          "S_BMP2",
+          "S_NR2F2",
+          "S_PGR"
+        ],
+        [
+          "E_RECEPTIVE_SURFACE",
+          "OUT_EPITHELIAL_RECEPTIVE"
+        ],
+        [
+          "IN_cAMP",
+          "S_PKA"
+        ],
+        [
+          "OUT_STROMAL_DECIDUALIZED",
+          "S_DECIDUALIZED",
+          "S_IGFBP1",
+          "S_PRL",
+          "S_SPP1",
+          "S_TAZ_ECM"
+        ]
+      ],
+      "complement_pairs": [
+        [
+          "E_ANXA2_ACTIN",
+          "E_PODXL"
+        ],
+        [
+          "E_DAG1_CLEAVED",
+          "E_PODXL"
+        ],
+        [
+          "E_DAG1_FULL",
+          "E_SECRETORY_STATE"
+        ],
+        [
+          "E_HBEGF",
+          "E_PODXL"
+        ],
+        [
+          "E_ITGAVB3_5",
+          "E_PODXL"
+        ],
+        [
+          "E_MUC1_BARRIER",
+          "E_SECRETORY_STATE"
+        ],
+        [
+          "E_MUC1_SLEX",
+          "E_PODXL"
+        ],
+        [
+          "E_PAEP",
+          "E_PODXL"
+        ],
+        [
+          "E_PC6",
+          "E_PODXL"
+        ],
+        [
+          "E_PODXL",
+          "E_SECRETORY_STATE"
+        ],
+        [
+          "E_PODXL",
+          "E_SPP1_EXPR"
+        ],
+        [
+          "S_FGF_MITOGENIC",
+          "S_HAND2"
+        ]
+      ],
+      "dependencies": 93,
+      "distinct_composed_functions": 35,
+      "enumerated_assignments": 524288,
+      "free_non_input_nodes": [
+        "E_KLF12_HIGH",
+        "X_INTERFACE_ANTIADHESIVE_RELAY",
+        "X_INTERFACE_REDUNDANT_RELAY",
+        "X_INTERFACE_SPP1_RELAY",
+        "X_MECHANICAL_STRESS_RELAY"
+      ],
+      "free_variables": 19,
+      "input_nodes": 14,
+      "inputs": [
+        "IN_ANTI_SPP1",
+        "IN_E2",
+        "IN_EMBRYO_CONDITIONED_SIGNAL",
+        "IN_EMBRYO_CONTACT",
+        "IN_EMBRYO_PRESENT",
+        "IN_ER_STRESS_EXCESS",
+        "IN_HAND2_LOSS",
+        "IN_HCG",
+        "IN_HIGH_ECM_STIFFNESS",
+        "IN_MIFEPRISTONE",
+        "IN_PROGESTIN",
+        "IN_TROPHECTODERM_COMPETENT",
+        "IN_XAV939",
+        "IN_cAMP"
+      ],
+      "nodes": 59,
+      "phenotype_inert_nodes": [
+        "E_ANXA2_ACTIN",
+        "E_CD98_CD9",
+        "E_CDH1_APICAL",
+        "E_DAG1_CLEAVED",
+        "E_HBEGF",
+        "E_IHH",
+        "E_MUC1_SLEX",
+        "E_PAEP",
+        "E_SPP1_EXPR",
+        "IN_EMBRYO_CONDITIONED_SIGNAL",
+        "IN_HCG",
+        "IN_XAV939",
+        "S_IGFBP1",
+        "S_NR2F2",
+        "S_PRL",
+        "S_SPP1",
+        "X_INTERFACE_ANTIADHESIVE_RELAY"
+      ],
+      "unread_inputs": [
+        "IN_EMBRYO_CONDITIONED_SIGNAL",
+        "IN_HCG",
+        "IN_XAV939"
+      ]
+    },
+    "adoc-literature-superset-v0.6.0": {
+      "alias_class_count": 7,
+      "alias_classes": [
+        [
+          "E_ANXA2_ACTIN",
+          "E_DAG1_CLEAVED",
+          "E_HBEGF",
+          "E_ITGAVB3_5",
+          "E_MUC1_SLEX",
+          "E_PAEP",
+          "E_PC6",
+          "E_SECRETORY_STATE",
+          "E_SPP1_EXPR"
+        ],
+        [
+          "E_CD98_CD9",
+          "E_GP130_STAT3",
+          "E_LIF",
+          "E_RECEPTIVE_SURFACE",
+          "OUT_EPITHELIAL_RECEPTIVE"
+        ],
+        [
+          "E_CDH1_APICAL",
+          "IN_EMBRYO_CONTACT"
+        ],
+        [
+          "E_DAG1_FULL",
+          "E_MUC1_BARRIER",
+          "E_PODXL"
+        ],
+        [
+          "E_IHH",
+          "E_PGR",
+          "IN_PROGESTIN",
+          "S_BMP2",
+          "S_HAND2",
+          "S_NR2F2",
+          "S_PGR"
+        ],
+        [
+          "IN_cAMP",
+          "S_PKA"
+        ],
+        [
+          "OUT_STROMAL_DECIDUALIZED",
+          "S_DECIDUALIZED",
+          "S_IGFBP1",
+          "S_PRL",
+          "S_SPP1",
+          "S_TAZ_ECM"
+        ]
+      ],
+      "complement_pairs": [
+        [
+          "E_ANXA2_ACTIN",
+          "E_PODXL"
+        ],
+        [
+          "E_DAG1_CLEAVED",
+          "E_PODXL"
+        ],
+        [
+          "E_DAG1_FULL",
+          "E_SECRETORY_STATE"
+        ],
+        [
+          "E_HBEGF",
+          "E_PODXL"
+        ],
+        [
+          "E_IHH",
+          "S_FGF_MITOGENIC"
+        ],
+        [
+          "E_ITGAVB3_5",
+          "E_PODXL"
+        ],
+        [
+          "E_MUC1_BARRIER",
+          "E_SECRETORY_STATE"
+        ],
+        [
+          "E_MUC1_SLEX",
+          "E_PODXL"
+        ],
+        [
+          "E_PAEP",
+          "E_PODXL"
+        ],
+        [
+          "E_PC6",
+          "E_PODXL"
+        ],
+        [
+          "E_PGR",
+          "S_FGF_MITOGENIC"
+        ],
+        [
+          "E_PODXL",
+          "E_SECRETORY_STATE"
+        ],
+        [
+          "E_PODXL",
+          "E_SPP1_EXPR"
+        ],
+        [
+          "IN_PROGESTIN",
+          "S_FGF_MITOGENIC"
+        ],
+        [
+          "S_BMP2",
+          "S_FGF_MITOGENIC"
+        ],
+        [
+          "S_FGF_MITOGENIC",
+          "S_HAND2"
+        ],
+        [
+          "S_FGF_MITOGENIC",
+          "S_NR2F2"
+        ],
+        [
+          "S_FGF_MITOGENIC",
+          "S_PGR"
+        ]
+      ],
+      "dependencies": 89,
+      "distinct_composed_functions": 29,
+      "enumerated_assignments": 65536,
+      "free_non_input_nodes": [
+        "E_KLF12_HIGH",
+        "X_INTERFACE_ANTIADHESIVE_RELAY",
+        "X_INTERFACE_REDUNDANT_RELAY",
+        "X_INTERFACE_SPP1_RELAY",
+        "X_MECHANICAL_STRESS_RELAY"
+      ],
+      "free_variables": 16,
+      "input_nodes": 11,
+      "inputs": [
+        "IN_E2",
+        "IN_EMBRYO_CONDITIONED_SIGNAL",
+        "IN_EMBRYO_CONTACT",
+        "IN_EMBRYO_PRESENT",
+        "IN_ER_STRESS_EXCESS",
+        "IN_HCG",
+        "IN_HIGH_ECM_STIFFNESS",
+        "IN_PROGESTIN",
+        "IN_TROPHECTODERM_COMPETENT",
+        "IN_XAV939",
+        "IN_cAMP"
+      ],
+      "nodes": 56,
+      "phenotype_inert_nodes": [
+        "E_ANXA2_ACTIN",
+        "E_CD98_CD9",
+        "E_CDH1_APICAL",
+        "E_DAG1_CLEAVED",
+        "E_HBEGF",
+        "E_IHH",
+        "E_MUC1_SLEX",
+        "E_PAEP",
+        "E_SPP1_EXPR",
+        "IN_EMBRYO_CONDITIONED_SIGNAL",
+        "IN_HCG",
+        "IN_XAV939",
+        "S_IGFBP1",
+        "S_NR2F2",
+        "S_PRL",
+        "S_SPP1",
+        "X_INTERFACE_ANTIADHESIVE_RELAY"
+      ],
+      "unread_inputs": [
+        "IN_EMBRYO_CONDITIONED_SIGNAL",
+        "IN_HCG",
+        "IN_XAV939"
+      ]
+    }
+  }
+}

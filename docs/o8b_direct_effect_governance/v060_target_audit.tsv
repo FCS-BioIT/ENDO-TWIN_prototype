@@ -1,0 +1,57 @@
+node_id	model_role	mechanical	policy	policy_scope	direct_target	basis
+IN_E2	input	refused: target IN_E2 is an input node	refused	role	no	docs/intervention_layer_refactor_plan.md#8
+IN_PROGESTIN	input	refused: target IN_PROGESTIN is an input node	refused	role	no	docs/intervention_layer_refactor_plan.md#8
+IN_cAMP	input	refused: target IN_cAMP is an input node	refused	role	no	docs/intervention_layer_refactor_plan.md#8
+IN_XAV939	input	refused: target IN_XAV939 is an input node	refused	role	no	docs/intervention_layer_refactor_plan.md#8
+IN_EMBRYO_PRESENT	assay_gate	refused: target IN_EMBRYO_PRESENT is an input node	refused	role	no	docs/intervention_layer_refactor_plan.md#8
+IN_TROPHECTODERM_COMPETENT	assay_gate	refused: target IN_TROPHECTODERM_COMPETENT is an input node	refused	role	no	docs/intervention_layer_refactor_plan.md#8
+IN_EMBRYO_CONTACT	external_input	refused: target IN_EMBRYO_CONTACT is an input node	refused	role	no	docs/intervention_layer_refactor_plan.md#8
+IN_HCG	external_input	refused: target IN_HCG is an input node	refused	role	no	docs/intervention_layer_refactor_plan.md#8
+IN_EMBRYO_CONDITIONED_SIGNAL	external_input	refused: target IN_EMBRYO_CONDITIONED_SIGNAL is an input node	refused	role	no	docs/intervention_layer_refactor_plan.md#8
+IN_ER_STRESS_EXCESS	pathology_input	refused: target IN_ER_STRESS_EXCESS is an input node	refused	role	no	docs/intervention_layer_refactor_plan.md#8
+IN_HIGH_ECM_STIFFNESS	boundary_input	refused: target IN_HIGH_ECM_STIFFNESS is an input node	refused	role	no	docs/intervention_layer_refactor_plan.md#8
+E_PGR	regulator	eligible	eligible	role	yes	docs/o8b_direct_effect_governance.md#7
+E_IHH	paracrine_bridge	eligible	eligible	role	yes	docs/o8b_direct_effect_governance.md#7
+E_SECRETORY_STATE	state	eligible	refused	role	no	config/coupling_adjudication.tsv#E_SECRETORY_STATE;config/coupling_adjudication.tsv#S_DECIDUALIZED
+E_PAEP	readout	eligible	refused	role	no	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR016
+E_KLF12_HIGH	anti_receptive_context	refused: target E_KLF12_HIGH is an input node	refused	role	no	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR021
+E_LIF	attachment_gate	eligible	eligible	role	yes	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR022;docs/o8b_direct_effect_governance.md#7
+E_GP130_STAT3	pathway_gate	eligible	eligible	role	yes	config/coupling_adjudication.tsv#E_GP130_STAT3
+E_ESTROGENIC_PROLIFERATION	anti_receptive_state	eligible	refused	role	no	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR021
+E_PODXL	anti_adhesive_surface	eligible	eligible	role	yes	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR020;docs/o8b_direct_effect_governance.md#7
+E_PC6	protease	eligible	eligible	role	yes	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR011
+E_DAG1_FULL	anti_adhesive_surface	eligible	refused	node	no	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR011
+E_DAG1_CLEAVED	adhesion_support	eligible	refused	node	no	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR021;context/evidence-register.tsv#LIT-PC6-002
+E_MUC1_BARRIER	anti_adhesive_surface	eligible	refused	node	no	context/evidence-register.tsv#LIT-BARRIER-001;config/coupling_adjudication.tsv#E_MUC1_BARRIER
+E_MUC1_SLEX	adhesion_support	eligible	refused	node	no	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR021;context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR012
+E_HBEGF	adhesion_support	eligible	eligible	role	yes	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR020;docs/o8b_direct_effect_governance.md#7
+E_SPP1_EXPR	ligand_source	eligible	eligible	role	yes	docs/o8b_direct_effect_governance.md#7
+E_ITGAVB3_5	adhesion_receptor	eligible	eligible	role	yes	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR009
+E_CD98_CD9	adhesion_support	eligible	eligible	role	yes	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR020;docs/o8b_direct_effect_governance.md#7
+E_ANXA2_ACTIN	adhesion_support	eligible	eligible	role	yes	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR020;docs/o8b_direct_effect_governance.md#7
+E_CDH1_APICAL	adhesion_support	eligible	eligible	role	yes	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR020;docs/o8b_direct_effect_governance.md#7
+E_RECEPTIVE_SURFACE	latent_state	eligible	refused	role	no	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR021;config/coupling_adjudication.tsv#E_RECEPTIVE_SURFACE
+S_PGR	regulator	eligible	eligible	role	yes	docs/o8b_direct_effect_governance.md#7
+S_PKA	regulator	eligible	eligible	role	yes	docs/o8b_direct_effect_governance.md#7
+S_NR2F2	regulator	eligible	eligible	role	yes	docs/o8b_direct_effect_governance.md#7
+S_BMP2	regulator_or_readout	eligible	refused	role	no	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR007
+S_HAND2	regulator	eligible	eligible	role	yes	docs/o8b_direct_effect_governance.md#7
+S_FGF_MITOGENIC	paracrine_inhibitor_of_receptivity	eligible	refused	role	no	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR021
+S_DECIDUALIZED	state	eligible	refused	role	no	config/coupling_adjudication.tsv#E_SECRETORY_STATE;config/coupling_adjudication.tsv#S_DECIDUALIZED
+S_PRL	readout	eligible	refused	role	no	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR016
+S_IGFBP1	readout	eligible	refused	role	no	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR016
+S_SPP1	decidual_support	eligible	eligible	role	yes	docs/o8b_direct_effect_governance.md#7
+S_TAZ_ECM	mechanical_regulator	eligible	eligible	role	yes	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR013
+X_MECHANICAL_STRESS_RELAY	structural_uncertainty	refused: target X_MECHANICAL_STRESS_RELAY is an input node	refused	role	no	docs/o8_markerless_interventions.md#3
+X_MECHANICAL_PERMISSIVE_ECM	latent_state	eligible	refused	role	no	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR021;config/coupling_adjudication.tsv#E_RECEPTIVE_SURFACE
+X_SPP1_LUMEN_FREE	extracellular_bridge	eligible	eligible	role	yes	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR010
+X_INTERFACE_SPP1_RELAY	structural_uncertainty	refused: target X_INTERFACE_SPP1_RELAY is an input node	refused	role	no	docs/o8_markerless_interventions.md#3
+X_INTERFACE_REDUNDANT_RELAY	structural_uncertainty	refused: target X_INTERFACE_REDUNDANT_RELAY is an input node	refused	role	no	docs/o8_markerless_interventions.md#3
+X_INTERFACE_ANTIADHESIVE_RELAY	structural_uncertainty	refused: target X_INTERFACE_ANTIADHESIVE_RELAY is an input node	refused	role	no	docs/o8_markerless_interventions.md#3
+X_ADHESION_ROUTE_SPP1	interface_route	eligible	refused	role	no	docs/o8b_direct_effect_governance.md#7
+X_ADHESION_ROUTE_REDUNDANT	interface_route	eligible	refused	role	no	docs/o8b_direct_effect_governance.md#7
+X_ANTIADHESIVE_ROUTE	interface_route	eligible	refused	role	no	docs/o8b_direct_effect_governance.md#7
+OUT_EPITHELIAL_RECEPTIVE	phenotype	eligible	refused	role	no	docs/o8_markerless_interventions.md#3
+OUT_STROMAL_DECIDUALIZED	phenotype	eligible	refused	role	no	docs/o8_markerless_interventions.md#3
+OUT_MATERNAL_ADHESION_COMPETENCE	phenotype	eligible	refused	role	no	docs/o8_markerless_interventions.md#3
+OUT_STABLE_ADHESION	phenotype	eligible	refused	role	no	docs/o8_markerless_interventions.md#3

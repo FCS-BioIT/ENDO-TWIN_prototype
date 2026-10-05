@@ -1,0 +1,1180 @@
+{
+  "child_model_version": "adoc-literature-superset-v0.6.0",
+  "deleted_nodes": [
+    "IN_MIFEPRISTONE",
+    "IN_ANTI_SPP1",
+    "IN_HAND2_LOSS"
+  ],
+  "design": "docs/intervention_layer_stage3.md",
+  "fallback_used": false,
+  "gate": "G8",
+  "hashes": {
+    "child_network_bnd": "64b5a3aa02394593bef5991b25005a71a27161ec75aefb6f80dbe7a1e347de27",
+    "intervention_library": "7dcef6521b9f5b65e885ba87a269544932ba2b4b0838bd8f3f07482831eb12c2",
+    "parent_network_bnd": "7a73529c28ab7533c25c0673744bad7496ee8d75d7849fe3971838dbcf2d7b25",
+    "protocols_markerless_yaml": "1efd7995f2770d7bebbbf4b41e0e7199e76d3225f83676d410dcc5cdead93420",
+    "protocols_yaml": "243887238ee927770e53b8d5116c8f464c864abb84ddd8b0b4214b7146019f1a"
+  },
+  "negative_controls": {
+    "NC1_anti_spp1_omitted": {
+      "detected": true,
+      "lineages": {
+        "hormone_treated_anti_spp1": {
+          "differences": [
+            "trajectory",
+            "last_nodes",
+            "last",
+            "last_states",
+            "vetoed_targets",
+            "executed_network: X_SPP1_LUMEN_FREE: executed rules are not equivalent",
+            "named_interventions"
+          ],
+          "identical": false,
+          "max_abs_trajectory_difference": 0.8443806774151246,
+          "named_interventions": [],
+          "vetoed_targets": []
+        }
+      }
+    },
+    "NC2_anti_spp1_not_washed_out": {
+      "detected": true,
+      "lineages": {
+        "washout": {
+          "differences": [
+            "trajectory",
+            "last_nodes",
+            "last",
+            "last_states",
+            "vetoed_targets",
+            "executed_network: X_SPP1_LUMEN_FREE: executed rules are not equivalent",
+            "named_interventions"
+          ],
+          "identical": false,
+          "max_abs_trajectory_difference": 0.6138764095873905,
+          "named_interventions": [
+            "anti_spp1"
+          ],
+          "vetoed_targets": [
+            "X_SPP1_LUMEN_FREE"
+          ]
+        }
+      }
+    },
+    "NC3_mifepristone_mistimed": {
+      "detected": true,
+      "lineages": {
+        "adhesion_challenge_hormone_treated_mifepristone": {
+          "differences": [
+            "trajectory",
+            "last_nodes",
+            "last",
+            "last_states",
+            "initialisation"
+          ],
+          "identical": false,
+          "max_abs_trajectory_difference": 0.6254250304594715,
+          "named_interventions": [
+            "mifepristone"
+          ],
+          "vetoed_targets": [
+            "E_PGR",
+            "S_PGR"
+          ]
+        },
+        "hormone_treated_mifepristone": {
+          "differences": [
+            "trajectory",
+            "last_nodes",
+            "last",
+            "last_states",
+            "vetoed_targets",
+            "executed_network: E_PGR: executed rules are not equivalent; S_PGR: executed rules are not equivalent",
+            "named_interventions"
+          ],
+          "identical": false,
+          "max_abs_trajectory_difference": 0.8780391787630492,
+          "named_interventions": [],
+          "vetoed_targets": []
+        }
+      }
+    },
+    "NC4a_gate_kept_node_deleted": {
+      "detected": true,
+      "library_licence": "InterventionError: hand2_loss (adoc-literature-superset-v0.6.0) -> S_HAND2: the rule still reads ['IN_HAND2_LOSS']",
+      "structural_assertions": [
+        "IN_HAND2_LOSS is read by ['S_HAND2']",
+        "the protocols do not resolve: InterventionError: hand2_loss (adoc-literature-superset-v0.6.0) -> S_HAND2: the rule still reads ['IN_HAND2_LOSS']",
+        "the library does not load: InterventionError: hand2_loss (adoc-literature-superset-v0.6.0) -> S_HAND2: the rule still reads ['IN_HAND2_LOSS']"
+      ]
+    },
+    "NC4b_gate_and_node_kept_marker_off": {
+      "detected": true,
+      "library_licence": "InterventionError: hand2_loss (adoc-literature-superset-v0.6.0): IN_HAND2_LOSS is still a node of adoc-literature-superset-v0.6.0; a row whose marker exists is executable_legacy_behaviour",
+      "structural_assertions": [
+        "IN_HAND2_LOSS is a node of adoc-literature-superset-v0.6.0",
+        "IN_HAND2_LOSS is read by ['IN_HAND2_LOSS', 'S_HAND2']",
+        "IN_HAND2_LOSS is set in baseline.cfg",
+        "the protocols do not resolve: InterventionError: hand2_loss (adoc-literature-superset-v0.6.0): IN_HAND2_LOSS is still a node of adoc-literature-superset-v0.6.0; a row whose marker exists is executable_legacy_behaviour",
+        "the library does not load: InterventionError: hand2_loss (adoc-literature-superset-v0.6.0): IN_HAND2_LOSS is still a node of adoc-literature-superset-v0.6.0; a row whose marker exists is executable_legacy_behaviour"
+      ]
+    }
+  },
+  "parent_model_version": "adoc-literature-superset-v0.5.2",
+  "passed": true,
+  "settings": {
+    "criterion": "same-seed exact equality after projection",
+    "maboss": "0.8.15",
+    "sample_count": 1000,
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "time": "each step's declared relative_duration; the model's time_tick"
+  },
+  "stage_a": {
+    "composed_functions": {
+      "combinations": [
+        {
+          "markers_on": [],
+          "named_interventions": [],
+          "nodes_compared": 56,
+          "nodes_whose_composed_function_differs": []
+        },
+        {
+          "markers_on": [
+            "IN_HAND2_LOSS"
+          ],
+          "named_interventions": [
+            "hand2_loss"
+          ],
+          "nodes_compared": 56,
+          "nodes_whose_composed_function_differs": []
+        },
+        {
+          "markers_on": [
+            "IN_ANTI_SPP1"
+          ],
+          "named_interventions": [
+            "anti_spp1"
+          ],
+          "nodes_compared": 56,
+          "nodes_whose_composed_function_differs": []
+        },
+        {
+          "markers_on": [
+            "IN_ANTI_SPP1",
+            "IN_HAND2_LOSS"
+          ],
+          "named_interventions": [
+            "anti_spp1",
+            "hand2_loss"
+          ],
+          "nodes_compared": 56,
+          "nodes_whose_composed_function_differs": []
+        },
+        {
+          "markers_on": [
+            "IN_MIFEPRISTONE"
+          ],
+          "named_interventions": [
+            "mifepristone"
+          ],
+          "nodes_compared": 56,
+          "nodes_whose_composed_function_differs": []
+        },
+        {
+          "markers_on": [
+            "IN_MIFEPRISTONE",
+            "IN_HAND2_LOSS"
+          ],
+          "named_interventions": [
+            "mifepristone",
+            "hand2_loss"
+          ],
+          "nodes_compared": 56,
+          "nodes_whose_composed_function_differs": []
+        },
+        {
+          "markers_on": [
+            "IN_MIFEPRISTONE",
+            "IN_ANTI_SPP1"
+          ],
+          "named_interventions": [
+            "mifepristone",
+            "anti_spp1"
+          ],
+          "nodes_compared": 56,
+          "nodes_whose_composed_function_differs": []
+        },
+        {
+          "markers_on": [
+            "IN_MIFEPRISTONE",
+            "IN_ANTI_SPP1",
+            "IN_HAND2_LOSS"
+          ],
+          "named_interventions": [
+            "mifepristone",
+            "anti_spp1",
+            "hand2_loss"
+          ],
+          "nodes_compared": 56,
+          "nodes_whose_composed_function_differs": []
+        }
+      ],
+      "enumerated_assignments": 65536,
+      "free_variables": [
+        "IN_E2",
+        "IN_PROGESTIN",
+        "IN_cAMP",
+        "IN_XAV939",
+        "IN_EMBRYO_PRESENT",
+        "IN_TROPHECTODERM_COMPETENT",
+        "IN_EMBRYO_CONTACT",
+        "IN_HCG",
+        "IN_EMBRYO_CONDITIONED_SIGNAL",
+        "IN_ER_STRESS_EXCESS",
+        "IN_HIGH_ECM_STIFFNESS",
+        "E_KLF12_HIGH",
+        "X_MECHANICAL_STRESS_RELAY",
+        "X_INTERFACE_SPP1_RELAY",
+        "X_INTERFACE_REDUNDANT_RELAY",
+        "X_INTERFACE_ANTIADHESIVE_RELAY"
+      ],
+      "passed": true
+    },
+    "protocol_mapping_differences": [],
+    "structural_violations": []
+  },
+  "stage_b": {
+    "condition_suite": {
+      "1": {
+        "adhesion_challenge_basal.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "adhesion_challenge_excess_er_stress.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "adhesion_challenge_high_ecm_stiffness.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "adhesion_challenge_hormone_treated.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "adhesion_challenge_hormone_treated_anti_spp1.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "anti_spp1"
+          ],
+          "vetoed_targets": [
+            "X_SPP1_LUMEN_FREE"
+          ]
+        },
+        "adhesion_challenge_hormone_treated_hand2_loss.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "hand2_loss"
+          ],
+          "vetoed_targets": [
+            "S_HAND2"
+          ]
+        },
+        "adhesion_challenge_hormone_treated_mifepristone.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "mifepristone"
+          ],
+          "vetoed_targets": [
+            "E_PGR",
+            "S_PGR"
+          ]
+        },
+        "adhesion_challenge_washout.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "basal_maternal.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "e2_primed_maternal.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "embryo_absent.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "embryo_incompetent.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "excess_er_stress.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "high_ecm_stiffness.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "hormone_treated.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "hormone_treated_anti_spp1.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "anti_spp1"
+          ],
+          "vetoed_targets": [
+            "X_SPP1_LUMEN_FREE"
+          ]
+        },
+        "hormone_treated_hand2_loss.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "hand2_loss"
+          ],
+          "vetoed_targets": [
+            "S_HAND2"
+          ]
+        },
+        "hormone_treated_maternal.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "hormone_treated_mifepristone.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "mifepristone"
+          ],
+          "vetoed_targets": [
+            "E_PGR",
+            "S_PGR"
+          ]
+        },
+        "untreated.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "washout.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        }
+      },
+      "2": {
+        "adhesion_challenge_basal.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "adhesion_challenge_excess_er_stress.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "adhesion_challenge_high_ecm_stiffness.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "adhesion_challenge_hormone_treated.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "adhesion_challenge_hormone_treated_anti_spp1.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "anti_spp1"
+          ],
+          "vetoed_targets": [
+            "X_SPP1_LUMEN_FREE"
+          ]
+        },
+        "adhesion_challenge_hormone_treated_hand2_loss.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "hand2_loss"
+          ],
+          "vetoed_targets": [
+            "S_HAND2"
+          ]
+        },
+        "adhesion_challenge_hormone_treated_mifepristone.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "mifepristone"
+          ],
+          "vetoed_targets": [
+            "E_PGR",
+            "S_PGR"
+          ]
+        },
+        "adhesion_challenge_washout.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "basal_maternal.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "e2_primed_maternal.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "embryo_absent.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "embryo_incompetent.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "excess_er_stress.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "high_ecm_stiffness.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "hormone_treated.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "hormone_treated_anti_spp1.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "anti_spp1"
+          ],
+          "vetoed_targets": [
+            "X_SPP1_LUMEN_FREE"
+          ]
+        },
+        "hormone_treated_hand2_loss.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "hand2_loss"
+          ],
+          "vetoed_targets": [
+            "S_HAND2"
+          ]
+        },
+        "hormone_treated_maternal.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "hormone_treated_mifepristone.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "mifepristone"
+          ],
+          "vetoed_targets": [
+            "E_PGR",
+            "S_PGR"
+          ]
+        },
+        "untreated.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "washout.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        }
+      },
+      "3": {
+        "adhesion_challenge_basal.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "adhesion_challenge_excess_er_stress.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "adhesion_challenge_high_ecm_stiffness.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "adhesion_challenge_hormone_treated.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "adhesion_challenge_hormone_treated_anti_spp1.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "anti_spp1"
+          ],
+          "vetoed_targets": [
+            "X_SPP1_LUMEN_FREE"
+          ]
+        },
+        "adhesion_challenge_hormone_treated_hand2_loss.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "hand2_loss"
+          ],
+          "vetoed_targets": [
+            "S_HAND2"
+          ]
+        },
+        "adhesion_challenge_hormone_treated_mifepristone.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "mifepristone"
+          ],
+          "vetoed_targets": [
+            "E_PGR",
+            "S_PGR"
+          ]
+        },
+        "adhesion_challenge_washout.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "basal_maternal.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "e2_primed_maternal.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "embryo_absent.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "embryo_incompetent.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "excess_er_stress.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "high_ecm_stiffness.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "hormone_treated.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "hormone_treated_anti_spp1.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "anti_spp1"
+          ],
+          "vetoed_targets": [
+            "X_SPP1_LUMEN_FREE"
+          ]
+        },
+        "hormone_treated_hand2_loss.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "hand2_loss"
+          ],
+          "vetoed_targets": [
+            "S_HAND2"
+          ]
+        },
+        "hormone_treated_maternal.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "hormone_treated_mifepristone.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "mifepristone"
+          ],
+          "vetoed_targets": [
+            "E_PGR",
+            "S_PGR"
+          ]
+        },
+        "untreated.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "washout.cfg": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        }
+      }
+    },
+    "exact": true,
+    "lineages": {
+      "1": {
+        "adhesion_challenge_basal": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "adhesion_challenge_excess_er_stress": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "adhesion_challenge_high_ecm_stiffness": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "adhesion_challenge_hormone_treated": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "adhesion_challenge_hormone_treated_anti_spp1": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "anti_spp1"
+          ],
+          "vetoed_targets": [
+            "X_SPP1_LUMEN_FREE"
+          ]
+        },
+        "adhesion_challenge_hormone_treated_hand2_loss": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "hand2_loss"
+          ],
+          "vetoed_targets": [
+            "S_HAND2"
+          ]
+        },
+        "adhesion_challenge_hormone_treated_mifepristone": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "mifepristone"
+          ],
+          "vetoed_targets": [
+            "E_PGR",
+            "S_PGR"
+          ]
+        },
+        "adhesion_challenge_washout": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "basal_maternal": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "e2_primed_maternal": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "hormone_treated_anti_spp1": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "anti_spp1"
+          ],
+          "vetoed_targets": [
+            "X_SPP1_LUMEN_FREE"
+          ]
+        },
+        "hormone_treated_hand2_loss": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "hand2_loss"
+          ],
+          "vetoed_targets": [
+            "S_HAND2"
+          ]
+        },
+        "hormone_treated_maternal": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "hormone_treated_mifepristone": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "mifepristone"
+          ],
+          "vetoed_targets": [
+            "E_PGR",
+            "S_PGR"
+          ]
+        },
+        "washout": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        }
+      },
+      "2": {
+        "adhesion_challenge_basal": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "adhesion_challenge_excess_er_stress": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "adhesion_challenge_high_ecm_stiffness": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "adhesion_challenge_hormone_treated": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "adhesion_challenge_hormone_treated_anti_spp1": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "anti_spp1"
+          ],
+          "vetoed_targets": [
+            "X_SPP1_LUMEN_FREE"
+          ]
+        },
+        "adhesion_challenge_hormone_treated_hand2_loss": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "hand2_loss"
+          ],
+          "vetoed_targets": [
+            "S_HAND2"
+          ]
+        },
+        "adhesion_challenge_hormone_treated_mifepristone": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "mifepristone"
+          ],
+          "vetoed_targets": [
+            "E_PGR",
+            "S_PGR"
+          ]
+        },
+        "adhesion_challenge_washout": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "basal_maternal": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "e2_primed_maternal": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "hormone_treated_anti_spp1": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "anti_spp1"
+          ],
+          "vetoed_targets": [
+            "X_SPP1_LUMEN_FREE"
+          ]
+        },
+        "hormone_treated_hand2_loss": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "hand2_loss"
+          ],
+          "vetoed_targets": [
+            "S_HAND2"
+          ]
+        },
+        "hormone_treated_maternal": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "hormone_treated_mifepristone": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "mifepristone"
+          ],
+          "vetoed_targets": [
+            "E_PGR",
+            "S_PGR"
+          ]
+        },
+        "washout": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        }
+      },
+      "3": {
+        "adhesion_challenge_basal": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "adhesion_challenge_excess_er_stress": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "adhesion_challenge_high_ecm_stiffness": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "adhesion_challenge_hormone_treated": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "adhesion_challenge_hormone_treated_anti_spp1": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "anti_spp1"
+          ],
+          "vetoed_targets": [
+            "X_SPP1_LUMEN_FREE"
+          ]
+        },
+        "adhesion_challenge_hormone_treated_hand2_loss": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "hand2_loss"
+          ],
+          "vetoed_targets": [
+            "S_HAND2"
+          ]
+        },
+        "adhesion_challenge_hormone_treated_mifepristone": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "mifepristone"
+          ],
+          "vetoed_targets": [
+            "E_PGR",
+            "S_PGR"
+          ]
+        },
+        "adhesion_challenge_washout": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "basal_maternal": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "e2_primed_maternal": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "hormone_treated_anti_spp1": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "anti_spp1"
+          ],
+          "vetoed_targets": [
+            "X_SPP1_LUMEN_FREE"
+          ]
+        },
+        "hormone_treated_hand2_loss": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "hand2_loss"
+          ],
+          "vetoed_targets": [
+            "S_HAND2"
+          ]
+        },
+        "hormone_treated_maternal": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        },
+        "hormone_treated_mifepristone": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [
+            "mifepristone"
+          ],
+          "vetoed_targets": [
+            "E_PGR",
+            "S_PGR"
+          ]
+        },
+        "washout": {
+          "differences": [],
+          "identical": true,
+          "max_abs_trajectory_difference": 0.0,
+          "named_interventions": [],
+          "vetoed_targets": []
+        }
+      }
+    }
+  }
+}

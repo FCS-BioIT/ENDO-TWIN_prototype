@@ -1,0 +1,12 @@
+step	kind	item	design_states_separable	observation_classes
+1	perturbation_arm	hormone_treated_maternal__IN_HAND2_LOSS	23	2
+2	perturbation_arm	adhesion_challenge_hormone_treated__IN_HIGH_ECM_STIFFNESS	25	3
+3	perturbation_arm	adhesion_challenge_hormone_treated__IN_ANTI_SPP1	27	5
+4	perturbation_arm	solo_IN_PROGESTIN	29	5
+5	perturbation_arm	solo_IN_cAMP	30	5
+6	perturbation_arm	solo_IN_TROPHECTODERM_COMPETENT	31	5
+7	perturbation_arm	solo_IN_EMBRYO_PRESENT	32	5
+8	perturbation_arm	hormone_treated_maternal__IN_HCG	33	5
+9	perturbation_arm	hormone_treated_maternal__IN_ER_STRESS_EXCESS	34	5
+10	readout	X_MECHANICAL_PERMISSIVE_ECM		6
+11	readout	OUT_EPITHELIAL_RECEPTIVE		8

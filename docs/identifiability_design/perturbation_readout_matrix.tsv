@@ -1,0 +1,188 @@
+perturbation	readout	readout_moves_under_perturbation	rivals_separated	distinction
+veto:E_ANXA2_ACTIN	E_IHH	no	E_IHH	separates E_ANXA2_ACTIN from E_IHH only as a negative result: this readout does not move under E_ANXA2_ACTIN, so the discrimination is carried by the rival arms
+veto:E_ANXA2_ACTIN	E_PODXL	no	E_PODXL	separates E_ANXA2_ACTIN from E_PODXL only as a negative result: this readout does not move under E_ANXA2_ACTIN, so the discrimination is carried by the rival arms
+veto:E_ANXA2_ACTIN	E_HBEGF	no	E_HBEGF	separates E_ANXA2_ACTIN from E_HBEGF only as a negative result: this readout does not move under E_ANXA2_ACTIN, so the discrimination is carried by the rival arms
+veto:E_ANXA2_ACTIN	E_SPP1_EXPR	no	E_SPP1_EXPR	separates E_ANXA2_ACTIN from E_SPP1_EXPR only as a negative result: this readout does not move under E_ANXA2_ACTIN, so the discrimination is carried by the rival arms
+veto:E_ANXA2_ACTIN	E_CD98_CD9	no	E_CD98_CD9	separates E_ANXA2_ACTIN from E_CD98_CD9 only as a negative result: this readout does not move under E_ANXA2_ACTIN, so the discrimination is carried by the rival arms
+veto:E_ANXA2_ACTIN	E_ANXA2_ACTIN	yes	E_CD98_CD9;E_CDH1_APICAL;E_HBEGF;E_IHH;E_PODXL;E_SPP1_EXPR;S_NR2F2;S_SPP1	separates E_ANXA2_ACTIN from E_CD98_CD9, E_CDH1_APICAL, E_HBEGF, E_IHH, E_PODXL, E_SPP1_EXPR, S_NR2F2, S_SPP1
+veto:E_ANXA2_ACTIN	E_CDH1_APICAL	no	E_CDH1_APICAL	separates E_ANXA2_ACTIN from E_CDH1_APICAL only as a negative result: this readout does not move under E_ANXA2_ACTIN, so the discrimination is carried by the rival arms
+veto:E_ANXA2_ACTIN	S_NR2F2	no	E_IHH;S_NR2F2	separates E_ANXA2_ACTIN from E_IHH, S_NR2F2 only as a negative result: this readout does not move under E_ANXA2_ACTIN, so the discrimination is carried by the rival arms
+veto:E_ANXA2_ACTIN	S_SPP1	no	S_SPP1	separates E_ANXA2_ACTIN from S_SPP1 only as a negative result: this readout does not move under E_ANXA2_ACTIN, so the discrimination is carried by the rival arms
+veto:E_CD98_CD9	E_IHH	no	E_IHH	separates E_CD98_CD9 from E_IHH only as a negative result: this readout does not move under E_CD98_CD9, so the discrimination is carried by the rival arms
+veto:E_CD98_CD9	E_PODXL	no	E_PODXL	separates E_CD98_CD9 from E_PODXL only as a negative result: this readout does not move under E_CD98_CD9, so the discrimination is carried by the rival arms
+veto:E_CD98_CD9	E_HBEGF	no	E_HBEGF	separates E_CD98_CD9 from E_HBEGF only as a negative result: this readout does not move under E_CD98_CD9, so the discrimination is carried by the rival arms
+veto:E_CD98_CD9	E_SPP1_EXPR	no	E_SPP1_EXPR	separates E_CD98_CD9 from E_SPP1_EXPR only as a negative result: this readout does not move under E_CD98_CD9, so the discrimination is carried by the rival arms
+veto:E_CD98_CD9	E_CD98_CD9	yes	E_ANXA2_ACTIN;E_CDH1_APICAL;E_HBEGF;E_IHH;E_PODXL;E_SPP1_EXPR;S_NR2F2;S_SPP1	separates E_CD98_CD9 from E_ANXA2_ACTIN, E_CDH1_APICAL, E_HBEGF, E_IHH, E_PODXL, E_SPP1_EXPR, S_NR2F2, S_SPP1
+veto:E_CD98_CD9	E_ANXA2_ACTIN	no	E_ANXA2_ACTIN	separates E_CD98_CD9 from E_ANXA2_ACTIN only as a negative result: this readout does not move under E_CD98_CD9, so the discrimination is carried by the rival arms
+veto:E_CD98_CD9	E_CDH1_APICAL	no	E_CDH1_APICAL	separates E_CD98_CD9 from E_CDH1_APICAL only as a negative result: this readout does not move under E_CD98_CD9, so the discrimination is carried by the rival arms
+veto:E_CD98_CD9	S_NR2F2	no	E_IHH;S_NR2F2	separates E_CD98_CD9 from E_IHH, S_NR2F2 only as a negative result: this readout does not move under E_CD98_CD9, so the discrimination is carried by the rival arms
+veto:E_CD98_CD9	S_SPP1	no	S_SPP1	separates E_CD98_CD9 from S_SPP1 only as a negative result: this readout does not move under E_CD98_CD9, so the discrimination is carried by the rival arms
+veto:E_CDH1_APICAL	E_IHH	no	E_IHH	separates E_CDH1_APICAL from E_IHH only as a negative result: this readout does not move under E_CDH1_APICAL, so the discrimination is carried by the rival arms
+veto:E_CDH1_APICAL	E_PODXL	no	E_PODXL	separates E_CDH1_APICAL from E_PODXL only as a negative result: this readout does not move under E_CDH1_APICAL, so the discrimination is carried by the rival arms
+veto:E_CDH1_APICAL	E_HBEGF	no	E_HBEGF	separates E_CDH1_APICAL from E_HBEGF only as a negative result: this readout does not move under E_CDH1_APICAL, so the discrimination is carried by the rival arms
+veto:E_CDH1_APICAL	E_SPP1_EXPR	no	E_SPP1_EXPR	separates E_CDH1_APICAL from E_SPP1_EXPR only as a negative result: this readout does not move under E_CDH1_APICAL, so the discrimination is carried by the rival arms
+veto:E_CDH1_APICAL	E_CD98_CD9	no	E_CD98_CD9	separates E_CDH1_APICAL from E_CD98_CD9 only as a negative result: this readout does not move under E_CDH1_APICAL, so the discrimination is carried by the rival arms
+veto:E_CDH1_APICAL	E_ANXA2_ACTIN	no	E_ANXA2_ACTIN	separates E_CDH1_APICAL from E_ANXA2_ACTIN only as a negative result: this readout does not move under E_CDH1_APICAL, so the discrimination is carried by the rival arms
+veto:E_CDH1_APICAL	E_CDH1_APICAL	yes	E_ANXA2_ACTIN;E_CD98_CD9;E_HBEGF;E_IHH;E_PODXL;E_SPP1_EXPR;S_NR2F2;S_SPP1	separates E_CDH1_APICAL from E_ANXA2_ACTIN, E_CD98_CD9, E_HBEGF, E_IHH, E_PODXL, E_SPP1_EXPR, S_NR2F2, S_SPP1
+veto:E_CDH1_APICAL	S_NR2F2	no	E_IHH;S_NR2F2	separates E_CDH1_APICAL from E_IHH, S_NR2F2 only as a negative result: this readout does not move under E_CDH1_APICAL, so the discrimination is carried by the rival arms
+veto:E_CDH1_APICAL	S_SPP1	no	S_SPP1	separates E_CDH1_APICAL from S_SPP1 only as a negative result: this readout does not move under E_CDH1_APICAL, so the discrimination is carried by the rival arms
+veto:E_GP130_STAT3	E_LIF	no	E_LIF	separates E_GP130_STAT3 from E_LIF only as a negative result: this readout does not move under E_GP130_STAT3, so the discrimination is carried by the rival arms
+veto:E_GP130_STAT3	E_GP130_STAT3	yes	E_PC6;S_HAND2;S_TAZ_ECM	separates E_GP130_STAT3 from E_PC6, S_HAND2, S_TAZ_ECM
+veto:E_GP130_STAT3	E_ESTROGENIC_PROLIFERATION	no	S_HAND2	separates E_GP130_STAT3 from S_HAND2 only as a negative result: this readout does not move under E_GP130_STAT3, so the discrimination is carried by the rival arms
+veto:E_GP130_STAT3	E_PC6	no	E_PC6	separates E_GP130_STAT3 from E_PC6 only as a negative result: this readout does not move under E_GP130_STAT3, so the discrimination is carried by the rival arms
+veto:E_GP130_STAT3	E_DAG1_FULL	no	E_PC6	separates E_GP130_STAT3 from E_PC6 only as a negative result: this readout does not move under E_GP130_STAT3, so the discrimination is carried by the rival arms
+veto:E_GP130_STAT3	E_DAG1_CLEAVED	no	E_PC6	separates E_GP130_STAT3 from E_PC6 only as a negative result: this readout does not move under E_GP130_STAT3, so the discrimination is carried by the rival arms
+veto:E_GP130_STAT3	E_CD98_CD9	yes	E_PC6;S_HAND2;S_TAZ_ECM	separates E_GP130_STAT3 from E_PC6, S_HAND2, S_TAZ_ECM
+veto:E_GP130_STAT3	E_RECEPTIVE_SURFACE	yes	S_TAZ_ECM	separates E_GP130_STAT3 from S_TAZ_ECM
+veto:E_GP130_STAT3	S_HAND2	no	S_HAND2	separates E_GP130_STAT3 from S_HAND2 only as a negative result: this readout does not move under E_GP130_STAT3, so the discrimination is carried by the rival arms
+veto:E_GP130_STAT3	S_FGF_MITOGENIC	no	S_HAND2	separates E_GP130_STAT3 from S_HAND2 only as a negative result: this readout does not move under E_GP130_STAT3, so the discrimination is carried by the rival arms
+veto:E_GP130_STAT3	S_TAZ_ECM	no	S_TAZ_ECM	separates E_GP130_STAT3 from S_TAZ_ECM only as a negative result: this readout does not move under E_GP130_STAT3, so the discrimination is carried by the rival arms
+veto:E_GP130_STAT3	X_MECHANICAL_PERMISSIVE_ECM	no	S_TAZ_ECM	separates E_GP130_STAT3 from S_TAZ_ECM only as a negative result: this readout does not move under E_GP130_STAT3, so the discrimination is carried by the rival arms
+veto:E_GP130_STAT3	X_ADHESION_ROUTE_SPP1	yes	S_TAZ_ECM	separates E_GP130_STAT3 from S_TAZ_ECM
+veto:E_GP130_STAT3	X_ADHESION_ROUTE_REDUNDANT	yes	S_TAZ_ECM	separates E_GP130_STAT3 from S_TAZ_ECM
+veto:E_GP130_STAT3	X_ANTIADHESIVE_ROUTE	no	E_PC6	separates E_GP130_STAT3 from E_PC6 only as a negative result: this readout does not move under E_GP130_STAT3, so the discrimination is carried by the rival arms
+veto:E_GP130_STAT3	OUT_EPITHELIAL_RECEPTIVE	yes	S_TAZ_ECM	separates E_GP130_STAT3 from S_TAZ_ECM
+veto:E_HBEGF	E_IHH	no	E_IHH	separates E_HBEGF from E_IHH only as a negative result: this readout does not move under E_HBEGF, so the discrimination is carried by the rival arms
+veto:E_HBEGF	E_PODXL	no	E_PODXL	separates E_HBEGF from E_PODXL only as a negative result: this readout does not move under E_HBEGF, so the discrimination is carried by the rival arms
+veto:E_HBEGF	E_HBEGF	yes	E_ANXA2_ACTIN;E_CD98_CD9;E_CDH1_APICAL;E_IHH;E_PODXL;E_SPP1_EXPR;S_NR2F2;S_SPP1	separates E_HBEGF from E_ANXA2_ACTIN, E_CD98_CD9, E_CDH1_APICAL, E_IHH, E_PODXL, E_SPP1_EXPR, S_NR2F2, S_SPP1
+veto:E_HBEGF	E_SPP1_EXPR	no	E_SPP1_EXPR	separates E_HBEGF from E_SPP1_EXPR only as a negative result: this readout does not move under E_HBEGF, so the discrimination is carried by the rival arms
+veto:E_HBEGF	E_CD98_CD9	no	E_CD98_CD9	separates E_HBEGF from E_CD98_CD9 only as a negative result: this readout does not move under E_HBEGF, so the discrimination is carried by the rival arms
+veto:E_HBEGF	E_ANXA2_ACTIN	no	E_ANXA2_ACTIN	separates E_HBEGF from E_ANXA2_ACTIN only as a negative result: this readout does not move under E_HBEGF, so the discrimination is carried by the rival arms
+veto:E_HBEGF	E_CDH1_APICAL	no	E_CDH1_APICAL	separates E_HBEGF from E_CDH1_APICAL only as a negative result: this readout does not move under E_HBEGF, so the discrimination is carried by the rival arms
+veto:E_HBEGF	S_NR2F2	no	E_IHH;S_NR2F2	separates E_HBEGF from E_IHH, S_NR2F2 only as a negative result: this readout does not move under E_HBEGF, so the discrimination is carried by the rival arms
+veto:E_HBEGF	S_SPP1	no	S_SPP1	separates E_HBEGF from S_SPP1 only as a negative result: this readout does not move under E_HBEGF, so the discrimination is carried by the rival arms
+veto:E_IHH	E_IHH	yes	E_ANXA2_ACTIN;E_CD98_CD9;E_CDH1_APICAL;E_HBEGF;E_PODXL;E_SPP1_EXPR;S_NR2F2;S_SPP1	separates E_IHH from E_ANXA2_ACTIN, E_CD98_CD9, E_CDH1_APICAL, E_HBEGF, E_PODXL, E_SPP1_EXPR, S_NR2F2, S_SPP1
+veto:E_IHH	E_PODXL	no	E_PODXL	separates E_IHH from E_PODXL only as a negative result: this readout does not move under E_IHH, so the discrimination is carried by the rival arms
+veto:E_IHH	E_HBEGF	no	E_HBEGF	separates E_IHH from E_HBEGF only as a negative result: this readout does not move under E_IHH, so the discrimination is carried by the rival arms
+veto:E_IHH	E_SPP1_EXPR	no	E_SPP1_EXPR	separates E_IHH from E_SPP1_EXPR only as a negative result: this readout does not move under E_IHH, so the discrimination is carried by the rival arms
+veto:E_IHH	E_CD98_CD9	no	E_CD98_CD9	separates E_IHH from E_CD98_CD9 only as a negative result: this readout does not move under E_IHH, so the discrimination is carried by the rival arms
+veto:E_IHH	E_ANXA2_ACTIN	no	E_ANXA2_ACTIN	separates E_IHH from E_ANXA2_ACTIN only as a negative result: this readout does not move under E_IHH, so the discrimination is carried by the rival arms
+veto:E_IHH	E_CDH1_APICAL	no	E_CDH1_APICAL	separates E_IHH from E_CDH1_APICAL only as a negative result: this readout does not move under E_IHH, so the discrimination is carried by the rival arms
+veto:E_IHH	S_NR2F2	yes	E_ANXA2_ACTIN;E_CD98_CD9;E_CDH1_APICAL;E_HBEGF;E_PODXL;E_SPP1_EXPR;S_SPP1	separates E_IHH from E_ANXA2_ACTIN, E_CD98_CD9, E_CDH1_APICAL, E_HBEGF, E_PODXL, E_SPP1_EXPR, S_SPP1
+veto:E_IHH	S_SPP1	no	S_SPP1	separates E_IHH from S_SPP1 only as a negative result: this readout does not move under E_IHH, so the discrimination is carried by the rival arms
+veto:E_ITGAVB3_5	E_ITGAVB3_5	yes	X_SPP1_LUMEN_FREE	separates E_ITGAVB3_5 from X_SPP1_LUMEN_FREE
+veto:E_ITGAVB3_5	X_SPP1_LUMEN_FREE	no	X_SPP1_LUMEN_FREE	separates E_ITGAVB3_5 from X_SPP1_LUMEN_FREE only as a negative result: this readout does not move under E_ITGAVB3_5, so the discrimination is carried by the rival arms
+veto:E_LIF	E_LIF	yes	E_GP130_STAT3;E_PC6;S_HAND2;S_TAZ_ECM	separates E_LIF from E_GP130_STAT3, E_PC6, S_HAND2, S_TAZ_ECM
+veto:E_LIF	E_GP130_STAT3	yes	E_PC6;S_HAND2;S_TAZ_ECM	separates E_LIF from E_PC6, S_HAND2, S_TAZ_ECM
+veto:E_LIF	E_ESTROGENIC_PROLIFERATION	no	S_HAND2	separates E_LIF from S_HAND2 only as a negative result: this readout does not move under E_LIF, so the discrimination is carried by the rival arms
+veto:E_LIF	E_PC6	no	E_PC6	separates E_LIF from E_PC6 only as a negative result: this readout does not move under E_LIF, so the discrimination is carried by the rival arms
+veto:E_LIF	E_DAG1_FULL	no	E_PC6	separates E_LIF from E_PC6 only as a negative result: this readout does not move under E_LIF, so the discrimination is carried by the rival arms
+veto:E_LIF	E_DAG1_CLEAVED	no	E_PC6	separates E_LIF from E_PC6 only as a negative result: this readout does not move under E_LIF, so the discrimination is carried by the rival arms
+veto:E_LIF	E_CD98_CD9	yes	E_PC6;S_HAND2;S_TAZ_ECM	separates E_LIF from E_PC6, S_HAND2, S_TAZ_ECM
+veto:E_LIF	E_RECEPTIVE_SURFACE	yes	S_TAZ_ECM	separates E_LIF from S_TAZ_ECM
+veto:E_LIF	S_HAND2	no	S_HAND2	separates E_LIF from S_HAND2 only as a negative result: this readout does not move under E_LIF, so the discrimination is carried by the rival arms
+veto:E_LIF	S_FGF_MITOGENIC	no	S_HAND2	separates E_LIF from S_HAND2 only as a negative result: this readout does not move under E_LIF, so the discrimination is carried by the rival arms
+veto:E_LIF	S_TAZ_ECM	no	S_TAZ_ECM	separates E_LIF from S_TAZ_ECM only as a negative result: this readout does not move under E_LIF, so the discrimination is carried by the rival arms
+veto:E_LIF	X_MECHANICAL_PERMISSIVE_ECM	no	S_TAZ_ECM	separates E_LIF from S_TAZ_ECM only as a negative result: this readout does not move under E_LIF, so the discrimination is carried by the rival arms
+veto:E_LIF	X_ADHESION_ROUTE_SPP1	yes	S_TAZ_ECM	separates E_LIF from S_TAZ_ECM
+veto:E_LIF	X_ADHESION_ROUTE_REDUNDANT	yes	S_TAZ_ECM	separates E_LIF from S_TAZ_ECM
+veto:E_LIF	X_ANTIADHESIVE_ROUTE	no	E_PC6	separates E_LIF from E_PC6 only as a negative result: this readout does not move under E_LIF, so the discrimination is carried by the rival arms
+veto:E_LIF	OUT_EPITHELIAL_RECEPTIVE	yes	S_TAZ_ECM	separates E_LIF from S_TAZ_ECM
+veto:E_PC6	E_LIF	no	E_LIF	separates E_PC6 from E_LIF only as a negative result: this readout does not move under E_PC6, so the discrimination is carried by the rival arms
+veto:E_PC6	E_GP130_STAT3	no	E_GP130_STAT3;E_LIF	separates E_PC6 from E_GP130_STAT3, E_LIF only as a negative result: this readout does not move under E_PC6, so the discrimination is carried by the rival arms
+veto:E_PC6	E_ESTROGENIC_PROLIFERATION	no	S_HAND2	separates E_PC6 from S_HAND2 only as a negative result: this readout does not move under E_PC6, so the discrimination is carried by the rival arms
+veto:E_PC6	E_PC6	yes	E_GP130_STAT3;E_LIF;S_HAND2;S_TAZ_ECM	separates E_PC6 from E_GP130_STAT3, E_LIF, S_HAND2, S_TAZ_ECM
+veto:E_PC6	E_DAG1_FULL	yes	E_GP130_STAT3;E_LIF;S_HAND2;S_TAZ_ECM	separates E_PC6 from E_GP130_STAT3, E_LIF, S_HAND2, S_TAZ_ECM
+veto:E_PC6	E_DAG1_CLEAVED	yes	E_GP130_STAT3;E_LIF;S_HAND2;S_TAZ_ECM	separates E_PC6 from E_GP130_STAT3, E_LIF, S_HAND2, S_TAZ_ECM
+veto:E_PC6	E_CD98_CD9	no	E_GP130_STAT3;E_LIF	separates E_PC6 from E_GP130_STAT3, E_LIF only as a negative result: this readout does not move under E_PC6, so the discrimination is carried by the rival arms
+veto:E_PC6	E_RECEPTIVE_SURFACE	yes	S_TAZ_ECM	separates E_PC6 from S_TAZ_ECM
+veto:E_PC6	S_HAND2	no	S_HAND2	separates E_PC6 from S_HAND2 only as a negative result: this readout does not move under E_PC6, so the discrimination is carried by the rival arms
+veto:E_PC6	S_FGF_MITOGENIC	no	S_HAND2	separates E_PC6 from S_HAND2 only as a negative result: this readout does not move under E_PC6, so the discrimination is carried by the rival arms
+veto:E_PC6	S_TAZ_ECM	no	S_TAZ_ECM	separates E_PC6 from S_TAZ_ECM only as a negative result: this readout does not move under E_PC6, so the discrimination is carried by the rival arms
+veto:E_PC6	X_MECHANICAL_PERMISSIVE_ECM	no	S_TAZ_ECM	separates E_PC6 from S_TAZ_ECM only as a negative result: this readout does not move under E_PC6, so the discrimination is carried by the rival arms
+veto:E_PC6	X_ADHESION_ROUTE_SPP1	yes	S_TAZ_ECM	separates E_PC6 from S_TAZ_ECM
+veto:E_PC6	X_ADHESION_ROUTE_REDUNDANT	yes	S_TAZ_ECM	separates E_PC6 from S_TAZ_ECM
+veto:E_PC6	X_ANTIADHESIVE_ROUTE	yes	E_GP130_STAT3;E_LIF;S_HAND2;S_TAZ_ECM	separates E_PC6 from E_GP130_STAT3, E_LIF, S_HAND2, S_TAZ_ECM
+veto:E_PC6	OUT_EPITHELIAL_RECEPTIVE	yes	S_TAZ_ECM	separates E_PC6 from S_TAZ_ECM
+veto:E_PODXL	E_IHH	no	E_IHH	separates E_PODXL from E_IHH only as a negative result: this readout does not move under E_PODXL, so the discrimination is carried by the rival arms
+veto:E_PODXL	E_PODXL	yes	E_ANXA2_ACTIN;E_CD98_CD9;E_CDH1_APICAL;E_HBEGF;E_IHH;E_SPP1_EXPR;S_NR2F2;S_SPP1	separates E_PODXL from E_ANXA2_ACTIN, E_CD98_CD9, E_CDH1_APICAL, E_HBEGF, E_IHH, E_SPP1_EXPR, S_NR2F2, S_SPP1
+veto:E_PODXL	E_HBEGF	no	E_HBEGF	separates E_PODXL from E_HBEGF only as a negative result: this readout does not move under E_PODXL, so the discrimination is carried by the rival arms
+veto:E_PODXL	E_SPP1_EXPR	no	E_SPP1_EXPR	separates E_PODXL from E_SPP1_EXPR only as a negative result: this readout does not move under E_PODXL, so the discrimination is carried by the rival arms
+veto:E_PODXL	E_CD98_CD9	no	E_CD98_CD9	separates E_PODXL from E_CD98_CD9 only as a negative result: this readout does not move under E_PODXL, so the discrimination is carried by the rival arms
+veto:E_PODXL	E_ANXA2_ACTIN	no	E_ANXA2_ACTIN	separates E_PODXL from E_ANXA2_ACTIN only as a negative result: this readout does not move under E_PODXL, so the discrimination is carried by the rival arms
+veto:E_PODXL	E_CDH1_APICAL	no	E_CDH1_APICAL	separates E_PODXL from E_CDH1_APICAL only as a negative result: this readout does not move under E_PODXL, so the discrimination is carried by the rival arms
+veto:E_PODXL	S_NR2F2	no	E_IHH;S_NR2F2	separates E_PODXL from E_IHH, S_NR2F2 only as a negative result: this readout does not move under E_PODXL, so the discrimination is carried by the rival arms
+veto:E_PODXL	S_SPP1	no	S_SPP1	separates E_PODXL from S_SPP1 only as a negative result: this readout does not move under E_PODXL, so the discrimination is carried by the rival arms
+veto:E_SPP1_EXPR	E_IHH	no	E_IHH	separates E_SPP1_EXPR from E_IHH only as a negative result: this readout does not move under E_SPP1_EXPR, so the discrimination is carried by the rival arms
+veto:E_SPP1_EXPR	E_PODXL	no	E_PODXL	separates E_SPP1_EXPR from E_PODXL only as a negative result: this readout does not move under E_SPP1_EXPR, so the discrimination is carried by the rival arms
+veto:E_SPP1_EXPR	E_HBEGF	no	E_HBEGF	separates E_SPP1_EXPR from E_HBEGF only as a negative result: this readout does not move under E_SPP1_EXPR, so the discrimination is carried by the rival arms
+veto:E_SPP1_EXPR	E_SPP1_EXPR	yes	E_ANXA2_ACTIN;E_CD98_CD9;E_CDH1_APICAL;E_HBEGF;E_IHH;E_PODXL;S_NR2F2;S_SPP1	separates E_SPP1_EXPR from E_ANXA2_ACTIN, E_CD98_CD9, E_CDH1_APICAL, E_HBEGF, E_IHH, E_PODXL, S_NR2F2, S_SPP1
+veto:E_SPP1_EXPR	E_CD98_CD9	no	E_CD98_CD9	separates E_SPP1_EXPR from E_CD98_CD9 only as a negative result: this readout does not move under E_SPP1_EXPR, so the discrimination is carried by the rival arms
+veto:E_SPP1_EXPR	E_ANXA2_ACTIN	no	E_ANXA2_ACTIN	separates E_SPP1_EXPR from E_ANXA2_ACTIN only as a negative result: this readout does not move under E_SPP1_EXPR, so the discrimination is carried by the rival arms
+veto:E_SPP1_EXPR	E_CDH1_APICAL	no	E_CDH1_APICAL	separates E_SPP1_EXPR from E_CDH1_APICAL only as a negative result: this readout does not move under E_SPP1_EXPR, so the discrimination is carried by the rival arms
+veto:E_SPP1_EXPR	S_NR2F2	no	E_IHH;S_NR2F2	separates E_SPP1_EXPR from E_IHH, S_NR2F2 only as a negative result: this readout does not move under E_SPP1_EXPR, so the discrimination is carried by the rival arms
+veto:E_SPP1_EXPR	S_SPP1	no	S_SPP1	separates E_SPP1_EXPR from S_SPP1 only as a negative result: this readout does not move under E_SPP1_EXPR, so the discrimination is carried by the rival arms
+veto:S_HAND2	E_LIF	no	E_LIF	separates S_HAND2 from E_LIF only as a negative result: this readout does not move under S_HAND2, so the discrimination is carried by the rival arms
+veto:S_HAND2	E_GP130_STAT3	no	E_GP130_STAT3;E_LIF	separates S_HAND2 from E_GP130_STAT3, E_LIF only as a negative result: this readout does not move under S_HAND2, so the discrimination is carried by the rival arms
+veto:S_HAND2	E_ESTROGENIC_PROLIFERATION	yes	E_GP130_STAT3;E_LIF;E_PC6;S_TAZ_ECM	separates S_HAND2 from E_GP130_STAT3, E_LIF, E_PC6, S_TAZ_ECM
+veto:S_HAND2	E_PC6	no	E_PC6	separates S_HAND2 from E_PC6 only as a negative result: this readout does not move under S_HAND2, so the discrimination is carried by the rival arms
+veto:S_HAND2	E_DAG1_FULL	no	E_PC6	separates S_HAND2 from E_PC6 only as a negative result: this readout does not move under S_HAND2, so the discrimination is carried by the rival arms
+veto:S_HAND2	E_DAG1_CLEAVED	no	E_PC6	separates S_HAND2 from E_PC6 only as a negative result: this readout does not move under S_HAND2, so the discrimination is carried by the rival arms
+veto:S_HAND2	E_CD98_CD9	no	E_GP130_STAT3;E_LIF	separates S_HAND2 from E_GP130_STAT3, E_LIF only as a negative result: this readout does not move under S_HAND2, so the discrimination is carried by the rival arms
+veto:S_HAND2	E_RECEPTIVE_SURFACE	yes	S_TAZ_ECM	separates S_HAND2 from S_TAZ_ECM
+veto:S_HAND2	S_HAND2	yes	E_GP130_STAT3;E_LIF;E_PC6;S_TAZ_ECM	separates S_HAND2 from E_GP130_STAT3, E_LIF, E_PC6, S_TAZ_ECM
+veto:S_HAND2	S_FGF_MITOGENIC	yes	E_GP130_STAT3;E_LIF;E_PC6;S_TAZ_ECM	separates S_HAND2 from E_GP130_STAT3, E_LIF, E_PC6, S_TAZ_ECM
+veto:S_HAND2	S_TAZ_ECM	no	S_TAZ_ECM	separates S_HAND2 from S_TAZ_ECM only as a negative result: this readout does not move under S_HAND2, so the discrimination is carried by the rival arms
+veto:S_HAND2	X_MECHANICAL_PERMISSIVE_ECM	no	S_TAZ_ECM	separates S_HAND2 from S_TAZ_ECM only as a negative result: this readout does not move under S_HAND2, so the discrimination is carried by the rival arms
+veto:S_HAND2	X_ADHESION_ROUTE_SPP1	yes	S_TAZ_ECM	separates S_HAND2 from S_TAZ_ECM
+veto:S_HAND2	X_ADHESION_ROUTE_REDUNDANT	yes	S_TAZ_ECM	separates S_HAND2 from S_TAZ_ECM
+veto:S_HAND2	X_ANTIADHESIVE_ROUTE	no	E_PC6	separates S_HAND2 from E_PC6 only as a negative result: this readout does not move under S_HAND2, so the discrimination is carried by the rival arms
+veto:S_HAND2	OUT_EPITHELIAL_RECEPTIVE	yes	S_TAZ_ECM	separates S_HAND2 from S_TAZ_ECM
+veto:S_NR2F2	E_IHH	no	E_IHH	separates S_NR2F2 from E_IHH only as a negative result: this readout does not move under S_NR2F2, so the discrimination is carried by the rival arms
+veto:S_NR2F2	E_PODXL	no	E_PODXL	separates S_NR2F2 from E_PODXL only as a negative result: this readout does not move under S_NR2F2, so the discrimination is carried by the rival arms
+veto:S_NR2F2	E_HBEGF	no	E_HBEGF	separates S_NR2F2 from E_HBEGF only as a negative result: this readout does not move under S_NR2F2, so the discrimination is carried by the rival arms
+veto:S_NR2F2	E_SPP1_EXPR	no	E_SPP1_EXPR	separates S_NR2F2 from E_SPP1_EXPR only as a negative result: this readout does not move under S_NR2F2, so the discrimination is carried by the rival arms
+veto:S_NR2F2	E_CD98_CD9	no	E_CD98_CD9	separates S_NR2F2 from E_CD98_CD9 only as a negative result: this readout does not move under S_NR2F2, so the discrimination is carried by the rival arms
+veto:S_NR2F2	E_ANXA2_ACTIN	no	E_ANXA2_ACTIN	separates S_NR2F2 from E_ANXA2_ACTIN only as a negative result: this readout does not move under S_NR2F2, so the discrimination is carried by the rival arms
+veto:S_NR2F2	E_CDH1_APICAL	no	E_CDH1_APICAL	separates S_NR2F2 from E_CDH1_APICAL only as a negative result: this readout does not move under S_NR2F2, so the discrimination is carried by the rival arms
+veto:S_NR2F2	S_NR2F2	yes	E_ANXA2_ACTIN;E_CD98_CD9;E_CDH1_APICAL;E_HBEGF;E_PODXL;E_SPP1_EXPR;S_SPP1	separates S_NR2F2 from E_ANXA2_ACTIN, E_CD98_CD9, E_CDH1_APICAL, E_HBEGF, E_PODXL, E_SPP1_EXPR, S_SPP1
+veto:S_NR2F2	S_SPP1	no	S_SPP1	separates S_NR2F2 from S_SPP1 only as a negative result: this readout does not move under S_NR2F2, so the discrimination is carried by the rival arms
+veto:S_PGR	E_ESTROGENIC_PROLIFERATION	yes	S_PKA	separates S_PGR from S_PKA
+veto:S_PGR	E_RECEPTIVE_SURFACE	yes	S_PKA	separates S_PGR from S_PKA
+veto:S_PGR	S_PGR	yes	S_PKA	separates S_PGR from S_PKA
+veto:S_PGR	S_PKA	no	S_PKA	separates S_PGR from S_PKA only as a negative result: this readout does not move under S_PGR, so the discrimination is carried by the rival arms
+veto:S_PGR	S_NR2F2	yes	S_PKA	separates S_PGR from S_PKA
+veto:S_PGR	S_BMP2	yes	S_PKA	separates S_PGR from S_PKA
+veto:S_PGR	S_HAND2	yes	S_PKA	separates S_PGR from S_PKA
+veto:S_PGR	S_FGF_MITOGENIC	yes	S_PKA	separates S_PGR from S_PKA
+veto:S_PGR	X_ADHESION_ROUTE_SPP1	yes	S_PKA	separates S_PGR from S_PKA
+veto:S_PGR	X_ADHESION_ROUTE_REDUNDANT	yes	S_PKA	separates S_PGR from S_PKA
+veto:S_PGR	OUT_EPITHELIAL_RECEPTIVE	yes	S_PKA	separates S_PGR from S_PKA
+veto:S_PKA	E_ESTROGENIC_PROLIFERATION	no	S_PGR	separates S_PKA from S_PGR only as a negative result: this readout does not move under S_PKA, so the discrimination is carried by the rival arms
+veto:S_PKA	E_RECEPTIVE_SURFACE	no	S_PGR	separates S_PKA from S_PGR only as a negative result: this readout does not move under S_PKA, so the discrimination is carried by the rival arms
+veto:S_PKA	S_PGR	no	S_PGR	separates S_PKA from S_PGR only as a negative result: this readout does not move under S_PKA, so the discrimination is carried by the rival arms
+veto:S_PKA	S_PKA	yes	S_PGR	separates S_PKA from S_PGR
+veto:S_PKA	S_NR2F2	no	S_PGR	separates S_PKA from S_PGR only as a negative result: this readout does not move under S_PKA, so the discrimination is carried by the rival arms
+veto:S_PKA	S_BMP2	no	S_PGR	separates S_PKA from S_PGR only as a negative result: this readout does not move under S_PKA, so the discrimination is carried by the rival arms
+veto:S_PKA	S_HAND2	no	S_PGR	separates S_PKA from S_PGR only as a negative result: this readout does not move under S_PKA, so the discrimination is carried by the rival arms
+veto:S_PKA	S_FGF_MITOGENIC	no	S_PGR	separates S_PKA from S_PGR only as a negative result: this readout does not move under S_PKA, so the discrimination is carried by the rival arms
+veto:S_PKA	X_ADHESION_ROUTE_SPP1	no	S_PGR	separates S_PKA from S_PGR only as a negative result: this readout does not move under S_PKA, so the discrimination is carried by the rival arms
+veto:S_PKA	X_ADHESION_ROUTE_REDUNDANT	no	S_PGR	separates S_PKA from S_PGR only as a negative result: this readout does not move under S_PKA, so the discrimination is carried by the rival arms
+veto:S_PKA	OUT_EPITHELIAL_RECEPTIVE	no	S_PGR	separates S_PKA from S_PGR only as a negative result: this readout does not move under S_PKA, so the discrimination is carried by the rival arms
+veto:S_SPP1	E_IHH	no	E_IHH	separates S_SPP1 from E_IHH only as a negative result: this readout does not move under S_SPP1, so the discrimination is carried by the rival arms
+veto:S_SPP1	E_PODXL	no	E_PODXL	separates S_SPP1 from E_PODXL only as a negative result: this readout does not move under S_SPP1, so the discrimination is carried by the rival arms
+veto:S_SPP1	E_HBEGF	no	E_HBEGF	separates S_SPP1 from E_HBEGF only as a negative result: this readout does not move under S_SPP1, so the discrimination is carried by the rival arms
+veto:S_SPP1	E_SPP1_EXPR	no	E_SPP1_EXPR	separates S_SPP1 from E_SPP1_EXPR only as a negative result: this readout does not move under S_SPP1, so the discrimination is carried by the rival arms
+veto:S_SPP1	E_CD98_CD9	no	E_CD98_CD9	separates S_SPP1 from E_CD98_CD9 only as a negative result: this readout does not move under S_SPP1, so the discrimination is carried by the rival arms
+veto:S_SPP1	E_ANXA2_ACTIN	no	E_ANXA2_ACTIN	separates S_SPP1 from E_ANXA2_ACTIN only as a negative result: this readout does not move under S_SPP1, so the discrimination is carried by the rival arms
+veto:S_SPP1	E_CDH1_APICAL	no	E_CDH1_APICAL	separates S_SPP1 from E_CDH1_APICAL only as a negative result: this readout does not move under S_SPP1, so the discrimination is carried by the rival arms
+veto:S_SPP1	S_NR2F2	no	E_IHH;S_NR2F2	separates S_SPP1 from E_IHH, S_NR2F2 only as a negative result: this readout does not move under S_SPP1, so the discrimination is carried by the rival arms
+veto:S_SPP1	S_SPP1	yes	E_ANXA2_ACTIN;E_CD98_CD9;E_CDH1_APICAL;E_HBEGF;E_IHH;E_PODXL;E_SPP1_EXPR;S_NR2F2	separates S_SPP1 from E_ANXA2_ACTIN, E_CD98_CD9, E_CDH1_APICAL, E_HBEGF, E_IHH, E_PODXL, E_SPP1_EXPR, S_NR2F2
+veto:S_TAZ_ECM	E_LIF	no	E_LIF	separates S_TAZ_ECM from E_LIF only as a negative result: this readout does not move under S_TAZ_ECM, so the discrimination is carried by the rival arms
+veto:S_TAZ_ECM	E_GP130_STAT3	no	E_GP130_STAT3;E_LIF	separates S_TAZ_ECM from E_GP130_STAT3, E_LIF only as a negative result: this readout does not move under S_TAZ_ECM, so the discrimination is carried by the rival arms
+veto:S_TAZ_ECM	E_ESTROGENIC_PROLIFERATION	no	S_HAND2	separates S_TAZ_ECM from S_HAND2 only as a negative result: this readout does not move under S_TAZ_ECM, so the discrimination is carried by the rival arms
+veto:S_TAZ_ECM	E_PC6	no	E_PC6	separates S_TAZ_ECM from E_PC6 only as a negative result: this readout does not move under S_TAZ_ECM, so the discrimination is carried by the rival arms
+veto:S_TAZ_ECM	E_DAG1_FULL	no	E_PC6	separates S_TAZ_ECM from E_PC6 only as a negative result: this readout does not move under S_TAZ_ECM, so the discrimination is carried by the rival arms
+veto:S_TAZ_ECM	E_DAG1_CLEAVED	no	E_PC6	separates S_TAZ_ECM from E_PC6 only as a negative result: this readout does not move under S_TAZ_ECM, so the discrimination is carried by the rival arms
+veto:S_TAZ_ECM	E_CD98_CD9	no	E_GP130_STAT3;E_LIF	separates S_TAZ_ECM from E_GP130_STAT3, E_LIF only as a negative result: this readout does not move under S_TAZ_ECM, so the discrimination is carried by the rival arms
+veto:S_TAZ_ECM	E_RECEPTIVE_SURFACE	no	E_GP130_STAT3;E_LIF;E_PC6;S_HAND2	separates S_TAZ_ECM from E_GP130_STAT3, E_LIF, E_PC6, S_HAND2 only as a negative result: this readout does not move under S_TAZ_ECM, so the discrimination is carried by the rival arms
+veto:S_TAZ_ECM	S_HAND2	no	S_HAND2	separates S_TAZ_ECM from S_HAND2 only as a negative result: this readout does not move under S_TAZ_ECM, so the discrimination is carried by the rival arms
+veto:S_TAZ_ECM	S_FGF_MITOGENIC	no	S_HAND2	separates S_TAZ_ECM from S_HAND2 only as a negative result: this readout does not move under S_TAZ_ECM, so the discrimination is carried by the rival arms
+veto:S_TAZ_ECM	S_TAZ_ECM	yes	E_GP130_STAT3;E_LIF;E_PC6;S_HAND2	separates S_TAZ_ECM from E_GP130_STAT3, E_LIF, E_PC6, S_HAND2
+veto:S_TAZ_ECM	X_MECHANICAL_PERMISSIVE_ECM	yes	E_GP130_STAT3;E_LIF;E_PC6;S_HAND2	separates S_TAZ_ECM from E_GP130_STAT3, E_LIF, E_PC6, S_HAND2
+veto:S_TAZ_ECM	X_ADHESION_ROUTE_SPP1	no	E_GP130_STAT3;E_LIF;E_PC6;S_HAND2	separates S_TAZ_ECM from E_GP130_STAT3, E_LIF, E_PC6, S_HAND2 only as a negative result: this readout does not move under S_TAZ_ECM, so the discrimination is carried by the rival arms
+veto:S_TAZ_ECM	X_ADHESION_ROUTE_REDUNDANT	no	E_GP130_STAT3;E_LIF;E_PC6;S_HAND2	separates S_TAZ_ECM from E_GP130_STAT3, E_LIF, E_PC6, S_HAND2 only as a negative result: this readout does not move under S_TAZ_ECM, so the discrimination is carried by the rival arms
+veto:S_TAZ_ECM	X_ANTIADHESIVE_ROUTE	no	E_PC6	separates S_TAZ_ECM from E_PC6 only as a negative result: this readout does not move under S_TAZ_ECM, so the discrimination is carried by the rival arms
+veto:S_TAZ_ECM	OUT_EPITHELIAL_RECEPTIVE	no	E_GP130_STAT3;E_LIF;E_PC6;S_HAND2	separates S_TAZ_ECM from E_GP130_STAT3, E_LIF, E_PC6, S_HAND2 only as a negative result: this readout does not move under S_TAZ_ECM, so the discrimination is carried by the rival arms
+veto:X_SPP1_LUMEN_FREE	E_ITGAVB3_5	no	E_ITGAVB3_5	separates X_SPP1_LUMEN_FREE from E_ITGAVB3_5 only as a negative result: this readout does not move under X_SPP1_LUMEN_FREE, so the discrimination is carried by the rival arms
+veto:X_SPP1_LUMEN_FREE	X_SPP1_LUMEN_FREE	yes	E_ITGAVB3_5	separates X_SPP1_LUMEN_FREE from E_ITGAVB3_5

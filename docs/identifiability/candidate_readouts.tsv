@@ -1,0 +1,57 @@
+node_id	label	assayable	why_not_assayable	observation_classes_if_added_now	marginal_gain_now	observation_classes_with_proposed_arms	marginal_gain_with_proposed_arms	shares_design_state_with_a_measured_node
+X_ANTIADHESIVE_ROUTE	Anti-adhesive interface route	false	modelling placeholder or protocol schedule; no assay target	4	2	10	8	false
+X_INTERFACE_ANTIADHESIVE_RELAY	Anti-adhesive route relay	false	modelling placeholder or protocol schedule; no assay target	4	2	10	8	false
+X_INTERFACE_SPP1_RELAY	SPP1-linked interface relay	false	modelling placeholder or protocol schedule; no assay target	4	2	8	6	false
+X_ADHESION_ROUTE_SPP1	SPP1-linked adhesion route	false	modelling placeholder or protocol schedule; no assay target	3	1	7	5	false
+X_INTERFACE_REDUNDANT_RELAY	Redundant positive route relay	false	modelling placeholder or protocol schedule; no assay target	4	2	6	4	false
+X_MECHANICAL_STRESS_RELAY	Mechanical stress sensitivity relay	false	modelling placeholder or protocol schedule; no assay target	4	2	6	4	false
+E_CD98_CD9	Epithelial CD98 or CD9 route	true		3	1	6	4	false
+E_GP130_STAT3	Epithelial LIFR or GP130 to STAT3 state	true		3	1	6	4	false
+E_KLF12_HIGH	High epithelial KLF12	true		3	1	6	4	false
+E_LIF	Epithelial or glandular LIF	true		3	1	6	4	false
+E_RECEPTIVE_SURFACE	Composite receptive adhesive surface	true		3	1	6	4	false
+OUT_EPITHELIAL_RECEPTIVE	Epithelial receptivity phenotype	true		3	1	6	4	false
+X_MECHANICAL_PERMISSIVE_ECM	Mechanical permissiveness of decidual ECM	true		2	0	6	4	true
+X_ADHESION_ROUTE_REDUNDANT	Redundant positive adhesion route	false	modelling placeholder or protocol schedule; no assay target	3	1	5	3	false
+E_ANXA2_ACTIN	ANXA2-RHOA-actin remodeling	true		2	0	5	3	true
+E_CDH1_APICAL	Apical CDH1 or CTNND1 state	true		2	0	5	3	false
+E_DAG1_CLEAVED	PC6-cleaved DAG1 state	true		2	0	5	3	true
+E_DAG1_FULL	Full-length DAG1 barrier	true		2	0	5	3	false
+E_ESTROGENIC_PROLIFERATION	Epithelial estrogenic proliferation	true		2	0	5	3	false
+E_HBEGF	Epithelial HB-EGF	true		2	0	5	3	true
+E_IHH	Epithelial IHH	true		2	0	5	3	true
+E_ITGAVB3_5	Epithelial integrin state	true		2	0	5	3	true
+E_MUC1_BARRIER	Nonpermissive MUC1 state	true		2	0	5	3	false
+E_MUC1_SLEX	Glyco-permissive MUC1 state	true		2	0	5	3	true
+E_PC6	Epithelial PCSK5 or PC6	true		2	0	5	3	true
+E_PGR	Epithelial PGR activity	true		2	0	5	3	true
+E_PODXL	Epithelial PODXL barrier	true		2	0	5	3	false
+E_SECRETORY_STATE	Compact epithelial secretory state	true		2	0	5	3	true
+E_SPP1_EXPR	Epithelial SPP1	true		2	0	5	3	true
+IN_ANTI_SPP1	Anti-SPP1 input	false	modelling placeholder or protocol schedule; no assay target	2	0	5	3	false
+IN_E2	Estradiol input	false	modelling placeholder or protocol schedule; no assay target	2	0	5	3	false
+IN_EMBRYO_CONDITIONED_SIGNAL	Embryo-conditioned signal	true		2	0	5	3	false
+IN_EMBRYO_CONTACT	Embryo contact input	true		2	0	5	3	false
+IN_EMBRYO_PRESENT	Embryo present	false	modelling placeholder or protocol schedule; no assay target	2	0	5	3	false
+IN_ER_STRESS_EXCESS	Excess ER stress input	true		2	0	5	3	false
+IN_HAND2_LOSS	Stromal HAND2 loss-of-function input	false	modelling placeholder or protocol schedule; no assay target	2	0	5	3	false
+IN_HCG	Embryo-derived hCG input	true		2	0	5	3	false
+IN_HIGH_ECM_STIFFNESS	High ECM stiffness input	true		2	0	5	3	false
+IN_MIFEPRISTONE	Mifepristone input	false	modelling placeholder or protocol schedule; no assay target	2	0	5	3	false
+IN_PROGESTIN	Progestin input	false	modelling placeholder or protocol schedule; no assay target	2	0	5	3	false
+IN_TROPHECTODERM_COMPETENT	Embryo competence	true		2	0	5	3	false
+IN_XAV939	XAV939 input	false	modelling placeholder or protocol schedule; no assay target	2	0	5	3	false
+IN_cAMP	cAMP input	false	modelling placeholder or protocol schedule; no assay target	2	0	5	3	false
+OUT_MATERNAL_ADHESION_COMPETENCE	Maternal adhesion competence phenotype	false	modelling placeholder or protocol schedule; no assay target	2	0	5	3	false
+OUT_STROMAL_DECIDUALIZED	Stromal decidual phenotype	true		2	0	5	3	true
+S_BMP2	Stromal BMP2	true		2	0	5	3	true
+S_DECIDUALIZED	Compact stromal decidual state	true		2	0	5	3	true
+S_FGF_MITOGENIC	Stromal mitogenic FGF output	true		2	0	5	3	false
+S_HAND2	Stromal HAND2	true		2	0	5	3	true
+S_NR2F2	Stromal NR2F2 or COUP-TFII	true		2	0	5	3	true
+S_PGR	Stromal PGR activity	true		2	0	5	3	true
+S_PKA	Stromal cAMP or PKA state	true		2	0	5	3	false
+S_PRL	Stromal PRL output	true		2	0	5	3	true
+S_SPP1	Stromal SPP1	true		2	0	5	3	true
+S_TAZ_ECM	Stromal TAZ or WWTR1 ECM-remodeling state	true		2	0	5	3	true
+X_SPP1_LUMEN_FREE	Free maternal SPP1 pool	true		2	0	5	3	true

@@ -1,0 +1,7 @@
+arm_id	condition_cfg	inputs_on	measured_nodes	observation_sources
+adhesion_challenge_basal	models/superset/adoc-literature-superset-v0.4.0/conditions/adhesion_challenge_basal.cfg	IN_EMBRYO_CONTACT;IN_EMBRYO_PRESENT;IN_TROPHECTODERM_COMPETENT	OUT_STABLE_ADHESION	config/calibration.yaml adhesion_objective
+adhesion_challenge_hormone_treated	models/superset/adoc-literature-superset-v0.4.0/conditions/adhesion_challenge_hormone_treated.cfg	IN_E2;IN_EMBRYO_CONTACT;IN_EMBRYO_PRESENT;IN_PROGESTIN;IN_TROPHECTODERM_COMPETENT;IN_XAV939;IN_cAMP	OUT_STABLE_ADHESION	config/calibration.yaml adhesion_objective
+adhesion_challenge_hormone_treated_mifepristone	models/superset/adoc-literature-superset-v0.4.0/conditions/adhesion_challenge_hormone_treated_mifepristone.cfg	IN_E2;IN_EMBRYO_CONTACT;IN_EMBRYO_PRESENT;IN_MIFEPRISTONE;IN_PROGESTIN;IN_TROPHECTODERM_COMPETENT;IN_XAV939;IN_cAMP	OUT_STABLE_ADHESION	config/calibration.yaml adhesion_objective
+basal_maternal	models/superset/adoc-literature-superset-v0.4.0/conditions/basal_maternal.cfg	(none)	S_IGFBP1	config/observation_model_map.tsv OM-002
+e2_primed_maternal	models/superset/adoc-literature-superset-v0.4.0/conditions/e2_primed_maternal.cfg	IN_E2	E_PAEP	config/observation_model_map.tsv OM-001
+hormone_treated_maternal	models/superset/adoc-literature-superset-v0.4.0/conditions/hormone_treated_maternal.cfg	IN_E2;IN_PROGESTIN;IN_XAV939;IN_cAMP	E_PAEP;S_IGFBP1	config/observation_model_map.tsv OM-001;config/observation_model_map.tsv OM-002

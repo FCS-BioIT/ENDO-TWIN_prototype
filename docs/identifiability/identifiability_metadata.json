@@ -1,0 +1,101 @@
+{
+  "model_version": "adoc-literature-superset-v0.4.0",
+  "summary": {
+    "model_version": "adoc-literature-superset-v0.4.0",
+    "named_nodes": 59,
+    "global_effective_states": 35,
+    "design_effective_states": 19,
+    "states_lost_to_rule_encoding": 24,
+    "states_lost_to_design_bundling": 16,
+    "run_arms": 6,
+    "declared_inputs": 14,
+    "unit_assumption": "MATCHED-UNIT (hypothetical). Every fibre, observation class, information status and proposed-panel count assumes one biological unit carries a single latent assignment through every arm and assay. The current data do not provide that: adhesion is an aggregate per-embryo count, the secretion mappings are explicitly unpaired, and the unit mapping is not recoverable. These counts therefore describe what a matched-unit design of this shape could identify, and are NOT claims about what the current data identify.",
+    "independently_perturbed_inputs": 1,
+    "set_alone_no_shared_readout_inputs": 1,
+    "bundled_perturbed_inputs": 6,
+    "never_perturbed_inputs": 6,
+    "latent_variables": 5,
+    "latent_assignments": 32,
+    "observation_classes": 2,
+    "measured_nodes": 3,
+    "assayable_nodes": 43,
+    "phenotype_inert_nodes": 14,
+    "unread_inputs": 3,
+    "status_design_aliased_to_measured": 21,
+    "status_directly_measured": 3,
+    "status_indirectly_constrained": 1,
+    "status_latent_unresolved": 13,
+    "status_model_asserted_untested": 21
+  },
+  "adhesion_endpoint": {
+    "arm": "adhesion_challenge_hormone_treated",
+    "pinned_latent": {
+      "E_KLF12_HIGH": false
+    },
+    "carrier_relays": [
+      "X_INTERFACE_SPP1_RELAY",
+      "X_INTERFACE_REDUNDANT_RELAY"
+    ],
+    "carrier_priors": {
+      "X_INTERFACE_SPP1_RELAY": 0.7,
+      "X_INTERFACE_REDUNDANT_RELAY": 0.4
+    },
+    "endpoint_equals_disjunction_of_carriers": true,
+    "analytic_value": 0.82,
+    "baseline_cfg": "models/superset/adoc-literature-superset-v0.4.0/baseline.cfg"
+  },
+  "ceilings": {
+    "design_states_now": 19,
+    "design_states_with_proposed_arms": 34,
+    "design_states_ceiling": 35,
+    "observation_classes_now": 2,
+    "observation_classes_assayable_ceiling": 8,
+    "observation_classes_ceiling": 32
+  },
+  "figures": [
+    {
+      "path": "docs/assets/adoc_identifiability_adoc-literature-superset-v0.4.0.svg",
+      "sha256": "bc4bce1f87d5d23018bfd2964d65e38912a74c2d820df21635e6dfd8ac4cef83"
+    },
+    {
+      "path": "docs/assets/adoc_identifiability_adoc-literature-superset-v0.4.0.pdf",
+      "sha256": "ce41db4029116a439663c4580165c6f9cd385a2c0a263482c5cc5d72ed717bea"
+    },
+    {
+      "path": "docs/assets/adoc_identifiability_adoc-literature-superset-v0.4.0.png",
+      "sha256": "5d6f3ec378a8c8bb328949f1c7ed07e7d0f8d6f5f3db2af2dcfb642cf6372ed7"
+    }
+  ],
+  "tables": [
+    {
+      "path": "docs/identifiability/node_classification.tsv",
+      "sha256": "f4755a9a9dd883d67b2170cf64418289639ee3bd249a760136a2c15940e7e0be",
+      "rows": "59"
+    },
+    {
+      "path": "docs/identifiability/design_arms.tsv",
+      "sha256": "de45ded3d45c34a37b8f135dfae1037766868bb7a199e20302cede29a8a0e725",
+      "rows": "6"
+    },
+    {
+      "path": "docs/identifiability/candidate_arms.tsv",
+      "sha256": "a40e42c338d90a20b5cd7821ae67d61ab5b893a9f2f1c403e6379484a39e3572",
+      "rows": "24"
+    },
+    {
+      "path": "docs/identifiability/candidate_readouts.tsv",
+      "sha256": "288897ab22583c2927cc02844cb8cb2a369d0c7109689047d534b9daed903c54",
+      "rows": "56"
+    },
+    {
+      "path": "docs/identifiability/proposed_panel.tsv",
+      "sha256": "dd9fc690a095b4e78a325e737082e563b131db6296f0e1c843e0384dcbf4e4eb",
+      "rows": "11"
+    },
+    {
+      "path": "docs/identifiability/observation_classes.tsv",
+      "sha256": "219fa9244bb3a2e702835c4fa54d6744f674f1cbfd8489adecb4d2d669ee42ca",
+      "rows": "2"
+    }
+  ]
+}

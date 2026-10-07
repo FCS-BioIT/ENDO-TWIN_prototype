@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0",
+  "artifact": "adoc_structural_topology",
+  "claim_boundary": "Structural topology of an executable Boolean network. Shows no probability, no time course, no transition rate, no initial condition and no evidence grade. Horizon-independent and seed-independent: it cannot be invalidated by the unresolved endpoint-readout policy.",
+  "model_version": "adoc-literature-superset-v0.4.0",
+  "inputs": {
+    "network_bnd": {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/network.bnd",
+      "sha256": "09e3b26aeb4e2f3b0339ef852764f5de4b922984df0b0a1014c91b4a17a36637",
+      "size_bytes": 4389
+    },
+    "node_dictionary": {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/node_dictionary.tsv",
+      "sha256": "a566d2abba87f8b019857a33b34a03d63ba5310aeb285f59412aaf91de516828",
+      "size_bytes": 19350
+    },
+    "visualization_config": {
+      "path": "config/visualization.yaml",
+      "sha256": "8c1dcb6d6a7e0a4bba27aed956851f10d6f9f0d3cac98c9ade1f90de3ee63beb",
+      "size_bytes": 11681
+    },
+    "observation_model_map": {
+      "path": "config/observation_model_map.tsv",
+      "sha256": "559ab28cd89bee7c62881f2c7ce1b47a340fe2dc836b149aeb845718bb605033",
+      "size_bytes": 35856
+    }
+  },
+  "summary": {
+    "model_version": "adoc-literature-superset-v0.4.0",
+    "nodes": 59,
+    "dependencies": 97,
+    "free_variables": 19,
+    "derived_nodes": 40,
+    "max_depth": 11,
+    "distinct_functions": 35,
+    "phenotype_inert_nodes": 14,
+    "unread_inputs": 3,
+    "alias_classes": 8,
+    "absorbed_dependencies": 15,
+    "never_binding_inhibitions": 4,
+    "measured_nodes": 2,
+    "enumerated_states": 524288
+  },
+  "phenotype_inert_nodes": [
+    "IN_XAV939",
+    "IN_HCG",
+    "IN_EMBRYO_CONDITIONED_SIGNAL",
+    "E_IHH",
+    "E_DAG1_CLEAVED",
+    "E_MUC1_SLEX",
+    "E_HBEGF",
+    "E_SPP1_EXPR",
+    "E_CD98_CD9",
+    "E_ANXA2_ACTIN",
+    "E_CDH1_APICAL",
+    "S_NR2F2",
+    "S_SPP1",
+    "X_INTERFACE_ANTIADHESIVE_RELAY"
+  ],
+  "unread_inputs": [
+    "IN_XAV939",
+    "IN_HCG",
+    "IN_EMBRYO_CONDITIONED_SIGNAL"
+  ],
+  "measured_nodes": [
+    "E_PAEP",
+    "S_IGFBP1"
+  ],
+  "alias_classes": [
+    [
+      "IN_cAMP",
+      "S_PKA"
+    ],
+    [
+      "E_CDH1_APICAL",
+      "IN_EMBRYO_CONTACT"
+    ],
+    [
+      "E_IHH",
+      "E_PGR",
+      "S_BMP2",
+      "S_NR2F2",
+      "S_PGR"
+    ],
+    [
+      "E_ANXA2_ACTIN",
+      "E_DAG1_CLEAVED",
+      "E_HBEGF",
+      "E_ITGAVB3_5",
+      "E_MUC1_SLEX",
+      "E_PAEP",
+      "E_PC6",
+      "E_SECRETORY_STATE",
+      "E_SPP1_EXPR"
+    ],
+    [
+      "E_CD98_CD9",
+      "E_GP130_STAT3",
+      "E_LIF"
+    ],
+    [
+      "E_DAG1_FULL",
+      "E_MUC1_BARRIER",
+      "E_PODXL"
+    ],
+    [
+      "E_RECEPTIVE_SURFACE",
+      "OUT_EPITHELIAL_RECEPTIVE"
+    ],
+    [
+      "OUT_STROMAL_DECIDUALIZED",
+      "S_DECIDUALIZED",
+      "S_IGFBP1",
+      "S_PRL",
+      "S_SPP1",
+      "S_TAZ_ECM"
+    ]
+  ],
+  "never_binding_inhibitions": [
+    [
+      "E_DAG1_FULL",
+      "E_RECEPTIVE_SURFACE"
+    ],
+    [
+      "E_MUC1_BARRIER",
+      "E_RECEPTIVE_SURFACE"
+    ],
+    [
+      "E_PODXL",
+      "E_RECEPTIVE_SURFACE"
+    ],
+    [
+      "X_ANTIADHESIVE_ROUTE",
+      "OUT_MATERNAL_ADHESION_COMPETENCE"
+    ]
+  ],
+  "figure": {
+    "path": "docs/assets/adoc_superset_structure_v0.4.0.png",
+    "sha256": "644085ed4602d92ae173e0e92f315beea869203d0dde344fb576cba2b81bac6e",
+    "deterministic": true
+  }
+}

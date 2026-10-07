@@ -1,0 +1,297 @@
+{
+  "schema_version": "1.0",
+  "artifact": "adoc_superset_pathway_dynamics_v0.3.0",
+  "source_commit": "3a9875f-dirty",
+  "horizon_class": "converged",
+  "phase_horizon": 25.0,
+  "declared_phase_durations": {
+    "Basal maternal state": 1.0,
+    "E2 priming": 2.0,
+    "Hormone conditioning": 4.0,
+    "Embryo adhesion challenge": 1.0
+  },
+  "claim_boundary": "Visualises MaBoSS state probabilities through a sequential ADOC protocol. Not molecular concentrations, single-cell trajectories, spatial organisation, pathway flux, causal edge strength, PhysiBoSS output, clinical implantation probability, or validated drug efficacy. Every horizon is a dimensionless MaBoSS relative-time parameter, never a day or hour count; a converged-horizon render reads each phase at its logical fixed point, at which most nodes saturate to 0 or 1 and the remaining graded values are hand-set relay probabilities. See docs/endpoint_convergence_finding.md.",
+  "value_semantics": "P(node = ON) across simulated MaBoSS trajectories",
+  "time_semantics": "MaBoSS relative time; no validated mapping to hours",
+  "model": {
+    "model_id": "adoc_literature_superset_v030",
+    "model_version": "adoc-literature-superset-v0.3.0",
+    "network_bnd": {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/network.bnd",
+      "sha256": "ecb6b7d3de295a6c8778ffa4f6b4cb8b87bcf6da9f9b200a24e601090f7f9456",
+      "size_bytes": 4316
+    },
+    "node_dictionary": {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/node_dictionary.tsv",
+      "sha256": "14deb16c90088a0e5eac161d3495012ae72bf8f155d0b883136fd3da90c8b067",
+      "size_bytes": 18443
+    },
+    "edge_evidence": {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/edge_evidence.tsv",
+      "sha256": "e6d4a1d563ffc85bf32618a092d197bac43172d577b0d7aca02c0cf180a062b3",
+      "size_bytes": 13307
+    },
+    "phenotype_contract": {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/phenotype_contract.tsv",
+      "sha256": "4df11861ae82612876dd28d4269a5d06f39a941b29d029d4bb8fe72e63dd22d5",
+      "size_bytes": 1151
+    }
+  },
+  "protocol": {
+    "terminal_protocol": "adhesion_challenge_hormone_treated",
+    "sequence": [
+      "basal_maternal",
+      "e2_primed_maternal",
+      "hormone_treated_maternal",
+      "adhesion_challenge_hormone_treated"
+    ],
+    "definition": {
+      "path": "config/protocols.yaml",
+      "sha256": "e5ca56b2aef17f08cc9f06f85aa7795f635f09b7286ed74be5c71ed9ea45029d",
+      "size_bytes": 30481
+    },
+    "phases": [
+      {
+        "phase_index": 0,
+        "protocol_id": "basal_maternal",
+        "step_id": "basal_maternal",
+        "label": "Basal maternal state",
+        "phase_start": 0.0,
+        "phase_end": 25.0,
+        "continuation_from": null,
+        "continuation_applied": false,
+        "input_states": {
+          "IN_E2": false,
+          "IN_PROGESTIN": false,
+          "IN_cAMP": false,
+          "IN_XAV939": false,
+          "IN_MIFEPRISTONE": false,
+          "IN_ANTI_SPP1": false,
+          "IN_EMBRYO_PRESENT": false,
+          "IN_TROPHECTODERM_COMPETENT": false,
+          "IN_EMBRYO_CONTACT": false,
+          "IN_HCG": false,
+          "IN_EMBRYO_CONDITIONED_SIGNAL": false,
+          "IN_ER_STRESS_EXCESS": false,
+          "IN_HIGH_ECM_STIFFNESS": false
+        }
+      },
+      {
+        "phase_index": 1,
+        "protocol_id": "e2_primed_maternal",
+        "step_id": "e2_primed_maternal",
+        "label": "E2 priming",
+        "phase_start": 25.0,
+        "phase_end": 50.0,
+        "continuation_from": "basal_maternal",
+        "continuation_applied": true,
+        "input_states": {
+          "IN_E2": true,
+          "IN_PROGESTIN": false,
+          "IN_cAMP": false,
+          "IN_XAV939": false,
+          "IN_MIFEPRISTONE": false,
+          "IN_ANTI_SPP1": false,
+          "IN_EMBRYO_PRESENT": false,
+          "IN_TROPHECTODERM_COMPETENT": false,
+          "IN_EMBRYO_CONTACT": false,
+          "IN_HCG": false,
+          "IN_EMBRYO_CONDITIONED_SIGNAL": false,
+          "IN_ER_STRESS_EXCESS": false,
+          "IN_HIGH_ECM_STIFFNESS": false
+        }
+      },
+      {
+        "phase_index": 2,
+        "protocol_id": "hormone_treated_maternal",
+        "step_id": "hormone_treated_maternal",
+        "label": "Hormone conditioning",
+        "phase_start": 50.0,
+        "phase_end": 75.0,
+        "continuation_from": "e2_primed_maternal",
+        "continuation_applied": true,
+        "input_states": {
+          "IN_E2": true,
+          "IN_PROGESTIN": true,
+          "IN_cAMP": true,
+          "IN_XAV939": true,
+          "IN_MIFEPRISTONE": false,
+          "IN_ANTI_SPP1": false,
+          "IN_EMBRYO_PRESENT": false,
+          "IN_TROPHECTODERM_COMPETENT": false,
+          "IN_EMBRYO_CONTACT": false,
+          "IN_HCG": false,
+          "IN_EMBRYO_CONDITIONED_SIGNAL": false,
+          "IN_ER_STRESS_EXCESS": false,
+          "IN_HIGH_ECM_STIFFNESS": false
+        }
+      },
+      {
+        "phase_index": 3,
+        "protocol_id": "adhesion_challenge_hormone_treated",
+        "step_id": "adhesion_challenge_hormone_treated",
+        "label": "Embryo adhesion challenge",
+        "phase_start": 75.0,
+        "phase_end": 100.0,
+        "continuation_from": "hormone_treated_maternal",
+        "continuation_applied": true,
+        "input_states": {
+          "IN_E2": true,
+          "IN_PROGESTIN": true,
+          "IN_cAMP": true,
+          "IN_XAV939": true,
+          "IN_MIFEPRISTONE": false,
+          "IN_ANTI_SPP1": false,
+          "IN_EMBRYO_PRESENT": true,
+          "IN_TROPHECTODERM_COMPETENT": true,
+          "IN_EMBRYO_CONTACT": true,
+          "IN_HCG": false,
+          "IN_EMBRYO_CONDITIONED_SIGNAL": false,
+          "IN_ER_STRESS_EXCESS": false,
+          "IN_HIGH_ECM_STIFFNESS": false
+        }
+      }
+    ]
+  },
+  "simulation": {
+    "seed": 1,
+    "trajectory_count": 20000,
+    "engine_backend": "cmaboss",
+    "timeline_rows": 1000
+  },
+  "visualization": {
+    "view": "full",
+    "node_count": 58,
+    "edge_count": 96,
+    "panels": [
+      "inputs",
+      "secreted_analytes",
+      "epithelial_model_states",
+      "stromal_model_states",
+      "phenotypes"
+    ],
+    "config": {
+      "path": "config/visualization.yaml",
+      "sha256": "8c1dcb6d6a7e0a4bba27aed956851f10d6f9f0d3cac98c9ade1f90de3ee63beb",
+      "size_bytes": 11681
+    }
+  },
+  "readme_animation": {
+    "frame_count": 68,
+    "frame_duration_ms": 260,
+    "frame_stride": 15,
+    "frame_row_indices": [
+      0,
+      15,
+      30,
+      45,
+      60,
+      75,
+      90,
+      105,
+      120,
+      135,
+      150,
+      165,
+      180,
+      195,
+      210,
+      225,
+      240,
+      255,
+      270,
+      285,
+      300,
+      315,
+      330,
+      345,
+      360,
+      375,
+      390,
+      405,
+      420,
+      435,
+      450,
+      465,
+      480,
+      495,
+      510,
+      525,
+      540,
+      555,
+      570,
+      585,
+      600,
+      615,
+      630,
+      645,
+      660,
+      675,
+      690,
+      705,
+      720,
+      735,
+      750,
+      765,
+      780,
+      795,
+      810,
+      825,
+      840,
+      855,
+      870,
+      885,
+      900,
+      915,
+      930,
+      945,
+      960,
+      975,
+      990,
+      999
+    ],
+    "preview_row_index": 675,
+    "image_width": 1900,
+    "image_height": 1123,
+    "gif_bytes": 1778056
+  },
+  "full_resolution_animation": null,
+  "trajectory_sources": [
+    {
+      "path": "output/visualization/adoc-literature-superset-v0.3.0/readme-superset/raw/basal_maternal__basal_maternal_nodes_probtraj.tsv",
+      "sha256": "a332aae0f815f2c5fef9ecb99550c974e6d8f24bb8344beac62fe6c530891367",
+      "size_bytes": 113086,
+      "kind": "raw_nodes_probtraj",
+      "protocol_id": "basal_maternal",
+      "step_id": "basal_maternal",
+      "phase_index": 0
+    },
+    {
+      "path": "output/visualization/adoc-literature-superset-v0.3.0/readme-superset/raw/e2_primed_maternal__e2_primed_maternal_nodes_probtraj.tsv",
+      "sha256": "49df7eb5aa730b85b658db2417abde86a54978479f588e85e02513cc8acfee90",
+      "size_bytes": 116249,
+      "kind": "raw_nodes_probtraj",
+      "protocol_id": "e2_primed_maternal",
+      "step_id": "e2_primed_maternal",
+      "phase_index": 1
+    },
+    {
+      "path": "output/visualization/adoc-literature-superset-v0.3.0/readme-superset/raw/hormone_treated_maternal__hormone_treated_maternal_nodes_probtraj.tsv",
+      "sha256": "fe0399158c27ab5c49a4846a56b07ba2c293dad3c0a200a57c2e9eb7c0b4113e",
+      "size_bytes": 231265,
+      "kind": "raw_nodes_probtraj",
+      "protocol_id": "hormone_treated_maternal",
+      "step_id": "hormone_treated_maternal",
+      "phase_index": 2
+    },
+    {
+      "path": "output/visualization/adoc-literature-superset-v0.3.0/readme-superset/raw/adhesion_challenge_hormone_treated__adhesion_challenge_hormone_treated_nodes_probtraj.tsv",
+      "sha256": "1e496dcbda215c47f6bf06f8b41de44ade0e972832bc011058b84f2d139fff66",
+      "size_bytes": 246893,
+      "kind": "raw_nodes_probtraj",
+      "protocol_id": "adhesion_challenge_hormone_treated",
+      "step_id": "adhesion_challenge_hormone_treated",
+      "phase_index": 3
+    }
+  ]
+}

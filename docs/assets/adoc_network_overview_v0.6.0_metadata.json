@@ -1,0 +1,254 @@
+{
+  "schema_version": "1.0",
+  "artifact": "adoc_network_overview",
+  "claim_boundary": "Structural view of an executable Boolean network. No probability, time course, transition rate, initial condition or evidence grade. Measurement tiers state what ADOC assays and which mappings are licensed, not that any node's activity is measured.",
+  "model_version": "adoc-literature-superset-v0.6.0",
+  "executable_identity": null,
+  "source_commit": "45d11d7",
+  "inputs": {
+    "network_bnd": {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/network.bnd",
+      "sha256": "64b5a3aa02394593bef5991b25005a71a27161ec75aefb6f80dbe7a1e347de27",
+      "size_bytes": 4095
+    },
+    "node_dictionary": {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv",
+      "sha256": "7019da7eed02e8e2c9860b0558552347b9687201287c9f649fbd0b8898bd4a5b",
+      "size_bytes": 17872
+    },
+    "visualization_config": {
+      "path": "config/visualization.yaml",
+      "sha256": "8c1dcb6d6a7e0a4bba27aed956851f10d6f9f0d3cac98c9ade1f90de3ee63beb",
+      "size_bytes": 11681
+    },
+    "observation_model_map": {
+      "path": "config/observation_model_map.tsv",
+      "sha256": "74f0d5d0896beba57a0a03960239ad2fc039f315fa42a2209a65e228bfa3aff5",
+      "size_bytes": 44392
+    },
+    "calibration": {
+      "path": "config/calibration.yaml",
+      "sha256": "8fd4662ae17e6a112545e086831b5d46dab46746f00157136ededf962ee27a0b",
+      "size_bytes": 7338
+    }
+  },
+  "generator_files": {
+    "src/dt_adoc/reporting/network_overview.py": "c5b30ce295af94c05ae8b1189a9440abe206d048c0e1560765c35e547f492b89",
+    "src/dt_adoc/reporting/structure.py": "1cba9b5f4df299055d20be976ce564c862b073b27a616771df709e3ce3355b99",
+    "src/dt_adoc/reporting/structure_figure.py": "901f28c4d9c0d76ae7fd34f90da813b75420925f2d351831ae08f5549cea2fc4"
+  },
+  "summary": {
+    "model_version": "adoc-literature-superset-v0.6.0",
+    "nodes": 56,
+    "dependencies": 89,
+    "free_variables": 16,
+    "derived_nodes": 40,
+    "max_depth": 11,
+    "distinct_functions": 29,
+    "phenotype_inert_nodes": 17,
+    "unread_inputs": 3,
+    "alias_classes": 7,
+    "absorbed_dependencies": 15,
+    "never_binding_inhibitions": 5,
+    "measured_nodes": 2,
+    "enumerated_states": 65536,
+    "absorbed_or_never_binding_dependencies": 20,
+    "measurement_tiers": {
+      "active_observation_mapping": [
+        "E_PAEP",
+        "S_IGFBP1"
+      ],
+      "functional_endpoint_ordinal_only": [
+        "OUT_STABLE_ADHESION"
+      ],
+      "assayed_mapping_not_activated": [
+        "S_PRL"
+      ],
+      "reported_composite_no_source_rows": [
+        "OUT_EPITHELIAL_RECEPTIVE",
+        "OUT_STROMAL_DECIDUALIZED"
+      ]
+    }
+  },
+  "alias_classes": [
+    [
+      "E_ANXA2_ACTIN",
+      "E_DAG1_CLEAVED",
+      "E_HBEGF",
+      "E_ITGAVB3_5",
+      "E_MUC1_SLEX",
+      "E_PAEP",
+      "E_PC6",
+      "E_SECRETORY_STATE",
+      "E_SPP1_EXPR"
+    ],
+    [
+      "E_CD98_CD9",
+      "E_GP130_STAT3",
+      "E_LIF",
+      "E_RECEPTIVE_SURFACE",
+      "OUT_EPITHELIAL_RECEPTIVE"
+    ],
+    [
+      "E_CDH1_APICAL",
+      "IN_EMBRYO_CONTACT"
+    ],
+    [
+      "E_DAG1_FULL",
+      "E_MUC1_BARRIER",
+      "E_PODXL"
+    ],
+    [
+      "E_IHH",
+      "E_PGR",
+      "IN_PROGESTIN",
+      "S_BMP2",
+      "S_HAND2",
+      "S_NR2F2",
+      "S_PGR"
+    ],
+    [
+      "IN_cAMP",
+      "S_PKA"
+    ],
+    [
+      "OUT_STROMAL_DECIDUALIZED",
+      "S_DECIDUALIZED",
+      "S_IGFBP1",
+      "S_PRL",
+      "S_SPP1",
+      "S_TAZ_ECM"
+    ]
+  ],
+  "phenotype_inert_nodes": [
+    "E_ANXA2_ACTIN",
+    "E_CD98_CD9",
+    "E_CDH1_APICAL",
+    "E_DAG1_CLEAVED",
+    "E_HBEGF",
+    "E_IHH",
+    "E_MUC1_SLEX",
+    "E_PAEP",
+    "E_SPP1_EXPR",
+    "IN_EMBRYO_CONDITIONED_SIGNAL",
+    "IN_HCG",
+    "IN_XAV939",
+    "S_IGFBP1",
+    "S_NR2F2",
+    "S_PRL",
+    "S_SPP1",
+    "X_INTERFACE_ANTIADHESIVE_RELAY"
+  ],
+  "unread_inputs": [
+    "IN_EMBRYO_CONDITIONED_SIGNAL",
+    "IN_HCG",
+    "IN_XAV939"
+  ],
+  "free_variables": [
+    "E_KLF12_HIGH",
+    "IN_E2",
+    "IN_EMBRYO_CONDITIONED_SIGNAL",
+    "IN_EMBRYO_CONTACT",
+    "IN_EMBRYO_PRESENT",
+    "IN_ER_STRESS_EXCESS",
+    "IN_HCG",
+    "IN_HIGH_ECM_STIFFNESS",
+    "IN_PROGESTIN",
+    "IN_TROPHECTODERM_COMPETENT",
+    "IN_XAV939",
+    "IN_cAMP",
+    "X_INTERFACE_ANTIADHESIVE_RELAY",
+    "X_INTERFACE_REDUNDANT_RELAY",
+    "X_INTERFACE_SPP1_RELAY",
+    "X_MECHANICAL_STRESS_RELAY"
+  ],
+  "absorbed_dependencies": [
+    [
+      "E_ANXA2_ACTIN",
+      "E_RECEPTIVE_SURFACE"
+    ],
+    [
+      "E_ANXA2_ACTIN",
+      "X_ADHESION_ROUTE_REDUNDANT"
+    ],
+    [
+      "E_CD98_CD9",
+      "E_RECEPTIVE_SURFACE"
+    ],
+    [
+      "E_CD98_CD9",
+      "X_ADHESION_ROUTE_REDUNDANT"
+    ],
+    [
+      "E_CDH1_APICAL",
+      "E_RECEPTIVE_SURFACE"
+    ],
+    [
+      "E_CDH1_APICAL",
+      "X_ADHESION_ROUTE_REDUNDANT"
+    ],
+    [
+      "E_DAG1_CLEAVED",
+      "E_RECEPTIVE_SURFACE"
+    ],
+    [
+      "E_DAG1_CLEAVED",
+      "X_ADHESION_ROUTE_REDUNDANT"
+    ],
+    [
+      "E_HBEGF",
+      "E_RECEPTIVE_SURFACE"
+    ],
+    [
+      "E_HBEGF",
+      "X_ADHESION_ROUTE_REDUNDANT"
+    ],
+    [
+      "E_ITGAVB3_5",
+      "E_RECEPTIVE_SURFACE"
+    ],
+    [
+      "E_MUC1_SLEX",
+      "E_RECEPTIVE_SURFACE"
+    ],
+    [
+      "E_MUC1_SLEX",
+      "X_ADHESION_ROUTE_REDUNDANT"
+    ],
+    [
+      "S_PKA",
+      "S_BMP2"
+    ],
+    [
+      "X_SPP1_LUMEN_FREE",
+      "E_RECEPTIVE_SURFACE"
+    ]
+  ],
+  "never_binding_inhibitions": [
+    [
+      "E_DAG1_FULL",
+      "E_RECEPTIVE_SURFACE"
+    ],
+    [
+      "E_ESTROGENIC_PROLIFERATION",
+      "E_RECEPTIVE_SURFACE"
+    ],
+    [
+      "E_MUC1_BARRIER",
+      "E_RECEPTIVE_SURFACE"
+    ],
+    [
+      "E_PODXL",
+      "E_RECEPTIVE_SURFACE"
+    ],
+    [
+      "X_ANTIADHESIVE_ROUTE",
+      "OUT_MATERNAL_ADHESION_COMPETENCE"
+    ]
+  ],
+  "figure": {
+    "path": "docs/assets/adoc_network_overview_v0.6.0.png",
+    "sha256": "de57364b56ff8400d88ce6a3f8e0ec9fd92569eb36daf4105f1a58ef520aafbc",
+    "deterministic": true
+  }
+}

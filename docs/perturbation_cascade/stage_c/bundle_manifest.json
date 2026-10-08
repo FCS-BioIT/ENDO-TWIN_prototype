@@ -1,0 +1,94 @@
+{
+  "mifepristone_after_ht__v060__n2000__seedA": {
+    "key": "mife_v060_A",
+    "master_seed": 20261008,
+    "n_trajectories_per_arm": 2000,
+    "spec": {
+      "description": "registered mifepristone intervention after hormone treatment",
+      "input_changes": {},
+      "interventions": [
+        "mifepristone"
+      ],
+      "model_version": "adoc-literature-superset-v0.6.0",
+      "name": "mifepristone_after_ht",
+      "rule_variants": {},
+      "schema": "dt_adoc.perturbation_spec/1",
+      "start": "hormone_treated_maternal"
+    },
+    "tables": {
+      "control_comparison.tsv": "d45a25905ca4f6ddf14f234e0f60ffc3dac2a2f23e3210b7d7ffc0702c2015ba",
+      "events.tsv": "57d16a5570b1d3068a6128ab681772a375ec46b672e2eb6c5256fe5d6687d443",
+      "node_summary.tsv": "91b454d1a97acbe2eabe84d38d2438cdbd9afd5fb5e73414e49929a767730de1",
+      "pairwise_precedence.tsv": "a91d79a0c5eafa37dd4fb7193f359e2856652df5fa3098686b26f951b0447f86"
+    }
+  },
+  "progestin_withdrawal__v051__n2000__seedA": {
+    "key": "v051_tool",
+    "master_seed": 20261008,
+    "n_trajectories_per_arm": 2000,
+    "spec": {
+      "description": "progestin (MPA) input withdrawal after hormone treatment",
+      "input_changes": {
+        "IN_PROGESTIN": false
+      },
+      "interventions": [],
+      "model_version": "adoc-literature-superset-v0.5.1",
+      "name": "progestin_withdrawal_v051",
+      "rule_variants": {},
+      "schema": "dt_adoc.perturbation_spec/1",
+      "start": "hormone_treated_maternal"
+    },
+    "tables": {
+      "control_comparison.tsv": "292f9d550b0b1ddb3b2261ff959a3ae1c40d24cee6e5797a50f302a92f6bfbcb",
+      "events.tsv": "aab94264b5eee38b0fe38d2425f7231a3ffd6abce7e022e65f8f0924960a4231",
+      "node_summary.tsv": "de1367bad1363326b145662c054ae7b2114e0e857721d8cb69e8520f019b74da",
+      "pairwise_precedence.tsv": "21c37a501757b96f180f54daaa75f3e37f82b1606d53b2f518160725740e17b7"
+    }
+  },
+  "progestin_withdrawal__v060__n2000__seedA": {
+    "key": "v060_A",
+    "master_seed": 20261008,
+    "n_trajectories_per_arm": 2000,
+    "spec": {
+      "description": "progestin (MPA) input withdrawal after hormone treatment",
+      "input_changes": {
+        "IN_PROGESTIN": false
+      },
+      "interventions": [],
+      "model_version": "adoc-literature-superset-v0.6.0",
+      "name": "progestin_withdrawal",
+      "rule_variants": {},
+      "schema": "dt_adoc.perturbation_spec/1",
+      "start": "hormone_treated_maternal"
+    },
+    "tables": {
+      "control_comparison.tsv": "d45a25905ca4f6ddf14f234e0f60ffc3dac2a2f23e3210b7d7ffc0702c2015ba",
+      "events.tsv": "57d16a5570b1d3068a6128ab681772a375ec46b672e2eb6c5256fe5d6687d443",
+      "node_summary.tsv": "91b454d1a97acbe2eabe84d38d2438cdbd9afd5fb5e73414e49929a767730de1",
+      "pairwise_precedence.tsv": "a91d79a0c5eafa37dd4fb7193f359e2856652df5fa3098686b26f951b0447f86"
+    }
+  },
+  "progestin_withdrawal__v060__n2000__seedB": {
+    "key": "v060_B",
+    "master_seed": 20261009,
+    "n_trajectories_per_arm": 2000,
+    "spec": {
+      "description": "progestin (MPA) input withdrawal after hormone treatment",
+      "input_changes": {
+        "IN_PROGESTIN": false
+      },
+      "interventions": [],
+      "model_version": "adoc-literature-superset-v0.6.0",
+      "name": "progestin_withdrawal",
+      "rule_variants": {},
+      "schema": "dt_adoc.perturbation_spec/1",
+      "start": "hormone_treated_maternal"
+    },
+    "tables": {
+      "control_comparison.tsv": "ae04cf7a7a7620744c5d3fb26e23ac0b2b8450e05cf6097c3fa74732d5d9481f",
+      "events.tsv": "acdde8cd491e87ca16871d13204701f15dfe4a9d1ec27f42e24f8a17d3d8d43b",
+      "node_summary.tsv": "216289003dbd0412a99664df760e2f2f41117c703c4f3a07c4c8605e993c3e98",
+      "pairwise_precedence.tsv": "848f186f1edef70180f38f35823c15a4912cb2e9a812c7372bcd43081900e78b"
+    }
+  }
+}

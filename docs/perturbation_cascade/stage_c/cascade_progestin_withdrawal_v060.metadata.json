@@ -1,0 +1,2666 @@
+{
+  "schema": "dt_adoc.perturbation_cascade/1",
+  "analysis_version": "1.0.0",
+  "run_id": "progestin_withdrawal__v060__n2000__seedA",
+  "source_commit": "de4b9b9",
+  "command": [
+    "/home/francois/Projects/DT_ADOC/src/dt_adoc/cli.py",
+    "perturb",
+    "cascade",
+    "--spec",
+    "perturbations/progestin_withdrawal.yaml",
+    "--n",
+    "2000",
+    "--seed",
+    "20261008",
+    "--workers",
+    "8",
+    "--overwrite",
+    "--run-id",
+    "progestin_withdrawal__v060__n2000__seedA"
+  ],
+  "claims": {
+    "result_kind": "conditional_model_internal_prediction",
+    "experimentally_validated": false,
+    "time_calibrated": false,
+    "time_semantics": "dimensionless continuous time of the asynchronous stochastic MaBoSS dynamics, every transition rate 1; not calibrated to hours or days, not a count of Boolean updates",
+    "individual_counterfactual": false,
+    "screenability_claim": false,
+    "screenability_note": "transient or whole-state differences are not screenability (docs/stage4b_direct_admission.md, owner decision 6); this output does not license a screen",
+    "intervals": "position bars are empirical quantiles across trajectories, not confidence intervals; *_ci_* columns are percentile bootstraps over trajectories treated as exchangeable"
+  },
+  "claim_ceiling": {
+    "ceiling": "conditional_model_internal_prediction",
+    "statement": "simulated first-switch order and frequencies in dimensionless MaBoSS time against a matched control, conditional on the model's rules and the stated starting ensemble",
+    "see": "claims"
+  },
+  "validation_level": {
+    "level": "exploratory_model_internal",
+    "validated": "event reconstruction from tick occupancies against the installed MaBoSS backend (docs/perturbation_cascade/README.md, Stage A)",
+    "not_validated": "biological timing, causal order and experimental response; no ADOC measurement is compared"
+  },
+  "warnings": [],
+  "perturbation": {
+    "spec": {
+      "schema": "dt_adoc.perturbation_spec/1",
+      "name": "progestin_withdrawal",
+      "description": "progestin (MPA) input withdrawal after hormone treatment",
+      "model_version": "adoc-literature-superset-v0.6.0",
+      "start": "hormone_treated_maternal",
+      "input_changes": {
+        "IN_PROGESTIN": false
+      },
+      "interventions": [],
+      "rule_variants": {}
+    },
+    "effects": [
+      {
+        "provenance_class": "protocol_input_change",
+        "node": "IN_PROGESTIN",
+        "from": true,
+        "to": false,
+        "semantics": "the input is set at the perturbation boundary and held for the whole perturbed phase, as a protocol step would"
+      }
+    ],
+    "provenance_classes": [
+      "protocol_input_change"
+    ]
+  },
+  "model": {
+    "model_version": "adoc-literature-superset-v0.6.0",
+    "network_bnd": {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/network.bnd",
+      "sha256": "64b5a3aa02394593bef5991b25005a71a27161ec75aefb6f80dbe7a1e347de27",
+      "size_bytes": 4095
+    },
+    "baseline_cfg": {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/baseline.cfg",
+      "sha256": "e39cbabb7056efa3eca732aec98b68ba0d9e650aef0f4d82a4efac83daff527b",
+      "size_bytes": 4095
+    },
+    "node_dictionary": {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv",
+      "sha256": "7019da7eed02e8e2c9860b0558552347b9687201287c9f649fbd0b8898bd4a5b",
+      "size_bytes": 17872
+    },
+    "protocols": {
+      "path": "config/protocols_markerless.yaml",
+      "sha256": "1efd7995f2770d7bebbbf4b41e0e7199e76d3225f83676d410dcc5cdead93420",
+      "size_bytes": 22413
+    }
+  },
+  "starting_state": {
+    "start_protocol": "hormone_treated_maternal",
+    "lineage": [
+      "basal_maternal",
+      "e2_primed_maternal",
+      "hormone_treated_maternal"
+    ],
+    "init_horizon": 25.0,
+    "init_horizon_semantics": "dimensionless MaBoSS relative time; not calibrated to hours or days",
+    "lineage_seed": 1,
+    "lineage_trajectories": 5000,
+    "lineage_continuations": "each lineage phase continues from its parent by the protocol's own registered continuation (protocol_continuation)",
+    "perturbation_memory_policy": "all_non_inputs",
+    "probability_cutoff": 0.0,
+    "memory_nodes": [
+      "E_ANXA2_ACTIN",
+      "E_CD98_CD9",
+      "E_CDH1_APICAL",
+      "E_DAG1_CLEAVED",
+      "E_DAG1_FULL",
+      "E_ESTROGENIC_PROLIFERATION",
+      "E_GP130_STAT3",
+      "E_HBEGF",
+      "E_IHH",
+      "E_ITGAVB3_5",
+      "E_KLF12_HIGH",
+      "E_LIF",
+      "E_MUC1_BARRIER",
+      "E_MUC1_SLEX",
+      "E_PAEP",
+      "E_PC6",
+      "E_PGR",
+      "E_PODXL",
+      "E_RECEPTIVE_SURFACE",
+      "E_SECRETORY_STATE",
+      "E_SPP1_EXPR",
+      "OUT_EPITHELIAL_RECEPTIVE",
+      "OUT_MATERNAL_ADHESION_COMPETENCE",
+      "OUT_STABLE_ADHESION",
+      "OUT_STROMAL_DECIDUALIZED",
+      "S_BMP2",
+      "S_DECIDUALIZED",
+      "S_FGF_MITOGENIC",
+      "S_HAND2",
+      "S_IGFBP1",
+      "S_NR2F2",
+      "S_PGR",
+      "S_PKA",
+      "S_PRL",
+      "S_SPP1",
+      "S_TAZ_ECM",
+      "X_ADHESION_ROUTE_REDUNDANT",
+      "X_ADHESION_ROUTE_SPP1",
+      "X_ANTIADHESIVE_ROUTE",
+      "X_INTERFACE_ANTIADHESIVE_RELAY",
+      "X_INTERFACE_REDUNDANT_RELAY",
+      "X_INTERFACE_SPP1_RELAY",
+      "X_MECHANICAL_PERMISSIVE_ECM",
+      "X_MECHANICAL_STRESS_RELAY",
+      "X_SPP1_LUMEN_FREE"
+    ],
+    "start_state_count": 16,
+    "source_state_count": 16,
+    "dropped_probability_mass": 2.55351295663786e-15,
+    "start_distribution": [
+      {
+        "state": "110100111101011110111110111011111111010001101",
+        "probability": 0.2349999999999958
+      },
+      {
+        "state": "110100111101011110111110111011111111110011101",
+        "probability": 0.15839999999999996
+      },
+      {
+        "state": "110100111101011110111100111011111111000000101",
+        "probability": 0.10040000000000114
+      },
+      {
+        "state": "110100111101011110111110111011111111010001111",
+        "probability": 0.09980000000000112
+      },
+      {
+        "state": "110100111101011110111110111011111111100010101",
+        "probability": 0.06920000000000062
+      },
+      {
+        "state": "110100111101011110111110111011111111110011111",
+        "probability": 0.06740000000000058
+      },
+      {
+        "state": "110100111101011110111110111011111111010101101",
+        "probability": 0.05780000000000043
+      },
+      {
+        "state": "110100111101011110111100111011111111000000111",
+        "probability": 0.0440000000000002
+      },
+      {
+        "state": "110100111101011110111110111011111111110111101",
+        "probability": 0.0384000000000001
+      },
+      {
+        "state": "110100111101011110111110111011111111100010111",
+        "probability": 0.026600000000000006
+      },
+      {
+        "state": "110100111101011110111110111011111111010101111",
+        "probability": 0.026000000000000006
+      },
+      {
+        "state": "110100111101011110111100111011111111000100101",
+        "probability": 0.024600000000000007
+      },
+      {
+        "state": "110100111101011110111110111011111111110111111",
+        "probability": 0.017200000000000017
+      },
+      {
+        "state": "110100111101011110111110111011111111100110101",
+        "probability": 0.016600000000000014
+      },
+      {
+        "state": "110100111101011110111100111011111111000100111",
+        "probability": 0.011800000000000019
+      },
+      {
+        "state": "110100111101011110111110111011111111100110111",
+        "probability": 0.0068000000000000204
+      }
+    ],
+    "condition_cfg": {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/conditions/hormone_treated_maternal.cfg",
+      "sha256": "f262da7632824958b75877f7d9889a919cb5acea320878450010a2ea7e8b6dc7",
+      "size_bytes": 350
+    },
+    "start_step_inputs": {
+      "IN_E2": true,
+      "IN_EMBRYO_CONDITIONED_SIGNAL": false,
+      "IN_EMBRYO_CONTACT": false,
+      "IN_EMBRYO_PRESENT": false,
+      "IN_ER_STRESS_EXCESS": false,
+      "IN_HCG": false,
+      "IN_HIGH_ECM_STIFFNESS": false,
+      "IN_PROGESTIN": true,
+      "IN_TROPHECTODERM_COMPETENT": false,
+      "IN_XAV939": true,
+      "IN_cAMP": true
+    },
+    "start_step_interventions": [],
+    "lineage_phases": [
+      {
+        "protocol_id": "basal_maternal",
+        "steps": [
+          {
+            "network_sha256": "64b5a3aa02394593bef5991b25005a71a27161ec75aefb6f80dbe7a1e347de27",
+            "named_interventions": []
+          }
+        ],
+        "condition_cfg": {
+          "path": "models/superset/adoc-literature-superset-v0.6.0/conditions/basal_maternal.cfg",
+          "sha256": "798f2db832d56711d083497c3f5f33b923e034561038c1b52f8bfb97ce3126d0",
+          "size_bytes": 354
+        },
+        "continued_from": null,
+        "continuation_policy": null
+      },
+      {
+        "protocol_id": "e2_primed_maternal",
+        "steps": [
+          {
+            "network_sha256": "64b5a3aa02394593bef5991b25005a71a27161ec75aefb6f80dbe7a1e347de27",
+            "named_interventions": []
+          }
+        ],
+        "condition_cfg": {
+          "path": "models/superset/adoc-literature-superset-v0.6.0/conditions/e2_primed_maternal.cfg",
+          "sha256": "364fd5e322f02b83bc63cd78cb287b08c023253e29d49ef6577241b47c0cd07e",
+          "size_bytes": 353
+        },
+        "continued_from": "basal_maternal",
+        "continuation_policy": "minimal_stable_joint"
+      },
+      {
+        "protocol_id": "hormone_treated_maternal",
+        "steps": [
+          {
+            "network_sha256": "64b5a3aa02394593bef5991b25005a71a27161ec75aefb6f80dbe7a1e347de27",
+            "named_interventions": []
+          }
+        ],
+        "condition_cfg": {
+          "path": "models/superset/adoc-literature-superset-v0.6.0/conditions/hormone_treated_maternal.cfg",
+          "sha256": "f262da7632824958b75877f7d9889a919cb5acea320878450010a2ea7e8b6dc7",
+          "size_bytes": 350
+        },
+        "continued_from": "e2_primed_maternal",
+        "continuation_policy": "extended_maternal_joint"
+      }
+    ]
+  },
+  "tracked_nodes": {
+    "nodes": [
+      "E_ANXA2_ACTIN",
+      "E_CD98_CD9",
+      "E_CDH1_APICAL",
+      "E_DAG1_CLEAVED",
+      "E_DAG1_FULL",
+      "E_ESTROGENIC_PROLIFERATION",
+      "E_GP130_STAT3",
+      "E_HBEGF",
+      "E_IHH",
+      "E_ITGAVB3_5",
+      "E_KLF12_HIGH",
+      "E_LIF",
+      "E_MUC1_BARRIER",
+      "E_MUC1_SLEX",
+      "E_PAEP",
+      "E_PC6",
+      "E_PGR",
+      "E_PODXL",
+      "E_RECEPTIVE_SURFACE",
+      "E_SECRETORY_STATE",
+      "E_SPP1_EXPR",
+      "OUT_EPITHELIAL_RECEPTIVE",
+      "OUT_MATERNAL_ADHESION_COMPETENCE",
+      "OUT_STABLE_ADHESION",
+      "OUT_STROMAL_DECIDUALIZED",
+      "S_BMP2",
+      "S_DECIDUALIZED",
+      "S_FGF_MITOGENIC",
+      "S_HAND2",
+      "S_IGFBP1",
+      "S_NR2F2",
+      "S_PGR",
+      "S_PKA",
+      "S_PRL",
+      "S_SPP1",
+      "S_TAZ_ECM",
+      "X_ADHESION_ROUTE_REDUNDANT",
+      "X_ADHESION_ROUTE_SPP1",
+      "X_ANTIADHESIVE_ROUTE",
+      "X_INTERFACE_ANTIADHESIVE_RELAY",
+      "X_INTERFACE_REDUNDANT_RELAY",
+      "X_INTERFACE_SPP1_RELAY",
+      "X_MECHANICAL_PERMISSIVE_ECM",
+      "X_MECHANICAL_STRESS_RELAY",
+      "X_SPP1_LUMEN_FREE"
+    ],
+    "not_carried_by_the_start": [],
+    "note": "events.tsv covers every node the run reports (every non-internal node). A tracked node the start does not carry begins from the condition cfg, and its t = 0 state is read from the first tick window, or the run is refused if that window is fractional"
+  },
+  "arms": {
+    "perturbed": {
+      "input_states": {
+        "IN_E2": true,
+        "IN_EMBRYO_CONDITIONED_SIGNAL": false,
+        "IN_EMBRYO_CONTACT": false,
+        "IN_EMBRYO_PRESENT": false,
+        "IN_ER_STRESS_EXCESS": false,
+        "IN_HCG": false,
+        "IN_HIGH_ECM_STIFFNESS": false,
+        "IN_PROGESTIN": false,
+        "IN_TROPHECTODERM_COMPETENT": false,
+        "IN_XAV939": true,
+        "IN_cAMP": true
+      },
+      "interventions": [],
+      "rule_variants": {},
+      "executed_network": {
+        "source_network": {
+          "path": "models/superset/adoc-literature-superset-v0.6.0/network.bnd",
+          "sha256": "64b5a3aa02394593bef5991b25005a71a27161ec75aefb6f80dbe7a1e347de27",
+          "size_bytes": 4095
+        },
+        "rendered": false,
+        "network_sha256": "64b5a3aa02394593bef5991b25005a71a27161ec75aefb6f80dbe7a1e347de27",
+        "logic_overrides": {},
+        "intervention_overrides": [],
+        "named_interventions": [],
+        "named_intervention_effects": [],
+        "legacy_input_values": {},
+        "evidence_register": null,
+        "direct_effect_adjudications": null,
+        "direct_effect_target_policy": null,
+        "direct_admission": null,
+        "intervention_routing": "engine",
+        "intervention_library": {
+          "path": "config/intervention_library.tsv",
+          "sha256": "7dcef6521b9f5b65e885ba87a269544932ba2b4b0838bd8f3f07482831eb12c2",
+          "size_bytes": 6040
+        }
+      }
+    },
+    "control": {
+      "input_states": {
+        "IN_E2": true,
+        "IN_EMBRYO_CONDITIONED_SIGNAL": false,
+        "IN_EMBRYO_CONTACT": false,
+        "IN_EMBRYO_PRESENT": false,
+        "IN_ER_STRESS_EXCESS": false,
+        "IN_HCG": false,
+        "IN_HIGH_ECM_STIFFNESS": false,
+        "IN_PROGESTIN": true,
+        "IN_TROPHECTODERM_COMPETENT": false,
+        "IN_XAV939": true,
+        "IN_cAMP": true
+      },
+      "interventions": [],
+      "rule_variants": {},
+      "executed_network": {
+        "source_network": {
+          "path": "models/superset/adoc-literature-superset-v0.6.0/network.bnd",
+          "sha256": "64b5a3aa02394593bef5991b25005a71a27161ec75aefb6f80dbe7a1e347de27",
+          "size_bytes": 4095
+        },
+        "rendered": false,
+        "network_sha256": "64b5a3aa02394593bef5991b25005a71a27161ec75aefb6f80dbe7a1e347de27",
+        "logic_overrides": {},
+        "intervention_overrides": [],
+        "named_interventions": [],
+        "named_intervention_effects": [],
+        "legacy_input_values": {},
+        "evidence_register": null,
+        "direct_effect_adjudications": null,
+        "direct_effect_target_policy": null,
+        "direct_admission": null,
+        "intervention_routing": "engine",
+        "intervention_library": {
+          "path": "config/intervention_library.tsv",
+          "sha256": "7dcef6521b9f5b65e885ba87a269544932ba2b4b0838bd8f3f07482831eb12c2",
+          "size_bytes": 6040
+        }
+      }
+    }
+  },
+  "perturbation_boundary": "t = 0 of the perturbed phase; both arms start from the same sampled terminal state of the start protocol; input values and interventions are held for the whole phase",
+  "unchanged": "every input and every intervention active at the end of the start protocol stays active in both arms unless the spec changes it",
+  "simulation": {
+    "n_trajectories_per_arm": 2000,
+    "master_seed": 20261008,
+    "seed_scheme": "per-trajectory seed k = SeedSequence(master_seed).generate_state(n, uint32)[k] mod (2**31 - 2) + 1, distinct by check; initial state k drawn by numpy.random.default_rng(SeedSequence([master_seed, 1])).choice over the projected start distribution; arms share seed k and initial state k",
+    "seeds_recorded_in": "events.tsv (seed column)",
+    "random_generator": "MaBoSS default pseudorandom generator (Rand48; use_physrandgen FALSE)",
+    "independence": "initial states i.i.d. by construction; event streams from distinct spread seeds, not proven independent",
+    "phase": {
+      "horizon": 25.0,
+      "tick": 0.01
+    },
+    "horizon_semantics": "dimensionless MaBoSS relative time; observation stops at the horizon and later switches are censored",
+    "workers": 8
+  },
+  "event_definition": {
+    "first_switch": "first departure of the node from its state at the perturbation boundary (t = 0), read off single-trajectory tick occupancies (dt_adoc.cascade.events); exact when the window holds one switch",
+    "n_switches_min": "minimum number of switches consistent with the tick occupancies; a lower bound",
+    "net_change": "final state at the horizon differs from the starting state",
+    "transient_return": "switched at least twice and ended in the starting state",
+    "rule_disagrees_at_horizon": "the node's executed rule calls for a different value in the final state: still at risk, so a missing switch is censored",
+    "categories": [
+      "no_switch",
+      "net_change_n_switches_min_1",
+      "net_change_n_switches_min_gt_1",
+      "transient_return",
+      "unresolved_end"
+    ],
+    "categories_note": "categories are read off n_switches_min, a lower bound: net_change_n_switches_min_1 is consistent with one switch, not proof of one; a fractional window can hide out-and-back pairs. Net change, whole windows and first-switch windows are exact",
+    "snap_tolerance": 1e-09,
+    "validation": "docs/perturbation_cascade/README.md (Stage A)"
+  },
+  "positions": {
+    "figure_position": "normalized_time",
+    "definitions": {
+      "absolute_time": "reconstructed MaBoSS relative time of the node's first switch (exact when its window held one switch, otherwise an upper bound within that window) after the perturbation boundary (t = 0); dimensionless continuous MaBoSS time with every transition rate 1, not hours and not a count of Boolean updates",
+      "normalized_rank": "(r - 1) / (m - 1): r = rank of the node's first switch among the m nodes that switched in that trajectory (average rank on ties); undefined when m < 2",
+      "normalized_time": "(t - t_first) / (t_last - t_first) over the first-switch times of the nodes that switched in that trajectory; undefined when t_last == t_first"
+    }
+  },
+  "figure": {
+    "direction_row_min_fraction": 0.05,
+    "unresolved_adjacent_rule": "|P(upper row first) - 0.5| < 0.1 with >= 50 trajectories where both switch in an identifiable order"
+  },
+  "annotation_sources": [
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv",
+      "sha256": "7019da7eed02e8e2c9860b0558552347b9687201287c9f649fbd0b8898bd4a5b",
+      "size_bytes": 17872
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/phenotype_contract.tsv",
+      "sha256": "4df11861ae82612876dd28d4269a5d06f39a941b29d029d4bb8fe72e63dd22d5",
+      "size_bytes": 1151
+    },
+    {
+      "path": "config/node_entity_map.tsv",
+      "sha256": "5c2f88f13e4b4b8a5718273966bd9ca38bd5456592a5cbddee6056190a030018",
+      "size_bytes": 17125
+    },
+    {
+      "path": "docs/u6_semantics/component_map.tsv",
+      "sha256": "fb8b4ffdd31d63073e5d2811c057f44dc1950c08eaa2579946c4b76040852b2a",
+      "size_bytes": 25876
+    },
+    {
+      "path": "docs/u6_semantics/node_semantics.tsv",
+      "sha256": "8fe88bca3c816bf9cddf9f688d488a1c2b3f1266f05a805213ff1eb644f111a8",
+      "size_bytes": 11713
+    }
+  ],
+  "software": {
+    "python": "3.12.13",
+    "maboss": "0.8.15",
+    "cmaboss": "1.0.0b32",
+    "numpy": "2.5.1",
+    "pandas": "3.0.5",
+    "matplotlib": "3.11.1",
+    "pyyaml": "6.0.3"
+  },
+  "implementation_files": [
+    {
+      "path": "config/direct_effect_adjudications.tsv",
+      "sha256": "91e4c1f8f5ea252f68cc0b207cbd306722bc95dac06802010348728d3d9a8dff",
+      "size_bytes": 231
+    },
+    {
+      "path": "config/direct_effect_target_declarations.tsv",
+      "sha256": "593d7d09426f96d06571fc07a946f23cb9b366f15fda7f59fe0889d1d9661681",
+      "size_bytes": 267
+    },
+    {
+      "path": "config/direct_effect_target_policy.tsv",
+      "sha256": "2b63482a4406cdd2eef9a323670e668b61002887a2488b7f1d5d8a515a5fa1ad",
+      "size_bytes": 6296
+    },
+    {
+      "path": "config/intervention_library.tsv",
+      "sha256": "7dcef6521b9f5b65e885ba87a269544932ba2b4b0838bd8f3f07482831eb12c2",
+      "size_bytes": 6040
+    },
+    {
+      "path": "config/node_entity_map.tsv",
+      "sha256": "5c2f88f13e4b4b8a5718273966bd9ca38bd5456592a5cbddee6056190a030018",
+      "size_bytes": 17125
+    },
+    {
+      "path": "config/observation_model_map.tsv",
+      "sha256": "74f0d5d0896beba57a0a03960239ad2fc039f315fa42a2209a65e228bfa3aff5",
+      "size_bytes": 44392
+    },
+    {
+      "path": "docs/stage4b/v060_veto_expressivity.tsv",
+      "sha256": "41112a48055b423f057e94c1ff5357367a031cf49db264da154707d8ea0834d7",
+      "size_bytes": 4927
+    },
+    {
+      "path": "docs/stage4b/v060_veto_invariance.tsv",
+      "sha256": "b5f21385e03e77c62ef5a65e470ce6c07205192373c4d088bee9bddb5bd4fe01",
+      "size_bytes": 2171
+    },
+    {
+      "path": "src/dt_adoc/__init__.py",
+      "sha256": "f3bad63e1ff08e27bab52a01280225729f4d99add307ae38941e9517b2d0d21a",
+      "size_bytes": 73
+    },
+    {
+      "path": "src/dt_adoc/calibration/__init__.py",
+      "sha256": "533b8dcbdaae8e5036b8e80e387d1c9da38b52146069c923ce8ef61f4aa6f60f",
+      "size_bytes": 27
+    },
+    {
+      "path": "src/dt_adoc/calibration/adhesion_likelihood.py",
+      "sha256": "94b838dbbe72d4c2b80050f2cb64aefc867a1c6a840ab69e14424920322b7558",
+      "size_bytes": 4000
+    },
+    {
+      "path": "src/dt_adoc/calibration/objectives.py",
+      "sha256": "9e824c32542fb33643e8527fe1dcca8904671e59b52879e057ae3e49eb4b6e06",
+      "size_bytes": 4641
+    },
+    {
+      "path": "src/dt_adoc/calibration/observation_map.py",
+      "sha256": "bb8b6752ab2c9a2625b0afb29dd65329ba505f0bf8b4aa3f0902c205399a7a5e",
+      "size_bytes": 12819
+    },
+    {
+      "path": "src/dt_adoc/calibration/search.py",
+      "sha256": "4004794efabff37b88b5708c7580e258e094a902b677204a204e84fe60ee7c84",
+      "size_bytes": 2742
+    },
+    {
+      "path": "src/dt_adoc/cascade/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "src/dt_adoc/cascade/annotations.py",
+      "sha256": "aa6a48a19d8f8e488f495ddc45392188e2c6613564b87ab2d24732e8d2c9e7a1",
+      "size_bytes": 4715
+    },
+    {
+      "path": "src/dt_adoc/cascade/cli.py",
+      "sha256": "6581c57ddfdf4102760be3f23947adc4ea8db790cc911102bca3c42c8bdd192e",
+      "size_bytes": 3223
+    },
+    {
+      "path": "src/dt_adoc/cascade/events.py",
+      "sha256": "d0a2e087cf18f9689cd341a42b5f41755d099d1f04ae97b3eabfed2ed2ec0664",
+      "size_bytes": 8399
+    },
+    {
+      "path": "src/dt_adoc/cascade/figure.py",
+      "sha256": "790a2cac4a8e4121c82dc4842ecf4563c6b88eab7db4517c1310565657f7839f",
+      "size_bytes": 9264
+    },
+    {
+      "path": "src/dt_adoc/cascade/run.py",
+      "sha256": "b8053a38ddd37a3340faac95edb40734c5a5cb4eb0f36141895ce9ad5b1321d2",
+      "size_bytes": 27241
+    },
+    {
+      "path": "src/dt_adoc/cascade/simulate.py",
+      "sha256": "8751801b8c7d59b0ec2da5181b50e48a8bff85e2e6a4bac0d41dc3a7b4f2ce93",
+      "size_bytes": 18161
+    },
+    {
+      "path": "src/dt_adoc/cascade/summary.py",
+      "sha256": "e27a9307f3a2f9e7aeed7c79e2b773cacdb28bc5bf29b90bf0564af6a03fd51c",
+      "size_bytes": 17480
+    },
+    {
+      "path": "src/dt_adoc/concordance/__init__.py",
+      "sha256": "0c6559d186b4897337d520a4d1e9a789919048ebd764752fed60bf25b3073811",
+      "size_bytes": 865
+    },
+    {
+      "path": "src/dt_adoc/concordance/build.py",
+      "sha256": "32e46b0799975859ff787c2d5865d023291460cc98b2305dbe4af4b5998cbf36",
+      "size_bytes": 16499
+    },
+    {
+      "path": "src/dt_adoc/concordance/figure.py",
+      "sha256": "3c0c2fbf38f86e257c817c2cfa4a5bd40124bc43231475ec895b7e7c8aab014f",
+      "size_bytes": 14389
+    },
+    {
+      "path": "src/dt_adoc/concordance/mechanism.py",
+      "sha256": "257ffd4e4962ba48cb6493c39f6caae7341dc41981ce1453fdce9de4285cae49",
+      "size_bytes": 11201
+    },
+    {
+      "path": "src/dt_adoc/concordance/render.py",
+      "sha256": "10cd68726e9eb4a6c754416f1e7f9e73a70ef7678d4c73b3c99c4a5ac25b8f2a",
+      "size_bytes": 32925
+    },
+    {
+      "path": "src/dt_adoc/concordance/render_cli.py",
+      "sha256": "72af10b47b6ef534fb511135584dda66dcebc40235b5dc9d1cbbd7f77e39363b",
+      "size_bytes": 747
+    },
+    {
+      "path": "src/dt_adoc/concordance/scrna_audit.py",
+      "sha256": "82a1fe6aa376f2ec1d1c24507424632709da4515d6fc6d950d0cff3173968209",
+      "size_bytes": 11558
+    },
+    {
+      "path": "src/dt_adoc/concordance/scrna_audit_cli.py",
+      "sha256": "aff32d7a3463de431e38178054eaa1dda719c8f01dbdf299592983806f3c133c",
+      "size_bytes": 1252
+    },
+    {
+      "path": "src/dt_adoc/concordance/simulate.py",
+      "sha256": "4eba7fe6f42b57403b8abdb57490ae5e1bf1b039617645b66453ae34607c2fdc",
+      "size_bytes": 17770
+    },
+    {
+      "path": "src/dt_adoc/concordance/table.py",
+      "sha256": "198b85b8f1f2906a765ce80f682894a96b681b213dc10c3124583c40b83db81c",
+      "size_bytes": 15968
+    },
+    {
+      "path": "src/dt_adoc/maboss_adapter.py",
+      "sha256": "9169c05e7a35282699c89841d80d61593b5ea8527807d4147e2c2612ccfe7f13",
+      "size_bytes": 7618
+    },
+    {
+      "path": "src/dt_adoc/model/__init__.py",
+      "sha256": "1a37f01a8b1bb0ec864f31802e693f6730899675dc53282977778741fa25abf4",
+      "size_bytes": 69
+    },
+    {
+      "path": "src/dt_adoc/model/catalog.py",
+      "sha256": "89c2866c78b8c23307bf1e499ed22934d60219d5c7227b3c05b8f3dcd39f3004",
+      "size_bytes": 2850
+    },
+    {
+      "path": "src/dt_adoc/model/compile.py",
+      "sha256": "da9450d4cf3c44f727004f1bcc37db204eba55819fc785bbe8d3e81273029a25",
+      "size_bytes": 3354
+    },
+    {
+      "path": "src/dt_adoc/model/provenance.py",
+      "sha256": "27660649c73e40d2e40fe24f40ba5f30457a1d0471bbf4d4f320e96b8266835d",
+      "size_bytes": 2231
+    },
+    {
+      "path": "src/dt_adoc/model/runtime.py",
+      "sha256": "870cbb7bb28e90b7c924600c58182b0e7d9555d320ed92635ad8fd684bb7f20a",
+      "size_bytes": 22133
+    },
+    {
+      "path": "src/dt_adoc/model/superset_family.py",
+      "sha256": "6af06a1ece7a1f8d3531b00ef73c44edcaacae94f401d982c64185579559d7f6",
+      "size_bytes": 83842
+    },
+    {
+      "path": "src/dt_adoc/model/topology.py",
+      "sha256": "2047ed3e2a08470e2342e7f5ca72c50a4a1eb7c06654327b6b137cb001b8a1b3",
+      "size_bytes": 12359
+    },
+    {
+      "path": "src/dt_adoc/model/validate.py",
+      "sha256": "4b18c5d290450049fc25e462740b815c7c1bb1fa5f95535b6e16c11c4cdcb09f",
+      "size_bytes": 15573
+    },
+    {
+      "path": "src/dt_adoc/perturbations/__init__.py",
+      "sha256": "fad0c313ba4177679deeb2d0f66764bedee9342d924386407c2427589dd6b0eb",
+      "size_bytes": 30
+    },
+    {
+      "path": "src/dt_adoc/perturbations/adjudication.py",
+      "sha256": "dd43a08261102418abd916a115c6a5059b3a78ce0b733838b9ee38a7c9f9065d",
+      "size_bytes": 67349
+    },
+    {
+      "path": "src/dt_adoc/perturbations/engine.py",
+      "sha256": "ea680054da9931c3e80a3ea3e01de340d0320b078d5e4e387d23e55c5f21a1e3",
+      "size_bytes": 43783
+    },
+    {
+      "path": "src/dt_adoc/perturbations/spec.py",
+      "sha256": "c4eccbd8660ca6795adc2e8cf9581bf58e24f43ac421cf10d49cc68f55f47722",
+      "size_bytes": 12642
+    },
+    {
+      "path": "src/dt_adoc/perturbations/target_engagement.py",
+      "sha256": "b7634ee12516e98bec36c5f2e536dba6df3ea83e8b6a315de4199a6877ca5cc4",
+      "size_bytes": 433
+    },
+    {
+      "path": "src/dt_adoc/protocols/__init__.py",
+      "sha256": "3abf20973c9095d2a3bb415534ee1f5d06385d2703b0e708c03de44a3b917317",
+      "size_bytes": 54
+    },
+    {
+      "path": "src/dt_adoc/protocols/conditions.py",
+      "sha256": "a867c94207b4799ef28dd3c6d23eae23478dc77c4215dad3d8e3aeaecfa81bf6",
+      "size_bytes": 21834
+    },
+    {
+      "path": "src/dt_adoc/protocols/runner.py",
+      "sha256": "2b03af0218a68a7d43c71e26cdba7909cd33003913ca503949da50f817504e67",
+      "size_bytes": 2472
+    },
+    {
+      "path": "src/dt_adoc/protocols/schema.py",
+      "sha256": "f50f93257cfde700abe418acaec354e568afa889c0899fea02db3aae2265b95f",
+      "size_bytes": 1192
+    },
+    {
+      "path": "src/dt_adoc/reporting/__init__.py",
+      "sha256": "ba3a6b6d378629b68808fe9fc81105be5636a834f034e41113ce138e97f34339",
+      "size_bytes": 25
+    },
+    {
+      "path": "src/dt_adoc/reporting/report.py",
+      "sha256": "38286102bd45a161da16884f7ef1235119bbb4e2d6d3d01f6dda9345427c1f07",
+      "size_bytes": 493
+    },
+    {
+      "path": "src/dt_adoc/reporting/structure.py",
+      "sha256": "1cba9b5f4df299055d20be976ce564c862b073b27a616771df709e3ce3355b99",
+      "size_bytes": 11686
+    },
+    {
+      "path": "src/dt_adoc/reporting/tables.py",
+      "sha256": "0f2b990e58ef8f7e4576a25a0c67d390b291cb4e7bf244e4d59daa5ca1eb53f4",
+      "size_bytes": 495
+    },
+    {
+      "path": "src/dt_adoc/reporting/veto_expressivity.py",
+      "sha256": "fe124b6a1852557b06f02ed2906023103ae2980888ced26310d47d4496afa211",
+      "size_bytes": 30374
+    },
+    {
+      "path": "src/dt_adoc/scoring/__init__.py",
+      "sha256": "5ec6fe9ff2b3cae86878a11f0f0e60067fb0a12037a97e34d33232888f524b1b",
+      "size_bytes": 33
+    },
+    {
+      "path": "src/dt_adoc/scoring/candidates.py",
+      "sha256": "9f9b0f9738aacfb322b1d2d7cb38b7d0fdccd62917618b7e0412b7e9be0cc8af",
+      "size_bytes": 1124
+    },
+    {
+      "path": "src/dt_adoc/simulation/__init__.py",
+      "sha256": "7843602e5ca862cedbc8adef7fc357f23eafc88017e6f3a408561b02cd5c79d1",
+      "size_bytes": 26
+    },
+    {
+      "path": "src/dt_adoc/simulation/manifests.py",
+      "sha256": "9335c9a11c5209958f776f6bcf725ae1245afc25fe4ea278080f86914698f17a",
+      "size_bytes": 3520
+    },
+    {
+      "path": "src/dt_adoc/simulation/runner.py",
+      "sha256": "0de4c52bbb8a68495623f281a691fbefcf1c626ed6183751123414bf49f07449",
+      "size_bytes": 74510
+    },
+    {
+      "path": "src/dt_adoc/simulation/sensitivity.py",
+      "sha256": "4167eeffa23131cd604d73b7b1128f6cbc4e1510bfab9500aa33874876bff203",
+      "size_bytes": 9658
+    },
+    {
+      "path": "src/dt_adoc/simulation/stability.py",
+      "sha256": "19cd07ea9b6e8a20b1e2daa8c46de7e1da6e210985d592046f25b0e7d29fcbee",
+      "size_bytes": 4260
+    },
+    {
+      "path": "src/dt_adoc/simulation/timeline.py",
+      "sha256": "d1ca9706102abea1824519751db836dd80bec40d317a6b2f2c4d2147e703351e",
+      "size_bytes": 13291
+    }
+  ],
+  "configuration_files": [
+    {
+      "path": "config/adoc_chip_donor_provenance.tsv",
+      "sha256": "442be3a088909ef5080214df2339acb9a5e9c64cacee8dd8670e32ebca197a7c",
+      "size_bytes": 11022
+    },
+    {
+      "path": "config/adoc_outlet_conditions.tsv",
+      "sha256": "e834072be794f2b7cb9eafe9c8e951fed1d8d7d989efb2c0fc229cc6dc0f28ac",
+      "size_bytes": 7550
+    },
+    {
+      "path": "config/calibration.yaml",
+      "sha256": "8fd4662ae17e6a112545e086831b5d46dab46746f00157136ededf962ee27a0b",
+      "size_bytes": 7338
+    },
+    {
+      "path": "config/candidate_score.yaml",
+      "sha256": "11a99e382238f4ec5c11495e127f4a68ff7f8c1b1b12c208ce82c4ee8340c6b7",
+      "size_bytes": 964
+    },
+    {
+      "path": "config/coupling_adjudication.tsv",
+      "sha256": "3ac59cd81b660f1dce46b653b953fe706b4f54762844433fe4019212f9bc0aae",
+      "size_bytes": 37245
+    },
+    {
+      "path": "config/data_manifest.tsv",
+      "sha256": "0ee159d327b8abb5293e5ad049cb2aaeb266ff54d7cb6ce34ab67a27a8925584",
+      "size_bytes": 1574
+    },
+    {
+      "path": "config/direct_effect_adjudications.tsv",
+      "sha256": "91e4c1f8f5ea252f68cc0b207cbd306722bc95dac06802010348728d3d9a8dff",
+      "size_bytes": 231
+    },
+    {
+      "path": "config/direct_effect_target_declarations.tsv",
+      "sha256": "593d7d09426f96d06571fc07a946f23cb9b366f15fda7f59fe0889d1d9661681",
+      "size_bytes": 267
+    },
+    {
+      "path": "config/direct_effect_target_policy.tsv",
+      "sha256": "2b63482a4406cdd2eef9a323670e668b61002887a2488b7f1d5d8a515a5fa1ad",
+      "size_bytes": 6296
+    },
+    {
+      "path": "config/edge_citation_adjudications.tsv",
+      "sha256": "43a4ad6195fab68b4ab49f1e15c76ffc76cc38d42721b8b88d750fcb6549a6e1",
+      "size_bytes": 10645
+    },
+    {
+      "path": "config/evidence_roles.yaml",
+      "sha256": "982d3121ad4c516278b62e25fd3bb4e3e302a320c3a1dba82e6ce773a3420aaa",
+      "size_bytes": 7550
+    },
+    {
+      "path": "config/external_data_manifest.tsv",
+      "sha256": "c97a2932a41b1ca9ada73afe96c37c0598daf1009812a2013615c3ca35174e18",
+      "size_bytes": 1533
+    },
+    {
+      "path": "config/intervention_library.tsv",
+      "sha256": "7dcef6521b9f5b65e885ba87a269544932ba2b4b0838bd8f3f07482831eb12c2",
+      "size_bytes": 6040
+    },
+    {
+      "path": "config/node_entity_map.tsv",
+      "sha256": "5c2f88f13e4b4b8a5718273966bd9ca38bd5456592a5cbddee6056190a030018",
+      "size_bytes": 17125
+    },
+    {
+      "path": "config/observation_checkpoints.tsv",
+      "sha256": "ec6b905e301c2a030ce994204ab58609e27e90f8581e21db602bfcabbb7eca7c",
+      "size_bytes": 4091
+    },
+    {
+      "path": "config/observation_model_map.tsv",
+      "sha256": "74f0d5d0896beba57a0a03960239ad2fc039f315fa42a2209a65e228bfa3aff5",
+      "size_bytes": 44392
+    },
+    {
+      "path": "config/personalization.yaml",
+      "sha256": "16b2f4e33f305ff280df0cdb78649ad320201511dde236dd39387cd00282c4c7",
+      "size_bytes": 782
+    },
+    {
+      "path": "config/perturbations.yaml",
+      "sha256": "f20b289e1849074aae090ce8f5515ed7f7643b67f85ec513c7f597f97a2498e5",
+      "size_bytes": 3100
+    },
+    {
+      "path": "config/phenotype_definitions.yaml",
+      "sha256": "e93b061ce23bacbc741c94fa7a15be718ad958cdad2fd10d2dcfcc0fbd0d684b",
+      "size_bytes": 5612
+    },
+    {
+      "path": "config/planned_design.yaml",
+      "sha256": "007b1a287f928e48746c1005a6d1bdc89bccc31d23dcd25ae89c960792d284eb",
+      "size_bytes": 5914
+    },
+    {
+      "path": "config/preprocessing_contract.yaml",
+      "sha256": "808523f73b8b42e0ea532c5d220f04f4ce3fd4f71da33096f54b0af3bb9904c0",
+      "size_bytes": 1580
+    },
+    {
+      "path": "config/protocols.yaml",
+      "sha256": "243887238ee927770e53b8d5116c8f464c864abb84ddd8b0b4214b7146019f1a",
+      "size_bytes": 31211
+    },
+    {
+      "path": "config/protocols_markerless.yaml",
+      "sha256": "1efd7995f2770d7bebbbf4b41e0e7199e76d3225f83676d410dcc5cdead93420",
+      "size_bytes": 22413
+    },
+    {
+      "path": "config/scrna_observation_map.tsv",
+      "sha256": "1d4323651b6cec3e771cdd99b5b8e3ef68cb0b065a76fa3a03b0e09b9b41d3d4",
+      "size_bytes": 74502
+    },
+    {
+      "path": "config/scrna_observation_map_corrections.tsv",
+      "sha256": "8089ba41e83715a17a247c7fbf848169033561637f6871c19306845abd643add",
+      "size_bytes": 939
+    },
+    {
+      "path": "config/secreted_protein_contract.yaml",
+      "sha256": "938c85d1c85c25956293b0548bc456fa51c70bec369ce13a1db10a41051f3668",
+      "size_bytes": 21478
+    },
+    {
+      "path": "config/source_contract.yaml",
+      "sha256": "e75a3d3e0498208cc5f3beb851daa3fe27dc58e337f58307f8b5a42d08a1a221",
+      "size_bytes": 10594
+    },
+    {
+      "path": "config/topology_parity_exemptions.tsv",
+      "sha256": "bece362b98ae2ee6951a8898801dc070db5aff09703211b2db64c703fe5ff2cc",
+      "size_bytes": 5660
+    },
+    {
+      "path": "config/visualization.yaml",
+      "sha256": "8c1dcb6d6a7e0a4bba27aed956851f10d6f9f0d3cac98c9ade1f90de3ee63beb",
+      "size_bytes": 11681
+    },
+    {
+      "path": "models/README.md",
+      "sha256": "4231b004360a180b242ec577117f889820b58d20a6c1caa6b9a6cb713e6cb35f",
+      "size_bytes": 1445
+    },
+    {
+      "path": "models/baseline/adoc-core-v0.1.0/baseline.cfg",
+      "sha256": "028a8d5fc9a1e364ec572c2cbcf5addda85c1c323fc2ae17c77061d74d560f62",
+      "size_bytes": 3329
+    },
+    {
+      "path": "models/baseline/adoc-core-v0.1.0/conditions/adhesion_challenge_basal.cfg",
+      "sha256": "10b04eebdcfa390ec4c8c6c31a53bba41dd3566f17820e251a9cab61c45c8e9f",
+      "size_bytes": 237
+    },
+    {
+      "path": "models/baseline/adoc-core-v0.1.0/conditions/adhesion_challenge_hormone_treated.cfg",
+      "sha256": "34d83b62aa75fd112d653e490c43bf056d292dad4c7df145cdaac37c9e71a1a3",
+      "size_bytes": 233
+    },
+    {
+      "path": "models/baseline/adoc-core-v0.1.0/conditions/adhesion_challenge_hormone_treated_anti_spp1.cfg",
+      "sha256": "78831a9011f664e97802eae71b194a8c4d22985044cf81e3a1de8818ac1808c5",
+      "size_bytes": 232
+    },
+    {
+      "path": "models/baseline/adoc-core-v0.1.0/conditions/adhesion_challenge_hormone_treated_mifepristone.cfg",
+      "sha256": "8f934ae37caf3118685160819bfec87ef485e05b0baa380b7588777e44b8de6f",
+      "size_bytes": 232
+    },
+    {
+      "path": "models/baseline/adoc-core-v0.1.0/conditions/adhesion_challenge_washout.cfg",
+      "sha256": "34d83b62aa75fd112d653e490c43bf056d292dad4c7df145cdaac37c9e71a1a3",
+      "size_bytes": 233
+    },
+    {
+      "path": "models/baseline/adoc-core-v0.1.0/conditions/basal.cfg",
+      "sha256": "278c416f61e9a7ebee9ded5e053ce75da2eee49c821ee3ce2ac5b000df588ea8",
+      "size_bytes": 239
+    },
+    {
+      "path": "models/baseline/adoc-core-v0.1.0/conditions/basal_embryo_challenge.cfg",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "models/baseline/adoc-core-v0.1.0/conditions/e2_priming.cfg",
+      "sha256": "96ecfe219f4634f4582bfb754e2275ad82762d4ea852dc0b4d1eacc63e49b20c",
+      "size_bytes": 238
+    },
+    {
+      "path": "models/baseline/adoc-core-v0.1.0/conditions/hormone_treated.cfg",
+      "sha256": "5fd09fe31f042a5e81ffe05b1467aec6cdfa7f5fcc38b113b25eb0232901a934",
+      "size_bytes": 235
+    },
+    {
+      "path": "models/baseline/adoc-core-v0.1.0/conditions/hormone_treated_anti_spp1.cfg",
+      "sha256": "6b90fd3d104f2acdad770694c4c656e968d724480e7f9918019661b1a3d733ab",
+      "size_bytes": 234
+    },
+    {
+      "path": "models/baseline/adoc-core-v0.1.0/conditions/hormone_treated_anti_spp1_embryo_challenge.cfg",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "models/baseline/adoc-core-v0.1.0/conditions/hormone_treated_embryo_challenge.cfg",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "models/baseline/adoc-core-v0.1.0/conditions/hormone_treated_mifepristone.cfg",
+      "sha256": "437687d10033587c8187f0dbfb3194815e928e93028e4496de8d12dec7f21caa",
+      "size_bytes": 234
+    },
+    {
+      "path": "models/baseline/adoc-core-v0.1.0/conditions/hormone_treated_mifepristone_embryo_challenge.cfg",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "models/baseline/adoc-core-v0.1.0/conditions/washout.cfg",
+      "sha256": "5fd09fe31f042a5e81ffe05b1467aec6cdfa7f5fcc38b113b25eb0232901a934",
+      "size_bytes": 235
+    },
+    {
+      "path": "models/baseline/adoc-core-v0.1.0/edge_evidence.tsv",
+      "sha256": "53bc562185ab411250ad66bb3c2658c5a6296337bc2576545c5a7af96506e994",
+      "size_bytes": 9316
+    },
+    {
+      "path": "models/baseline/adoc-core-v0.1.0/network.bnd",
+      "sha256": "080e2a43f89af0137917e6f294f3244374997036ce08dd26d49f6d6b29c4a472",
+      "size_bytes": 3045
+    },
+    {
+      "path": "models/baseline/adoc-core-v0.1.0/node_dictionary.tsv",
+      "sha256": "434e372c9ebcea0ac720e1dac6e16a5ac0918e17be0d0c5ce15efd1ba9f15980",
+      "size_bytes": 10780
+    },
+    {
+      "path": "models/baseline/adoc-core-v0.1.0/phenotype_contract.tsv",
+      "sha256": "0712d16f9b7f92db8422d025f661d344306758f77c2146a34e30a4aa9d600077",
+      "size_bytes": 2667
+    },
+    {
+      "path": "models/baseline/adoc-core-v0.1.0/provenance.toml",
+      "sha256": "99f09759becaa18f26be1d7f75eae68e8e63711f4baafbd2c94834b1eda6244a",
+      "size_bytes": 2501
+    },
+    {
+      "path": "models/extended/adoc-extended-v0.1.0/README.md",
+      "sha256": "e9f7810cfc561e2c9830082f8abae3c96f9afc3fd5be6eee22b9d6006dbc1985",
+      "size_bytes": 338
+    },
+    {
+      "path": "models/extended/adoc-extended-v0.1.0/provenance.toml",
+      "sha256": "97cd87689719684bfca55a4b241233b52c0fab6fafd600325fac3d436c902a78",
+      "size_bytes": 397
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/README.md",
+      "sha256": "c48638b5b91c75133a1cb29e878ab672dee33c111066dbb372c4bb0ab133fc16",
+      "size_bytes": 4440
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/baseline.cfg",
+      "sha256": "ec9871d62e4e15436cd135652f85900b5346e41b8f67117285933f729c670807",
+      "size_bytes": 4002
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/conditions/adhesion_challenge_basal.cfg",
+      "sha256": "1cde2d12c5fb95b3680eb10d7a7160002b79f339af16d4f64b15fe98e67d27fa",
+      "size_bytes": 412
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/conditions/adhesion_challenge_excess_er_stress.cfg",
+      "sha256": "21a7f0570ed0b73cadba710cb4a778ad3552a07e06102ce28cce931e7369f1f1",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/conditions/adhesion_challenge_high_ecm_stiffness.cfg",
+      "sha256": "65a5d9f237baa51be310343b410d1a76f499832a1495bb8785ff0c01b19f1b4c",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/conditions/adhesion_challenge_hormone_treated.cfg",
+      "sha256": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+      "size_bytes": 408
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/conditions/adhesion_challenge_hormone_treated_anti_spp1.cfg",
+      "sha256": "f1a307764f8f06a69941f5d637ccecb4bb18992481b50784b7f3615617a2068a",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/conditions/adhesion_challenge_hormone_treated_mifepristone.cfg",
+      "sha256": "4881de9c5a5a89ed81aca919b38cb4a546425cee28b74a5cb9f3c5ff399e6162",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/conditions/adhesion_challenge_washout.cfg",
+      "sha256": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+      "size_bytes": 408
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/conditions/basal_maternal.cfg",
+      "sha256": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+      "size_bytes": 415
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/conditions/e2_primed_maternal.cfg",
+      "sha256": "93006ce97fa5244594593d3f500f1c8d9699ae547030608079856f0d1f190bbe",
+      "size_bytes": 414
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/conditions/embryo_absent.cfg",
+      "sha256": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "size_bytes": 411
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/conditions/embryo_incompetent.cfg",
+      "sha256": "77a4afb84e58268c2af3fab9e636beb678939b8c89a0ec8432716b5f071ff64f",
+      "size_bytes": 409
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/conditions/excess_er_stress.cfg",
+      "sha256": "21a7f0570ed0b73cadba710cb4a778ad3552a07e06102ce28cce931e7369f1f1",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/conditions/high_ecm_stiffness.cfg",
+      "sha256": "65a5d9f237baa51be310343b410d1a76f499832a1495bb8785ff0c01b19f1b4c",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/conditions/hormone_treated.cfg",
+      "sha256": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+      "size_bytes": 408
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/conditions/hormone_treated_anti_spp1.cfg",
+      "sha256": "f1a307764f8f06a69941f5d637ccecb4bb18992481b50784b7f3615617a2068a",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/conditions/hormone_treated_maternal.cfg",
+      "sha256": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "size_bytes": 411
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/conditions/hormone_treated_mifepristone.cfg",
+      "sha256": "4881de9c5a5a89ed81aca919b38cb4a546425cee28b74a5cb9f3c5ff399e6162",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/conditions/untreated.cfg",
+      "sha256": "1cde2d12c5fb95b3680eb10d7a7160002b79f339af16d4f64b15fe98e67d27fa",
+      "size_bytes": 412
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/differences_from_baseline.md",
+      "sha256": "4e8a9d917500532e107c58c7af8e9cf51304f7083d2ba1e6b357584e940b7d7a",
+      "size_bytes": 1787
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/edge_evidence.tsv",
+      "sha256": "cb0182f3cd8cf72e3bfe457124dbe7a2636abc42f930105afd1a0c6de24227c1",
+      "size_bytes": 12352
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/network.bnd",
+      "sha256": "28dd1c8748cec1ad296a3eeeb4f4db3d8d9ba3da3928058075507f1763475fe6",
+      "size_bytes": 4048
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/node_dictionary.tsv",
+      "sha256": "032904f608d356e8835f1ec0d551727d9dda01f85250f0acab5acb867f4ce3ca",
+      "size_bytes": 17098
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/phenotype_contract.tsv",
+      "sha256": "d11aca9d21c45e2b36da0366c089244b4ed6338742d320ead3a2c30fff754dc1",
+      "size_bytes": 1074
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/provenance.toml",
+      "sha256": "377e4de9bc77eea2f81cb393d46f82c222e71d36a5446f3f401494c4b30050d4",
+      "size_bytes": 5210
+    },
+    {
+      "path": "models/extended/adoc-literature-v0.2.0/uncertainty_notes.md",
+      "sha256": "4ef92878bfde7e47e8a338be9ff6c2ea5ff61c7fd8b3bfb7476e2fd609e72238",
+      "size_bytes": 2515
+    },
+    {
+      "path": "models/model-provenance-template.tsv",
+      "sha256": "9ab0ec93a3d6d7c1c2450e2feef5fc6b7a53cfdeef7a6d45c28ca00cb06112a8",
+      "size_bytes": 518
+    },
+    {
+      "path": "models/specs/edges.tsv",
+      "sha256": "0109a325099f3a697e3768af55fc555fdb8740d45b9b180e23b8b568ba06c714",
+      "size_bytes": 16725
+    },
+    {
+      "path": "models/specs/nodes.tsv",
+      "sha256": "699ed9468510904e84d6623a9921700ec88fc76885a21a11a3321668ff6e6602",
+      "size_bytes": 12777
+    },
+    {
+      "path": "models/specs/parameter_scenarios.yaml",
+      "sha256": "e30f6072ed7d4d03228e127e61902c0224fb4bd1f688790da73004e3ad8e39de",
+      "size_bytes": 2085
+    },
+    {
+      "path": "models/specs/phenotypes.yaml",
+      "sha256": "145631d4f1bd7e3039b820bb9896ae65bd54635c70387e3f05dbef59efeab99b",
+      "size_bytes": 1266
+    },
+    {
+      "path": "models/specs/rules.yaml",
+      "sha256": "4091cfcda3dda7b7568e6a512e21af47433cd99adfe4ad2fd5dd88257cb7a160",
+      "size_bytes": 14387
+    },
+    {
+      "path": "models/specs/uncertain_rule_variants.yaml",
+      "sha256": "7431d91a444f53c1b42e078294980129d32e1e6034deb205506ea7b80bb5b629",
+      "size_bytes": 3520
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/README.md",
+      "sha256": "dd0da753f0f1315b6fdc4b4f15133b0e6cc3d28628bba255eebd5a272587ef7e",
+      "size_bytes": 5724
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/baseline.cfg",
+      "sha256": "6959907700d48d3072e2fa26f605c21798f7bf512e5779e570d3bdef23bf9842",
+      "size_bytes": 4225
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/complete_edges.tsv",
+      "sha256": "b1402b5dab09ad2e3d7f5833624f6130a15798e50479e59983a82396dd735bdc",
+      "size_bytes": 51376
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/complete_nodes.tsv",
+      "sha256": "be5d0dfb402b372028a11a39cef26ed1bd25453300b5cf1a5c5a817703e537d7",
+      "size_bytes": 29257
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/conditions/adhesion_challenge_basal.cfg",
+      "sha256": "1cde2d12c5fb95b3680eb10d7a7160002b79f339af16d4f64b15fe98e67d27fa",
+      "size_bytes": 412
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/conditions/adhesion_challenge_excess_er_stress.cfg",
+      "sha256": "21a7f0570ed0b73cadba710cb4a778ad3552a07e06102ce28cce931e7369f1f1",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/conditions/adhesion_challenge_high_ecm_stiffness.cfg",
+      "sha256": "65a5d9f237baa51be310343b410d1a76f499832a1495bb8785ff0c01b19f1b4c",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/conditions/adhesion_challenge_hormone_treated.cfg",
+      "sha256": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+      "size_bytes": 408
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/conditions/adhesion_challenge_hormone_treated_anti_spp1.cfg",
+      "sha256": "f1a307764f8f06a69941f5d637ccecb4bb18992481b50784b7f3615617a2068a",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/conditions/adhesion_challenge_hormone_treated_mifepristone.cfg",
+      "sha256": "4881de9c5a5a89ed81aca919b38cb4a546425cee28b74a5cb9f3c5ff399e6162",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/conditions/adhesion_challenge_washout.cfg",
+      "sha256": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+      "size_bytes": 408
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/conditions/basal_maternal.cfg",
+      "sha256": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+      "size_bytes": 415
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/conditions/e2_primed_maternal.cfg",
+      "sha256": "93006ce97fa5244594593d3f500f1c8d9699ae547030608079856f0d1f190bbe",
+      "size_bytes": 414
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/conditions/embryo_absent.cfg",
+      "sha256": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "size_bytes": 411
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/conditions/embryo_incompetent.cfg",
+      "sha256": "77a4afb84e58268c2af3fab9e636beb678939b8c89a0ec8432716b5f071ff64f",
+      "size_bytes": 409
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/conditions/excess_er_stress.cfg",
+      "sha256": "e3bbc93b2e48c732634c0fbc5cf2f7d634a03f8a93333ccb58182679d12d5c62",
+      "size_bytes": 410
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/conditions/high_ecm_stiffness.cfg",
+      "sha256": "f0ca6146c32624e73052a995c0f54f3d7fe56b6865cb95b81cac6566ffa483c0",
+      "size_bytes": 410
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/conditions/hormone_treated.cfg",
+      "sha256": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "size_bytes": 411
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/conditions/hormone_treated_anti_spp1.cfg",
+      "sha256": "d0e7e3c5d484e60ee58ea4961a9bef7e6084ab80257dfe177cd80c456cdc725d",
+      "size_bytes": 410
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/conditions/hormone_treated_maternal.cfg",
+      "sha256": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "size_bytes": 411
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/conditions/hormone_treated_mifepristone.cfg",
+      "sha256": "91ebe467a4adaba0f35b76943c429f134bcc36e8d15f38daebf3aacfb94f76bd",
+      "size_bytes": 410
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/conditions/untreated.cfg",
+      "sha256": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+      "size_bytes": 415
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/drug_target_catalog.tsv",
+      "sha256": "6f15497fbe7b93dc85d8c749d1a0883bdaa3b2834f576faf1aacb1f03fdbbc14",
+      "size_bytes": 9624
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/edge_evidence.tsv",
+      "sha256": "e6d4a1d563ffc85bf32618a092d197bac43172d577b0d7aca02c0cf180a062b3",
+      "size_bytes": 13307
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/edge_evidence_assertions.tsv",
+      "sha256": "cc3011dc731447986b929c965f394276fb5a11bb88bafa1bb83647444517764e",
+      "size_bytes": 51821
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/ensemble_definition.tsv",
+      "sha256": "17f0261f711f5634e2fd7bd2241415fbfc5b5c2eab7743f7e532a1a5ea0b9f65",
+      "size_bytes": 1228
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/executable_model_manifest.tsv",
+      "sha256": "4babbec18087a44e077610c8230a9952392c81bdf7fbb51853bcbfaa9bcd3da8",
+      "size_bytes": 1853
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/executable_modules_network.mmd",
+      "sha256": "505e99f5c23bb7c6f3cae1a21743c38bd7741e053c6dc0dfde15876290ac7f27",
+      "size_bytes": 5800
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/generated/literature_parity/README.md",
+      "sha256": "abb5235b394895ccda941e14b6948eab713d9c6714228ae7894f323a20778da5",
+      "size_bytes": 423
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/generated/literature_parity/baseline.cfg",
+      "sha256": "7c56bdb176382d5ddde8ca4c51a3b2d99e9ef1e0e64f71dd70b6a763a8c02527",
+      "size_bytes": 3974
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/generated/literature_parity/edge_evidence.tsv",
+      "sha256": "11978e62399ea2d49f02615a11642fdf709cb33f195eef1b63a4f19a62244e2b",
+      "size_bytes": 7747
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/generated/literature_parity/network.bnd",
+      "sha256": "deaf6f92dd07cbd6a04441c4b206e0fe9c367e6916680f6a97e7416882b24291",
+      "size_bytes": 3998
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/generated/literature_parity/node_dictionary.tsv",
+      "sha256": "6f60c7c0c98a32014f5071bc9525eee2cc5bf2f0154925199466acd9ef7ece83",
+      "size_bytes": 23783
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/generated/literature_parity/phenotype_contract.tsv",
+      "sha256": "f7dc1e716d6bccf6cd260a8d6afc3a1c9d2cada46dffee05328978d05c12b53c",
+      "size_bytes": 942
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/generated/literature_parity/provenance.toml",
+      "sha256": "1df1cad2a52d00e68635ef7c93a4dff64b17bce107ccd2698bfea91a67979a15",
+      "size_bytes": 419
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/generated/minimal_core/README.md",
+      "sha256": "2621180dde0d28920c70462e7ca30936c326742ece139b0ec4a6c23b0d66d7c7",
+      "size_bytes": 402
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/generated/minimal_core/baseline.cfg",
+      "sha256": "7c56bdb176382d5ddde8ca4c51a3b2d99e9ef1e0e64f71dd70b6a763a8c02527",
+      "size_bytes": 3974
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/generated/minimal_core/edge_evidence.tsv",
+      "sha256": "11978e62399ea2d49f02615a11642fdf709cb33f195eef1b63a4f19a62244e2b",
+      "size_bytes": 7747
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/generated/minimal_core/network.bnd",
+      "sha256": "a72b8623a67cc1d23fcf74a2ce6841b18fa91607544c67e421105aca4ffdc39e",
+      "size_bytes": 4046
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/generated/minimal_core/node_dictionary.tsv",
+      "sha256": "6f60c7c0c98a32014f5071bc9525eee2cc5bf2f0154925199466acd9ef7ece83",
+      "size_bytes": 23783
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/generated/minimal_core/phenotype_contract.tsv",
+      "sha256": "f7dc1e716d6bccf6cd260a8d6afc3a1c9d2cada46dffee05328978d05c12b53c",
+      "size_bytes": 942
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/generated/minimal_core/provenance.toml",
+      "sha256": "aac8bf8a4f356777f5b48ed5b671cfa54195d69d5d87c946dcf9a93b49eb1013",
+      "size_bytes": 409
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/generated/module_expansion_proliferative_feedback/README.md",
+      "sha256": "56f924b26a7b64fbb56c6842654cc6418f62dbdbeaf1c7b42ddb64b8d4d7eae9",
+      "size_bytes": 443
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/generated/module_expansion_proliferative_feedback/baseline.cfg",
+      "sha256": "7768afc5db32ef3c6cb5cc5fa07060cfdcfc11cc831bc74d41dccfd10dd80dbd",
+      "size_bytes": 4132
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/generated/module_expansion_proliferative_feedback/edge_evidence.tsv",
+      "sha256": "3eac4553e90ed1cf690c37c6a9de72a9410dd9084b74103b53bea29b1c01273b",
+      "size_bytes": 8300
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/generated/module_expansion_proliferative_feedback/network.bnd",
+      "sha256": "295e55457e04d7a40bdae3ccc6ffa77277f3c43a7c00fd60ab3ae00cf3341661",
+      "size_bytes": 4202
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/generated/module_expansion_proliferative_feedback/node_dictionary.tsv",
+      "sha256": "de7127ab9894810d943fc5b5b28a26d0b7f884aa4f7533b2ef4d13a293aaa01b",
+      "size_bytes": 24630
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/generated/module_expansion_proliferative_feedback/phenotype_contract.tsv",
+      "sha256": "f7dc1e716d6bccf6cd260a8d6afc3a1c9d2cada46dffee05328978d05c12b53c",
+      "size_bytes": 942
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/generated/module_expansion_proliferative_feedback/provenance.toml",
+      "sha256": "fb6a2ccba7b9a5cfef7523ce2168477ec1e4ca136546d7fa524cc4cf68c6f9e2",
+      "size_bytes": 463
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/interface_contract.tsv",
+      "sha256": "5b8e8fa2570bbbe1e1c6559becb6c706d0807b77326e20f8c051bbef71a724c0",
+      "size_bytes": 2859
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/literature_superset_network.mmd",
+      "sha256": "36faeb50c4e0e0ee9617fac956b5286e397858b2a5a2c99bf1c603e1c5af1ff0",
+      "size_bytes": 4337
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/module_activity_report.tsv",
+      "sha256": "64955b58854a1ee5e1209bde9a3bf60eb5b77fc4b53da3f5e8ff7db9e53d89bd",
+      "size_bytes": 2187
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/modules.tsv",
+      "sha256": "c410fb7f374550e8e442d4f48c038e4779fdcfe5a57c3ce3511d22143bdf9b9e",
+      "size_bytes": 7534
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/network.bnd",
+      "sha256": "ecb6b7d3de295a6c8778ffa4f6b4cb8b87bcf6da9f9b200a24e601090f7f9456",
+      "size_bytes": 4316
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/node_dictionary.tsv",
+      "sha256": "14deb16c90088a0e5eac161d3495012ae72bf8f155d0b883136fd3da90c8b067",
+      "size_bytes": 18443
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/phenotype_contract.tsv",
+      "sha256": "4df11861ae82612876dd28d4269a5d06f39a941b29d029d4bb8fe72e63dd22d5",
+      "size_bytes": 1151
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/provenance.toml",
+      "sha256": "cebf899e0ce7d6d6be5b1ce24d532635696253003a07e3f9261d13f20eb9abee",
+      "size_bytes": 9856
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/rule_variants.tsv",
+      "sha256": "e8adcb76837ae31e04174a18ac112fde65369221cf89e0acbe8a650661fc15e1",
+      "size_bytes": 1907
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/topology.tsv",
+      "sha256": "c542f94a240d90baa346b0e4b2f2c7d4ee504b637f9ac6ddc70b15b24f7b09fe",
+      "size_bytes": 5965
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.3.0/unresolved_mechanisms.tsv",
+      "sha256": "94ea4d8ff6e7be104c89d95efb0abb75f56056190338adf958a1824d255cf630",
+      "size_bytes": 2985
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/README.md",
+      "sha256": "2a5fcca7ec6d6e1bed62a61263f4fea4b9956d5e9d8bab8467a0e273bb8d1e4a",
+      "size_bytes": 5724
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/baseline.cfg",
+      "sha256": "4d42bdcbcfcceaedaafeeb96fe76400700175c969cec15bff9e02f360ff4f41c",
+      "size_bytes": 4290
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/complete_edges.tsv",
+      "sha256": "ac39e95012688d8de7314a7486056fa3eab93f1784f523c8dbd00be309b14e00",
+      "size_bytes": 51881
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/complete_nodes.tsv",
+      "sha256": "efacf3b7437e3a381ef2a5cfeb08f8ea552ca9d5a30af1b2247066eb15c67d9a",
+      "size_bytes": 30161
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/conditions/adhesion_challenge_basal.cfg",
+      "sha256": "1cde2d12c5fb95b3680eb10d7a7160002b79f339af16d4f64b15fe98e67d27fa",
+      "size_bytes": 412
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/conditions/adhesion_challenge_excess_er_stress.cfg",
+      "sha256": "21a7f0570ed0b73cadba710cb4a778ad3552a07e06102ce28cce931e7369f1f1",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/conditions/adhesion_challenge_high_ecm_stiffness.cfg",
+      "sha256": "65a5d9f237baa51be310343b410d1a76f499832a1495bb8785ff0c01b19f1b4c",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/conditions/adhesion_challenge_hormone_treated.cfg",
+      "sha256": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+      "size_bytes": 408
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/conditions/adhesion_challenge_hormone_treated_anti_spp1.cfg",
+      "sha256": "f1a307764f8f06a69941f5d637ccecb4bb18992481b50784b7f3615617a2068a",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/conditions/adhesion_challenge_hormone_treated_hand2_loss.cfg",
+      "sha256": "610c2f675656e56e833ee3e98da5f72fe41d9574b3eb03437b6c4a5b81ad5a7a",
+      "size_bytes": 437
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/conditions/adhesion_challenge_hormone_treated_mifepristone.cfg",
+      "sha256": "4881de9c5a5a89ed81aca919b38cb4a546425cee28b74a5cb9f3c5ff399e6162",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/conditions/adhesion_challenge_washout.cfg",
+      "sha256": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+      "size_bytes": 408
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/conditions/basal_maternal.cfg",
+      "sha256": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+      "size_bytes": 415
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/conditions/e2_primed_maternal.cfg",
+      "sha256": "93006ce97fa5244594593d3f500f1c8d9699ae547030608079856f0d1f190bbe",
+      "size_bytes": 414
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/conditions/embryo_absent.cfg",
+      "sha256": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "size_bytes": 411
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/conditions/embryo_incompetent.cfg",
+      "sha256": "77a4afb84e58268c2af3fab9e636beb678939b8c89a0ec8432716b5f071ff64f",
+      "size_bytes": 409
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/conditions/excess_er_stress.cfg",
+      "sha256": "e3bbc93b2e48c732634c0fbc5cf2f7d634a03f8a93333ccb58182679d12d5c62",
+      "size_bytes": 410
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/conditions/high_ecm_stiffness.cfg",
+      "sha256": "f0ca6146c32624e73052a995c0f54f3d7fe56b6865cb95b81cac6566ffa483c0",
+      "size_bytes": 410
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/conditions/hormone_treated.cfg",
+      "sha256": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "size_bytes": 411
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/conditions/hormone_treated_anti_spp1.cfg",
+      "sha256": "d0e7e3c5d484e60ee58ea4961a9bef7e6084ab80257dfe177cd80c456cdc725d",
+      "size_bytes": 410
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/conditions/hormone_treated_hand2_loss.cfg",
+      "sha256": "30b949013ab6b195cbfbc6aff8efcec4e4edda6df319b49bdbb2585992e7ad1f",
+      "size_bytes": 440
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/conditions/hormone_treated_maternal.cfg",
+      "sha256": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "size_bytes": 411
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/conditions/hormone_treated_mifepristone.cfg",
+      "sha256": "91ebe467a4adaba0f35b76943c429f134bcc36e8d15f38daebf3aacfb94f76bd",
+      "size_bytes": 410
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/conditions/untreated.cfg",
+      "sha256": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+      "size_bytes": 415
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/conditions/washout.cfg",
+      "sha256": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "size_bytes": 411
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/drug_target_catalog.tsv",
+      "sha256": "6f15497fbe7b93dc85d8c749d1a0883bdaa3b2834f576faf1aacb1f03fdbbc14",
+      "size_bytes": 9624
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/edge_evidence.tsv",
+      "sha256": "cac102405fb7a0ccf15a4254fa37c427bfa8902e5bd5fd4550c0720b53a42fe4",
+      "size_bytes": 13508
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/ensemble_definition.tsv",
+      "sha256": "63452a3d6b8ac7832b7981656c2bfa19bff898090116f8e19cdf88c3692d1944",
+      "size_bytes": 1228
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/executable_model_manifest.tsv",
+      "sha256": "4dc757b58247ab24843b6442620a39fec8e82c88ab3cb804d27a893aef4ffbbf",
+      "size_bytes": 1853
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/executable_modules_network.mmd",
+      "sha256": "2f62c046bb2137f280dbd52688ab3d0f7673709ac8df7d7e83f782610b7112c1",
+      "size_bytes": 5862
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/interface_contract.tsv",
+      "sha256": "052414ce3fe3e535ddfc18a14f3e7005ee0f33d368659a2cd52da966d9332090",
+      "size_bytes": 3227
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/literature_superset_network.mmd",
+      "sha256": "6f03110cb630491630a3351e05d87d9cf07a4aec4a97b0298665b076806c24c8",
+      "size_bytes": 4370
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/module_activity_report.tsv",
+      "sha256": "70856e7f307d3c2fddff712e13fe6593b3c49c5980b653006c9f646d13fe1914",
+      "size_bytes": 2187
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/modules.tsv",
+      "sha256": "1cea79e6548c613112d52b3ca23d77a28eb635db0bb6c0ec8f1711387fe0f764",
+      "size_bytes": 7534
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/network.bnd",
+      "sha256": "09e3b26aeb4e2f3b0339ef852764f5de4b922984df0b0a1014c91b4a17a36637",
+      "size_bytes": 4389
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/node_dictionary.tsv",
+      "sha256": "a566d2abba87f8b019857a33b34a03d63ba5310aeb285f59412aaf91de516828",
+      "size_bytes": 19350
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/phenotype_contract.tsv",
+      "sha256": "4df11861ae82612876dd28d4269a5d06f39a941b29d029d4bb8fe72e63dd22d5",
+      "size_bytes": 1151
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/provenance.toml",
+      "sha256": "ec1183e474a6970fe3b5f9f4c2e7d8714ef08bdfd196630c2693aab873582484",
+      "size_bytes": 10318
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/rule_variants.tsv",
+      "sha256": "a5e6be6afb3d0f95c51d12ac06a128ed9f8789791b6d6556fcc39b94a535a839",
+      "size_bytes": 1907
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/topology.tsv",
+      "sha256": "a4d630ae9e302dd32e30853c6457d95940aa61f879b2b81274ccb4b5a344221c",
+      "size_bytes": 6015
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.4.0/unresolved_mechanisms.tsv",
+      "sha256": "94ea4d8ff6e7be104c89d95efb0abb75f56056190338adf958a1824d255cf630",
+      "size_bytes": 2985
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/README.md",
+      "sha256": "e8736c9222574b1988ad18746b02a64a2ef7b3511e8a8a20ca3f847a0697a80a",
+      "size_bytes": 3381
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/baseline.cfg",
+      "sha256": "4d42bdcbcfcceaedaafeeb96fe76400700175c969cec15bff9e02f360ff4f41c",
+      "size_bytes": 4290
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/complete_edges.tsv",
+      "sha256": "ac39e95012688d8de7314a7486056fa3eab93f1784f523c8dbd00be309b14e00",
+      "size_bytes": 51881
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/complete_nodes.tsv",
+      "sha256": "efacf3b7437e3a381ef2a5cfeb08f8ea552ca9d5a30af1b2247066eb15c67d9a",
+      "size_bytes": 30161
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/conditions/adhesion_challenge_basal.cfg",
+      "sha256": "1cde2d12c5fb95b3680eb10d7a7160002b79f339af16d4f64b15fe98e67d27fa",
+      "size_bytes": 412
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/conditions/adhesion_challenge_excess_er_stress.cfg",
+      "sha256": "21a7f0570ed0b73cadba710cb4a778ad3552a07e06102ce28cce931e7369f1f1",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/conditions/adhesion_challenge_high_ecm_stiffness.cfg",
+      "sha256": "65a5d9f237baa51be310343b410d1a76f499832a1495bb8785ff0c01b19f1b4c",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/conditions/adhesion_challenge_hormone_treated.cfg",
+      "sha256": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+      "size_bytes": 408
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/conditions/adhesion_challenge_hormone_treated_anti_spp1.cfg",
+      "sha256": "f1a307764f8f06a69941f5d637ccecb4bb18992481b50784b7f3615617a2068a",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/conditions/adhesion_challenge_hormone_treated_hand2_loss.cfg",
+      "sha256": "610c2f675656e56e833ee3e98da5f72fe41d9574b3eb03437b6c4a5b81ad5a7a",
+      "size_bytes": 437
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/conditions/adhesion_challenge_hormone_treated_mifepristone.cfg",
+      "sha256": "4881de9c5a5a89ed81aca919b38cb4a546425cee28b74a5cb9f3c5ff399e6162",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/conditions/adhesion_challenge_washout.cfg",
+      "sha256": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+      "size_bytes": 408
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/conditions/basal_maternal.cfg",
+      "sha256": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+      "size_bytes": 415
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/conditions/e2_primed_maternal.cfg",
+      "sha256": "93006ce97fa5244594593d3f500f1c8d9699ae547030608079856f0d1f190bbe",
+      "size_bytes": 414
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/conditions/embryo_absent.cfg",
+      "sha256": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "size_bytes": 411
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/conditions/embryo_incompetent.cfg",
+      "sha256": "77a4afb84e58268c2af3fab9e636beb678939b8c89a0ec8432716b5f071ff64f",
+      "size_bytes": 409
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/conditions/excess_er_stress.cfg",
+      "sha256": "e3bbc93b2e48c732634c0fbc5cf2f7d634a03f8a93333ccb58182679d12d5c62",
+      "size_bytes": 410
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/conditions/high_ecm_stiffness.cfg",
+      "sha256": "f0ca6146c32624e73052a995c0f54f3d7fe56b6865cb95b81cac6566ffa483c0",
+      "size_bytes": 410
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/conditions/hormone_treated.cfg",
+      "sha256": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "size_bytes": 411
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/conditions/hormone_treated_anti_spp1.cfg",
+      "sha256": "d0e7e3c5d484e60ee58ea4961a9bef7e6084ab80257dfe177cd80c456cdc725d",
+      "size_bytes": 410
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/conditions/hormone_treated_hand2_loss.cfg",
+      "sha256": "30b949013ab6b195cbfbc6aff8efcec4e4edda6df319b49bdbb2585992e7ad1f",
+      "size_bytes": 440
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/conditions/hormone_treated_maternal.cfg",
+      "sha256": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "size_bytes": 411
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/conditions/hormone_treated_mifepristone.cfg",
+      "sha256": "91ebe467a4adaba0f35b76943c429f134bcc36e8d15f38daebf3aacfb94f76bd",
+      "size_bytes": 410
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/conditions/untreated.cfg",
+      "sha256": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+      "size_bytes": 415
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/conditions/washout.cfg",
+      "sha256": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "size_bytes": 411
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/drug_target_catalog.tsv",
+      "sha256": "6f15497fbe7b93dc85d8c749d1a0883bdaa3b2834f576faf1aacb1f03fdbbc14",
+      "size_bytes": 9624
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/edge_evidence.tsv",
+      "sha256": "cac102405fb7a0ccf15a4254fa37c427bfa8902e5bd5fd4550c0720b53a42fe4",
+      "size_bytes": 13508
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/ensemble_definition.tsv",
+      "sha256": "63452a3d6b8ac7832b7981656c2bfa19bff898090116f8e19cdf88c3692d1944",
+      "size_bytes": 1228
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/executable_model_manifest.tsv",
+      "sha256": "35fefe23794890ec3094a1a1360a1740a66ae076303ac048c8cd9af9a4d53311",
+      "size_bytes": 2566
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/executable_modules_network.mmd",
+      "sha256": "2f62c046bb2137f280dbd52688ab3d0f7673709ac8df7d7e83f782610b7112c1",
+      "size_bytes": 5862
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/interface_contract.tsv",
+      "sha256": "052414ce3fe3e535ddfc18a14f3e7005ee0f33d368659a2cd52da966d9332090",
+      "size_bytes": 3227
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/literature_superset_network.mmd",
+      "sha256": "6f03110cb630491630a3351e05d87d9cf07a4aec4a97b0298665b076806c24c8",
+      "size_bytes": 4370
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/module_activity_report.tsv",
+      "sha256": "70856e7f307d3c2fddff712e13fe6593b3c49c5980b653006c9f646d13fe1914",
+      "size_bytes": 2187
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/modules.tsv",
+      "sha256": "1cea79e6548c613112d52b3ca23d77a28eb635db0bb6c0ec8f1711387fe0f764",
+      "size_bytes": 7534
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/network.bnd",
+      "sha256": "09e3b26aeb4e2f3b0339ef852764f5de4b922984df0b0a1014c91b4a17a36637",
+      "size_bytes": 4389
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/node_dictionary.tsv",
+      "sha256": "a566d2abba87f8b019857a33b34a03d63ba5310aeb285f59412aaf91de516828",
+      "size_bytes": 19350
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/phenotype_contract.tsv",
+      "sha256": "4df11861ae82612876dd28d4269a5d06f39a941b29d029d4bb8fe72e63dd22d5",
+      "size_bytes": 1151
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/provenance.toml",
+      "sha256": "b6d3e22bd38aef299ad3471bfc37c8155020f0ec8ce7eb289d7b87fd877bff8a",
+      "size_bytes": 12263
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/rule_variants.tsv",
+      "sha256": "a5e6be6afb3d0f95c51d12ac06a128ed9f8789791b6d6556fcc39b94a535a839",
+      "size_bytes": 1907
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/topology.tsv",
+      "sha256": "a4d630ae9e302dd32e30853c6457d95940aa61f879b2b81274ccb4b5a344221c",
+      "size_bytes": 6015
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.0/unresolved_mechanisms.tsv",
+      "sha256": "94ea4d8ff6e7be104c89d95efb0abb75f56056190338adf958a1824d255cf630",
+      "size_bytes": 2985
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/README.md",
+      "sha256": "c62ff7c73bc756fa9bc3c6039b6451678e079aed9f78cc296e94be1fbd7c5cd7",
+      "size_bytes": 2771
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/baseline.cfg",
+      "sha256": "4d42bdcbcfcceaedaafeeb96fe76400700175c969cec15bff9e02f360ff4f41c",
+      "size_bytes": 4290
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/complete_edges.tsv",
+      "sha256": "ac39e95012688d8de7314a7486056fa3eab93f1784f523c8dbd00be309b14e00",
+      "size_bytes": 51881
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/complete_nodes.tsv",
+      "sha256": "efacf3b7437e3a381ef2a5cfeb08f8ea552ca9d5a30af1b2247066eb15c67d9a",
+      "size_bytes": 30161
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/conditions/adhesion_challenge_basal.cfg",
+      "sha256": "1cde2d12c5fb95b3680eb10d7a7160002b79f339af16d4f64b15fe98e67d27fa",
+      "size_bytes": 412
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/conditions/adhesion_challenge_excess_er_stress.cfg",
+      "sha256": "21a7f0570ed0b73cadba710cb4a778ad3552a07e06102ce28cce931e7369f1f1",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/conditions/adhesion_challenge_high_ecm_stiffness.cfg",
+      "sha256": "65a5d9f237baa51be310343b410d1a76f499832a1495bb8785ff0c01b19f1b4c",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/conditions/adhesion_challenge_hormone_treated.cfg",
+      "sha256": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+      "size_bytes": 408
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/conditions/adhesion_challenge_hormone_treated_anti_spp1.cfg",
+      "sha256": "f1a307764f8f06a69941f5d637ccecb4bb18992481b50784b7f3615617a2068a",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/conditions/adhesion_challenge_hormone_treated_hand2_loss.cfg",
+      "sha256": "610c2f675656e56e833ee3e98da5f72fe41d9574b3eb03437b6c4a5b81ad5a7a",
+      "size_bytes": 437
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/conditions/adhesion_challenge_hormone_treated_mifepristone.cfg",
+      "sha256": "4881de9c5a5a89ed81aca919b38cb4a546425cee28b74a5cb9f3c5ff399e6162",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/conditions/adhesion_challenge_washout.cfg",
+      "sha256": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+      "size_bytes": 408
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/conditions/basal_maternal.cfg",
+      "sha256": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+      "size_bytes": 415
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/conditions/e2_primed_maternal.cfg",
+      "sha256": "93006ce97fa5244594593d3f500f1c8d9699ae547030608079856f0d1f190bbe",
+      "size_bytes": 414
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/conditions/embryo_absent.cfg",
+      "sha256": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "size_bytes": 411
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/conditions/embryo_incompetent.cfg",
+      "sha256": "77a4afb84e58268c2af3fab9e636beb678939b8c89a0ec8432716b5f071ff64f",
+      "size_bytes": 409
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/conditions/excess_er_stress.cfg",
+      "sha256": "e3bbc93b2e48c732634c0fbc5cf2f7d634a03f8a93333ccb58182679d12d5c62",
+      "size_bytes": 410
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/conditions/high_ecm_stiffness.cfg",
+      "sha256": "f0ca6146c32624e73052a995c0f54f3d7fe56b6865cb95b81cac6566ffa483c0",
+      "size_bytes": 410
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/conditions/hormone_treated.cfg",
+      "sha256": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "size_bytes": 411
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/conditions/hormone_treated_anti_spp1.cfg",
+      "sha256": "d0e7e3c5d484e60ee58ea4961a9bef7e6084ab80257dfe177cd80c456cdc725d",
+      "size_bytes": 410
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/conditions/hormone_treated_hand2_loss.cfg",
+      "sha256": "30b949013ab6b195cbfbc6aff8efcec4e4edda6df319b49bdbb2585992e7ad1f",
+      "size_bytes": 440
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/conditions/hormone_treated_maternal.cfg",
+      "sha256": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "size_bytes": 411
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/conditions/hormone_treated_mifepristone.cfg",
+      "sha256": "91ebe467a4adaba0f35b76943c429f134bcc36e8d15f38daebf3aacfb94f76bd",
+      "size_bytes": 410
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/conditions/untreated.cfg",
+      "sha256": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+      "size_bytes": 415
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/conditions/washout.cfg",
+      "sha256": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "size_bytes": 411
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/drug_target_catalog.tsv",
+      "sha256": "6f15497fbe7b93dc85d8c749d1a0883bdaa3b2834f576faf1aacb1f03fdbbc14",
+      "size_bytes": 9624
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/edge_evidence.tsv",
+      "sha256": "cac102405fb7a0ccf15a4254fa37c427bfa8902e5bd5fd4550c0720b53a42fe4",
+      "size_bytes": 13508
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/ensemble_definition.tsv",
+      "sha256": "63452a3d6b8ac7832b7981656c2bfa19bff898090116f8e19cdf88c3692d1944",
+      "size_bytes": 1228
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/executable_model_manifest.tsv",
+      "sha256": "656184bf5a06a07b091dbf02c06aa3e027bd7ad202866e34d21642ef9bf5ae9e",
+      "size_bytes": 3241
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/executable_modules_network.mmd",
+      "sha256": "9f21f54b8d489cf1cc873e7cea2340479da264204ab31a377a5b1a5e1ba6e991",
+      "size_bytes": 5785
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/interface_contract.tsv",
+      "sha256": "052414ce3fe3e535ddfc18a14f3e7005ee0f33d368659a2cd52da966d9332090",
+      "size_bytes": 3227
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/literature_superset_network.mmd",
+      "sha256": "6f03110cb630491630a3351e05d87d9cf07a4aec4a97b0298665b076806c24c8",
+      "size_bytes": 4370
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/module_activity_report.tsv",
+      "sha256": "70856e7f307d3c2fddff712e13fe6593b3c49c5980b653006c9f646d13fe1914",
+      "size_bytes": 2187
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/modules.tsv",
+      "sha256": "1cea79e6548c613112d52b3ca23d77a28eb635db0bb6c0ec8f1711387fe0f764",
+      "size_bytes": 7534
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/network.bnd",
+      "sha256": "d7068867429cfdafe89442ee2fb0bc3fb94ae9f985d3d65b1c4be19d01cad063",
+      "size_bytes": 4366
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/node_dictionary.tsv",
+      "sha256": "a566d2abba87f8b019857a33b34a03d63ba5310aeb285f59412aaf91de516828",
+      "size_bytes": 19350
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/phenotype_contract.tsv",
+      "sha256": "4df11861ae82612876dd28d4269a5d06f39a941b29d029d4bb8fe72e63dd22d5",
+      "size_bytes": 1151
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/provenance.toml",
+      "sha256": "6f93d37f0a030f5fe1659b3dab9c92863c71919aaf1bdf412ae4f3267a10aa9c",
+      "size_bytes": 11934
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/rule_variants.tsv",
+      "sha256": "a5e6be6afb3d0f95c51d12ac06a128ed9f8789791b6d6556fcc39b94a535a839",
+      "size_bytes": 1907
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/topology.tsv",
+      "sha256": "904ddc9ac2cfe04fb38e8b2f97e37c2cf68e486fd35c0a7f64700c7443d0fde7",
+      "size_bytes": 6013
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/topology_increment_adjudications.tsv",
+      "sha256": "67086292ef8e358ffeba9371673de8113ca607c733270271d4dbf37f6cbd9435",
+      "size_bytes": 2241
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.1/unresolved_mechanisms.tsv",
+      "sha256": "94ea4d8ff6e7be104c89d95efb0abb75f56056190338adf958a1824d255cf630",
+      "size_bytes": 2985
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/README.md",
+      "sha256": "536b7a75db52476418f917d65ddf3b62107da403ba77e33cfd8c51abdaffadca",
+      "size_bytes": 4362
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/baseline.cfg",
+      "sha256": "4d42bdcbcfcceaedaafeeb96fe76400700175c969cec15bff9e02f360ff4f41c",
+      "size_bytes": 4290
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/complete_edges.tsv",
+      "sha256": "ac39e95012688d8de7314a7486056fa3eab93f1784f523c8dbd00be309b14e00",
+      "size_bytes": 51881
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/complete_nodes.tsv",
+      "sha256": "efacf3b7437e3a381ef2a5cfeb08f8ea552ca9d5a30af1b2247066eb15c67d9a",
+      "size_bytes": 30161
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/conditions/adhesion_challenge_basal.cfg",
+      "sha256": "1cde2d12c5fb95b3680eb10d7a7160002b79f339af16d4f64b15fe98e67d27fa",
+      "size_bytes": 412
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/conditions/adhesion_challenge_excess_er_stress.cfg",
+      "sha256": "21a7f0570ed0b73cadba710cb4a778ad3552a07e06102ce28cce931e7369f1f1",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/conditions/adhesion_challenge_high_ecm_stiffness.cfg",
+      "sha256": "65a5d9f237baa51be310343b410d1a76f499832a1495bb8785ff0c01b19f1b4c",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/conditions/adhesion_challenge_hormone_treated.cfg",
+      "sha256": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+      "size_bytes": 408
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/conditions/adhesion_challenge_hormone_treated_anti_spp1.cfg",
+      "sha256": "f1a307764f8f06a69941f5d637ccecb4bb18992481b50784b7f3615617a2068a",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/conditions/adhesion_challenge_hormone_treated_hand2_loss.cfg",
+      "sha256": "610c2f675656e56e833ee3e98da5f72fe41d9574b3eb03437b6c4a5b81ad5a7a",
+      "size_bytes": 437
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/conditions/adhesion_challenge_hormone_treated_mifepristone.cfg",
+      "sha256": "4881de9c5a5a89ed81aca919b38cb4a546425cee28b74a5cb9f3c5ff399e6162",
+      "size_bytes": 407
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/conditions/adhesion_challenge_washout.cfg",
+      "sha256": "ad57df1507fbc772740b004cd920afce1dea3d16206f5181b6b3cef05c0c0688",
+      "size_bytes": 408
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/conditions/basal_maternal.cfg",
+      "sha256": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+      "size_bytes": 415
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/conditions/e2_primed_maternal.cfg",
+      "sha256": "93006ce97fa5244594593d3f500f1c8d9699ae547030608079856f0d1f190bbe",
+      "size_bytes": 414
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/conditions/embryo_absent.cfg",
+      "sha256": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "size_bytes": 411
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/conditions/embryo_incompetent.cfg",
+      "sha256": "77a4afb84e58268c2af3fab9e636beb678939b8c89a0ec8432716b5f071ff64f",
+      "size_bytes": 409
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/conditions/excess_er_stress.cfg",
+      "sha256": "e3bbc93b2e48c732634c0fbc5cf2f7d634a03f8a93333ccb58182679d12d5c62",
+      "size_bytes": 410
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/conditions/high_ecm_stiffness.cfg",
+      "sha256": "f0ca6146c32624e73052a995c0f54f3d7fe56b6865cb95b81cac6566ffa483c0",
+      "size_bytes": 410
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/conditions/hormone_treated.cfg",
+      "sha256": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "size_bytes": 411
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/conditions/hormone_treated_anti_spp1.cfg",
+      "sha256": "d0e7e3c5d484e60ee58ea4961a9bef7e6084ab80257dfe177cd80c456cdc725d",
+      "size_bytes": 410
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/conditions/hormone_treated_hand2_loss.cfg",
+      "sha256": "30b949013ab6b195cbfbc6aff8efcec4e4edda6df319b49bdbb2585992e7ad1f",
+      "size_bytes": 440
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/conditions/hormone_treated_maternal.cfg",
+      "sha256": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "size_bytes": 411
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/conditions/hormone_treated_mifepristone.cfg",
+      "sha256": "91ebe467a4adaba0f35b76943c429f134bcc36e8d15f38daebf3aacfb94f76bd",
+      "size_bytes": 410
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/conditions/untreated.cfg",
+      "sha256": "4ad2ed17fa9d016329394c6cf245997a35a6b6f30be8d7cc77076a6a7baaa183",
+      "size_bytes": 415
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/conditions/washout.cfg",
+      "sha256": "9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9",
+      "size_bytes": 411
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/drug_target_catalog.tsv",
+      "sha256": "6f15497fbe7b93dc85d8c749d1a0883bdaa3b2834f576faf1aacb1f03fdbbc14",
+      "size_bytes": 9624
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/edge_evidence.tsv",
+      "sha256": "cac102405fb7a0ccf15a4254fa37c427bfa8902e5bd5fd4550c0720b53a42fe4",
+      "size_bytes": 13508
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/ensemble_definition.tsv",
+      "sha256": "63452a3d6b8ac7832b7981656c2bfa19bff898090116f8e19cdf88c3692d1944",
+      "size_bytes": 1228
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/executable_model_manifest.tsv",
+      "sha256": "15c2480e8c860b36f5c556ce91d7134b9e6a9594f34b87ee62930cc21267201b",
+      "size_bytes": 3927
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/executable_modules_network.mmd",
+      "sha256": "a7df134c1affc70ce746241127769f7f56db2177775b95b1c6c7a9080d56a3db",
+      "size_bytes": 5705
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/interface_contract.tsv",
+      "sha256": "052414ce3fe3e535ddfc18a14f3e7005ee0f33d368659a2cd52da966d9332090",
+      "size_bytes": 3227
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/literature_superset_network.mmd",
+      "sha256": "6f03110cb630491630a3351e05d87d9cf07a4aec4a97b0298665b076806c24c8",
+      "size_bytes": 4370
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/module_activity_report.tsv",
+      "sha256": "70856e7f307d3c2fddff712e13fe6593b3c49c5980b653006c9f646d13fe1914",
+      "size_bytes": 2187
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/modules.tsv",
+      "sha256": "1cea79e6548c613112d52b3ca23d77a28eb635db0bb6c0ec8f1711387fe0f764",
+      "size_bytes": 7534
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/network.bnd",
+      "sha256": "7a73529c28ab7533c25c0673744bad7496ee8d75d7849fe3971838dbcf2d7b25",
+      "size_bytes": 4339
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/node_dictionary.tsv",
+      "sha256": "a566d2abba87f8b019857a33b34a03d63ba5310aeb285f59412aaf91de516828",
+      "size_bytes": 19350
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/phenotype_contract.tsv",
+      "sha256": "4df11861ae82612876dd28d4269a5d06f39a941b29d029d4bb8fe72e63dd22d5",
+      "size_bytes": 1151
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/provenance.toml",
+      "sha256": "8fa3b408ee0b9384b51ab60b4648e913226444280565b0a4b81e3907117f9fe1",
+      "size_bytes": 12172
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/rule_variants.tsv",
+      "sha256": "a5e6be6afb3d0f95c51d12ac06a128ed9f8789791b6d6556fcc39b94a535a839",
+      "size_bytes": 1907
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/topology.tsv",
+      "sha256": "8b1decdded658fc7f87a8540b3498ca8325f38aad94fa79229c75fa574e7f3e0",
+      "size_bytes": 6013
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/topology_increment_adjudications.tsv",
+      "sha256": "b1a1e510610029c2c773d07aa059227a41b62a537e534dda77f28c1c8a4954aa",
+      "size_bytes": 4976
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.5.2/unresolved_mechanisms.tsv",
+      "sha256": "94ea4d8ff6e7be104c89d95efb0abb75f56056190338adf958a1824d255cf630",
+      "size_bytes": 2985
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/README.md",
+      "sha256": "69fc24320365d34cf81903db2081b6ac8d67443b212e3c67c55905b814d9e601",
+      "size_bytes": 3774
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/baseline.cfg",
+      "sha256": "e39cbabb7056efa3eca732aec98b68ba0d9e650aef0f4d82a4efac83daff527b",
+      "size_bytes": 4095
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/complete_edges.tsv",
+      "sha256": "ac39e95012688d8de7314a7486056fa3eab93f1784f523c8dbd00be309b14e00",
+      "size_bytes": 51881
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/complete_nodes.tsv",
+      "sha256": "efacf3b7437e3a381ef2a5cfeb08f8ea552ca9d5a30af1b2247066eb15c67d9a",
+      "size_bytes": 30161
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/conditions/adhesion_challenge_basal.cfg",
+      "sha256": "1f98e358e259c5f9ffd6231a56a5367a23933912f172abc450a112cf8afd92f3",
+      "size_bytes": 351
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/conditions/adhesion_challenge_excess_er_stress.cfg",
+      "sha256": "2fe3e08561d11259b511badb69c3ffccebcf26cad0b3ed4e4617fe4fc4b6b443",
+      "size_bytes": 346
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/conditions/adhesion_challenge_high_ecm_stiffness.cfg",
+      "sha256": "797cb152eaceb108517c484449e314d273e9f532006f806f3282e67fb4ddc7aa",
+      "size_bytes": 346
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/conditions/adhesion_challenge_hormone_treated.cfg",
+      "sha256": "0875521c3ca3e11309c7a6d17d726419d157683c6c94a051b303e0f9a2da40fc",
+      "size_bytes": 347
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/conditions/adhesion_challenge_hormone_treated_anti_spp1.cfg",
+      "sha256": "0875521c3ca3e11309c7a6d17d726419d157683c6c94a051b303e0f9a2da40fc",
+      "size_bytes": 347
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/conditions/adhesion_challenge_hormone_treated_hand2_loss.cfg",
+      "sha256": "0875521c3ca3e11309c7a6d17d726419d157683c6c94a051b303e0f9a2da40fc",
+      "size_bytes": 347
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/conditions/adhesion_challenge_hormone_treated_mifepristone.cfg",
+      "sha256": "0875521c3ca3e11309c7a6d17d726419d157683c6c94a051b303e0f9a2da40fc",
+      "size_bytes": 347
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/conditions/adhesion_challenge_washout.cfg",
+      "sha256": "0875521c3ca3e11309c7a6d17d726419d157683c6c94a051b303e0f9a2da40fc",
+      "size_bytes": 347
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/conditions/basal_maternal.cfg",
+      "sha256": "798f2db832d56711d083497c3f5f33b923e034561038c1b52f8bfb97ce3126d0",
+      "size_bytes": 354
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/conditions/e2_primed_maternal.cfg",
+      "sha256": "364fd5e322f02b83bc63cd78cb287b08c023253e29d49ef6577241b47c0cd07e",
+      "size_bytes": 353
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/conditions/embryo_absent.cfg",
+      "sha256": "f262da7632824958b75877f7d9889a919cb5acea320878450010a2ea7e8b6dc7",
+      "size_bytes": 350
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/conditions/embryo_incompetent.cfg",
+      "sha256": "65a8bb2196c586c9c3fb746c127318708703fc6b978187f0f02d646e5ed35ee1",
+      "size_bytes": 348
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/conditions/excess_er_stress.cfg",
+      "sha256": "050b1915c4737fef7ff98c407f50de0870a618a10797e4ff6f882153bf46893c",
+      "size_bytes": 349
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/conditions/high_ecm_stiffness.cfg",
+      "sha256": "16ea51c5c4546e984d882f29307939c017ba12dde997ace868e9b0e876c59cbc",
+      "size_bytes": 349
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/conditions/hormone_treated.cfg",
+      "sha256": "f262da7632824958b75877f7d9889a919cb5acea320878450010a2ea7e8b6dc7",
+      "size_bytes": 350
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/conditions/hormone_treated_anti_spp1.cfg",
+      "sha256": "f262da7632824958b75877f7d9889a919cb5acea320878450010a2ea7e8b6dc7",
+      "size_bytes": 350
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/conditions/hormone_treated_hand2_loss.cfg",
+      "sha256": "f262da7632824958b75877f7d9889a919cb5acea320878450010a2ea7e8b6dc7",
+      "size_bytes": 350
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/conditions/hormone_treated_maternal.cfg",
+      "sha256": "f262da7632824958b75877f7d9889a919cb5acea320878450010a2ea7e8b6dc7",
+      "size_bytes": 350
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/conditions/hormone_treated_mifepristone.cfg",
+      "sha256": "f262da7632824958b75877f7d9889a919cb5acea320878450010a2ea7e8b6dc7",
+      "size_bytes": 350
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/conditions/untreated.cfg",
+      "sha256": "798f2db832d56711d083497c3f5f33b923e034561038c1b52f8bfb97ce3126d0",
+      "size_bytes": 354
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/conditions/washout.cfg",
+      "sha256": "f262da7632824958b75877f7d9889a919cb5acea320878450010a2ea7e8b6dc7",
+      "size_bytes": 350
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/drug_target_catalog.tsv",
+      "sha256": "87e39490b3d0715ae9d575bca0076b58f92e5d1580acec2825145ed3f64bf1e2",
+      "size_bytes": 9059
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/edge_evidence.tsv",
+      "sha256": "cac102405fb7a0ccf15a4254fa37c427bfa8902e5bd5fd4550c0720b53a42fe4",
+      "size_bytes": 13508
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/ensemble_definition.tsv",
+      "sha256": "63452a3d6b8ac7832b7981656c2bfa19bff898090116f8e19cdf88c3692d1944",
+      "size_bytes": 1228
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/executable_model_manifest.tsv",
+      "sha256": "366f4f598b5e1a71b2e2a013a31dddf2c3ad27b0aeef1946a2797641b1869284",
+      "size_bytes": 4583
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/executable_modules_network.mmd",
+      "sha256": "9e0cf6e19d2346c201df31559825cfe4e68307a4563cf286c826aa7326364026",
+      "size_bytes": 5479
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/interface_contract.tsv",
+      "sha256": "67072af1d716b0488e14ecc30d5821096346fc1ef2d0798b1a2a7e7dc36730da",
+      "size_bytes": 2351
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/literature_superset_network.mmd",
+      "sha256": "6f03110cb630491630a3351e05d87d9cf07a4aec4a97b0298665b076806c24c8",
+      "size_bytes": 4370
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/module_activity_report.tsv",
+      "sha256": "70856e7f307d3c2fddff712e13fe6593b3c49c5980b653006c9f646d13fe1914",
+      "size_bytes": 2187
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/modules.tsv",
+      "sha256": "1cea79e6548c613112d52b3ca23d77a28eb635db0bb6c0ec8f1711387fe0f764",
+      "size_bytes": 7534
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/network.bnd",
+      "sha256": "64b5a3aa02394593bef5991b25005a71a27161ec75aefb6f80dbe7a1e347de27",
+      "size_bytes": 4095
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv",
+      "sha256": "7019da7eed02e8e2c9860b0558552347b9687201287c9f649fbd0b8898bd4a5b",
+      "size_bytes": 17872
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/phenotype_contract.tsv",
+      "sha256": "4df11861ae82612876dd28d4269a5d06f39a941b29d029d4bb8fe72e63dd22d5",
+      "size_bytes": 1151
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/provenance.toml",
+      "sha256": "8e6b1cef19c2e6a9326cdab0482d063fc9965aac2de16145b6cf2ce09a0b09b6",
+      "size_bytes": 13869
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/rule_variants.tsv",
+      "sha256": "a5e6be6afb3d0f95c51d12ac06a128ed9f8789791b6d6556fcc39b94a535a839",
+      "size_bytes": 1907
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/topology.tsv",
+      "sha256": "0a6b9f4a0b02871dba69c98301c6c1e2b1c4331e5e6a0d7aab6e067889636fdc",
+      "size_bytes": 6025
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/topology_increment_adjudications.tsv",
+      "sha256": "c53e1716813c98a8617836ef79d69040e29966d54fccddbd5af55b1bd6f491ea",
+      "size_bytes": 8706
+    },
+    {
+      "path": "models/superset/adoc-literature-superset-v0.6.0/unresolved_mechanisms.tsv",
+      "sha256": "94ea4d8ff6e7be104c89d95efb0abb75f56056190338adf958a1824d255cf630",
+      "size_bytes": 2985
+    }
+  ],
+  "diagnostics": {
+    "perturbed": {
+      "fraction_trajectories_with_any_switch": 1.0,
+      "node_trajectory_cells_switching": 70161,
+      "cells_n_switches_min_gt_1": 0,
+      "cells_first_switch_unresolved": 0,
+      "cells_final_unknown": 0,
+      "cells_rule_disagrees_at_horizon": 0,
+      "cells_rule_unknown_at_horizon": 0,
+      "cells_no_switch_rule_disagrees_at_horizon": 0,
+      "fraction_trajectories_at_fixed_point_at_horizon": 1.0
+    },
+    "control": {
+      "fraction_trajectories_with_any_switch": 0.0,
+      "node_trajectory_cells_switching": 0,
+      "cells_n_switches_min_gt_1": 0,
+      "cells_first_switch_unresolved": 0,
+      "cells_final_unknown": 0,
+      "cells_rule_disagrees_at_horizon": 0,
+      "cells_rule_unknown_at_horizon": 0,
+      "cells_no_switch_rule_disagrees_at_horizon": 0,
+      "fraction_trajectories_at_fixed_point_at_horizon": 1.0
+    },
+    "control_stationary": true,
+    "note": "control_stationary requires, in every control trajectory, that no node switched and that every node's rule is known and agrees with its value at the horizon: the start is then a fixed point of the control's rules, so every perturbed-arm switch is perturbation-associated under the model. Anything less (a switch, a disagreeing rule, an unevaluable one) makes it false"
+  },
+  "runtime_s": 36.1,
+  "outputs": {
+    "cascade.pdf": {
+      "path": "output/perturbations/progestin_withdrawal__v060__n2000__seedA/cascade.pdf",
+      "sha256": "d605aeba7bdadcecbccf6b97342fc79ef5e0de33f9d0491d3cabb5f865fe94df",
+      "size_bytes": 59477
+    },
+    "cascade.png": {
+      "path": "output/perturbations/progestin_withdrawal__v060__n2000__seedA/cascade.png",
+      "sha256": "e1ae184c738d45518b19e16c338ca0331aa391e71f413d66f86b4166e586a912",
+      "size_bytes": 507419
+    },
+    "cascade.svg": {
+      "path": "output/perturbations/progestin_withdrawal__v060__n2000__seedA/cascade.svg",
+      "sha256": "355f3ed93341963df58ddde641e91f6d68887900abacf33c068cdee90b8051aa",
+      "size_bytes": 386222
+    },
+    "control_comparison.tsv": {
+      "path": "output/perturbations/progestin_withdrawal__v060__n2000__seedA/control_comparison.tsv",
+      "sha256": "d45a25905ca4f6ddf14f234e0f60ffc3dac2a2f23e3210b7d7ffc0702c2015ba",
+      "size_bytes": 5492
+    },
+    "events.tsv": {
+      "path": "output/perturbations/progestin_withdrawal__v060__n2000__seedA/events.tsv",
+      "sha256": "57d16a5570b1d3068a6128ab681772a375ec46b672e2eb6c5256fe5d6687d443",
+      "size_bytes": 17982483
+    },
+    "node_summary.tsv": {
+      "path": "output/perturbations/progestin_withdrawal__v060__n2000__seedA/node_summary.tsv",
+      "sha256": "91b454d1a97acbe2eabe84d38d2438cdbd9afd5fb5e73414e49929a767730de1",
+      "size_bytes": 27802
+    },
+    "pairwise_precedence.tsv": {
+      "path": "output/perturbations/progestin_withdrawal__v060__n2000__seedA/pairwise_precedence.tsv",
+      "sha256": "a91d79a0c5eafa37dd4fb7193f359e2856652df5fa3098686b26f951b0447f86",
+      "size_bytes": 99666
+    }
+  }
+}

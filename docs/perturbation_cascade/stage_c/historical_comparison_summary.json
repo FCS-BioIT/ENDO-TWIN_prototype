@@ -1,0 +1,357 @@
+{
+  "stochastic_v060_A_vs_B": {
+    "normalized_rank": {
+      "n_nodes": 37,
+      "max_abs_delta": 0.02941176470588236,
+      "median_abs_delta": 0.009243697478991564,
+      "spearman": 0.9605857316421558
+    },
+    "normalized_time": {
+      "n_nodes": 37,
+      "max_abs_delta": 0.023787731414121382,
+      "median_abs_delta": 0.0075628052647971344,
+      "spearman": 0.9706021811284967
+    },
+    "absolute_time": {
+      "n_nodes": 37,
+      "max_abs_delta": 0.19366068401861236,
+      "median_abs_delta": 0.040664923867874236,
+      "spearman": 0.9642010431484115
+    }
+  },
+  "initialisation_and_seeds_historical_vs_tool_v051": {
+    "normalized_rank": {
+      "n_nodes": 37,
+      "max_abs_delta": 0.043697478991596594,
+      "median_abs_delta": 0.012605042016806733,
+      "spearman": 0.973825131674622
+    },
+    "normalized_time": {
+      "n_nodes": 37,
+      "max_abs_delta": 0.02149879547303013,
+      "median_abs_delta": 0.007001518141985241,
+      "spearman": 0.9231863442389756
+    },
+    "absolute_time": {
+      "n_nodes": 37,
+      "max_abs_delta": 0.1682540976980218,
+      "median_abs_delta": 0.05460986126506606,
+      "spearman": 0.930772878141299
+    }
+  },
+  "normalisation_rank_vs_time_order_v060_A": {
+    "spearman_of_medians": 0.9824208726771962,
+    "max_row_displacement": 7
+  },
+  "model_version_tool_v051_vs_v060_A": {
+    "normalized_rank": {
+      "n_nodes": 37,
+      "max_abs_delta": 0.128781512605042,
+      "median_abs_delta": 0.0,
+      "spearman": 0.9874457927902313
+    },
+    "normalized_time": {
+      "n_nodes": 37,
+      "max_abs_delta": 0.09491115913083076,
+      "median_abs_delta": 0.004244719555257959,
+      "spearman": 0.9853010905642484
+    },
+    "absolute_time": {
+      "n_nodes": 37,
+      "max_abs_delta": 0.6837571523461126,
+      "median_abs_delta": 0.025586873709634084,
+      "spearman": 0.9857752489331436
+    }
+  },
+  "model_version_note": "the v0.5.1 and v0.6.0 runs share master seed and lineage seed, so they start from the same drawn states (equal switching fractions follow); their event streams differ because the networks differ. Version shifts are therefore partly paired and are read against the independent-block stochastic shift as a conservative reference",
+  "event_definition": {
+    "historical_max_reversals": 0,
+    "tool_max_switch_count": {
+      "v060_A": 1,
+      "v060_B": 1,
+      "v051_tool": 1,
+      "mife_v060_A": 1
+    },
+    "note": "first-switch definition and tick are the same in both; no node needs more than one switch (n_switches_min <= 1, a lower bound: an out-and-back pair hidden inside one tick window is not excluded, and is invisible to both alike), so the event definition contributes no detected difference for this perturbation"
+  },
+  "p_switch_max_abs_delta": {
+    "historical_vs_v051_tool": 0.015499999999999958,
+    "v060_A_vs_B": 0.024499999999999994,
+    "v051_tool_vs_v060_A": 0.0
+  },
+  "withdrawal_vs_mifepristone_v060": {
+    "same_starting_states_and_seeds": true,
+    "fraction_node_trajectory_cells_identical_first_switch": 1.0,
+    "max_abs_p_switch_delta": 0.0
+  },
+  "ordering_claims": [
+    {
+      "a": "OUT_STROMAL_DECIDUALIZED",
+      "b": "OUT_EPITHELIAL_RECEPTIVE",
+      "historical": {
+        "p": 0.5975,
+        "n_both": 2000
+      },
+      "v051_tool": {
+        "p": 0.6116116116116116,
+        "n_both": 2000,
+        "n_identifiable": 1998,
+        "n_order_unresolved": 2,
+        "ci95": [
+          0.5898394152440757,
+          0.6330556902141604
+        ]
+      },
+      "v060_A": {
+        "p": 0.7013506753376688,
+        "n_both": 2000,
+        "n_identifiable": 1999,
+        "n_order_unresolved": 1,
+        "ci95": [
+          0.6807529561337046,
+          0.7213561790999538
+        ]
+      },
+      "v060_B": {
+        "p": 0.6943887775551102,
+        "n_both": 2000,
+        "n_identifiable": 1996,
+        "n_order_unresolved": 4,
+        "ci95": [
+          0.6736540300585485,
+          0.7145509802813691
+        ]
+      }
+    },
+    {
+      "a": "OUT_MATERNAL_ADHESION_COMPETENCE",
+      "b": "OUT_EPITHELIAL_RECEPTIVE",
+      "historical": {
+        "p": 0.6271393643031785,
+        "n_both": 1636
+      },
+      "v051_tool": {
+        "p": 0.6336260978670013,
+        "n_both": 1605,
+        "n_identifiable": 1594,
+        "n_order_unresolved": 11,
+        "ci95": [
+          0.6094307458803685,
+          0.6573281550015841
+        ]
+      },
+      "v060_A": {
+        "p": 0.751875,
+        "n_both": 1605,
+        "n_identifiable": 1600,
+        "n_order_unresolved": 5,
+        "ci95": [
+          0.7299481658098276,
+          0.7728737082389896
+        ]
+      },
+      "v060_B": {
+        "p": 0.7317819963257808,
+        "n_both": 1637,
+        "n_identifiable": 1633,
+        "n_order_unresolved": 4,
+        "ci95": [
+          0.7095840996100414,
+          0.753143604196433
+        ]
+      }
+    },
+    {
+      "a": "OUT_MATERNAL_ADHESION_COMPETENCE",
+      "b": "OUT_STROMAL_DECIDUALIZED",
+      "historical": {
+        "p": 0.5574572127139364,
+        "n_both": 1636
+      },
+      "v051_tool": {
+        "p": 0.61375,
+        "n_both": 1605,
+        "n_identifiable": 1600,
+        "n_order_unresolved": 5,
+        "ci95": [
+          0.5893893216807525,
+          0.6376924189411192
+        ]
+      },
+      "v060_A": {
+        "p": 0.5926157697121401,
+        "n_both": 1605,
+        "n_identifiable": 1598,
+        "n_order_unresolved": 7,
+        "ci95": [
+          0.5680602284504389,
+          0.6168303849300333
+        ]
+      },
+      "v060_B": {
+        "p": 0.5641497851442603,
+        "n_both": 1637,
+        "n_identifiable": 1629,
+        "n_order_unresolved": 8,
+        "ci95": [
+          0.539665497704468,
+          0.5884024937686498
+        ]
+      }
+    },
+    {
+      "a": "E_PGR",
+      "b": "S_PGR",
+      "historical": {
+        "p": 0.5,
+        "n_both": 2000
+      },
+      "v051_tool": {
+        "p": 0.5007556675062972,
+        "n_both": 2000,
+        "n_identifiable": 1985,
+        "n_order_unresolved": 15,
+        "ci95": [
+          0.478520756858837,
+          0.5229883428347419
+        ]
+      },
+      "v060_A": {
+        "p": 0.5007556675062972,
+        "n_both": 2000,
+        "n_identifiable": 1985,
+        "n_order_unresolved": 15,
+        "ci95": [
+          0.478520756858837,
+          0.5229883428347419
+        ]
+      },
+      "v060_B": {
+        "p": 0.4972403411941796,
+        "n_both": 2000,
+        "n_identifiable": 1993,
+        "n_order_unresolved": 7,
+        "ci95": [
+          0.4750560400370233,
+          0.5194327726374881
+        ]
+      }
+    },
+    {
+      "a": "S_HAND2",
+      "b": "E_ESTROGENIC_PROLIFERATION",
+      "historical": {
+        "p": 1.0,
+        "n_both": 2000
+      },
+      "v051_tool": {
+        "p": 1.0,
+        "n_both": 2000,
+        "n_identifiable": 2000,
+        "n_order_unresolved": 0,
+        "ci95": [
+          0.9981572602065942,
+          1.0
+        ]
+      },
+      "v060_A": {
+        "p": 1.0,
+        "n_both": 2000,
+        "n_identifiable": 2000,
+        "n_order_unresolved": 0,
+        "ci95": [
+          0.9981572602065942,
+          1.0
+        ]
+      },
+      "v060_B": {
+        "p": 1.0,
+        "n_both": 2000,
+        "n_identifiable": 2000,
+        "n_order_unresolved": 0,
+        "ci95": [
+          0.9981572602065942,
+          1.0
+        ]
+      }
+    },
+    {
+      "a": "S_HAND2",
+      "b": "S_FGF_MITOGENIC",
+      "historical": {
+        "p": 1.0,
+        "n_both": 2000
+      },
+      "v051_tool": {
+        "p": 1.0,
+        "n_both": 2000,
+        "n_identifiable": 1994,
+        "n_order_unresolved": 6,
+        "ci95": [
+          0.9981517204800273,
+          1.0
+        ]
+      },
+      "v060_A": {
+        "p": 1.0,
+        "n_both": 2000,
+        "n_identifiable": 1992,
+        "n_order_unresolved": 8,
+        "ci95": [
+          0.9981498664954056,
+          1.0
+        ]
+      },
+      "v060_B": {
+        "p": 1.0,
+        "n_both": 2000,
+        "n_identifiable": 1986,
+        "n_order_unresolved": 14,
+        "ci95": [
+          0.9981442821577003,
+          1.0
+        ]
+      }
+    }
+  ],
+  "order_identifiability_v060_A": {
+    "comparisons_both_switch": 1196775,
+    "comparisons_unresolved_same_window": 2415,
+    "max_unresolved_for_one_pair": 19
+  },
+  "rules_changed_v051_to_v060": {
+    "E_ESTROGENIC_PROLIFERATION": {
+      "v0.5.1": "IN_E2 and S_FGF_MITOGENIC and not S_HAND2",
+      "v0.6.0": "IN_E2 and S_FGF_MITOGENIC"
+    },
+    "E_PGR": {
+      "v0.5.1": "IN_PROGESTIN and not IN_MIFEPRISTONE",
+      "v0.6.0": "IN_PROGESTIN"
+    },
+    "OUT_EPITHELIAL_RECEPTIVE": {
+      "v0.5.1": "E_RECEPTIVE_SURFACE and E_PAEP",
+      "v0.6.0": "E_RECEPTIVE_SURFACE"
+    },
+    "S_HAND2": {
+      "v0.5.1": "(S_BMP2 or S_PGR) and not IN_HAND2_LOSS",
+      "v0.6.0": "S_BMP2 or S_PGR"
+    },
+    "S_PGR": {
+      "v0.5.1": "IN_PROGESTIN and not IN_MIFEPRISTONE",
+      "v0.6.0": "IN_PROGESTIN"
+    },
+    "X_SPP1_LUMEN_FREE": {
+      "v0.5.1": "(E_SPP1_EXPR or S_SPP1) and not IN_ANTI_SPP1",
+      "v0.6.0": "E_SPP1_EXPR or S_SPP1"
+    }
+  },
+  "nodes_only_in_v051": [
+    "IN_ANTI_SPP1",
+    "IN_HAND2_LOSS",
+    "IN_MIFEPRISTONE"
+  ],
+  "nodes_only_in_v060": [],
+  "figure_sha256": {
+    "historical_comparison.png": "58d76ae7566bc2dd646bd6d7aff9ee70681ad6fe2bb64f02ee0b2625d4266234"
+  }
+}

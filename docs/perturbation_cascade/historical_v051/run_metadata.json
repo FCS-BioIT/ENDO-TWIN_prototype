@@ -1,0 +1,86 @@
+{
+  "model_version": "adoc-literature-superset-v0.5.1",
+  "lineage": [
+    "basal_maternal",
+    "e2_primed_maternal",
+    "hormone_treated_maternal",
+    "<phase 4 arm>"
+  ],
+  "network_bnd": "FileRef(path='models/superset/adoc-literature-superset-v0.5.1/network.bnd', sha256='d7068867429cfdafe89442ee2fb0bc3fb94ae9f985d3d65b1c4be19d01cad063', size_bytes=4366)",
+  "baseline_cfg": "FileRef(path='models/superset/adoc-literature-superset-v0.5.1/baseline.cfg', sha256='4d42bdcbcfcceaedaafeeb96fe76400700175c969cec15bff9e02f360ff4f41c', size_bytes=4290)",
+  "condition_cfg": "FileRef(path='models/superset/adoc-literature-superset-v0.5.1/conditions/hormone_treated_maternal.cfg', sha256='9f2b7681a0d03f0a5d6433f10deea31c2555dbafe2a7bd3dcee1d19cb4e12ac9', size_bytes=411)",
+  "phase_horizon": 25.0,
+  "replicates": 10,
+  "replicate_seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "trajectories_per_replicate": 5000,
+  "aggregate_tick": 0.05,
+  "single_runs": 2000,
+  "single_seeds": [
+    100001,
+    102000
+  ],
+  "single_tick": 0.01,
+  "single_runs_continuation_from_replicate_seed": 1,
+  "cocktail_terminal_joint_states_retained": 16,
+  "arm_inputs": {
+    "withdrawal": {
+      "IN_E2": true,
+      "IN_PROGESTIN": false,
+      "IN_cAMP": true,
+      "IN_XAV939": true,
+      "IN_MIFEPRISTONE": false,
+      "IN_ANTI_SPP1": false,
+      "IN_EMBRYO_PRESENT": false,
+      "IN_TROPHECTODERM_COMPETENT": false,
+      "IN_EMBRYO_CONTACT": false,
+      "IN_HCG": false,
+      "IN_EMBRYO_CONDITIONED_SIGNAL": false,
+      "IN_ER_STRESS_EXCESS": false,
+      "IN_HIGH_ECM_STIFFNESS": false
+    },
+    "control": {
+      "IN_E2": true,
+      "IN_PROGESTIN": true,
+      "IN_cAMP": true,
+      "IN_XAV939": true,
+      "IN_MIFEPRISTONE": false,
+      "IN_ANTI_SPP1": false,
+      "IN_EMBRYO_PRESENT": false,
+      "IN_TROPHECTODERM_COMPETENT": false,
+      "IN_EMBRYO_CONTACT": false,
+      "IN_HCG": false,
+      "IN_EMBRYO_CONDITIONED_SIGNAL": false,
+      "IN_ER_STRESS_EXCESS": false,
+      "IN_HIGH_ECM_STIFFNESS": false
+    },
+    "mifepristone": {
+      "IN_E2": true,
+      "IN_PROGESTIN": true,
+      "IN_cAMP": true,
+      "IN_XAV939": true,
+      "IN_MIFEPRISTONE": true,
+      "IN_ANTI_SPP1": false,
+      "IN_EMBRYO_PRESENT": false,
+      "IN_TROPHECTODERM_COMPETENT": false,
+      "IN_EMBRYO_CONTACT": false,
+      "IN_HCG": false,
+      "IN_EMBRYO_CONDITIONED_SIGNAL": false,
+      "IN_ER_STRESS_EXCESS": false,
+      "IN_HIGH_ECM_STIFFNESS": false
+    }
+  },
+  "withdrawal_vs_mifepristone_max_abs_final_diff": 0.0,
+  "maboss_python": "0.8.15",
+  "runtime_s": 138.4
+}

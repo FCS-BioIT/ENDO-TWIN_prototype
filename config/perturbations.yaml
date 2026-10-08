@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.1",
+  "generated_on": "2026-07-25",
+  "baseline_model_version": "adoc-core-v0.1.0",
+  "perturbations": [
+    {
+      "perturbation_id": "mifepristone_after_ht",
+      "matched_baseline_protocol": "adhesion_challenge_hormone_treated",
+      "perturbed_protocol": "adhesion_challenge_hormone_treated_mifepristone",
+      "maternal_parent_protocol": "hormone_treated_mifepristone",
+      "kind": "input_toggle",
+      "target_node": "IN_MIFEPRISTONE",
+      "direction": "activate",
+      "mechanistic_abstraction": "Provisional PGR antagonism encoded at the receptor-activity layer only, with embryo challenge separated into its own continuation phase.",
+      "evidence_ids": ["SOFIA-HT-002", "SOFIA-ADH-003"],
+      "notes": "If later used to calibrate the model, SOFIA-ADH-003 loses held-out validation status."
+    },
+    {
+      "perturbation_id": "anti_spp1_after_ht",
+      "matched_baseline_protocol": "adhesion_challenge_hormone_treated",
+      "perturbed_protocol": "adhesion_challenge_hormone_treated_anti_spp1",
+      "maternal_parent_protocol": "hormone_treated_anti_spp1",
+      "kind": "input_toggle",
+      "target_node": "IN_ANTI_SPP1",
+      "direction": "activate",
+      "mechanistic_abstraction": "Neutralizes free luminal SPP1 only; does not switch off SPP1 transcription and does not erase the whole adhesion interface by construction.",
+      "evidence_ids": ["SOFIA-CCC-002"],
+      "notes": "Receptor-level specificity remains unresolved in Phase 1B."
+    },
+    {
+      "perturbation_id": "hand2_loss_after_ht",
+      "matched_baseline_protocol": "adhesion_challenge_hormone_treated",
+      "perturbed_protocol": "adhesion_challenge_hormone_treated_hand2_loss",
+      "maternal_parent_protocol": "hormone_treated_hand2_loss",
+      "kind": "input_toggle",
+      "target_node": "IN_HAND2_LOSS",
+      "direction": "activate",
+      "mechanistic_abstraction": "Loss-of-function ablation of stromal HAND2, encoded at the boundary because that is the layer at which the evidence acted: a Hand2-flox x PR-Cre conditional knockout in mouse and two independent siHAND2 duplexes in human stroma. Adds no activation claim; the progesterone-induced ON route is preserved. DIRECTION ONLY -- the magnitude of the epithelial collapse is a hard Boolean consequence of a veto with no held-out measurement behind it.",
+      "evidence_ids": ["LIT-IHH-001"],
+      "notes": "Available only in adoc-literature-superset-v0.4.0 and later. Absent from the archived v0.3.0 parent, whose declared suite this arm leaves bit-identical."
+    },
+    {
+      "perturbation_id": "anti_spp1_washout",
+      "matched_baseline_protocol": "hormone_treated_anti_spp1",
+      "perturbed_protocol": "washout",
+      "kind": "input_toggle",
+      "target_node": "IN_ANTI_SPP1",
+      "direction": "deactivate",
+      "mechanistic_abstraction": "Maternal inputs revert to the matched HT state after the anti-SPP1 phase. No dedicated recovery-memory module is encoded in Phase 1B.",
+      "evidence_ids": ["SOFIA-HT-001"],
+      "notes": "Structural washout placeholder only."
+    }
+  ]
+}

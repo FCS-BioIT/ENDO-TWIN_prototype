@@ -1,0 +1,7 @@
+schema: dt_adoc.perturbation_spec/1
+name: e2_input_withdrawal
+description: E2 input withdrawal after hormone treatment (model-internal; not the dropout_e2 design or its calling rules)
+model_version: adoc-literature-superset-v0.6.0
+start: hormone_treated_maternal
+input_changes:
+  IN_E2: false

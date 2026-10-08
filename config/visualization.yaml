@@ -1,0 +1,353 @@
+# Visual metadata for the MaBoSS pathway-dynamics animation.
+#
+# SCOPE: this file carries presentation metadata ONLY -- layout regions,
+# colours, ordering, panel membership and short display labels.
+#
+# It is NOT a biological node list. Node identity, compartment, model role,
+# confidence and human-readable label are read from the selected model's
+# node_dictionary.tsv; edges and their signs from edge_evidence.tsv; phenotypes
+# from phenotype_contract.tsv. A node named here that does not exist in the
+# selected model is a configuration error, and this file may not introduce or
+# override any biological field. See docs/visualization.md.
+#
+# Node values rendered from this configuration are P(node = ON) across
+# simulated MaBoSS trajectories. They are not concentrations, expression
+# levels, secretion amounts or fluxes.
+
+schema_version: "1.0"
+
+# --- Region assignment ----------------------------------------------------
+# Precedence: node id prefix decides inputs and phenotype outputs; the
+# node_dictionary `compartment` column decides everything else. ECM and
+# interface nodes therefore land in the extracellular band even though stromal
+# cells strongly regulate them.
+prefix_classes:
+  IN_: input
+  OUT_: output
+
+compartment_classes:
+  epithelium: epithelial
+  stroma: stromal
+  interface: extracellular
+  extracellular: extracellular
+  stroma_external: extracellular
+  input_boundary: input
+  shared: input
+
+# --- Compartment presentation --------------------------------------------
+# `color` is the saturated end of the probability ramp; `pale` is the P(ON)=0
+# end. The ramp is a deterministic linear RGB interpolation between them.
+compartments:
+  input:
+    label: "Protocol inputs and perturbations"
+    color: "#2A6F97"
+    pale: "#EEF3F7"
+    region: top
+  epithelial:
+    label: "Endometrial luminal epithelium"
+    color: "#1B7F5C"
+    pale: "#EDF5F1"
+    region: left
+  extracellular:
+    label: "Extracellular matrix / lumen / maternal-embryo interface"
+    color: "#A6761D"
+    pale: "#F7F3EA"
+    region: centre
+  stromal:
+    label: "Endometrial stromal fibroblasts / decidualizing stromal cells"
+    color: "#8C4C9E"
+    pale: "#F4EEF6"
+    region: right
+  output:
+    label: "Model phenotype outputs"
+    color: "#B03A2E"
+    pale: "#F9EEEC"
+    region: bottom
+
+# Region bounding boxes in axes fraction (x0, y0, x1, y1) for the network panel.
+# Boxes are drawn with a small pad and their titles sit clear above that pad,
+# so no title ever overlaps a border or a neighbouring compartment.
+regions:
+  top: [0.015, 0.868, 0.985, 0.955]
+  left: [0.015, 0.168, 0.315, 0.770]
+  centre: [0.350, 0.168, 0.650, 0.770]
+  right: [0.685, 0.168, 0.985, 0.770]
+  bottom: [0.015, 0.020, 0.985, 0.116]
+
+# --- Uncertainty styling --------------------------------------------------
+# Structural relay nodes and low-confidence entities get a dashed border so a
+# reader cannot mistake an assumed relay for an evidenced mechanism.
+uncertainty:
+  roles: [structural_uncertainty, latent_state]
+  confidences: [assumption, candidate]
+
+# --- Edge styling ---------------------------------------------------------
+# Sign and style are static and come from edge_evidence.tsv. Only opacity
+# varies with time, following the regulator node's P(ON). That opacity is a
+# visual regulator-activity cue -- it is not causal flux, reaction rate, edge
+# probability, regulatory strength or pathway flow.
+edges:
+  activation_color: "#2D6A4F"
+  inhibition_color: "#BC4749"
+  uncertain_confidences: [assumption, candidate]
+  cross_compartment_color: "#4A5568"
+  min_alpha: 0.10
+  max_alpha: 0.85
+
+# --- Synchronized time-series panels -------------------------------------
+# Members are preferred orderings. Nodes absent from the selected model are
+# skipped without error, so one configuration serves every registered model.
+# The phenotype panel is derived from phenotype_contract.tsv, not listed here.
+panels:
+  - key: inputs
+    title: "Protocol input state (deterministic, not measured)"
+    axis_label: "input state"
+    members:
+      - IN_E2
+      - IN_PROGESTIN
+      - IN_cAMP
+      - IN_XAV939
+      - IN_MIFEPRISTONE
+      - IN_ANTI_SPP1
+      - IN_EMBRYO_PRESENT
+      - IN_TROPHECTODERM_COMPETENT
+      - IN_EMBRYO_CONTACT
+      - IN_ER_STRESS_EXCESS
+      - IN_HIGH_ECM_STIFFNESS
+  # The three ADOC-measured secreted analytes, on their own panel. Two caveats
+  # the caption must carry: S_IGFBP1 and S_PRL share one Boolean rule with no
+  # declared rate, so their curves coincide BY CONSTRUCTION and the observed
+  # IGFBP-1-before-PRL onset order is not represented; and E_PAEP is an exact
+  # alias of E_SECRETORY_STATE. Titled "analytes", never "metabolites" -- the
+  # panel-observable guard bans concentration-style naming, correctly, because
+  # these are Boolean node states and not amounts.
+  - key: secreted_analytes
+    title: "ADOC-measured secreted analytes (see caption: shared rule)"
+    axis_label: "P(node = ON)"
+    members:
+      - E_PAEP
+      - S_IGFBP1
+      - S_PRL
+  # Retitled: only E_PAEP and S_IGFBP1 carry an activated ADOC observation
+  # mapping, so calling these panels "readouts" overstated them. The measured
+  # nodes now live in the analyte panel above and are not duplicated here.
+  - key: epithelial_model_states
+    title: "Other epithelial model states (not ADOC-measured)"
+    axis_label: "P(node = ON)"
+    members:
+      - E_SPP1_EXPR
+      - E_LIF
+      - E_HBEGF
+      - E_PODXL
+      - E_MUC1_BARRIER
+  - key: stromal_model_states
+    title: "Other stromal model states (not ADOC-measured)"
+    axis_label: "P(node = ON)"
+    members:
+      - S_SPP1
+      - S_BMP2
+      - S_HAND2
+      - S_IL11
+  - key: phenotypes
+    title: "Phenotype probabilities"
+    axis_label: "P(phenotype)"
+    source: phenotype_contract
+    members: []
+
+# --- Short display labels -------------------------------------------------
+# Purely typographic shortening for the node boxes. The full biological label
+# stays in the model's node_dictionary.tsv; nothing here changes meaning.
+short_labels:
+  # Added for the superset render: 19 nodes previously fell back to raw ids and
+  # two overflowed their compartment box.
+  E_ESTROGENIC_PROLIFERATION: "Estrogenic prolif."
+  E_KLF12_HIGH: "KLF12 high"
+  S_FGF_MITOGENIC: "FGF mitogenic"
+  E_CD98_CD9: "CD98-CD9"
+  E_PAEP: "PAEP"
+  S_PRL: "PRL"
+  S_IGFBP1: "IGFBP-1"
+  E_PGR: "PGR"
+  S_PGR: "S-PGR"
+  E_LIF: "LIF"
+  E_HBEGF: "HB-EGF"
+  E_PODXL: "PODXL"
+  E_IHH: "IHH"
+  E_PC6: "PC6"
+  S_PKA: "PKA"
+  S_NR2F2: "NR2F2"
+  S_BMP2: "BMP2"
+  S_HAND2: "HAND2"
+  S_SPP1: "S-SPP1"
+  IN_E2: "E2"
+  IN_PROGESTIN: "Progestin"
+  IN_cAMP: "cAMP"
+  IN_XAV939: "XAV939"
+  IN_MIFEPRISTONE: "Mifepristone"
+  IN_ANTI_SPP1: "anti-SPP1"
+  IN_EMBRYO_PRESENT: "Embryo present"
+  IN_TROPHECTODERM_COMPETENT: "TE competent"
+  IN_EMBRYO_CONTACT: "Embryo contact"
+  IN_EMBRYO_CONDITIONED_SIGNAL: "Embryo signal"
+  IN_ER_STRESS_EXCESS: "ER stress"
+  IN_HIGH_ECM_STIFFNESS: "Stiff ECM"
+  IN_HCG: "hCG"
+  E_SECRETORY_STATE: "Secretory state"
+  E_RECEPTIVE_SURFACE: "Receptive surface"
+  E_GP130_STAT3: "GP130-STAT3"
+  E_MUC1_BARRIER: "MUC1 barrier"
+  E_MUC1_SLEX: "MUC1-sLeX"
+  E_DAG1_FULL: "DAG1 full"
+  E_DAG1_CLEAVED: "DAG1 cleaved"
+  E_ITGAVB3_5: "ITGAV-B3/B5"
+  E_ANXA2_ACTIN: "ANXA2-actin"
+  E_CDH1_APICAL: "CDH1 apical"
+  E_SPP1_EXPR: "SPP1 expr"
+  S_DECIDUALIZED: "Decidualized"
+  S_TAZ_ECM: "TAZ-ECM"
+  X_SPP1_LUMEN_FREE: "Free SPP1"
+  X_MATERNAL_INTERFACE_READY: "Interface ready"
+  X_MECHANICAL_STRESS_RELAY: "Mech stress relay"
+  X_MECHANICAL_PERMISSIVE_ECM: "Permissive ECM"
+  X_INTERFACE_SPP1_RELAY: "SPP1 relay"
+  X_INTERFACE_REDUNDANT_RELAY: "Assumed non-SPP1 relay"
+  X_INTERFACE_ANTIADHESIVE_RELAY: "Anti-adhesive relay"
+  X_ADHESION_ROUTE_SPP1: "SPP1 route"
+  X_ADHESION_ROUTE_REDUNDANT: "Non-SPP1 route (assumed relay)"
+  X_ANTIADHESIVE_ROUTE: "Anti-adhesive route"
+  OUT_EPITHELIAL_RECEPTIVE: "Epithelial receptive"
+  OUT_EPITHELIAL_SECRETORY: "Epithelial secretory"
+  OUT_STROMAL_DECIDUALIZED: "Stromal decidualized"
+  OUT_CROSSTALK_FUNCTIONAL: "Crosstalk functional"
+  OUT_MATERNAL_ADHESION_COMPETENCE: "Adhesion competence"
+  OUT_STABLE_ADHESION: "Stable adhesion"
+  OUT_BARRIER_MATURE: "Barrier mature"
+  OUT_BARRIER_REMODELED: "Barrier remodeled"
+  OUT_BARRIER_DAMAGED: "Barrier damaged"
+  OUT_EPITHELIAL_VIABLE: "Epithelial viable"
+  OUT_STROMAL_VIABLE: "Stromal viable"
+
+# --- Overview node selection ---------------------------------------------
+# The README animation shows a curated, readable subset. The `full` view shows
+# every node in the model. Ordering within a region follows this list.
+# `default` applies to any model without an explicit entry.
+overview_nodes:
+  default: []
+  adoc-core-v0.1.0:
+    - IN_E2
+    - IN_PROGESTIN
+    - IN_cAMP
+    - IN_XAV939
+    - IN_ANTI_SPP1
+    - IN_EMBRYO_PRESENT
+    - E_PGR
+    - E_AXIN
+    - E_SECRETORY_STATE
+    - E_IHH
+    - E_PAEP
+    - E_SPP1_EXPR
+    - X_SPP1_LUMEN_FREE
+    - X_MATERNAL_INTERFACE_READY
+    - X_ADHESION_ROUTE_SPP1
+    - X_ADHESION_ROUTE_REDUNDANT
+    - X_ANTIADHESIVE_ROUTE
+    - S_PGR
+    - S_PKA
+    - S_NR2F2
+    - S_DECIDUALIZED
+    - S_PRL
+    - S_IGFBP1
+    - OUT_EPITHELIAL_RECEPTIVE
+    - OUT_STROMAL_DECIDUALIZED
+    - OUT_CROSSTALK_FUNCTIONAL
+    - OUT_MATERNAL_ADHESION_COMPETENCE
+    - OUT_STABLE_ADHESION
+  adoc-literature-v0.2.0: &literature_overview
+    - IN_E2
+    - IN_PROGESTIN
+    - IN_cAMP
+    - IN_XAV939
+    - IN_ANTI_SPP1
+    - IN_EMBRYO_PRESENT
+    - IN_EMBRYO_CONTACT
+    - E_PGR
+    - E_SECRETORY_STATE
+    - E_LIF
+    - E_GP130_STAT3
+    - E_PAEP
+    - E_MUC1_BARRIER
+    - E_HBEGF
+    - E_ITGAVB3_5
+    - E_SPP1_EXPR
+    - E_RECEPTIVE_SURFACE
+    - X_SPP1_LUMEN_FREE
+    - X_MECHANICAL_PERMISSIVE_ECM
+    - X_INTERFACE_SPP1_RELAY
+    - X_ADHESION_ROUTE_SPP1
+    - X_ADHESION_ROUTE_REDUNDANT
+    - X_ANTIADHESIVE_ROUTE
+    - S_PGR
+    - S_PKA
+    - S_NR2F2
+    - S_HAND2
+    - S_BMP2
+    - S_DECIDUALIZED
+    - S_PRL
+    - S_IGFBP1
+    - S_SPP1
+    - OUT_EPITHELIAL_RECEPTIVE
+    - OUT_STROMAL_DECIDUALIZED
+    - OUT_MATERNAL_ADHESION_COMPETENCE
+    - OUT_STABLE_ADHESION
+  # The superset must NOT reuse the v0.2.0 list verbatim: doing so renders a
+  # figure labelled v0.3.0 that omits every node distinguishing it from v0.2.0.
+  # This list is the v0.2.0 overview plus the three genuinely new executable
+  # nodes (disposition=candidate_executable_extension in complete_nodes.tsv).
+  # All entries are implementation_status=executable; catalog-only and
+  # external-only entities are never listed here and are unreachable by the
+  # renderer, which reads node_dictionary.tsv rather than complete_nodes.tsv.
+  adoc-literature-superset-v0.3.0:
+    - IN_E2
+    - IN_PROGESTIN
+    - IN_cAMP
+    - IN_XAV939
+    - IN_ANTI_SPP1
+    - IN_EMBRYO_PRESENT
+    - IN_EMBRYO_CONTACT
+    - E_PGR
+    - E_SECRETORY_STATE
+    - E_LIF
+    - E_GP130_STAT3
+    - E_PAEP
+    - E_MUC1_BARRIER
+    - E_HBEGF
+    - E_ITGAVB3_5
+    - E_SPP1_EXPR
+    - E_KLF12_HIGH
+    - E_ESTROGENIC_PROLIFERATION
+    - E_RECEPTIVE_SURFACE
+    - X_SPP1_LUMEN_FREE
+    - X_MECHANICAL_PERMISSIVE_ECM
+    - X_INTERFACE_SPP1_RELAY
+    - X_ADHESION_ROUTE_SPP1
+    - X_ADHESION_ROUTE_REDUNDANT
+    - X_ANTIADHESIVE_ROUTE
+    - S_PGR
+    - S_PKA
+    - S_NR2F2
+    - S_HAND2
+    - S_BMP2
+    - S_FGF_MITOGENIC
+    - S_DECIDUALIZED
+    - S_PRL
+    - S_IGFBP1
+    - S_SPP1
+    - OUT_EPITHELIAL_RECEPTIVE
+    - OUT_STROMAL_DECIDUALIZED
+    - OUT_MATERNAL_ADHESION_COMPETENCE
+    - OUT_STABLE_ADHESION
+
+# --- Optional manual positions -------------------------------------------
+# Axes-fraction overrides applied after automatic in-region placement. Visual
+# only. Empty by default: automatic placement is already stable across frames.
+positions: {}

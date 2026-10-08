@@ -1,0 +1,7 @@
+schema: dt_adoc.perturbation_spec/1
+name: progestin_withdrawal
+description: progestin (MPA) input withdrawal after hormone treatment
+model_version: adoc-literature-superset-v0.6.0
+start: hormone_treated_maternal
+input_changes:
+  IN_PROGESTIN: false

@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "generated_on": "2026-07-25",
+  "model_version": "adoc-core-v0.1.0",
+  "phenotypes": [
+    {
+      "phenotype_id": "OUT_EPITHELIAL_RECEPTIVE",
+      "expression": "OUT_EPITHELIAL_RECEPTIVE",
+      "category": "primary",
+      "executable": true,
+      "planned_use": "construction_or_calibration",
+      "evidence_ids": ["SOFIA-SC-001", "SOFIA-EPI-001", "SOFIA-EPI-002"],
+      "notes": "Compact secretory epithelial state aligned to Phase 1 readouts."
+    },
+    {
+      "phenotype_id": "OUT_EPITHELIAL_SECRETORY",
+      "expression": "OUT_EPITHELIAL_SECRETORY",
+      "category": "supporting",
+      "executable": true,
+      "planned_use": "supporting_state",
+      "evidence_ids": ["SOFIA-SC-001"],
+      "notes": "Alias of the compact secretory-state module used for traceable reporting."
+    },
+    {
+      "phenotype_id": "OUT_STROMAL_DECIDUALIZED",
+      "expression": "OUT_STROMAL_DECIDUALIZED",
+      "category": "primary",
+      "executable": true,
+      "planned_use": "construction_or_calibration",
+      "evidence_ids": ["SOFIA-SC-002", "SOFIA-STR-001"],
+      "notes": "Tracks the conservative stromal decidual core only."
+    },
+    {
+      "phenotype_id": "OUT_CROSSTALK_FUNCTIONAL",
+      "expression": "OUT_CROSSTALK_FUNCTIONAL",
+      "category": "primary",
+      "executable": true,
+      "planned_use": "mechanistic_intermediate",
+      "evidence_ids": ["SOFIA-CCC-001"],
+      "notes": "Provisional epithelial-IHH to stromal-NR2F2/BMP2 bridge."
+    },
+    {
+      "phenotype_id": "OUT_MATERNAL_ADHESION_COMPETENCE",
+      "expression": "OUT_MATERNAL_ADHESION_COMPETENCE",
+      "category": "primary",
+      "executable": true,
+      "planned_use": "mechanistic_intermediate",
+      "evidence_ids": ["SOFIA-CCC-002", "SOFIA-ADH-002"],
+      "notes": "Separates maternal permissiveness from observed embryo adhesion."
+    },
+    {
+      "phenotype_id": "OUT_STABLE_ADHESION",
+      "expression": "OUT_STABLE_ADHESION",
+      "category": "primary",
+      "executable": true,
+      "planned_use": "calibration_or_validation",
+      "evidence_ids": ["SOFIA-ADH-001", "SOFIA-ADH-002", "SOFIA-ADH-003"],
+      "notes": "Requires embryo-challenge inputs and remains a model-conditional probability."
+    },
+    {
+      "phenotype_id": "OUT_BARRIER_MATURE",
+      "expression": "OUT_BARRIER_MATURE",
+      "category": "safety",
+      "executable": true,
+      "planned_use": "structural_placeholder",
+      "evidence_ids": [],
+      "notes": "Conservative placeholder derived from the absence of explicit damage logic in Phase 1."
+    },
+    {
+      "phenotype_id": "OUT_BARRIER_REMODELED",
+      "expression": "OUT_BARRIER_REMODELED",
+      "category": "safety",
+      "executable": true,
+      "planned_use": "structural_placeholder",
+      "evidence_ids": [],
+      "notes": "Tracks receptor-associated epithelial remodeling without claiming a permeability fit."
+    },
+    {
+      "phenotype_id": "OUT_BARRIER_DAMAGED",
+      "expression": "OUT_BARRIER_DAMAGED",
+      "category": "safety",
+      "executable": true,
+      "planned_use": "structural_placeholder",
+      "evidence_ids": [],
+      "notes": "Hard-coded absent in Phase 1 because no damage module is yet evidence-backed."
+    },
+    {
+      "phenotype_id": "OUT_EPITHELIAL_VIABLE",
+      "expression": "OUT_EPITHELIAL_VIABLE",
+      "category": "safety",
+      "executable": true,
+      "planned_use": "structural_placeholder",
+      "evidence_ids": [],
+      "notes": "Hard-coded viable placeholder pending explicit apoptosis and DNA-damage modules."
+    },
+    {
+      "phenotype_id": "OUT_STROMAL_VIABLE",
+      "expression": "OUT_STROMAL_VIABLE",
+      "category": "safety",
+      "executable": true,
+      "planned_use": "structural_placeholder",
+      "evidence_ids": [],
+      "notes": "Hard-coded viable placeholder pending explicit apoptosis and DNA-damage modules."
+    },
+    {
+      "phenotype_id": "OUT_CHRONIC_INFLAMMATION",
+      "expression": null,
+      "category": "safety",
+      "executable": false,
+      "planned_use": "deferred",
+      "evidence_ids": [],
+      "notes": "Deferred until an explicit inflammation module is evidence-backed."
+    },
+    {
+      "phenotype_id": "OUT_PERSISTENT_SENESCENCE",
+      "expression": null,
+      "category": "safety",
+      "executable": false,
+      "planned_use": "deferred",
+      "evidence_ids": [],
+      "notes": "Deferred until an explicit senescence module is evidence-backed."
+    },
+    {
+      "phenotype_id": "OUT_DNA_DAMAGE",
+      "expression": null,
+      "category": "safety",
+      "executable": false,
+      "planned_use": "deferred",
+      "evidence_ids": [],
+      "notes": "Deferred until an explicit DNA-damage module is evidence-backed."
+    },
+    {
+      "phenotype_id": "OUT_APOPTOSIS",
+      "expression": null,
+      "category": "safety",
+      "executable": false,
+      "planned_use": "deferred",
+      "evidence_ids": [],
+      "notes": "Deferred until an explicit apoptosis module is evidence-backed."
+    },
+    {
+      "phenotype_id": "OUT_METABOLIC_HEALTH",
+      "expression": null,
+      "category": "supporting",
+      "executable": false,
+      "planned_use": "deferred",
+      "evidence_ids": [],
+      "notes": "Deferred until the metabolic support module is implemented."
+    },
+    {
+      "phenotype_id": "OUT_RECOVERY_AFTER_WASHOUT",
+      "expression": null,
+      "category": "safety",
+      "executable": false,
+      "planned_use": "deferred",
+      "evidence_ids": [],
+      "notes": "Deferred because the Phase 1 washout protocol does not yet encode recovery-memory logic."
+    }
+  ]
+}

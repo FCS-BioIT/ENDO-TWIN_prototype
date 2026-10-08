@@ -1,0 +1,759 @@
+{
+  "schema_version": "1.0",
+  "generated_on": "2026-07-25",
+  "baseline_model_version": "adoc-core-v0.1.0",
+  "time_semantics": "Protocol durations are copied from the experimental schedule when available and do not calibrate MaBoSS time.",
+  "protocols": [
+    {
+      "protocol_id": "basal",
+      "model_version": "adoc-core-v0.1.0",
+      "condition_cfg": "models/baseline/adoc-core-v0.1.0/conditions/basal.cfg",
+      "comparator_role": "baseline_maternal_state",
+      "steps": [
+        {
+          "step_id": "basal_observation",
+          "relative_order": 1,
+          "relative_duration": 1.0,
+          "duration_note": "No exogenous hormonal conditioning; maternal state only.",
+          "input_states": {
+            "IN_E2": false,
+            "IN_PROGESTIN": false,
+            "IN_cAMP": false,
+            "IN_XAV939": false,
+            "IN_MIFEPRISTONE": false,
+            "IN_ANTI_SPP1": false,
+            "IN_EMBRYO_PRESENT": false,
+            "IN_TROPHECTODERM_COMPETENT": false
+          }
+        }
+      ],
+      "evidence_ids": ["SOFIA-HT-001", "SOFIA-ADH-001"],
+      "notes": "Maternal-only baseline. Embryo challenge inputs remain OFF."
+    },
+    {
+      "protocol_id": "e2_priming",
+      "model_version": "adoc-core-v0.1.0",
+      "condition_cfg": "models/baseline/adoc-core-v0.1.0/conditions/e2_priming.cfg",
+      "continuation_from": "basal",
+      "continuation": {
+        "mode": "joint",
+        "memory_policy": "all_non_inputs",
+        "probability_cutoff": 1e-06
+      },
+      "comparator_role": "intermediate_maternal_state",
+      "steps": [
+        {
+          "step_id": "e2_priming",
+          "relative_order": 1,
+          "relative_duration": 2.0,
+          "duration_note": "2 days of 10 nM E2 before the combined hormone phase; embryo challenge remains absent.",
+          "input_states": {
+            "IN_E2": true,
+            "IN_PROGESTIN": false,
+            "IN_cAMP": false,
+            "IN_XAV939": false,
+            "IN_MIFEPRISTONE": false,
+            "IN_ANTI_SPP1": false,
+            "IN_EMBRYO_PRESENT": false,
+            "IN_TROPHECTODERM_COMPETENT": false
+          }
+        }
+      ],
+      "evidence_ids": ["SOFIA-HT-001"],
+      "notes": "Sequential maternal-state priming step only."
+    },
+    {
+      "protocol_id": "hormone_treated",
+      "model_version": "adoc-core-v0.1.0",
+      "condition_cfg": "models/baseline/adoc-core-v0.1.0/conditions/hormone_treated.cfg",
+      "continuation_from": "e2_priming",
+      "continuation": {
+        "mode": "joint",
+        "memory_policy": "all_non_inputs",
+        "probability_cutoff": 1e-06
+      },
+      "comparator_role": "calibration_maternal_state",
+      "steps": [
+        {
+          "step_id": "combined_ht",
+          "relative_order": 1,
+          "relative_duration": 4.0,
+          "duration_note": "4 additional days of 10 nM E2 + 1 uM MPA + 250 uM cAMP + 10 uM XAV939 after E2 priming; embryo challenge remains absent.",
+          "experimental_day_anchors": {
+            "e2_phase_start_day": 0,
+            "e2_phase_end_day": 2,
+            "e2_phase_duration_h": 48,
+            "cocktail_start_day": 2,
+            "cocktail_end_day": 6,
+            "cocktail_duration_h": 96,
+            "sampling_anchors": [
+              {"protocol_day": 3, "hours_into_cocktail": 24},
+              {"protocol_day": 6, "hours_into_cocktail": 96}
+            ],
+            "evidence_ids": ["SOFIA-HT-001", "SOFIA-COMM-004"],
+            "time_semantics_note": "Wall-clock experimental schedule only. These hours do NOT calibrate MaBoSS time -- see time_semantics at the top of this file and calibrated_physical_time: false in config/calibration.yaml. Never read 96 h as a simulation horizon or convert it into a transition rate.",
+            "component_identifiability_note": "The design has no single-agent arm, so no effect may be attributed to MPA, cAMP or XAV939 individually. IN_XAV939 is additionally a zero-degree node in adoc-literature-v0.2.0 and the v0.3.0 superset (see docs/model_evidence_audit.md), so the simulated response to this protocol contains no XAV939 contribution at all."
+          },
+          "input_states": {
+            "IN_E2": true,
+            "IN_PROGESTIN": true,
+            "IN_cAMP": true,
+            "IN_XAV939": true,
+            "IN_MIFEPRISTONE": false,
+            "IN_ANTI_SPP1": false,
+            "IN_EMBRYO_PRESENT": false,
+            "IN_TROPHECTODERM_COMPETENT": false
+          }
+        }
+      ],
+      "evidence_ids": ["SOFIA-HT-001", "SOFIA-ADH-002"],
+      "notes": "Matched maternal-state comparator for perturbations and secretome/RNA-seq style readouts."
+    },
+    {
+      "protocol_id": "hormone_treated_mifepristone",
+      "model_version": "adoc-core-v0.1.0",
+      "condition_cfg": "models/baseline/adoc-core-v0.1.0/conditions/hormone_treated_mifepristone.cfg",
+      "continuation_from": "hormone_treated",
+      "continuation": {
+        "mode": "joint",
+        "memory_policy": "all_non_inputs",
+        "probability_cutoff": 1e-06
+      },
+      "comparator_role": "perturbation_maternal_state",
+      "steps": [
+        {
+          "step_id": "mifepristone_challenge",
+          "relative_order": 1,
+          "relative_duration": 2.0,
+          "duration_note": "24 h of 10 uM mifepristone after the sequential E2-plus-HT maternal protocol.",
+          "input_states": {
+            "IN_E2": true,
+            "IN_PROGESTIN": true,
+            "IN_cAMP": true,
+            "IN_XAV939": true,
+            "IN_MIFEPRISTONE": true,
+            "IN_ANTI_SPP1": false,
+            "IN_EMBRYO_PRESENT": false,
+            "IN_TROPHECTODERM_COMPETENT": false
+          }
+        }
+      ],
+      "evidence_ids": ["SOFIA-HT-002", "SOFIA-ADH-003"],
+      "notes": "Maternal-only perturbation response; embryo challenge is evaluated in a separate protocol."
+    },
+    {
+      "protocol_id": "hormone_treated_anti_spp1",
+      "model_version": "adoc-core-v0.1.0",
+      "condition_cfg": "models/baseline/adoc-core-v0.1.0/conditions/hormone_treated_anti_spp1.cfg",
+      "continuation_from": "hormone_treated",
+      "continuation": {
+        "mode": "joint",
+        "memory_policy": "all_non_inputs",
+        "probability_cutoff": 1e-06
+      },
+      "comparator_role": "mechanistic_probe_maternal_state",
+      "steps": [
+        {
+          "step_id": "anti_spp1_challenge",
+          "relative_order": 1,
+          "relative_duration": 2.0,
+          "duration_note": "Neutralizing anti-SPP1 perturbation represented as one maternal-interface route blockade after HT.",
+          "input_states": {
+            "IN_E2": true,
+            "IN_PROGESTIN": true,
+            "IN_cAMP": true,
+            "IN_XAV939": true,
+            "IN_MIFEPRISTONE": false,
+            "IN_ANTI_SPP1": true,
+            "IN_EMBRYO_PRESENT": false,
+            "IN_TROPHECTODERM_COMPETENT": false
+          }
+        }
+      ],
+      "evidence_ids": ["SOFIA-CCC-002"],
+      "notes": "Maternal-only anti-SPP1 response; SPP1 transcription is unchanged."
+    },
+    {
+      "protocol_id": "washout",
+      "model_version": "adoc-core-v0.1.0",
+      "condition_cfg": "models/baseline/adoc-core-v0.1.0/conditions/washout.cfg",
+      "continuation_from": "hormone_treated_anti_spp1",
+      "continuation": {
+        "mode": "joint",
+        "memory_policy": "all_non_inputs",
+        "probability_cutoff": 1e-06
+      },
+      "comparator_role": "washout_maternal_state",
+      "steps": [
+        {
+          "step_id": "washout_to_ht_inputs",
+          "relative_order": 1,
+          "relative_duration": 1.0,
+          "duration_note": "Perturbation removed; protocol reverts to the matched HT maternal input state for a washout observation.",
+          "input_states": {
+            "IN_E2": true,
+            "IN_PROGESTIN": true,
+            "IN_cAMP": true,
+            "IN_XAV939": true,
+            "IN_MIFEPRISTONE": false,
+            "IN_ANTI_SPP1": false,
+            "IN_EMBRYO_PRESENT": false,
+            "IN_TROPHECTODERM_COMPETENT": false
+          }
+        }
+      ],
+      "evidence_ids": ["SOFIA-HT-001"],
+      "notes": "Sequential maternal washout placeholder; embryo challenge remains a separate protocol."
+    },
+    {
+      "protocol_id": "adhesion_challenge_basal",
+      "model_version": "adoc-core-v0.1.0",
+      "condition_cfg": "models/baseline/adoc-core-v0.1.0/conditions/adhesion_challenge_basal.cfg",
+      "continuation_from": "basal",
+      "continuation": {
+        "mode": "joint",
+        "memory_policy": "all_non_inputs",
+        "probability_cutoff": 1e-06
+      },
+      "comparator_role": "calibration_adhesion_observation",
+      "steps": [
+        {
+          "step_id": "embryo_challenge",
+          "relative_order": 1,
+          "relative_duration": 1.0,
+          "duration_note": "Embryo challenge applied to the basal maternal state only at the observation step.",
+          "input_states": {
+            "IN_E2": false,
+            "IN_PROGESTIN": false,
+            "IN_cAMP": false,
+            "IN_XAV939": false,
+            "IN_MIFEPRISTONE": false,
+            "IN_ANTI_SPP1": false,
+            "IN_EMBRYO_PRESENT": true,
+            "IN_TROPHECTODERM_COMPETENT": true
+          }
+        }
+      ],
+      "evidence_ids": ["SOFIA-ADH-001"],
+      "notes": "Explicit embryo-adhesion challenge derived from the basal maternal state."
+    },
+    {
+      "protocol_id": "adhesion_challenge_hormone_treated",
+      "model_version": "adoc-core-v0.1.0",
+      "condition_cfg": "models/baseline/adoc-core-v0.1.0/conditions/adhesion_challenge_hormone_treated.cfg",
+      "continuation_from": "hormone_treated",
+      "continuation": {
+        "mode": "joint",
+        "memory_policy": "all_non_inputs",
+        "probability_cutoff": 1e-06
+      },
+      "comparator_role": "calibration_adhesion_observation",
+      "steps": [
+        {
+          "step_id": "embryo_challenge",
+          "relative_order": 1,
+          "relative_duration": 1.0,
+          "duration_note": "Embryo challenge applied only after the maternal HT sequence has been completed.",
+          "input_states": {
+            "IN_E2": true,
+            "IN_PROGESTIN": true,
+            "IN_cAMP": true,
+            "IN_XAV939": true,
+            "IN_MIFEPRISTONE": false,
+            "IN_ANTI_SPP1": false,
+            "IN_EMBRYO_PRESENT": true,
+            "IN_TROPHECTODERM_COMPETENT": true
+          }
+        }
+      ],
+      "evidence_ids": ["SOFIA-ADH-002"],
+      "notes": "Calibration adhesion observation derived from the sequential maternal HT state."
+    },
+    {
+      "protocol_id": "adhesion_challenge_hormone_treated_mifepristone",
+      "model_version": "adoc-core-v0.1.0",
+      "condition_cfg": "models/baseline/adoc-core-v0.1.0/conditions/adhesion_challenge_hormone_treated_mifepristone.cfg",
+      "continuation_from": "hormone_treated_mifepristone",
+      "continuation": {
+        "mode": "joint",
+        "memory_policy": "all_non_inputs",
+        "probability_cutoff": 1e-06
+      },
+      "comparator_role": "validation_adhesion_observation",
+      "steps": [
+        {
+          "step_id": "embryo_challenge",
+          "relative_order": 1,
+          "relative_duration": 1.0,
+          "duration_note": "Embryo challenge applied only after the maternal mifepristone response has been completed.",
+          "input_states": {
+            "IN_E2": true,
+            "IN_PROGESTIN": true,
+            "IN_cAMP": true,
+            "IN_XAV939": true,
+            "IN_MIFEPRISTONE": true,
+            "IN_ANTI_SPP1": false,
+            "IN_EMBRYO_PRESENT": true,
+            "IN_TROPHECTODERM_COMPETENT": true
+          }
+        }
+      ],
+      "evidence_ids": ["SOFIA-ADH-003"],
+      "notes": "Held-out adhesion observation derived from the maternal mifepristone response."
+    },
+    {
+      "protocol_id": "adhesion_challenge_hormone_treated_anti_spp1",
+      "model_version": "adoc-core-v0.1.0",
+      "condition_cfg": "models/baseline/adoc-core-v0.1.0/conditions/adhesion_challenge_hormone_treated_anti_spp1.cfg",
+      "continuation_from": "hormone_treated_anti_spp1",
+      "continuation": {
+        "mode": "joint",
+        "memory_policy": "all_non_inputs",
+        "probability_cutoff": 1e-06
+      },
+      "comparator_role": "mechanistic_adhesion_observation",
+      "steps": [
+        {
+          "step_id": "embryo_challenge",
+          "relative_order": 1,
+          "relative_duration": 1.0,
+          "duration_note": "Embryo challenge applied after the maternal anti-SPP1 response has been completed.",
+          "input_states": {
+            "IN_E2": true,
+            "IN_PROGESTIN": true,
+            "IN_cAMP": true,
+            "IN_XAV939": true,
+            "IN_MIFEPRISTONE": false,
+            "IN_ANTI_SPP1": true,
+            "IN_EMBRYO_PRESENT": true,
+            "IN_TROPHECTODERM_COMPETENT": true
+          }
+        }
+      ],
+      "evidence_ids": ["SOFIA-CCC-002"],
+      "notes": "Embryo challenge isolates the anti-SPP1 effect to one maternal-interface route."
+    },
+    {
+      "protocol_id": "adhesion_challenge_washout",
+      "model_version": "adoc-core-v0.1.0",
+      "condition_cfg": "models/baseline/adoc-core-v0.1.0/conditions/adhesion_challenge_washout.cfg",
+      "continuation_from": "washout",
+      "continuation": {
+        "mode": "joint",
+        "memory_policy": "all_non_inputs",
+        "probability_cutoff": 1e-06
+      },
+      "comparator_role": "washout_adhesion_observation",
+      "steps": [
+        {
+          "step_id": "embryo_challenge",
+          "relative_order": 1,
+          "relative_duration": 1.0,
+          "duration_note": "Embryo challenge applied after the washout maternal state has been re-established.",
+          "input_states": {
+            "IN_E2": true,
+            "IN_PROGESTIN": true,
+            "IN_cAMP": true,
+            "IN_XAV939": true,
+            "IN_MIFEPRISTONE": false,
+            "IN_ANTI_SPP1": false,
+            "IN_EMBRYO_PRESENT": true,
+            "IN_TROPHECTODERM_COMPETENT": true
+          }
+        }
+      ],
+      "evidence_ids": ["SOFIA-HT-001", "SOFIA-ADH-002"],
+      "notes": "Embryo challenge after maternal washout; recovery is interpreted as model-internal until mechanistic washout biology exists."
+    },
+    {
+      "protocol_id": "basal_maternal",
+      "protocol_class": "maternal_state",
+      "model_version": "adoc-literature-v0.2.0",
+      "condition_cfg": "models/extended/adoc-literature-v0.2.0/conditions/basal_maternal.cfg",
+      "comparator_role": "baseline_maternal_state",
+      "steps": [
+        {
+          "step_id": "basal_maternal",
+          "relative_order": 1,
+          "relative_duration": 1.0,
+          "duration_note": "Maternal-only basal state for the literature comparator.",
+          "input_states": {
+            "IN_E2": false,
+            "IN_PROGESTIN": false,
+            "IN_cAMP": false,
+            "IN_XAV939": false,
+            "IN_MIFEPRISTONE": false,
+            "IN_ANTI_SPP1": false,
+            "IN_EMBRYO_PRESENT": false,
+            "IN_TROPHECTODERM_COMPETENT": false,
+            "IN_EMBRYO_CONTACT": false,
+            "IN_HCG": false,
+            "IN_EMBRYO_CONDITIONED_SIGNAL": false,
+            "IN_ER_STRESS_EXCESS": false,
+            "IN_HIGH_ECM_STIFFNESS": false
+          }
+        }
+      ],
+      "evidence_ids": ["SOFIA-HT-001", "LIT-IHH-001", "LIT-CDH1-001"],
+      "notes": "Literature-model maternal baseline; embryo-related inputs remain OFF."
+    },
+    {
+      "protocol_id": "e2_primed_maternal",
+      "protocol_class": "maternal_state",
+      "model_version": "adoc-literature-v0.2.0",
+      "condition_cfg": "models/extended/adoc-literature-v0.2.0/conditions/e2_primed_maternal.cfg",
+      "continuation_from": "basal_maternal",
+      "continuation": {
+        "mode": "joint",
+        "memory_policy": "minimal_stable_joint",
+        "probability_cutoff": 1e-06
+      },
+      "comparator_role": "intermediate_maternal_state",
+      "steps": [
+        {
+          "step_id": "e2_primed_maternal",
+          "relative_order": 1,
+          "relative_duration": 2.0,
+          "duration_note": "2 days (48 h) of 10 nM E2 alone -- the proliferative phase, protocol days 0-2; embryo-related inputs remain OFF.",
+          "input_states": {
+            "IN_E2": true,
+            "IN_PROGESTIN": false,
+            "IN_cAMP": false,
+            "IN_XAV939": false,
+            "IN_MIFEPRISTONE": false,
+            "IN_ANTI_SPP1": false,
+            "IN_EMBRYO_PRESENT": false,
+            "IN_TROPHECTODERM_COMPETENT": false,
+            "IN_EMBRYO_CONTACT": false,
+            "IN_HCG": false,
+            "IN_EMBRYO_CONDITIONED_SIGNAL": false,
+            "IN_ER_STRESS_EXCESS": false,
+            "IN_HIGH_ECM_STIFFNESS": false
+          }
+        }
+      ],
+      "evidence_ids": ["SOFIA-HT-001"],
+      "notes": "Sequential maternal priming stage for the literature comparator."
+    },
+    {
+      "protocol_id": "hormone_treated_maternal",
+      "protocol_class": "maternal_state",
+      "model_version": "adoc-literature-v0.2.0",
+      "condition_cfg": "models/extended/adoc-literature-v0.2.0/conditions/hormone_treated_maternal.cfg",
+      "continuation_from": "e2_primed_maternal",
+      "continuation": {
+        "mode": "joint",
+        "memory_policy": "extended_maternal_joint",
+        "probability_cutoff": 1e-06
+      },
+      "comparator_role": "calibration_maternal_state",
+      "steps": [
+        {
+          "step_id": "hormone_treated_maternal",
+          "relative_order": 1,
+          "relative_duration": 4.0,
+          "duration_note": "4 additional days of 10 nM E2 + 1 uM MPA + 250 uM cAMP + 10 uM XAV939 after E2 priming; embryo-related inputs remain OFF.",
+          "experimental_day_anchors": {
+            "e2_phase_start_day": 0,
+            "e2_phase_end_day": 2,
+            "e2_phase_duration_h": 48,
+            "cocktail_start_day": 2,
+            "cocktail_end_day": 6,
+            "cocktail_duration_h": 96,
+            "sampling_anchors": [
+              {"protocol_day": 3, "hours_into_cocktail": 24},
+              {"protocol_day": 6, "hours_into_cocktail": 96}
+            ],
+            "evidence_ids": ["SOFIA-HT-001", "SOFIA-COMM-004"],
+            "time_semantics_note": "Wall-clock experimental schedule only. These hours do NOT calibrate MaBoSS time -- see time_semantics at the top of this file and calibrated_physical_time: false in config/calibration.yaml. Never read 96 h as a simulation horizon or convert it into a transition rate.",
+            "component_identifiability_note": "The design has no single-agent arm, so no effect may be attributed to MPA, cAMP or XAV939 individually. IN_XAV939 is additionally a zero-degree node in this model version (see docs/model_evidence_audit.md), so this protocol and a hypothetical E2+MPA+cAMP protocol are the same executable state and the simulated response contains no XAV939 contribution.",
+            "day3_representation_note": "No protocol reproduces day 3, and none should: an arm carries an input vector, not an elapsed time, and day 3 and day 6 share this protocol's input vector exactly. Since 2026-09-18 day 3 is represented instead as an OBSERVATION CHECKPOINT (CHK-HTM-D3 in config/observation_checkpoints.tsv) on this phase's existing continuous trajectory -- no arm, no reset, and no hours-to-relative-time conversion. The current state is exactly: this protocol phase exists, the day-3 experimental checkpoint exists, the experimental-to-MaBoSS alignment is UNRESOLVED, and there is therefore NO day-3 simulated value. How a checkpoint is placed is stated once, in config/observation_checkpoints.tsv and docs/observation_checkpoints.md. config/observation_model_map.tsv OM-011 records the closed protocol-coverage gap; OM-016 records what still blocks the in-house IGFBP-1-before-PRL onset-order constraint, which is now the observation side and not the model's protocol set."
+          },
+          "input_states": {
+            "IN_E2": true,
+            "IN_PROGESTIN": true,
+            "IN_cAMP": true,
+            "IN_XAV939": true,
+            "IN_MIFEPRISTONE": false,
+            "IN_ANTI_SPP1": false,
+            "IN_EMBRYO_PRESENT": false,
+            "IN_TROPHECTODERM_COMPETENT": false,
+            "IN_EMBRYO_CONTACT": false,
+            "IN_HCG": false,
+            "IN_EMBRYO_CONDITIONED_SIGNAL": false,
+            "IN_ER_STRESS_EXCESS": false,
+            "IN_HIGH_ECM_STIFFNESS": false
+          }
+        }
+      ],
+      "evidence_ids": ["SOFIA-HT-001", "LIT-IHH-001", "LIT-MECH-001"],
+      "notes": "Literature-model maternal hormone-treated comparator."
+    },
+    {
+      "protocol_id": "adhesion_challenge_basal",
+      "protocol_class": "embryo_challenge",
+      "model_version": "adoc-literature-v0.2.0",
+      "condition_cfg": "models/extended/adoc-literature-v0.2.0/conditions/adhesion_challenge_basal.cfg",
+      "continuation_from": "basal_maternal",
+      "continuation": {
+        "mode": "joint",
+        "memory_policy": "minimal_stable_joint",
+        "probability_cutoff": 1e-06
+      },
+      "comparator_role": "calibration_adhesion_observation",
+      "steps": [
+        {
+          "step_id": "adhesion_challenge_basal",
+          "relative_order": 1,
+          "relative_duration": 1.0,
+          "duration_note": "Embryo challenge on the basal maternal state.",
+          "input_states": {
+            "IN_E2": false,
+            "IN_PROGESTIN": false,
+            "IN_cAMP": false,
+            "IN_XAV939": false,
+            "IN_MIFEPRISTONE": false,
+            "IN_ANTI_SPP1": false,
+            "IN_EMBRYO_PRESENT": true,
+            "IN_TROPHECTODERM_COMPETENT": true,
+            "IN_EMBRYO_CONTACT": true,
+            "IN_HCG": false,
+            "IN_EMBRYO_CONDITIONED_SIGNAL": false,
+            "IN_ER_STRESS_EXCESS": false,
+            "IN_HIGH_ECM_STIFFNESS": false
+          }
+        }
+      ],
+      "evidence_ids": ["SOFIA-ADH-001", "LIT-CDH1-001"],
+      "notes": "Basal embryo challenge for the literature comparator."
+    },
+    {
+      "protocol_id": "adhesion_challenge_hormone_treated",
+      "protocol_class": "embryo_challenge",
+      "model_version": "adoc-literature-v0.2.0",
+      "condition_cfg": "models/extended/adoc-literature-v0.2.0/conditions/adhesion_challenge_hormone_treated.cfg",
+      "continuation_from": "hormone_treated_maternal",
+      "continuation": {
+        "mode": "joint",
+        "memory_policy": "minimal_stable_joint",
+        "probability_cutoff": 1e-06
+      },
+      "comparator_role": "calibration_adhesion_observation",
+      "steps": [
+        {
+          "step_id": "adhesion_challenge_hormone_treated",
+          "relative_order": 1,
+          "relative_duration": 1.0,
+          "duration_note": "Embryo challenge after the maternal hormone-treatment sequence.",
+          "input_states": {
+            "IN_E2": true,
+            "IN_PROGESTIN": true,
+            "IN_cAMP": true,
+            "IN_XAV939": true,
+            "IN_MIFEPRISTONE": false,
+            "IN_ANTI_SPP1": false,
+            "IN_EMBRYO_PRESENT": true,
+            "IN_TROPHECTODERM_COMPETENT": true,
+            "IN_EMBRYO_CONTACT": true,
+            "IN_HCG": false,
+            "IN_EMBRYO_CONDITIONED_SIGNAL": false,
+            "IN_ER_STRESS_EXCESS": false,
+            "IN_HIGH_ECM_STIFFNESS": false
+          }
+        }
+      ],
+      "evidence_ids": ["SOFIA-ADH-002", "LIT-CDH1-001", "LIT-SPP1-001"],
+      "notes": "Primary literature-model embryo challenge comparator."
+    },
+    {
+      "protocol_id": "adhesion_challenge_hormone_treated_mifepristone",
+      "protocol_class": "embryo_challenge",
+      "model_version": "adoc-literature-v0.2.0",
+      "condition_cfg": "models/extended/adoc-literature-v0.2.0/conditions/adhesion_challenge_hormone_treated_mifepristone.cfg",
+      "continuation_from": "hormone_treated_maternal",
+      "continuation": {
+        "mode": "joint",
+        "memory_policy": "minimal_stable_joint",
+        "probability_cutoff": 1e-06
+      },
+      "comparator_role": "validation_adhesion_observation",
+      "steps": [
+        {
+          "step_id": "adhesion_challenge_hormone_treated_mifepristone",
+          "relative_order": 1,
+          "relative_duration": 1.0,
+          "duration_note": "Mifepristone challenge applied after embryo contact has been established in the hormone-treated comparator.",
+          "input_states": {
+            "IN_E2": true,
+            "IN_PROGESTIN": true,
+            "IN_cAMP": true,
+            "IN_XAV939": true,
+            "IN_MIFEPRISTONE": true,
+            "IN_ANTI_SPP1": false,
+            "IN_EMBRYO_PRESENT": true,
+            "IN_TROPHECTODERM_COMPETENT": true,
+            "IN_EMBRYO_CONTACT": true,
+            "IN_HCG": false,
+            "IN_EMBRYO_CONDITIONED_SIGNAL": false,
+            "IN_ER_STRESS_EXCESS": false,
+            "IN_HIGH_ECM_STIFFNESS": false
+          }
+        }
+      ],
+      "evidence_ids": ["SOFIA-ADH-003", "SOFIA-HT-002"],
+      "notes": "Matched maternal-state mifepristone challenge for the literature comparator; embryo inputs switch on only in this explicit perturbation challenge step."
+    },
+    {
+      "protocol_id": "adhesion_challenge_hormone_treated_anti_spp1",
+      "protocol_class": "embryo_challenge",
+      "model_version": "adoc-literature-v0.2.0",
+      "condition_cfg": "models/extended/adoc-literature-v0.2.0/conditions/adhesion_challenge_hormone_treated_anti_spp1.cfg",
+      "continuation_from": "hormone_treated_maternal",
+      "continuation": {
+        "mode": "joint",
+        "memory_policy": "minimal_stable_joint",
+        "probability_cutoff": 1e-06
+      },
+      "comparator_role": "mechanistic_adhesion_observation",
+      "steps": [
+        {
+          "step_id": "adhesion_challenge_hormone_treated_anti_spp1",
+          "relative_order": 1,
+          "relative_duration": 1.0,
+          "duration_note": "Anti-SPP1 challenge applied after embryo contact has been established in the hormone-treated comparator.",
+          "input_states": {
+            "IN_E2": true,
+            "IN_PROGESTIN": true,
+            "IN_cAMP": true,
+            "IN_XAV939": true,
+            "IN_MIFEPRISTONE": false,
+            "IN_ANTI_SPP1": true,
+            "IN_EMBRYO_PRESENT": true,
+            "IN_TROPHECTODERM_COMPETENT": true,
+            "IN_EMBRYO_CONTACT": true,
+            "IN_HCG": false,
+            "IN_EMBRYO_CONDITIONED_SIGNAL": false,
+            "IN_ER_STRESS_EXCESS": false,
+            "IN_HIGH_ECM_STIFFNESS": false
+          }
+        }
+      ],
+      "evidence_ids": ["SOFIA-CCC-002", "LIT-SPP1-001"],
+      "notes": "Matched maternal-state anti-SPP1 challenge; only free luminal SPP1 is neutralized."
+    },
+    {
+      "protocol_id": "adhesion_challenge_excess_er_stress",
+      "protocol_class": "embryo_challenge",
+      "model_version": "adoc-literature-v0.2.0",
+      "condition_cfg": "models/extended/adoc-literature-v0.2.0/conditions/adhesion_challenge_excess_er_stress.cfg",
+      "continuation_from": "hormone_treated_maternal",
+      "continuation": {
+        "mode": "joint",
+        "memory_policy": "minimal_stable_joint",
+        "probability_cutoff": 1e-06
+      },
+      "comparator_role": "mechanics_adhesion_observation",
+      "steps": [
+        {
+          "step_id": "adhesion_challenge_excess_er_stress",
+          "relative_order": 1,
+          "relative_duration": 1.0,
+          "duration_note": "Excess ER stress challenge after embryo contact has been established in the hormone-treated comparator.",
+          "input_states": {
+            "IN_E2": true,
+            "IN_PROGESTIN": true,
+            "IN_cAMP": true,
+            "IN_XAV939": true,
+            "IN_MIFEPRISTONE": false,
+            "IN_ANTI_SPP1": false,
+            "IN_EMBRYO_PRESENT": true,
+            "IN_TROPHECTODERM_COMPETENT": true,
+            "IN_EMBRYO_CONTACT": true,
+            "IN_HCG": false,
+            "IN_EMBRYO_CONDITIONED_SIGNAL": false,
+            "IN_ER_STRESS_EXCESS": true,
+            "IN_HIGH_ECM_STIFFNESS": false
+          }
+        }
+      ],
+      "evidence_ids": ["LIT-MECH-001"],
+      "notes": "Matched maternal-state adverse-mechanics challenge via excess ER stress."
+    },
+    {
+      "protocol_id": "adhesion_challenge_high_ecm_stiffness",
+      "protocol_class": "embryo_challenge",
+      "model_version": "adoc-literature-v0.2.0",
+      "condition_cfg": "models/extended/adoc-literature-v0.2.0/conditions/adhesion_challenge_high_ecm_stiffness.cfg",
+      "continuation_from": "hormone_treated_maternal",
+      "continuation": {
+        "mode": "joint",
+        "memory_policy": "minimal_stable_joint",
+        "probability_cutoff": 1e-06
+      },
+      "comparator_role": "mechanics_adhesion_observation",
+      "steps": [
+        {
+          "step_id": "adhesion_challenge_high_ecm_stiffness",
+          "relative_order": 1,
+          "relative_duration": 1.0,
+          "duration_note": "High ECM stiffness challenge after embryo contact has been established in the hormone-treated comparator.",
+          "input_states": {
+            "IN_E2": true,
+            "IN_PROGESTIN": true,
+            "IN_cAMP": true,
+            "IN_XAV939": true,
+            "IN_MIFEPRISTONE": false,
+            "IN_ANTI_SPP1": false,
+            "IN_EMBRYO_PRESENT": true,
+            "IN_TROPHECTODERM_COMPETENT": true,
+            "IN_EMBRYO_CONTACT": true,
+            "IN_HCG": false,
+            "IN_EMBRYO_CONDITIONED_SIGNAL": false,
+            "IN_ER_STRESS_EXCESS": false,
+            "IN_HIGH_ECM_STIFFNESS": true
+          }
+        }
+      ],
+      "evidence_ids": ["LIT-MECH-001"],
+      "notes": "Matched maternal-state adverse-mechanics challenge via excessive stiffness."
+    },
+    {
+      "protocol_id": "adhesion_challenge_washout",
+      "protocol_class": "embryo_challenge",
+      "model_version": "adoc-literature-v0.2.0",
+      "condition_cfg": "models/extended/adoc-literature-v0.2.0/conditions/adhesion_challenge_washout.cfg",
+      "continuation_from": "adhesion_challenge_hormone_treated_anti_spp1",
+      "continuation": {
+        "mode": "joint",
+        "memory_policy": "minimal_stable_joint",
+        "probability_cutoff": 1e-06
+      },
+      "comparator_role": "washout_adhesion_observation",
+      "steps": [
+        {
+          "step_id": "adhesion_challenge_washout",
+          "relative_order": 1,
+          "relative_duration": 1.0,
+          "duration_note": "Washout stage after the anti-SPP1 challenge, with embryo challenge still active.",
+          "input_states": {
+            "IN_E2": true,
+            "IN_PROGESTIN": true,
+            "IN_cAMP": true,
+            "IN_XAV939": true,
+            "IN_MIFEPRISTONE": false,
+            "IN_ANTI_SPP1": false,
+            "IN_EMBRYO_PRESENT": true,
+            "IN_TROPHECTODERM_COMPETENT": true,
+            "IN_EMBRYO_CONTACT": true,
+            "IN_HCG": false,
+            "IN_EMBRYO_CONDITIONED_SIGNAL": false,
+            "IN_ER_STRESS_EXCESS": false,
+            "IN_HIGH_ECM_STIFFNESS": false
+          }
+        }
+      ],
+      "evidence_ids": ["SOFIA-CCC-002", "LIT-SPP1-001"],
+      "notes": "Washout stage reverts only the anti-SPP1 challenge and remains provisional."
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+# The practical ADOC experimental plan, as a declared arm set.
+#
+# SCOPE: this file records which experimental conditions the plan intends to
+# run. It is design metadata only. It introduces no node, rule, rate, initial
+# condition or phenotype, and it may not override anything in the model: each
+# arm names condition cfgs that must already exist under the model's
+# `conditions/` directory, and `src/dt_adoc/reporting/design_alias.py` raises if
+# one does not.
+#
+# WHY IT IS NOT DERIVED. `identifiability.py` reconstructs the *recorded* design
+# -- the arms the repository holds an observation for -- from calibration.yaml
+# and observation_model_map.tsv. That is the right rule for a claim about what
+# has been measured, and it is the wrong rule here: a plan is a statement about
+# what will be run, and no artifact in this repository records one. So the plan
+# is declared, and everything downstream of it is computed.
+#
+# WHAT IS DERIVED, NOT DECLARED. Whether an arm already carries a recorded
+# observation is read from the same two artifacts identifiability.py uses, never
+# from this file. An arm declared here that carries no observation is reported
+# as `planned_not_recorded` rather than silently counted as data in hand.
+
+# WHAT THIS FILE IS NOT. It is NOT a selection of the prospective arm, and
+# nothing downstream may read it as one. It is the AS-DECLARED plan, and its
+# only role is to be the BASELINE partition that candidate arms are scored
+# against. `role` below is checked on load so a later edit cannot repurpose the
+# file by adding arms and calling the result a recommendation.
+#
+# The fourth arm in particular. The plan names an anti-SPP1 condition, so this
+# file records one -- but naming it here confers nothing, and the analysis this
+# file feeds argues against reading it as the choice:
+#
+#   * `hormone_treated_anti_spp1` carries NO recorded observation. It is
+#     reported `planned_not_recorded`, and `IN_ANTI_SPP1` comes out
+#     `set_alone_no_shared_readout`: the plan moves the input on its own and no
+#     measured quantity exists whose change could be attributed to it. As
+#     declared, the fourth arm perturbs a mechanism the design cannot read.
+#   * By raw design-class gain the best fifth arm is HAND2 loss (+5), not
+#     anti-SPP1. By separation of the two measured analytes, only minus-E2 and
+#     minus-cAMP score at all, and neither is anti-SPP1.
+#   * The prospective arm is an OUTPUT of the design analysis, not an input to
+#     it. No molecule is privileged in advance, anti-SPP1 included, and the
+#     maternal-phase panel is settled before any embryo-challenge arm is
+#     chosen. Gate 6 of `docs/v05_plan_review.md` owns that decision.
+#
+# So: an arm appearing here means the declared plan named it. It does not mean
+# the repository recommends it, that it is powered, that it is readable, or that
+# it has been compared against the alternatives.
+
+schema_version: "1.0"
+
+model_version: adoc-literature-superset-v0.4.0
+
+# Checked by `design_alias.load_plan`. The only accepted value; a file that
+# meant something else would have to say so and fail, rather than be read as a
+# plan by code that never asked.
+role: as_declared_plan_baseline_not_a_prospective_selection
+
+plan_id: adoc_four_arm_plan
+plan_label: "Practical four-arm ADOC plan"
+
+# PROVENANCE: stated by the project lead in the session of 2026-09-14 that
+# commissioned docs/design_alias_note.md. It is not transcribed from a protocol
+# document, an ethics submission or a funded plan, because this repository holds
+# none; if one exists, it supersedes this file.
+plan_source: "project lead, session 2026-09-14; no protocol document in repository"
+
+# An arm is one experimental condition. The repository realises every condition
+# in two phases -- a maternal conditioning phase, where the secreted analytes are
+# sampled, and an embryo challenge, where attachment is counted -- and
+# config/perturbations.yaml pairs them explicitly (`maternal_parent_protocol`).
+# Both cfgs are therefore listed, and both enter the partition: an arm that
+# excited the network only in the maternal phase would be a different design.
+arms:
+  - arm_id: untreated_control
+    label: "Untreated / control"
+    maternal_cfg: basal_maternal
+    challenge_cfg: adhesion_challenge_basal
+
+  - arm_id: hormone_treated
+    label: "Hormone treatment"
+    maternal_cfg: hormone_treated_maternal
+    challenge_cfg: adhesion_challenge_hormone_treated
+
+  - arm_id: hormone_treated_mifepristone
+    label: "Hormone treatment + mifepristone"
+    maternal_cfg: hormone_treated_mifepristone
+    challenge_cfg: adhesion_challenge_hormone_treated_mifepristone
+
+  - arm_id: hormone_treated_anti_spp1
+    label: "Anti-SPP1"
+    maternal_cfg: hormone_treated_anti_spp1
+    challenge_cfg: adhesion_challenge_hormone_treated_anti_spp1
+    # The plan says "anti-SPP1 condition" without naming a background. The only
+    # anti-SPP1 cfgs the model carries put it on the hormone-treated background,
+    # and config/perturbations.yaml anti_spp1_after_ht does the same. That is an
+    # interpretation of the plan, so it is written down here rather than assumed
+    # downstream: an anti-SPP1 arm on an untreated background is a different arm
+    # and would have to be added as a cfg before it could be evaluated.
+    interpretation: "anti-SPP1 on the hormone-treated background, per config/perturbations.yaml anti_spp1_after_ht"
+    # Recorded here as well as in the header, because this is the arm most
+    # likely to be misread: listing it is not selecting it. See `role` above.
+    not_a_prospective_selection: true
+
+# A sensitivity the note reports alongside the plan: the same four conditions
+# restricted to their maternal phase. Listed so the alternative reading is
+# computed rather than argued about.
+sensitivity_variants:
+  maternal_phase_only:
+    label: "Four conditions, maternal phase only"
+    use_phases: [maternal]

@@ -1,0 +1,147 @@
+schema_version: "1.1"
+phase: "phase1b"
+status: "provisional"
+adhesion_objective:
+  type: binomial_log_likelihood
+  # DEMOTED 2026-09-16 from magnitude-fitted objective to ordinal/diagnostic
+  # readout. See docs/gate3_scope_adjudication.md for the adjudication.
+  role: diagnostic_ordinal
+  magnitude_fitted: false
+  demotion_note: >-
+    Three independent reasons, none of them "the fit is poor". (1) Two of the
+    three arms are structurally deterministic: over all 32 assignments of the
+    cfg-weighted free variables OUT_STABLE_ADHESION is false in every one for
+    the basal and mifepristone arms, so those arms contribute logL identical
+    for every candidate and can rank nothing. (2) The one remaining gradient
+    runs into a ridge: the endpoint is the OR of two interface relays, so the
+    likelihood sees only 1-(1-p1)(1-p2) and (0.82,0) and (0,0.82) are
+    bit-identical -- and neither relay carries maternal biology. (3) No
+    per-embryo covariate exists (no Gardner or TE/ICM grading, no euploidy, no
+    per-embryo chip or donor assignment), so embryo variability cannot be
+    separated from maternal mechanism in these data by any analysis.
+  no_replacement_objective: >-
+    CONSEQUENCE, STATED DELIBERATELY: this repository now has NO quantitative
+    magnitude-fitted objective at all. No replacement scalar has been
+    manufactured, and none should be. Gate 3a therefore proceeds as STRUCTURAL
+    AND EVIDENCE-BASED model discrimination -- candidate rules are separated by
+    whether they make different predictions on maternal molecular readouts, and
+    chosen on the evidence for those predictions, not by a fitted score. A
+    future scalar objective would need a readout whose magnitude the model can
+    actually express and whose confounders are measured; adhesion is neither.
+  retained_ordinal_claim:
+    statement: "untreated < hormone_treated > hormone_treated_mifepristone"
+    status: satisfied_by_v0_4
+    note: >-
+      What survives the demotion. It is a real consistency check on maternal
+      receptivity, it does not depend on any relay istate, and it still holds
+      when the three interface relays are pinned out of the model entirely.
+  structural_contradiction_policy: >-
+    Scored from the UNCLIPPED model probability. An arm with P=0 exactly and
+    observed successes is marked structurally_contradicted AND
+    quantitatively_unscorable_for_ranking. Its clipped log-likelihood is
+    successes*log(1e-9) -- a property of the clip constant, not of the model --
+    and is NOT a scientifically meaningful score: it must not rank candidates,
+    must not be compared between candidates, must not be summed into a total
+    that is then compared, and must not be read as how badly the model missed.
+    The numerical clip remains only for code stability; it is never a statement
+    about how unlikely anything is. The two labels are carried separately on
+    purpose: structurally_contradicted says the model and the observation are in
+    conflict, which is worth surfacing, while
+    quantitatively_unscorable_for_ranking says the printed number cannot be used
+    to act on that conflict. Implemented in
+    src/dt_adoc/calibration/adhesion_likelihood.py (structural_verdict,
+    is_rankable) and reported per arm by the runner. The hormone_treated_
+    mifepristone arm is currently structurally_contradicted: observed 1/8
+    against a model probability of exactly 0 at the converged horizon.
+    NO MATERNAL RULE IS ALTERED TO ACCOMMODATE THAT EVENT. The defensible
+    claim is only that this observation CANNOT IDENTIFY OR JUSTIFY a particular
+    maternal-rule change with the available data -- not that the maternal model
+    is correct there, and not that the observation is unimportant.
+  readouts:
+    - protocol_id: "adhesion_challenge_basal"
+      successes: 0
+      trials: 12
+      role: calibration
+    - protocol_id: "adhesion_challenge_hormone_treated"
+      successes: 9
+      trials: 19
+      role: calibration
+    - protocol_id: "adhesion_challenge_hormone_treated_mifepristone"
+      successes: 1
+      trials: 8
+      role: validation_if_held_out
+directional_constraints:
+  source: "config/observation_model_map.tsv"
+  schema_note: >-
+    Per-target detail (source rows, protocols, model nodes, comparator
+    text, supporting fractions, confidence, activation status, exclusion
+    reasons) lives only in the mapping table; this block intentionally
+    does not duplicate it.
+  combination_rule: lexicographic
+  combination_rule_note: >-
+    NOTE (2026-09-16): adhesion_objective was the sole magnitude-fitted term
+    and has been DEMOTED to diagnostic_ordinal, so no magnitude-fitted term
+    remains; see its demotion_note and no_replacement_objective above. The
+    lexicographic structure below is unchanged and still describes how the
+    directional rows behave, but there is no longer a likelihood ranking for
+    them to be applied "after". Rows in
+    the mapping table with activation_status=active_constraint are
+    pass/fail feasibility filters on the retained ensemble, applied on their
+    own and no longer preceded by any likelihood ranking step -- never a
+    weighted sum and never a numeric weight on a directional term. Rows with
+    activation_status=active_diagnostic are evaluated and reported every
+    run but never exclude a candidate on their own. Rows with
+    activation_status in {reported_only, provisional, rejected} are
+    descriptive only and are never combined into the objective.
+  horizon_note: >-
+    Active constraints and diagnostics are evaluated at the converged
+    logical fixed point, not a fitted finite time; see
+    docs/endpoint_convergence_finding.md ("Horizon decision"). MaBoSS
+    relative time remains uncalibrated regardless of horizon choice, so
+    the fixed-point horizon is a dimensionless simulation parameter, never
+    a day count. At that horizon the constraint nodes (E_PAEP, S_IGFBP1)
+    saturate to 0/1, so the checks become binary feasibility gates with no
+    graded ranking power there; see the mapping table for the measured
+    saturation curves.
+  evaluator: "src/dt_adoc/calibration/observation_map.py"
+sequential_execution:
+  continuation_policy: projected_joint_memory
+  input_nodes:
+    - IN_E2
+    - IN_PROGESTIN
+    - IN_cAMP
+    - IN_XAV939
+    - IN_MIFEPRISTONE
+    - IN_ANTI_SPP1
+    - IN_EMBRYO_PRESENT
+    - IN_TROPHECTODERM_COMPETENT
+  phase_duration_field: relative_duration
+  duration_units: relative_only
+  relative_phase_durations:
+    basal_observation: 1.0
+    e2_priming: 2.0
+    combined_ht: 4.0
+    mifepristone_challenge: 1.0
+    anti_spp1_challenge: 1.0
+    embryo_challenge: 1.0
+    washout_to_ht_inputs: 1.0
+  duration_notes:
+    - "Durations copy the published phase order and day counts only as relative MaBoSS horizons."
+    - "No physical-time calibration is claimed."
+  continuation:
+    default_mode: joint
+    joint_probability_cutoff: 0.0
+    memory_node_policy:
+      maternal_state: all_non_inputs
+      embryo_challenge: all_non_inputs
+search:
+  mode: bounded_scenarios
+  parameter_scenarios_path: "models/specs/parameter_scenarios.yaml"
+  retain_acceptable_ensemble: true
+  exact_probability_matching_forbidden: true
+validation_labels:
+  structural: true
+  calibration: true
+  validation: true
+time_units:
+  calibrated_physical_time: false

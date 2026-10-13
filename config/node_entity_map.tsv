@@ -1,0 +1,94 @@
+model_version	node_id	entity	level	compartment	aggregation	basis
+adoc-literature-superset-v0.6.0	E_PGR	PGR	activity	epithelium	single	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_PGR
+adoc-literature-superset-v0.6.0	E_IHH	IHH	expression	epithelium	single	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_IHH
+adoc-literature-superset-v0.6.0	E_SECRETORY_STATE				derived	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_SECRETORY_STATE
+adoc-literature-superset-v0.6.0	E_PAEP	PAEP	expression	epithelium	single	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_PAEP;context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR016
+adoc-literature-superset-v0.6.0	E_KLF12_HIGH	KLF12	expression	epithelium	single	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_KLF12_HIGH;context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR021
+adoc-literature-superset-v0.6.0	E_LIF	LIF	expression	epithelium	single	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_LIF;context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR022
+adoc-literature-superset-v0.6.0	E_GP130_STAT3	LIFR	activity	epithelium	all_of	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_GP130_STAT3;config/coupling_adjudication.tsv#E_GP130_STAT3
+adoc-literature-superset-v0.6.0	E_GP130_STAT3	IL6ST	activity	epithelium	all_of	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_GP130_STAT3;config/coupling_adjudication.tsv#E_GP130_STAT3
+adoc-literature-superset-v0.6.0	E_GP130_STAT3	STAT3	activity	epithelium	all_of	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_GP130_STAT3;config/coupling_adjudication.tsv#E_GP130_STAT3
+adoc-literature-superset-v0.6.0	E_ESTROGENIC_PROLIFERATION				derived	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_ESTROGENIC_PROLIFERATION
+adoc-literature-superset-v0.6.0	E_PODXL	PODXL	activity	epithelium	single	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_PODXL
+adoc-literature-superset-v0.6.0	E_PC6	PCSK5	activity	epithelium	single	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_PC6;context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR011
+adoc-literature-superset-v0.6.0	E_DAG1_FULL	DAG1	activity	epithelium	single	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_DAG1_FULL;context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR011
+adoc-literature-superset-v0.6.0	E_DAG1_CLEAVED	DAG1	activity	epithelium	single	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_DAG1_CLEAVED;context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR021
+adoc-literature-superset-v0.6.0	E_MUC1_BARRIER	MUC1	activity	epithelium	single	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_MUC1_BARRIER;context/evidence-register.tsv#LIT-BARRIER-001
+adoc-literature-superset-v0.6.0	E_MUC1_SLEX	MUC1	activity	epithelium	single	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_MUC1_SLEX;context/evidence-register.tsv#LIT-BARRIER-001
+adoc-literature-superset-v0.6.0	E_HBEGF	HBEGF	expression	epithelium	single	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_HBEGF
+adoc-literature-superset-v0.6.0	E_SPP1_EXPR	SPP1	expression	epithelium	single	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_SPP1_EXPR
+adoc-literature-superset-v0.6.0	E_ITGAVB3_5	ITGAV	activity	epithelium	ambiguous	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_ITGAVB3_5;docs/stage4b_direct_admission.md#321-the-one-node-the-flat-vocabulary-cannot-represent-e_itgavb3_5
+adoc-literature-superset-v0.6.0	E_ITGAVB3_5	ITGB3	activity	epithelium	ambiguous	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_ITGAVB3_5;docs/stage4b_direct_admission.md#321-the-one-node-the-flat-vocabulary-cannot-represent-e_itgavb3_5
+adoc-literature-superset-v0.6.0	E_ITGAVB3_5	ITGB5	activity	epithelium	ambiguous	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_ITGAVB3_5;docs/stage4b_direct_admission.md#321-the-one-node-the-flat-vocabulary-cannot-represent-e_itgavb3_5
+adoc-literature-superset-v0.6.0	E_CD98_CD9	SLC3A2	activity	epithelium	any_of	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_CD98_CD9;config/coupling_adjudication.tsv#E_CD98_CD9
+adoc-literature-superset-v0.6.0	E_CD98_CD9	CD9	activity	epithelium	any_of	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_CD98_CD9;config/coupling_adjudication.tsv#E_CD98_CD9
+adoc-literature-superset-v0.6.0	E_ANXA2_ACTIN	ANXA2	activity	epithelium	ambiguous	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_ANXA2_ACTIN;config/coupling_adjudication.tsv#E_ANXA2_ACTIN
+adoc-literature-superset-v0.6.0	E_ANXA2_ACTIN	RHOA	activity	epithelium	ambiguous	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_ANXA2_ACTIN;config/coupling_adjudication.tsv#E_ANXA2_ACTIN
+adoc-literature-superset-v0.6.0	E_ANXA2_ACTIN	process:f_actin_architecture	activity	epithelium	ambiguous	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_ANXA2_ACTIN;config/coupling_adjudication.tsv#E_ANXA2_ACTIN
+adoc-literature-superset-v0.6.0	E_CDH1_APICAL	CDH1	activity	epithelium	any_of	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_CDH1_APICAL;config/coupling_adjudication.tsv#E_CDH1_APICAL
+adoc-literature-superset-v0.6.0	E_CDH1_APICAL	CTNND1	activity	epithelium	any_of	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_CDH1_APICAL;config/coupling_adjudication.tsv#E_CDH1_APICAL
+adoc-literature-superset-v0.6.0	E_RECEPTIVE_SURFACE				derived	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#E_RECEPTIVE_SURFACE
+adoc-literature-superset-v0.6.0	S_PGR	PGR	activity	stroma	single	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#S_PGR
+adoc-literature-superset-v0.6.0	S_PKA	process:camp	activity	stroma	ambiguous	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#S_PKA;config/coupling_adjudication.tsv#S_PKA;config/coupling_adjudication.tsv#IN_cAMP
+adoc-literature-superset-v0.6.0	S_PKA	PRKACA	activity	stroma	ambiguous	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#S_PKA;config/coupling_adjudication.tsv#S_PKA;config/coupling_adjudication.tsv#IN_cAMP
+adoc-literature-superset-v0.6.0	S_PKA	RAPGEF3	activity	stroma	ambiguous	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#S_PKA;config/coupling_adjudication.tsv#S_PKA;config/coupling_adjudication.tsv#IN_cAMP
+adoc-literature-superset-v0.6.0	S_PKA	RAPGEF4	activity	stroma	ambiguous	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#S_PKA;config/coupling_adjudication.tsv#S_PKA;config/coupling_adjudication.tsv#IN_cAMP
+adoc-literature-superset-v0.6.0	S_NR2F2	NR2F2	activity	stroma	single	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#S_NR2F2
+adoc-literature-superset-v0.6.0	S_BMP2	BMP2	expression	stroma	ambiguous	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#S_BMP2;context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR007
+adoc-literature-superset-v0.6.0	S_BMP2	BMP2	activity	stroma	ambiguous	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#S_BMP2;context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR007
+adoc-literature-superset-v0.6.0	S_HAND2	HAND2	activity	stroma	single	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#S_HAND2
+adoc-literature-superset-v0.6.0	S_FGF_MITOGENIC				derived	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#S_FGF_MITOGENIC
+adoc-literature-superset-v0.6.0	S_DECIDUALIZED				derived	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#S_DECIDUALIZED
+adoc-literature-superset-v0.6.0	S_PRL	PRL	expression	stroma	single	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#S_PRL;context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR016
+adoc-literature-superset-v0.6.0	S_IGFBP1	IGFBP1	expression	stroma	single	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#S_IGFBP1;context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR016
+adoc-literature-superset-v0.6.0	S_SPP1	SPP1	expression	stroma	single	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#S_SPP1
+adoc-literature-superset-v0.6.0	S_TAZ_ECM	WWTR1	activity	stroma	single	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#S_TAZ_ECM;context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR013
+adoc-literature-superset-v0.6.0	X_MECHANICAL_STRESS_RELAY				derived	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#X_MECHANICAL_STRESS_RELAY
+adoc-literature-superset-v0.6.0	X_MECHANICAL_PERMISSIVE_ECM				derived	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#X_MECHANICAL_PERMISSIVE_ECM
+adoc-literature-superset-v0.6.0	X_SPP1_LUMEN_FREE	SPP1	extracellular	extracellular	single	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#X_SPP1_LUMEN_FREE;context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR010
+adoc-literature-superset-v0.6.0	X_INTERFACE_SPP1_RELAY				derived	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#X_INTERFACE_SPP1_RELAY
+adoc-literature-superset-v0.6.0	X_INTERFACE_REDUNDANT_RELAY				derived	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#X_INTERFACE_REDUNDANT_RELAY
+adoc-literature-superset-v0.6.0	X_INTERFACE_ANTIADHESIVE_RELAY				derived	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#X_INTERFACE_ANTIADHESIVE_RELAY
+adoc-literature-superset-v0.6.0	X_ADHESION_ROUTE_SPP1				derived	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#X_ADHESION_ROUTE_SPP1
+adoc-literature-superset-v0.6.0	X_ADHESION_ROUTE_REDUNDANT				derived	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#X_ADHESION_ROUTE_REDUNDANT
+adoc-literature-superset-v0.6.0	X_ANTIADHESIVE_ROUTE				derived	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#X_ANTIADHESIVE_ROUTE
+adoc-literature-superset-v0.6.0	OUT_EPITHELIAL_RECEPTIVE				derived	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#OUT_EPITHELIAL_RECEPTIVE
+adoc-literature-superset-v0.6.0	OUT_STROMAL_DECIDUALIZED				derived	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#OUT_STROMAL_DECIDUALIZED
+adoc-literature-superset-v0.6.0	OUT_MATERNAL_ADHESION_COMPETENCE				derived	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#OUT_MATERNAL_ADHESION_COMPETENCE
+adoc-literature-superset-v0.6.0	OUT_STABLE_ADHESION				derived	models/superset/adoc-literature-superset-v0.6.0/node_dictionary.tsv#OUT_STABLE_ADHESION
+adoc-literature-superset-v0.6.0		STAT3	activity	stroma	model_gap	models/superset/adoc-literature-superset-v0.6.0/drug_target_catalog.tsv#S_STAT3
+adoc-literature-superset-v0.6.0		process:decidual_senescence_balance	activity	stroma	model_gap	models/superset/adoc-literature-superset-v0.6.0/drug_target_catalog.tsv#S_DECIDUAL_SENESCENCE_BALANCED
+adoc-literature-superset-v0.6.0		LGALS1	extracellular	extracellular	model_gap	models/superset/adoc-literature-superset-v0.6.0/drug_target_catalog.tsv#X_LGALS1_3
+adoc-literature-superset-v0.6.0		LGALS3	extracellular	extracellular	model_gap	models/superset/adoc-literature-superset-v0.6.0/drug_target_catalog.tsv#X_LGALS1_3
+adoc-literature-superset-v0.6.0		BSG	activity		model_gap	models/superset/adoc-literature-superset-v0.6.0/drug_target_catalog.tsv#X_BSG_ITGB1
+adoc-literature-superset-v0.6.0		ITGB1	activity		model_gap	models/superset/adoc-literature-superset-v0.6.0/drug_target_catalog.tsv#X_BSG_ITGB1
+adoc-literature-superset-v0.6.0		WNT5A	extracellular		model_gap	models/superset/adoc-literature-superset-v0.6.0/drug_target_catalog.tsv#IN_UTERINE_WNT_CUE
+adoc-literature-superset-v0.6.0		WNT7A	extracellular		model_gap	models/superset/adoc-literature-superset-v0.6.0/drug_target_catalog.tsv#IN_UTERINE_WNT_CUE
+adoc-literature-superset-v0.6.0		SMAD1	activity	stroma	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#S_BMP_SMAD
+adoc-literature-superset-v0.6.0		SMAD5	activity	stroma	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#S_BMP_SMAD
+adoc-literature-superset-v0.6.0		SMAD4	activity	stroma	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#S_BMP_SMAD
+adoc-literature-superset-v0.6.0		FOXO1	activity	stroma	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#S_FOXO1
+adoc-literature-superset-v0.6.0		IL11	expression		model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#X_IL11
+adoc-literature-superset-v0.6.0		IL11	extracellular		model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#X_IL11
+adoc-literature-superset-v0.6.0		ITGA2	activity	epithelium	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#E_ITGA2B1
+adoc-literature-superset-v0.6.0		ITGB1	activity	epithelium	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#E_ITGA2B1
+adoc-literature-superset-v0.6.0		SOX17	activity	epithelium	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#E_SOX17
+adoc-literature-superset-v0.6.0		FUT3	activity	epithelium	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#E_GLYCOSYLATION_PROGRAM
+adoc-literature-superset-v0.6.0		ST3GAL3	activity	epithelium	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#E_GLYCOSYLATION_PROGRAM
+adoc-literature-superset-v0.6.0		process:sialyl_lewis_x_surface	activity	epithelium	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#E_SLEX_SURFACE
+adoc-literature-superset-v0.6.0		FN1	extracellular	extracellular	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#X_ECM_FN1_COL4
+adoc-literature-superset-v0.6.0		COL4A1	extracellular	extracellular	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#X_ECM_FN1_COL4
+adoc-literature-superset-v0.6.0		COL4A2	extracellular	extracellular	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#X_ECM_FN1_COL4
+adoc-literature-superset-v0.6.0		ESR1	activity	epithelium	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#E_ESR1_ACTIVITY
+adoc-literature-superset-v0.6.0		JAG1	activity	epithelium	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#E_JAG1_NOTCH3
+adoc-literature-superset-v0.6.0		NOTCH3	activity	epithelium	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#E_JAG1_NOTCH3
+adoc-literature-superset-v0.6.0		WNT4	expression	stroma	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#S_WNT4_CTNNB1
+adoc-literature-superset-v0.6.0		CTNNB1	activity	stroma	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#S_WNT4_CTNNB1
+adoc-literature-superset-v0.6.0		AKT1	activity	stroma	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#S_AKT_EXCESS
+adoc-literature-superset-v0.6.0		AKT2	activity	stroma	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#S_AKT_EXCESS
+adoc-literature-superset-v0.6.0		AKT3	activity	stroma	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#S_AKT_EXCESS
+adoc-literature-superset-v0.6.0		MAPK3	activity	stroma	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#S_ERK
+adoc-literature-superset-v0.6.0		MAPK1	activity	stroma	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#S_ERK
+adoc-literature-superset-v0.6.0		TGFB1	expression	stroma	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#S_TGFB_CONTEXT
+adoc-literature-superset-v0.6.0		SMAD2	activity	stroma	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#S_TGFB_CONTEXT
+adoc-literature-superset-v0.6.0		SMAD3	activity	stroma	model_gap	context/literature/staging/deep_research_adhesion_model_2026-09-11/candidate_nodes.tsv#S_TGFB_CONTEXT

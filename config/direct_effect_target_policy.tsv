@@ -1,0 +1,33 @@
+scope	key	policy	basis	rationale
+role	regulator	eligible	docs/o8b_direct_effect_governance.md#7	Receptor, kinase and transcription-factor activities (E_PGR, S_PGR, S_PKA, S_NR2F2, S_HAND2): entities an agent or a genetic manipulation acts on.
+role	paracrine_bridge	eligible	docs/o8b_direct_effect_governance.md#7	E_IHH, a secreted ligand.
+role	attachment_gate	eligible	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR022;docs/o8b_direct_effect_governance.md#7	E_LIF, the LIF ligand (proxy: LIF expression or secretion). DTR022 separates it from the pathway node by role and proxy.
+role	pathway_gate	eligible	config/coupling_adjudication.tsv#E_GP130_STAT3	E_GP130_STAT3, a pathway activity: 'a pathway state is what an inhibitor acts on'.
+role	protease	eligible	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR011	E_PC6, an enzyme. Its cleavage product is refused separately.
+role	adhesion_receptor	eligible	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR009	E_ITGAVB3_5, a receptor. Eligible is not expressive: DTR009 records its conjunct as absorbed, so a veto is structurally near-inert in this model.
+role	adhesion_support	eligible	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR020;docs/o8b_direct_effect_governance.md#7	Adhesion molecules and processes (E_HBEGF, E_CD98_CD9, E_ANXA2_ACTIN, E_CDH1_APICAL). DTR020 records this label as free text spanning levels, so its two derived members are refused by node.
+role	anti_adhesive_surface	eligible	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR020;docs/o8b_direct_effect_governance.md#7	E_PODXL, a surface protein. The two derived surface states in this role are refused by node.
+role	ligand_source	eligible	docs/o8b_direct_effect_governance.md#7	E_SPP1_EXPR, expression of a ligand: the level of an SPP1 knockdown (PERT-011), distinct from the free-ligand pool.
+role	decidual_support	eligible	docs/o8b_direct_effect_governance.md#7	S_SPP1, stromal SPP1.
+role	mechanical_regulator	eligible	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR013	S_TAZ_ECM. DTR013: the mechanical readouts are outside the formalism, the mechanical target is not.
+role	extracellular_bridge	eligible	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR010	X_SPP1_LUMEN_FREE, the free-ligand pool a neutralising antibody acts on.
+role	state	refused	config/coupling_adjudication.tsv#E_SECRETORY_STATE;config/coupling_adjudication.tsv#S_DECIDUALIZED	Composite programs. Vetoing one sets the derived program directly instead of acting on an entity.
+role	latent_state	refused	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR021;config/coupling_adjudication.tsv#E_RECEPTIVE_SURFACE	Composite latent states (E_RECEPTIVE_SURFACE, X_MECHANICAL_PERMISSIVE_ECM).
+role	readout	refused	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR016	Measured markers (E_PAEP, S_PRL, S_IGFBP1). Vetoing a readout reads the observation off the intervention; DTR016: do not drug either marker.
+role	regulator_or_readout	refused	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR007	S_BMP2. The dictionary leaves it ambiguous, and DTR007 separates BMP2 abundance from BMP pathway activity, which this one node conflates.
+role	interface_route	refused	docs/o8b_direct_effect_governance.md#7	Logical aggregates of interface routes, not entities.
+role	anti_receptive_state	refused	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR021	E_ESTROGENIC_PROLIFERATION, a derived proliferative state.
+role	paracrine_inhibitor_of_receptivity	refused	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR021	S_FGF_MITOGENIC, derived as not S_HAND2.
+role	anti_receptive_context	refused	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR021	E_KLF12_HIGH, a hand-set free variable; genetic-only, and the pre-registered KLF12 prior activated nothing.
+role	phenotype	refused	docs/o8_markerless_interventions.md#3	Vetoing a phenotype reads the endpoint off the intervention.
+role	structural_uncertainty	refused	docs/o8_markerless_interventions.md#3	A modelling device the dictionary flags as uncertain, not an entity.
+role	input	refused	docs/intervention_layer_refactor_plan.md#8	Protocol or environment inputs (O1-O3). Self-loops, so also refused mechanically.
+role	assay_gate	refused	docs/intervention_layer_refactor_plan.md#8	Assay-design inputs. Self-loops, so also refused mechanically.
+role	external_input	refused	docs/intervention_layer_refactor_plan.md#8	External inputs. Self-loops, so also refused mechanically.
+role	pathology_input	refused	docs/intervention_layer_refactor_plan.md#8	Pathology inputs. Self-loops, so also refused mechanically.
+role	boundary_input	refused	docs/intervention_layer_refactor_plan.md#8	Boundary inputs. Self-loops, so also refused mechanically.
+role	perturbation_input	refused	docs/intervention_layer_refactor_plan.md#8	Legacy intervention markers (v0.5.2 and earlier). Self-loops, so also refused mechanically.
+node	E_DAG1_CLEAVED	refused	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR021;context/evidence-register.tsv#LIT-PC6-002	A cleavage product: you perturb the protease. LIT-PC6-002 dissociates product from enzyme.
+node	E_DAG1_FULL	refused	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR011	The substrate state, derived as not E_PC6; the product/enzyme argument applies.
+node	E_MUC1_SLEX	refused	context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR021;context/literature/reviews/deep_research_drug_targets_2026-09-16.adjudication.tsv#DTR012	A glycoform reachable only via machinery absent from the model.
+node	E_MUC1_BARRIER	refused	context/evidence-register.tsv#LIT-BARRIER-001;config/coupling_adjudication.tsv#E_MUC1_BARRIER	The exact complement of E_MUC1_SLEX. Abundance and glycoform can reverse the interpretation, so one veto would mean neither MUC1 knockdown nor deglycosylation.

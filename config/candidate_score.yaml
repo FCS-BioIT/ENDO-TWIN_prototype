@@ -1,0 +1,31 @@
+schema_version: "1.0"
+phase: "phase3"
+status: "structural_only"
+primary_rewards:
+  - phenotype: OUT_MATERNAL_ADHESION_COMPETENCE
+    direction: decrease
+  - phenotype: OUT_STABLE_ADHESION
+    direction: decrease_when_embryo_inputs_present
+penalties:
+  - phenotype: OUT_EPITHELIAL_VIABLE
+    direction: preserve_high
+  - phenotype: OUT_STROMAL_VIABLE
+    direction: preserve_high
+  - phenotype: OUT_BARRIER_DAMAGED
+    direction: decrease
+  - phenotype: OUT_CHRONIC_INFLAMMATION
+    direction: decrease
+  - phenotype: OUT_PERSISTENT_SENESCENCE
+    direction: decrease
+  - phenotype: OUT_DNA_DAMAGE
+    direction: decrease
+  - phenotype: OUT_STROMAL_DECIDUALIZED
+    direction: preserve_with_tolerance
+  - phenotype: OUT_RECOVERY_AFTER_WASHOUT
+    direction: preserve_high
+  - metric: stochastic_or_assumption_instability
+    direction: decrease
+reporting:
+  include_component_vector: true
+  include_pareto_front: true
+claim_boundary: "Model-internal ranking only."

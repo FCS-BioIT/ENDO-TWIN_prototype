@@ -1,0 +1,85 @@
+schema_version: "1.0"
+construction:
+  evidence_ids:
+    - SOFIA-HT-001
+    - SOFIA-SC-001
+    - SOFIA-SC-002
+    # Collaborator metadata confirmed 2026-07-29. These define how the
+    # secreted-protein source table is READ (units, zero semantics,
+    # compartment semantics, day anchoring, condition identity). They are
+    # construction-role because they fix the meaning of the canonical input
+    # table, not because they add a biological claim.
+    - SOFIA-COMM-001
+    - SOFIA-COMM-002
+    - SOFIA-COMM-003
+    - SOFIA-COMM-004
+    # Annotation-workbook facts (file-backed, 2026-07-29). These fix how the
+    # canonical table is READ: value derivation, day anchoring, the day-0
+    # comparator, and zero semantics.
+    - SOFIA-ANNO-001
+    - SOFIA-ANNO-004
+    - SOFIA-ANNO-005
+    - SOFIA-ANNO-006
+    # PRL outlet correction (2026-07-29). Construction, not calibration: it fixes
+    # how the table is READ and on the substance it WEAKENS the PRL readout, so
+    # it must never be citable as support for P1-PRL.
+    - SOFIA-COMM-006
+    # PAEP condition semantics (2026-09-18). Construction: it fixes what the two
+    # PAEP rows ARE -- the protocol's proliferative and secretory phases, not
+    # sampled days -- and therefore how the canonical table is read.
+    # Deliberately NOT calibration: the same message carries the collaborator's
+    # expectation that PAEP secretion peaks in the secretory phase, and OM-001
+    # is the feasibility gate that tests exactly that direction, so a
+    # calibration role would make the gate circular.
+    - SOFIA-COMM-007
+  readout_ids:
+    - P1-EPI-STATE
+    - P1-STR-STATE
+    - P1-IHH-BMP
+    - P1-SPP1
+  notes:
+    - "Mifepristone is excluded from construction unless needed to encode PGR antagonism."
+calibration:
+  evidence_ids:
+    - SOFIA-ADH-001
+    - SOFIA-ADH-002
+    - SOFIA-EPI-001
+    - SOFIA-EPI-002
+    - SOFIA-EPI-003
+    - SOFIA-STR-001
+  readout_ids:
+    - P1-ADH-UNTREATED
+    - P1-ADH-HT
+    - P1-PAEP
+    - P1-PRL
+    - P1-IGFBP1
+validation:
+  evidence_ids:
+    - SOFIA-ADH-003
+  readout_ids:
+    - P1-ADH-MIFE
+  notes:
+    - "If mifepristone is used to tune perturbation behavior, this validation role must be downgraded and documented."
+context_only:
+  evidence_ids:
+    - SOFIA-ADH-004
+    - SOFIA-RDS-001
+    # Replicate structure. Constrains inference; licenses nothing. Deliberately
+    # context_only so it can never be cited as support for a model claim.
+    - SOFIA-COMM-005
+    # Replicate structure and collection geometry. Deliberately context_only:
+    # SOFIA-ANNO-003 in particular must never be cited as support for a
+    # secretion rate -- it records why one cannot be derived.
+    - SOFIA-ANNO-002
+    - SOFIA-ANNO-003
+    - SOFIA-ANNO-007
+    - MONTAGUD-001
+    - MONTAGUD-002
+open_questions:
+  - "Interaction-level support for SOFIA-CCC-001 and SOFIA-CCC-002 still requires explicit curation."
+  - "The SOFIA-COMM-* family is collaborator-communication-sourced: received 2026-07-29 with no attachment, PDF or DOI. The annotation workbook the user referenced ARRIVED the same day and is now a manifested, LOCAL-ONLY source (gitignored; it carries the lab's own cell-source codes). Every SOFIA-COMM-* record was re-verified against it and is corroborated by a SOFIA-ANNO-* record, so SOFIA-COMM-001..005 read status=verified_by_collaborator_corroborated_by_source_file. SOFIA-COMM-006 arrived AFTER that re-verification pass and carries the weaker status=verified_by_collaborator_no_file_corroboration, because the annotation workbook has no PRL header row either and no file corroboration is available for it. SOFIA-COMM-007 arrived later still, on 2026-09-18, and carries the same weaker status for the same reason: the annotation workbook's PAEP sheet records day legends, not condition semantics, so nothing in it can corroborate what the two PAEP rows mean. Their source_file and evidence_level are deliberately unchanged: they were built on the collaborator's word with no file behind them, and that stays historically true. See config/source_contract.yaml previously_declared_unavailable_artifacts."
+  - "UNRATIFIED CONFLICT: the annotation workbook's day-3/day-6 legends say 'progesterona y estradiol' and omit cAMP and XAV939, contradicting SOFIA-COMM-004's E2 + MPA + cAMP + XAV939. Treated as loose bench shorthand, so the 'workbook wins any conflict' rule in docs/collaborator_metadata_2026-07-29.md is deliberately NOT applied. That rule needs an explicit scope carve-out -- file-backed structure and metadata win; a free-text drug name does not override an explicit correction -- or the rule itself is unsafe."
+  - "UNRATIFIED: whether a shared cell-source group means one patient or one isolate/passage. max_independent_units_paep_observed was tightened from 4 to 3 on that basis; if the groups are patients it drops to 2. Never revise it upward without evidence."
+  - "UNRESOLVED COUNT MISMATCH: the PRL sheet has 6 data columns, all confirmed as one BOTTOM outlet (SOFIA-COMM-006), but only 3 chip families are named for them in LOST-002 of config/adoc_chip_donor_provenance.tsv. Either a family spans more than one column or the list is incomplete. It must NEVER be resolved by assuming a column-to-chip pairing: the mismatch LOWERS the plausible independent-unit count below 6, and max_independent_units_prl stays not_determinable."
+  - "UNRATIFIED TENSION: PAEP!I4 annotates the S11 family with one source-group pairing and no per-chip split, which neither confirms nor refutes REL-002 (S11-1 and S11-2 are different patients). Recorded, not resolved."
+  - "OFFERED, NOT RECEIVED (SOFIA-COMM-007, 2026-09-18): the collaborator has older PAEP experiments that do carry a day-0 arm, which the experiment behind this sheet lacks, and described them as 'no estan tan finos'. That is the same quality judgement that excluded S1 and S2 from the current sheet. Nothing in this repository uses them. ADMISSION RULE, pre-registered now so that it is decided value-blind: if they arrive they enter as their own dataset id, and their role is settled BEFORE any numerical value is inspected, on METADATA AND QC ONLY -- protocol and medium composition, outlet and compartment, assay and standard curve, dilution, collection window and volume, chip and source-group provenance, and whether a day-0/untreated arm is documented as such rather than inferred. If that assessment shows them sufficiently compatible with the 2026-07-29 experiment, they may serve as an INDEPENDENT UNTREATED COMPARATOR under the role the P1-PAEP readout's other observations already carry -- calibration, alongside SOFIA-EPI-001 and SOFIA-EPI-002 -- and not under a role invented for them; that is what could lift OM-001's 'no untreated arm' claim ceiling; a separate batch is a real confound, so the comparison and its residual limits are stated when that happens. If the assessment shows them incompatible or undocumented, they stay context_only. Either way they may NEVER define the E_PAEP OFF/ON binarization threshold -- OM-001 forbids choosing that threshold from observations that also serve as the feasibility gate, and that prohibition is independent of how these data are admitted. An earlier version of this entry pre-registered a permanent context_only ban while naming the untreated comparator as the only thing these data could do; those two statements were incompatible and the ban was the wrong half to keep. What the leakage rule actually requires is that the admission criterion be fixed before the values are seen, not that the answer be fixed to no."

@@ -1,0 +1,26 @@
+schema_version: "1.0"
+phase: "phase2"
+status: "structural_only"
+independent_unit: "donor"
+allowed_mapping_layers:
+  - initial_probability
+  - clamp
+  - rate_modifier
+reference_strategy:
+  mode: external_reference_required
+  reference_path: null
+  note: "Do not estimate PROFILE-style reference distributions from the three currently available donors."
+strict_variant:
+  require_constitutive_evidence: true
+  forbid_missing_as_clamp: true
+soft_variant:
+  score_field: "normalized_score"
+  probability_field: "initial_on_probability"
+  allow_rate_modifiers: true
+  clipping:
+    lower: 0.0
+    upper: 1.0
+  uncertainty_policy: "record variants instead of forcing a hard state"
+leakage_controls:
+  outcome_blinded_threshold_selection: true
+  topology_changes_forbidden_per_donor: true

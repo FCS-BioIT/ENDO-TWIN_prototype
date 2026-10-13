@@ -1,0 +1,309 @@
+{
+ "comparison": {
+  "HBEGF": {
+   "detail": {
+    "SZ09": {
+     "d_cnt": 0.15221284215911998,
+     "d_ht": 0.13559322033898305,
+     "f_cnt": 1.2303156400459624e-05,
+     "f_cnt_ci": [
+      1.121064027572822e-05,
+      1.3415742434397766e-05
+     ],
+     "f_ht": 9.722494390022198e-06,
+     "f_ht_ci": [
+      8.658795191184515e-06,
+      1.0811291729386213e-05
+     ],
+     "intervals_separate": true,
+     "log2_fold": -0.3378895999947709,
+     "n_cnt": 3909,
+     "n_ht": 2537
+    },
+    "SZ10": {
+     "d_cnt": 0.09582428192131306,
+     "d_ht": 0.13273056057866184,
+     "f_cnt": 6.937999502208922e-06,
+     "f_cnt_ci": [
+      6.19361487799537e-06,
+      7.683739924220936e-06
+     ],
+     "f_ht": 1.0909318075921853e-05,
+     "f_ht_ci": [
+      9.67188826795373e-06,
+      1.2103507448669096e-05
+     ],
+     "intervals_separate": true,
+     "log2_fold": 0.6529296692324674,
+     "n_cnt": 4143,
+     "n_ht": 2765
+    },
+    "SZ25": {
+     "d_cnt": 0.1687489002287524,
+     "d_ht": 0.39173789173789175,
+     "f_cnt": 1.4928585605259407e-05,
+     "f_cnt_ci": [
+      1.3872777787563551e-05,
+      1.5985306893396702e-05
+     ],
+     "f_ht": 1.704677747424717e-05,
+     "f_ht_ci": [
+      1.5165074670463402e-05,
+      1.903547520848621e-05
+     ],
+     "intervals_separate": false,
+     "log2_fold": 0.19127729970153176,
+     "n_cnt": 5683,
+     "n_ht": 1404
+    }
+   },
+   "per_donor": {
+    "SZ09": "no_material_move",
+    "SZ10": "no_material_move",
+    "SZ25": "no_material_move"
+   }
+  },
+  "PAEP": {
+   "detail": {
+    "SZ09": {
+     "d_cnt": 0.9544640573036582,
+     "d_ht": 1.0,
+     "f_cnt": 0.0016611315947534975,
+     "f_cnt_ci": [
+      0.0015768344698893332,
+      0.0017442525655508559
+     ],
+     "f_ht": 0.014554793076962105,
+     "f_ht_ci": [
+      0.014241565411081207,
+      0.014879724390155008
+     ],
+     "intervals_separate": true,
+     "log2_fold": 3.1312470596214848,
+     "n_cnt": 3909,
+     "n_ht": 2537
+    },
+    "SZ10": {
+     "d_cnt": 0.9756215302920589,
+     "d_ht": 1.0,
+     "f_cnt": 0.001530417443089051,
+     "f_cnt_ci": [
+      0.0014653858698050778,
+      0.0016014681885649768
+     ],
+     "f_ht": 0.007170449955897793,
+     "f_ht_ci": [
+      0.006946161344425503,
+      0.007414084420713789
+     ],
+     "intervals_separate": true,
+     "log2_fold": 2.2281296860723527,
+     "n_cnt": 4143,
+     "n_ht": 2765
+    },
+    "SZ25": {
+     "d_cnt": 0.9574168572936829,
+     "d_ht": 0.9992877492877493,
+     "f_cnt": 0.001973615427325273,
+     "f_cnt_ci": [
+      0.001893687444571639,
+      0.0020553424929736722
+     ],
+     "f_ht": 0.008622152279490185,
+     "f_ht_ci": [
+      0.00817544139993742,
+      0.009073875663723096
+     ],
+     "intervals_separate": true,
+     "log2_fold": 2.1272014209832943,
+     "n_cnt": 5683,
+     "n_ht": 1404
+    }
+   },
+   "per_donor": {
+    "SZ09": "moves_up",
+    "SZ10": "moves_up",
+    "SZ25": "moves_up"
+   }
+  }
+ },
+ "join": {
+  "cells_in_object_not_in_matrix": {
+   "SZ09TE_CNT": 0,
+   "SZ09TE_HT": 0,
+   "SZ10TE_CNT": 0,
+   "SZ10TE_HT": 0,
+   "SZ25TE_CNT": 0,
+   "SZ25TE_HT": 0
+  },
+  "cells_joined": 20441
+ },
+ "layer": "raw filtered_feature_bc_matrix UMIs",
+ "provenance": {
+  "accession": "E-MTAB-15842",
+  "asset_id": "EXT-SCRNA-001",
+  "extraction": {
+   "cells_sha256": "2fec29cd2c9e91a6acb6d8021b6248ad39df907bc98565e1d0ed49d3475a894a",
+   "r_version": "R version 4.5.3 (2026-03-11)",
+   "rds_sha256": "504a674db978779b03d02a73224ee425ec46efbf411c148b0903ceef15389a1a",
+   "seuratobject_version": "5.4.0"
+  },
+  "genes": [
+   "PAEP",
+   "HBEGF"
+  ],
+  "matrix_bytes_total": 2996292088,
+  "reductions": [
+   {
+    "barcodes_file": "SZ09TE_CNT_filtered_feature_bc_matrix_barcodes.tsv",
+    "barcodes_sha256": "434cb4efb79cc5eabdf886da2a7efdd1159f3df36456c311e805f6d2d263cc53",
+    "base_url": "https://ftp.ebi.ac.uk/pub/databases/biostudies/E-MTAB-/842/E-MTAB-15842/Files",
+    "feature_rows_one_based": {
+     "HBEGF": 23336,
+     "PAEP": 38917
+    },
+    "features_sha256": "61081d3c878637edfa79c9c5caa0a00a0146730b419554a4516f32f9bad2c8dd",
+    "genes": [
+     "PAEP",
+     "HBEGF"
+    ],
+    "matrix_bytes": 537083654,
+    "matrix_file": "SZ09TE_CNT_filtered_feature_bc_matrix_matrix.mtx",
+    "matrix_sha256": "0b0e7c74434fe669ccd8221d5adb18391ff09232d74e700388d22eb3a2a4ec57",
+    "n_barcodes": 11599,
+    "reduced_sha256": "e7eccacac97d1ad5ad540da5dc67e0fecc3adae05b16e436b2b87e40e2cc6e3a",
+    "sample": "SZ09TE_CNT"
+   },
+   {
+    "barcodes_file": "SZ09TE_HT_filtered_feature_bc_matrix_barcodes.tsv",
+    "barcodes_sha256": "ba7d1cdbc9d6f00cdba43e375d5bfc3d592e29fe6e7de5fb28af73dffc1d44a6",
+    "base_url": "https://ftp.ebi.ac.uk/pub/databases/biostudies/E-MTAB-/842/E-MTAB-15842/Files",
+    "feature_rows_one_based": {
+     "HBEGF": 23336,
+     "PAEP": 38917
+    },
+    "features_sha256": "61081d3c878637edfa79c9c5caa0a00a0146730b419554a4516f32f9bad2c8dd",
+    "genes": [
+     "PAEP",
+     "HBEGF"
+    ],
+    "matrix_bytes": 481603913,
+    "matrix_file": "SZ09TE_HT_filtered_feature_bc_matrix_matrix.mtx",
+    "matrix_sha256": "7733cdd49735977ba0fe32f134ff3525cbbb9dcf8da95481451f28df43701ce7",
+    "n_barcodes": 20337,
+    "reduced_sha256": "d9c215231080437589b3a7e975f02e6f74b69d2c0c77750902e77cd648b6af21",
+    "sample": "SZ09TE_HT"
+   },
+   {
+    "barcodes_file": "SZ10TE_CNT_filtered_feature_bc_matrix_barcodes.tsv",
+    "barcodes_sha256": "0d5a3dbc44ba798693bdf1f5421c2fd8a4459246ac379dd6be269e8671f10051",
+    "base_url": "https://ftp.ebi.ac.uk/pub/databases/biostudies/E-MTAB-/842/E-MTAB-15842/Files",
+    "feature_rows_one_based": {
+     "HBEGF": 23336,
+     "PAEP": 38917
+    },
+    "features_sha256": "61081d3c878637edfa79c9c5caa0a00a0146730b419554a4516f32f9bad2c8dd",
+    "genes": [
+     "PAEP",
+     "HBEGF"
+    ],
+    "matrix_bytes": 693731258,
+    "matrix_file": "SZ10TE_CNT_filtered_feature_bc_matrix_matrix.mtx",
+    "matrix_sha256": "3dd3bbc8f30d2b13ac2d9d323b1ed03f26e57d283685e47214e0323acb3c2203",
+    "n_barcodes": 19811,
+    "reduced_sha256": "685a9e5b2595356ba06d0f025a3ada6e1a2b9992f12e790458f23588b3e7091d",
+    "sample": "SZ10TE_CNT"
+   },
+   {
+    "barcodes_file": "SZ10TE_HT_filtered_feature_bc_matrix_barcodes.tsv",
+    "barcodes_sha256": "90dbde6ffe1a40f532d42d56ded419fee172d973a877b59e094cedde530991af",
+    "base_url": "https://ftp.ebi.ac.uk/pub/databases/biostudies/E-MTAB-/842/E-MTAB-15842/Files",
+    "feature_rows_one_based": {
+     "HBEGF": 23336,
+     "PAEP": 38917
+    },
+    "features_sha256": "61081d3c878637edfa79c9c5caa0a00a0146730b419554a4516f32f9bad2c8dd",
+    "genes": [
+     "PAEP",
+     "HBEGF"
+    ],
+    "matrix_bytes": 536714070,
+    "matrix_file": "SZ10TE_HT_filtered_feature_bc_matrix_matrix.mtx",
+    "matrix_sha256": "94c2aaafad3123c26dc08081d1f6c75dbfbf8b785066bc3e05cd0c0c0e239263",
+    "n_barcodes": 17743,
+    "reduced_sha256": "1bf1dc9ccdc03b203c2ef00766886d44d24f8d67e77150ce23201e7c875e3447",
+    "sample": "SZ10TE_HT"
+   },
+   {
+    "barcodes_file": "SZ25TE_CNT_filtered_feature_bc_matrix_barcodes.tsv",
+    "barcodes_sha256": "56d0112a2325bed43eacb04243918821b929e2d01f29d9eaa94120f1991c7a50",
+    "base_url": "https://ftp.ebi.ac.uk/pub/databases/biostudies/E-MTAB-/842/E-MTAB-15842/Files",
+    "feature_rows_one_based": {
+     "HBEGF": 23336,
+     "PAEP": 38917
+    },
+    "features_sha256": "61081d3c878637edfa79c9c5caa0a00a0146730b419554a4516f32f9bad2c8dd",
+    "genes": [
+     "PAEP",
+     "HBEGF"
+    ],
+    "matrix_bytes": 533495554,
+    "matrix_file": "SZ25TE_CNT_filtered_feature_bc_matrix_matrix.mtx",
+    "matrix_sha256": "a1bd1f334b31d359b2e74426d752c135b5a94652f5d71d72ffb9b81ad29ef70b",
+    "n_barcodes": 13939,
+    "reduced_sha256": "82eb5fc4202e4c5cb58fbcaaac73a6f752b6ebd51c8f2301260e7222c3b84f9f",
+    "sample": "SZ25TE_CNT"
+   },
+   {
+    "barcodes_file": "SZ25TE_HT_filtered_feature_bc_matrix_barcodes.tsv",
+    "barcodes_sha256": "e43a06194f1b60ac8453f83198da9dc00cf9c9ab454a2fbf30c8f7e1119b0826",
+    "base_url": "https://ftp.ebi.ac.uk/pub/databases/biostudies/E-MTAB-/842/E-MTAB-15842/Files",
+    "feature_rows_one_based": {
+     "HBEGF": 23336,
+     "PAEP": 38917
+    },
+    "features_sha256": "61081d3c878637edfa79c9c5caa0a00a0146730b419554a4516f32f9bad2c8dd",
+    "genes": [
+     "PAEP",
+     "HBEGF"
+    ],
+    "matrix_bytes": 213663639,
+    "matrix_file": "SZ25TE_HT_filtered_feature_bc_matrix_matrix.mtx",
+    "matrix_sha256": "af86cd14f1e060c431e21f5916f3f2211e5f7aaa6ea1686be0472a81aa65762b",
+    "n_barcodes": 3213,
+    "reduced_sha256": "28ca4675ffc750577f84d4640e629507cb44db623f71983e933e4bd9c74f93bc",
+    "sample": "SZ25TE_HT"
+   }
+  ],
+  "source_binding": "verified"
+ },
+ "question": "Does AC01's E_PAEP / E_HBEGF divergence survive on raw counts, or is it a decontX artifact? Section 3.2 of the registered pre-registration says the correction is condition-entangled and that the caveat applies to presence as well as absence.",
+ "rule": {
+  "bootstrap_alpha": 0.05,
+  "bootstrap_b": 2000,
+  "bootstrap_seed": 20260917,
+  "log2_fold_min": 1.0,
+  "note": "the frozen rule, applied by node_support's own functions; no new genes, no re-clustering, no new threshold"
+ },
+ "verdict": {
+  "corrected_layer": {
+   "HBEGF": "no_material_move 3/3",
+   "PAEP": "moves_up 3/3"
+  },
+  "divergence_reproduced_on_raw": true,
+  "hbegf_no_material_move_donors": 3,
+  "paep_moves_up_donors": 3,
+  "raw_layer": {
+   "HBEGF": {
+    "SZ09": "no_material_move",
+    "SZ10": "no_material_move",
+    "SZ25": "no_material_move"
+   },
+   "PAEP": {
+    "SZ09": "moves_up",
+    "SZ10": "moves_up",
+    "SZ25": "moves_up"
+   }
+  }
+ }
+}

@@ -1,0 +1,152 @@
+{
+ "corrected_gene": "PCSK5",
+ "corrections": [
+  "OC-001",
+  "OC-002"
+ ],
+ "epithelium_detection": {
+  "SZ09_CNT_epithelium": {
+   "PCSK5": {
+    "d": 0.667434126375032,
+    "f": 0.0002332793303986374
+   },
+   "PCSK6": {
+    "d": 0.00665131747249936,
+    "f": 1.6162124179959165e-07
+   }
+  },
+  "SZ09_HT_epithelium": {
+   "PCSK5": {
+    "d": 0.5530153724871896,
+    "f": 0.00010400963868781063
+   },
+   "PCSK6": {
+    "d": 0.012219156484036263,
+    "f": 7.355478519293778e-07
+   }
+  },
+  "SZ10_CNT_epithelium": {
+   "PCSK5": {
+    "d": 0.5479121409606565,
+    "f": 0.00010267639304231545
+   },
+   "PCSK6": {
+    "d": 0.020999275887038378,
+    "f": 1.4757333049756634e-06
+   }
+  },
+  "SZ10_HT_epithelium": {
+   "PCSK5": {
+    "d": 0.5030741410488246,
+    "f": 8.828363785789596e-05
+   },
+   "PCSK6": {
+    "d": 0.016998191681735986,
+    "f": 9.093056622650309e-07
+   }
+  },
+  "SZ25_CNT_epithelium": {
+   "PCSK5": {
+    "d": 0.5516452577863804,
+    "f": 0.0001525558265182343
+   },
+   "PCSK6": {
+    "d": 0.020939644553932782,
+    "f": 1.4828877418133224e-06
+   }
+  },
+  "SZ25_HT_epithelium": {
+   "PCSK5": {
+    "d": 0.6317663817663818,
+    "f": 4.812736620943996e-05
+   },
+   "PCSK6": {
+    "d": 0.05056980056980057,
+    "f": 6.839901198363272e-07
+   }
+  }
+ },
+ "gene_identity": {
+  "PCSK5": {
+   "alias_symbols": [
+    "PC5",
+    "PC6",
+    "SPC6"
+   ],
+   "ensembl_gene_id": "ENSG00000099139",
+   "entrez_id": "5125",
+   "hgnc_id": "HGNC:8747",
+   "name": "proprotein convertase subtilisin/kexin type 5"
+  },
+  "PCSK6": {
+   "alias_symbols": [
+    "SPC4"
+   ],
+   "ensembl_gene_id": "ENSG00000140479",
+   "entrez_id": "5046",
+   "hgnc_id": "HGNC:8569",
+   "name": "proprotein convertase subtilisin/kexin type 6",
+   "previous_symbols": [
+    "PACE4"
+   ]
+  }
+ },
+ "layer": "deposited counts layer (decontX-corrected, non-integer)",
+ "layer_caveat": "As in the frozen audit, every absence call on this layer is provisional: detection invariance against raw UMIs was established for KLF12 only.",
+ "node": "E_PC6",
+ "object_identity_check": {
+  "corrected_gene_present": true,
+  "feature_metadata_columns": 56,
+  "feature_metadata_identifier_columns": [],
+  "identity_basis": "feature symbol only: the object carries no gene-identifier column, so identity rests on the HGNC symbol records in gene_identity",
+  "pcsk_features_in_object": [
+   "PCSK1",
+   "PCSK1N",
+   "PCSK2",
+   "PCSK4",
+   "PCSK5",
+   "PCSK6",
+   "PCSK6-AS1",
+   "PCSK7",
+   "PCSK9"
+  ]
+ },
+ "provenance": {
+  "asset_id": "EXT-SCRNA-001",
+  "bootstrap_b": 2000,
+  "bootstrap_seed": 20260917,
+  "extraction_script": "node_support._R_EXTRACT verbatim, plus _R_IDENTITY_PROBE",
+  "n_features_total": "78724",
+  "numpy": "2.5.1",
+  "per_cell_sha256": "7f8b1a8c14f3b07c41ee8b967d1d4acdc726ac1b4fff64f072515b819948c7f7",
+  "python": "3.12.13",
+  "r_version": "R version 4.5.3 (2026-03-11)",
+  "seuratobject_version": "5.4.0",
+  "source_binding": "verified",
+  "source_sha256_observed": "504a674db978779b03d02a73224ee425ec46efbf411c148b0903ceef15389a1a",
+  "statistics": "node_support.unit_statistics, unchanged"
+ },
+ "registration_status": "post_hoc_not_preregistered",
+ "reproduction_check": {
+  "gene": "PCSK6",
+  "result": "identical",
+  "rows_identical_to": "docs/scrna/node_support_evidence.tsv",
+  "units_compared": 17
+ },
+ "schema_version": 1,
+ "superseded_for_live_consumers": {
+  "frozen_artifacts_kept_unchanged": [
+   "config/scrna_observation_map.tsv",
+   "docs/scrna/node_support_evidence.tsv",
+   "docs/scrna/node_support_findings.json",
+   "docs/scrna/node_rna_interpretability.tsv",
+   "docs/scrna/node_support_preregistration.md",
+   "docs/phase2a/node_personalization_map.tsv"
+  ],
+  "rows": [
+   "gene:PCSK6",
+   "node:E_PC6"
+  ]
+ },
+ "superseded_gene": "PCSK6"
+}

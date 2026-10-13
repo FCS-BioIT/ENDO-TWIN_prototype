@@ -1,0 +1,3187 @@
+{
+ "absent_features": [
+  "CTGF",
+  "CYR61"
+ ],
+ "alias_classes": {
+  "AC01": {
+   "class_verdict": "alias_challenged",
+   "decision_provenance": {
+    "counterfactual_verdict_without_D1": "unclassified_by_section_5_4",
+    "depends_on_deviations": [
+     "D1"
+    ],
+    "licenses_structural_change": true,
+    "raw_layer_sensitivity": {
+     "artifact": "docs/scrna/node_support_raw_sensitivity.json",
+     "artifact_sha256": "084b2f12d2945ddca0f9268c669a2bfbdfb630f9bdb0733f140d23d04ad0659e",
+     "condition_entanglement_status": "resolved_for_PAEP_HBEGF_only",
+     "divergence_reproduced_on_raw": true,
+     "genes_re_derived": [
+      "PAEP",
+      "HBEGF"
+     ]
+    },
+    "registration_status": "post_extraction_semantic_repair",
+    "see": "docs/scrna/node_support_deviations.md"
+   },
+   "direction_callable_members": 7,
+   "member_census": {
+    "concordant_with_alias": 1,
+    "divergent": 3,
+    "inconsistent": 3
+   },
+   "members": {
+    "E_HBEGF": {
+     "absent_from_object": [],
+     "expected_cnt_to_ht": "OFF -> ON",
+     "per_donor": {
+      "SZ09": "no_material_move",
+      "SZ10": "no_material_move",
+      "SZ25": "no_material_move"
+     },
+     "program": [
+      "HBEGF"
+     ],
+     "verdict": "divergent",
+     "votes": {
+      "SZ09": {
+       "HBEGF": "no_material_move"
+      },
+      "SZ10": {
+       "HBEGF": "no_material_move"
+      },
+      "SZ25": {
+       "HBEGF": "no_material_move"
+      }
+     }
+    },
+    "E_ITGAVB3_5": {
+     "absent_from_object": [],
+     "expected_cnt_to_ht": "OFF -> ON",
+     "per_donor": {
+      "SZ09": "no_material_move",
+      "SZ10": "no_material_move",
+      "SZ25": "no_material_move"
+     },
+     "program": [
+      "ITGAV",
+      "ITGB3",
+      "ITGB5"
+     ],
+     "verdict": "divergent",
+     "votes": {
+      "SZ09": {
+       "ITGAV": "moves_down",
+       "ITGB3": "no_material_move",
+       "ITGB5": "no_material_move"
+      },
+      "SZ10": {
+       "ITGAV": "no_material_move",
+       "ITGB3": "no_material_move",
+       "ITGB5": "no_material_move"
+      },
+      "SZ25": {
+       "ITGAV": "no_material_move",
+       "ITGB3": "moves_down",
+       "ITGB5": "no_material_move"
+      }
+     }
+    },
+    "E_MUC1_SLEX": {
+     "absent_from_object": [],
+     "expected_cnt_to_ht": "OFF -> ON",
+     "per_donor": {
+      "SZ09": "no_material_move",
+      "SZ10": "no_material_move",
+      "SZ25": "no_material_move"
+     },
+     "program": [
+      "FUT3",
+      "FUT4",
+      "FUT6",
+      "FUT7",
+      "ST3GAL3",
+      "ST3GAL4",
+      "ST3GAL6",
+      "B3GNT2",
+      "ST6GALNAC1",
+      "MUC1"
+     ],
+     "verdict": "divergent",
+     "votes": {
+      "SZ09": {
+       "B3GNT2": "no_material_move",
+       "FUT3": "no_material_move",
+       "FUT4": "no_material_move",
+       "FUT6": "moves_up",
+       "FUT7": "no_material_move",
+       "MUC1": "no_material_move",
+       "ST3GAL3": "no_material_move",
+       "ST3GAL4": "moves_down",
+       "ST3GAL6": "no_material_move",
+       "ST6GALNAC1": "no_material_move"
+      },
+      "SZ10": {
+       "B3GNT2": "no_material_move",
+       "FUT3": "moves_up",
+       "FUT4": "no_material_move",
+       "FUT6": "moves_up",
+       "FUT7": "no_material_move",
+       "MUC1": "no_material_move",
+       "ST3GAL3": "no_material_move",
+       "ST3GAL4": "no_material_move",
+       "ST3GAL6": "no_material_move",
+       "ST6GALNAC1": "no_material_move"
+      },
+      "SZ25": {
+       "B3GNT2": "no_material_move",
+       "FUT3": "moves_up",
+       "FUT4": "no_material_move",
+       "FUT6": "moves_up",
+       "FUT7": "no_material_move",
+       "MUC1": "moves_up",
+       "ST3GAL3": "no_material_move",
+       "ST3GAL4": "moves_down",
+       "ST3GAL6": "no_material_move",
+       "ST6GALNAC1": "no_material_move"
+      }
+     }
+    },
+    "E_PAEP": {
+     "absent_from_object": [],
+     "expected_cnt_to_ht": "OFF -> ON",
+     "per_donor": {
+      "SZ09": "moves_up",
+      "SZ10": "moves_up",
+      "SZ25": "moves_up"
+     },
+     "program": [
+      "PAEP"
+     ],
+     "verdict": "concordant_with_alias",
+     "votes": {
+      "SZ09": {
+       "PAEP": "moves_up"
+      },
+      "SZ10": {
+       "PAEP": "moves_up"
+      },
+      "SZ25": {
+       "PAEP": "moves_up"
+      }
+     }
+    },
+    "E_PC6": {
+     "absent_from_object": [],
+     "expected_cnt_to_ht": "OFF -> ON",
+     "per_donor": {
+      "SZ09": "moves_up",
+      "SZ10": "no_material_move",
+      "SZ25": "moves_down"
+     },
+     "program": [
+      "PCSK6"
+     ],
+     "verdict": "inconsistent",
+     "votes": {
+      "SZ09": {
+       "PCSK6": "moves_up"
+      },
+      "SZ10": {
+       "PCSK6": "no_material_move"
+      },
+      "SZ25": {
+       "PCSK6": "moves_down"
+      }
+     }
+    },
+    "E_SECRETORY_STATE": {
+     "absent_from_object": [],
+     "expected_cnt_to_ht": "OFF -> ON",
+     "per_donor": {
+      "SZ09": "moves_up",
+      "SZ10": "no_material_move",
+      "SZ25": "moves_up"
+     },
+     "program": [
+      "CEACAM5",
+      "CEACAM6",
+      "DPP4",
+      "SCGB1D2",
+      "SCGB2A1"
+     ],
+     "verdict": "inconsistent",
+     "votes": {
+      "SZ09": {
+       "CEACAM5": "moves_up",
+       "CEACAM6": "moves_up",
+       "DPP4": "no_material_move",
+       "SCGB1D2": "moves_up",
+       "SCGB2A1": "moves_up"
+      },
+      "SZ10": {
+       "CEACAM5": "moves_up",
+       "CEACAM6": "moves_up",
+       "DPP4": "no_material_move",
+       "SCGB1D2": "no_material_move",
+       "SCGB2A1": "no_material_move"
+      },
+      "SZ25": {
+       "CEACAM5": "moves_up",
+       "CEACAM6": "moves_up",
+       "DPP4": "moves_up",
+       "SCGB1D2": "moves_up",
+       "SCGB2A1": "moves_up"
+      }
+     }
+    },
+    "E_SPP1_EXPR": {
+     "absent_from_object": [],
+     "expected_cnt_to_ht": "OFF -> ON",
+     "per_donor": {
+      "SZ09": "moves_up",
+      "SZ10": "no_material_move",
+      "SZ25": "no_material_move"
+     },
+     "program": [
+      "SPP1"
+     ],
+     "verdict": "inconsistent",
+     "votes": {
+      "SZ09": {
+       "SPP1": "moves_up"
+      },
+      "SZ10": {
+       "SPP1": "no_material_move"
+      },
+      "SZ25": {
+       "SPP1": "no_material_move"
+      }
+     }
+    }
+   }
+  },
+  "AC02": {
+   "class_verdict": "unclassified_by_section_5_4",
+   "decision_provenance": {
+    "counterfactual_verdict_without_D1": "unclassified_by_section_5_4",
+    "depends_on_deviations": [],
+    "licenses_structural_change": false,
+    "registration_status": "as_registered",
+    "see": "docs/scrna/node_support_deviations.md"
+   },
+   "direction_callable_members": 5,
+   "member_census": {
+    "inconsistent": 5
+   },
+   "members": {
+    "S_DECIDUALIZED": {
+     "absent_from_object": [],
+     "expected_cnt_to_ht": "OFF -> ON",
+     "per_donor": {
+      "SZ09": "moves_down",
+      "SZ10": "moves_up",
+      "SZ25": "no_material_move"
+     },
+     "program": [
+      "FOXO1",
+      "WNT4",
+      "LEFTY2"
+     ],
+     "verdict": "inconsistent",
+     "votes": {
+      "SZ09": {
+       "FOXO1": "moves_down",
+       "LEFTY2": "moves_down",
+       "WNT4": "moves_down"
+      },
+      "SZ10": {
+       "FOXO1": "moves_up",
+       "LEFTY2": "no_material_move",
+       "WNT4": "moves_up"
+      },
+      "SZ25": {
+       "FOXO1": "no_material_move",
+       "LEFTY2": "no_material_move",
+       "WNT4": "no_material_move"
+      }
+     }
+    },
+    "S_IGFBP1": {
+     "absent_from_object": [],
+     "expected_cnt_to_ht": "OFF -> ON",
+     "per_donor": {
+      "SZ09": "moves_down",
+      "SZ10": "moves_up",
+      "SZ25": "no_material_move"
+     },
+     "program": [
+      "IGFBP1"
+     ],
+     "verdict": "inconsistent",
+     "votes": {
+      "SZ09": {
+       "IGFBP1": "moves_down"
+      },
+      "SZ10": {
+       "IGFBP1": "moves_up"
+      },
+      "SZ25": {
+       "IGFBP1": "no_material_move"
+      }
+     }
+    },
+    "S_PRL": {
+     "absent_from_object": [],
+     "expected_cnt_to_ht": "OFF -> ON",
+     "per_donor": {
+      "SZ09": "moves_down",
+      "SZ10": "moves_up",
+      "SZ25": "no_material_move"
+     },
+     "program": [
+      "PRL"
+     ],
+     "verdict": "inconsistent",
+     "votes": {
+      "SZ09": {
+       "PRL": "moves_down"
+      },
+      "SZ10": {
+       "PRL": "moves_up"
+      },
+      "SZ25": {
+       "PRL": "no_material_move"
+      }
+     }
+    },
+    "S_SPP1": {
+     "absent_from_object": [],
+     "expected_cnt_to_ht": "OFF -> ON",
+     "per_donor": {
+      "SZ09": "moves_up",
+      "SZ10": "moves_down",
+      "SZ25": "moves_down"
+     },
+     "program": [
+      "SPP1"
+     ],
+     "verdict": "inconsistent",
+     "votes": {
+      "SZ09": {
+       "SPP1": "moves_up"
+      },
+      "SZ10": {
+       "SPP1": "moves_down"
+      },
+      "SZ25": {
+       "SPP1": "moves_down"
+      }
+     }
+    },
+    "S_TAZ_ECM": {
+     "absent_from_object": [
+      "CTGF",
+      "CYR61"
+     ],
+     "expected_cnt_to_ht": "OFF -> ON",
+     "per_donor": {
+      "SZ09": "moves_down",
+      "SZ10": "no_material_move",
+      "SZ25": "no_material_move"
+     },
+     "program": [
+      "WWTR1",
+      "FN1",
+      "COL4A1"
+     ],
+     "verdict": "inconsistent",
+     "votes": {
+      "SZ09": {
+       "COL4A1": "moves_down",
+       "FN1": "moves_down",
+       "WWTR1": "no_material_move"
+      },
+      "SZ10": {
+       "COL4A1": "no_material_move",
+       "FN1": "moves_down",
+       "WWTR1": "no_material_move"
+      },
+      "SZ25": {
+       "COL4A1": "no_material_move",
+       "FN1": "moves_down",
+       "WWTR1": "no_material_move"
+      }
+     }
+    }
+   }
+  },
+  "AC03": {
+   "class_verdict": "unclassified_by_section_5_4",
+   "decision_provenance": {
+    "counterfactual_verdict_without_D1": "unclassified_by_section_5_4",
+    "depends_on_deviations": [],
+    "licenses_structural_change": false,
+    "registration_status": "as_registered",
+    "see": "docs/scrna/node_support_deviations.md"
+   },
+   "direction_callable_members": 5,
+   "member_census": {
+    "divergent": 2,
+    "inconsistent": 3
+   },
+   "members": {
+    "E_IHH": {
+     "absent_from_object": [],
+     "expected_cnt_to_ht": "OFF -> ON",
+     "per_donor": {
+      "SZ09": "no_material_move",
+      "SZ10": "no_material_move",
+      "SZ25": "no_material_move"
+     },
+     "program": [
+      "IHH"
+     ],
+     "verdict": "divergent",
+     "votes": {
+      "SZ09": {
+       "IHH": "no_material_move"
+      },
+      "SZ10": {
+       "IHH": "no_material_move"
+      },
+      "SZ25": {
+       "IHH": "no_material_move"
+      }
+     }
+    },
+    "E_PGR": {
+     "absent_from_object": [],
+     "expected_cnt_to_ht": "OFF -> ON",
+     "per_donor": {
+      "SZ09": "moves_up",
+      "SZ10": "no_material_move",
+      "SZ25": "no_material_move"
+     },
+     "program": [
+      "GREB1",
+      "HOXA10",
+      "HOXA11"
+     ],
+     "verdict": "inconsistent",
+     "votes": {
+      "SZ09": {
+       "GREB1": "moves_up",
+       "HOXA10": "moves_up",
+       "HOXA11": "moves_up"
+      },
+      "SZ10": {
+       "GREB1": "no_material_move",
+       "HOXA10": "no_material_move",
+       "HOXA11": "no_material_move"
+      },
+      "SZ25": {
+       "GREB1": "moves_up",
+       "HOXA10": "moves_down",
+       "HOXA11": "no_material_move"
+      }
+     }
+    },
+    "S_BMP2": {
+     "absent_from_object": [],
+     "expected_cnt_to_ht": "OFF -> ON",
+     "per_donor": {
+      "SZ09": "moves_down",
+      "SZ10": "moves_up",
+      "SZ25": "moves_up"
+     },
+     "program": [
+      "BMP2"
+     ],
+     "verdict": "inconsistent",
+     "votes": {
+      "SZ09": {
+       "BMP2": "moves_down"
+      },
+      "SZ10": {
+       "BMP2": "moves_up"
+      },
+      "SZ25": {
+       "BMP2": "moves_up"
+      }
+     }
+    },
+    "S_NR2F2": {
+     "absent_from_object": [],
+     "expected_cnt_to_ht": "OFF -> ON",
+     "per_donor": {
+      "SZ09": "moves_down",
+      "SZ10": "no_material_move",
+      "SZ25": "no_material_move"
+     },
+     "program": [
+      "NR2F2"
+     ],
+     "verdict": "inconsistent",
+     "votes": {
+      "SZ09": {
+       "NR2F2": "moves_down"
+      },
+      "SZ10": {
+       "NR2F2": "no_material_move"
+      },
+      "SZ25": {
+       "NR2F2": "no_material_move"
+      }
+     }
+    },
+    "S_PGR": {
+     "absent_from_object": [],
+     "expected_cnt_to_ht": "OFF -> ON",
+     "per_donor": {
+      "SZ09": "no_material_move",
+      "SZ10": "no_material_move",
+      "SZ25": "no_material_move"
+     },
+     "program": [
+      "GREB1",
+      "HAND2"
+     ],
+     "verdict": "divergent",
+     "votes": {
+      "SZ09": {
+       "GREB1": "no_material_move",
+       "HAND2": "moves_down"
+      },
+      "SZ10": {
+       "GREB1": "no_material_move",
+       "HAND2": "no_material_move"
+      },
+      "SZ25": {
+       "GREB1": "no_material_move",
+       "HAND2": "no_material_move"
+      }
+     }
+    }
+   }
+  },
+  "AC04": {
+   "class_verdict": "rule_challenged",
+   "decision_provenance": {
+    "counterfactual_verdict_without_D1": "rule_challenged",
+    "depends_on_deviations": [],
+    "licenses_structural_change": true,
+    "registration_status": "as_registered",
+    "see": "docs/scrna/node_support_deviations.md"
+   },
+   "direction_callable_members": 3,
+   "member_census": {
+    "divergent": 3
+   },
+   "members": {
+    "E_CD98_CD9": {
+     "absent_from_object": [],
+     "expected_cnt_to_ht": "OFF -> ON",
+     "per_donor": {
+      "SZ09": "no_material_move",
+      "SZ10": "no_material_move",
+      "SZ25": "no_material_move"
+     },
+     "program": [
+      "SLC3A2",
+      "CD9"
+     ],
+     "verdict": "divergent",
+     "votes": {
+      "SZ09": {
+       "CD9": "no_material_move",
+       "SLC3A2": "no_material_move"
+      },
+      "SZ10": {
+       "CD9": "no_material_move",
+       "SLC3A2": "no_material_move"
+      },
+      "SZ25": {
+       "CD9": "no_material_move",
+       "SLC3A2": "no_material_move"
+      }
+     }
+    },
+    "E_GP130_STAT3": {
+     "absent_from_object": [],
+     "expected_cnt_to_ht": "OFF -> ON",
+     "per_donor": {
+      "SZ09": "no_material_move",
+      "SZ10": "no_material_move",
+      "SZ25": "no_material_move"
+     },
+     "program": [
+      "SOCS3",
+      "BCL3"
+     ],
+     "verdict": "divergent",
+     "votes": {
+      "SZ09": {
+       "BCL3": "no_material_move",
+       "SOCS3": "no_material_move"
+      },
+      "SZ10": {
+       "BCL3": "no_material_move",
+       "SOCS3": "no_material_move"
+      },
+      "SZ25": {
+       "BCL3": "no_material_move",
+       "SOCS3": "no_material_move"
+      }
+     }
+    },
+    "E_LIF": {
+     "absent_from_object": [],
+     "expected_cnt_to_ht": "OFF -> ON",
+     "per_donor": {
+      "SZ09": "no_material_move",
+      "SZ10": "no_material_move",
+      "SZ25": "no_material_move"
+     },
+     "program": [
+      "LIF"
+     ],
+     "verdict": "divergent",
+     "votes": {
+      "SZ09": {
+       "LIF": "no_material_move"
+      },
+      "SZ10": {
+       "LIF": "no_material_move"
+      },
+      "SZ25": {
+       "LIF": "no_material_move"
+      }
+     }
+    }
+   }
+  }
+ },
+ "empty_units": [
+  "SZ09_HT_myofibroblast"
+ ],
+ "grid_cells_expected": 18,
+ "label_counts": {
+  "Cycling epithelium": 3922,
+  "HT epithelium I": 4197,
+  "HT epithelium II": 3465,
+  "HT stroma": 3225,
+  "Luminal-like epithelium": 8857,
+  "Myofibroblast": 365,
+  "Stroma": 4181
+ },
+ "layer": "deposited counts layer (decontX-corrected, non-integer)",
+ "layer_caveat": "Every absence call here is provisional_corrected_layer_only: the raw per-sample matrices are not on local disk and detection invariance was established for KLF12 only, in the epithelium only.",
+ "n_cells_object": 28212,
+ "node_support": {
+  "E_CD98_CD9": {
+   "CNT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9992325402916347,
+      "donor": "SZ09",
+      "exposure": 60991932.902146384,
+      "f": 0.0021721067601698815,
+      "n_cells": 3909,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 1.0,
+      "donor": "SZ10",
+      "exposure": 57377531.5958496,
+      "f": 0.002269187112005353,
+      "n_cells": 4143,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9910258666197431,
+      "donor": "SZ25",
+      "exposure": 85082238.60672356,
+      "f": 0.0018072151227172249,
+      "n_cells": 5683,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 1.0,
+      "donor": "SZ09",
+      "exposure": 37668556.756820545,
+      "f": 0.001877616946263647,
+      "n_cells": 2537,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9989150090415914,
+      "donor": "SZ10",
+      "exposure": 36317151.07876046,
+      "f": 0.0023841008720748165,
+      "n_cells": 2765,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9928774928774928,
+      "donor": "SZ25",
+      "exposure": 92139919.2223121,
+      "f": 0.0013428706901497031,
+      "n_cells": 1404,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "E_DAG1_FULL": {
+   "CNT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.6602711690969557,
+      "donor": "SZ09",
+      "exposure": 60991932.902146384,
+      "f": 7.959195371609812e-05,
+      "n_cells": 3909,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.5759111754767077,
+      "donor": "SZ10",
+      "exposure": 57377531.5958496,
+      "f": 6.401582966628895e-05,
+      "n_cells": 4143,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.5266584550413514,
+      "donor": "SZ25",
+      "exposure": 85082238.60672356,
+      "f": 6.56535531766138e-05,
+      "n_cells": 5683,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.6413086322428064,
+      "donor": "SZ09",
+      "exposure": 37668556.756820545,
+      "f": 7.569098044036739e-05,
+      "n_cells": 2537,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.5790235081374322,
+      "donor": "SZ10",
+      "exposure": 36317151.07876046,
+      "f": 7.017465719365248e-05,
+      "n_cells": 2765,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.8967236467236467,
+      "donor": "SZ25",
+      "exposure": 92139919.2223121,
+      "f": 6.972999006415893e-05,
+      "n_cells": 1404,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "E_ESTROGENIC_PROLIFERATION": {
+   "CNT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.5287797390636991,
+      "donor": "SZ09",
+      "exposure": 60991932.902146384,
+      "f": 0.00027913883031325295,
+      "n_cells": 3909,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.5208785903934348,
+      "donor": "SZ10",
+      "exposure": 57377531.5958496,
+      "f": 0.0002053416676477155,
+      "n_cells": 4143,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.5430230512053493,
+      "donor": "SZ25",
+      "exposure": 85082238.60672356,
+      "f": 0.0002619921652444721,
+      "n_cells": 5683,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.4757587702010248,
+      "donor": "SZ09",
+      "exposure": 37668556.756820545,
+      "f": 0.0001597202352144361,
+      "n_cells": 2537,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.36130198915009043,
+      "donor": "SZ10",
+      "exposure": 36317151.07876046,
+      "f": 7.931052061328342e-05,
+      "n_cells": 2765,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.6317663817663818,
+      "donor": "SZ25",
+      "exposure": 92139919.2223121,
+      "f": 0.00015768893958443398,
+      "n_cells": 1404,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "E_GP130_STAT3": {
+   "CNT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9559989767203888,
+      "donor": "SZ09",
+      "exposure": 60991932.902146384,
+      "f": 0.0003405402852615458,
+      "n_cells": 3909,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9432778180062756,
+      "donor": "SZ10",
+      "exposure": 57377531.5958496,
+      "f": 0.0002902829096778203,
+      "n_cells": 4143,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.8565898293155024,
+      "donor": "SZ25",
+      "exposure": 85082238.60672356,
+      "f": 0.00033384893921870794,
+      "n_cells": 5683,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.931415057154119,
+      "donor": "SZ09",
+      "exposure": 37668556.756820545,
+      "f": 0.0002667385473235297,
+      "n_cells": 2537,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9157323688969259,
+      "donor": "SZ10",
+      "exposure": 36317151.07876046,
+      "f": 0.00026943062193644806,
+      "n_cells": 2765,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9821937321937322,
+      "donor": "SZ25",
+      "exposure": 92139919.2223121,
+      "f": 0.00024616833031984397,
+      "n_cells": 1404,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "E_HBEGF": {
+   "CNT": {
+    "label": "sparse_or_low",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.15221284215911998,
+      "donor": "SZ09",
+      "exposure": 60991932.902146384,
+      "f": 1.430612591393609e-05,
+      "n_cells": 3909,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.09582428192131306,
+      "donor": "SZ10",
+      "exposure": 57377531.5958496,
+      "f": 7.88956780243181e-06,
+      "n_cells": 4143,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.1687489002287524,
+      "donor": "SZ25",
+      "exposure": 85082238.60672356,
+      "f": 1.628559770143153e-05,
+      "n_cells": 5683,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.13559322033898305,
+      "donor": "SZ09",
+      "exposure": 37668556.756820545,
+      "f": 1.025089573551537e-05,
+      "n_cells": 2537,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.13273056057866184,
+      "donor": "SZ10",
+      "exposure": 36317151.07876046,
+      "f": 1.3035430868502684e-05,
+      "n_cells": 2765,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.39173789173789175,
+      "donor": "SZ25",
+      "exposure": 92139919.2223121,
+      "f": 1.8182621052914614e-05,
+      "n_cells": 1404,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "E_IHH": {
+   "CNT": {
+    "label": "sparse_or_low",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.0,
+      "donor": "SZ09",
+      "exposure": 60991932.902146384,
+      "f": 0.0,
+      "n_cells": 3909,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.0002413709872073377,
+      "donor": "SZ10",
+      "exposure": 57377531.5958496,
+      "f": 8.87992443756727e-09,
+      "n_cells": 4143,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.00035192679922576106,
+      "donor": "SZ25",
+      "exposure": 85082238.60672356,
+      "f": 2.3506668756619476e-08,
+      "n_cells": 5683,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "sparse_or_low",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.0,
+      "donor": "SZ09",
+      "exposure": 37668556.756820545,
+      "f": 0.0,
+      "n_cells": 2537,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.0003616636528028933,
+      "donor": "SZ10",
+      "exposure": 36317151.07876046,
+      "f": 2.5582444216097126e-08,
+      "n_cells": 2765,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.002136752136752137,
+      "donor": "SZ25",
+      "exposure": 92139919.2223121,
+      "f": 2.973571424152808e-08,
+      "n_cells": 1404,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "E_ITGAVB3_5": {
+   "CNT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9332310053722179,
+      "donor": "SZ09",
+      "exposure": 60991932.902146384,
+      "f": 0.0003383464803850375,
+      "n_cells": 3909,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.8795558773835385,
+      "donor": "SZ10",
+      "exposure": 57377531.5958496,
+      "f": 0.00023244827024818923,
+      "n_cells": 4143,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.8009853950378322,
+      "donor": "SZ25",
+      "exposure": 85082238.60672356,
+      "f": 0.00026186445555628144,
+      "n_cells": 5683,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.7753251872290107,
+      "donor": "SZ09",
+      "exposure": 37668556.756820545,
+      "f": 0.0001445441331784897,
+      "n_cells": 2537,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.8332730560578662,
+      "donor": "SZ10",
+      "exposure": 36317151.07876046,
+      "f": 0.0001904438903037459,
+      "n_cells": 2765,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9508547008547008,
+      "donor": "SZ25",
+      "exposure": 92139919.2223121,
+      "f": 0.00015281629745368897,
+      "n_cells": 1404,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "E_KLF12_HIGH": {
+   "CNT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.10079304169864416,
+      "donor": "SZ09",
+      "exposure": 60991932.902146384,
+      "f": 7.365928423109291e-06,
+      "n_cells": 3909,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.1549601737871108,
+      "donor": "SZ10",
+      "exposure": 57377531.5958496,
+      "f": 1.3634679941850597e-05,
+      "n_cells": 4143,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.26394509941932076,
+      "donor": "SZ25",
+      "exposure": 85082238.60672356,
+      "f": 2.9790492331503156e-05,
+      "n_cells": 5683,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "sparse_or_low",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.03626330311391407,
+      "donor": "SZ09",
+      "exposure": 37668556.756820545,
+      "f": 2.6924719158710865e-06,
+      "n_cells": 2537,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.10379746835443038,
+      "donor": "SZ10",
+      "exposure": 36317151.07876046,
+      "f": 8.832045565231534e-06,
+      "n_cells": 2765,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.3660968660968661,
+      "donor": "SZ25",
+      "exposure": 92139919.2223121,
+      "f": 1.2193057108708978e-05,
+      "n_cells": 1404,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "E_LIF": {
+   "CNT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.8222051675620363,
+      "donor": "SZ09",
+      "exposure": 60991932.902146384,
+      "f": 0.00017092959013858687,
+      "n_cells": 3909,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.794110547912141,
+      "donor": "SZ10",
+      "exposure": 57377531.5958496,
+      "f": 0.00016205410122338722,
+      "n_cells": 4143,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.7152912194263593,
+      "donor": "SZ25",
+      "exposure": 85082238.60672356,
+      "f": 0.0001440198647285386,
+      "n_cells": 5683,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.7753251872290107,
+      "donor": "SZ09",
+      "exposure": 37668556.756820545,
+      "f": 0.0001429946867633292,
+      "n_cells": 2537,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.8546112115732369,
+      "donor": "SZ10",
+      "exposure": 36317151.07876046,
+      "f": 0.0002438206655265861,
+      "n_cells": 2765,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9501424501424501,
+      "donor": "SZ25",
+      "exposure": 92139919.2223121,
+      "f": 0.00019768217484956917,
+      "n_cells": 1404,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "E_MUC1_BARRIER": {
+   "CNT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9073931951905858,
+      "donor": "SZ09",
+      "exposure": 60991932.902146384,
+      "f": 0.0002817959963512282,
+      "n_cells": 3909,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.922761284093652,
+      "donor": "SZ10",
+      "exposure": 57377531.5958496,
+      "f": 0.00033984701017731683,
+      "n_cells": 4143,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.8919584726376913,
+      "donor": "SZ25",
+      "exposure": 85082238.60672356,
+      "f": 0.000375519528221315,
+      "n_cells": 5683,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9511233740638549,
+      "donor": "SZ09",
+      "exposure": 37668556.756820545,
+      "f": 0.0004000356760507188,
+      "n_cells": 2537,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9623869801084991,
+      "donor": "SZ10",
+      "exposure": 36317151.07876046,
+      "f": 0.0005538487228972802,
+      "n_cells": 2765,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9864672364672364,
+      "donor": "SZ25",
+      "exposure": 92139919.2223121,
+      "f": 0.0008863701214952806,
+      "n_cells": 1404,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "E_MUC1_SLEX": {
+   "CNT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9826042466103863,
+      "donor": "SZ09",
+      "exposure": 60991932.902146384,
+      "f": 0.0005239332358827933,
+      "n_cells": 3909,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9860004827419744,
+      "donor": "SZ10",
+      "exposure": 57377531.5958496,
+      "f": 0.000593537663350951,
+      "n_cells": 4143,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9600563082878761,
+      "donor": "SZ25",
+      "exposure": 85082238.60672356,
+      "f": 0.0006083114552992201,
+      "n_cells": 5683,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9877808435159637,
+      "donor": "SZ09",
+      "exposure": 37668556.756820545,
+      "f": 0.0006146258721696762,
+      "n_cells": 2537,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9920433996383363,
+      "donor": "SZ10",
+      "exposure": 36317151.07876046,
+      "f": 0.0007874134631601761,
+      "n_cells": 2765,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9914529914529915,
+      "donor": "SZ25",
+      "exposure": 92139919.2223121,
+      "f": 0.0011464741736377125,
+      "n_cells": 1404,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "E_PAEP": {
+   "CNT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9544640573036582,
+      "donor": "SZ09",
+      "exposure": 60991932.902146384,
+      "f": 0.0014266593006075914,
+      "n_cells": 3909,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9756215302920589,
+      "donor": "SZ10",
+      "exposure": 57377531.5958496,
+      "f": 0.001427832974172285,
+      "n_cells": 4143,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9574168572936829,
+      "donor": "SZ25",
+      "exposure": 85082238.60672356,
+      "f": 0.0018195462830809543,
+      "n_cells": 5683,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 1.0,
+      "donor": "SZ09",
+      "exposure": 37668556.756820545,
+      "f": 0.014189172800880587,
+      "n_cells": 2537,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 1.0,
+      "donor": "SZ10",
+      "exposure": 36317151.07876046,
+      "f": 0.00721940306534342,
+      "n_cells": 2765,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9992877492877493,
+      "donor": "SZ25",
+      "exposure": 92139919.2223121,
+      "f": 0.008964922105270265,
+      "n_cells": 1404,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "E_PC6": {
+   "CNT": {
+    "label": "sparse_or_low",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.00665131747249936,
+      "donor": "SZ09",
+      "exposure": 60991932.902146384,
+      "f": 1.6162124179959165e-07,
+      "n_cells": 3909,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.020999275887038378,
+      "donor": "SZ10",
+      "exposure": 57377531.5958496,
+      "f": 1.4757333049756634e-06,
+      "n_cells": 4143,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.020939644553932782,
+      "donor": "SZ25",
+      "exposure": 85082238.60672356,
+      "f": 1.4828877418133224e-06,
+      "n_cells": 5683,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "sparse_or_low",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.012219156484036263,
+      "donor": "SZ09",
+      "exposure": 37668556.756820545,
+      "f": 7.355478519293778e-07,
+      "n_cells": 2537,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.016998191681735986,
+      "donor": "SZ10",
+      "exposure": 36317151.07876046,
+      "f": 9.093056622650309e-07,
+      "n_cells": 2765,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.05056980056980057,
+      "donor": "SZ25",
+      "exposure": 92139919.2223121,
+      "f": 6.839901198363272e-07,
+      "n_cells": 1404,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "E_PGR": {
+   "CNT": {
+    "label": "sparse_or_low",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.1337938091583525,
+      "donor": "SZ09",
+      "exposure": 60991932.902146384,
+      "f": 6.992973727886526e-06,
+      "n_cells": 3909,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.18489017620082066,
+      "donor": "SZ10",
+      "exposure": 57377531.5958496,
+      "f": 1.3662415264807969e-05,
+      "n_cells": 4143,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.06017948266760514,
+      "donor": "SZ25",
+      "exposure": 85082238.60672356,
+      "f": 4.442868746783509e-06,
+      "n_cells": 5683,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.232163973196689,
+      "donor": "SZ09",
+      "exposure": 37668556.756820545,
+      "f": 1.9512819874030007e-05,
+      "n_cells": 2537,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.27450271247739605,
+      "donor": "SZ10",
+      "exposure": 36317151.07876046,
+      "f": 2.2155325090794915e-05,
+      "n_cells": 2765,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.48005698005698005,
+      "donor": "SZ25",
+      "exposure": 92139919.2223121,
+      "f": 1.8505864812577358e-05,
+      "n_cells": 1404,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "E_PODXL": {
+   "CNT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.5558966487592735,
+      "donor": "SZ09",
+      "exposure": 60991932.902146384,
+      "f": 6.602242818250848e-05,
+      "n_cells": 3909,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.4557084238474535,
+      "donor": "SZ10",
+      "exposure": 57377531.5958496,
+      "f": 5.31159987550509e-05,
+      "n_cells": 4143,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.5011437620974837,
+      "donor": "SZ25",
+      "exposure": 85082238.60672356,
+      "f": 5.66555627090595e-05,
+      "n_cells": 5683,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.58730784391013,
+      "donor": "SZ09",
+      "exposure": 37668556.756820545,
+      "f": 7.87115705428419e-05,
+      "n_cells": 2537,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.6394213381555154,
+      "donor": "SZ10",
+      "exposure": 36317151.07876046,
+      "f": 0.00012863425145470756,
+      "n_cells": 2765,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9451566951566952,
+      "donor": "SZ25",
+      "exposure": 92139919.2223121,
+      "f": 0.00022197749899507564,
+      "n_cells": 1404,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "E_SECRETORY_STATE": {
+   "CNT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9943719621386544,
+      "donor": "SZ09",
+      "exposure": 60991932.902146384,
+      "f": 0.0019549383945642184,
+      "n_cells": 3909,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.998551774076756,
+      "donor": "SZ10",
+      "exposure": 57377531.5958496,
+      "f": 0.002203035341972654,
+      "n_cells": 4143,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9938412810135492,
+      "donor": "SZ25",
+      "exposure": 85082238.60672356,
+      "f": 0.0027030218616154555,
+      "n_cells": 5683,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 1.0,
+      "donor": "SZ09",
+      "exposure": 37668556.756820545,
+      "f": 0.016497408292501323,
+      "n_cells": 2537,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 1.0,
+      "donor": "SZ10",
+      "exposure": 36317151.07876046,
+      "f": 0.008798505707050444,
+      "n_cells": 2765,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9992877492877493,
+      "donor": "SZ25",
+      "exposure": 92139919.2223121,
+      "f": 0.010755513967560125,
+      "n_cells": 1404,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "E_SPP1_EXPR": {
+   "CNT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.6280378613456127,
+      "donor": "SZ09",
+      "exposure": 60991932.902146384,
+      "f": 0.0003182291449789814,
+      "n_cells": 3909,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.7868694182959208,
+      "donor": "SZ10",
+      "exposure": 57377531.5958496,
+      "f": 0.000448512725016121,
+      "n_cells": 4143,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.8611648777054373,
+      "donor": "SZ25",
+      "exposure": 85082238.60672356,
+      "f": 0.0007671931489645667,
+      "n_cells": 5683,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9858100118249902,
+      "donor": "SZ09",
+      "exposure": 37668556.756820545,
+      "f": 0.0014275670856141224,
+      "n_cells": 2537,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.8777576853526221,
+      "donor": "SZ10",
+      "exposure": 36317151.07876046,
+      "f": 0.0007798965016634262,
+      "n_cells": 2765,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9415954415954416,
+      "donor": "SZ25",
+      "exposure": 92139919.2223121,
+      "f": 0.0011740030974335027,
+      "n_cells": 1404,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "S_BMP2": {
+   "CNT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.47625,
+      "donor": "SZ09",
+      "exposure": 37164187.48789953,
+      "f": 6.183972982193971e-05,
+      "n_cells": 1600,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.20536141694590712,
+      "donor": "SZ10",
+      "exposure": 32328768.540525034,
+      "f": 1.8677591163751175e-05,
+      "n_cells": 2089,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.4349477682811016,
+      "donor": "SZ25",
+      "exposure": 20245136.800248545,
+      "f": 5.495629446331889e-05,
+      "n_cells": 1053,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.1791044776119403,
+      "donor": "SZ09",
+      "exposure": 14562950.015152248,
+      "f": 2.3114532076306838e-05,
+      "n_cells": 871,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.6305518169582772,
+      "donor": "SZ10",
+      "exposure": 18982708.548199475,
+      "f": 0.00019287456811115631,
+      "n_cells": 1486,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.6775244299674267,
+      "donor": "SZ25",
+      "exposure": 16919843.95965779,
+      "f": 0.00015072231868253793,
+      "n_cells": 307,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "S_DECIDUALIZED": {
+   "CNT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.803125,
+      "donor": "SZ09",
+      "exposure": 37164187.48789953,
+      "f": 0.00018258815047250955,
+      "n_cells": 1600,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.5859262805169938,
+      "donor": "SZ10",
+      "exposure": 32328768.540525034,
+      "f": 9.118427510037877e-05,
+      "n_cells": 2089,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.30959164292497626,
+      "donor": "SZ25",
+      "exposure": 20245136.800248545,
+      "f": 2.6799422467660534e-05,
+      "n_cells": 1053,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.5843857634902411,
+      "donor": "SZ09",
+      "exposure": 14562950.015152248,
+      "f": 7.299494609387108e-05,
+      "n_cells": 871,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.8263795423956931,
+      "donor": "SZ10",
+      "exposure": 18982708.548199475,
+      "f": 0.00037906823391151205,
+      "n_cells": 1486,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.6156351791530945,
+      "donor": "SZ25",
+      "exposure": 16919843.95965779,
+      "f": 4.13644455101986e-05,
+      "n_cells": 307,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "S_FGF_MITOGENIC": {
+   "CNT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9575,
+      "donor": "SZ09",
+      "exposure": 37164187.48789953,
+      "f": 0.00034593709205872094,
+      "n_cells": 1600,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.955002393489708,
+      "donor": "SZ10",
+      "exposure": 32328768.540525034,
+      "f": 0.00046952484721426464,
+      "n_cells": 2089,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.8983855650522318,
+      "donor": "SZ25",
+      "exposure": 20245136.800248545,
+      "f": 0.0004692896225043438,
+      "n_cells": 1053,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9334098737083811,
+      "donor": "SZ09",
+      "exposure": 14562950.015152248,
+      "f": 0.0005122699469866574,
+      "n_cells": 871,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9650067294751009,
+      "donor": "SZ10",
+      "exposure": 18982708.548199475,
+      "f": 0.0007040755922780687,
+      "n_cells": 1486,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9641693811074918,
+      "donor": "SZ25",
+      "exposure": 16919843.95965779,
+      "f": 0.0008108408551438756,
+      "n_cells": 307,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "S_HAND2": {
+   "CNT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.544375,
+      "donor": "SZ09",
+      "exposure": 37164187.48789953,
+      "f": 4.971480779142404e-05,
+      "n_cells": 1600,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.49784585926280517,
+      "donor": "SZ10",
+      "exposure": 32328768.540525034,
+      "f": 5.220228632831245e-05,
+      "n_cells": 2089,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.3779677113010446,
+      "donor": "SZ25",
+      "exposure": 20245136.800248545,
+      "f": 3.4197399367214305e-05,
+      "n_cells": 1053,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.22388059701492538,
+      "donor": "SZ09",
+      "exposure": 14562950.015152248,
+      "f": 1.6288784338094873e-05,
+      "n_cells": 871,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.4306864064602961,
+      "donor": "SZ10",
+      "exposure": 18982708.548199475,
+      "f": 6.58689002543246e-05,
+      "n_cells": 1486,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.6156351791530945,
+      "donor": "SZ25",
+      "exposure": 16919843.95965779,
+      "f": 3.0455666612109058e-05,
+      "n_cells": 307,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "S_IGFBP1": {
+   "CNT": {
+    "label": "sparse_or_low",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.098125,
+      "donor": "SZ09",
+      "exposure": 37164187.48789953,
+      "f": 2.9819315742703383e-05,
+      "n_cells": 1600,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.03350885591191958,
+      "donor": "SZ10",
+      "exposure": 32328768.540525034,
+      "f": 4.707894074007176e-06,
+      "n_cells": 2089,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.00949667616334283,
+      "donor": "SZ25",
+      "exposure": 20245136.800248545,
+      "f": 4.636159501898517e-07,
+      "n_cells": 1053,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "sparse_or_low",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.07921928817451206,
+      "donor": "SZ09",
+      "exposure": 14562950.015152248,
+      "f": 1.9723852665257543e-06,
+      "n_cells": 871,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.11709286675639301,
+      "donor": "SZ10",
+      "exposure": 18982708.548199475,
+      "f": 0.00010642235086541262,
+      "n_cells": 1486,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.016286644951140065,
+      "donor": "SZ25",
+      "exposure": 16919843.95965779,
+      "f": 3.95314712169851e-07,
+      "n_cells": 307,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "S_NR2F2": {
+   "CNT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.96,
+      "donor": "SZ09",
+      "exposure": 37164187.48789953,
+      "f": 0.00043023329626730314,
+      "n_cells": 1600,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9291527046433701,
+      "donor": "SZ10",
+      "exposure": 32328768.540525034,
+      "f": 0.00035902640040049604,
+      "n_cells": 2089,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.7844254510921178,
+      "donor": "SZ25",
+      "exposure": 20245136.800248545,
+      "f": 0.00031496184004407607,
+      "n_cells": 1053,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.7324913892078071,
+      "donor": "SZ09",
+      "exposure": 14562950.015152248,
+      "f": 0.00014016873468445724,
+      "n_cells": 871,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.7415881561238223,
+      "donor": "SZ10",
+      "exposure": 18982708.548199475,
+      "f": 0.00019006385959543295,
+      "n_cells": 1486,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.8664495114006515,
+      "donor": "SZ25",
+      "exposure": 16919843.95965779,
+      "f": 0.0001613923125300148,
+      "n_cells": 307,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "S_PGR": {
+   "CNT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.634375,
+      "donor": "SZ09",
+      "exposure": 37164187.48789953,
+      "f": 6.345792085877825e-05,
+      "n_cells": 1600,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.5615126854954524,
+      "donor": "SZ10",
+      "exposure": 32328768.540525034,
+      "f": 6.275391184113042e-05,
+      "n_cells": 2089,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.44634377967711303,
+      "donor": "SZ25",
+      "exposure": 20245136.800248545,
+      "f": 4.325978435663775e-05,
+      "n_cells": 1053,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.2881745120551091,
+      "donor": "SZ09",
+      "exposure": 14562950.015152248,
+      "f": 2.223889644811196e-05,
+      "n_cells": 871,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.4845222072678331,
+      "donor": "SZ10",
+      "exposure": 18982708.548199475,
+      "f": 7.402960440543051e-05,
+      "n_cells": 1486,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.6612377850162866,
+      "donor": "SZ25",
+      "exposure": 16919843.95965779,
+      "f": 3.5894246733115735e-05,
+      "n_cells": 307,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "S_PRL": {
+   "CNT": {
+    "label": "sparse_or_low",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.06,
+      "donor": "SZ09",
+      "exposure": 37164187.48789953,
+      "f": 3.7245452682272606e-06,
+      "n_cells": 1600,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.03925323121110579,
+      "donor": "SZ10",
+      "exposure": 32328768.540525034,
+      "f": 3.293086377816592e-06,
+      "n_cells": 2089,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.000949667616334283,
+      "donor": "SZ25",
+      "exposure": 20245136.800248545,
+      "f": 4.939457855319107e-08,
+      "n_cells": 1053,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "sparse_or_low",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.014925373134328358,
+      "donor": "SZ09",
+      "exposure": 14562950.015152248,
+      "f": 1.3409973923036645e-06,
+      "n_cells": 871,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.35262449528936746,
+      "donor": "SZ10",
+      "exposure": 18982708.548199475,
+      "f": 4.830015355329781e-05,
+      "n_cells": 1486,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.019543973941368076,
+      "donor": "SZ25",
+      "exposure": 16919843.95965779,
+      "f": 3.484600424196352e-07,
+      "n_cells": 307,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "S_SPP1": {
+   "CNT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.32375,
+      "donor": "SZ09",
+      "exposure": 37164187.48789953,
+      "f": 1.771714710037215e-05,
+      "n_cells": 1600,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.5347056007659167,
+      "donor": "SZ10",
+      "exposure": 32328768.540525034,
+      "f": 3.0087106487029252e-05,
+      "n_cells": 2089,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.4539411206077873,
+      "donor": "SZ25",
+      "exposure": 20245136.800248545,
+      "f": 1.2207608292204346e-05,
+      "n_cells": 1053,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.8507462686567164,
+      "donor": "SZ09",
+      "exposure": 14562950.015152248,
+      "f": 4.676483854616446e-05,
+      "n_cells": 871,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.6150740242261103,
+      "donor": "SZ10",
+      "exposure": 18982708.548199475,
+      "f": 2.475924922986482e-06,
+      "n_cells": 1486,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.5439739413680782,
+      "donor": "SZ25",
+      "exposure": 16919843.95965779,
+      "f": 3.107429614615653e-08,
+      "n_cells": 307,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  },
+  "S_TAZ_ECM": {
+   "CNT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.973125,
+      "donor": "SZ09",
+      "exposure": 37164187.48789953,
+      "f": 0.0005780976642937312,
+      "n_cells": 1600,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9238870272857826,
+      "donor": "SZ10",
+      "exposure": 32328768.540525034,
+      "f": 0.0003818332954199807,
+      "n_cells": 2089,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.8395061728395061,
+      "donor": "SZ25",
+      "exposure": 20245136.800248545,
+      "f": 0.0004695099836895132,
+      "n_cells": 1053,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   },
+   "HT": {
+    "label": "robustly_detected",
+    "per_donor": [
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.7405281285878301,
+      "donor": "SZ09",
+      "exposure": 14562950.015152248,
+      "f": 0.00013723712860020903,
+      "n_cells": 871,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.8882907133243607,
+      "donor": "SZ10",
+      "exposure": 18982708.548199475,
+      "f": 0.0004367280737730073,
+      "n_cells": 1486,
+      "present": true,
+      "uninformative_reason": ""
+     },
+     {
+      "absence_informative": true,
+      "attribution": "ok",
+      "d": 0.9543973941368078,
+      "donor": "SZ25",
+      "exposure": 16919843.95965779,
+      "f": 0.000375970642197497,
+      "n_cells": 307,
+      "present": true,
+      "uninformative_reason": ""
+     }
+    ],
+    "reason": ""
+   }
+  }
+ },
+ "provenance": {
+  "asset_id": "EXT-SCRNA-001",
+  "bootstrap_b": 2000,
+  "bootstrap_seed": 20260917,
+  "n_features_total": "78724",
+  "numpy": "2.5.1",
+  "per_cell_sha256": "44868841b6f8e238f77ae6a89f63ad0f97b103fbb927e4cc6872cafc95f2ed1f",
+  "python": "3.12.13",
+  "r_version": "R version 4.5.3 (2026-03-11)",
+  "rds_sha256": "504a674db978779b03d02a73224ee425ec46efbf411c148b0903ceef15389a1a",
+  "seuratobject_version": "5.4.0",
+  "source_binding": "verified",
+  "source_sha256_observed": "504a674db978779b03d02a73224ee425ec46efbf411c148b0903ceef15389a1a"
+ },
+ "schema_version": 1,
+ "unit_cell_counts": {
+  "SZ09_CNT_epithelium": 3909,
+  "SZ09_CNT_myofibroblast": 96,
+  "SZ09_CNT_stroma": 1600,
+  "SZ09_HT_epithelium": 2537,
+  "SZ09_HT_stroma": 871,
+  "SZ10_CNT_epithelium": 4143,
+  "SZ10_CNT_myofibroblast": 180,
+  "SZ10_CNT_stroma": 2089,
+  "SZ10_HT_epithelium": 2765,
+  "SZ10_HT_myofibroblast": 2,
+  "SZ10_HT_stroma": 1486,
+  "SZ25_CNT_epithelium": 5683,
+  "SZ25_CNT_myofibroblast": 6,
+  "SZ25_CNT_stroma": 1053,
+  "SZ25_HT_epithelium": 1404,
+  "SZ25_HT_myofibroblast": 81,
+  "SZ25_HT_stroma": 307
+ },
+ "units": {
+  "SZ09_CNT_epithelium": {
+   "absence_informative": true,
+   "attribution": "ok",
+   "c1_detection": 0.9956510616525965,
+   "c1_evaluated": true,
+   "c1_gene": "EPCAM",
+   "c1_pass": true,
+   "c2_complement": 0.575625,
+   "c2_evaluated": true,
+   "c2_gene": "EPCAM",
+   "c2_own": 0.9956510616525965,
+   "c2_pass": true,
+   "exposure": 60991932.902146384,
+   "meets_e_min": true,
+   "meets_n_min": true,
+   "n_cells": 3909,
+   "uninformative_reason": ""
+  },
+  "SZ09_CNT_myofibroblast": {
+   "absence_informative": false,
+   "attribution": "not_applicable",
+   "c1_detection": null,
+   "c1_evaluated": false,
+   "c1_gene": null,
+   "c1_pass": null,
+   "c2_complement": null,
+   "c2_evaluated": false,
+   "c2_gene": null,
+   "c2_own": null,
+   "c2_pass": null,
+   "exposure": 233013.2844126801,
+   "meets_e_min": false,
+   "meets_n_min": false,
+   "n_cells": 96,
+   "uninformative_reason": "uninformative_n"
+  },
+  "SZ09_CNT_stroma": {
+   "absence_informative": true,
+   "attribution": "ok",
+   "c1_detection": 0.999375,
+   "c1_evaluated": true,
+   "c1_gene": "VIM",
+   "c1_pass": true,
+   "c2_complement": 0.18546942952161677,
+   "c2_evaluated": true,
+   "c2_gene": "COL1A1",
+   "c2_own": 0.696875,
+   "c2_pass": true,
+   "exposure": 37164187.48789953,
+   "meets_e_min": true,
+   "meets_n_min": true,
+   "n_cells": 1600,
+   "uninformative_reason": ""
+  },
+  "SZ09_HT_epithelium": {
+   "absence_informative": true,
+   "attribution": "ok",
+   "c1_detection": 0.9976350019708317,
+   "c1_evaluated": true,
+   "c1_gene": "EPCAM",
+   "c1_pass": true,
+   "c2_complement": 0.5442020665901263,
+   "c2_evaluated": true,
+   "c2_gene": "EPCAM",
+   "c2_own": 0.9976350019708317,
+   "c2_pass": true,
+   "exposure": 37668556.756820545,
+   "meets_e_min": true,
+   "meets_n_min": true,
+   "n_cells": 2537,
+   "uninformative_reason": ""
+  },
+  "SZ09_HT_stroma": {
+   "absence_informative": true,
+   "attribution": "ok",
+   "c1_detection": 0.8679678530424799,
+   "c1_evaluated": true,
+   "c1_gene": "VIM",
+   "c1_pass": true,
+   "c2_complement": 0.12061489948758376,
+   "c2_evaluated": true,
+   "c2_gene": "COL1A1",
+   "c2_own": 0.30539609644087257,
+   "c2_pass": true,
+   "exposure": 14562950.015152248,
+   "meets_e_min": true,
+   "meets_n_min": true,
+   "n_cells": 871,
+   "uninformative_reason": ""
+  },
+  "SZ10_CNT_epithelium": {
+   "absence_informative": true,
+   "attribution": "ok",
+   "c1_detection": 0.9937243543326092,
+   "c1_evaluated": true,
+   "c1_gene": "EPCAM",
+   "c1_pass": true,
+   "c2_complement": 0.6093824796553374,
+   "c2_evaluated": true,
+   "c2_gene": "EPCAM",
+   "c2_own": 0.9937243543326092,
+   "c2_pass": true,
+   "exposure": 57377531.5958496,
+   "meets_e_min": true,
+   "meets_n_min": true,
+   "n_cells": 4143,
+   "uninformative_reason": ""
+  },
+  "SZ10_CNT_myofibroblast": {
+   "absence_informative": false,
+   "attribution": "not_applicable",
+   "c1_detection": null,
+   "c1_evaluated": false,
+   "c1_gene": null,
+   "c1_pass": null,
+   "c2_complement": null,
+   "c2_evaluated": false,
+   "c2_gene": null,
+   "c2_own": null,
+   "c2_pass": null,
+   "exposure": 593769.1913452304,
+   "meets_e_min": false,
+   "meets_n_min": false,
+   "n_cells": 180,
+   "uninformative_reason": "uninformative_n"
+  },
+  "SZ10_CNT_stroma": {
+   "absence_informative": true,
+   "attribution": "ok",
+   "c1_detection": 0.9995213020584012,
+   "c1_evaluated": true,
+   "c1_gene": "VIM",
+   "c1_pass": true,
+   "c2_complement": 0.16220130340333092,
+   "c2_evaluated": true,
+   "c2_gene": "COL1A1",
+   "c2_own": 0.6845380564863571,
+   "c2_pass": true,
+   "exposure": 32328768.540525034,
+   "meets_e_min": true,
+   "meets_n_min": true,
+   "n_cells": 2089,
+   "uninformative_reason": ""
+  },
+  "SZ10_HT_epithelium": {
+   "absence_informative": true,
+   "attribution": "ok",
+   "c1_detection": 0.9960216998191682,
+   "c1_evaluated": true,
+   "c1_gene": "EPCAM",
+   "c1_pass": true,
+   "c2_complement": 0.5383580080753702,
+   "c2_evaluated": true,
+   "c2_gene": "EPCAM",
+   "c2_own": 0.9960216998191682,
+   "c2_pass": true,
+   "exposure": 36317151.07876046,
+   "meets_e_min": true,
+   "meets_n_min": true,
+   "n_cells": 2765,
+   "uninformative_reason": ""
+  },
+  "SZ10_HT_myofibroblast": {
+   "absence_informative": false,
+   "attribution": "not_applicable",
+   "c1_detection": null,
+   "c1_evaluated": false,
+   "c1_gene": null,
+   "c1_pass": null,
+   "c2_complement": null,
+   "c2_evaluated": false,
+   "c2_gene": null,
+   "c2_own": null,
+   "c2_pass": null,
+   "exposure": 4637.56560564734,
+   "meets_e_min": false,
+   "meets_n_min": false,
+   "n_cells": 2,
+   "uninformative_reason": "uninformative_n"
+  },
+  "SZ10_HT_stroma": {
+   "absence_informative": true,
+   "attribution": "ok",
+   "c1_detection": 0.9952893674293405,
+   "c1_evaluated": true,
+   "c1_gene": "VIM",
+   "c1_pass": true,
+   "c2_complement": 0.13128390596745027,
+   "c2_evaluated": true,
+   "c2_gene": "COL1A1",
+   "c2_own": 0.24697173620457605,
+   "c2_pass": true,
+   "exposure": 18982708.548199475,
+   "meets_e_min": true,
+   "meets_n_min": true,
+   "n_cells": 1486,
+   "uninformative_reason": ""
+  },
+  "SZ25_CNT_epithelium": {
+   "absence_informative": true,
+   "attribution": "ok",
+   "c1_detection": 0.9651592468766497,
+   "c1_evaluated": true,
+   "c1_gene": "EPCAM",
+   "c1_pass": true,
+   "c2_complement": 0.4710351377018044,
+   "c2_evaluated": true,
+   "c2_gene": "EPCAM",
+   "c2_own": 0.9651592468766497,
+   "c2_pass": true,
+   "exposure": 85082238.60672356,
+   "meets_e_min": true,
+   "meets_n_min": true,
+   "n_cells": 5683,
+   "uninformative_reason": ""
+  },
+  "SZ25_CNT_myofibroblast": {
+   "absence_informative": false,
+   "attribution": "not_applicable",
+   "c1_detection": null,
+   "c1_evaluated": false,
+   "c1_gene": null,
+   "c1_pass": null,
+   "c2_complement": null,
+   "c2_evaluated": false,
+   "c2_gene": null,
+   "c2_own": null,
+   "c2_pass": null,
+   "exposure": 60068.61764935555,
+   "meets_e_min": false,
+   "meets_n_min": false,
+   "n_cells": 6,
+   "uninformative_reason": "uninformative_n"
+  },
+  "SZ25_CNT_stroma": {
+   "absence_informative": true,
+   "attribution": "ok",
+   "c1_detection": 0.9420702754036088,
+   "c1_evaluated": true,
+   "c1_gene": "VIM",
+   "c1_pass": true,
+   "c2_complement": 0.15607953545662503,
+   "c2_evaluated": true,
+   "c2_gene": "COL1A1",
+   "c2_own": 0.47673314339981004,
+   "c2_pass": true,
+   "exposure": 20245136.800248545,
+   "meets_e_min": true,
+   "meets_n_min": true,
+   "n_cells": 1053,
+   "uninformative_reason": ""
+  },
+  "SZ25_HT_epithelium": {
+   "absence_informative": true,
+   "attribution": "ok",
+   "c1_detection": 0.9857549857549858,
+   "c1_evaluated": true,
+   "c1_gene": "EPCAM",
+   "c1_pass": true,
+   "c2_complement": 0.33876221498371334,
+   "c2_evaluated": true,
+   "c2_gene": "EPCAM",
+   "c2_own": 0.9857549857549858,
+   "c2_pass": true,
+   "exposure": 92139919.2223121,
+   "meets_e_min": true,
+   "meets_n_min": true,
+   "n_cells": 1404,
+   "uninformative_reason": ""
+  },
+  "SZ25_HT_myofibroblast": {
+   "absence_informative": false,
+   "attribution": "not_applicable",
+   "c1_detection": null,
+   "c1_evaluated": false,
+   "c1_gene": null,
+   "c1_pass": null,
+   "c2_complement": null,
+   "c2_evaluated": false,
+   "c2_gene": null,
+   "c2_own": null,
+   "c2_pass": null,
+   "exposure": 443141.9827608403,
+   "meets_e_min": false,
+   "meets_n_min": false,
+   "n_cells": 81,
+   "uninformative_reason": "uninformative_n"
+  },
+  "SZ25_HT_stroma": {
+   "absence_informative": true,
+   "attribution": "ok",
+   "c1_detection": 0.9706840390879479,
+   "c1_evaluated": true,
+   "c1_gene": "VIM",
+   "c1_pass": true,
+   "c2_complement": 0.5049857549857549,
+   "c2_evaluated": true,
+   "c2_gene": "COL1A1",
+   "c2_own": 0.6742671009771987,
+   "c2_pass": true,
+   "exposure": 16919843.95965779,
+   "meets_e_min": true,
+   "meets_n_min": true,
+   "n_cells": 307,
+   "uninformative_reason": ""
+  }
+ },
+ "units_written": 17
+}

@@ -1,0 +1,333 @@
+{
+  "cross_layer_corrected_vs_raw": {
+    "available": true,
+    "corrected_over_raw_mean": 0.8782441604893885,
+    "decontx_never_creates_or_destroys_a_detection": true,
+    "detection_agreement": {
+      "both_positive": 3429,
+      "both_zero": 17012,
+      "corrected_positive_raw_zero": 0,
+      "raw_positive_corrected_zero": 0
+    },
+    "minimum_corrected_cell": {
+      "corrected_value": 4.46215791894922e-15,
+      "raw_depth": 9095,
+      "raw_umi": 1
+    },
+    "n_cells": 20441,
+    "sub_one_corrected_by_raw_umi": {
+      "1": 2247,
+      "2": 2,
+      "3": 1,
+      "4": 1
+    },
+    "sub_one_corrected_cells": 2251,
+    "sub_one_corrected_cells_with_zero_raw_umi": 0
+  },
+  "depth_matched_cells_below_target": 8401,
+  "depth_matched_cells_per_unit": {
+    "SZ09TE_CNT": 2431,
+    "SZ09TE_HT": 1616,
+    "SZ10TE_CNT": 2232,
+    "SZ10TE_HT": 1574,
+    "SZ25TE_CNT": 2841,
+    "SZ25TE_HT": 1346
+  },
+  "depth_matched_replicates": [
+    {
+      "cells_left_unmatched": 8401,
+      "detection_fraction": 0.12235213541411868,
+      "n_cells": 20441,
+      "scheme": "all_cells_at_their_effective_depth"
+    },
+    {
+      "cells_left_unmatched": 8401,
+      "detection_fraction": 0.12196076512890759,
+      "n_cells": 20441,
+      "scheme": "all_cells_at_their_effective_depth"
+    },
+    {
+      "cells_left_unmatched": 8401,
+      "detection_fraction": 0.12293919084193533,
+      "n_cells": 20441,
+      "scheme": "all_cells_at_their_effective_depth"
+    },
+    {
+      "cells_left_unmatched": 8401,
+      "detection_fraction": 0.12426006555452278,
+      "n_cells": 20441,
+      "scheme": "all_cells_at_their_effective_depth"
+    },
+    {
+      "cells_left_unmatched": 8401,
+      "detection_fraction": 0.12509172741059635,
+      "n_cells": 20441,
+      "scheme": "all_cells_at_their_effective_depth"
+    },
+    {
+      "cells_left_unmatched": 0,
+      "detection_fraction": 0.13538205980066445,
+      "n_cells": 12040,
+      "scheme": "matched_cells_only"
+    },
+    {
+      "cells_left_unmatched": 0,
+      "detection_fraction": 0.13488372093023257,
+      "n_cells": 12040,
+      "scheme": "matched_cells_only"
+    },
+    {
+      "cells_left_unmatched": 0,
+      "detection_fraction": 0.13446843853820598,
+      "n_cells": 12040,
+      "scheme": "matched_cells_only"
+    },
+    {
+      "cells_left_unmatched": 0,
+      "detection_fraction": 0.13280730897009968,
+      "n_cells": 12040,
+      "scheme": "matched_cells_only"
+    },
+    {
+      "cells_left_unmatched": 0,
+      "detection_fraction": 0.13421926910299004,
+      "n_cells": 12040,
+      "scheme": "matched_cells_only"
+    }
+  ],
+  "depth_matched_scheme_for_per_unit": "matched_cells_only",
+  "depth_matched_target_umi": 14503.0,
+  "depth_matched_unmatched_share_per_unit": {
+    "SZ09TE_CNT": 0.3781018163213098,
+    "SZ09TE_HT": 0.3630271974773354,
+    "SZ10TE_CNT": 0.46125995655322233,
+    "SZ10TE_HT": 0.43074141048824593,
+    "SZ25TE_CNT": 0.5000879816998064,
+    "SZ25TE_HT": 0.04131054131054131
+  },
+  "detected_umi_histogram": {
+    "0": 17012,
+    "1": 2247,
+    "10": 8,
+    "2": 628,
+    "3": 285,
+    "4": 104,
+    "5": 50,
+    "6": 42,
+    "7": 19,
+    "8": 14,
+    "9": 16,
+    ">10": 16
+  },
+  "detected_umi_quantiles": {
+    "q0": 1.0,
+    "q100": 33.0,
+    "q25": 1.0,
+    "q50": 1.0,
+    "q75": 2.0,
+    "q95": 4.0
+  },
+  "detection_fraction_crude_by_unit": {
+    "SZ09TE_CNT": 0.10079304169864416,
+    "SZ09TE_HT": 0.03626330311391407,
+    "SZ10TE_CNT": 0.1549601737871108,
+    "SZ10TE_HT": 0.10379746835443038,
+    "SZ25TE_CNT": 0.26394509941932076,
+    "SZ25TE_HT": 0.3660968660968661
+  },
+  "detection_fraction_depth_matched_by_unit": {
+    "SZ09TE_CNT": 0.08515014397367339,
+    "SZ09TE_HT": 0.027846534653465347,
+    "SZ10TE_CNT": 0.1424731182795699,
+    "SZ10TE_HT": 0.08576874205844981,
+    "SZ25TE_CNT": 0.25730376627947904,
+    "SZ25TE_HT": 0.13893016344725112
+  },
+  "detection_fraction_spread_crude": 0.329833562982952,
+  "detection_fraction_spread_depth_matched": 0.2294572316260137,
+  "gene": "KLF12",
+  "latent_state_model": "NONE FITTED. An earlier revision compared a two-component gamma-Poisson mixture against a single-rate model by BIC. That comparison is removed: the likelihood is multimodal, three successive fitters each returned a demonstrable non-maximum, and the reported gain moved from +17.0 to +10.24 to +21.52 as the search was hardened without sign of converging. A model-selection statistic that tracks how hard one looked is not evidence. It was never load-bearing: every claim below is a count or an order statistic",
+  "layer": "raw_filtered_feature_bc_matrix",
+  "layer_note": "integer UMIs from the per-sample cellranger-filtered matrices of E-MTAB-15842, joined to the deposited object by barcode. Not decontX-corrected; this is the sensitivity the pre-registration allows, not the primary analysis",
+  "n_cells_epithelial": 20441,
+  "n_cells_joined": 28212,
+  "per_unit": [
+    {
+      "condition": "CNT",
+      "detection_fraction": 0.10079304169864416,
+      "donor": "SZ09",
+      "median_detected_umi": 1.0,
+      "median_raw_depth": 17079.0,
+      "n_cells_epithelial": 3909,
+      "share_of_detected_at_one_umi": 0.6776649746192893,
+      "unit_id": "SZ09TE_CNT"
+    },
+    {
+      "condition": "HT",
+      "detection_fraction": 0.03626330311391407,
+      "donor": "SZ09",
+      "median_detected_umi": 1.0,
+      "median_raw_depth": 16572.0,
+      "n_cells_epithelial": 2537,
+      "share_of_detected_at_one_umi": 0.8586956521739131,
+      "unit_id": "SZ09TE_HT"
+    },
+    {
+      "condition": "CNT",
+      "detection_fraction": 0.1549601737871108,
+      "donor": "SZ10",
+      "median_detected_umi": 1.0,
+      "median_raw_depth": 15214.0,
+      "n_cells_epithelial": 4143,
+      "share_of_detected_at_one_umi": 0.7398753894080997,
+      "unit_id": "SZ10TE_CNT"
+    },
+    {
+      "condition": "HT",
+      "detection_fraction": 0.10379746835443038,
+      "donor": "SZ10",
+      "median_detected_umi": 1.0,
+      "median_raw_depth": 15455.0,
+      "n_cells_epithelial": 2765,
+      "share_of_detected_at_one_umi": 0.7735191637630662,
+      "unit_id": "SZ10TE_HT"
+    },
+    {
+      "condition": "CNT",
+      "detection_fraction": 0.26394509941932076,
+      "donor": "SZ25",
+      "median_detected_umi": 1.0,
+      "median_raw_depth": 14503.0,
+      "n_cells_epithelial": 5683,
+      "share_of_detected_at_one_umi": 0.62,
+      "unit_id": "SZ25TE_CNT"
+    },
+    {
+      "condition": "HT",
+      "detection_fraction": 0.3660968660968661,
+      "donor": "SZ25",
+      "median_detected_umi": 1.0,
+      "median_raw_depth": 68953.5,
+      "n_cells_epithelial": 1404,
+      "share_of_detected_at_one_umi": 0.5330739299610895,
+      "unit_id": "SZ25TE_HT"
+    }
+  ],
+  "population_definition": [
+    "Luminal-like epithelium",
+    "Cycling epithelium",
+    "HT epithelium I",
+    "HT epithelium II"
+  ],
+  "provenance": {
+    "accession": "E-MTAB-15842",
+    "annotation_parent": {
+      "note": "the epithelial population, donor and condition come from this object; the counts come from the matrices above. Both are required to reconstruct any number in this artifact",
+      "per_cell_sha256": "90997dd4c44d77850acaaa83539f266d8903706af3225e12cf8e972618c771ae",
+      "r_version": "R version 4.5.3 (2026-03-11)",
+      "rds_sha256": "504a674db978779b03d02a73224ee425ec46efbf411c148b0903ceef15389a1a",
+      "seuratobject_version": "5.4.0",
+      "source": "E-MTAB-15842 seurat_object.rds",
+      "source_binding": "verified"
+    },
+    "asset_id": "EXT-SCRNA-001",
+    "claim_level": "sensitivity_not_primary_not_validation",
+    "count_parent": {
+      "per_sample": {
+        "SZ09TE_CNT": {
+          "barcodes_bytes": 220381,
+          "barcodes_file": "SZ09TE_CNT_filtered_feature_bc_matrix_barcodes.tsv",
+          "barcodes_sha256": "434cb4efb79cc5eabdf886da2a7efdd1159f3df36456c311e805f6d2d263cc53",
+          "base_url": "https://ftp.ebi.ac.uk/pub/databases/biostudies/E-MTAB-/842/E-MTAB-15842/Files",
+          "feature_row_one_based": 51656,
+          "features_sha256": "61081d3c878637edfa79c9c5caa0a00a0146730b419554a4516f32f9bad2c8dd",
+          "gene": "KLF12",
+          "matrix_bytes": 537083654,
+          "matrix_file": "SZ09TE_CNT_filtered_feature_bc_matrix_matrix.mtx",
+          "matrix_sha256": "0b0e7c74434fe669ccd8221d5adb18391ff09232d74e700388d22eb3a2a4ec57",
+          "reduced_sha256": "cc8b68cead87b31aaa8778a5457b3b0e9cfbd79483e4a70994134b39933cbd78",
+          "sample": "SZ09TE_CNT"
+        },
+        "SZ09TE_HT": {
+          "barcodes_bytes": 386403,
+          "barcodes_file": "SZ09TE_HT_filtered_feature_bc_matrix_barcodes.tsv",
+          "barcodes_sha256": "ba7d1cdbc9d6f00cdba43e375d5bfc3d592e29fe6e7de5fb28af73dffc1d44a6",
+          "base_url": "https://ftp.ebi.ac.uk/pub/databases/biostudies/E-MTAB-/842/E-MTAB-15842/Files",
+          "feature_row_one_based": 51656,
+          "features_sha256": "61081d3c878637edfa79c9c5caa0a00a0146730b419554a4516f32f9bad2c8dd",
+          "gene": "KLF12",
+          "matrix_bytes": 481603913,
+          "matrix_file": "SZ09TE_HT_filtered_feature_bc_matrix_matrix.mtx",
+          "matrix_sha256": "7733cdd49735977ba0fe32f134ff3525cbbb9dcf8da95481451f28df43701ce7",
+          "reduced_sha256": "1fa1e18c7df2db1d534d25ff9afd426d463492294a747096a3d4eac774140577",
+          "sample": "SZ09TE_HT"
+        },
+        "SZ10TE_CNT": {
+          "barcodes_bytes": 376409,
+          "barcodes_file": "SZ10TE_CNT_filtered_feature_bc_matrix_barcodes.tsv",
+          "barcodes_sha256": "0d5a3dbc44ba798693bdf1f5421c2fd8a4459246ac379dd6be269e8671f10051",
+          "base_url": "https://ftp.ebi.ac.uk/pub/databases/biostudies/E-MTAB-/842/E-MTAB-15842/Files",
+          "feature_row_one_based": 51656,
+          "features_sha256": "61081d3c878637edfa79c9c5caa0a00a0146730b419554a4516f32f9bad2c8dd",
+          "gene": "KLF12",
+          "matrix_bytes": 693731258,
+          "matrix_file": "SZ10TE_CNT_filtered_feature_bc_matrix_matrix.mtx",
+          "matrix_sha256": "3dd3bbc8f30d2b13ac2d9d323b1ed03f26e57d283685e47214e0323acb3c2203",
+          "reduced_sha256": "1f6ce13ca32f4f92d9a623925fa4af70e9be99e3d6fb4b0ccdd9ea1b70dd075d",
+          "sample": "SZ10TE_CNT"
+        },
+        "SZ10TE_HT": {
+          "barcodes_bytes": 337117,
+          "barcodes_file": "SZ10TE_HT_filtered_feature_bc_matrix_barcodes.tsv",
+          "barcodes_sha256": "90dbde6ffe1a40f532d42d56ded419fee172d973a877b59e094cedde530991af",
+          "base_url": "https://ftp.ebi.ac.uk/pub/databases/biostudies/E-MTAB-/842/E-MTAB-15842/Files",
+          "feature_row_one_based": 51656,
+          "features_sha256": "61081d3c878637edfa79c9c5caa0a00a0146730b419554a4516f32f9bad2c8dd",
+          "gene": "KLF12",
+          "matrix_bytes": 536714070,
+          "matrix_file": "SZ10TE_HT_filtered_feature_bc_matrix_matrix.mtx",
+          "matrix_sha256": "94c2aaafad3123c26dc08081d1f6c75dbfbf8b785066bc3e05cd0c0c0e239263",
+          "reduced_sha256": "94e9af336dacd10fcecbb4b28491c187d9749dbb2c3e48b293ecca16e31056d4",
+          "sample": "SZ10TE_HT"
+        },
+        "SZ25TE_CNT": {
+          "barcodes_bytes": 264841,
+          "barcodes_file": "SZ25TE_CNT_filtered_feature_bc_matrix_barcodes.tsv",
+          "barcodes_sha256": "56d0112a2325bed43eacb04243918821b929e2d01f29d9eaa94120f1991c7a50",
+          "base_url": "https://ftp.ebi.ac.uk/pub/databases/biostudies/E-MTAB-/842/E-MTAB-15842/Files",
+          "feature_row_one_based": 51656,
+          "features_sha256": "61081d3c878637edfa79c9c5caa0a00a0146730b419554a4516f32f9bad2c8dd",
+          "gene": "KLF12",
+          "matrix_bytes": 533495554,
+          "matrix_file": "SZ25TE_CNT_filtered_feature_bc_matrix_matrix.mtx",
+          "matrix_sha256": "a1bd1f334b31d359b2e74426d752c135b5a94652f5d71d72ffb9b81ad29ef70b",
+          "reduced_sha256": "6e807f5c24ef8246dadb52b07e65416f752aab3219eb49a0a5a9fe9e8a0207bd",
+          "sample": "SZ25TE_CNT"
+        },
+        "SZ25TE_HT": {
+          "barcodes_bytes": 61047,
+          "barcodes_file": "SZ25TE_HT_filtered_feature_bc_matrix_barcodes.tsv",
+          "barcodes_sha256": "e43a06194f1b60ac8453f83198da9dc00cf9c9ab454a2fbf30c8f7e1119b0826",
+          "base_url": "https://ftp.ebi.ac.uk/pub/databases/biostudies/E-MTAB-/842/E-MTAB-15842/Files",
+          "feature_row_one_based": 51656,
+          "features_sha256": "61081d3c878637edfa79c9c5caa0a00a0146730b419554a4516f32f9bad2c8dd",
+          "gene": "KLF12",
+          "matrix_bytes": 213663639,
+          "matrix_file": "SZ25TE_HT_filtered_feature_bc_matrix_matrix.mtx",
+          "matrix_sha256": "af86cd14f1e060c431e21f5916f3f2211e5f7aaa6ea1686be0472a81aa65762b",
+          "reduced_sha256": "f31f8fbaadea1a7620736d1b134ca24b755f9d16e84046d665c41868f0beffbb",
+          "sample": "SZ25TE_HT"
+        }
+      },
+      "reduction_module_sha256": "503cc99cec265e8ec819c9f5691b653189e6ac86fdac359d44f5d7c835ddd2c3",
+      "source": "E-MTAB-15842 per-sample filtered_feature_bc_matrix"
+    },
+    "derivation_module_sha256": "503cc99cec265e8ec819c9f5691b653189e6ac86fdac359d44f5d7c835ddd2c3",
+    "evidence_role": "same_dataset_internal",
+    "preregistration_sha256": "730a5c3a5260359f86b0fe6596211078a1d080f02fa4e29e9ebca6f4aa3bc16d"
+  },
+  "schema_version": "1.1",
+  "share_of_detected_at_one_umi": 0.6552930883639545,
+  "share_of_detected_at_or_below_two_umi": 0.8384368620589093,
+  "zero_fraction": 0.8322489115013942
+}

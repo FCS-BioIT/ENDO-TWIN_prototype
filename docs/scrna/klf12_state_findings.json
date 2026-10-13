@@ -1,0 +1,622 @@
+{
+  "condition_contrast_sign_sets": {
+    "crude": [
+      -1,
+      1
+    ],
+    "depth_standardised": [
+      -1
+    ],
+    "subtype_standardised": [
+      -1,
+      1
+    ]
+  },
+  "condition_contrasts": {
+    "crude": {
+      "SZ09": -0.06452973858473009,
+      "SZ10": -0.05116270543268042,
+      "SZ25": 0.10215176667754533
+    },
+    "depth_standardised": {
+      "SZ09": -0.06514867201903063,
+      "SZ10": -0.048393299214477214,
+      "SZ25": -0.06142298686552139
+    },
+    "subtype_standardised": {
+      "SZ09": -0.05719062849190319,
+      "SZ10": -0.0008089735382816599,
+      "SZ25": 0.16126450328643815
+    }
+  },
+  "decision": "CONDITIONAL_GO",
+  "decision_branches_reachable": [
+    "CONDITIONAL_GO",
+    "GO",
+    "NO_GO"
+  ],
+  "decision_depends_on_the_post_hoc_m1_a_rule": true,
+  "decision_is_uniquely_determined_by_the_preregistration": false,
+  "decision_under_each_m1_a_reading": {
+    "density_valley": "GO",
+    "implemented": "CONDITIONAL_GO",
+    "interior_only": "GO"
+  },
+  "decision_under_each_reading_pair": {
+    "density_valley+f3_permissive": "GO",
+    "density_valley+f3_strict": "NO_GO",
+    "implemented+f3_permissive": "CONDITIONAL_GO",
+    "implemented+f3_strict": "NO_GO",
+    "interior_only+f3_permissive": "GO",
+    "interior_only+f3_strict": "NO_GO"
+  },
+  "degenerate_thresholds": [
+    "q75",
+    "q80"
+  ],
+  "detected_below_two_fraction": 0.8416447944007,
+  "detected_log_histogram": {
+    "counts": [
+      9.0,
+      15.0,
+      19.0,
+      42.0,
+      41.0,
+      48.0,
+      88.0,
+      165.0,
+      353.0,
+      714.0,
+      739.0,
+      3.0,
+      5.0,
+      7.0,
+      12.0,
+      13.0,
+      48.0,
+      68.0,
+      150.0,
+      325.0,
+      5.0,
+      9.0,
+      21.0,
+      44.0,
+      139.0,
+      74.0,
+      9.0,
+      16.0,
+      63.0,
+      21.0,
+      11.0,
+      26.0,
+      14.0,
+      12.0,
+      23.0,
+      2.0,
+      13.0,
+      3.0,
+      11.0,
+      13.0
+    ],
+    "edges": [
+      -0.8179399475492536,
+      -0.7427067629283105,
+      -0.6674735783073673,
+      -0.5922403936864242,
+      -0.5170072090654811,
+      -0.44177402444453806,
+      -0.3665408398235949,
+      -0.2913076552026518,
+      -0.2160744705817087,
+      -0.14084128596076562,
+      -0.06560810133982253,
+      0.009625083281120661,
+      0.08485826790206374,
+      0.16009145252300683,
+      0.23532463714395002,
+      0.3105578217648931,
+      0.3857910063858362,
+      0.46102419100677927,
+      0.5362573756277224,
+      0.6114905602486654,
+      0.6867237448696085,
+      0.7619569294905518,
+      0.8371901141114949,
+      0.912423298732438,
+      0.9876564833533811,
+      1.062889667974324,
+      1.1381228525952674,
+      1.2133560372162102,
+      1.2885892218371535,
+      1.3638224064580964,
+      1.4390555910790397,
+      1.5142887756999825,
+      1.5895219603209259,
+      1.6647551449418692,
+      1.739988329562812,
+      1.8152215141837553,
+      1.8904546988046982,
+      1.9656878834256415,
+      2.0409210680465844,
+      2.1161542526675277,
+      2.1913874372884705
+    ],
+    "modes": 8,
+    "trim": 0.005,
+    "values_outside_trimmed_range": 36
+  },
+  "detected_log_mode_positions": [
+    -0.5546238013759527,
+    -0.027991509029350936,
+    0.649107152559137,
+    1.0252730756638526,
+    1.326205814147625,
+    1.5519053680104542,
+    1.7776049218732837,
+    1.9280712911151698
+  ],
+  "detected_value_quantiles": {
+    "q0": 4.46215791894922e-15,
+    "q100": 24.488282523141,
+    "q25": 0.875840913518234,
+    "q50": 0.951279458440134,
+    "q75": 1.85310220139953,
+    "q95": 3.9003152137673998
+  },
+  "falsifiers": {
+    "F1_depth_confounding": false,
+    "F1_units_above_ratio": 3,
+    "F2_basis": "empirical_histogram_of_detected_values",
+    "F2_criterion": "the frozen wording, evaluated on the EMPIRICAL histogram of the detected values: a monotone decreasing tail with no interior mode. Not the negation of M1(a), and not the fitted density -- the tail rises to the one-molecule mode, so it is neither monotone nor valley-free and F2 is silent",
+    "F2_fitted_density_proxy": false,
+    "F2_no_separation": false,
+    "F2_proxy_note": "an earlier revision decided F2 from the fitted two-component density, which can be unimodal over a histogram that is not, cannot see the zero spike the frozen sentence names, and never tests monotonicity. Kept beside the empirical reading as the proxy it was; both agree here",
+    "F2_tail_interior_modes": 8,
+    "F2_tail_is_monotone_decreasing": false,
+    "F3_decision_under_strict_reading": "NO_GO",
+    "F3_largest_across_unit_spread": 0.329833562982952,
+    "F3_reading": "across-q width vs the MAXIMUM across-unit spread over q; the strict reading uses the minimum and is reported beside it because the pre-registered sentence admits both",
+    "F3_smallest_across_unit_spread": 0.14128139995305938,
+    "F3_threshold_dominance": false,
+    "F3_threshold_dominance_strict_reading": true,
+    "F4_no_reference_for_high": true
+  },
+  "gene": "KLF12",
+  "integer_transcript_log_positions": [
+    0.0,
+    0.6931471805599453,
+    1.0986122886681098,
+    1.3862943611198906,
+    1.6094379124341003
+  ],
+  "layer": "counts",
+  "layer_caveat": "decontX-corrected and non-integer; not raw UMIs. Raw per-sample matrices exist separately in the same accession.",
+  "marker_detection": {
+    "COL1A1_epithelial": 0.1791497480553789,
+    "COL1A1_other": 0.5059837858705444,
+    "EPCAM_epithelial": 0.9863998825889144,
+    "EPCAM_other": 0.5461330588083901,
+    "LIF_epithelial": 0.7941392299789638,
+    "LIF_other": 0.29211169733625014,
+    "PAEP_epithelial": 0.974463088889976,
+    "PAEP_other": 0.8383734397117488,
+    "PGR_epithelial": 0.016926764835379873,
+    "PGR_other": 0.12405095869257496,
+    "PTPRC_epithelial": 0.0025928281395235066,
+    "PTPRC_other": 0.033329043881096386,
+    "VIM_epithelial": 0.48187466366616116,
+    "VIM_other": 0.9743919701454125
+  },
+  "n_cells_epithelial": 20441,
+  "n_cells_object": 28212,
+  "per_unit": [
+    {
+      "condition": "CNT",
+      "depth_q4_over_q1": 2.6639400136332654,
+      "depth_quartile_detection": [
+        0.06141248720573183,
+        0.0849539406345957,
+        0.0931422722620266,
+        0.16359918200409
+      ],
+      "depth_stratum_min_cells": 641,
+      "depth_stratum_min_weight": 0.2000391370285211,
+      "detection_depth_standardised": 0.10246050257017,
+      "detection_fraction": 0.10079304169864416,
+      "detection_subtype_standardised": 0.07913872426398472,
+      "donor": "SZ09",
+      "epithelial_share": 0.6974130240856379,
+      "median_depth_counts": 12935.6937995153,
+      "median_nfeature_counts": 4807.0,
+      "n_cells_epithelial": 3909,
+      "n_cells_sample_total": 5605,
+      "p_across_q_width": 0.0844205679201842,
+      "p_q75": 0.10079304169864416,
+      "p_q80": 0.10079304169864416,
+      "p_q85": 0.05372217958557176,
+      "p_q90": 0.03274494755691993,
+      "p_q95": 0.016372473778459965,
+      "subtype_stratum_min_cells": 3,
+      "subtype_stratum_min_weight": 0.2053226358788709,
+      "unit_id": "SZ09TE_CNT"
+    },
+    {
+      "condition": "HT",
+      "depth_q4_over_q1": 1.747244094488189,
+      "depth_quartile_detection": [
+        0.031545741324921134,
+        0.028391167192429023,
+        0.02996845425867508,
+        0.05511811023622047
+      ],
+      "depth_stratum_min_cells": 268,
+      "depth_stratum_min_weight": 0.1999902157428697,
+      "detection_depth_standardised": 0.03731183055113938,
+      "detection_fraction": 0.03626330311391407,
+      "detection_subtype_standardised": 0.02194809577208152,
+      "donor": "SZ09",
+      "epithelial_share": 0.744424882629108,
+      "median_depth_counts": 13510.5820627176,
+      "median_nfeature_counts": 4508.0,
+      "n_cells_epithelial": 2537,
+      "n_cells_sample_total": 3408,
+      "p_across_q_width": 0.03153330705557745,
+      "p_q75": 0.03626330311391407,
+      "p_q80": 0.03626330311391407,
+      "p_q85": 0.03429247142294048,
+      "p_q90": 0.01891998423334647,
+      "p_q95": 0.004729996058336618,
+      "subtype_stratum_min_cells": 19,
+      "subtype_stratum_min_weight": 0.43329582701433395,
+      "unit_id": "SZ09TE_HT"
+    },
+    {
+      "condition": "CNT",
+      "depth_q4_over_q1": 2.668153780958659,
+      "depth_quartile_detection": [
+        0.07922705314009662,
+        0.15057915057915058,
+        0.17857142857142858,
+        0.21138996138996138
+      ],
+      "depth_stratum_min_cells": 494,
+      "depth_stratum_min_weight": 0.2000391370285211,
+      "detection_depth_standardised": 0.16099739712559666,
+      "detection_fraction": 0.1549601737871108,
+      "detection_subtype_standardised": 0.13665892575509167,
+      "donor": "SZ10",
+      "epithelial_share": 0.6461322520274485,
+      "median_depth_counts": 11758.8616230682,
+      "median_nfeature_counts": 4378.0,
+      "n_cells_epithelial": 4143,
+      "n_cells_sample_total": 6412,
+      "p_across_q_width": 0.12189234853970554,
+      "p_q75": 0.1549601737871108,
+      "p_q80": 0.1549601737871108,
+      "p_q85": 0.1378228336953898,
+      "p_q90": 0.057446294955346366,
+      "p_q95": 0.033067825247405265,
+      "subtype_stratum_min_cells": 42,
+      "subtype_stratum_min_weight": 0.16951225478205567,
+      "unit_id": "SZ10TE_CNT"
+    },
+    {
+      "condition": "HT",
+      "depth_q4_over_q1": 1.5739933379053592,
+      "depth_quartile_detection": [
+        0.085383502170767,
+        0.09117221418234443,
+        0.10419681620839363,
+        0.13439306358381503
+      ],
+      "depth_stratum_min_cells": 215,
+      "depth_stratum_min_weight": 0.2000391370285211,
+      "detection_depth_standardised": 0.11260409791111944,
+      "detection_fraction": 0.10379746835443038,
+      "detection_subtype_standardised": 0.13584995221681,
+      "donor": "SZ10",
+      "epithelial_share": 0.6501293204796614,
+      "median_depth_counts": 11826.8198591753,
+      "median_nfeature_counts": 4435.0,
+      "n_cells_epithelial": 2765,
+      "n_cells_sample_total": 4253,
+      "p_across_q_width": 0.0864376130198915,
+      "p_q75": 0.10379746835443038,
+      "p_q80": 0.10379746835443038,
+      "p_q85": 0.09005424954792043,
+      "p_q90": 0.038698010849909585,
+      "p_q95": 0.01735985533453888,
+      "subtype_stratum_min_cells": 38,
+      "subtype_stratum_min_weight": 0.43329582701433395,
+      "unit_id": "SZ10TE_HT"
+    },
+    {
+      "condition": "CNT",
+      "depth_q4_over_q1": 6.52172302677877,
+      "depth_quartile_detection": [
+        0.06690140845070422,
+        0.2406755805770584,
+        0.31175228712174524,
+        0.4363124560168895
+      ],
+      "depth_stratum_min_cells": 754,
+      "depth_stratum_min_weight": 0.1999902157428697,
+      "detection_depth_standardised": 0.2905192511225533,
+      "detection_fraction": 0.26394509941932076,
+      "detection_subtype_standardised": 0.21551019712760933,
+      "donor": "SZ25",
+      "epithelial_share": 0.8429249480866212,
+      "median_depth_counts": 11691.8059550134,
+      "median_nfeature_counts": 4415.0,
+      "n_cells_epithelial": 5683,
+      "n_cells_sample_total": 6742,
+      "p_across_q_width": 0.1661094492345592,
+      "p_q75": 0.26394509941932076,
+      "p_q80": 0.26394509941932076,
+      "p_q85": 0.2595460144289988,
+      "p_q90": 0.20922048213971495,
+      "p_q95": 0.09783565018476156,
+      "subtype_stratum_min_cells": 473,
+      "subtype_stratum_min_weight": 0.2053226358788709,
+      "unit_id": "SZ25TE_CNT"
+    },
+    {
+      "condition": "HT",
+      "depth_q4_over_q1": 1.8369565217391304,
+      "depth_quartile_detection": [
+        0.2621082621082621,
+        0.36752136752136755,
+        0.35327635327635326,
+        0.48148148148148145
+      ],
+      "depth_stratum_min_cells": 14,
+      "depth_stratum_min_weight": 0.1999902157428697,
+      "detection_depth_standardised": 0.2290962642570319,
+      "detection_fraction": 0.3660968660968661,
+      "detection_subtype_standardised": 0.3767747004140475,
+      "donor": "SZ25",
+      "epithelial_share": 0.7834821428571429,
+      "median_depth_counts": 61402.927030277,
+      "median_nfeature_counts": 8455.0,
+      "n_cells_epithelial": 1404,
+      "n_cells_sample_total": 1792,
+      "p_across_q_width": 0.22008547008547008,
+      "p_q75": 0.3660968660968661,
+      "p_q80": 0.3660968660968661,
+      "p_q85": 0.33760683760683763,
+      "p_q90": 0.2378917378917379,
+      "p_q95": 0.146011396011396,
+      "subtype_stratum_min_cells": 14,
+      "subtype_stratum_min_weight": 0.43329582701433395,
+      "unit_id": "SZ25TE_HT"
+    }
+  ],
+  "pooled_thresholds": {
+    "q75": 0.0,
+    "q80": 0.0,
+    "q85": 0.780955422131049,
+    "q90": 0.924905053763638,
+    "q95": 1.70877442205526
+  },
+  "population_definition": [
+    "Luminal-like epithelium",
+    "Cycling epithelium",
+    "HT epithelium I",
+    "HT epithelium II"
+  ],
+  "provenance": {
+    "asset_id": "EXT-SCRNA-001",
+    "claim_level": "conditioning_candidate_not_validation",
+    "derivation_module_sha256": "3cbf223bd5110e7492e252ab0884fd58b8490b3cc4087a0c9988c324a92e7b3d",
+    "evidence_role": "same_dataset_internal",
+    "per_cell_sha256": "9a566014d5f645e21ca6ca68c7a1f41cd8c103799197979fbe2a62b1ee6471d3",
+    "preregistration_sha256": "730a5c3a5260359f86b0fe6596211078a1d080f02fa4e29e9ebca6f4aa3bc16d",
+    "r_version": "R version 4.5.3 (2026-03-11)",
+    "rds_sha256": "504a674db978779b03d02a73224ee425ec46efbf411c148b0903ceef15389a1a",
+    "seuratobject_version": "5.4.0",
+    "source_accession": "E-MTAB-15842",
+    "source_binding": "verified",
+    "source_binding_checked_against": "config/external_data_manifest.tsv",
+    "source_filename": "seurat_object.rds",
+    "source_sha256": "504a674db978779b03d02a73224ee425ec46efbf411c148b0903ceef15389a1a",
+    "source_sha256_observed": "504a674db978779b03d02a73224ee425ec46efbf411c148b0903ceef15389a1a"
+  },
+  "schema_version": "1.0",
+  "shipped_decision_basis": "the implemented post-hoc M1(a) rule with the permissive F3 reading -- the combination that actually governed what was done. It is reported as one cell of decision_under_each_reading_pair, not as the branch the pre-registration determines, because the pre-registration does not determine one. Nothing was activated under any cell.",
+  "state_model_m1": {
+    "analytic_bimodal": true,
+    "analytic_density_modes": 2,
+    "boundary_at_or_above_one_transcript": false,
+    "boundary_log": null,
+    "boundary_value": null,
+    "component_depth_ratio": 1.1967305868113174,
+    "decontx_value_over_nearest_integer_mean": 0.9047255607688891,
+    "decontx_value_over_nearest_integer_sd": 0.10947518117315122,
+    "density_minimum_log": 0.15521897687556963,
+    "density_minimum_value": 1.167913679194334,
+    "detected_log_support": [
+      -33.043143907561316,
+      3.198194738784211
+    ],
+    "detected_log_support_trimmed_98": [
+      -0.7058855205830161,
+      2.065987986884756
+    ],
+    "empirical_histogram_modes": 8,
+    "high_component_above_upper_crossing": 1177,
+    "high_component_below_lower_crossing": 351,
+    "high_component_share_of_detected": 0.4456109652960047,
+    "high_component_weight": 0.4824156491725629,
+    "interior_only_rule_boundary_log": 0.05591144699270714,
+    "interior_only_rule_boundary_value": 1.0575040344277356,
+    "log_mean_high": 0.5252797288464718,
+    "log_mean_low": -0.09623750032608182,
+    "log_sd_high": 1.0880816831503521,
+    "log_sd_low": 0.06178707052176946,
+    "m1_a_density_valley": false,
+    "m1_a_frozen_wording": "the implied boundary falls in a genuine density valley, not inside the zero spike",
+    "m1_a_rule_applied": "exactly one posterior crossing inside the fitted data's support, AND that crossing lying between the component means, AND at or above one transcript-equivalent",
+    "m1_a_rule_provenance": "post_hoc_operationalisation",
+    "m1_a_specificity_calibration": {
+      "calibrated_rate_at_mean_depth": 0.1986426021697924,
+      "covers": [
+        "M1(a) under every reading",
+        "M1(b)"
+      ],
+      "does_not_cover": [
+        "M1(c)",
+        "F1",
+        "F2",
+        "F3",
+        "the decision branch"
+      ],
+      "false_pass_under_widened_shrinkage_noise": {
+        "x1.5": {
+          "density_valley": 0,
+          "implemented": 0,
+          "interior_only": 0,
+          "replicates": 12
+        },
+        "x2": {
+          "density_valley": 0,
+          "implemented": 0,
+          "interior_only": 0,
+          "replicates": 12
+        }
+      },
+      "m1_a_false_pass_count": {
+        "density_valley": 25,
+        "implemented": 25,
+        "interior_only": 25
+      },
+      "m1_a_false_pass_rate": {
+        "density_valley": 1.0,
+        "implemented": 1.0,
+        "interior_only": 1.0
+      },
+      "m1_b_false_pass_count": 25,
+      "median_null_boundary_value": {
+        "density_valley": 1.3225975446366094,
+        "implemented": 1.2636843535209594,
+        "interior_only": 1.2636843535209594
+      },
+      "null_model": "one homogeneous Poisson rate per unit of sequencing depth -- no latent KLF12-high sub-population -- pushed through the integer lattice and a decontX-like multiplicative shrinkage",
+      "replicates": 25,
+      "scope": "a specificity failure at THIS measurement's lattice resolution, not a universal property of the rule: widening the shrinkage noise until the integer lattice is no longer visible stops the false passes",
+      "seed": 20260914,
+      "shrinkage_mean": 0.9047255607688891,
+      "shrinkage_sd": 0.10947518117315122
+    },
+    "m1_a_under_each_reading": {
+      "density_valley": {
+        "boundary_at_or_above_one_transcript": true,
+        "boundary_value": 1.167913679194334,
+        "passes": true
+      },
+      "implemented": {
+        "boundary_at_or_above_one_transcript": false,
+        "boundary_value": null,
+        "passes": false
+      },
+      "interior_only": {
+        "boundary_at_or_above_one_transcript": true,
+        "boundary_value": 1.0575040344277356,
+        "passes": true
+      }
+    },
+    "m1_b_excludes_detected_share": 0.5543890347039953,
+    "m1_b_passes": true,
+    "m1_c_bar_provenance": "post_hoc_threshold_not_pre_registered",
+    "m1_c_depth_ratio_per_unit": {
+      "SZ09TE_CNT": 0.6827540713759351,
+      "SZ09TE_HT": 0.8224545814139439,
+      "SZ10TE_CNT": 0.9827415650599106,
+      "SZ10TE_HT": 0.7659615846223493,
+      "SZ25TE_CNT": 1.3779433858165917,
+      "SZ25TE_HT": 0.8850458839739199
+    },
+    "m1_c_passes": true,
+    "m1_c_ratio_direction_is_consistent": false,
+    "m1_c_split_basis": "posterior_component_assignment",
+    "m1_c_units_evaluated": 6,
+    "m1_c_units_within_post_hoc_bar": 6,
+    "m1_passes": false,
+    "n_detected": 3429,
+    "ordered_separation": false,
+    "ordered_separation_on_trimmed_support": false,
+    "posterior_crossings_in_support_log": [
+      -0.25240766969720896,
+      0.05591144699270714
+    ],
+    "posterior_crossings_in_trimmed_support_log": [
+      -0.25240766969720896,
+      0.05591144699270714
+    ],
+    "posterior_crossings_log": [
+      -0.25240766969720896,
+      0.05591144699270714
+    ],
+    "posterior_crossings_value": [
+      0.7769279435200767,
+      1.0575040344277356
+    ],
+    "support_definition_changes_m1_a": false
+  },
+  "subtype_composition": {
+    "SZ09TE_CNT": {
+      "Cycling epithelium": 0.2540291634689179,
+      "HT epithelium I": 0.0007674597083653108,
+      "HT epithelium II": 0.0028140189306728063,
+      "Luminal-like epithelium": 0.742389357892044
+    },
+    "SZ09TE_HT": {
+      "Cycling epithelium": 0.09341742215214821,
+      "HT epithelium I": 0.5656286953094206,
+      "HT epithelium II": 0.3334647221127316,
+      "Luminal-like epithelium": 0.007489160425699646
+    },
+    "SZ10TE_CNT": {
+      "Cycling epithelium": 0.20251025826695632,
+      "HT epithelium I": 0.09727250784455709,
+      "HT epithelium II": 0.010137581462708182,
+      "Luminal-like epithelium": 0.6900796524257784
+    },
+    "SZ10TE_HT": {
+      "Cycling epithelium": 0.053164556962025315,
+      "HT epithelium I": 0.49005424954792043,
+      "HT epithelium II": 0.4430379746835443,
+      "Luminal-like epithelium": 0.013743218806509945
+    },
+    "SZ25TE_CNT": {
+      "Cycling epithelium": 0.270983635403836,
+      "HT epithelium I": 0.08323068801689248,
+      "HT epithelium II": 0.11349639275030794,
+      "Luminal-like epithelium": 0.5322892838289636
+    },
+    "SZ25TE_HT": {
+      "Cycling epithelium": 0.11823361823361823,
+      "HT epithelium I": 0.37606837606837606,
+      "HT epithelium II": 0.49572649572649574,
+      "Luminal-like epithelium": 0.009971509971509971
+    }
+  },
+  "subtype_detection_by_condition": {
+    "Cycling epithelium": {
+      "CNT": 0.2431791221826809,
+      "HT": 0.19090909090909092
+    },
+    "HT epithelium I": {
+      "CNT": 0.06598407281001138,
+      "HT": 0.11030741410488246
+    },
+    "HT epithelium II": {
+      "CNT": 0.04154727793696275,
+      "HT": 0.14817491868449584
+    },
+    "Luminal-like epithelium": {
+      "CNT": 0.18540860459822445,
+      "HT": 0.16901408450704225
+    }
+  },
+  "zero_fraction": 0.8322489115013942
+}

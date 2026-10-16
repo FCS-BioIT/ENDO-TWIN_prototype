@@ -1,0 +1,7 @@
+Node A {
+  logic = A;
+}
+
+Node B {
+  logic = B;
+}

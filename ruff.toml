@@ -1,0 +1,14 @@
+# Ruff settings for `pixi run lint` and `pixi run format-check`.
+#
+# Lint uses ruff's defaults. Two files are left out of the formatter because
+# reformatting them is not free: their exact bytes are recorded elsewhere.
+[format]
+exclude = [
+    # Inside concordance.simulate.IMPLEMENTATION_GLOBS: any byte change moves the
+    # implementation digest and forces regenerating the five digest-stamped
+    # artifacts (docs/verification/README.md).
+    "src/dt_adoc/protocols/conditions.py",
+    # Hash-pinned by the closed C2 overlay
+    # (docs/c2_observation_compartments/attribution_summary.json).
+    "src/dt_adoc/observations/compartment_attribution.py",
+]

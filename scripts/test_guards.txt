@@ -1,0 +1,95 @@
+# Integrity and provenance guards run by `pixi run test-guards`.
+#
+# One unittest TestCase per line, named as `unittest discover -s tests` names it.
+# Blank lines and `#` comments are ignored.
+#
+# These guards check integrity and provenance only. They do not protect
+# scientific behaviour in general and they do not replace the complete suite:
+# `pixi run test` is still the required pre-merge check.
+#
+# Membership was measured in the 2026-10-15 verification audit (baseline 9b9bf5b).
+# These classes held every test that caught the injected regressions M1-M5:
+# stale implementation provenance, a new CRLF file, PCSK5 -> PCSK6 in the live
+# corrected map, an edited frozen Phase 1B artifact, and a changed table left
+# beside a stale figure. The cheap global, frozen-pin and provenance classes
+# around them are included too. Each class runs in a few seconds.
+#
+# Excluded on purpose (they stay in the complete suite):
+# * unit.test_c3a_kinetic_readout.GeneratorInventoryIsImmutable writes a probe
+#   file into the live src/dt_adoc/ and needs HEAD~1, which a parentless review
+#   snapshot does not have.
+# * test_project_validators.DataManifestValidatorTest needs the two gitignored
+#   evidence files under data/. It checks that the evidence is available, not
+#   that the committed record is intact.
+# * The two commit-reachability tests (the `!` lines below) assert ancestry,
+#   which belongs to the checkout looking at an artifact, not to the artifact.
+#   In a review snapshot of uncommitted work, no commit on any ref carries the
+#   reviewed tree, so they fail by construction there. The content checks in the
+#   same classes stay in. tests/unit/test_concordance.py explains why
+#   reachability is not the reconstructability invariant.
+#
+# A `!` line drops one test id from a listed class. If it matches no test, the
+# run is refused.
+
+# Implementation provenance: the recorded digests recompute from this tree (M1).
+unit.test_concordance.Provenance
+unit.test_endpoint_figure.EndpointFigureTest
+!unit.test_endpoint_figure.EndpointFigureTest.test_recorded_commit_is_reachable_from_the_reviewed_tree
+unit.test_klf12_conditioning_contract.TheSweepStaysASensitivityAnalysis
+unit.test_direct_effect_governance.DigestTest
+
+# Line endings, including the frozen CRLF inventory (M2).
+unit.test_line_endings.GitAttributesTest
+unit.test_line_endings.LineEndingInventoryTest
+
+# The PCSK5 correction and its live consumers (M3).
+unit.test_observation_corrections.CorrectionLayer
+unit.test_observation_corrections.LiveConsumers
+unit.test_observation_corrections.PostHocEvidence
+unit.test_rna_endpoint_concordance.CommittedInputs
+unit.test_v05_u6_semantics.GeneratedArtifactsDoNotDrift
+
+# Closed phases and frozen evidence (M4).
+unit.test_closure_replay.ClosureFrozenPathsTest
+!unit.test_closure_replay.ClosureFrozenPathsTest.test_the_closure_commit_is_reachable_from_the_reviewed_tree
+unit.test_closure_replay.ClosureSnapshotTest
+unit.test_closure_replay.LiveDriftTest
+unit.test_phase2a_contract.Immutability
+unit.test_phase2a_contract.ProvenanceSchema
+unit.test_phase2b_contract.FrozenCitation
+unit.test_phase2b_contract.OrderingGuard
+unit.test_phase2b_contract.RulesPreregistration
+unit.test_v04_immutability.V04ImmutabilityTest
+unit.test_superset_animation.ArchivedAnimationIsImmutableTest
+unit.test_superset_animation.ArchivedSupersetV03IsImmutableTest
+unit.test_superset_animation.ArchivedSupersetV04IsImmutableTest
+unit.test_topology_parity.PinnedParentDriftTest
+unit.test_topology_parity.ReconcilerRefusesDriftTest
+unit.test_config_contracts.ConfigContractTest
+
+# A committed table regenerates from its committed inputs (M5).
+unit.test_rna_endpoint_concordance.Regeneration
+
+# Pinned decisions and the provenance of derived evidence.
+unit.test_klf12_state.TheArtifactPinsItsOwnProvenance
+unit.test_klf12_state.TheFalsifierIsTheFrozenSentence
+unit.test_klf12_raw_umi.TheProvenancePathIsExercisedNotJustDeclared
+unit.test_node_support.DecisionProvenanceTest
+unit.test_node_support_preregistration.FrozenConstantsTest
+unit.test_node_support_raw_sensitivity.FrozenRuleTest
+unit.test_observation_map.MappingGroundTruthTest
+unit.test_coupling_adjudication.TotalityAndPinningTest
+unit.test_curation_increment_08_blocked_sources.ProvenanceTest
+unit.test_deferred_topology_register.StructuralClaimLineageTest
+unit.test_prl_igfbp1_foxo1_unit.ProvenanceTest
+unit.test_secreted_proteins.DonorProvenanceTest
+unit.test_v060_marker_removal.StaticAnalysisPinTest
+integration.test_concordance_runtime.AllMaternalPerturbationWiringIsPinned
+integration.test_klf12_conditioning.TheOverlayDoesNotDriftFromTheRunnerItCopies
+
+# Repository-level manifests.
+unit.test_external_data_manifest.AvailabilityIsNotIntegration
+unit.test_external_data_manifest.Schema
+unit.test_external_data_manifest.TheTwoManifestsStayDisjoint
+unit.test_pdf_manifest.PdfManifestTest
+test_project_validators.RunManifestValidatorTest

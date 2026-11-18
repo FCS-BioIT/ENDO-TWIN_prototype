@@ -1,0 +1,90 @@
+edge_id	source	target	edge_role	rationale
+LE021	E_SECRETORY_STATE	E_ANXA2_ACTIN	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE019	E_GP130_STAT3	E_CD98_CD9	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE024	IN_EMBRYO_CONTACT	E_CDH1_APICAL	external_input	IN_EMBRYO_CONTACT is an embryo-side challenge input. The edge is a substantive biological claim (embryo contact induces apical CDH1) but its regulator is external, so it is an input coupling: retained by default, graded and reported; --filter-external-inputs subjects it to the filter.
+LE012	E_PC6	E_DAG1_CLEAVED	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE011	E_PC6	E_DAG1_FULL	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+PAR-003	IN_E2	E_ESTROGENIC_PROLIFERATION	external_input	IN_E2 is the ADOC estradiol input; the edge encodes estrogen-driven epithelial proliferation. Executes without curated provenance (exemption PAR-003). Retained by default as an input coupling; reported as unassessed until curated.
+LE093	S_FGF_MITOGENIC	E_ESTROGENIC_PROLIFERATION	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE008	E_LIF	E_GP130_STAT3	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE015	E_SECRETORY_STATE	E_HBEGF	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE003	E_PGR	E_IHH	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE018	E_HBEGF	E_ITGAVB3_5	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE017	E_LIF	E_ITGAVB3_5	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+PAR-002	E_SECRETORY_STATE	E_ITGAVB3_5	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE091	E_KLF12_HIGH	E_LIF	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE007	E_SECRETORY_STATE	E_LIF	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE013	E_SECRETORY_STATE	E_MUC1_BARRIER	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE014	E_SECRETORY_STATE	E_MUC1_SLEX	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE006	E_SECRETORY_STATE	E_PAEP	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE010	E_SECRETORY_STATE	E_PC6	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE001	IN_PROGESTIN	E_PGR	external_input	IN_PROGESTIN is the ADOC protocol progestin input (SOFIA-HT-001) and E_PGR is liganded epithelial PGR activity; the edge defines what the input node means. Retained by default so the hormone conditions keep their meaning; graded and reported.
+LE009	E_SECRETORY_STATE	E_PODXL	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE031	E_ANXA2_ACTIN	E_RECEPTIVE_SURFACE	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE029	E_CD98_CD9	E_RECEPTIVE_SURFACE	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE030	E_CDH1_APICAL	E_RECEPTIVE_SURFACE	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE033	E_DAG1_CLEAVED	E_RECEPTIVE_SURFACE	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE027	E_DAG1_FULL	E_RECEPTIVE_SURFACE	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE095	E_ESTROGENIC_PROLIFERATION	E_RECEPTIVE_SURFACE	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE025	E_GP130_STAT3	E_RECEPTIVE_SURFACE	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE032	E_HBEGF	E_RECEPTIVE_SURFACE	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE035	E_ITGAVB3_5	E_RECEPTIVE_SURFACE	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE028	E_MUC1_BARRIER	E_RECEPTIVE_SURFACE	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE034	E_MUC1_SLEX	E_RECEPTIVE_SURFACE	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE026	E_PODXL	E_RECEPTIVE_SURFACE	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE036	X_SPP1_LUMEN_FREE	E_RECEPTIVE_SURFACE	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE005	E_PGR	E_SECRETORY_STATE	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE004	IN_E2	E_SECRETORY_STATE	external_input	IN_E2 is the ADOC protocol estradiol priming input (SOFIA-HT-001); the edge encodes that the secretory state requires E2 priming. Retained by default so the priming conditions keep their meaning; graded and reported.
+LE016	E_SECRETORY_STATE	E_SPP1_EXPR	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE076	E_RECEPTIVE_SURFACE	OUT_EPITHELIAL_RECEPTIVE	phenotype_definition	OUT_EPITHELIAL_RECEPTIVE is a reported phenotype; this edge is part of its definition from model constituents, chosen by the modeller.
+PAR-001	OUT_EPITHELIAL_RECEPTIVE	OUT_MATERNAL_ADHESION_COMPETENCE	phenotype_definition	OUT_MATERNAL_ADHESION_COMPETENCE is a reported phenotype; this edge is part of its definition from model constituents, chosen by the modeller.
+LE082	S_DECIDUALIZED	OUT_MATERNAL_ADHESION_COMPETENCE	phenotype_definition	OUT_MATERNAL_ADHESION_COMPETENCE is a reported phenotype; this edge is part of its definition from model constituents, chosen by the modeller.
+LE085	X_ADHESION_ROUTE_REDUNDANT	OUT_MATERNAL_ADHESION_COMPETENCE	phenotype_definition	OUT_MATERNAL_ADHESION_COMPETENCE is a reported phenotype; this edge is part of its definition from model constituents, chosen by the modeller.
+LE084	X_ADHESION_ROUTE_SPP1	OUT_MATERNAL_ADHESION_COMPETENCE	phenotype_definition	OUT_MATERNAL_ADHESION_COMPETENCE is a reported phenotype; this edge is part of its definition from model constituents, chosen by the modeller.
+LE086	X_ANTIADHESIVE_ROUTE	OUT_MATERNAL_ADHESION_COMPETENCE	phenotype_definition	OUT_MATERNAL_ADHESION_COMPETENCE is a reported phenotype; this edge is part of its definition from model constituents, chosen by the modeller.
+LE083	X_MECHANICAL_PERMISSIVE_ECM	OUT_MATERNAL_ADHESION_COMPETENCE	phenotype_definition	OUT_MATERNAL_ADHESION_COMPETENCE is a reported phenotype; this edge is part of its definition from model constituents, chosen by the modeller.
+LE090	IN_EMBRYO_CONTACT	OUT_STABLE_ADHESION	external_input	Embryo-side assay gate: IN_EMBRYO_CONTACT is an external challenge input that the ADOC stable-adhesion readout is defined to require; it encodes the assay design, not maternal regulation.
+LE088	IN_EMBRYO_PRESENT	OUT_STABLE_ADHESION	external_input	Embryo-side assay gate: IN_EMBRYO_PRESENT is an external challenge input that the ADOC stable-adhesion readout is defined to require; it encodes the assay design, not maternal regulation.
+LE089	IN_TROPHECTODERM_COMPETENT	OUT_STABLE_ADHESION	external_input	Embryo-side assay gate: IN_TROPHECTODERM_COMPETENT is an external challenge input that the ADOC stable-adhesion readout is defined to require; it encodes the assay design, not maternal regulation.
+LE087	OUT_MATERNAL_ADHESION_COMPETENCE	OUT_STABLE_ADHESION	phenotype_definition	OUT_STABLE_ADHESION is a reported phenotype; this edge is part of its definition from model constituents, chosen by the modeller.
+LE078	S_DECIDUALIZED	OUT_STROMAL_DECIDUALIZED	phenotype_definition	OUT_STROMAL_DECIDUALIZED is a reported phenotype; this edge is part of its definition from model constituents, chosen by the modeller.
+LE043	S_NR2F2	S_BMP2	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE042	S_PGR	S_BMP2	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+PAR-004	S_PKA	S_BMP2	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE048	S_BMP2	S_DECIDUALIZED	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE046	S_PGR	S_DECIDUALIZED	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE047	S_PKA	S_DECIDUALIZED	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE092	S_HAND2	S_FGF_MITOGENIC	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE044	S_BMP2	S_HAND2	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE045	S_PGR	S_HAND2	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE050	S_DECIDUALIZED	S_IGFBP1	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE040	E_IHH	S_NR2F2	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE041	S_PGR	S_NR2F2	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE037	IN_PROGESTIN	S_PGR	external_input	IN_PROGESTIN is the ADOC protocol progestin input (SOFIA-HT-001) and S_PGR is liganded stromal PGR activity; the edge defines what the input node means. Retained by default; graded and reported.
+LE039	IN_cAMP	S_PKA	external_input	IN_cAMP is the ADOC protocol cAMP-analogue input (SOFIA-HT-001) and S_PKA its stromal effector; the edge defines the input. Retained by default; graded and reported.
+LE049	S_DECIDUALIZED	S_PRL	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE051	S_DECIDUALIZED	S_SPP1	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE052	S_DECIDUALIZED	S_TAZ_ECM	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE067	E_ANXA2_ACTIN	X_ADHESION_ROUTE_REDUNDANT	biological_regulatory	Membership of E_ANXA2_ACTIN in the X_ADHESION_ROUTE_REDUNDANT aggregate is the same biological claim as its effect on adhesion (and on E_RECEPTIVE_SURFACE where both exist); classed biological so that excluding one copy cannot be undone by the other.
+LE065	E_CD98_CD9	X_ADHESION_ROUTE_REDUNDANT	biological_regulatory	Membership of E_CD98_CD9 in the X_ADHESION_ROUTE_REDUNDANT aggregate is the same biological claim as its effect on adhesion (and on E_RECEPTIVE_SURFACE where both exist); classed biological so that excluding one copy cannot be undone by the other.
+LE066	E_CDH1_APICAL	X_ADHESION_ROUTE_REDUNDANT	biological_regulatory	Membership of E_CDH1_APICAL in the X_ADHESION_ROUTE_REDUNDANT aggregate is the same biological claim as its effect on adhesion (and on E_RECEPTIVE_SURFACE where both exist); classed biological so that excluding one copy cannot be undone by the other.
+LE069	E_DAG1_CLEAVED	X_ADHESION_ROUTE_REDUNDANT	biological_regulatory	Membership of E_DAG1_CLEAVED in the X_ADHESION_ROUTE_REDUNDANT aggregate is the same biological claim as its effect on adhesion (and on E_RECEPTIVE_SURFACE where both exist); classed biological so that excluding one copy cannot be undone by the other.
+LE068	E_HBEGF	X_ADHESION_ROUTE_REDUNDANT	biological_regulatory	Membership of E_HBEGF in the X_ADHESION_ROUTE_REDUNDANT aggregate is the same biological claim as its effect on adhesion (and on E_RECEPTIVE_SURFACE where both exist); classed biological so that excluding one copy cannot be undone by the other.
+LE070	E_MUC1_SLEX	X_ADHESION_ROUTE_REDUNDANT	biological_regulatory	Membership of E_MUC1_SLEX in the X_ADHESION_ROUTE_REDUNDANT aggregate is the same biological claim as its effect on adhesion (and on E_RECEPTIVE_SURFACE where both exist); classed biological so that excluding one copy cannot be undone by the other.
+LE064	E_RECEPTIVE_SURFACE	X_ADHESION_ROUTE_REDUNDANT	phenotype_definition	The route aggregate X_ADHESION_ROUTE_REDUNDANT is defined to require the composite receptive surface; gating by the composite is a model definition.
+LE071	X_INTERFACE_REDUNDANT_RELAY	X_ADHESION_ROUTE_REDUNDANT	structural_relay	X_INTERFACE_REDUNDANT_RELAY is a bounded structural-uncertainty relay with a fixed initial-state distribution (baseline.cfg); it is a modelling device, not a biological claim.
+LE062	E_ITGAVB3_5	X_ADHESION_ROUTE_SPP1	biological_regulatory	Membership of E_ITGAVB3_5 in the X_ADHESION_ROUTE_SPP1 aggregate is the same biological claim as its effect on adhesion (and on E_RECEPTIVE_SURFACE where both exist); classed biological so that excluding one copy cannot be undone by the other.
+LE060	E_RECEPTIVE_SURFACE	X_ADHESION_ROUTE_SPP1	phenotype_definition	The route aggregate X_ADHESION_ROUTE_SPP1 is defined to require the composite receptive surface; gating by the composite is a model definition.
+LE063	X_INTERFACE_SPP1_RELAY	X_ADHESION_ROUTE_SPP1	structural_relay	X_INTERFACE_SPP1_RELAY is a bounded structural-uncertainty relay with a fixed initial-state distribution (baseline.cfg); it is a modelling device, not a biological claim.
+LE061	X_SPP1_LUMEN_FREE	X_ADHESION_ROUTE_SPP1	biological_regulatory	Membership of X_SPP1_LUMEN_FREE in the X_ADHESION_ROUTE_SPP1 aggregate is the same biological claim as its effect on adhesion (and on E_RECEPTIVE_SURFACE where both exist); classed biological so that excluding one copy cannot be undone by the other.
+LE073	E_DAG1_FULL	X_ANTIADHESIVE_ROUTE	biological_regulatory	Membership of E_DAG1_FULL in the X_ANTIADHESIVE_ROUTE aggregate is the same biological claim as its effect on adhesion (and on E_RECEPTIVE_SURFACE where both exist); classed biological so that excluding one copy cannot be undone by the other.
+LE074	E_MUC1_BARRIER	X_ANTIADHESIVE_ROUTE	biological_regulatory	Membership of E_MUC1_BARRIER in the X_ANTIADHESIVE_ROUTE aggregate is the same biological claim as its effect on adhesion (and on E_RECEPTIVE_SURFACE where both exist); classed biological so that excluding one copy cannot be undone by the other.
+LE072	E_PODXL	X_ANTIADHESIVE_ROUTE	biological_regulatory	Membership of E_PODXL in the X_ANTIADHESIVE_ROUTE aggregate is the same biological claim as its effect on adhesion (and on E_RECEPTIVE_SURFACE where both exist); classed biological so that excluding one copy cannot be undone by the other.
+LE075	X_INTERFACE_ANTIADHESIVE_RELAY	X_ANTIADHESIVE_ROUTE	structural_relay	X_INTERFACE_ANTIADHESIVE_RELAY is a bounded structural-uncertainty relay with a fixed initial-state distribution (baseline.cfg); it is a modelling device, not a biological claim.
+LE055	IN_ER_STRESS_EXCESS	X_MECHANICAL_PERMISSIVE_ECM	external_input	IN_ER_STRESS_EXCESS is a pathology sensitivity input (interface_contract IF-007). The adverse-mechanics effect is a biological claim about an external condition: retained by default, graded and reported; --filter-external-inputs subjects it to the filter.
+LE056	IN_HIGH_ECM_STIFFNESS	X_MECHANICAL_PERMISSIVE_ECM	external_input	IN_HIGH_ECM_STIFFNESS is a matrix sensitivity input (interface_contract IF-008). The adverse-mechanics effect is a biological claim about an external condition: retained by default, graded and reported; --filter-external-inputs subjects it to the filter.
+LE053	S_DECIDUALIZED	X_MECHANICAL_PERMISSIVE_ECM	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE054	S_TAZ_ECM	X_MECHANICAL_PERMISSIVE_ECM	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE053A	X_MECHANICAL_STRESS_RELAY	X_MECHANICAL_PERMISSIVE_ECM	structural_relay	X_MECHANICAL_STRESS_RELAY is a bounded structural-uncertainty relay with a fixed initial-state distribution (baseline.cfg); it is a modelling device, not a biological claim.
+LE057	E_SPP1_EXPR	X_SPP1_LUMEN_FREE	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.
+LE058	S_SPP1	X_SPP1_LUMEN_FREE	biological_regulatory	Regulatory claim between modelled biological entities; subject to confidence filtering.

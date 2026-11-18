@@ -1,0 +1,56 @@
+{
+  "attestation": "run on the author's machine by scripts/run_record.py; not an independent CI result",
+  "checks": [
+    {
+      "exit_code": 0,
+      "seconds": 0.1,
+      "summary": "All checks passed!",
+      "task": "lint"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 0.1,
+      "summary": "265 files already formatted",
+      "task": "format-check"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 34.3,
+      "summary": "test-guards: 238 tests executed (1919 subtests) from 47 classes, 2 excluded, in 30.5s -- OK, checkout unchanged",
+      "task": "test-guards"
+    },
+    {
+      "exit_code": 0,
+      "result": {
+        "errors": 0,
+        "expected_failures": 0,
+        "failures": 0,
+        "skip_reasons": [],
+        "skipped": 0,
+        "tests": 2578,
+        "unittest_seconds": 1954.774,
+        "verdict": "OK"
+      },
+      "seconds": 1976.4,
+      "task": "test"
+    }
+  ],
+  "environment": {
+    "cpu_count": 20,
+    "pixi": "pixi 0.67.2",
+    "pixi_lock_sha256": "23f1779a57e76f3d5eeacc36c9676d67afe0b9c209bb9c5e8d043dc7364bd9fb",
+    "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+    "python": "Python 3.12.13"
+  },
+  "log": {
+    "path": "docs/verification/runs/aae9f13ef492.test.log.gz",
+    "sha256": "c7897ffa83ac86afcab4bc2e0d69413b563d6dbe41e29761b16452d0eec9ca59"
+  },
+  "passed": true,
+  "schema": "dt_adoc.run_record/1",
+  "started_utc": "2026-10-21T04:40:08Z",
+  "suite": "serial",
+  "tested_commit": "aae9f13ef4921dcda52a882a57968a8b99b69ffb",
+  "tested_tree": "6e501a08ef63bec662f67db8e3bfccdd89be158e",
+  "wall_seconds": 2010.9
+}

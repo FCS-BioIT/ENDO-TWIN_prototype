@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-19",
+  "commit": "c549001",
+  "checkout": "main checkout (the gitignored PDFs present, so no environment skip)",
+  "machine": "Linux 7.0.0-31, 20 cores, 125 GB",
+  "serial": {
+    "command": "pixi run test",
+    "tests": 2440,
+    "result": "OK",
+    "skips": 0,
+    "wall_s": 1972.5,
+    "unittest_s": 1946.8,
+    "peak_rss_kb": 7905732
+  },
+  "parallel": {
+    "command": "pixi run test-parallel",
+    "tests": 2440,
+    "worker_a_tests": 94,
+    "worker_b_tests": 2346,
+    "result": "OK, every test accounted for, checkout unchanged",
+    "skips": 0,
+    "wall_s": 1099.7,
+    "worker_a_s": 1017,
+    "worker_b_s": 1073,
+    "cpu_percent": 198,
+    "peak_rss_kb": 7902100
+  },
+  "write_audit": {
+    "command": "strace -f -y -e status=successful over the whole pixi run test-parallel process tree (file-mutating syscalls)",
+    "tests": 2440,
+    "result": "OK",
+    "writes_inside_checkout": [
+      ".git/index.lock created and removed 10 times by git subprocesses; never renamed over the index",
+      ".pixi/task-cache-v0 entry written by pixi"
+    ],
+    "in_process_audit_hook_writes": 0
+  },
+  "earlier_benchmark": "2026-10-19 on c70cd20 with a scratch runner: 1,001.6 s and 991.3 s against 1,950.1 s serial; the committed runner adds an audit hook in each worker and a checkout snapshot",
+  "final": {
+    "commit": "8e1a3a4",
+    "command": "pixi run test-parallel",
+    "tests": 2448,
+    "worker_a_tests": 94,
+    "worker_b_tests": 2354,
+    "result": "OK, every test accounted for, checkout unchanged",
+    "wall_s": 1097.5,
+    "cpu_percent": 195,
+    "peak_rss_kb": 7902156,
+    "note": "an earlier run on the same commit passed every test but failed the checkout check, correctly: another session in this checkout rewrote two files under output/progesterone_withdrawal/ during the run; the runner cannot tell who modified the checkout, so it fails"
+  }
+}

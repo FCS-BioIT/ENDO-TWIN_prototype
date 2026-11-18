@@ -1,0 +1,219 @@
+{
+ "purpose": "Raw record behind the 'Measured results' section of docs/verification/cache_design.md.",
+ "date": "2026-10-16",
+ "environment": {
+  "cpu": "Intel(R) Core(TM) i9-10900X CPU @ 3.70GHz (20 logical)",
+  "os": "Linux 7.0.0-31-generic",
+  "python": "3.12.13 (conda-forge, pixi default env)",
+  "pixi_lock_sha256_prefix": "23f1779a57e76f3d",
+  "process": "single process, no test parallelism"
+ },
+ "primitives": {
+  "command": "python -B scripts/bench_cached_primitives.py <tree> <label>",
+  "before_tree": "git archive 87c56ab src models (pre-cache main)",
+  "after_tree": "perf/verification-caches checkout",
+  "before": {
+   "label": "before",
+   "python": "3.12.13",
+   "machine": "x86_64",
+   "rule_rows": 651,
+   "distinct_rules": 72,
+   "provenance_files": 12,
+   "value_calls": 130200,
+   "payload_calls": 600,
+   "resolve_calls": 50,
+   "value": {
+    "best_s": 0.7540489132516086,
+    "median_s": 0.7556072822771966
+   },
+   "payload": {
+    "best_s": 0.33033834025263786,
+    "median_s": 0.33397527411580086
+   },
+   "resolve": {
+    "best_s": 0.40277002239599824,
+    "median_s": 0.40317913005128503
+   }
+  },
+  "after": {
+   "label": "after",
+   "python": "3.12.13",
+   "machine": "x86_64",
+   "rule_rows": 651,
+   "distinct_rules": 72,
+   "provenance_files": 12,
+   "value_calls": 130200,
+   "payload_calls": 600,
+   "resolve_calls": 50,
+   "value": {
+    "best_s": 0.03893781965598464,
+    "median_s": 0.03941781632602215
+   },
+   "payload": {
+    "best_s": 0.0314101311378181,
+    "median_s": 0.03180351201444864
+   },
+   "resolve": {
+    "best_s": 0.0547641939483583,
+    "median_s": 0.055229815654456615
+   }
+  },
+  "corpus": "every rule row of every network.bnd and rule_variants.tsv under models/ (generated subvariants included) and every provenance.toml under models/"
+ },
+ "suite": {
+  "command": "/usr/bin/time -v pixi run test (unittest discover -s tests -v), both gitignored evidence files hard-linked into the worktree",
+  "baselines": {
+   "3496_s": "complete-suite run of the merged verification-foundation state (2,389 tests, 1 PDF skip); same test set minus the 26 new tests: the comparable baseline; raw log: docs/verification/benchmark_raw/baseline_3496s_verification_foundation_suite.log.gz (the -v output of that run, from the verification-foundation session)",
+   "3474_s": "2026-10-15 audit run at 9b9bf5b (2,347 tests, 0 failures), quoted by the design before implementation; raw: docs/verification/benchmark_raw/baseline_3474s_audit_9b9bf5b_profile.json.gz (the audit's instrumented baseline profile: run_s, n_tests, per-test timings), copied from the audit archive"
+  },
+  "pre_regeneration_uncommitted_code_of_a567951_before_artifacts_regenerated": {
+   "ran": "Ran 2415 tests in 1992.210s",
+   "result": "FAILED (failures=3, skipped=1)",
+   "wall_clock": "33:41.39",
+   "max_rss_kb": 7923952,
+   "failures": [
+    "test_the_recorded_implementation_digest_recomputes (unit.test_concordance.Provenance.test_the_recorded_implementation_digest_recomputes)",
+    "test_the_recorded_implementation_digest_recomputes (unit.test_endpoint_figure.EndpointFigureTest.test_the_recorded_implementation_digest_recomputes)",
+    "test_the_run_records_reconstructable_lineage (unit.test_klf12_conditioning_contract.TheSweepStaysASensitivityAnalysis.test_the_run_records_reconstructable_lineage)"
+   ],
+   "skipped": [
+    "skipped '8 cited PDF(s) not in this checkout'"
+   ]
+  },
+  "final_at_bb0ce9c": {
+   "ran": "Ran 2415 tests in 1957.565s",
+   "result": "OK (skipped=1)",
+   "wall_clock": "33:07.69",
+   "max_rss_kb": 7901060,
+   "failures": [],
+   "skipped": [
+    "skipped '8 cited PDF(s) not in this checkout'"
+   ]
+  },
+  "raw_files": {
+   "docs/verification/benchmark_raw/after_final_suite.log.gz": {
+    "sha256_uncompressed": "2037a9f5c71dc0f99309b6a8e501c57763a55e3b6809d6286faa0d2cb2e51311",
+    "ran": "Ran 2415 tests in 1957.565s",
+    "result": "OK (skipped=1)"
+   },
+   "docs/verification/benchmark_raw/after_preregeneration_suite.log.gz": {
+    "sha256_uncompressed": "3eb521e5d610082e9d769504be0b58f2b682f6ab25b97f1b387b839e05652bd0",
+    "ran": "Ran 2415 tests in 1992.210s",
+    "result": "FAILED (failures=3, skipped=1)"
+   },
+   "docs/verification/benchmark_raw/baseline_3474s_audit_9b9bf5b_profile.json.gz": {
+    "sha256_uncompressed": "871eae17157c3a38f81acee3ffdcdeb26b9aa6265a7381919086e2f32a7e56f6",
+    "n_tests": 2347,
+    "run_s": 3474.3709736838937,
+    "discovery_s": 1.9912831308320165,
+    "failures": 0,
+    "errors": 0
+   },
+   "docs/verification/benchmark_raw/baseline_3496s_verification_foundation_suite.log.gz": {
+    "sha256_uncompressed": "afc669e8ae5fcd610be2f59180490c1da959b0a7456f2f743a9a0d9dfbf885f2",
+    "ran": "Ran 2389 tests in 3496.381s",
+    "result": "OK (skipped=1)"
+   },
+   "docs/verification/benchmark_raw/after_phase2b_modules.log.gz": {
+    "sha256_uncompressed": "42126980594c59c7adc102afd18753f1b85ab6710f515565e3e555690a564dc5",
+    "ran": "Ran 148 tests in 1005.953s",
+    "result": "OK"
+   }
+  },
+  "raw_note": "The two 'after' logs are the complete -v outputs (with /usr/bin/time -v) summarised above. Decompress with gzip -dc; sha256_uncompressed identifies the original file."
+ },
+ "artifact_comparison": {
+  "command": "leaf-by-leaf JSON and cell-by-cell TSV comparison of every changed file against 87c56ab",
+  "output": [
+   "docs/assets/adoc_concordance_v0.4.0_metadata.json: 2 difference(s), 0 outside provenance",
+   "    provenance.git_commit: ('str', 'e4296f0c8eb1d0722f6dc685688a2ea738a8c951') -> ('str', 'a5679515235cec92b70edfde17107238bd7af9df')",
+   "    provenance.implementation_digest: ('str', 'e21c8d3e5827e3ec8343205a8e3d6568d07889cf4b937677d126b2be017302fe') -> ('str', 'ca2894bb67d4a6939b948bafc4182d68ecf7e4ab81015dee2611c4f82e27205f')",
+   "docs/assets/adoc_functional_endpoint_v0.5.0_metadata.json: 3 difference(s), 0 outside provenance",
+   "    run_provenance.git_commit: ('str', 'e4296f0c8eb1d0722f6dc685688a2ea738a8c951') -> ('str', 'a5679515235cec92b70edfde17107238bd7af9df')",
+   "    run_provenance.implementation_digest: ('str', 'e21c8d3e5827e3ec8343205a8e3d6568d07889cf4b937677d126b2be017302fe') -> ('str', 'ca2894bb67d4a6939b948bafc4182d68ecf7e4ab81015dee2611c4f82e27205f')",
+   "    run_settings_sha256: ('str', 'def211f9c323ec40903548fc095ca3b3b3b23269e2b7d9f123d42e22abf60086') -> ('str', 'ed95476c1499c0d4d546963d132721a117cfc0e6e09ecbdac25c87bc4653299f')",
+   "docs/concordance/run_settings.json: 2 difference(s), 0 outside provenance",
+   "    provenance.git_commit: ('str', 'e4296f0c8eb1d0722f6dc685688a2ea738a8c951') -> ('str', 'a5679515235cec92b70edfde17107238bd7af9df')",
+   "    provenance.implementation_digest: ('str', 'e21c8d3e5827e3ec8343205a8e3d6568d07889cf4b937677d126b2be017302fe') -> ('str', 'ca2894bb67d4a6939b948bafc4182d68ecf7e4ab81015dee2611c4f82e27205f')",
+   "docs/endpoint/endpoint_run_settings.json: 2 difference(s), 0 outside provenance",
+   "    provenance.git_commit: ('str', 'e4296f0c8eb1d0722f6dc685688a2ea738a8c951') -> ('str', 'a5679515235cec92b70edfde17107238bd7af9df')",
+   "    provenance.implementation_digest: ('str', 'e21c8d3e5827e3ec8343205a8e3d6568d07889cf4b937677d126b2be017302fe') -> ('str', 'ca2894bb67d4a6939b948bafc4182d68ecf7e4ab81015dee2611c4f82e27205f')",
+   "docs/scrna/klf12_conditioning_settings.json: 2 difference(s), 0 outside provenance",
+   "    provenance.git_commit: ('str', 'e4296f0c8eb1d0722f6dc685688a2ea738a8c951') -> ('str', 'a5679515235cec92b70edfde17107238bd7af9df')",
+   "    provenance.implementation_digest: ('str', 'e21c8d3e5827e3ec8343205a8e3d6568d07889cf4b937677d126b2be017302fe') -> ('str', 'ca2894bb67d4a6939b948bafc4182d68ecf7e4ab81015dee2611c4f82e27205f')",
+   "",
+   "files with non-provenance differences: 0"
+  ],
+  "rewritten_by_generators": [
+   "docs/assets/adoc_concordance_v0.4.0_metadata.json",
+   "docs/assets/adoc_concordance_v0.4.0.png",
+   "docs/assets/adoc_functional_endpoint_v0.5.0_metadata.json",
+   "docs/assets/adoc_functional_endpoint_v0.5.0.png",
+   "docs/concordance/concordance_table.tsv",
+   "docs/concordance/figure_source_data.tsv",
+   "docs/concordance/mechanism_nodes.tsv",
+   "docs/concordance/run_settings.json",
+   "docs/endpoint/endpoint_figure_source_data.tsv",
+   "docs/endpoint/endpoint_replicates.tsv",
+   "docs/endpoint/endpoint_run_settings.json",
+   "docs/scrna/klf12_conditioning_response.tsv",
+   "docs/scrna/klf12_conditioning_settings.json"
+  ],
+  "byte_identical_rewritten": [
+   "docs/assets/adoc_concordance_v0.4.0.png",
+   "docs/assets/adoc_functional_endpoint_v0.5.0.png",
+   "docs/concordance/concordance_table.tsv",
+   "docs/concordance/figure_source_data.tsv",
+   "docs/concordance/mechanism_nodes.tsv",
+   "docs/endpoint/endpoint_figure_source_data.tsv",
+   "docs/endpoint/endpoint_replicates.tsv",
+   "docs/scrna/klf12_conditioning_response.tsv"
+  ]
+ },
+ "remaining_bottleneck_phase2b": {
+  "modules": [
+   "unit.test_phase2b_contract",
+   "unit.test_closure_replay",
+   "unit.test_compartment_attribution",
+   "unit.test_generated_date_determinism"
+  ],
+  "baseline_from_profile": {
+   "command": "python scripts/summarize_profile_modules.py docs/verification/benchmark_raw/baseline_3474s_audit_9b9bf5b_profile.json.gz <modules>",
+   "output": {
+    "run_s": 3474.4,
+    "modules": {
+     "unit.test_phase2b_contract": {
+      "tests_s": 773.9,
+      "fixtures_s": 183.5,
+      "total_s": 957.4
+     },
+     "unit.test_closure_replay": {
+      "tests_s": 5.3,
+      "fixtures_s": 0.9,
+      "total_s": 6.1
+     },
+     "unit.test_compartment_attribution": {
+      "tests_s": 0.2,
+      "fixtures_s": 0.0,
+      "total_s": 0.2
+     },
+     "unit.test_generated_date_determinism": {
+      "tests_s": 43.5,
+      "fixtures_s": 0.0,
+      "total_s": 43.5
+     }
+    },
+    "total_s": 1007.2,
+    "share_of_run": 0.29
+   },
+   "note": "957.4 s is test_phase2b_contract alone, tests (773.9 s) plus class fixtures (183.5 s); per-test walls alone (822.8 s for the four modules) omit the fixtures"
+  },
+  "after_on_this_branch": {
+   "command": "/usr/bin/time -v pixi run python -B -m unittest -v <the four modules>, evidence files hard-linked",
+   "ran": "Ran 148 tests in 1005.953s",
+   "result": "OK",
+   "raw_log": "docs/verification/benchmark_raw/after_phase2b_modules.log.gz",
+   "share_of_final_suite": 0.514
+  }
+ }
+}

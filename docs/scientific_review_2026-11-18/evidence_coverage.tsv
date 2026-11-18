@@ -1,0 +1,99 @@
+edge_id	source	target	sign	edge_status	edge_role	evidence_records	records_graded	references_cited	references_with_full_text	references_abstract_only	references_unknown_availability	in_house_observations	coverage
+LE001	IN_PROGESTIN	E_PGR	activation	active	external_input	1	0					SOFIA-HT-001	in_house_evidence_only
+LE002	IN_MIFEPRISTONE	E_PGR	inhibition	retired		1	0					SOFIA-HT-002	in_house_evidence_only
+LE003	E_PGR	E_IHH	activation	active	biological_regulatory	5	2	REF-002;REF-025;REF-026;REF-027;REF-029	REF-002;REF-025;REF-026;REF-027;REF-029				fully_available
+LE004	IN_E2	E_SECRETORY_STATE	activation	active	external_input	1	0					SOFIA-HT-001	in_house_evidence_only
+LE005	E_PGR	E_SECRETORY_STATE	activation	active	biological_regulatory	1	0					SOFIA-SC-001	in_house_evidence_only
+LE006	E_SECRETORY_STATE	E_PAEP	activation	active	biological_regulatory	1	0					SOFIA-EPI-001	in_house_evidence_only
+LE007	E_SECRETORY_STATE	E_LIF	activation	active	biological_regulatory	8	1	REF-023;REF-024;REF-030;REF-031;REF-032;REF-033;REF-036;REF-038	REF-023;REF-024;REF-030;REF-031;REF-032;REF-033;REF-036;REF-038				fully_available
+LE008	E_LIF	E_GP130_STAT3	activation	active	biological_regulatory	8	3	REF-023;REF-024;REF-030;REF-031;REF-032;REF-033;REF-036;REF-038	REF-023;REF-024;REF-030;REF-031;REF-032;REF-033;REF-036;REF-038				fully_available
+LE009	E_SECRETORY_STATE	E_PODXL	inhibition	active	biological_regulatory	3	0	REF-012;REF-013;REF-014	REF-012;REF-013;REF-014				fully_available
+LE010	E_SECRETORY_STATE	E_PC6	activation	active	biological_regulatory	2	0	REF-010;REF-011	REF-010;REF-011				fully_available
+LE011	E_PC6	E_DAG1_FULL	inhibition	active	biological_regulatory	2	2	REF-010;REF-011	REF-010;REF-011				fully_available
+LE012	E_PC6	E_DAG1_CLEAVED	activation	active	biological_regulatory	2	2	REF-010;REF-011	REF-010;REF-011				fully_available
+LE013	E_SECRETORY_STATE	E_MUC1_BARRIER	inhibition	active	biological_regulatory	5	1	REF-012;REF-013;REF-014;REF-067;REF-068	REF-012;REF-013;REF-014;REF-067;REF-068				fully_available
+LE014	E_SECRETORY_STATE	E_MUC1_SLEX	activation	active	biological_regulatory	3	0	REF-012;REF-013;REF-014	REF-012;REF-013;REF-014				fully_available
+LE015	E_SECRETORY_STATE	E_HBEGF	activation	active	biological_regulatory	2	0	REF-006;REF-042	REF-006;REF-042				fully_available
+LE016	E_SECRETORY_STATE	E_SPP1_EXPR	activation	active	biological_regulatory	5	0	REF-007;REF-015;REF-017;REF-022;REF-038	REF-007;REF-015;REF-017;REF-022;REF-038				fully_available
+LE017	E_LIF	E_ITGAVB3_5	activation	active	biological_regulatory	1	1	REF-038	REF-038				fully_available
+LE018	E_HBEGF	E_ITGAVB3_5	activation	active	biological_regulatory	3	2	REF-006;REF-007;REF-042	REF-006;REF-007;REF-042				fully_available
+LE019	E_GP130_STAT3	E_CD98_CD9	activation	active	biological_regulatory	1	1	REF-008	REF-008				fully_available
+LE021	E_SECRETORY_STATE	E_ANXA2_ACTIN	activation	active	biological_regulatory	1	0	REF-009	REF-009				fully_available
+LE024	IN_EMBRYO_CONTACT	E_CDH1_APICAL	activation	active	external_input	1	1	REF-019	REF-019				fully_available
+LE025	E_GP130_STAT3	E_RECEPTIVE_SURFACE	activation	active	biological_regulatory	8	0	REF-023;REF-024;REF-030;REF-031;REF-032;REF-033;REF-036;REF-038	REF-023;REF-024;REF-030;REF-031;REF-032;REF-033;REF-036;REF-038				fully_available
+LE026	E_PODXL	E_RECEPTIVE_SURFACE	inhibition	active	biological_regulatory	3	1	REF-012;REF-013;REF-014	REF-012;REF-013;REF-014				fully_available
+LE027	E_DAG1_FULL	E_RECEPTIVE_SURFACE	inhibition	active	biological_regulatory	2	0	REF-010;REF-011	REF-010;REF-011				fully_available
+LE028	E_MUC1_BARRIER	E_RECEPTIVE_SURFACE	inhibition	active	biological_regulatory	3	0	REF-012;REF-013;REF-014	REF-012;REF-013;REF-014				fully_available
+LE029	E_CD98_CD9	E_RECEPTIVE_SURFACE	activation	active	biological_regulatory	2	2	REF-008	REF-008				fully_available
+LE030	E_CDH1_APICAL	E_RECEPTIVE_SURFACE	activation	active	biological_regulatory	1	0	REF-019	REF-019				fully_available
+LE031	E_ANXA2_ACTIN	E_RECEPTIVE_SURFACE	activation	active	biological_regulatory	1	0	REF-009	REF-009				fully_available
+LE032	E_HBEGF	E_RECEPTIVE_SURFACE	activation	active	biological_regulatory	2	0	REF-006;REF-007	REF-006;REF-007				fully_available
+LE033	E_DAG1_CLEAVED	E_RECEPTIVE_SURFACE	activation	active	biological_regulatory	2	0	REF-010;REF-011	REF-010;REF-011				fully_available
+LE034	E_MUC1_SLEX	E_RECEPTIVE_SURFACE	activation	active	biological_regulatory	3	0	REF-012;REF-013;REF-014	REF-012;REF-013;REF-014				fully_available
+LE035	E_ITGAVB3_5	E_RECEPTIVE_SURFACE	activation	active	biological_regulatory	5	0	REF-007;REF-015;REF-017;REF-022;REF-038	REF-007;REF-015;REF-017;REF-022;REF-038				fully_available
+LE036	X_SPP1_LUMEN_FREE	E_RECEPTIVE_SURFACE	activation	active	biological_regulatory	5	1	REF-007;REF-015;REF-017;REF-022;REF-038	REF-007;REF-015;REF-017;REF-022;REF-038				fully_available
+LE037	IN_PROGESTIN	S_PGR	activation	active	external_input	1	0					SOFIA-HT-001	in_house_evidence_only
+LE038	IN_MIFEPRISTONE	S_PGR	inhibition	retired		1	0					SOFIA-HT-002	in_house_evidence_only
+LE039	IN_cAMP	S_PKA	activation	active	external_input	1	0					SOFIA-HT-001	in_house_evidence_only
+LE040	E_IHH	S_NR2F2	activation	active	biological_regulatory	5	2	REF-002;REF-025;REF-026;REF-027;REF-029	REF-002;REF-025;REF-026;REF-027;REF-029				fully_available
+LE041	S_PGR	S_NR2F2	activation	active	biological_regulatory	5	0	REF-002;REF-025;REF-026;REF-027;REF-029	REF-002;REF-025;REF-026;REF-027;REF-029				fully_available
+LE042	S_PGR	S_BMP2	activation	active	biological_regulatory	1	0					SOFIA-SC-002	in_house_evidence_only
+LE043	S_NR2F2	S_BMP2	activation	active	biological_regulatory	5	1	REF-002;REF-025;REF-026;REF-027;REF-029	REF-002;REF-025;REF-026;REF-027;REF-029				fully_available
+LE044	S_BMP2	S_HAND2	activation	active	biological_regulatory	5	1	REF-002;REF-025;REF-027;REF-028;REF-029	REF-002;REF-025;REF-027;REF-028;REF-029				fully_available
+LE045	S_PGR	S_HAND2	activation	active	biological_regulatory	5	0	REF-002;REF-025;REF-027;REF-028;REF-029	REF-002;REF-025;REF-027;REF-028;REF-029				fully_available
+LE046	S_PGR	S_DECIDUALIZED	activation	active	biological_regulatory	2	0	REF-016;REF-017	REF-016;REF-017				fully_available
+LE047	S_PKA	S_DECIDUALIZED	activation	active	biological_regulatory	2	0	REF-016;REF-017	REF-016;REF-017				fully_available
+LE048	S_BMP2	S_DECIDUALIZED	activation	active	biological_regulatory	5	0	REF-002;REF-025;REF-026;REF-027;REF-029	REF-002;REF-025;REF-026;REF-027;REF-029				fully_available
+LE049	S_DECIDUALIZED	S_PRL	activation	active	biological_regulatory	2	1	REF-016	REF-016			SOFIA-STR-001	fully_available
+LE050	S_DECIDUALIZED	S_IGFBP1	activation	active	biological_regulatory	1	0					SOFIA-STR-001	in_house_evidence_only
+LE051	S_DECIDUALIZED	S_SPP1	activation	active	biological_regulatory	2	0	REF-016;REF-017	REF-016;REF-017				fully_available
+LE052	S_DECIDUALIZED	S_TAZ_ECM	activation	active	biological_regulatory	2	1	REF-018;REF-035	REF-018;REF-035				fully_available
+LE053	S_DECIDUALIZED	X_MECHANICAL_PERMISSIVE_ECM	activation	active	biological_regulatory	2	0	REF-018;REF-035	REF-018;REF-035				fully_available
+LE053A	X_MECHANICAL_STRESS_RELAY	X_MECHANICAL_PERMISSIVE_ECM	inhibition	active	structural_relay	2	0	REF-018;REF-035	REF-018;REF-035				fully_available
+LE054	S_TAZ_ECM	X_MECHANICAL_PERMISSIVE_ECM	activation	active	biological_regulatory	2	1	REF-018;REF-035	REF-018;REF-035				fully_available
+LE055	IN_ER_STRESS_EXCESS	X_MECHANICAL_PERMISSIVE_ECM	inhibition	active	external_input	2	0	REF-018;REF-035	REF-018;REF-035				fully_available
+LE056	IN_HIGH_ECM_STIFFNESS	X_MECHANICAL_PERMISSIVE_ECM	inhibition	active	external_input	2	0	REF-018;REF-035	REF-018;REF-035				fully_available
+LE057	E_SPP1_EXPR	X_SPP1_LUMEN_FREE	activation	active	biological_regulatory	5	0	REF-007;REF-015;REF-017;REF-022;REF-038	REF-007;REF-015;REF-017;REF-022;REF-038				fully_available
+LE058	S_SPP1	X_SPP1_LUMEN_FREE	activation	active	biological_regulatory	5	0	REF-007;REF-015;REF-017;REF-022;REF-038	REF-007;REF-015;REF-017;REF-022;REF-038				fully_available
+LE059	IN_ANTI_SPP1	X_SPP1_LUMEN_FREE	inhibition	retired		5	0	REF-007;REF-015;REF-017;REF-022;REF-038	REF-007;REF-015;REF-017;REF-022;REF-038				fully_available
+LE060	E_RECEPTIVE_SURFACE	X_ADHESION_ROUTE_SPP1	activation	active	phenotype_definition	5	0	REF-007;REF-015;REF-017;REF-022;REF-038	REF-007;REF-015;REF-017;REF-022;REF-038				fully_available
+LE061	X_SPP1_LUMEN_FREE	X_ADHESION_ROUTE_SPP1	activation	active	biological_regulatory	5	0	REF-007;REF-015;REF-017;REF-022;REF-038	REF-007;REF-015;REF-017;REF-022;REF-038				fully_available
+LE062	E_ITGAVB3_5	X_ADHESION_ROUTE_SPP1	activation	active	biological_regulatory	5	1	REF-007;REF-015;REF-017;REF-022;REF-038	REF-007;REF-015;REF-017;REF-022;REF-038				fully_available
+LE063	X_INTERFACE_SPP1_RELAY	X_ADHESION_ROUTE_SPP1	activation	active	structural_relay	5	0	REF-007;REF-015;REF-017;REF-022;REF-038	REF-007;REF-015;REF-017;REF-022;REF-038				fully_available
+LE064	E_RECEPTIVE_SURFACE	X_ADHESION_ROUTE_REDUNDANT	activation	active	phenotype_definition	1	0	REF-008	REF-008				fully_available
+LE065	E_CD98_CD9	X_ADHESION_ROUTE_REDUNDANT	activation	active	biological_regulatory	1	1	REF-008	REF-008				fully_available
+LE066	E_CDH1_APICAL	X_ADHESION_ROUTE_REDUNDANT	activation	active	biological_regulatory	1	1	REF-019	REF-019				fully_available
+LE067	E_ANXA2_ACTIN	X_ADHESION_ROUTE_REDUNDANT	activation	active	biological_regulatory	1	0	REF-009	REF-009				fully_available
+LE068	E_HBEGF	X_ADHESION_ROUTE_REDUNDANT	activation	active	biological_regulatory	2	1	REF-006;REF-007	REF-006;REF-007				fully_available
+LE069	E_DAG1_CLEAVED	X_ADHESION_ROUTE_REDUNDANT	activation	active	biological_regulatory	2	0	REF-010;REF-011	REF-010;REF-011				fully_available
+LE070	E_MUC1_SLEX	X_ADHESION_ROUTE_REDUNDANT	activation	active	biological_regulatory	3	0	REF-012;REF-013;REF-014	REF-012;REF-013;REF-014				fully_available
+LE071	X_INTERFACE_REDUNDANT_RELAY	X_ADHESION_ROUTE_REDUNDANT	activation	active	structural_relay	1	0	REF-008	REF-008				fully_available
+LE072	E_PODXL	X_ANTIADHESIVE_ROUTE	activation	active	biological_regulatory	3	1	REF-012;REF-013;REF-014	REF-012;REF-013;REF-014				fully_available
+LE073	E_DAG1_FULL	X_ANTIADHESIVE_ROUTE	activation	active	biological_regulatory	2	0	REF-010;REF-011	REF-010;REF-011				fully_available
+LE074	E_MUC1_BARRIER	X_ANTIADHESIVE_ROUTE	activation	active	biological_regulatory	3	0	REF-012;REF-013;REF-014	REF-012;REF-013;REF-014				fully_available
+LE075	X_INTERFACE_ANTIADHESIVE_RELAY	X_ANTIADHESIVE_ROUTE	activation	active	structural_relay	4	0	REF-011;REF-012;REF-013;REF-014	REF-011;REF-012;REF-013;REF-014				fully_available
+LE076	E_RECEPTIVE_SURFACE	OUT_EPITHELIAL_RECEPTIVE	activation	active	phenotype_definition	8	0	REF-023;REF-024;REF-030;REF-031;REF-032;REF-033;REF-036;REF-038	REF-023;REF-024;REF-030;REF-031;REF-032;REF-033;REF-036;REF-038				fully_available
+LE077	E_PAEP	OUT_EPITHELIAL_RECEPTIVE	activation	retired		1	0					SOFIA-EPI-001	in_house_evidence_only
+LE078	S_DECIDUALIZED	OUT_STROMAL_DECIDUALIZED	activation	active	phenotype_definition	2	0	REF-016;REF-017	REF-016;REF-017				fully_available
+LE079	S_PRL	OUT_STROMAL_DECIDUALIZED	activation	retired		1	0					SOFIA-STR-001	in_house_evidence_only
+LE080	S_IGFBP1	OUT_STROMAL_DECIDUALIZED	activation	retired		1	0					SOFIA-STR-001	in_house_evidence_only
+LE081	E_RECEPTIVE_SURFACE	OUT_MATERNAL_ADHESION_COMPETENCE	activation	retired		8	0	REF-023;REF-024;REF-030;REF-031;REF-032;REF-033;REF-036;REF-038	REF-023;REF-024;REF-030;REF-031;REF-032;REF-033;REF-036;REF-038				fully_available
+LE082	S_DECIDUALIZED	OUT_MATERNAL_ADHESION_COMPETENCE	activation	active	phenotype_definition	2	0	REF-016;REF-017	REF-016;REF-017				fully_available
+LE083	X_MECHANICAL_PERMISSIVE_ECM	OUT_MATERNAL_ADHESION_COMPETENCE	activation	active	phenotype_definition	2	0	REF-018;REF-035	REF-018;REF-035				fully_available
+LE084	X_ADHESION_ROUTE_SPP1	OUT_MATERNAL_ADHESION_COMPETENCE	activation	active	phenotype_definition	5	0	REF-007;REF-015;REF-017;REF-022;REF-038	REF-007;REF-015;REF-017;REF-022;REF-038				fully_available
+LE085	X_ADHESION_ROUTE_REDUNDANT	OUT_MATERNAL_ADHESION_COMPETENCE	activation	active	phenotype_definition	1	0	REF-008	REF-008				fully_available
+LE086	X_ANTIADHESIVE_ROUTE	OUT_MATERNAL_ADHESION_COMPETENCE	inhibition	active	phenotype_definition	4	0	REF-011;REF-012;REF-013;REF-014	REF-011;REF-012;REF-013;REF-014				fully_available
+LE087	OUT_MATERNAL_ADHESION_COMPETENCE	OUT_STABLE_ADHESION	activation	active	phenotype_definition	1	0					SOFIA-ADH-002	in_house_evidence_only
+LE088	IN_EMBRYO_PRESENT	OUT_STABLE_ADHESION	activation	active	external_input	1	0					SOFIA-ADH-001	in_house_evidence_only
+LE089	IN_TROPHECTODERM_COMPETENT	OUT_STABLE_ADHESION	activation	active	external_input	1	0					SOFIA-ADH-001	in_house_evidence_only
+LE090	IN_EMBRYO_CONTACT	OUT_STABLE_ADHESION	activation	active	external_input	1	0	REF-019	REF-019				fully_available
+LE091	E_KLF12_HIGH	E_LIF	inhibition	active	biological_regulatory	1	1	REF-037	REF-037				fully_available
+LE092	S_HAND2	S_FGF_MITOGENIC	inhibition	active	biological_regulatory	6	3	REF-002;REF-025;REF-027;REF-028;REF-029;REF-062	REF-002;REF-025;REF-027;REF-028;REF-029;REF-062				fully_available
+LE093	S_FGF_MITOGENIC	E_ESTROGENIC_PROLIFERATION	activation	active	biological_regulatory	5	1	REF-002;REF-025;REF-027;REF-028;REF-029	REF-002;REF-025;REF-027;REF-028;REF-029				fully_available
+LE094	S_HAND2	E_ESTROGENIC_PROLIFERATION	inhibition	retired		5	1	REF-002;REF-025;REF-027;REF-028;REF-029	REF-002;REF-025;REF-027;REF-028;REF-029				fully_available
+LE095	E_ESTROGENIC_PROLIFERATION	E_RECEPTIVE_SURFACE	inhibition	active	biological_regulatory	6	0	REF-002;REF-025;REF-026;REF-027;REF-028;REF-029	REF-002;REF-025;REF-026;REF-027;REF-028;REF-029				fully_available
+LE096	IN_HAND2_LOSS	S_HAND2	inhibition	retired		6	0	REF-002;REF-025;REF-026;REF-027;REF-028;REF-029	REF-002;REF-025;REF-026;REF-027;REF-028;REF-029				fully_available
+PAR-001	OUT_EPITHELIAL_RECEPTIVE	OUT_MATERNAL_ADHESION_COMPETENCE	activation	active	phenotype_definition	0	0						no_evidence
+PAR-002	E_SECRETORY_STATE	E_ITGAVB3_5	activation	active	biological_regulatory	0	0						no_evidence
+PAR-003	IN_E2	E_ESTROGENIC_PROLIFERATION	activation	active	external_input	0	0						no_evidence
+PAR-004	S_PKA	S_BMP2	activation	active	biological_regulatory	0	0						no_evidence

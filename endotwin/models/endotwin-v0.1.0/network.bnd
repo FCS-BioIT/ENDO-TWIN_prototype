@@ -1,0 +1,115 @@
+// ENDO-TWIN mainline regulatory network, endotwin-v0.1.0
+//
+// Derived from adoc-literature-superset-v0.6.0 (prototype, source commit
+// b1de5f90582f02291789eb72753fa5ab1f2d8c88). The embryo-adhesion and receptivity
+// module is not carried; it stays executable in models/superset/ as legacy work.
+// Every node's lineage and every rule change is recorded in lineage.tsv, and every
+// dependency's evidence class in edges.tsv. This file is the executable source of
+// truth: the default rule of every node is the one written here, and the
+// alternative hypotheses in rule_variants.tsv are applied in memory.
+//
+// Layers: IN_ experimental inputs | E_ epithelial intracellular | S_ stromal
+// intracellular | E_IHH and S_PARACRINE_MITOGEN are the intercompartmental
+// signals (interface.tsv) | OUT_ the three functional outputs of the grant.
+//
+// MaBoSS time is dimensionless. Probabilities are simulated trajectory
+// frequencies under stated rules, unit transition rates and initial conditions,
+// not concentrations and not clinical probabilities.
+
+// ---- Experimental inputs -------------------------------------------------
+
+Node IN_E2 {
+  logic = IN_E2;
+}
+
+// Progesterone (hormone-only regimen) or MPA (published supplemented regimen).
+Node IN_PROGESTIN {
+  logic = IN_PROGESTIN;
+}
+
+Node IN_cAMP {
+  logic = IN_cAMP;
+}
+
+// Declared because it is part of the published ADOC regimen. No rule reads it:
+// no evidence establishes which compartment a tankyrase inhibitor reaches in the
+// chip or what it does there (open question OQ-01, docs/model_construction.md).
+Node IN_XAV939 {
+  logic = IN_XAV939;
+}
+
+// BMP type I receptor inhibition (WP1 Task 1.4). Compound not fixed here.
+Node IN_BMPR_INHIBITOR {
+  logic = IN_BMPR_INHIBITOR;
+}
+
+// IL-1beta exposure (G2 inflammation model, WP3/WP4).
+Node IN_IL1B {
+  logic = IN_IL1B;
+}
+
+// ---- Epithelial intracellular ---------------------------------------------
+
+Node E_PGR {
+  logic = IN_PROGESTIN;
+}
+
+Node E_IHH {
+  logic = E_PGR;
+}
+
+// ---- Stromal intracellular -------------------------------------------------
+
+Node S_PGR {
+  logic = IN_PROGESTIN;
+}
+
+Node S_PKA {
+  logic = IN_cAMP;
+}
+
+Node S_NR2F2 {
+  logic = E_IHH and S_PGR;
+}
+
+// BMP2 ligand expression (not pathway activity).
+Node S_BMP2 {
+  logic = (S_PGR and S_PKA) or S_NR2F2;
+}
+
+// BMP receptor / SMAD1/5/8 pathway activity; readout pSMAD1/5/8.
+Node S_BMP_SMAD {
+  logic = S_BMP2 and not IN_BMPR_INHIBITOR;
+}
+
+Node S_HAND2 {
+  logic = S_BMP_SMAD or S_PGR;
+}
+
+// Stromal paracrine mitogenic output acting on the epithelium. Ligand identity
+// unresolved (candidates include FGF family members; see lineage.tsv).
+Node S_PARACRINE_MITOGEN {
+  logic = not S_HAND2;
+}
+
+// IL-1 receptor signalling activity in stroma; downstream kinase route unresolved.
+Node S_IL1_SIGNALING {
+  logic = IN_IL1B;
+}
+
+// ---- Functional outputs (grant readouts) -----------------------------------
+
+// Epithelial secretory differentiation; readout PAEP.
+Node OUT_EPITHELIAL_SECRETORY {
+  logic = IN_E2 and E_PGR;
+}
+
+// Epithelial proliferation; readouts Ki67, EdU.
+Node OUT_EPITHELIAL_PROLIFERATION {
+  logic = IN_E2 and S_PARACRINE_MITOGEN;
+}
+
+// Stromal decidualisation; readouts PRL, IGFBP-1.
+Node OUT_STROMAL_DECIDUALIZATION {
+  logic = S_PGR and S_PKA and S_BMP_SMAD and not S_IL1_SIGNALING;
+}

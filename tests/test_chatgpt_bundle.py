@@ -35,9 +35,9 @@ class ChatGPTBundleTest(unittest.TestCase):
         )
         for path, content in {
             "README.md": "# Synthetic DT_ADOC\n",
-            "IMPLEMENTATION_PLAN.md": "# Plan\n",
-            "IMPLEMENTATION_STATUS.md": "# Status\n",
-            "REQUIREMENTS_COVERAGE.tsv": "requirement_id\tstatus\nREQ-001\tpassed\n",
+            "docs/legacy/IMPLEMENTATION_PLAN.md": "# Plan\n",
+            "docs/legacy/IMPLEMENTATION_STATUS.md": "# Status\n",
+            "docs/legacy/REQUIREMENTS_COVERAGE.tsv": "requirement_id\tstatus\nREQ-001\tpassed\n",
             "THIRD_PARTY_NOTICES.md": "# Notices\n",
             "pixi.toml": '[workspace]\nname = "synthetic"\n',
             "pixi.lock": "version: 6\n",
@@ -163,9 +163,9 @@ class ChatGPTBundleTest(unittest.TestCase):
                 )
             )
         self.assertIn("src/run.py", names)
-        self.assertIn("IMPLEMENTATION_PLAN.md", names)
-        self.assertIn("IMPLEMENTATION_STATUS.md", names)
-        self.assertIn("REQUIREMENTS_COVERAGE.tsv", names)
+        self.assertIn("docs/legacy/IMPLEMENTATION_PLAN.md", names)
+        self.assertIn("docs/legacy/IMPLEMENTATION_STATUS.md", names)
+        self.assertIn("docs/legacy/REQUIREMENTS_COVERAGE.tsv", names)
         self.assertIn("THIRD_PARTY_NOTICES.md", names)
         self.assertIn("pixi.lock", names)
         self.assertIn("docs/method.md", names)

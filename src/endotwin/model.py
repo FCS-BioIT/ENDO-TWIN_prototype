@@ -269,3 +269,75 @@ def sha256_text(text: str) -> str:
 
 def sha256_file(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+# -- compartment decomposition ----------------------------------------------
+
+
+@dataclass(frozen=True)
+class CompartmentNetwork:
+    compartment: str
+    rules: dict[str, str]
+    #: Inputs that come from the medium (experimental conditions).
+    medium_inputs: tuple[str, ...]
+    #: Inputs that stand for a signal produced by the other compartment.
+    received_inputs: dict[str, str]
+    #: Nodes of this compartment that another compartment reads.
+    exported_signals: tuple[str, ...]
+
+
+def split_compartments(
+    model: Model, selection: Mapping[str, str] | None = None
+) -> dict[str, CompartmentNetwork]:
+    """Split the integrated network into stand-alone per-compartment networks.
+
+    Every dependency on a node of the other compartment is replaced by a received
+    input ``RX_<node>``; medium inputs are copied into each compartment that reads
+    them. Feeding each compartment's exported signals into the other's received
+    inputs reproduces the integrated network exactly (tested in
+    ``tests/endotwin/test_interface.py``). This is the decomposition a per-cell
+    coupling would use; nothing here assumes physical time or space.
+    """
+    rules = model.rules_for(selection)
+    out: dict[str, CompartmentNetwork] = {}
+    exported: dict[str, set[str]] = {c: set() for c in COMPARTMENTS}
+    for compartment in COMPARTMENTS:
+        own = [n for n in rules if model.compartment(n) == compartment]
+        medium: set[str] = set()
+        received: dict[str, str] = {}
+        new_rules: dict[str, str] = {}
+        for node in own:
+            logic = rules[node]
+            for ref in sorted(referenced_nodes(logic)):
+                ref_compartment = model.compartment(ref)
+                if ref_compartment == compartment or ref == node:
+                    continue
+                if ref_compartment == "medium":
+                    medium.add(ref)
+                    continue
+                rx = RECEIVED_PREFIX + ref
+                received[rx] = ref
+                exported[ref_compartment].add(ref)
+                logic = re.sub(rf"\b{re.escape(ref)}\b", rx, logic)
+            new_rules[node] = logic
+        ordered_inputs = [n for n in rules if n in medium]
+        full = {n: n for n in ordered_inputs}
+        full.update({rx: rx for rx in received})
+        full.update(new_rules)
+        out[compartment] = CompartmentNetwork(
+            compartment=compartment,
+            rules=full,
+            medium_inputs=tuple(ordered_inputs),
+            received_inputs=received,
+            exported_signals=(),
+        )
+    return {
+        c: CompartmentNetwork(
+            compartment=net.compartment,
+            rules=net.rules,
+            medium_inputs=net.medium_inputs,
+            received_inputs=net.received_inputs,
+            exported_signals=tuple(n for n in rules if n in exported[c]),
+        )
+        for c, net in out.items()
+    }

@@ -64,6 +64,9 @@ DEFAULT_TIMEOUT_S = 7200
 STOP_GRACE_S = 10
 #: Skips that depend only on what this checkout holds, never on code. Each is
 #: accepted only with its exact reason, and is named in the summary.
+#: Declared skips of checks that read the DT-ADOC Git history, which the
+#: history-free ENDO-TWIN repository does not carry (tests/unit/source_history.py).
+HISTORY_SKIP_PREFIX = "requires the prototype's source Git history"
 ENVIRONMENT_SKIPS = {
     "unit.test_v052_paep_hand2.EvidenceRecordTest.test_every_cited_pdf_is_the_one_hashed": (
         "cited PDF(s) not in this checkout"
@@ -291,7 +294,7 @@ def reconcile(
                 status == "skip"
                 and ENVIRONMENT_SKIPS.get(test_id)
                 and ENVIRONMENT_SKIPS[test_id] in detail
-            ):
+            ) or (status == "skip" and HISTORY_SKIP_PREFIX in detail):
                 accepted.append(f"{test_id} ({detail})")
                 continue
             problems.append(f"worker {worker}: {test_id} {status}: {detail[:300]}")

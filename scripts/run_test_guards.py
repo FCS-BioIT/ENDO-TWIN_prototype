@@ -45,6 +45,10 @@ import time
 import unittest
 from pathlib import Path
 
+#: Reason prefix of the declared history-bound skips (tests/unit/source_history.py).
+HISTORY_SKIP_PREFIX = "requires the prototype's source Git history"
+#: Guard classes whose module skipped at import for that reason.
+HISTORY_SKIPPED_GUARDS: list[str] = []
 ROOT = Path(__file__).resolve().parents[1]
 GUARDS = ROOT / "scripts" / "test_guards.txt"
 
@@ -174,7 +178,18 @@ def load(names: list[str], excluded: list[str] = ()) -> unittest.TestSuite:
     suite = unittest.TestSuite()
     unmatched = set(excluded)
     for name in names:
-        loaded = loader.loadTestsFromName(name)
+        try:
+            loaded = loader.loadTestsFromName(name)
+        except unittest.SkipTest as skip:
+            # A whole guard module that reads the DT-ADOC Git history skips at
+            # import in the history-free ENDO-TWIN repository. That is declared
+            # and reported; any other skip still refuses the run.
+            if not str(skip).startswith(HISTORY_SKIP_PREFIX):
+                raise SystemExit(f"guard {name!r} skipped at import: {skip}") from None
+            HISTORY_SKIPPED_GUARDS.append(name)
+            module = name.rsplit(".", 1)[0]
+            unmatched -= {t for t in unmatched if t.startswith(module + ".")}
+            continue
         if loader.errors or loaded.countTestCases() == 0:
             detail = "\n".join(loader.errors) or "it contains no tests"
             raise SystemExit(f"guard {name!r} did not load: {detail}")
@@ -214,10 +229,19 @@ def main(guards: Path | None = None) -> int:
         problems.append(
             f"{len(result.failures)} failure(s), {len(result.errors)} error(s)"
         )
-    if result.skipped:
-        problems.append(
-            f"{len(result.skipped)} guard(s) skipped: "
-            + ", ".join(test.id() for test, _ in result.skipped)
+    # A guard that reads the DT-ADOC Git history is skipped, with this exact
+    # reason prefix, in the history-free ENDO-TWIN repository
+    # (tests/unit/source_history.py). That skip is declared and reported; any
+    # other skip is still a failure.
+    history_skips = [t.id() for t, why in result.skipped if why.startswith(HISTORY_SKIP_PREFIX)]
+    other_skips = [t.id() for t, why in result.skipped if not why.startswith(HISTORY_SKIP_PREFIX)]
+    if other_skips:
+        problems.append(f"{len(other_skips)} guard(s) skipped: " + ", ".join(other_skips))
+    history_skips = HISTORY_SKIPPED_GUARDS + history_skips
+    if history_skips:
+        print(
+            f"{len(history_skips)} history-bound guard(s) skipped by declaration "
+            "(no DT-ADOC source history in this repository): " + ", ".join(history_skips)
         )
     if after != before:
         changed = sorted(

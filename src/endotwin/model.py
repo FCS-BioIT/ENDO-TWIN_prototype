@@ -217,3 +217,55 @@ def dependencies(rules: Mapping[str, str]) -> dict[tuple[str, str], str]:
 
 def referenced_nodes(logic: str) -> set[str]:
     return {t for t in _TOKEN.findall(logic) if t not in _KEYWORDS}
+
+
+# -- MaBoSS rendering -------------------------------------------------------
+
+
+def render_bnd(
+    rules: Mapping[str, str],
+    *,
+    rates: Mapping[str, tuple[float, float]] | None = None,
+    forced: Mapping[str, int] | None = None,
+    header: str = "",
+) -> str:
+    """MaBoSS network text for ``rules``.
+
+    ``rates`` scales a node's activation and inactivation rates (default 1, the
+    MaBoSS default). ``forced`` pins a node: 0 means it can only switch OFF (a
+    knockdown or neutralisation), 1 that it can only switch ON. A forced node
+    reaches its pinned value at unit rate, so the intervention has a dynamic
+    onset rather than an instantaneous jump.
+    """
+    rates = dict(rates or {})
+    forced = dict(forced or {})
+    unknown = (set(rates) | set(forced)) - set(rules)
+    if unknown:
+        raise ModelError(f"rate or intervention on unknown nodes: {sorted(unknown)}")
+    lines = [f"// {line}" for line in header.splitlines()] if header else []
+    for node, logic in rules.items():
+        lines.append(f"Node {node} {{")
+        lines.append(f"  logic = {logic};")
+        if node in forced:
+            state = forced[node]
+            if state not in (0, 1):
+                raise ModelError(f"forced state for {node} must be 0 or 1")
+            lines.append(f"  rate_up = {1.0 if state else 0.0};")
+            lines.append(f"  rate_down = {0.0 if state else 1.0};")
+        elif node in rates:
+            up, down = rates[node]
+            if up <= 0 or down <= 0:
+                raise ModelError(f"rates for {node} must be positive")
+            lines.append(f"  rate_up = @logic ? {up!r} : 0.0;")
+            lines.append(f"  rate_down = @logic ? 0.0 : {down!r};")
+        lines.append("}")
+        lines.append("")
+    return "\n".join(lines)
+
+
+def sha256_text(text: str) -> str:
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def sha256_file(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()

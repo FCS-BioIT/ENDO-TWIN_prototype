@@ -169,6 +169,13 @@ class EndpointFigureTest(unittest.TestCase):
         # carrying the same tree is found on the shared refs. Requiring tree
         # identity ties the ancestry claim to the exact bytes under review.
         commit = self.settings["provenance"]["git_commit"]
+        from tests.unit.source_history import REASON_PREFIX, commit_available
+
+        if not commit_available(commit):
+            self.skipTest(
+                f"{REASON_PREFIX}: recorded commit {commit[:12]} is absent from this "
+                "history-free repository (docs/ORIGIN.md)"
+            )
 
         def git(*args: str) -> subprocess.CompletedProcess:
             return subprocess.run(

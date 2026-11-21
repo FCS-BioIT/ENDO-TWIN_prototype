@@ -38,6 +38,12 @@ import unittest
 from pathlib import Path
 from unittest import mock
 
+# History-bound: replays and audits read frozen commits of the DT-ADOC history,
+# which ENDO-TWIN does not carry (tests/unit/source_history.py).
+from tests.unit.source_history import skip_module_unless_available
+
+skip_module_unless_available("97f88f55ce62e2adca23f631de3ad8e1270ad3e6")
+
 from dt_adoc import closure_replay
 from dt_adoc.experiments import phase1b_closure as p1b
 from dt_adoc.reporting.identifiability import repo_root

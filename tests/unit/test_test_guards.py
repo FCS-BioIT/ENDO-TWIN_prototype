@@ -74,7 +74,14 @@ class TheGuardListResolves(unittest.TestCase):
             ],
         )
         full = G.load(G.guard_names()).countTestCases()
-        self.assertEqual(G.load(G.guard_names(), excluded).countTestCases(), full - 2)
+        # Without the DT-ADOC Git history the closure-replay module skips at
+        # import (tests/unit/source_history.py), so its exclusion drops nothing.
+        from tests.unit.source_history import missing
+
+        dropped = 1 if missing("97f88f55ce62e2adca23f631de3ad8e1270ad3e6") else 2
+        self.assertEqual(
+            G.load(G.guard_names(), excluded).countTestCases(), full - dropped
+        )
 
     def test_a_stale_exclusion_is_refused(self) -> None:
         name = "unit.test_test_guards.TheGuardListResolves"

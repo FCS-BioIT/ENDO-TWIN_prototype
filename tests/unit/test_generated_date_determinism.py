@@ -239,6 +239,10 @@ def _stamp(path: Path) -> tuple[bytes, int]:
     return path.read_bytes(), path.stat().st_mtime_ns
 
 
+from tests.unit.source_history import missing
+from tests.unit.source_history import reason as history_reason
+
+
 class ClockFrozenRegenerationTest(unittest.TestCase):
     """Two runs, a century apart, must write the same bytes."""
 
@@ -250,6 +254,12 @@ class ClockFrozenRegenerationTest(unittest.TestCase):
         }
         for generator in GENERATORS:
             with self.subTest(task=generator.task):
+                if generator.task in closure_replay.CLOSED_PHASE_BUILDERS:
+                    # The closed-phase replay view is built from a frozen commit
+                    # of the DT-ADOC history (tests/unit/source_history.py).
+                    absent = missing(closure_replay.PHASE2B_CLOSURE_COMMIT)
+                    if absent:
+                        self.skipTest(history_reason(*absent))
                 produced = []
                 for moment, zone in CLOCKS:
                     with tempfile.TemporaryDirectory() as tmp:

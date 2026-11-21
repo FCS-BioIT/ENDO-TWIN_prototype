@@ -74,6 +74,7 @@ def _evidence_root_unavailable() -> str:
     commit = _git("cat-file", "-e", f"{EVIDENCE_ROOT}^{{commit}}")
     if commit is None or commit.returncode:
         return (
+            "requires the prototype's source Git history: "
             f"evidence-root commit {EVIDENCE_ROOT} is not available in this clone "
             "(shallow history or a synthetic snapshot); blob identity unchecked"
         )

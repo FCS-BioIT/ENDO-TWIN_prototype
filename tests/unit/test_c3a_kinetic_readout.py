@@ -38,6 +38,18 @@ PREREG = (ROOT / M.PREREGISTRATION).read_text(encoding="utf-8")
 ADDENDUM = (ROOT / M.ADDENDUM).read_text(encoding="utf-8")
 
 
+# History-bound classes read the pre-registration commits or HEAD~1 of the
+# DT-ADOC history, which ENDO-TWIN does not carry (tests/unit/source_history.py).
+from tests.unit.source_history import (
+    skip_unless_available,
+    skip_unless_parent_commit,
+)
+
+_HISTORY_PREREG = skip_unless_available(M.PREREG_COMMIT, M.ADDENDUM_COMMIT)
+_HISTORY_PARENT = skip_unless_parent_commit()
+
+
+@_HISTORY_PREREG
 class ConstantsMatchThePreregistration(unittest.TestCase):
     def test_quantiles_are_the_frozen_values_and_recompute(self) -> None:
         from scipy.stats import norm, t
@@ -310,6 +322,7 @@ class TheConstructionCheckRefuses(unittest.TestCase):
             self.assertFalse(all("IN_X" in line for line in (*removed, *added)))
 
 
+@_HISTORY_PREREG
 class TheBindingRefuses(unittest.TestCase):
     def test_bound_paths_cover_the_model_protocols_and_preregistration(self) -> None:
         paths = M.bound_paths(ROOT)
@@ -775,6 +788,7 @@ class DurableReservationPath(unittest.TestCase):
         self.assertEqual(synced, [(root, "dir"), (root / "a", "dir")])
 
 
+@_HISTORY_PREREG
 class CompleteBinding(unittest.TestCase):
     INDIRECT = "src/dt_adoc/maboss_adapter.py"
 
@@ -961,6 +975,7 @@ def _build_canonical(root: Path) -> None:
         )
 
 
+@_HISTORY_PREREG
 class _Canonical(unittest.TestCase):
     """Each test gets a fresh copy of one canonical result built once."""
 
@@ -1094,6 +1109,8 @@ class EveryFieldIsValidated(_Canonical):
                 self.assertTrue(self.problems(manifest), field)
 
 
+@_HISTORY_PREREG
+@_HISTORY_PARENT
 class BindingResolvesThroughGit(_Canonical):
     def _with_binding(self, **changes) -> list[str]:
         manifest = self.manifest()
@@ -1394,6 +1411,8 @@ class StageOneSchemasAreClosed(_Canonical):
                 (self.root / path).write_text(original, encoding="utf-8")
 
 
+@_HISTORY_PREREG
+@_HISTORY_PARENT
 class GeneratorInventoryIsImmutable(unittest.TestCase):
     """B11: validating an old run uses nothing from the current checkout."""
 

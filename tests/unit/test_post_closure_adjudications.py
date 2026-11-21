@@ -34,6 +34,10 @@ ADDENDA = [ROOT / p for p in ex.POST_CLOSURE_ADJUDICATION_PATHS]
 #: The commit that closed Phase 2B, from dt_adoc.closure_replay.
 CLOSURE_COMMIT = "97f88f55ce62e2adca23f631de3ad8e1270ad3e6"
 
+from tests.unit.source_history import skip_module_unless_available
+
+skip_module_unless_available(CLOSURE_COMMIT)
+
 
 def _git(*args: str) -> bytes:
     return subprocess.run(

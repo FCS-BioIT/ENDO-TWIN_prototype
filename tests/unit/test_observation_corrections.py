@@ -42,7 +42,13 @@ def _tsv(path: Path) -> list[dict[str, str]]:
         return list(csv.DictReader(handle, delimiter="\t"))
 
 
+# This check compares the live tree with the Phase 2B closure commit of the
+# DT-ADOC history, which ENDO-TWIN does not carry (tests/unit/source_history.py).
+from tests.unit.source_history import skip_unless_available
+
+
 class CorrectionLayer(unittest.TestCase):
+    @skip_unless_available(R.PHASE2B_CLOSURE_COMMIT)
     def test_corrections_file_is_a_declared_post_closure_addition(self) -> None:
         self.assertIn(str(O.CORRECTIONS), R.POST_CLOSURE_FILES)
         self.assertEqual(R.undeclared_drift(ROOT), [])

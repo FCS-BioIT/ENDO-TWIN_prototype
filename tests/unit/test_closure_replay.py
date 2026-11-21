@@ -29,6 +29,12 @@ SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
+# History-bound: replays and audits read frozen commits of the DT-ADOC history,
+# which ENDO-TWIN does not carry (tests/unit/source_history.py).
+from tests.unit.source_history import skip_module_unless_available
+
+skip_module_unless_available("97f88f55ce62e2adca23f631de3ad8e1270ad3e6")
+
 from dt_adoc import closure_replay as R
 from dt_adoc.experiments import phase1b_closure as p1b
 from dt_adoc.personalization.phase2b import audit as p2b

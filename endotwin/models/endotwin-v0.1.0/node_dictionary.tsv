@@ -1,0 +1,20 @@
+node_id	compartment	layer	entity_type	label	biological_meaning	readouts	v060_lineage	lineage_change
+IN_E2	medium	experimental_input	experimental_condition	Oestradiol	E2 present in the culture medium (published regimen: 10 nM).		IN_E2	unchanged
+IN_PROGESTIN	medium	experimental_input	experimental_condition	Progestin	Progesterone (hormone-only regimen) or MPA (published regimen: 1 uM) present.		IN_PROGESTIN	unchanged
+IN_cAMP	medium	experimental_input	experimental_condition	cAMP analogue	8-Br-cAMP present (published regimen: 250 uM).		IN_cAMP	unchanged
+IN_XAV939	medium	experimental_input	experimental_condition	XAV939	Tankyrase inhibitor present (published regimen: 10 uM). Read by no rule (OQ-01).		IN_XAV939	unchanged
+IN_BMPR_INHIBITOR	medium	experimental_input	experimental_condition	BMP receptor inhibitor	BMP type I receptor inhibitor present (WP1 Task 1.4; compound not fixed).		none	new
+IN_IL1B	medium	experimental_input	experimental_condition	IL-1beta	IL-1beta present (G2 inflammation model; dose not fixed).		none	new
+E_PGR	epithelium	epithelial_intracellular	protein_activity	Epithelial PGR activity	Ligand-activated progesterone receptor signalling in epithelial cells.		E_PGR	unchanged
+E_IHH	epithelium	intercompartmental_signal	ligand_expression	Epithelial IHH	Indian hedgehog expressed by epithelium and acting on stroma.		E_IHH	unchanged
+S_PGR	stroma	stromal_intracellular	protein_activity	Stromal PGR activity	Ligand-activated progesterone receptor signalling in stromal cells.		S_PGR	unchanged
+S_PKA	stroma	stromal_intracellular	protein_activity	Stromal cAMP/PKA	cAMP-dependent protein kinase signalling in stromal cells.		S_PKA	unchanged
+S_NR2F2	stroma	stromal_intracellular	transcription_factor_activity	Stromal COUP-TFII	NR2F2 response downstream of Hedgehog reception and PGR.		S_NR2F2	unchanged
+S_BMP2	stroma	stromal_intracellular	ligand_expression	Stromal BMP2 expression	BMP2 ligand expression (not pathway activity).		S_BMP2	unchanged
+S_BMP_SMAD	stroma	stromal_intracellular	protein_activity	BMP receptor/SMAD1/5/8 activity	BMP receptor signalling and SMAD1/5/8 phosphorylation.	pSMAD1/5/8	none (prototype candidate S_BMP_SMAD, WAIT_FOR_EXPERIMENT)	new
+S_HAND2	stroma	stromal_intracellular	transcription_factor_activity	Stromal HAND2	HAND2 activity in stromal cells.		S_HAND2	modified
+S_PARACRINE_MITOGEN	stroma	intercompartmental_signal	paracrine_signal	Stromal paracrine mitogen	Stromal mitogenic signal acting on epithelium; ligand identity unresolved (FGF family candidates).		S_FGF_MITOGENIC	renamed
+S_IL1_SIGNALING	stroma	stromal_intracellular	protein_activity	Stromal IL-1 receptor signalling	IL-1 receptor signalling activity; ERK1/2, JNK and NF-kappaB routes not distinguished.		none	new
+OUT_EPITHELIAL_SECRETORY	epithelium	functional_output	cell_state_program	Epithelial secretory differentiation	Secretory differentiation program of the epithelium.	PAEP	E_SECRETORY_STATE;E_PAEP	merged_and_renamed
+OUT_EPITHELIAL_PROLIFERATION	epithelium	functional_output	cell_state_program	Epithelial proliferation	E2-driven epithelial proliferation.	Ki67;EdU	E_ESTROGENIC_PROLIFERATION	renamed
+OUT_STROMAL_DECIDUALIZATION	stroma	functional_output	cell_state_program	Stromal decidualization	Decidual differentiation program of the stroma.	PRL;IGFBP-1	S_DECIDUALIZED;S_PRL;S_IGFBP1;OUT_STROMAL_DECIDUALIZED	merged_and_renamed

@@ -1,0 +1,41 @@
+model_id = "endotwin"
+model_version = "endotwin-v0.1.0"
+status = "mainline_initial_hypothesis_family"
+created_on = "2026-11-22"
+derived_from_model = "adoc-literature-superset-v0.6.0"
+derived_from_repository = "https://github.com/fransua-fcs/the private prototype repository"
+derived_from_commit = "b1de5f90582f02291789eb72753fa5ab1f2d8c88"
+calibrated = false
+biologically_validated = false
+physical_time_mapping = false
+transition_rates = "MaBoSS defaults (rate_up = rate_down = 1 for every node); not estimated"
+
+[files]
+network = "network.bnd"
+config = "baseline.cfg"
+node_dictionary = "node_dictionary.tsv"
+edges = "edges.tsv"
+rule_variants = "rule_variants.tsv"
+lineage = "lineage.tsv"
+interface = "interface.tsv"
+references = "../../evidence/references.tsv"
+
+[scope]
+in_scope = [
+  "hormone-responsive epithelial-stromal regulation in the ADOC chip",
+  "stromal decidualisation (PRL, IGFBP-1)",
+  "epithelial secretory differentiation (PAEP)",
+  "epithelial proliferation (Ki67, EdU)",
+  "BMP pathway activity (pSMAD1/5/8)",
+  "IL-1beta perturbation (provisional, to be revised with G2 data)",
+]
+out_of_scope = [
+  "embryo adhesion and receptivity (legacy prototype models/superset)",
+  "a complete menstrual cycle, shedding or repair",
+  "patient-specific models",
+  "spatially resolved multicellular simulation",
+]
+
+[changes_from_v060]
+summary = "Embryo-adhesion and receptivity module not carried; BMP ligand expression separated from receptor/SMAD activity; BMP receptor inhibition and IL-1beta inputs added; stromal FGF node renamed to a ligand-agnostic paracrine mitogen; three functional output nodes named for the grant readouts; PRL/IGFBP-1 and PAEP marker aliases merged into their outputs."
+lineage_table = "lineage.tsv"

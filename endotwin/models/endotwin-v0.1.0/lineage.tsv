@@ -1,0 +1,57 @@
+v060_node	endotwin_node	change	v060_rule	endotwin_rule	rationale
+IN_E2	IN_E2	unchanged	IN_E2	IN_E2	
+IN_PROGESTIN	IN_PROGESTIN	unchanged	IN_PROGESTIN	IN_PROGESTIN	Covers P4 (hormone-only regimen) and MPA (published regimen).
+IN_cAMP	IN_cAMP	unchanged	IN_cAMP	IN_cAMP	
+IN_XAV939	IN_XAV939	unchanged	IN_XAV939	IN_XAV939	Still read by no rule; inherited limitation kept visible (OQ-01).
+E_PGR	E_PGR	unchanged	IN_PROGESTIN	IN_PROGESTIN	
+E_IHH	E_IHH	unchanged	E_PGR	E_PGR	
+S_PGR	S_PGR	unchanged	IN_PROGESTIN	IN_PROGESTIN	Default INF variant; INF_pgr_depletion overrides it.
+S_PKA	S_PKA	unchanged	IN_cAMP	IN_cAMP	
+S_NR2F2	S_NR2F2	unchanged	E_IHH and S_PGR	E_IHH and S_PGR	
+S_BMP2	S_BMP2	unchanged	(S_PGR and S_PKA) or S_NR2F2	(S_PGR and S_PKA) or S_NR2F2	Now explicitly ligand expression.
+S_HAND2	S_HAND2	modified	S_BMP2 or S_PGR	S_BMP_SMAD or S_PGR	BMP2 effect routed through receptor/SMAD activity. Composed function unchanged in the unperturbed network (equals IN_PROGESTIN in both).
+S_FGF_MITOGENIC	S_PARACRINE_MITOGEN	renamed	not S_HAND2	not S_HAND2	Renamed so the node does not assert a ligand identity: human ESC data show only FGF9 is progestin-regulated (ET-007) and the mouse FGF-to-epithelium step is inferred (ET-005).
+S_DECIDUALIZED	OUT_STROMAL_DECIDUALIZATION	merged_and_renamed	S_PGR and S_PKA and S_BMP2	S_PGR and S_PKA and S_BMP_SMAD and not S_IL1_SIGNALING	BMP dependence now goes through pathway activity, so BMP receptor inhibition is representable (Q1); IL-1beta inhibition added (provisional, INF).
+S_PRL	OUT_STROMAL_DECIDUALIZATION	merged	S_DECIDUALIZED	(merged)	PRL was an exact alias of S_DECIDUALIZED in v0.6.0; it is now a readout of the decidualization output (observation_map.tsv). PRL-vs-IGFBP-1 onset order stays unrepresentable (inherited, TI-04).
+S_IGFBP1	OUT_STROMAL_DECIDUALIZATION	merged	S_DECIDUALIZED	(merged)	As S_PRL; IGFBP-1 compartment attribution remains ambiguous (CA-002).
+OUT_STROMAL_DECIDUALIZED	OUT_STROMAL_DECIDUALIZATION	merged	S_DECIDUALIZED	(merged)	Pure alias in v0.6.0.
+E_SECRETORY_STATE	OUT_EPITHELIAL_SECRETORY	merged_and_renamed	IN_E2 and E_PGR	IN_E2 and E_PGR	Functional output node of the grant.
+E_PAEP	OUT_EPITHELIAL_SECRETORY	merged	E_SECRETORY_STATE	(merged)	PAEP was an exact alias of E_SECRETORY_STATE; it is now a readout of the secretory output.
+E_ESTROGENIC_PROLIFERATION	OUT_EPITHELIAL_PROLIFERATION	renamed	IN_E2 and S_FGF_MITOGENIC	IN_E2 and S_PARACRINE_MITOGEN	Functional output node of the grant (default Q2 hypothesis).
+IN_EMBRYO_PRESENT	(legacy only)	not_carried	IN_EMBRYO_PRESENT		Embryo-adhesion module is legacy prototype work (models/superset/).
+IN_TROPHECTODERM_COMPETENT	(legacy only)	not_carried	IN_TROPHECTODERM_COMPETENT		Embryo-adhesion module.
+IN_EMBRYO_CONTACT	(legacy only)	not_carried	IN_EMBRYO_CONTACT		Embryo-adhesion module.
+IN_HCG	(legacy only)	not_carried	IN_HCG		Read by no rule in v0.6.0.
+IN_EMBRYO_CONDITIONED_SIGNAL	(legacy only)	not_carried	IN_EMBRYO_CONDITIONED_SIGNAL		Read by no rule in v0.6.0.
+IN_ER_STRESS_EXCESS	(legacy only)	not_carried	IN_ER_STRESS_EXCESS		Adhesion mechanics module.
+IN_HIGH_ECM_STIFFNESS	(legacy only)	not_carried	IN_HIGH_ECM_STIFFNESS		Adhesion mechanics module.
+E_KLF12_HIGH	(legacy only)	not_carried	E_KLF12_HIGH		Receptivity determinant; no measured prior (Phase 2B closed NO_SUITABLE_REFERENCE).
+E_LIF	(legacy only)	not_carried	E_SECRETORY_STATE and not E_KLF12_HIGH		Receptivity module.
+E_GP130_STAT3	(legacy only)	not_carried	E_LIF		Receptivity module.
+E_PODXL	(legacy only)	not_carried	not E_SECRETORY_STATE		Receptivity barrier module.
+E_PC6	(legacy only)	not_carried	E_SECRETORY_STATE		Receptivity module.
+E_DAG1_FULL	(legacy only)	not_carried	not E_PC6		Receptivity module.
+E_DAG1_CLEAVED	(legacy only)	not_carried	E_PC6		Receptivity module.
+E_MUC1_BARRIER	(legacy only)	not_carried	not E_SECRETORY_STATE		Receptivity barrier module.
+E_MUC1_SLEX	(legacy only)	not_carried	E_SECRETORY_STATE		Receptivity module.
+E_HBEGF	(legacy only)	not_carried	E_SECRETORY_STATE		Receptivity module.
+E_SPP1_EXPR	(legacy only)	not_carried	E_SECRETORY_STATE		Adhesion ligand module.
+E_ITGAVB3_5	(legacy only)	not_carried	E_LIF or E_HBEGF or E_SECRETORY_STATE		Adhesion receptor module.
+E_CD98_CD9	(legacy only)	not_carried	E_GP130_STAT3		Receptivity module.
+E_ANXA2_ACTIN	(legacy only)	not_carried	E_SECRETORY_STATE		Receptivity module.
+E_CDH1_APICAL	(legacy only)	not_carried	IN_EMBRYO_CONTACT		Embryo contact module.
+E_RECEPTIVE_SURFACE	(legacy only)	not_carried	(composite)		Receptivity aggregate.
+S_SPP1	(legacy only)	not_carried	S_DECIDUALIZED		Adhesion ligand module.
+S_TAZ_ECM	(legacy only)	not_carried	S_DECIDUALIZED		Adhesion mechanics module.
+X_MECHANICAL_STRESS_RELAY	(legacy only)	not_carried	X_MECHANICAL_STRESS_RELAY		Typed-in interface prior.
+X_MECHANICAL_PERMISSIVE_ECM	(legacy only)	not_carried	(composite)		Adhesion mechanics module.
+X_SPP1_LUMEN_FREE	(legacy only)	not_carried	E_SPP1_EXPR or S_SPP1		Adhesion ligand pool.
+X_INTERFACE_SPP1_RELAY	(legacy only)	not_carried	X_INTERFACE_SPP1_RELAY		Typed-in interface prior.
+X_INTERFACE_REDUNDANT_RELAY	(legacy only)	not_carried	X_INTERFACE_REDUNDANT_RELAY		Typed-in interface prior.
+X_INTERFACE_ANTIADHESIVE_RELAY	(legacy only)	not_carried	X_INTERFACE_ANTIADHESIVE_RELAY		Typed-in interface prior.
+X_ADHESION_ROUTE_SPP1	(legacy only)	not_carried	(composite)		Adhesion route.
+X_ADHESION_ROUTE_REDUNDANT	(legacy only)	not_carried	(composite)		Adhesion route.
+X_ANTIADHESIVE_ROUTE	(legacy only)	not_carried	(composite)		Adhesion route.
+OUT_EPITHELIAL_RECEPTIVE	(legacy only)	not_carried	E_RECEPTIVE_SURFACE		Receptivity output.
+OUT_MATERNAL_ADHESION_COMPETENCE	(legacy only)	not_carried	(composite)		Adhesion output.
+OUT_STABLE_ADHESION	(legacy only)	not_carried	(composite)		Legacy functional endpoint (embryo adhesion).

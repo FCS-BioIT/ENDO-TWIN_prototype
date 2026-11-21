@@ -1,0 +1,3 @@
+interface_id	signal_node	sending_compartment	receiving_node	receiving_compartment	carrier	received_input_name	notes
+IF-01	E_IHH	epithelium	S_NR2F2	stroma	Indian hedgehog ligand (secreted)	RX_E_IHH	Hedgehog reception (PTCH1/SMO/GLI) is lumped into the receiving rule. In a per-cell or spatial model this edge becomes an extracellular IHH field read by stromal cells.
+IF-02	S_PARACRINE_MITOGEN	stroma	OUT_EPITHELIAL_PROLIFERATION	epithelium	unresolved stromal paracrine mitogen (FGF family candidates)	RX_S_PARACRINE_MITOGEN	The default Q2 hypothesis. The epithelial-autonomous variant removes this edge; the legacy v0.5.1 variant adds a direct HAND2 term that also crosses compartments.

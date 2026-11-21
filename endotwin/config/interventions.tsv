@@ -1,0 +1,3 @@
+intervention_id	kind	node	forced_state	compartment	example_reagents	evidence	notes
+stromal_hand2_knockdown	knockdown	S_HAND2	0	stroma	HAND2 siRNA delivered to the stromal compartment	ET-007 (two HAND2 siRNAs in human ESC); ET-005 (mouse conditional deletion)	Compartment-specific causality requires demonstrated knockdown specificity (Task 1.4). Onset at unit rate.
+paracrine_mitogen_block	neutralisation_or_receptor_blockade	S_PARACRINE_MITOGEN	0	stroma_to_epithelium	to be selected in Task 1.4 (for example a ligand-neutralising antibody or receptor inhibitor for the chosen route)	ET-005 (inferred in mouse)	Represents loss of the stromal mitogenic signal reaching the epithelium. A negative result for one route would not exclude other stromal mechanisms.

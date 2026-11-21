@@ -1,0 +1,119 @@
+# ENDO-TWIN experimental protocols for endotwin-v0.1.0.
+#
+# A condition is an ordered list of phases. Each phase sets the experimental
+# inputs (unlisted inputs are OFF) and may apply interventions from
+# interventions.tsv. Between phases the full joint state distribution of every
+# non-input node is carried forward; the new phase's inputs are then imposed.
+#
+# Time: MaBoSS time is dimensionless. relative_duration is chosen so that each
+# phase reaches its fixed point under unit rates (checked by the convergence
+# diagnostic in every simulation record). It is NOT mapped to hours or days;
+# physical_duration records the experimental protocol for traceability only.
+
+schema_version: 1
+model_version: endotwin-v0.1.0
+default_relative_duration: 20.0
+
+regimens:
+  published_supplemented:
+    source: "Zaragozano et al. 2026, Sci Adv (ET-020); evidence SOFIA-HT-001"
+    note: >-
+      E2, MPA, 8-Br-cAMP and XAV939 are applied together in the differentiation
+      step, so its effects cannot be attributed to ovarian hormones alone.
+  hormone_only:
+    source: "ENDO-TWIN Task 1.1 candidate regimen"
+    note: >-
+      Concentrations and durations are fixed by the Task 1.1 qualification; none
+      are assumed here.
+
+phases:
+  basal:
+    inputs: {}
+    physical_duration: "pre-treatment culture"
+  e2_priming:
+    inputs: {IN_E2: 1}
+    physical_duration: "10 nM E2, 48 h (published regimen)"
+  differentiation_supplemented:
+    inputs: {IN_E2: 1, IN_PROGESTIN: 1, IN_cAMP: 1, IN_XAV939: 1}
+    physical_duration: "10 nM E2 + 1 uM MPA + 250 uM 8-Br-cAMP + 10 uM XAV939, 96 h (published regimen)"
+  differentiation_hormone_only:
+    inputs: {IN_E2: 1, IN_PROGESTIN: 1}
+    physical_duration: "E2 + progesterone; to be fixed in Task 1.1"
+
+conditions:
+  reference:
+    description: "Published supplemented regimen, no perturbation (G1 hormone-conditioned control)."
+    phases: [basal, e2_priming, differentiation_supplemented]
+  hormone_only_reference:
+    description: "Hormone-only regimen (Task 1.1 qualification candidate)."
+    phases: [basal, e2_priming, differentiation_hormone_only]
+  bmpr_inhibition:
+    description: "BMP receptor inhibition during the differentiation step (Task 1.4, Q1)."
+    phases: [basal, e2_priming, differentiation_supplemented]
+    overlays:
+      differentiation_supplemented: {inputs: {IN_BMPR_INHIBITOR: 1}}
+  stromal_hand2_knockdown:
+    description: "Stromal HAND2 knockdown during the differentiation step (Q2 candidate perturbation)."
+    phases: [basal, e2_priming, differentiation_supplemented]
+    overlays:
+      differentiation_supplemented: {interventions: [stromal_hand2_knockdown]}
+  paracrine_block_e2:
+    description: "Block of the stromal paracrine mitogenic route during E2 priming (Q2 candidate perturbation)."
+    phases: [basal, e2_priming]
+    overlays:
+      e2_priming: {interventions: [paracrine_mitogen_block]}
+  e2_priming_reference:
+    description: "Control for paracrine_block_e2: E2 priming without perturbation."
+    phases: [basal, e2_priming]
+  paracrine_block_differentiation:
+    description: "Block of the stromal paracrine mitogenic route during differentiation (Q2 candidate perturbation)."
+    phases: [basal, e2_priming, differentiation_supplemented]
+    overlays:
+      differentiation_supplemented: {interventions: [paracrine_mitogen_block]}
+  il1b_exposure:
+    description: "IL-1beta during the differentiation step (G2 inflammation model; provisional wiring)."
+    phases: [basal, e2_priming, differentiation_supplemented]
+    overlays:
+      differentiation_supplemented: {inputs: {IN_IL1B: 1}}
+  progestin_withdrawal:
+    description: "Supplemented regimen followed by withdrawal of the progestin (model-internal relaxation, not a planned arm)."
+    phases: [basal, e2_priming, differentiation_supplemented, progestin_withdrawn]
+    extra_phases:
+      progestin_withdrawn:
+        inputs: {IN_E2: 1, IN_cAMP: 1, IN_XAV939: 1}
+        physical_duration: "model-internal; no experiment declared"
+
+# Matched comparisons: perturbed and control share every phase except the
+# perturbation, and are read at the end of the named phase.
+comparisons:
+  - id: Q1_bmpr_inhibition
+    question: Q1
+    perturbed: bmpr_inhibition
+    control: reference
+    phase: differentiation_supplemented
+  - id: Q2_hand2_knockdown
+    question: Q2
+    perturbed: stromal_hand2_knockdown
+    control: reference
+    phase: differentiation_supplemented
+  - id: Q2_paracrine_block_e2
+    question: Q2
+    perturbed: paracrine_block_e2
+    control: e2_priming_reference
+    phase: e2_priming
+  - id: Q2_paracrine_block_differentiation
+    question: Q2
+    perturbed: paracrine_block_differentiation
+    control: reference
+    phase: differentiation_supplemented
+  - id: INF_il1b
+    question: WP3
+    perturbed: il1b_exposure
+    control: reference
+    phase: differentiation_supplemented
+  - id: REG_hormone_only_vs_supplemented
+    question: Task1.1
+    perturbed: hormone_only_reference
+    control: reference
+    phase_perturbed: differentiation_hormone_only
+    phase: differentiation_supplemented

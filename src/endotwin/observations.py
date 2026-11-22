@@ -16,7 +16,13 @@ from pathlib import Path
 from endotwin.model import Model, read_tsv
 from endotwin.paths import CONFIG
 
-MAPPING_STATUSES = {"active", "active_with_caveat", "planned", "quality_gate"}
+MAPPING_STATUSES = {
+    "active",
+    "active_with_caveat",
+    "planned",
+    "candidate",
+    "quality_gate",
+}
 OUTCOMES = ("concordant", "discordant", "inconclusive")
 
 

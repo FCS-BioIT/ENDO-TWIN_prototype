@@ -25,7 +25,7 @@ from endotwin.paths import model_dir
 INPUT_LAYER = "experimental_input"
 OUTPUT_LAYER = "functional_output"
 INTERFACE_LAYER = "intercompartmental_signal"
-COMPARTMENTS = ("epithelium", "stroma")
+COMPARTMENTS = ("epithelium", "extracellular", "stroma")
 RECEIVED_PREFIX = "RX_"
 
 _TOKEN = re.compile(r"\b[A-Za-z_][A-Za-z0-9_]*\b")
@@ -291,12 +291,14 @@ def split_compartments(
 ) -> dict[str, CompartmentNetwork]:
     """Split the integrated network into stand-alone per-compartment networks.
 
-    Every dependency on a node of the other compartment is replaced by a received
-    input ``RX_<node>``; medium inputs are copied into each compartment that reads
+    Every dependency on a node of another compartment (epithelium, the shared
+    extracellular space, stroma) is replaced by a received input ``RX_<node>``; medium inputs are copied into each compartment that reads
     them. Feeding each compartment's exported signals into the other's received
     inputs reproduces the integrated network exactly (tested in
-    ``tests/endotwin/test_interface.py``). This is the decomposition a per-cell
-    coupling would use; nothing here assumes physical time or space.
+    ``tests/mainline/test_interface.py``). This is the decomposition a per-cell
+    coupling would use: the extracellular network holds the ligand and secreted
+    protein pools that would become diffusing fields. Nothing here assumes
+    physical time or space.
     """
     rules = model.rules_for(selection)
     out: dict[str, CompartmentNetwork] = {}

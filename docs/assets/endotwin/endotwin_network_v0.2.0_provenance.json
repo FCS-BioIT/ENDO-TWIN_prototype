@@ -1,0 +1,11 @@
+{
+  "content": "default rules of the executable network (no simulation)",
+  "figure": "docs/assets/endotwin/endotwin_network_v0.2.0.png",
+  "inputs_sha256": {
+    "endotwin/models/endotwin-v0.2.0/network.bnd": "3d1ab4309497fc4a9e0810008296a94ab0eea65b694d232d198990d0f94a0936",
+    "endotwin/models/endotwin-v0.2.0/node_dictionary.tsv": "b512cc3ec82cdceca59e38391481c896476ecee75939caf92232e1e876d7a365"
+  },
+  "limitations": "Default variant of each hypothesis family only; alternatives are in rule_variants.tsv.",
+  "model_version": "endotwin-v0.2.0",
+  "regenerate": "pixi run endotwin-figures"
+}

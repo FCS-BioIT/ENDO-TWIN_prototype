@@ -1,0 +1,16 @@
+{
+  "figure": "docs/assets/endotwin/endotwin_relay_transient_v0.2.0.png",
+  "inputs_sha256": {
+    "docs/v052_paep_hand2/transient_trace.tsv": "277c9f8003b9fca6468766aa2b91eea88c6cf1877a61a482585d7f9647e5722e",
+    "endotwin/results/endotwin-v0.2.0/relay_transient.tsv": "2b1a684dd5e25c65ec8b90e01cc853c8948d38fb4ec12c4029170f5ad3442858",
+    "endotwin/results/endotwin-v0.2.0/relay_transient_summary.json": "3ce1f17c01539993cc37e259600ad5adf629b56ec5b0379ed198d92e9d89f1d3"
+  },
+  "legacy_panel_model_versions": [
+    "adoc-literature-superset-v0.5.1",
+    "adoc-literature-superset-v0.5.2"
+  ],
+  "limitations": "Unit rates and dimensionless time; the legacy panel is a recorded result of the DT-ADOC adhesion model (restart-at-boundary semantics), not regenerated here.",
+  "main_result": "Two representations with the same composed Boolean function differ only in the transient fall of epithelial proliferation.",
+  "model_version": "endotwin-v0.2.0",
+  "regenerate": "pixi run endotwin-figures"
+}

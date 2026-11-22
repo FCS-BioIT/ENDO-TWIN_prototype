@@ -1,4 +1,4 @@
-"""Static figures for the README and docs, each with a provenance sidecar.
+"""Figures for the README and docs, each with a provenance sidecar.
 
 Every figure is rendered from committed result tables (no simulation here) and
 writes ``<name>_provenance.json`` beside it with the SHA-256 of its inputs and
@@ -456,7 +456,14 @@ def relay_figure(version: str) -> Path:
 
 
 def render_all(version: str) -> list[Path]:
-    out = [network_figure(version), dynamics_figure(version), relay_figure(version)]
+    from endotwin.animation import render_animation
+
+    out = [
+        network_figure(version),
+        dynamics_figure(version),
+        relay_figure(version),
+        render_animation(version),
+    ]
     for path in out:
         print(f"wrote {relative(path)}")
     return out

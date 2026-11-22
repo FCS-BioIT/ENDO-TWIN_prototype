@@ -469,7 +469,7 @@ def relay_figure(version: str) -> Path:
             alpha=0.18,
             lw=0,
         )
-    a.set_xlim(0, 8)
+    a.set_xlim(0, 14)
     a.set_title(
         f"ENDO-TWIN {version}: proliferation after progestin onset",
         fontsize=9,

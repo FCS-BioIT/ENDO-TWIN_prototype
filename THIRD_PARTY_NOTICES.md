@@ -44,3 +44,15 @@ This prototype is NOT a biological authority for PROTOTYPE. Its spatial
 agent-based model, PhysiBoSS coupling, chip geometry, diffusion fields,
 embryo/blastoid mechanics, and adhesion-bond physics were deliberately
 excluded from this reference and must not be reused in PROTOTYPE.
+
+## MaBoSS and PyMaBoSS (installed dependencies, not vendored)
+
+- MaBoSS engine: `https://github.com/sysbio-curie/MaBoSS`, BSD 3-Clause License,
+  copyright Institut Curie (per the upstream README, checked 2026-11-22).
+- PyMaBoSS (`maboss` 0.8.15 on PyPI, with the `cmaboss` backend), pinned in
+  `pixi.lock`: Python interface maintained in the CoLoMoTo organisation; consult
+  its upstream repository for licence terms (not recorded in the installed
+  package metadata).
+
+ENDO-TWIN calls these packages at run time. No MaBoSS source or binary is
+copied into this repository.

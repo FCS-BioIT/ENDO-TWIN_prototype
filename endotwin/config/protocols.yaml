@@ -12,7 +12,7 @@
 
 schema_version: 1
 model_version: endotwin-v0.2.0
-default_relative_duration: 20.0
+default_relative_duration: 30.0
 
 regimens:
   published_supplemented:

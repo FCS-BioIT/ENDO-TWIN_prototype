@@ -85,7 +85,7 @@ recomputed by `src/endotwin/foundation_metrics.py`
 | `README.md` | New ENDO-TWIN front page | The prototype page is kept verbatim at `docs/legacy/PROTOTYPE_README_2026-10-21.md` |
 | `AGENTS.md` | Rewritten for ENDO-TWIN | Same evidence and claim rules; new layout and prospective-evaluation rules |
 | `pixi.toml` | Workspace renamed `endo-twin`; `endotwin-*` tasks added; review-harness task removed | `pixi.lock` is byte-identical to the source |
-| `.gitignore` | Assistant-tool block removed | Tool configuration is not part of the project |
+| `.gitignore` | Assistant-tool block removed; `endotwin/results/` exempted from the inherited `results/` rule | Tool configuration is not part of the project; ENDO-TWIN results are committed |
 | `tests/unit/test_readme_contract.py` | Reads the preserved prototype README | Its assertions are unchanged |
 | `tests/unit/test_source_test_references.py` | One class removed (it checked the removed tool configuration) | |
 | `tests/test_chatgpt_bundle.py`, `scripts/make_chatgpt_results_bundle.sh` | Planning ledgers read from `docs/legacy/`; removed configuration files no longer bundled | |

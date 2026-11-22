@@ -20,4 +20,4 @@ of those files changes without regenerating the results.
 | `maboss_confirmation.tsv` | MaBoSS end-of-phase probabilities versus exact fixed points (2,000 trajectories) |
 | `relay_transient.tsv`, `relay_transient_summary.json` | The HAND2-relay example (10 paired replicates, 5,000 trajectories) |
 | `rate_sensitivity.tsv`, `relay_rate_robustness.tsv`, `rate_sensitivity_summary.json` | Random transition-rate sensitivity |
-| `dynamics_*.tsv` with `_provenance.json` | Example trajectories (10,000 trajectories, seed 1) |
+| `dynamics_*.tsv` with `_provenance.json` | Example trajectories (10,000 trajectories, seed 1): reference and BMP receptor inhibition under both Q1 rules, IL-1β under both inflammation rules |

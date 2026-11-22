@@ -106,7 +106,7 @@ enumeration of the 2^8 input assignments:
 | `S_PARACRINE_MITOGEN`, `X_PARACRINE_MITOGEN`, `E_FGFR_ERK`, `OUT_EPITHELIAL_PROLIFERATION` | Expression (FGF9 mRNA), ligand, receptor activity (epithelial phospho-ERK1/2) and Ki67/EdU are different measurements |
 | `OUT_EPITHELIAL_SECRETORY`, `X_PAEP` | Programme versus secreted protein |
 | `S_BMP2`, `X_BMP2` | Expression versus secreted ligand |
-| `S_PRL`, `S_IGFBP1`, `X_PRL`, `X_IGFBP1` | Same function in the default rules; the FOXO1 inhibitor separates IGFBP-1 from PRL, and RNA from secreted protein is a measurement distinction |
+| `S_PRL`, `S_IGFBP1`, `X_PRL`, `X_IGFBP1` | Same function under the default FOX rule, where both genes need FOXO1. Under the alternative rule the FOXO1 inhibitor separates IGFBP-1 from PRL, which is the FOX experiment. RNA versus secreted protein is a measurement distinction |
 | `S_HH_SIGNALING`, `S_NR2F2` | Reception (GLI1/PTCH1) versus its target |
 | `S_BMP_SMAD`, `S_WNT4` | Pathway activity (pSMAD1/5/8) versus target transcript |
 

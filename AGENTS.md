@@ -26,7 +26,7 @@ prospectively. It was derived from the prototype (`docs/ORIGIN.md`).
   and numeric zeros as distinct states. Keep raw, QC, transformed, binarised,
   mapping and model-parameter stages separate.
 - The donor is the independent biological unit. Chips, cells, fields, wells,
-  time points, embryos and technical replicates are not independent donors.
+  time points and technical replicates are not independent donors.
 - Protect row-level donor metadata; use pseudonymised codes only.
 - Follow `.codex/harness/data-lineage-contract.md` for canonical runs and
   `.codex/harness/scientific-review-checklist.md` for scientific review.

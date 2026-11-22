@@ -1,0 +1,15 @@
+# Output of reference-based deconvolution (for example CIBERSORTx) of bulk
+# libraries against cell-state signatures from the published ADOC scRNA-seq.
+# Estimates are relative contributions of reference transcriptional states to a
+# library, not absolute cell fractions.
+schema: deconvolution_estimates
+description: Relative transcriptional-state contributions per library.
+unique: [library_id, reference_state]
+columns:
+  library_id: {type: str, required: true}
+  reference_id: {type: str, required: true}
+  reference_state: {type: str, required: true}
+  estimate: {type: float, required: true, min: 0, max: 1}
+  estimate_type: {type: str, required: true, allowed: [relative_state_contribution]}
+  method: {type: str, required: true}
+  fit_p_value: {type: float, required: false, min: 0, max: 1}

@@ -1,0 +1,21 @@
+# One row per sequencing library (one compartment of one chip). Planned:
+# WP1 24 libraries (4 G1 donors x 3 conditions x 2 compartments) and WP3 18
+# libraries (3 matched IL-1beta/control pairs and 3 G3 chips x 2 compartments).
+schema: bulk_rnaseq_samples
+description: Sample sheet for compartment-resolved bulk RNA-seq libraries.
+unique: [library_id]
+columns:
+  library_id: {type: str, required: true}
+  chip_id: {type: str, required: true}
+  donor_id: {type: pseudonymised_id, required: true}
+  group: {type: str, required: true, allowed: [G1, G2, G3]}
+  work_package: {type: str, required: true, allowed: [WP1, WP2, WP3, WP4]}
+  compartment: {type: str, required: true, allowed: [epithelial, stromal]}
+  condition_id: {type: str, required: true}
+  collection_phase: {type: str, required: true}
+  analysis_role:
+    type: str
+    required: true
+    allowed: [development, wp2_evaluation, wp3_characterisation, wp4_selection, wp4_evaluation_g2, wp4_evaluation_g3]
+  sequencing_batch: {type: str, required: true}
+  qc_pass: {type: bool, required: true}

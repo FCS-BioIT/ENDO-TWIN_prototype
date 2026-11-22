@@ -1,0 +1,22 @@
+# One row per measured value. Blank, below-detection, missing, excluded and
+# zero are distinct states and are never collapsed.
+schema: functional_measurements
+description: Outlet, imaging and pathway-activity measurements from ADOC chips.
+unique: [measurement_id]
+columns:
+  measurement_id: {type: str, required: true}
+  donor_id: {type: pseudonymised_id, required: true}
+  chip_id: {type: str, required: true}
+  group: {type: str, required: true, allowed: [G1, G2, G3]}
+  readout_id: {type: readout, required: true}
+  outlet_or_site: {type: str, required: true, allowed: [apical_outlet, basal_outlet, epithelium, stroma]}
+  condition_id: {type: str, required: true}
+  collection_time_h: {type: float, required: true, min: 0}
+  value: {type: float, required: false}
+  unit: {type: str, required: true}
+  measurement_state: {type: str, required: true, allowed: [observed, below_lod, missing, excluded]}
+  lod: {type: float, required: false, min: 0}
+  analysis_role:
+    type: str
+    required: true
+    allowed: [development, wp2_evaluation, wp3_characterisation, wp4_selection, wp4_evaluation_g2, wp4_evaluation_g3]

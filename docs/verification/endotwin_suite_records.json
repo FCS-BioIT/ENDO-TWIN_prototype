@@ -2,14 +2,14 @@
   "endotwin_full_suite": {
     "status": "final: run on the committed tree recorded in tested_tree",
     "command": "pixi run test (python -B -m unittest discover -s tests -v), single process",
-    "tested_tree": "134db5b54ebf881b8e437b42e5e4039a724b0b08",
-    "local_only_evidence_present": "data/combined-dataset-patient-integration.rds, the gitignored annotation workbook, context/literature/pdfs/ and output/review_inbox/ were hard-linked from the owner's prototype working copy (gitignored, never committed), as in the prototype 2026-10-16 benchmark",
-    "ran": 2585,
-    "seconds": 934.092,
+    "tested_tree": "ac4d98fa1e42f0e85c99eb45e7f4c5d6b2ab0ac2",
+    "local_only_evidence_present": "data/combined-dataset-patient-integration.rds, the gitignored annotation workbook, context/literature/pdfs/ and output/review_inbox/ were hard-linked from the owner's prototype working copy (gitignored, never committed), as in the prototype's 2026-10-16 benchmark",
+    "ran": 2587,
+    "seconds": 936.121,
     "result_line": "OK (skipped=63)",
     "failed": 0,
     "skipped": 63,
-    "passed": 2522,
+    "passed": 2524,
     "history_bound_skips": 63,
     "local_data_skips": 0,
     "failures_and_errors": [],
@@ -21,7 +21,7 @@
       "requires the prototype's source Git history: recorded commit 7a7eb34a4f7e is absent from this history-free repository (docs/ORIGIN.md)": 1
     },
     "log": "docs/verification/endotwin_suite.log.gz",
-    "log_sha256_uncompressed": "3b5c052e6c644dd405f50e0e55b3ed50a3e666f3a96d98b9bfad324c79d32051",
+    "log_sha256_uncompressed": "2312eca15c4f9562b050d8aab28f1ecbe7e4b19b581a72cecaf281e86558bca4",
     "log_note": "Temporary-directory paths are replaced by <tmp> and the checkout path by a relative path; nothing else is altered.",
     "files_changed_after_run": [
       "README.md",

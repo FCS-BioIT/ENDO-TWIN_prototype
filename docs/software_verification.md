@@ -9,7 +9,7 @@ rules are right.
 
 | Run | Tests | Result | Record |
 |---|---|---|---|
-| This repository, complete suite (`pixi run test`) | 2,585 | 2,522 passed, 0 failed, 63 skipped in 934 s (single process) | `docs/verification/endotwin_suite_records.json`, log `docs/verification/endotwin_suite.log.gz` |
+| This repository, complete suite (`pixi run test`) | 2,587 | 2,524 passed, 0 failed, 63 skipped in 936 s (single process) | `docs/verification/endotwin_suite_records.json`, log `docs/verification/endotwin_suite.log.gz` |
 | ENDO-TWIN mainline only (`pixi run endotwin-test`) | 116 | OK | same record |
 | Prototype at the source commit `b1de5f9`, fresh clone, before any change | 2,767 | 2,757 passed, 1 failed, 9 skipped in 1,980 s | `docs/verification/source_baseline_b1de5f9.json`, log alongside |
 | Prototype benchmark, 2026-10-16 (owner's working copy) | 2,415 | OK (1 skip) in 1,958 s | `docs/verification/cache_benchmark_record.json` |
@@ -26,10 +26,10 @@ clone they fail or skip exactly as at the source.
 
 | Reason | Count |
 |---|---|
-| requires the prototype's source Git history: commit(s) 0c7da9c174b6, ef34c1079267 absent from this history-free repository (docs/ORIGIN.md); passed at the sou | 44 |
-| requires the prototype's source Git history: commit(s) 97f88f55ce62 absent from this history-free repository (docs/ORIGIN.md); passed at the source commit (do | 13 |
-| requires the prototype's source Git history: commit(s) 97f88f55ce62, 51b8bd11bc79 absent from this history-free repository (docs/ORIGIN.md); passed at the sou | 4 |
-| requires the prototype's source Git history: evidence-root commit 91f79ed is not available in this clone (shallow history or a synthetic snapshot); blob ident | 1 |
+| requires the prototype's source Git history: commit(s) 0c7da9c174b6, ef34c1079267 absent from this history-free repository (docs/ORIGIN.md); passed at | 44 |
+| requires the prototype's source Git history: commit(s) 97f88f55ce62 absent from this history-free repository (docs/ORIGIN.md); passed at the source co | 13 |
+| requires the prototype's source Git history: commit(s) 97f88f55ce62, 51b8bd11bc79 absent from this history-free repository (docs/ORIGIN.md); passed at | 4 |
+| requires the prototype's source Git history: evidence-root commit 91f79ed is not available in this clone (shallow history or a synthetic snapshot); bl | 1 |
 | requires the prototype's source Git history: recorded commit 7a7eb34a4f7e is absent from this history-free repository (docs/ORIGIN.md) | 1 |
 
 **History-bound checks.** ENDO-TWIN has no prototype Git history

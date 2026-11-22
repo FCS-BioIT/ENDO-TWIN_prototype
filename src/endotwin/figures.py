@@ -511,7 +511,10 @@ def relay_figure(version: str) -> Path:
     )
     b.axhline(0, color=BASELINE, lw=0.8)
     b.set_title(
-        "LEGACY record: prototype v0.5.2 minus v0.5.1", fontsize=9, loc="left", color=INK
+        "LEGACY record: prototype v0.5.2 minus v0.5.1",
+        fontsize=9,
+        loc="left",
+        color=INK,
     )
     b.set_xlabel(
         "MaBoSS time in hormone-treated cell (declared duration)",

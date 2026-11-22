@@ -9,7 +9,7 @@
     "adoc-literature-superset-v0.5.1",
     "adoc-literature-superset-v0.5.2"
   ],
-  "limitations": "Unit rates and dimensionless time; the legacy panel is a recorded result of the DT-ADOC adhesion model (restart-at-boundary semantics), not regenerated here.",
+  "limitations": "Unit rates and dimensionless time; the legacy panel is a recorded result of the prototype adhesion model (restart-at-boundary semantics), not regenerated here.",
   "main_result": "Two representations with the same composed Boolean function differ only in the transient fall of epithelial proliferation.",
   "model_version": "endotwin-v0.2.0",
   "regenerate": "pixi run endotwin-figures"

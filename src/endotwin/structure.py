@@ -202,7 +202,7 @@ def summarize(
         groups.setdefault(cols.values[node], []).append(node)
     aliases = tuple(tuple(g) for g in groups.values() if len(g) > 1)
 
-    # Definitions shared with the prototype (dt_adoc.reporting.structure), so counts
+    # Definitions shared with the prototype's structural report, so counts
     # are comparable across the two projects. A dependency is *absorbed* when
     # pinning its source to 0 and to 1 (propagated through every path) leaves
     # the target identical over all input assignments. An inhibition *never

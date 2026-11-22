@@ -11,7 +11,7 @@ pin files by path and SHA-256.
 
 | Material | Path |
 |---|---|
-| Prototype front page (2026-10-21), verbatim; its links are relative to the repository root | [`PROTOTYPE_README_2026-10-21.md`](PROTOTYPE_README_2026-10-21.md) |
+| Prototype front page (2026-10-21), verbatim apart from two renamed skill folders; its links are relative to the repository root | [`PROTOTYPE_README_2026-10-21.md`](PROTOTYPE_README_2026-10-21.md) |
 | Planning ledgers | [`IMPLEMENTATION_PLAN.md`](IMPLEMENTATION_PLAN.md), [`IMPLEMENTATION_STATUS.md`](IMPLEMENTATION_STATUS.md), [`REQUIREMENTS_COVERAGE.tsv`](REQUIREMENTS_COVERAGE.tsv), [`TASK_CONTRACT.md`](TASK_CONTRACT.md) |
 | Model versions v0.1.0-v0.6.0, including the adhesion module | `models/` |
 | Embryo-adhesion endpoint: observed counts, replicate simulations, C3a pre-registered kinetic readouts | `config/calibration.yaml`, `docs/endpoint/`, `docs/c3_kinetic_readouts/`, figure `docs/assets/adoc_functional_endpoint_v0.5.0.png` |

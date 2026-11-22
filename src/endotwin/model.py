@@ -18,9 +18,9 @@ from pathlib import Path
 
 import tomllib
 
-from dt_adoc.model.topology import derive_dependencies, parse_bnd_rules
 from endotwin import DEFAULT_MODEL_VERSION
 from endotwin.paths import model_dir
+from endotwin.topology import derive_dependencies, parse_bnd_rules
 
 INPUT_LAYER = "experimental_input"
 OUTPUT_LAYER = "functional_output"

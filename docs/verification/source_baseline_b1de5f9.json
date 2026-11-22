@@ -1,6 +1,6 @@
 {
   "purpose": "Complete prototype suite (`pixi run test`) executed on a fresh clone of the source repository at the source commit, before any ENDO-TWIN change.",
-  "source_repository": "https://github.com/fransua-fcs/the private prototype repository",
+  "source_repository": "a private repository of the same group (not public)",
   "source_commit": "b1de5f90582f02291789eb72753fa5ab1f2d8c88",
   "executed_on": "2026-11-22",
   "command": "pixi run test (python -B -m unittest discover -s tests -v)",
@@ -55,7 +55,7 @@
   ],
   "interpretation": "Every non-pass depends on files that are local-only by design and absent from any clone: the 3.4 GB scRNA RDS and the gitignored annotation workbook (the failure and 7 skips), the literature PDFs (1 skip) and a local review-inbox extract (1 skip). No code-dependent failure. The history-bound checks all ran and passed here, because this clone had the source history.",
   "log": "docs/verification/source_baseline_b1de5f9_suite.log.gz",
-  "log_sha256_uncompressed": "1f4313c15e70528fc998eae7e62606bbba601b1ce109bd4bb384bc9b95a8caa9",
+  "log_sha256_uncompressed": "836ef139adda65bb5d1aecb20618131e7fe2d438b49b5866f0ea33c7523812c7",
   "passed": 2757,
-  "log_note": "Absolute paths of the temporary clone are replaced by <source-clone>; nothing else in the log is altered."
+  "log_note": "Absolute paths of the temporary clone are replaced by <source-clone>, and the prototype's private name in one task description is replaced by 'prototype'; nothing else in the log is altered."
 }

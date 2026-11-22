@@ -7,17 +7,17 @@
   },
   "inputs_sha256": {
     "config/interventions.tsv": "8ab8d0b630c2306d3ee8b4761391df6b5dd058d21296180549ff68231048ac15",
-    "config/observation_map.tsv": "e8f169cef597f3cbe559432ce07d1720a2258e4d9df7a5ee0316d8fc41df943d",
+    "config/observation_map.tsv": "5d97e42a5aec5c65c918075f5fb0c407e5abfebf6c4b33b538ab02e301e06add",
     "config/protocols.yaml": "2760c16ec10b41efe8afe04ecd49c492fbc9cbc29d1af8072e8b6509d21a8b3f",
-    "evidence/references.tsv": "5d3d072eff6e593954aedb1d115f3de02b926da22c9eac648741282c571a6ac6",
+    "evidence/references.tsv": "67388f35fa3cdb3cacc723f3975853b0d7787b22739cb98f926c8c0beb02c22a",
     "model/baseline.cfg": "3877a8321d135a53413d016a1dc6bc2dacf66f8d3f86cb5a9120879588f40211",
-    "model/edges.tsv": "b985140d4cf816e710ccb8e04b7cb47974941ccefff4f74216af801beeb1bc30",
+    "model/edges.tsv": "3fe6ee8137739b34abe7edb0f90eec029eda25d80d3fc2dd67892ebfca6e8b63",
     "model/interface.tsv": "9d74f303f0cb4b42cc5640528b686d899e51f5b6c1bdffe3929ef7ef95820778",
     "model/lineage.tsv": "12cefda1bfa1aa3377580e371148f8285bfe842e2f78ecaf6345a17131bf9a63",
-    "model/network.bnd": "3d1ab4309497fc4a9e0810008296a94ab0eea65b694d232d198990d0f94a0936",
-    "model/node_dictionary.tsv": "b512cc3ec82cdceca59e38391481c896476ecee75939caf92232e1e876d7a365",
-    "model/provenance.toml": "af6964a9581a06d9c9fe6f2c85b4e8d534bb9731e27482d3f54418e0f31914f9",
-    "model/rule_variants.tsv": "3b022643bb7e0fd8306f2adcd6910f10c4bdc2a4c18f08f8a9dfa63db1d5cd15"
+    "model/network.bnd": "2a823030c647876d9ff7cc99816d873ebf6dd45a3dcc53a6989c3977e746a9fc",
+    "model/node_dictionary.tsv": "58b104093bce995ba616ad03ec508c36c36c5a9ab070ef6327a714504da86022",
+    "model/provenance.toml": "51deb234de9ccc98daccd9b74b800332f7227431407446efeac8822d50fbae7c",
+    "model/rule_variants.tsv": "bbc4a9cf357b6eba014f5220df781a3c9bf7b38760fa1ecdbdf52a38c6173494"
   },
   "model_version": "endotwin-v0.2.0",
   "outputs": [
@@ -50,7 +50,7 @@
     "structure.json"
   ],
   "repository_state_at_generation": {
-    "commit": "77f901165c837c0572df41d461f2c56476cb7a52",
+    "commit": "7751fda4fb173e84b60c9e7191b5a53a3251f7a5",
     "dirty": true
   },
   "semantics": "MaBoSS probabilities are simulated trajectory frequencies under the stated rules, unit transition rates (unless stated) and initial conditions; MaBoSS time is dimensionless and not mapped to experimental time. No result here is a biological observation or a validation."

@@ -5,7 +5,7 @@ and the stroma of the human endometrium, built to be tested in ADOC, our
 endometrium-on-chip.
 
 This repository is the computational side of the ENDO-TWIN project (AEI
-PID2026, Carlos Simón Foundation). It grew out of the prototype, an earlier prototype
+PID2026, Carlos Simón Foundation). It grew out of an earlier, private prototype
 of the same group ([docs/ORIGIN.md](docs/ORIGIN.md)).
 
 ![endotwin-v0.2.0 network through the ADOC protocol with IL-1β](docs/assets/endotwin/endotwin_pathway_dynamics_v0.2.0.gif)
@@ -183,7 +183,7 @@ prediction.
 
 ## Where this comes from
 
-the prototype, wich focused on embryo adhesion in ADOC, gave us the literature work,
+The earlier prototype, wich focused on embryo adhesion in ADOC, gave us the literature work,
 the data integration and the tooling. We rebuilt the model around Q1 and Q2.
 Embryo adhesion is not used: its three conditions cannot separate any of our
 hypotheses ([docs/experimental_data.md](docs/experimental_data.md)). The old
@@ -269,7 +269,7 @@ pixi install
 pixi run endotwin-test       # mainline tests, ~20 s
 pixi run endotwin-simulate   # reference, BMP-inhibition, IL-1β and FOXO1-inhibition dynamics
 pixi run endotwin-all        # every mainline result, figure and metric, ~7 min
-pixi run test                # complete suite with the prototype, ~16 min
+pixi run test                # complete suite incl. legacy tests, ~16 min
 ```
 
 From Python (`PYTHONPATH=src`):

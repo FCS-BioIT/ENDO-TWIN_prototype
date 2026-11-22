@@ -14,8 +14,8 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
-from dt_adoc.model.topology import parse_bnd_rules
 from endotwin.model import dependencies, load_model, read_tsv
+from endotwin.topology import parse_bnd_rules
 
 MODEL = load_model()
 V010 = ROOT / "endotwin/models/endotwin-v0.1.0/network.bnd"

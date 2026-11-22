@@ -13,7 +13,6 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
-from dt_adoc.model.topology import parse_bnd_rules
 from endotwin.analysis import (
     comparison_directions,
     discrimination_table,
@@ -27,6 +26,7 @@ from endotwin.structure import (
     fixed_point,
     summarize,
 )
+from endotwin.topology import parse_bnd_rules
 
 MODEL = load_model()
 PROTOCOLS = load_protocols(MODEL)

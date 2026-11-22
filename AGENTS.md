@@ -2,7 +2,7 @@
 
 ENDO-TWIN builds a mechanistic, stochastic Boolean (MaBoSS) model of human
 endometrial hormonal regulation in the ADOC endometrium-on-chip, and tests it
-prospectively. It was derived from the prototype (`docs/ORIGIN.md`).
+prospectively. It was derived from an earlier, private prototype (`docs/ORIGIN.md`).
 
 ## Repository layout
 

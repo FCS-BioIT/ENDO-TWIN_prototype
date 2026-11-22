@@ -1,15 +1,15 @@
 # Origin of this repository
 
-ENDO-TWIN was created on **2026-11-22** from the prototype. It is a new,
-independent repository: it carries the prototype's files but **none of its Git
-history**. This page records where everything came from, so that provenance
+ENDO-TWIN was created on **2026-11-22** from an earlier, private prototype of
+the same group. It is a new, independent repository: it carries the prototype's
+files but **none of its Git history**. This page records where everything came from, so that provenance
 survives the loss of history.
 
 ## Source
 
 | | |
 |---|---|
-| Source repository | `https://github.com/fransua-fcs/the private prototype repository` (private; mirrored at `FCS-BioIT/the private prototype repository`, same `main`) |
+| Source repository | a private repository of the same group (not public) |
 | Source commit | `b1de5f90582f02291789eb72753fa5ab1f2d8c88` |
 | Commit date | 2026-11-18 15:00:55 +0100 |
 | Commit subject | Merge pull request #37 from fransua-fcs/feat/scientific-review-2026-11-18 |
@@ -83,7 +83,7 @@ v0.1.0; each version's `lineage.tsv` maps every node of its parent.
 
 | File | Change | Why |
 |---|---|---|
-| `README.md` | New ENDO-TWIN front page | The prototype page is kept verbatim at `docs/legacy/PROTOTYPE_README_2026-10-21.md` |
+| `README.md` | New ENDO-TWIN front page | The prototype page is kept at `docs/legacy/PROTOTYPE_README_2026-10-21.md`, verbatim apart from two renamed skill folders |
 | `AGENTS.md` | Rewritten for ENDO-TWIN | Same evidence and claim rules; new layout and prospective-evaluation rules |
 | `pixi.toml` | Workspace renamed `endo-twin`; `endotwin-*` tasks added; review-harness task removed | `pixi.lock` is byte-identical to the source |
 | `.gitignore` | Assistant-tool block removed; `endotwin/results/` exempted from the inherited `results/` rule | Tool configuration is not part of the project; ENDO-TWIN results are committed |
@@ -103,7 +103,7 @@ would rewrite historical execution records.
 
 ## Moved
 
-- `README.md` (prototype) to `docs/legacy/PROTOTYPE_README_2026-10-21.md`.
+- The prototype's `README.md` to `docs/legacy/PROTOTYPE_README_2026-10-21.md`.
 - `IMPLEMENTATION_PLAN.md`, `IMPLEMENTATION_STATUS.md`,
   `REQUIREMENTS_COVERAGE.tsv`, `TASK_CONTRACT.md` to `docs/legacy/`.
 

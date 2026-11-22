@@ -33,7 +33,9 @@ ROOT = Path(__file__).resolve().parents[2]
 #: ENDO-TWIN (docs/ORIGIN.md). This contract keeps that legacy page consistent
 #: with the artifacts it quotes; the ENDO-TWIN README has its own contract in
 #: tests/mainline/test_readme_dashboard.py.
-README = (ROOT / "docs/legacy/PROTOTYPE_README_2026-10-21.md").read_text(encoding="utf-8")
+README = (ROOT / "docs/legacy/PROTOTYPE_README_2026-10-21.md").read_text(
+    encoding="utf-8"
+)
 AUDIT = json.loads(
     (ROOT / "docs/u5_structural_audit/u5_audit_summary.json").read_text(
         encoding="utf-8"

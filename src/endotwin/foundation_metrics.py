@@ -22,11 +22,11 @@ from pathlib import Path
 
 import yaml
 
-from dt_adoc.model.topology import parse_bnd_rules
 from endotwin.model import dependencies, load_model
 from endotwin.paths import ROOT
 from endotwin.protocols import load_protocols
 from endotwin.structure import summarize
+from endotwin.topology import parse_bnd_rules
 
 OUT = ROOT / "docs" / "research_foundation_metrics.json"
 SUITE_RECORDS = ROOT / "docs" / "verification" / "endotwin_suite_records.json"

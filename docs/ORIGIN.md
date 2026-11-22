@@ -27,8 +27,8 @@ survives the loss of history.
    material was never copied: `output/`, `tmp/`, environments and caches, the
    local 3.4 GB scRNA RDS, the gitignored annotation workbook and the literature
    PDFs (which were never committed in the source either).
-4. The adaptation described below was made, and the whole tree was committed
-   as one initial commit.
+4. The adaptation described below was made and committed. The history of
+   this repository starts at the migration; no prototype commit is included.
 
 ## Source model versions
 
@@ -47,9 +47,10 @@ recomputed by `src/endotwin/foundation_metrics.py`
 | adoc-literature-superset-v0.5.2 | `models/superset/` | 59 | 93 | 35 |
 | adoc-literature-superset-v0.6.0 | `models/superset/` | 56 | 89 | 29 |
 
-`endotwin-v0.1.0` (`endotwin/models/endotwin-v0.1.0/`) is new. It derives from
-`adoc-literature-superset-v0.6.0`; every node's lineage is in its
-`lineage.tsv`.
+The ENDO-TWIN mainline versions are new. `endotwin-v0.1.0`
+(`endotwin/models/endotwin-v0.1.0/`) derives from
+`adoc-literature-superset-v0.6.0`, and the current `endotwin-v0.2.0` derives from
+v0.1.0; each version's `lineage.tsv` maps every node of its parent.
 
 ## Reused unchanged
 

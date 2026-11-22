@@ -8,13 +8,14 @@ This repository is the computational side of the ENDO-TWIN project (AEI
 PID2026, Carlos Simón Foundation). It grew out of the prototype, an earlier prototype
 of the same group ([docs/ORIGIN.md](docs/ORIGIN.md)).
 
-![endotwin-v0.1.0 network through the ADOC protocol with IL-1β](docs/assets/endotwin/endotwin_pathway_dynamics_v0.1.0.gif)
+![endotwin-v0.2.0 network through the ADOC protocol with IL-1β](docs/assets/endotwin/endotwin_pathway_dynamics_v0.2.0.gif)
 
-*`endotwin-v0.1.0` running the ADOC protocol: basal culture, E2 priming, then
+*`endotwin-v0.2.0` running the ADOC protocol: basal culture, E2 priming, then
 differentiation with IL-1β. Node colour is the fraction of 10,000 MaBoSS
-trajectories where the node is ON. On the right, the reference regimen against
-the two competing IL-1β rules. Model predictions, dimensionless time. Rebuild
-with `pixi run endotwin-figures`.*
+trajectories where the node is ON. Epithelium and stroma only talk through the
+shared extracellular space in the middle. On the right, the reference regimen
+against the two competing IL-1β rules. Model predictions, dimensionless time.
+Rebuild with `pixi run endotwin-figures`.*
 
 ## The biological question
 
@@ -38,121 +39,147 @@ can perturb one side and read the other.
 
 ## The model
 
-`endotwin-v0.1.0` has 19 nodes, simulated as one MaBoSS network:
+![endotwin-v0.2.0 network](docs/assets/endotwin/endotwin_network_v0.2.0.png)
 
-- **Inputs:** E2, progestin, cAMP, XAV939, a BMP receptor inhibitor, IL-1β.
-- **Epithelium:** PGR and IHH.
-- **Stroma:** PGR, PKA, NR2F2, BMP2, BMP/SMAD activity, HAND2, IL-1
-  signalling and a paracrine mitogen.
-- **Between compartments:** IHH goes to the stroma and the paracrine mitogen
-  comes back to the epithelium.
-- **Outputs:** proliferation (Ki67/EdU), secretory state (PAEP) and
-  decidualisation (PRL, IGFBP-1). BMP/SMAD activity is read as pSMAD1/5/8.
+`endotwin-v0.2.0` has 39 nodes in four compartments, simulated as one MaBoSS
+network:
+
+- **Culture medium:** E2, progestin, cAMP and XAV939 (the published regimen),
+  a BMP receptor inhibitor, IL-1β, and two candidate inhibitors for WP2
+  (Smoothened, FOXO1).
+- **Epithelium:** ERα, PGR, IHH, FGFR→ERK1/2, the secretory state and
+  proliferation (Ki67/EdU).
+- **Shared extracellular space:** the ligands that cross the ADOC membrane
+  (IHH, BMP2, the stromal FGF mitogen) and the proteins we measure in the
+  outlets (PAEP, PRL, IGFBP-1).
+- **Stroma:** ERα, PGR and cAMP/PKA; the decidual transcription module
+  (C/EBPβ, FOXO1, IRF4); Hedgehog reception, NR2F2, BMP2, pSMAD1/5/8, WNT4,
+  HAND2 and FGF9; IL-1 receptor signalling with its JNK and ERK1/2 branches;
+  decidualisation and the PRL and IGFBP1 genes.
+
+Every node and edge comes from the curated literature, and each one has a
+readout or a perturbation the project can use. The RNA nodes map to the planned
+bulk RNA-seq, and the secreted nodes to the outlet ELISAs. Some nodes have the
+same Boolean function as their neighbour, for example a ligand and its secreted
+pool. We keep them on purpose and list them in
+[docs/model_construction.md](docs/model_construction.md).
 
 We dont know the kinetic parameters of these pathways, and wont know them for a
 while. A Boolean rule is something you can trace back to a paper. MaBoSS adds
 stochastic timing on top, so we get dynamics and not only steady states.
 
-The static network with node IDs is in
-[endotwin_network_v0.1.0.png](docs/assets/endotwin/endotwin_network_v0.1.0.png).
-
 ## Hypotheses as alternative rules
 
 The aproach is simple. Each open question becomes two or three rules for the
-same node. We simulate every combination (3 families, 7 variants, 12
+same node. We simulate every combination (4 families, 9 variants, 24
 scenarios), then look for the experiment where the variants disagree.
 
 **Q1: BMP in decidualisation**
 
 ```
-S_BMP2      = (S_PGR and S_PKA) or S_NR2F2        // BMP2 ligand expression
-S_BMP_SMAD  = S_BMP2 and not IN_BMPR_INHIBITOR     // receptor / SMAD1/5/8 activity
-OUT_STROMAL_DECIDUALIZATION = S_PGR and S_PKA and S_BMP_SMAD and not S_IL1_SIGNALING
+S_BMP2      = (S_PGR and S_PKA) or S_NR2F2        // BMP2 expression
+X_BMP2      = S_BMP2                               // secreted BMP2 ligand
+S_BMP_SMAD  = X_BMP2 and not IN_BMPR_INHIBITOR     // receptor / SMAD1/5/8 activity
+S_WNT4      = S_BMP_SMAD
+OUT_STROMAL_DECIDUALIZATION = S_PGR and S_CEBPB and S_WNT4 and not S_JNK
 ```
 
-The alternative, `Q1_pgr_sufficient`, drops the `S_BMP_SMAD` term. SMAD1/5
-knockdown impairs human decidualisation and BMP2 rescues it (Liao et al.
-2024). Uterine Bmp2 is required in the mouse (Lee et al. 2007).
-
-Splitting ligand expression from receptor/SMAD activity is new here. In
-Prototype a SMAD node would only have been a copy of BMP2. The BMP receptor
-inhibitor planned in WP1 is what makes it informative.
+The alternative, `Q1_pgr_sufficient`, drops the `S_WNT4` term. SMAD1/5
+knockdown impairs human decidualisation, WNT4 drops, and BMP2 rescues it (Liao
+et al. 2024). BMP2 works through Wnt4 (Li et al. 2007).
 
 **Q2: stromal control of epithelial proliferation**
 
 ```
 S_HAND2             = S_BMP_SMAD or S_PGR
-S_PARACRINE_MITOGEN = not S_HAND2
-OUT_EPITHELIAL_PROLIFERATION = IN_E2 and S_PARACRINE_MITOGEN
+S_PARACRINE_MITOGEN = S_ESR1 and not S_HAND2        // FGF9 expression
+E_FGFR_ERK          = X_PARACRINE_MITOGEN
+OUT_EPITHELIAL_PROLIFERATION = E_ESR1 and E_FGFR_ERK
 ```
 
-In the mouse, progesterone induces stromal Hand2, which represses stromal FGFs
-(Li et al. 2011). In human stromal cells only FGF9 responds (Murata et al.
-2019), so the node is named for its role and not for a ligand. The
-alternative is epithelial-autonomous: `IN_E2 and not E_PGR`.
+E2 makes the epithelium proliferate through stromal ERα (Cooke et al. 1997).
+Progesterone induces stromal Hand2, which represses the stromal FGFs, and FGFR
+blockade lowers epithelial ERK and Ki67 (Li et al. 2011). In human stromal
+cells only FGF9 responds (Murata et al. 2019). The alternative is
+epithelial-autonomous: `E_ESR1 and not E_PGR`.
+
+**FOX: does PRL need FOXO1?** (new in v0.2.0)
+
+```
+S_FOXO1  = S_PKA and not IN_FOXO1_INHIBITOR
+S_IRF4   = S_PGR and S_FOXO1
+S_IGFBP1 = OUT_STROMAL_DECIDUALIZATION and S_FOXO1
+S_PRL    = OUT_STROMAL_DECIDUALIZATION and S_IRF4   // alternative: no S_IRF4
+```
+
+Every study agrees that IGFBP1 needs FOXO1. For PRL the papers disagree. IRF4
+or FOXO1 knockdown lowers it (Vasquez et al. 2015, Grinius et al. 2006). A
+FOXO1 activity inhibitor leaves it unchanged, though (Ujvari et al. 2017).
 
 **IL-1β (provisional)**
 
-Four studies in human stromal cells show that IL-1β impairs decidualisation.
-The route is disputed (ERK or JNK). We keep two rules: IL-1β acts on
-decidualisation only, or it also depletes stromal PGR
-(`S_PGR = IN_PROGESTIN and not S_IL1_SIGNALING`). Three of these papers were
-read at abstract level only.
+IL-1β impairs decidualisation in human stromal cells through JNK (Taylor et
+al. 2024). One study also finds ERK1/2-dependent loss of PR (Yu et al. 2019).
+So we keep two rules: JNK only, or JNK plus PR depletion
+(`S_PGR = IN_PROGESTIN and not S_ERK1_2`). These papers were read at abstract
+level only.
 
 Every edge has an evidence class and references in
-[edges.tsv](endotwin/models/endotwin-v0.1.0/edges.tsv). The reasoning is in
-[docs/scientific_evidence.md](docs/scientific_evidence.md) and
-[docs/model_construction.md](docs/model_construction.md).
+[edges.tsv](endotwin/models/endotwin-v0.2.0/edges.tsv). More in
+[docs/scientific_evidence.md](docs/scientific_evidence.md).
 
 ## What the model predicts
 
-![Reference regimen and BMP receptor inhibition](docs/assets/endotwin/endotwin_dynamics_v0.1.0.png)
+![Reference regimen and BMP receptor inhibition](docs/assets/endotwin/endotwin_dynamics_v0.2.0.png)
 
 *Under BMP receptor inhibition both Q1 rules lose pSMAD1/5/8, but only the
-BMP-required rule loses decidualisation. 10,000 trajectories, seed 1, unit
-rates.*
+BMP-required rule loses secreted PRL. 10,000 trajectories, seed 1, unit rates.*
 
 Which experiment separates which hypothesis. These are exact results across
-all 12 scenarios ([discrimination.tsv](endotwin/results/endotwin-v0.1.0/discrimination.tsv)):
+all 24 scenarios ([discrimination.tsv](endotwin/results/endotwin-v0.2.0/discrimination.tsv)):
 
 | Perturbation | Readout | Separates | Predicted |
 |---|---|---|---|
-| BMP receptor inhibitor, differentiation | PRL, IGFBP-1 | Q1 | down vs no change |
+| BMP receptor inhibitor, differentiation | PRL, IGFBP-1 (secreted and RNA) | Q1 | down vs no change |
 | Stromal HAND2 knockdown, differentiation | Ki67, EdU | Q2 | up vs no change |
 | Paracrine block, E2 priming | Ki67, EdU | Q2 | down vs no change |
 | Paracrine block, differentiation | Ki67, EdU | nothing | no change anywhere |
-| IL-1β, differentiation | pSMAD1/5/8 | IL-1β rules | no change vs down |
+| IL-1β, differentiation | pSMAD1/5/8, HAND2, WNT4, IRF4 | IL-1β rules | no change vs down |
+| IL-1β, differentiation | epithelial phospho-ERK1/2, FGF9 | IL-1β rules | no change vs up |
+| FOXO1 inhibitor, differentiation | PRL (secreted and RNA) | FOX | down vs no change |
 
-Two points are easy to miss. The paracrine block only helps with Q2 if you
-apply it during E2 priming: later, HAND2 already keeps the mitogen off. And the
-Q1 experiment needs pSMAD1/5/8, to show the inhibitor actually worked.
-
-The animation adds one more prediction. If IL-1β depletes stromal PGR, HAND2
-falls and epithelial proliferation comes back. That only holds under the
-stromal-relay version of Q2, so it is a conditional prediction and not a
-robust one.
+A few things are easy to miss:
+- The paracrine block only helps with Q2 if you apply it during E2 priming;
+  later, HAND2 already keeps the mitogen off.
+- The Q1 experiment needs pSMAD1/5/8 to show the inhibitor actually worked.
+- The FOXO1 experiment is cheap: one inhibitor and the PRL ELISA we already
+  run, with IGFBP-1 as the target-engagement control.
+- Blocking Hedgehog reception (SMO inhibitor) lowers NR2F2, but BMP2 holds in
+  the supplemented regimen because cAMP backs it up. Without cAMP, BMP2 should
+  fall. That makes a testable redundancy prediction.
 
 ## Steady states are not enough: the HAND2 relay
 
-![HAND2 relay transient](docs/assets/endotwin/endotwin_relay_transient_v0.1.0.png)
+![HAND2 relay transient](docs/assets/endotwin/endotwin_relay_transient_v0.2.0.png)
 
 There are two ways to write the stromal route of Q2:
 
-- relay only: `IN_E2 and S_PARACRINE_MITOGEN`
-- relay plus a direct HAND2 term: `IN_E2 and S_PARACRINE_MITOGEN and not S_HAND2`
+- relay only: `E_ESR1 and E_FGFR_ERK`
+- relay plus a direct HAND2 term: `E_ESR1 and E_FGFR_ERK and not S_HAND2`
   (the prototype v0.5.1 form)
 
 Both compute the same Boolean function, so all their steady states are
 identical. The dynamics are different though. After progestin onset the relay
 version keeps proliferation on for longer. Over 10 paired replicates, the area
-between the curves is 1.005 ± 0.016, and all 10 are positive. The half-times
-are 3.7 vs 2.7 (dimensionless) and both curves end at 0.000. The delay was
-there in all 20 random rate sets we tried, and the prototype record (right panel)
-shows the same.
+between the curves is 3.00 ± 0.02, and all 10 are positive. The half-times are
+5.7 vs 2.7 (dimensionless) and both curves end at 0.000. The delay was there in
+all 20 random rate sets we tried.
 
-So an extra intercellular step costs time, and only a time course can see it.
-Time-resolved Ki67/EdU after progestin onset would test it. The current plan
-has no such time course, so for now it stays a model prediction.
+In v0.1.0 the same area was 1.0. The signal now crosses the extracellular space
+and an epithelial receptor step, and every extra hop costs time. Only a time
+course can see that. Time-resolved Ki67/EdU after progestin onset would test
+it. The current plan has no such time course, so for now it stays a model
+prediction.
 
 ## Where this comes from
 
@@ -176,9 +203,9 @@ them. Full audit:
 | Prototype network, v0.6.0 | 56 nodes, 89 dependencies (76 activating, 13 inhibitory); 29 distinct Boolean functions in 7 alias classes; 17 phenotype-inert nodes |
 | Prototype history | 8 model versions; 25 completed analyses with results in the repository |
 | ADOC data | 62 secreted-protein rows, 39 observed values (PRL, IGFBP-1, PAEP); scRNA-seq with 28,212 cells from 3 donors |
-| ENDO-TWIN v0.1.0 | 19 nodes, 23 dependencies, 11 distinct Boolean functions; 3 hypothesis families, 7 rule variants, 12 scenarios; 9 protocol conditions, 6 comparisons |
-| Robustness | 720 of 720 steady-state predictions unchanged under 30 random rate sets; all 312 simulated phases reach their exact fixed points |
-| Tests | 2,566 automated tests in this repository (2,503 passed, 0 failed, 63 skipped) |
+| ENDO-TWIN v0.2.0 | 39 nodes, 47 dependencies, 17 distinct Boolean functions; 4 hypothesis families, 9 rule variants, 24 scenarios; 12 protocol conditions, 9 comparisons |
+| Robustness | 5,670 of 5,670 steady-state predictions unchanged under 30 random rate sets; all 840 simulated phases reach their exact fixed points |
+| Tests | 2,582 automated tests in this repository (2,519 passed, 0 failed, 63 skipped) |
 <!-- dashboard:end -->
 
 Named nodes are not the same as distinct functions, and simulation runs are
@@ -194,15 +221,17 @@ protein value came from. Details:
 [docs/experimental_data.md](docs/experimental_data.md).
 
 The project will produce 42 compartment-resolved bulk RNA-seq libraries, plus
-Ki67/EdU, pSMAD1/5/8 and viability. Schemas and validators are ready in
-`endotwin/config/data_schemas/`. No new data exist yet.
+Ki67/EdU, pSMAD1/5/8 and viability. Each RNA node of the model already has its
+gene readout in
+[observation_map.tsv](endotwin/config/observation_map.tsv). Schemas and
+validators are ready in `endotwin/config/data_schemas/`. No new data exist yet.
 
 ## Status and limits
 
 No calibration and no independent validation. Everything above is a model
 prediction under the stated rules and unit rates.
 
-- **Exploratory:** the network and the three hypothesis families (the IL-1β
+- **Exploratory:** the network and the four hypothesis families (the IL-1β
   wiring especially).
 - **Verified computationally:** exact structure, fixed points, MaBoSS runs,
   phase carry-over and the rate robustness of steady states.
@@ -210,18 +239,21 @@ prediction under the stated rules and unit rates.
   interfaces.
 - **Planned:** calibration and prospective validation (WP1–WP4).
 - **Future, not funded:** multiscale coupling with PhysiBoSS
-  ([notes](docs/architecture/future_multiscale_extension.md)).
+  ([notes](docs/architecture/future_multiscale_extension.md)). The compartment
+  split already gives three networks coupled only through ligand pools.
 
 Main limitations:
 
-- One progestin input drives all PGR-dependant nodes. PGR, IHH, NR2F2 and HAND2
-  cannot be told apart without compartment-specific perturbations.
+- One progestin input drives all PGR-dependant nodes. PGR, IHH and HAND2 cannot
+  be told apart without compartment-specific perturbations.
 - Where graded, the IHH–NR2F2–BMP2 edges are weakly supported by their papers.
+  No human study shows that Hedgehog reception is needed for NR2F2.
+- The SMO and FOXO1 inhibitors are candidates, not part of the funded protocol.
 - XAV939 is in the regimen but no rule reads it, since we dont know which
   compartment it reaches.
+- The IL-1β papers and Cooke 1997 were read at abstract level.
 - Outputs are Boolean and time is dimensionless. Transients depend on unknown
   rates; steady states do not.
-- PRL and IGFBP-1 share one node.
 
 ## Running it
 
@@ -230,9 +262,9 @@ MaBoSS 0.8.15.
 
 ```bash
 pixi install
-pixi run endotwin-test       # mainline tests, ~15 s
-pixi run endotwin-simulate   # reference, BMP-inhibition and IL-1β dynamics
-pixi run endotwin-all        # every mainline result, figure and metric, ~3 min
+pixi run endotwin-test       # mainline tests, ~20 s
+pixi run endotwin-simulate   # reference, BMP-inhibition, IL-1β and FOXO1-inhibition dynamics
+pixi run endotwin-all        # every mainline result, figure and metric, ~7 min
 pixi run test                # complete suite with the prototype, ~16 min
 ```
 
@@ -245,11 +277,12 @@ from endotwin.simulate import simulate_condition, SimulationSettings
 
 model = load_model()
 protocols = load_protocols(model)
-run = simulate_condition(model, protocols.conditions["bmpr_inhibition"],
+run = simulate_condition(model, protocols.conditions["foxo1_inhibition"],
                          protocols.interventions,
-                         model.selection_from_ids(["Q1_pgr_sufficient"]),
+                         model.selection_from_ids(["FOX_prl_foxo1_independent"]),
                          SimulationSettings(sample_count=5000, seed=1))
-run.final("differentiation_supplemented")["OUT_STROMAL_DECIDUALIZATION"]   # 1.0
+final = run.final("differentiation_supplemented")
+final["X_IGFBP1"], final["X_PRL"]   # (0.0, 1.0)
 ```
 
 To freeze a prediction before WP2, fill in
@@ -263,8 +296,8 @@ it says, reproducibly. They say nothing about whether the biology is right.
 
 | Suite | Tests | Result |
 |---|---|---|
-| This repository, `pixi run test` | 2,566 | 2,503 passed, 0 failed, 63 skipped |
-| of which mainline, `pixi run endotwin-test` | 97 | OK |
+| This repository, `pixi run test` | 2,582 | 2,519 passed, 0 failed, 63 skipped |
+| of which mainline, `pixi run endotwin-test` | 113 | OK |
 | Prototype at the source commit | 2,767 | 2,757 passed; the 10 others need local-only data |
 | Prototype benchmark, 2026-10-16 | 2,415 | OK |
 
@@ -276,8 +309,8 @@ repository does not have. They passed at the source commit. See
 
 | WP | What | Repository support |
 |---|---|---|
-| WP1 | Qualify the regimen in 4 G1 donors; RNA-seq and protein readouts; BMP inhibition and one paracrine perturbation | discrimination table, data schemas |
-| WP2 | One withheld perturbation in 5 new G1 donors, predictions frozen first | `endotwin-freeze`, donor-leakage guard |
+| WP1 | Qualify the regimen in 4 G1 donors; RNA-seq and protein readouts; BMP inhibition and one paracrine perturbation | discrimination table, RNA readout map, data schemas |
+| WP2 | One withheld perturbation in 5 new G1 donors, predictions frozen first | candidate perturbations (FOXO1, SMO inhibitors), `endotwin-freeze`, donor-leakage guard |
 | WP3 | IL-1β (G2) and endometriosis (G3) against G1 | IL-1β hypothesis family |
 | WP4 | Select one intervention with G2 data only, test in G2 and G3 | freezing with a G2-only selection record |
 
@@ -300,9 +333,12 @@ Full list with DOIs in
 
 - Zaragozano S, et al. Modeling human embryo adhesion using a microfluidic platform. *Sci Adv* 2026;12:eadz2249. doi:10.1126/sciadv.adz2249
 - Liao Z, et al. Impaired BMP signaling pathways disrupt decidualization in endometriosis. *Commun Biol* 2024;7:227. doi:10.1038/s42003-024-05898-z
-- Lee KY, et al. Bmp2 is critical for the murine uterine decidual response. *Mol Cell Biol* 2007. doi:10.1128/MCB.00342-07
+- Li Q, et al. Bone morphogenetic protein 2 functions via a conserved signaling pathway involving Wnt4 to regulate uterine decidualization in the mouse and the human. *J Biol Chem* 2007. doi:10.1074/jbc.M704723200
+- Cooke PS, et al. Stromal estrogen receptors mediate mitogenic effects of estradiol on uterine epithelium. *PNAS* 1997;94:6535–6540. doi:10.1073/pnas.94.12.6535
 - Li Q, et al. The antiproliferative action of progesterone in uterine epithelium is mediated by Hand2. *Science* 2011. doi:10.1126/science.1197454
 - Murata H, et al. Progestin-induced HAND2 inhibits angiopoietin 2 via FGF9 in human endometrial stromal cells. *Reprod Biol* 2019. doi:10.1016/j.repbio.2019.02.005
+- Vasquez YM, et al. FOXO1 is required for binding of PR on IRF4, novel transcriptional regulator of endometrial stromal decidualization. *Mol Endocrinol* 2015. doi:10.1210/me.2014-1292
+- Ujvari D, et al. Dysregulation of in vitro decidualization of human endometrial stromal cells by insulin via transcriptional inhibition of forkhead box protein O1. *PLoS ONE* 2017. doi:10.1371/journal.pone.0171004
 - Taylor RN, et al. Interleukin-1β induces and accelerates human endometrial stromal cell senescence and impairs decidualization via the JNK pathway. *Cell Death Discov* 2024;10:288. doi:10.1038/s41420-024-02048-6
 - Stoll G, et al. MaBoSS 2.0: an environment for stochastic Boolean modeling. *Bioinformatics* 2017;33:2226–2228. doi:10.1093/bioinformatics/btx123
 

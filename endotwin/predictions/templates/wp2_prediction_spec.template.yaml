@@ -11,7 +11,7 @@
 
 prediction_id: WP2-TEMPLATE
 purpose: WP2_prospective_G1          # WP2_prospective_G1 | WP4_selection_G2 | WP4_evaluation_G2 | WP4_evaluation_G3
-model_version: endotwin-v0.1.0       # the frozen model version (WP1 output)
+model_version: endotwin-v0.2.0       # the frozen model version (WP1 output)
 comparison: Q1_bmpr_inhibition       # a matched comparison in endotwin/config/protocols.yaml
 primary_readout: RO-PRL              # one primary functional readout (observation_map.tsv)
 secondary_readouts: [RO-IGFBP1, RO-PSMAD158]

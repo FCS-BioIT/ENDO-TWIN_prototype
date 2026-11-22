@@ -1,4 +1,4 @@
-# ENDO-TWIN experimental protocols for endotwin-v0.1.0.
+# ENDO-TWIN experimental protocols for endotwin-v0.2.0.
 #
 # A condition is an ordered list of phases. Each phase sets the experimental
 # inputs (unlisted inputs are OFF) and may apply interventions from
@@ -11,7 +11,7 @@
 # physical_duration records the experimental protocol for traceability only.
 
 schema_version: 1
-model_version: endotwin-v0.1.0
+model_version: endotwin-v0.2.0
 default_relative_duration: 20.0
 
 regimens:
@@ -75,6 +75,21 @@ conditions:
     phases: [basal, e2_priming, differentiation_supplemented]
     overlays:
       differentiation_supplemented: {inputs: {IN_IL1B: 1}}
+  foxo1_inhibition:
+    description: "FOXO1 activity inhibitor (for example AS1842856) during the differentiation step (candidate WP2 perturbation, not in the funded protocol)."
+    phases: [basal, e2_priming, differentiation_supplemented]
+    overlays:
+      differentiation_supplemented: {inputs: {IN_FOXO1_INHIBITOR: 1}}
+  smo_inhibition:
+    description: "Smoothened antagonist during the differentiation step (candidate perturbation, not in the funded protocol)."
+    phases: [basal, e2_priming, differentiation_supplemented]
+    overlays:
+      differentiation_supplemented: {inputs: {IN_SMO_INHIBITOR: 1}}
+  smo_inhibition_hormone_only:
+    description: "Smoothened antagonist under the hormone-only regimen, where cAMP no longer backs up BMP2 (candidate perturbation)."
+    phases: [basal, e2_priming, differentiation_hormone_only]
+    overlays:
+      differentiation_hormone_only: {inputs: {IN_SMO_INHIBITOR: 1}}
   progestin_withdrawal:
     description: "Supplemented regimen followed by withdrawal of the progestin (model-internal relaxation, not a planned arm)."
     phases: [basal, e2_priming, differentiation_supplemented, progestin_withdrawn]
@@ -111,6 +126,21 @@ comparisons:
     perturbed: il1b_exposure
     control: reference
     phase: differentiation_supplemented
+  - id: FOX_foxo1_inhibition
+    question: WP2-candidate
+    perturbed: foxo1_inhibition
+    control: reference
+    phase: differentiation_supplemented
+  - id: HH_smo_inhibition
+    question: WP2-candidate
+    perturbed: smo_inhibition
+    control: reference
+    phase: differentiation_supplemented
+  - id: HH_smo_inhibition_hormone_only
+    question: WP2-candidate
+    perturbed: smo_inhibition_hormone_only
+    control: hormone_only_reference
+    phase: differentiation_hormone_only
   - id: REG_hormone_only_vs_supplemented
     question: Task1.1
     perturbed: hormone_only_reference

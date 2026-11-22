@@ -65,12 +65,12 @@ them, to build the model or to validate it:
 
 - **They cannot separate the hypotheses.** Under untreated, HT and HT plus
   mifepristone (modelled either as progesterone receptor activity forced off in
-  both compartments or as progestin removal), every node of `endotwin-v0.1.0`
-  reaches the same steady state in all 12 rule-variant scenarios
+  both compartments or as progestin removal), every node of `endotwin-v0.2.0`
+  reaches the same steady state in all 24 rule-variant scenarios
   (`AdhesionConditionsAreUninformative` in
   `tests/mainline/test_structure_and_hypotheses.py`). Any readout computed from
   the steady state, an adhesion proxy included, is therefore identical for the
-  Q1, Q2 and inflammation variants in these conditions.
+  Q1, Q2, inflammation and FOX variants in these conditions.
 - **They cannot validate.** The proposal's validation is a perturbation withheld
   from development, with frozen predictions, in five new donors. The untreated
   and HT arms were already used as prototype diagnostics, the held-out arm has

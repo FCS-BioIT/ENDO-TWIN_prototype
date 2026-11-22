@@ -11,7 +11,7 @@ reproduced from the files, this audit says so. Source commit:
 `b1de5f90582f02291789eb72753fa5ab1f2d8c88` (`docs/ORIGIN.md`).
 
 Historical achievements (prototype, models `v0.1.0`-`v0.6.0`) are kept separate
-from the current executable ENDO-TWIN mainline (`endotwin-v0.1.0`).
+from the current executable ENDO-TWIN mainline (`endotwin-v0.2.0`).
 
 ---
 
@@ -123,21 +123,24 @@ pinned to:
 | scRNA node-support audit | v0.4.0 | 12 compartment-units pass QC; one alias class rule-challenged |
 | Perturbation cascades | v0.5.1, v0.6.0 | Progestin withdrawal response order; two-seed rank Spearman 0.961 |
 
-## 6. ENDO-TWIN mainline (new, `endotwin-v0.1.0`)
+## 6. ENDO-TWIN mainline (new, `endotwin-v0.2.0`)
 
 | | |
 |---|---|
-| Nodes | 19 (6 experimental inputs, 10 intracellular or interface nodes, 3 functional outputs) |
-| Dependencies | 23 (20 activating, 3 inhibitory); 2 cross the epithelial-stromal interface |
-| Distinct Boolean functions | 11; 3 alias classes (the inherited 7-member progesterone class, cAMP/PKA, IL-1beta/IL-1 signalling) |
-| Absorbed or never-binding dependencies | 1 (`S_PKA -> S_BMP2`) |
+| Nodes | 39: 8 inputs (2 candidate perturbations), 6 epithelial, 6 extracellular (3 ligand pools, 3 secreted proteins), 19 stromal; 3 functional outputs among them |
+| Dependencies | 47 (42 activating, 5 inhibitory); 9 cross between a cell compartment and the extracellular space, none directly between cells |
+| Distinct Boolean functions | 17; 10 multi-node alias classes, each justified by a readout, a perturbation or a competing rule (`docs/model_construction.md`) |
+| Absorbed or never-binding dependencies | 0 |
 | Readout-inert nodes | 1 (`IN_XAV939`, declared and read by no rule) |
-| Evidence classes of the 23 default dependencies | 12 literature-supported (of which 4 topic-level only, 1 contested, 1 route-unresolved, 1 species transfer), 3 ADOC-supported, 5 experimental definitions, 3 simplifying assumptions |
-| Rule-variant families | 3 (Q1 BMP, Q2 paracrine, INF inflammation); 7 variants; 12 scenarios |
-| Protocols | 9 conditions, 6 matched comparisons, 2 interventions |
-| Exact predictions | every condition x scenario fixed point; MaBoSS reaches all 312 phase fixed points (max deviation 0.002) |
-| Rate sensitivity | 30 random rate sets: 720 of 720 steady-state directions unchanged |
-| HAND2 relay example | area between curves 1.005 +/- 0.016 (10 of 10 replicates positive); identical end-of-phase values; delay present in 20 of 20 random-rate samples |
+| Evidence classes of the 47 default dependencies | 26 literature-supported (13 direct, 5 topic-level, 3 species transfer, 3 route-unresolved, 2 contested), 6 ADOC-supported, 9 experimental definitions, 6 simplifying assumptions (3 of them secretion relays) |
+| Rule-variant families | 4 (Q1 BMP, Q2 paracrine, INF inflammation, FOX FOXO1-PRL); 9 variants; 24 scenarios |
+| Protocols | 12 conditions, 9 matched comparisons, 2 interventions |
+| Exact predictions | every condition x scenario fixed point; MaBoSS reaches all 840 phase fixed points (max deviation 0.000) |
+| Rate sensitivity | 30 random rate sets: 5,670 of 5,670 steady-state directions unchanged |
+| HAND2 relay example | area between curves 3.00 +/- 0.02 (10 of 10 replicates positive); identical end-of-phase values; delay present in 20 of 20 random-rate samples |
+
+The previous mainline version, `endotwin-v0.1.0` (19 nodes, 23 dependencies, 11
+functions, 3 families, 12 scenarios), is kept with its committed results.
 
 ## 7. Inherited limitations and what ENDO-TWIN did with them
 
@@ -145,8 +148,8 @@ pinned to:
 |---|---|
 | No quantitative calibration | **Kept as a research question.** Not addressed by migration; the WP1 data are required. No rate or magnitude is fitted |
 | No independent prospective biological validation | **Kept; addressed by design.** A prediction-freezing workflow (`src/endotwin/predictions.py`) implements the WP2/WP4 separation; no prediction is frozen yet |
-| Equivalent or redundant Boolean functions | **Partly addressed.** Pure marker aliases (PRL, IGFBP-1, PAEP) were merged into their functional outputs. The progesterone alias class (7 nodes) remains: one progestin input drives every PGR-dependent node. BMP receptor inhibition now separates SMAD activity from it |
-| Dependencies that never influence outputs | Reduced from 20 of 89 to 1 of 23 |
+| Equivalent or redundant Boolean functions | **Addressed differently.** In v0.1.0 the pure marker aliases (PRL, IGFBP-1, PAEP) were merged into their outputs. v0.2.0 separates them again, but only where a measurement or a perturbation distinguishes them: RNA versus secreted protein, and a FOXO1 inhibitor that separates IGFBP-1 from PRL under the alternative FOX rule. Every remaining alias class is listed with its reason. The progesterone class (6 nodes) remains |
+| Dependencies that never influence outputs | Reduced from 20 of 89 (v0.6.0) to 1 of 23 (v0.1.0) and 0 of 47 (v0.2.0) |
 | Inputs that affect nothing downstream | `IN_HCG` and `IN_EMBRYO_CONDITIONED_SIGNAL` left with the adhesion module. **`IN_XAV939` kept unread** on purpose: no evidence says which ADOC compartment a tankyrase inhibitor reaches (The prototype refused this wiring, U4b) |
 | BMP2 expression conflated with pathway activity | **Addressed.** `S_BMP2` (ligand expression) and `S_BMP_SMAD` (receptor/SMAD1/5/8 activity, read as pSMAD1/5/8) are separate, with a receptor-inhibitor input. This is exactly the determinant the prototype was waiting for (`WAIT_FOR_EXPERIMENT`, `docs/v05_u4b_candidate_node_closure.md` section 3.1) |
 | Uncertain compartment attribution of measurements | **Kept and carried into the observation map** (`endotwin/config/observation_map.tsv`): IGFBP-1 compartment-ambiguous, PAEP outlet unverified |

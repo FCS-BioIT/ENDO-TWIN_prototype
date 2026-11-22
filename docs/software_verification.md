@@ -9,8 +9,8 @@ rules are right.
 
 | Run | Tests | Result | Record |
 |---|---|---|---|
-| This repository, complete suite (`pixi run test`) | 2,566 | 2,503 passed, 0 failed, 63 skipped in 937 s (single process) | `docs/verification/endotwin_suite_records.json`, log `docs/verification/endotwin_suite.log.gz` |
-| ENDO-TWIN mainline only (`pixi run endotwin-test`) | 97 | OK | same record |
+| This repository, complete suite (`pixi run test`) | 2,582 | 2,519 passed, 0 failed, 63 skipped in 947 s (single process) | `docs/verification/endotwin_suite_records.json`, log `docs/verification/endotwin_suite.log.gz` |
+| ENDO-TWIN mainline only (`pixi run endotwin-test`) | 113 | OK | same record |
 | Prototype at the source commit `b1de5f9`, fresh clone, before any change | 2,767 | 2,757 passed, 1 failed, 9 skipped in 1,980 s | `docs/verification/source_baseline_b1de5f9.json`, log alongside |
 | Prototype benchmark, 2026-10-16 (owner's working copy) | 2,415 | OK (1 skip) in 1,958 s | `docs/verification/cache_benchmark_record.json` |
 
@@ -84,7 +84,7 @@ Code coverage was not measured.
 - **Environment.** `pixi.lock` pins every package (Python 3.12.13, maboss
   0.8.15, ruff 0.16.0); it is byte-identical to the source commit.
 - **Content-addressed provenance.** ENDO-TWIN results carry the SHA-256 of
-  their inputs (`endotwin/results/endotwin-v0.1.0/run_manifest.json`). Prototype
+  their inputs (`endotwin/results/endotwin-v0.2.0/run_manifest.json`). Prototype
   results carry implementation digests and input hashes.
 - **Determinism.** Fixed seeds give identical outputs; reported results use
   disjoint seed blocks for replicates.
@@ -100,4 +100,4 @@ final commit except for the files that report its outcome: this document,
 `README.md`, `docs/verification/endotwin_suite_records.json`, the compressed log
 and `docs/research_foundation_metrics.json`. After those files were written,
 the mainline tests, lint and format checks were re-run on the final tree
-(97 of 97 mainline tests OK; `pixi run test-guards`: 198 guard tests OK, checkout unchanged; `pixi run lint` and `pixi run format-check` pass).
+(113 of 113 mainline tests OK; `pixi run test-guards`: 198 guard tests OK, checkout unchanged; `pixi run lint` and `pixi run format-check` pass).

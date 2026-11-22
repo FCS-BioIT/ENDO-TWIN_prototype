@@ -378,51 +378,95 @@
     }
   ],
   "endotwin_mainline": {
-    "model_version": "endotwin-v0.1.0",
+    "model_version": "endotwin-v0.2.0",
     "structure": {
-      "nodes": 19,
+      "nodes": 39,
       "free_variables": [
         "IN_E2",
         "IN_PROGESTIN",
         "IN_cAMP",
         "IN_XAV939",
         "IN_BMPR_INHIBITOR",
+        "IN_SMO_INHIBITOR",
+        "IN_FOXO1_INHIBITOR",
         "IN_IL1B"
       ],
-      "dependencies": 23,
-      "activations": 20,
-      "inhibitions": 3,
-      "distinct_functions": 11,
+      "dependencies": 47,
+      "activations": 42,
+      "inhibitions": 5,
+      "distinct_functions": 17,
       "alias_classes": [
+        [
+          "IN_E2",
+          "E_ESR1",
+          "S_ESR1"
+        ],
         [
           "IN_PROGESTIN",
           "E_PGR",
           "E_IHH",
+          "X_IHH",
           "S_PGR",
-          "S_NR2F2",
-          "S_BMP2",
           "S_HAND2"
         ],
         [
           "IN_cAMP",
-          "S_PKA"
+          "S_PKA",
+          "S_CEBPB"
         ],
         [
           "IN_IL1B",
-          "S_IL1_SIGNALING"
-        ]
-      ],
-      "absorbed_dependencies": [
+          "S_IL1_SIGNALING",
+          "S_JNK",
+          "S_ERK1_2"
+        ],
         [
-          "S_PKA",
+          "E_FGFR_ERK",
+          "OUT_EPITHELIAL_PROLIFERATION",
+          "X_PARACRINE_MITOGEN",
+          "S_PARACRINE_MITOGEN"
+        ],
+        [
+          "OUT_EPITHELIAL_SECRETORY",
+          "X_PAEP"
+        ],
+        [
+          "X_BMP2",
           "S_BMP2"
+        ],
+        [
+          "X_PRL",
+          "X_IGFBP1",
+          "S_IGFBP1",
+          "S_PRL"
+        ],
+        [
+          "S_HH_SIGNALING",
+          "S_NR2F2"
+        ],
+        [
+          "S_BMP_SMAD",
+          "S_WNT4"
         ]
       ],
+      "absorbed_dependencies": [],
       "never_binding_inhibitions": [],
-      "absorbed_or_never_binding": 1,
+      "absorbed_or_never_binding": 0,
       "phenotype_inert_nodes": [
         "IN_XAV939",
-        "E_IHH"
+        "IN_SMO_INHIBITOR",
+        "IN_FOXO1_INHIBITOR",
+        "E_IHH",
+        "X_IHH",
+        "X_PAEP",
+        "X_PRL",
+        "X_IGFBP1",
+        "S_FOXO1",
+        "S_IRF4",
+        "S_HH_SIGNALING",
+        "S_ERK1_2",
+        "S_IGFBP1",
+        "S_PRL"
       ],
       "readout_inert_nodes": [
         "IN_XAV939"
@@ -431,19 +475,23 @@
         "IN_XAV939"
       ]
     },
-    "cross_compartment_dependencies": 2,
+    "cross_compartment_dependencies": 0,
     "edge_evidence_classes": {
-      "adoc_supported": 3,
-      "experimental_definition": 5,
-      "literature_supported": 5,
-      "literature_supported_contested": 1,
-      "literature_supported_route_unresolved": 1,
-      "literature_supported_species_transfer": 1,
-      "literature_supported_topic_level": 4,
-      "simplifying_assumption": 3
+      "adoc_supported": 6,
+      "experimental_definition": 9,
+      "literature_supported": 13,
+      "literature_supported_contested": 2,
+      "literature_supported_route_unresolved": 3,
+      "literature_supported_species_transfer": 3,
+      "literature_supported_topic_level": 5,
+      "simplifying_assumption": 6
     },
     "variant_only_edges": 3,
     "rule_variant_families": {
+      "FOX": [
+        "FOX_prl_foxo1_dependent",
+        "FOX_prl_foxo1_independent"
+      ],
       "INF": [
         "INF_decidual_only",
         "INF_pgr_depletion"
@@ -458,24 +506,24 @@
         "Q2_epithelial_autonomous"
       ]
     },
-    "rule_variant_scenarios": 12,
-    "references": 20,
-    "protocol_conditions": 9,
-    "matched_comparisons": 6,
+    "rule_variant_scenarios": 24,
+    "references": 29,
+    "protocol_conditions": 12,
+    "matched_comparisons": 9,
     "interventions": 2
   },
   "software_verification": {
     "endotwin_full_suite": {
       "status": "final: run on the committed tree recorded in tested_tree",
       "command": "pixi run test (python -B -m unittest discover -s tests -v), single process",
-      "tested_tree": "4ba6825e2f74d31712c5286d6138544f48f4c8ac",
+      "tested_tree": "606e76d60b8ca807da024c2392b5bfb71a61da7f",
       "local_only_evidence_present": "data/combined-dataset-patient-integration.rds, the gitignored annotation workbook, context/literature/pdfs/ and output/review_inbox/ were hard-linked from the owner's prototype working copy (gitignored, never committed), as in the prototype 2026-10-16 benchmark",
-      "ran": 2566,
-      "seconds": 936.913,
+      "ran": 2582,
+      "seconds": 947.027,
       "result_line": "OK (skipped=63)",
       "failed": 0,
       "skipped": 63,
-      "passed": 2503,
+      "passed": 2519,
       "history_bound_skips": 63,
       "local_data_skips": 0,
       "failures_and_errors": [],
@@ -487,21 +535,20 @@
         "requires the prototype's source Git history: recorded commit 7a7eb34a4f7e is absent from this history-free repository (docs/ORIGIN.md)": 1
       },
       "log": "docs/verification/endotwin_suite.log.gz",
-      "log_sha256_uncompressed": "6cd544c56d2fdcb5ce881d637583161fa73695857570ab0c1e2a36a4d88dd6ea",
+      "log_sha256_uncompressed": "2d8a25505fd8c1c5562f6627bbbd4ed69b6733092617ea0a5daaf7ba4d4eee8c",
       "log_note": "Temporary-directory paths are replaced by <tmp> and the checkout path by a relative path; nothing else is altered.",
       "files_changed_after_run": [
         "README.md",
-        "docs/ORIGIN.md",
         "docs/research_foundation_metrics.json",
         "docs/software_verification.md",
         "docs/verification/endotwin_suite.log.gz",
         "docs/verification/endotwin_suite_records.json"
       ],
-      "post_run_checks": "On the final tree: pixi run endotwin-test 97 OK; pixi run test-guards 198 OK, checkout unchanged; pixi run lint and pixi run format-check pass. Only documentation and verification-record files changed after the run (list above)."
+      "post_run_checks": "On the final tree: pixi run endotwin-test 113 OK; pixi run test-guards 198 OK, checkout unchanged; pixi run lint and pixi run format-check pass. Only documentation and verification-record files changed after the run (list above)."
     },
     "endotwin_mainline_tests": {
       "command": "pixi run endotwin-test",
-      "ran": 97,
+      "ran": 113,
       "result_line": "OK"
     },
     "source_baseline": {

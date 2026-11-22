@@ -187,6 +187,35 @@ class InflammationHypotheses(unittest.TestCase):
             )
 
 
+class AdhesionConditionsAreUninformative(unittest.TestCase):
+    """The published embryo-adhesion arms cannot separate any hypothesis.
+
+    Backs the scope decision in docs/experimental_data.md, section 3: under
+    untreated, full regimen and full regimen with mifepristone, every node has
+    the same steady state in all 12 scenarios, so no readout of the steady state
+    (an adhesion proxy included) could discriminate them.
+    """
+
+    NONE: ClassVar[dict[str, int]] = {k: 0 for k in MODEL.inputs}
+    FULL: ClassVar[dict[str, int]] = {**NONE, **HT}
+    CONDITIONS: ClassVar[dict[str, tuple[dict[str, int], dict[str, int]]]] = {
+        "untreated": (NONE, {}),
+        "full_regimen": (FULL, {}),
+        "mifepristone_pgr_antagonism": (FULL, {"E_PGR": 0, "S_PGR": 0}),
+        "mifepristone_as_progestin_removal": ({**FULL, "IN_PROGESTIN": 0}, {}),
+    }
+
+    def test_every_scenario_reaches_the_same_state_in_every_adhesion_arm(self):
+        scenarios = MODEL.scenarios()
+        self.assertEqual(len(scenarios), 12)
+        for name, (inputs, forced) in self.CONDITIONS.items():
+            states = {
+                tuple(sorted(fixed_point(MODEL.rules_for(sel), inputs, forced).items()))
+                for sel in scenarios
+            }
+            self.assertEqual(len(states), 1, name)
+
+
 class CommittedPredictionTables(unittest.TestCase):
     def _read(self, name):
         with (RESULTS / name).open(newline="") as handle:

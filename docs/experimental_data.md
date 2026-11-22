@@ -14,7 +14,6 @@ encoded as SOFIA-HT-001 and in `endotwin/config/protocols.yaml`:
 |---|---|---|
 | E2 priming | 10 nM E2 | 48 h |
 | Hormone treatment (HT) | 10 nM E2 + 1 uM MPA + 250 uM 8-Br-cAMP + 10 uM XAV939 | 96 h |
-| Mifepristone (legacy arm) | 10 uM mifepristone after HT | 24 h |
 
 The HT effect is a combined effect of an oestrogen, a synthetic progestin, a
 cAMP analogue and a WNT pathway inhibitor. It is never attributed to ovarian
@@ -28,19 +27,18 @@ table `input_tables/adoc_secreted_proteins.tsv` (62 rows), validation report
 `config/adoc_chip_donor_provenance.tsv`, compartment attribution
 `docs/c2_observation_compartments/attribution_report.md`.
 
-| | PRL | IGFBP-1 | PAEP | Stable embryo adhesion (legacy) |
-|---|---|---|---|---|
-| Assay | ELISA (Boster EK0593; manuscript Methods) | ELISA (Raybiotech ELH-IGFBP1-1; manuscript Methods) | ELISA per the manuscript Methods (Abcam ab275904); **the source workbook does not name the assay** | Resistance to flushing after embryo challenge |
-| Rows | 18: 10 observed, 8 no detectable secretion | 30: 19 observed, 11 no detectable secretion | 14: 10 observed, 4 missing | 39 embryos |
-| Conditions | Days 0, 3, 6 of the HT protocol; no untreated arm | Days 0, 3, 6 | Two protocol phases: E2-only and full HT; no untreated arm, no day-0 control | Untreated 0/12; HT 9/19; HT + mifepristone 1/8 |
-| Compartment | Basal outlet only; stromal-attributed | Apical and basal; compartment-ambiguous | Outlet not verified in the source data (OM-001); glandular or global secretory readout | Not applicable |
-| Unit of replication | 6 positional columns; chip mapping **lost** (LOST-002); at most 3 chip families | 10 positional columns; chip mapping **lost** (LOST-001) | 7 chip headers, 5 with values | Embryos; embryo-to-chip and embryo-to-donor mapping not recoverable |
-| Donors | Manuscript: 3 independent donors for PRL/IGFBP-1 and PAEP. The repository cannot reconstruct donor identity per value: donor_id is empty in all 62 rows, and PAEP has at most 2 epithelial source groups | | | Manuscript: 9 embryos in 9 chips from 4 donors (attached), not reconciled |
-| Use in the prototype | Provisional mapping; onset-order mapping rejected | Diagnostic only (non-inversion, 3 of 5 units) | Feasibility constraint OM-001 (full HT > E2-only); circular for evaluation | Ordinal diagnostic; mifepristone held out, structurally contradicted (model 0 vs 1/8) |
+| | PRL | IGFBP-1 | PAEP |
+|---|---|---|---|
+| Assay | ELISA (Boster EK0593; manuscript Methods) | ELISA (Raybiotech ELH-IGFBP1-1; manuscript Methods) | ELISA per the manuscript Methods (Abcam ab275904); **the source workbook does not name the assay** |
+| Rows | 18: 10 observed, 8 no detectable secretion | 30: 19 observed, 11 no detectable secretion | 14: 10 observed, 4 missing |
+| Conditions | Days 0, 3, 6 of the HT protocol; no untreated arm | Days 0, 3, 6 | Two protocol phases: E2-only and full HT; no untreated arm, no day-0 control |
+| Compartment | Basal outlet only; stromal-attributed | Apical and basal; compartment-ambiguous | Outlet not verified in the source data (OM-001); glandular or global secretory readout |
+| Unit of replication | 6 positional columns; chip mapping **lost** (LOST-002); at most 3 chip families | 10 positional columns; chip mapping **lost** (LOST-001) | 7 chip headers, 5 with values |
+| Donors | Manuscript: 3 independent donors for PRL/IGFBP-1 and PAEP. The repository cannot reconstruct donor identity per value: donor_id is empty in all 62 rows, and PAEP has at most 2 epithelial source groups | | |
+| Use in the prototype | Provisional mapping; onset-order mapping rejected | Diagnostic only (non-inversion, 3 of 5 units) | Feasibility constraint OM-001 (full HT > E2-only); circular for evaluation |
 
 A chip is not an independent biological replicate: chips can share donors, and
-epithelium and stroma in one chip can come from different donors. Embryo-level
-outcomes are never converted into donor-level results.
+epithelium and stroma in one chip can come from different donors.
 
 ### Known provenance inconsistencies (recorded, not resolved)
 
@@ -57,10 +55,33 @@ outcomes are never converted into donor-level results.
    untreated PAEP arm.
 6. Manuscript chip and donor counts (for example 5 chips from 3 donors) cannot be
    reconciled with the recoverable chip mapping.
-7. The manuscript Methods state "n=1939" human blastocysts against n=19 in the
-   Results (likely a typographical error; unverified).
 
-## 3. Single-cell transcriptomics
+## 3. Embryo adhesion: prototype only, not ENDO-TWIN data
+
+The ADOC paper also reports stable embryo adhesion (untreated 0/12, HT 9/19,
+HT + 10 uM mifepristone 1/8; 39 embryos). The prototype used these counts as an
+ordinal diagnostic and held out the mifepristone arm. ENDO-TWIN does not use
+them, to build the model or to validate it:
+
+- **They cannot separate the hypotheses.** Under untreated, HT and HT with
+  progesterone receptor activity forced off in both compartments, every node of
+  `endotwin-v0.1.0` reaches the same steady state in all 12 rule-variant
+  scenarios (`tests/mainline/test_structure_and_hypotheses.py`,
+  `AdhesionConditionsAreUninformative`). No readout derived from the steady
+  state, adhesion included, can tell the Q1, Q2 or inflammation variants apart
+  in these conditions.
+- **They cannot validate.** The proposal's validation is a perturbation withheld
+  from development, with frozen predictions, in five new donors. The untreated
+  and HT arms were already used as prototype diagnostics, the held-out arm has
+  already been compared (prototype model 0 against 1/8 observed), and the units
+  are embryos whose chip and donor mapping cannot be recovered.
+- **No new adhesion data are planned.** The proposal plans no embryo
+  experiments and no adhesion readout.
+
+The prototype record is kept as legacy material (`docs/endpoint/`,
+`docs/c3_kinetic_readouts/`, `docs/legacy/README.md`).
+
+## 4. Single-cell transcriptomics
 
 Accession **E-MTAB-15842** (the paper's annotated Seurat object; 2.9 GB, not
 committed; SHA-256 pinned in `config/external_data_manifest.tsv`). Aggregates
@@ -98,19 +119,18 @@ Relevance to ENDO-TWIN: hormone-treated stroma expresses BMP2 (SOFIA-SC-002),
 which supports the BMP2 expression rule but says nothing about SMAD activity.
 Transcript abundance is not pathway activity: pSMAD1/5/8 must be measured.
 
-## 4. Construction versus evaluation
+## 5. Construction versus evaluation
 
 | Role | Data |
 |---|---|
 | Construction (fixed how the model reads data or what a state means) | The regimen; scRNA expression programmes (SOFIA-SC-001/002); PAEP, PRL and IGFBP-1 as markers of the programmes they now read out |
-| Calibration or diagnostic (constrain or check, no magnitude fitted) | Adhesion untreated and HT; PAEP (OM-001); IGFBP-1 (OM-002) |
-| Held out | HT + mifepristone adhesion (1/8); never used to tune |
+| Calibration or diagnostic (constrain or check, no magnitude fitted) | PAEP (OM-001); IGFBP-1 (OM-002) |
 | Evaluation only | RNA-endpoint concordance (excluding the circular `E_PAEP`) |
 
 No ADOC measurement has been used for prospective validation of either prototype
 or ENDO-TWIN.
 
-## 5. Planned ENDO-TWIN data and their interfaces
+## 6. Planned ENDO-TWIN data and their interfaces
 
 Nothing below exists yet. Planned per the proposal: 79 chips (24 WP1, 10 WP2,
 15 WP3, 30 WP4) from 14 donors without known pathology (G1, G2) and 5

@@ -1,7 +1,8 @@
 [workspace]
-authors = ["PROTOTYPE contributors"]
+authors = ["ENDO-TWIN contributors"]
 channels = ["conda-forge"]
-name = "adoc-prototype"
+description = "ENDO-TWIN: mechanistic MaBoSS model of human endometrial hormonal regulation (with the prototype foundation it was derived from)"
+name = "endo-twin"
 platforms = ["linux-64"]
 version = "0.1.0"
 
@@ -23,9 +24,69 @@ numpy = ">=2.0,<3"
 pandas = ">=2.2,<4"
 pillow = ">=11,<14"
 
-[tasks.harness-check]
-cmd = "aih doctor --cwd ."
-description = "Validate global Agent Harness installation and PROTOTYPE integration"
+# ---------------------------------------------------------------------------
+# ENDO-TWIN mainline (src/endotwin, endotwin/). See README.md.
+# ---------------------------------------------------------------------------
+
+[tasks.endotwin-all]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m endotwin.cli all"
+description = "Regenerate every ENDO-TWIN result (endotwin/results/), figure (docs/assets/endotwin/) and the research-foundation metrics (about 3 min, runs MaBoSS)"
+
+[tasks.endotwin-structure]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m endotwin.cli structure"
+description = "Exact structural analysis of the mainline network (no MaBoSS)"
+
+[tasks.endotwin-predict]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m endotwin.cli predict"
+description = "Exact fixed-point predictions and hypothesis-discrimination table for every rule-variant scenario (no MaBoSS)"
+
+[tasks.endotwin-confirm]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m endotwin.cli confirm"
+description = "Simulate every protocol condition in MaBoSS and check convergence to the exact fixed points"
+
+[tasks.endotwin-transient]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m endotwin.cli transient"
+description = "HAND2 stromal-relay example: relay vs relay-plus-direct representations, paired disjoint seed blocks"
+
+[tasks.endotwin-rate-sensitivity]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m endotwin.cli rate-sensitivity"
+description = "Random per-node transition rates: stability of predicted directions and of the relay transient"
+
+[tasks.endotwin-figures]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m endotwin.cli figures"
+description = "Redraw the ENDO-TWIN figures from committed result tables (no MaBoSS)"
+
+[tasks.endotwin-metrics]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m endotwin.cli metrics"
+description = "Recompute docs/research_foundation_metrics.json from the committed files"
+
+[tasks.endotwin-simulate]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m endotwin.cli reference-dynamics"
+description = "Example simulation: reference and BMP-inhibition dynamics under both Q1 hypotheses"
+
+[tasks.endotwin-freeze]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m endotwin.cli freeze"
+description = "Freeze a prospective prediction from a spec (pass the spec path); refuses a dirty tree"
+
+[tasks.endotwin-verify-frozen]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m endotwin.cli verify-frozen"
+description = "Verify the integrity of a frozen prediction record (pass the record path)"
+
+[tasks.endotwin-evaluate]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m endotwin.cli evaluate"
+description = "Evaluate a frozen prediction against donor-level observations (pass record and table)"
+
+[tasks.endotwin-validate-data]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m endotwin.cli validate-data"
+description = "Validate a planned data table against its schema (pass schema name and table path)"
+
+[tasks.endotwin-test]
+cmd = "PYTHONDONTWRITEBYTECODE=1 python -B -m unittest discover -s tests/mainline -t tests -v"
+description = "Run only the ENDO-TWIN mainline tests (tests/mainline); the complete suite is `pixi run test`"
+
+# ---------------------------------------------------------------------------
+# prototype foundation and legacy tasks (unchanged unless noted)
+# ---------------------------------------------------------------------------
 
 [tasks.chatgpt-results-bundle]
 cmd = "bash scripts/make_chatgpt_results_bundle.sh"
@@ -37,7 +98,7 @@ description = "Run focused tests for ChatGPT bundle inclusion, exclusion, manife
 
 [tasks.test]
 cmd = "PYTHONDONTWRITEBYTECODE=1 python -B -m unittest discover -s tests -v"
-description = "Run the complete PROTOTYPE suite: every directory under tests/, integration and biological constraints included. This is the required pre-merge check; `discover -s tests/unit` is not a substitute"
+description = "Run the complete suite (ENDO-TWIN mainline and prototype foundation): every directory under tests/, integration and biological constraints included. This is the required pre-merge check; `discover -s tests/unit` is not a substitute"
 
 [tasks.test-guards]
 cmd = "PYTHONDONTWRITEBYTECODE=1 python -B scripts/run_test_guards.py"
@@ -264,5 +325,5 @@ cmd = "bash -lc 'set -euo pipefail; PYTHONDONTWRITEBYTECODE=1 python -B -m unitt
 description = "Run the bounded PROFILE and PROFILE_v2 local parity fixtures"
 
 [tasks.all-checks]
-cmd = "bash -lc 'set -euo pipefail; pixi run harness-check; python -B .codex/skills/adoc-data-audit/scripts/check_data_manifest.py --root . --check-hashes; pixi run lint; pixi run format-check; pixi run test; pixi run compile-models; pixi run validate-models; pixi run profile-parity; pixi run smoke; pixi run validate-smoke; pixi run report-smoke'"
+cmd = "bash -lc 'set -euo pipefail; python -B .codex/skills/adoc-data-audit/scripts/check_data_manifest.py --root . --check-hashes; pixi run lint; pixi run format-check; pixi run test; pixi run compile-models; pixi run validate-models; pixi run profile-parity; pixi run smoke; pixi run validate-smoke; pixi run report-smoke'"
 description = "Run bounded Phase 0 and Phase 1 validation gates without triggering any full screening workflow"

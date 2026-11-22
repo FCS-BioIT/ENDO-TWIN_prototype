@@ -1,0 +1,17 @@
+{
+  "content": "Network panel: P(ON) of every node through basal, E2 priming and differentiation with IL-1beta (default rules). Side panels: reference regimen and the two competing IL-1beta rules.",
+  "figure": "docs/assets/endotwin/endotwin_pathway_dynamics_v0.1.0.gif",
+  "frames": 81,
+  "inputs_sha256": {
+    "endotwin/models/endotwin-v0.1.0/network.bnd": "5af53178925b5d292a0a76ae6565069071ae05695e701bfa8e2a2e3fe32987dd",
+    "endotwin/models/endotwin-v0.1.0/node_dictionary.tsv": "912c8458f93e3e5264613b3beaa66d2078510ad44a36c24753afbaa611462824",
+    "endotwin/results/endotwin-v0.1.0/dynamics_il1b_exposure__INF_pgr_depletion.tsv": "05baf15307c5481e38b81113b22d9cd21fbebe4ac733ab624d201359f9920362",
+    "endotwin/results/endotwin-v0.1.0/dynamics_il1b_exposure__default.tsv": "5a51acc9468329d5b785c9a446c3e0dfd4eb93a61323bf1d32f040a2b36f9f77",
+    "endotwin/results/endotwin-v0.1.0/dynamics_reference__default.tsv": "e04e269204b9ff95ad76aaaf1691eb61bfccbccb713541cb685cb0038d97e477"
+  },
+  "limitations": "Model predictions, not observations. IL-1beta wiring is provisional. Time is dimensionless; node fill is a trajectory frequency, not a concentration.",
+  "main_result": "Both IL-1beta rules abolish decidualisation; only the PGR-depletion rule also abolishes pSMAD1/5/8 (and, under the default Q2 relay, restores epithelial proliferation).",
+  "model_version": "endotwin-v0.1.0",
+  "regenerate": "pixi run endotwin-figures",
+  "simulation": "10,000 trajectories, seed 1, unit rates, joint state carried across phases"
+}

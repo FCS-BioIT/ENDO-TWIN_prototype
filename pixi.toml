@@ -54,7 +54,7 @@ description = "Random per-node transition rates: stability of predicted directio
 
 [tasks.endotwin-figures]
 cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m endotwin.cli figures"
-description = "Redraw the ENDO-TWIN figures from committed result tables (no MaBoSS)"
+description = "Redraw the ENDO-TWIN figures and the README animation from committed result tables (no MaBoSS)"
 
 [tasks.endotwin-metrics]
 cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m endotwin.cli metrics"
@@ -62,7 +62,7 @@ description = "Recompute docs/research_foundation_metrics.json from the committe
 
 [tasks.endotwin-simulate]
 cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m endotwin.cli reference-dynamics"
-description = "Example simulation: reference and BMP-inhibition dynamics under both Q1 hypotheses"
+description = "Example simulation: reference, BMP-inhibition (both Q1 hypotheses) and IL-1beta (both inflammation hypotheses) dynamics"
 
 [tasks.endotwin-freeze]
 cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m endotwin.cli freeze"

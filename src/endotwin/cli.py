@@ -196,22 +196,26 @@ def cmd_reference(args) -> None:
     protocols = load_protocols(model)
     out = results_dir(model.version)
     settings = SimulationSettings(sample_count=args.samples, seed=args.seed)
-    for condition_id in ("reference", "bmpr_inhibition"):
-        for variant in (None, "Q1_pgr_sufficient"):
-            selection = model.selection_from_ids([variant]) if variant else None
-            result = simulate_condition(
-                model,
-                protocols.conditions[condition_id],
-                protocols.interventions,
-                selection,
-                settings,
-            )
-            tag = f"{condition_id}__{variant or 'default'}"
-            frame = result.trajectory()
-            frame.round(6).to_csv(
-                out / f"dynamics_{tag}.tsv", sep="\t", index=False, lineterminator="\n"
-            )
-            _write_json(out / f"dynamics_{tag}_provenance.json", result.provenance())
+    runs = [
+        (condition_id, variant)
+        for condition_id in ("reference", "bmpr_inhibition")
+        for variant in (None, "Q1_pgr_sufficient")
+    ] + [("il1b_exposure", None), ("il1b_exposure", "INF_pgr_depletion")]
+    for condition_id, variant in runs:
+        selection = model.selection_from_ids([variant]) if variant else None
+        result = simulate_condition(
+            model,
+            protocols.conditions[condition_id],
+            protocols.interventions,
+            selection,
+            settings,
+        )
+        tag = f"{condition_id}__{variant or 'default'}"
+        frame = result.trajectory()
+        frame.round(6).to_csv(
+            out / f"dynamics_{tag}.tsv", sep="\t", index=False, lineterminator="\n"
+        )
+        _write_json(out / f"dynamics_{tag}_provenance.json", result.provenance())
     print("wrote reference dynamics")
 
 

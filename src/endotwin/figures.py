@@ -378,7 +378,7 @@ def dynamics_figure(version: str) -> Path:
             [float(r[node]) for r in bmp],
             color=ORANGE,
             lw=2,
-            label="BMPR inhibition, H1 BMP-required",
+            label="BMPR inhibition, Q1 BMP-required",
         )
         if node == "X_PRL":
             ax.plot(
@@ -387,7 +387,7 @@ def dynamics_figure(version: str) -> Path:
                 color=AQUA,
                 lw=2,
                 ls="--",
-                label="BMPR inhibition, H1 PGR-sufficient (equals its own reference)",
+                label="BMPR inhibition, Q1 PGR-sufficient (equals its own reference)",
             )
         ax.set_title(title, fontsize=9, color=INK, loc="left")
         ax.set_ylim(-0.04, 1.06)

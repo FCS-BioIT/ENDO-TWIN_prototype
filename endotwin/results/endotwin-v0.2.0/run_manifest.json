@@ -1,0 +1,57 @@
+{
+  "command": "pixi run endotwin-all",
+  "engine": {
+    "backend": "cmaboss",
+    "package": "maboss",
+    "version": "0.8.15"
+  },
+  "inputs_sha256": {
+    "config/interventions.tsv": "8ab8d0b630c2306d3ee8b4761391df6b5dd058d21296180549ff68231048ac15",
+    "config/observation_map.tsv": "e8f169cef597f3cbe559432ce07d1720a2258e4d9df7a5ee0316d8fc41df943d",
+    "config/protocols.yaml": "2760c16ec10b41efe8afe04ecd49c492fbc9cbc29d1af8072e8b6509d21a8b3f",
+    "evidence/references.tsv": "0db40859d5ea198fe7371982ae40705e87f45b55dd5a0aeeed142ca1155a2f80",
+    "model/baseline.cfg": "3877a8321d135a53413d016a1dc6bc2dacf66f8d3f86cb5a9120879588f40211",
+    "model/edges.tsv": "ee90b4c74b4f84358b2ac1f500334d6ff8f23946deb3aa756ebe45f3ac83b86e",
+    "model/interface.tsv": "9d74f303f0cb4b42cc5640528b686d899e51f5b6c1bdffe3929ef7ef95820778",
+    "model/lineage.tsv": "12cefda1bfa1aa3377580e371148f8285bfe842e2f78ecaf6345a17131bf9a63",
+    "model/network.bnd": "3d1ab4309497fc4a9e0810008296a94ab0eea65b694d232d198990d0f94a0936",
+    "model/node_dictionary.tsv": "b512cc3ec82cdceca59e38391481c896476ecee75939caf92232e1e876d7a365",
+    "model/provenance.toml": "af6964a9581a06d9c9fe6f2c85b4e8d534bb9731e27482d3f54418e0f31914f9",
+    "model/rule_variants.tsv": "3b022643bb7e0fd8306f2adcd6910f10c4bdc2a4c18f08f8a9dfa63db1d5cd15"
+  },
+  "model_version": "endotwin-v0.2.0",
+  "outputs": [
+    "comparison_directions.tsv",
+    "discrimination.tsv",
+    "dynamics_bmpr_inhibition__Q1_pgr_sufficient.tsv",
+    "dynamics_bmpr_inhibition__Q1_pgr_sufficient_provenance.json",
+    "dynamics_bmpr_inhibition__default.tsv",
+    "dynamics_bmpr_inhibition__default_provenance.json",
+    "dynamics_foxo1_inhibition__FOX_prl_foxo1_independent.tsv",
+    "dynamics_foxo1_inhibition__FOX_prl_foxo1_independent_provenance.json",
+    "dynamics_foxo1_inhibition__default.tsv",
+    "dynamics_foxo1_inhibition__default_provenance.json",
+    "dynamics_il1b_exposure__INF_pgr_depletion.tsv",
+    "dynamics_il1b_exposure__INF_pgr_depletion_provenance.json",
+    "dynamics_il1b_exposure__default.tsv",
+    "dynamics_il1b_exposure__default_provenance.json",
+    "dynamics_reference__Q1_pgr_sufficient.tsv",
+    "dynamics_reference__Q1_pgr_sufficient_provenance.json",
+    "dynamics_reference__default.tsv",
+    "dynamics_reference__default_provenance.json",
+    "fixed_point_predictions.tsv",
+    "maboss_confirmation.tsv",
+    "maboss_confirmation_summary.json",
+    "rate_sensitivity.tsv",
+    "rate_sensitivity_summary.json",
+    "relay_rate_robustness.tsv",
+    "relay_transient.tsv",
+    "relay_transient_summary.json",
+    "structure.json"
+  ],
+  "repository_state_at_generation": {
+    "commit": "099fa136c2ff80437ad5c2e234382da158c5c397",
+    "dirty": true
+  },
+  "semantics": "MaBoSS probabilities are simulated trajectory frequencies under the stated rules, unit transition rates (unless stated) and initial conditions; MaBoSS time is dimensionless and not mapped to experimental time. No result here is a biological observation or a validation."
+}

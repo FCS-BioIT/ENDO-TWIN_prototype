@@ -1,0 +1,85 @@
+{
+  "condition_id": "bmpr_inhibition",
+  "engine": {
+    "backend": "cmaboss",
+    "package": "maboss",
+    "version": "0.8.15"
+  },
+  "model_version": "endotwin-v0.2.0",
+  "phases": [
+    {
+      "converged": true,
+      "forced": {},
+      "inputs": {
+        "IN_BMPR_INHIBITOR": 0,
+        "IN_E2": 0,
+        "IN_FOXO1_INHIBITOR": 0,
+        "IN_IL1B": 0,
+        "IN_PROGESTIN": 0,
+        "IN_SMO_INHIBITOR": 0,
+        "IN_XAV939": 0,
+        "IN_cAMP": 0
+      },
+      "max_change_over_last_window": 0.0,
+      "network_sha256": "0c5897b189f0bd9f5dd099cfcbc5fa4489f548792d9a0ef612117f3322ad8847",
+      "phase_id": "basal",
+      "relative_duration": 30.0,
+      "seed": 160001,
+      "start_time": 0.0
+    },
+    {
+      "converged": true,
+      "forced": {},
+      "inputs": {
+        "IN_BMPR_INHIBITOR": 0,
+        "IN_E2": 1,
+        "IN_FOXO1_INHIBITOR": 0,
+        "IN_IL1B": 0,
+        "IN_PROGESTIN": 0,
+        "IN_SMO_INHIBITOR": 0,
+        "IN_XAV939": 0,
+        "IN_cAMP": 0
+      },
+      "max_change_over_last_window": 0.0,
+      "network_sha256": "0c5897b189f0bd9f5dd099cfcbc5fa4489f548792d9a0ef612117f3322ad8847",
+      "phase_id": "e2_priming",
+      "relative_duration": 30.0,
+      "seed": 170001,
+      "start_time": 30.0
+    },
+    {
+      "converged": true,
+      "forced": {},
+      "inputs": {
+        "IN_BMPR_INHIBITOR": 1,
+        "IN_E2": 1,
+        "IN_FOXO1_INHIBITOR": 0,
+        "IN_IL1B": 0,
+        "IN_PROGESTIN": 1,
+        "IN_SMO_INHIBITOR": 0,
+        "IN_XAV939": 1,
+        "IN_cAMP": 1
+      },
+      "max_change_over_last_window": 0.0,
+      "network_sha256": "0c5897b189f0bd9f5dd099cfcbc5fa4489f548792d9a0ef612117f3322ad8847",
+      "phase_id": "differentiation_supplemented",
+      "relative_duration": 30.0,
+      "seed": 180001,
+      "start_time": 60.0
+    }
+  ],
+  "rule_variants": {
+    "FOX": "FOX_prl_foxo1_dependent",
+    "INF": "INF_decidual_only",
+    "Q1": "Q1_bmp_required",
+    "Q2": "Q2_stromal_relay"
+  },
+  "settings": {
+    "duration_scale": 1.0,
+    "initial_probabilities": {},
+    "rates": {},
+    "sample_count": 10000,
+    "seed": 1,
+    "time_tick": 0.1
+  }
+}

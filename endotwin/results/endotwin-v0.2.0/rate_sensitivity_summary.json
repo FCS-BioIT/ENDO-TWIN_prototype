@@ -1,0 +1,29 @@
+{
+  "all_agreement_fraction": 1.0,
+  "converged_agreement_fraction": 1.0,
+  "direction_threshold": 0.05,
+  "duration_scale": 5.0,
+  "model_version": "endotwin-v0.2.0",
+  "rate_distribution": "independent log-uniform per node, activation and inactivation",
+  "rate_range": [
+    0.1,
+    10.0
+  ],
+  "records": 5670,
+  "records_converged": 5670,
+  "relay_transient_under_random_rates": {
+    "max_area": 14.782383,
+    "max_final_difference": 0.0,
+    "median_area": 7.250707,
+    "min_area": 2.040503,
+    "positive_area_samples": 20,
+    "rate_range": [
+      0.1,
+      10.0
+    ],
+    "samples": 20
+  },
+  "sample_count": 2000,
+  "samples": 30,
+  "scenario": "FOX_prl_foxo1_dependent+INF_decidual_only+Q1_bmp_required+Q2_stromal_relay"
+}

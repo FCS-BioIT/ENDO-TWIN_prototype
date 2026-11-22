@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import csv
 import itertools
 import json
 import sys
@@ -13,12 +14,13 @@ if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
 from endotwin.model import load_model, sha256_file
-from endotwin.protocols import ProtocolError, load_protocols
+from endotwin.protocols import ProtocolError, forced_nodes, load_protocols
 from endotwin.simulate import (
     SimulationSettings,
     phase_seed,
     simulate_condition,
 )
+from endotwin.structure import fixed_point
 
 MODEL = load_model()
 PROTOCOLS = load_protocols(MODEL)
@@ -175,6 +177,48 @@ class CommittedResults(unittest.TestCase):
         self.assertEqual(manifest["inputs_sha256"], input_digests(MODEL))
         for name in manifest["outputs"]:
             self.assertTrue((RESULTS / name).is_file(), name)
+
+    def test_committed_dynamics_end_at_the_exact_fixed_point_of_their_rules(self):
+        tables = sorted(RESULTS.glob("dynamics_*.tsv"))
+        self.assertGreaterEqual(len(tables), 6)
+        for table in tables:
+            condition_id, variant = table.stem.removeprefix("dynamics_").split("__")
+            selection = MODEL.selection_from_ids(
+                [] if variant == "default" else [variant]
+            )
+            last = PROTOCOLS.conditions[condition_id].phases[-1]
+            exact = fixed_point(
+                MODEL.rules_for(selection),
+                last.inputs,
+                forced_nodes(last, PROTOCOLS.interventions),
+            )
+            with table.open(newline="") as handle:
+                final = list(csv.DictReader(handle, delimiter="\t"))[-1]
+            self.assertEqual(final["phase_id"], last.phase_id, table.name)
+            for node, value in exact.items():
+                self.assertAlmostEqual(
+                    float(final[node]), value, delta=0.02, msg=f"{table.name}: {node}"
+                )
+
+    def test_animation_matches_its_provenance_record(self):
+        from PIL import Image
+
+        gif = ROOT / "docs/assets/endotwin/endotwin_pathway_dynamics_v0.1.0.gif"
+        sidecar = json.loads(
+            gif.with_name(gif.stem + "_provenance.json").read_text(encoding="utf-8")
+        )
+        with Image.open(gif) as image:
+            self.assertEqual(image.n_frames, sidecar["frames"])
+        self.assertLess(gif.stat().st_size, 5_000_000)
+        for tag in (
+            "reference__default",
+            "il1b_exposure__default",
+            "il1b_exposure__INF_pgr_depletion",
+        ):
+            self.assertIn(
+                f"endotwin/results/endotwin-v0.1.0/dynamics_{tag}.tsv",
+                sidecar["inputs_sha256"],
+            )
 
     def test_figure_sidecars_bind_current_inputs(self):
         for sidecar in sorted(

@@ -25,40 +25,71 @@ from endotwin.figures import (
     ASSETS,
     BASELINE,
     BLUE,
-    COMPS,
     GRID,
     INK,
     INK_2,
     LAYOUT,
+    NODE_H,
+    NODE_W,
     ORANGE,
     SURFACE,
     TINT,
+    XLIM,
+    YLIM,
     _sha,
+    crosses,
+    draw_compartments,
+    draw_edge,
 )
 from endotwin.model import dependencies, load_model
 from endotwin.paths import ROOT, relative
 
-STRONG = {"epithelium": BLUE, "stroma": ORANGE, "medium": "#3d3c38"}
+STRONG = {
+    "epithelium": BLUE,
+    "stroma": ORANGE,
+    "extracellular": AQUA,
+    "medium": "#3d3c38",
+}
 FRIENDLY = {
     "IN_E2": "E2",
     "IN_PROGESTIN": "Progestin\n(MPA)",
     "IN_cAMP": "cAMP",
     "IN_XAV939": "XAV939",
     "IN_BMPR_INHIBITOR": "BMPR\ninhibitor",
-    "IN_IL1B": "IL-1β",
+    "IN_SMO_INHIBITOR": "SMO\ninhibitor",
+    "IN_FOXO1_INHIBITOR": "FOXO1\ninhibitor",
+    "IN_IL1B": "IL-1\u03b2",
+    "E_ESR1": "ER\u03b1",
     "E_PGR": "PGR",
     "E_IHH": "IHH",
-    "OUT_EPITHELIAL_SECRETORY": "Secretory\n(PAEP)",
+    "E_FGFR_ERK": "FGFR\u2192ERK",
+    "OUT_EPITHELIAL_SECRETORY": "Secretory\nstate",
     "OUT_EPITHELIAL_PROLIFERATION": "Proliferation\n(Ki67, EdU)",
+    "X_IHH": "IHH ligand",
+    "X_BMP2": "BMP2 ligand",
+    "X_PARACRINE_MITOGEN": "FGF mitogen",
+    "X_PAEP": "PAEP\n(secreted)",
+    "X_PRL": "PRL\n(secreted)",
+    "X_IGFBP1": "IGFBP-1\n(secreted)",
+    "S_ESR1": "ER\u03b1",
     "S_PGR": "PGR",
     "S_PKA": "PKA",
-    "S_IL1_SIGNALING": "IL-1\nsignalling",
-    "S_NR2F2": "NR2F2",
-    "S_BMP2": "BMP2\nexpression",
-    "S_BMP_SMAD": "BMP/SMAD\n(pSMAD1/5/8)",
+    "S_CEBPB": "C/EBP\u03b2",
+    "S_FOXO1": "FOXO1",
+    "S_IRF4": "IRF4",
+    "S_HH_SIGNALING": "PTCH1/SMO\n/GLI",
+    "S_NR2F2": "NR2F2\n(COUP-TFII)",
+    "S_BMP2": "BMP2",
+    "S_BMP_SMAD": "pSMAD1/5/8",
+    "S_WNT4": "WNT4",
     "S_HAND2": "HAND2",
-    "S_PARACRINE_MITOGEN": "Paracrine\nmitogen",
-    "OUT_STROMAL_DECIDUALIZATION": "Decidualisation\n(PRL, IGFBP-1)",
+    "S_PARACRINE_MITOGEN": "FGF9",
+    "S_IL1_SIGNALING": "IL1R1",
+    "S_JNK": "JNK",
+    "S_ERK1_2": "ERK1/2",
+    "OUT_STROMAL_DECIDUALIZATION": "Decidual-\nisation",
+    "S_IGFBP1": "IGFBP1",
+    "S_PRL": "PRL",
 }
 PHASE_LABEL = {
     "basal": "Basal culture",
@@ -66,13 +97,10 @@ PHASE_LABEL = {
     "differentiation_supplemented": "Differentiation (E2 + MPA + cAMP + XAV939) + IL-1β",
 }
 PANELS = [
-    ("OUT_STROMAL_DECIDUALIZATION", "Stromal decidualisation (PRL, IGFBP-1)"),
-    (
-        "S_BMP_SMAD",
-        "BMP/SMAD activity (pSMAD1/5/8): separates the two IL-1β rules",
-    ),
+    ("X_PRL", "Secreted PRL (outlet ELISA): lost under both IL-1\u03b2 rules"),
+    ("S_BMP_SMAD", "pSMAD1/5/8: separates the two IL-1\u03b2 rules"),
+    ("S_HAND2", "Stromal HAND2: separates the two IL-1\u03b2 rules"),
     ("OUT_EPITHELIAL_PROLIFERATION", "Epithelial proliferation (Ki67, EdU)"),
-    ("OUT_EPITHELIAL_SECRETORY", "Epithelial secretory differentiation (PAEP)"),
 ]
 TRACES = [
     ("reference__default", "Reference regimen", BLUE, "-", 3.0),
@@ -143,7 +171,7 @@ def render_animation(version: str) -> Path:
     order = [pid for pid, _, _ in bounds]
     t_end = float(times_all[-1]) + 0.1
 
-    fig = plt.figure(figsize=(16, 9), dpi=90)
+    fig = plt.figure(figsize=(17, 9), dpi=90)
     fig.patch.set_facecolor(SURFACE)
     title = fig.text(0.012, 0.955, "", fontsize=15, weight="bold", color=INK)
     fig.text(
@@ -156,105 +184,60 @@ def render_animation(version: str) -> Path:
     )
 
     # -- network panel --------------------------------------------------------
-    ax = fig.add_axes((0.008, 0.115, 0.585, 0.78))
+    ax = fig.add_axes((0.004, 0.07, 0.625, 0.83))
     ax.set_facecolor(SURFACE)
     ax.axis("off")
-    ax.set_xlim(-0.4, 13.4)
-    ax.set_ylim(-0.75, 6.75)
-    for x0, w, fc, ec, text in (
-        (-0.2, 5.0, "#f4f8fd", BLUE, "Epithelium (organoid-derived)"),
-        (5.0, 8.2, "#fdf6f2", ORANGE, "Stroma (primary stromal cells)"),
-    ):
-        ax.add_patch(
-            FancyBboxPatch(
-                (x0, -0.45),
-                w,
-                5.6,
-                boxstyle="round,pad=0.02",
-                fc=fc,
-                ec=ec,
-                lw=0.9,
-            )
-        )
-        ax.text(x0 + 0.2, -0.3, text, color=ec, fontsize=10, weight="bold")
-    ax.text(
-        -0.2,
-        6.55,
-        "Culture medium: protocol inputs and perturbations",
-        color=INK_2,
-        fontsize=10,
-        weight="bold",
-    )
+    ax.set_xlim(*XLIM)
+    ax.set_ylim(*YLIM)
+    draw_compartments(ax, fontsize=9.5)
     edges = []
-    px_per_unit = ax.transData.transform((1, 1)) - ax.transData.transform((0, 0))
-    half_w, half_h = 0.83 * px_per_unit[0], 0.40 * px_per_unit[1]
-
-    def _clearance(dx: float, dy: float) -> float:
-        # Points from a box centre to its border along (dx, dy), plus a small gap.
-        ux, uy = abs(dx) * px_per_unit[0], abs(dy) * px_per_unit[1]
-        norm = float(np.hypot(ux, uy)) or 1.0
-        ux, uy = ux / norm, uy / norm
-        reach = min(half_w / ux if ux else np.inf, half_h / uy if uy else np.inf)
-        return (reach + 3.0) * 72.0 / fig.dpi
-
     for (src, tgt), sign in dependencies(model.rules).items():
-        x0, y0 = LAYOUT[src]
-        x1, y1 = LAYOUT[tgt]
-        clearance = _clearance(x1 - x0, y1 - y0)
-        crossing = (
-            model.compartment(src) in COMPS
-            and model.compartment(tgt) in COMPS
-            and model.compartment(src) != model.compartment(tgt)
+        crossing = crosses(model, src, tgt)
+        artists = draw_edge(
+            ax,
+            fig,
+            src,
+            tgt,
+            sign,
+            INK if crossing else INK_2,
+            1.9 if crossing else 1.0,
+            10,
         )
-        ann = ax.annotate(
-            "",
-            xy=(x1, y1),
-            xytext=(x0, y0),
-            arrowprops={
-                "arrowstyle": "-|>" if sign == "activation" else "-[",
-                "color": INK if crossing else INK_2,
-                "lw": 2.0 if crossing else 1.1,
-                "shrinkA": clearance,
-                "shrinkB": clearance,
-                "mutation_scale": 11,
-                "connectionstyle": "arc3,rad=0.06",
-            },
-            zorder=1,
-        )
-        edges.append((src, ann))
+        edges.append((src, artists))
     boxes = {}
     for node, (x, y) in LAYOUT.items():
         comp = model.compartment(node)
         is_out = model.node_info[node]["layer"] == "functional_output"
         patch = FancyBboxPatch(
-            (x - 0.8, y - 0.37),
-            1.6,
-            0.74,
+            (x - NODE_W / 2, y - NODE_H / 2),
+            NODE_W,
+            NODE_H,
             boxstyle="round,pad=0.03",
             fc=TINT[comp],
             ec=STRONG[comp],
-            lw=2.6 if is_out else 1.1,
+            lw=2.6 if is_out else 1.0,
             linestyle="--" if node == "IN_XAV939" else "-",
             zorder=2,
         )
         ax.add_patch(patch)
         label = ax.text(
-            x, y, "", ha="center", va="center", fontsize=8, color=INK, zorder=3
+            x, y, "", ha="center", va="center", fontsize=7.2, color=INK, zorder=3
         )
         boxes[node] = (comp, patch, label)
-    ax.text(
-        -0.2,
-        -0.72,
+    fig.text(
+        0.012,
+        0.068,
         "Node fill = fraction of simulated trajectories with the node ON (pale 0, saturated 1). Arrow = activation, "
-        "bar = inhibition;\nheavy arrows cross compartments; edge opacity follows the regulator's P(ON). Heavy box = "
-        "functional output with its readout. Dashed = XAV939, read by no rule.",
-        fontsize=7.6,
+        "bar = inhibition; heavy arrows cross compartments;\nedge opacity follows the regulator's P(ON). Heavy box = "
+        "functional output. Dashed = XAV939, read by no rule. Cells exchange signals only through the shared "
+        "extracellular space.",
+        fontsize=7.4,
         color=INK_2,
         va="top",
     )
 
     # -- side panels ----------------------------------------------------------
-    left, width, top, gap = 0.635, 0.35, 0.895, 0.022
+    left, width, top, gap = 0.665, 0.32, 0.895, 0.022
     timeline_h, panel_h = 0.085, 0.13
     tl = fig.add_axes((left, top - timeline_h, width, timeline_h))
     rows = [
@@ -354,8 +337,9 @@ def render_animation(version: str) -> Path:
             label.set_text(text)
             label.set_color("white" if p > 0.55 else INK)
             label.set_weight("bold" if p > 0.55 else "normal")
-        for src, ann in edges:
-            ann.arrow_patch.set_alpha(0.18 + 0.82 * float(row[src]))
+        for src, artists in edges:
+            for artist in artists:
+                artist.set_alpha(0.18 + 0.82 * float(row[src]))
         for line, frame, node in revealed:
             shown = frame[frame["time"] <= t + 1e-9]
             line.set_data(shown["time"], shown[node])

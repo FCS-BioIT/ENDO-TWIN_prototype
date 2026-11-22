@@ -200,7 +200,12 @@ def cmd_reference(args) -> None:
         (condition_id, variant)
         for condition_id in ("reference", "bmpr_inhibition")
         for variant in (None, "Q1_pgr_sufficient")
-    ] + [("il1b_exposure", None), ("il1b_exposure", "INF_pgr_depletion")]
+    ] + [
+        ("il1b_exposure", None),
+        ("il1b_exposure", "INF_pgr_depletion"),
+        ("foxo1_inhibition", None),
+        ("foxo1_inhibition", "FOX_prl_foxo1_independent"),
+    ]
     for condition_id, variant in runs:
         selection = model.selection_from_ids([variant]) if variant else None
         result = simulate_condition(

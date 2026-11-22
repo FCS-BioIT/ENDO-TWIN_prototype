@@ -31,8 +31,14 @@ BLUE = "#2a78d6"  # categorical slot 1
 ORANGE = "#eb6834"  # categorical slot 2
 AQUA = "#1baf7a"  # categorical slot 3
 YELLOW = "#eda100"  # categorical slot 4
-TINT = {"epithelium": "#e3eefb", "stroma": "#fbe7de", "medium": "#efeeea"}
-EDGE = {"epithelium": BLUE, "stroma": ORANGE, "medium": MUTED}
+TINT = {
+    "epithelium": "#e3eefb",
+    "stroma": "#fbe7de",
+    "extracellular": "#e2f4ec",
+    "medium": "#efeeea",
+}
+EDGE = {"epithelium": BLUE, "stroma": ORANGE, "extracellular": AQUA, "medium": MUTED}
+PANEL = {"epithelium": "#f4f8fd", "stroma": "#fdf6f2", "extracellular": "#f2faf6"}
 
 
 def _style(ax) -> None:
@@ -81,161 +87,244 @@ def _tsv(path: Path) -> list[dict[str, str]]:
 
 # -- 1. network ---------------------------------------------------------------
 
+#: Shared by the static figure and the animation. Data units; compartments are
+#: laid out as in ADOC: epithelium | shared extracellular space | stroma.
 LAYOUT = {
-    "IN_E2": (0.9, 6.0),
-    "IN_PROGESTIN": (3.2, 6.0),
-    "IN_cAMP": (5.5, 6.0),
-    "IN_XAV939": (7.6, 6.0),
-    "IN_BMPR_INHIBITOR": (9.8, 6.0),
-    "IN_IL1B": (12.0, 6.0),
-    "E_PGR": (1.6, 4.5),
-    "E_IHH": (3.4, 3.2),
-    "OUT_EPITHELIAL_SECRETORY": (1.3, 1.6),
-    "OUT_EPITHELIAL_PROLIFERATION": (3.7, 0.4),
-    "S_PGR": (6.4, 4.5),
-    "S_PKA": (8.6, 4.5),
-    "S_IL1_SIGNALING": (12.0, 4.5),
-    "S_NR2F2": (6.2, 3.2),
-    "S_BMP2": (8.4, 3.2),
-    "S_BMP_SMAD": (10.4, 3.2),
-    "S_HAND2": (8.2, 1.9),
-    "S_PARACRINE_MITOGEN": (6.4, 0.9),
-    "OUT_STROMAL_DECIDUALIZATION": (11.2, 1.6),
+    "IN_XAV939": (1.1, 9.4),
+    "IN_E2": (3.2, 9.4),
+    "IN_PROGESTIN": (11.8, 9.4),
+    "IN_SMO_INHIBITOR": (13.85, 9.4),
+    "IN_BMPR_INHIBITOR": (7.4, 9.4),
+    "IN_cAMP": (17.95, 9.4),
+    "IN_FOXO1_INHIBITOR": (15.9, 9.4),
+    "IN_IL1B": (20.0, 9.4),
+    "E_ESR1": (1.1, 7.2),
+    "E_PGR": (3.4, 7.2),
+    "E_IHH": (3.4, 4.0),
+    "E_FGFR_ERK": (3.4, -0.8),
+    "OUT_EPITHELIAL_SECRETORY": (1.1, 2.4),
+    "OUT_EPITHELIAL_PROLIFERATION": (3.4, 0.8),
+    "X_IHH": (6.6, 5.6),
+    "X_BMP2": (6.6, 4.0),
+    "X_PARACRINE_MITOGEN": (6.6, 0.8),
+    "X_PAEP": (6.6, 2.4),
+    "X_PRL": (6.6, -2.0),
+    "X_IGFBP1": (6.6, -0.8),
+    "S_ESR1": (9.75, 2.4),
+    "S_PGR": (13.85, 4.0),
+    "S_PKA": (17.95, 7.2),
+    "S_CEBPB": (20.0, 2.4),
+    "S_FOXO1": (17.95, 4.0),
+    "S_IRF4": (17.95, 0.8),
+    "S_HH_SIGNALING": (9.75, 7.2),
+    "S_NR2F2": (13.85, 7.2),
+    "S_BMP2": (11.8, 5.6),
+    "S_BMP_SMAD": (9.75, 4.0),
+    "S_WNT4": (11.8, 4.0),
+    "S_HAND2": (11.8, 2.4),
+    "S_PARACRINE_MITOGEN": (9.75, 0.8),
+    "S_IL1_SIGNALING": (20.0, 7.2),
+    "S_JNK": (15.9, 4.0),
+    "S_ERK1_2": (20.0, 5.6),
+    "OUT_STROMAL_DECIDUALIZATION": (13.85, 2.4),
+    "S_IGFBP1": (15.9, 0.8),
+    "S_PRL": (13.85, -2.0),
 }
+BOXES = {
+    "epithelium": (-0.15, 4.55, "Epithelium (organoid-derived)"),
+    "extracellular": (5.4, 7.8, "Extracellular\n(shared medium)"),
+    "stroma": (8.65, 21.1, "Stroma (primary stromal cells)"),
+}
+BOX_Y = (-2.75, 8.45)
+XLIM, YLIM = (-0.35, 21.3), (-3.65, 10.75)
+#: Edges routed through the margins so they do not run through a node box:
+#: waypoints after the source; the last leg is an arrow into the target.
+EDGE_ROUTE = {
+    ("IN_E2", "S_ESR1"): [(3.75, 8.98), (3.75, 8.68), (8.22, 8.68), (8.22, 2.4)],
+}
+NODE_W, NODE_H = 1.75, 0.82
 LABEL = {
     "IN_BMPR_INHIBITOR": "IN_BMPR_\nINHIBITOR",
+    "IN_SMO_INHIBITOR": "IN_SMO_\nINHIBITOR",
+    "IN_FOXO1_INHIBITOR": "IN_FOXO1_\nINHIBITOR",
     "OUT_EPITHELIAL_SECRETORY": "OUT_EPITHELIAL_\nSECRETORY",
     "OUT_EPITHELIAL_PROLIFERATION": "OUT_EPITHELIAL_\nPROLIFERATION",
     "S_PARACRINE_MITOGEN": "S_PARACRINE_\nMITOGEN",
+    "X_PARACRINE_MITOGEN": "X_PARACRINE_\nMITOGEN",
     "OUT_STROMAL_DECIDUALIZATION": "OUT_STROMAL_\nDECIDUALIZATION",
     "S_IL1_SIGNALING": "S_IL1_\nSIGNALING",
+    "S_HH_SIGNALING": "S_HH_\nSIGNALING",
 }
+COMPS = {"epithelium", "extracellular", "stroma"}
+
+
+def draw_compartments(ax, fontsize: float = 9.0) -> None:
+    for comp, (x0, x1, title) in BOXES.items():
+        ax.add_patch(
+            FancyBboxPatch(
+                (x0, BOX_Y[0]),
+                x1 - x0,
+                BOX_Y[1] - BOX_Y[0],
+                boxstyle="round,pad=0.02",
+                fc=PANEL[comp],
+                ec=EDGE[comp],
+                lw=0.9,
+                zorder=0,
+            )
+        )
+        ax.text(
+            x0 + 0.15,
+            BOX_Y[1] - 0.08,
+            title,
+            color=EDGE[comp],
+            fontsize=fontsize,
+            weight="bold",
+            va="top",
+            linespacing=1.0,
+            zorder=4,
+        )
+    ax.text(
+        XLIM[0] + 0.2,
+        YLIM[1] - 0.05,
+        "Culture medium: protocol inputs and perturbations",
+        color=INK_2,
+        fontsize=fontsize,
+        weight="bold",
+        va="top",
+    )
+
+
+def edge_clearance(ax, fig, dx: float, dy: float) -> float:
+    """Points from a node centre to its border along (dx, dy), plus a small gap."""
+    import numpy as np
+
+    px = ax.transData.transform((1, 1)) - ax.transData.transform((0, 0))
+    half_w, half_h = (NODE_W / 2 + 0.04) * px[0], (NODE_H / 2 + 0.04) * px[1]
+    ux, uy = abs(dx) * px[0], abs(dy) * px[1]
+    norm = float(np.hypot(ux, uy)) or 1.0
+    ux, uy = ux / norm, uy / norm
+    reach = min(half_w / ux if ux else np.inf, half_h / uy if uy else np.inf)
+    return (reach + 3.0) * 72.0 / fig.dpi
+
+
+def draw_edge(
+    ax, fig, src: str, tgt: str, sign: str, color: str, lw: float, mutation_scale: float
+):
+    """Draw one dependency; returns its artists (so an animation can fade them)."""
+    x0, y0 = LAYOUT[src]
+    x1, y1 = LAYOUT[tgt]
+    artists = []
+    route = EDGE_ROUTE.get((src, tgt))
+    if route:
+        xs, ys = zip(*route, strict=True)
+        (line,) = ax.plot(xs, ys, color=color, lw=lw, zorder=1, solid_capstyle="round")
+        artists.append(line)
+        x0, y0 = route[-1]
+        shrink_a = 0.0
+    else:
+        shrink_a = edge_clearance(ax, fig, x1 - x0, y1 - y0)
+    ann = ax.annotate(
+        "",
+        xy=(x1, y1),
+        xytext=(x0, y0),
+        arrowprops={
+            "arrowstyle": "-|>" if sign == "activation" else "-[",
+            "color": color,
+            "lw": lw,
+            "shrinkA": shrink_a,
+            "shrinkB": edge_clearance(ax, fig, x1 - x0, y1 - y0),
+            "mutation_scale": mutation_scale,
+            "connectionstyle": "arc3,rad=0.0" if route else "arc3,rad=0.06",
+        },
+        zorder=1,
+    )
+    artists.append(ann.arrow_patch)
+    return artists
+
+
+def crosses(model, src: str, tgt: str) -> bool:
+    a, b = model.compartment(src), model.compartment(tgt)
+    return a in COMPS and b in COMPS and a != b
 
 
 def network_figure(version: str) -> Path:
     model = load_model(version)
     deps = dependencies(model.rules)
-    fig, ax = plt.subplots(figsize=(11.5, 6.6))
+    fig, ax = plt.subplots(figsize=(15.5, 8.4))
     fig.patch.set_facecolor(SURFACE)
     ax.set_facecolor(SURFACE)
     ax.axis("off")
-    ax.set_xlim(-0.4, 13.4)
-    ax.set_ylim(-0.95, 6.9)
-    ax.add_patch(
-        FancyBboxPatch(
-            (-0.2, -0.4),
-            5.0,
-            5.55,
-            boxstyle="round,pad=0.02",
-            fc="#f4f8fd",
-            ec=BLUE,
-            lw=0.8,
-        )
-    )
-    ax.add_patch(
-        FancyBboxPatch(
-            (5.0, -0.4),
-            8.2,
-            5.55,
-            boxstyle="round,pad=0.02",
-            fc="#fdf6f2",
-            ec=ORANGE,
-            lw=0.8,
-        )
-    )
-    ax.text(
-        0.0, 5.0, "Epithelium (organoid-derived)", color=BLUE, fontsize=9, weight="bold"
-    )
-    ax.text(
-        5.2,
-        5.0,
-        "Stroma (primary stromal cells)",
-        color=ORANGE,
-        fontsize=9,
-        weight="bold",
-    )
-    ax.text(
-        0.0,
-        6.65,
-        "Experimental inputs (culture medium)",
-        color=INK_2,
-        fontsize=9,
-        weight="bold",
-    )
+    ax.set_xlim(*XLIM)
+    ax.set_ylim(*YLIM)
+    draw_compartments(ax)
     new = {
         n
         for n, info in model.node_info.items()
-        if info["lineage_change"]
-        in {"new", "renamed", "merged_and_renamed", "modified"}
+        if info["lineage_change"] in {"new", "modified"}
     }
     for (src, tgt), sign in deps.items():
-        x0, y0 = LAYOUT[src]
-        x1, y1 = LAYOUT[tgt]
-        crossing = (
-            model.compartment(src) in COMPS
-            and model.compartment(tgt) in COMPS
-            and model.compartment(src) != model.compartment(tgt)
-        )
-        style = "-|>" if sign == "activation" else "-["
-        ax.annotate(
-            "",
-            xy=(x1, y1),
-            xytext=(x0, y0),
-            arrowprops={
-                "arrowstyle": style,
-                "color": INK if crossing else INK_2,
-                "lw": 1.6 if crossing else 0.9,
-                "shrinkA": 17,
-                "shrinkB": 19,
-                "mutation_scale": 9,
-                "connectionstyle": "arc3,rad=0.06",
-                "linestyle": "-",
-            },
+        crossing = crosses(model, src, tgt)
+        draw_edge(
+            ax,
+            fig,
+            src,
+            tgt,
+            sign,
+            INK if crossing else INK_2,
+            1.6 if crossing else 0.9,
+            9,
         )
     for node, (x, y) in LAYOUT.items():
         comp = model.compartment(node)
         is_out = model.node_info[node]["layer"] == "functional_output"
         ax.add_patch(
             FancyBboxPatch(
-                (x - 0.78, y - 0.3),
-                1.56,
-                0.6,
+                (x - NODE_W / 2, y - NODE_H / 2),
+                NODE_W,
+                NODE_H,
                 boxstyle="round,pad=0.03",
                 fc=TINT[comp],
                 ec=EDGE[comp],
                 lw=2.2 if is_out else 1.0,
                 linestyle="--" if node == "IN_XAV939" else "-",
+                zorder=2,
             )
-        )
-        ax.text(
-            x,
-            y,
-            LABEL.get(node, node),
-            ha="center",
-            va="center",
-            fontsize=6.4,
-            color=INK,
-            weight="bold" if node in new else "normal",
         )
         readouts = model.node_info[node]["readouts"]
+        label = LABEL.get(node, node)
+        ax.text(
+            x,
+            y + (0.12 if readouts else 0),
+            label,
+            ha="center",
+            va="center",
+            fontsize=6.3,
+            color=INK,
+            weight="bold" if node in new else "normal",
+            zorder=3,
+        )
         if readouts:
+            first = readouts.split(";")[0]
             ax.text(
                 x,
-                y - 0.43,
-                readouts.replace(";", ", "),
+                y - NODE_H / 2 + 0.1,
+                first + (" +" if ";" in readouts else ""),
                 ha="center",
-                va="top",
-                fontsize=6.4,
+                va="bottom",
+                fontsize=5.6,
                 color=INK_2,
                 style="italic",
+                zorder=3,
             )
     ax.text(
-        -0.2,
-        -0.88,
-        "Arrowhead = activation, bar = inhibition; bold arrows cross compartments. Heavy border = functional output (readouts in italics).\n"
-        "Bold label = new or changed vs prototype v0.6.0. Dashed box = IN_XAV939, declared but read by no rule.",
-        fontsize=6.6,
+        XLIM[0] + 0.2,
+        YLIM[0] + 0.02,
+        "Arrowhead = activation, bar = inhibition; bold arrows cross compartments. Heavy border = functional output. Italic = a readout "
+        "(full list in node_dictionary.tsv).\nBold label = new or changed versus endotwin-v0.1.0. Dashed box = IN_XAV939, declared but read by no rule. "
+        "Default rule of every hypothesis family; alternatives in rule_variants.tsv.",
+        fontsize=6.8,
         color=INK_2,
+        va="bottom",
     )
     return _save(
         fig,
@@ -247,9 +336,6 @@ def network_figure(version: str) -> Path:
             "limitations": "Default variant of each hypothesis family only; alternatives are in rule_variants.tsv.",
         },
     )
-
-
-COMPS = {"epithelium", "stroma"}
 
 
 # -- 2. dynamics --------------------------------------------------------------
@@ -269,8 +355,8 @@ def dynamics_figure(version: str) -> Path:
     bmp_alt = _tsv(res / "dynamics_bmpr_inhibition__Q1_pgr_sufficient.tsv")
     panels = [
         ("OUT_EPITHELIAL_PROLIFERATION", "Epithelial proliferation (Ki67/EdU)"),
-        ("OUT_EPITHELIAL_SECRETORY", "Epithelial secretory differentiation (PAEP)"),
-        ("OUT_STROMAL_DECIDUALIZATION", "Stromal decidualisation (PRL, IGFBP-1)"),
+        ("X_PAEP", "Secreted PAEP (epithelial secretory differentiation)"),
+        ("X_PRL", "Secreted PRL (stromal decidualisation)"),
         ("S_BMP_SMAD", "BMP/SMAD1/5/8 activity (pSMAD1/5/8)"),
     ]
     fig, axes = plt.subplots(2, 2, figsize=(11, 6.2), sharex=True)
@@ -294,7 +380,7 @@ def dynamics_figure(version: str) -> Path:
             lw=2,
             label="BMPR inhibition, H1 BMP-required",
         )
-        if node == "OUT_STROMAL_DECIDUALIZATION":
+        if node == "X_PRL":
             ax.plot(
                 t_ref,
                 [float(r[node]) for r in bmp_alt],
@@ -314,7 +400,7 @@ def dynamics_figure(version: str) -> Path:
         f"{p.replace('_', ' ')} ({lo:.0f}-{hi:.0f})" for p, lo, hi in _phase_bounds(ref)
     )
     fig.suptitle(
-        f"endotwin-v0.1.0 protocol phases: {phases}",
+        f"{version} protocol phases: {phases}",
         fontsize=8.5,
         color=INK_2,
         x=0.01,

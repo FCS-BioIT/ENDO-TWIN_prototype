@@ -1,0 +1,35 @@
+# TEMPLATE for the WP2 prospective prediction (SO2, Task 2.1).
+#
+# This is not a pre-registration. The WP2 perturbation has not been selected;
+# the values below only show the required fields and are validated by the test
+# suite. To freeze a real prediction: copy this file, fill it in with the
+# perturbation chosen at the end of WP1, commit it, and run
+#   pixi run endotwin-freeze <spec>
+# on a clean working tree. The record is written to
+# endotwin/predictions/frozen/<prediction_id>/ and must be committed before any
+# evaluation data are generated.
+
+prediction_id: WP2-TEMPLATE
+purpose: WP2_prospective_G1          # WP2_prospective_G1 | WP4_selection_G2 | WP4_evaluation_G2 | WP4_evaluation_G3
+model_version: endotwin-v0.1.0       # the frozen model version (WP1 output)
+comparison: Q1_bmpr_inhibition       # a matched comparison in endotwin/config/protocols.yaml
+primary_readout: RO-PRL              # one primary functional readout (observation_map.tsv)
+secondary_readouts: [RO-IGFBP1, RO-PSMAD158]
+rule_variants: {}                    # empty: the default variant of every family
+agreement_criteria:                  # fixed before testing; donor-level log2(perturbed/control)
+  min_effect_log2: 0.5
+  min_evaluable_donors: 4            # of the 5 independent G1 donors
+  min_consistent_donors: 4
+  equivalence_margin_log2: 0.3       # required for any predicted no-change
+simulation:
+  sample_count: 5000
+  seed: 1
+  replicates: 5
+sensitivity:                         # the primary prediction must be stable under these
+  vary_rule_families: [Q2, INF]      # families whose alternatives must not change the primary direction
+  rate_samples: 30
+  rate_sample_count: 2000
+  require_stable: true
+donor_policy:
+  development_donors: []             # pseudonymised codes of every donor used in WP1
+  evaluation_groups: [G1]

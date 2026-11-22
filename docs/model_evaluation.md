@@ -26,7 +26,7 @@ exists.
 | Design-effective states | States distinguishable under a planned design | design alias, v0.4.0 | 19 of 35 (as declared); PAEP and IGFBP-1 carry the same design information |
 | Rule-variant discriminability | Whether competing rules predict different readouts | Gate 3a, v0.4.0; ENDO-TWIN discrimination table | Gate 3a: 9 pairs, no usable assay node; ENDO-TWIN: every family has a robust discriminating comparison (below) |
 | Concordance classes | Curated comparison with published results | concordance, v0.4.0, 60 rows | 3 directional, 1 partial, 1 disagreement, 4 calibration-circular, 36 not expressible, 15 not assessable, 0 quantitative |
-| Ordinal agreement | Ordering of arms | functional endpoint, v0.5.0, adhesion counts | untreated < HT > mifepristone at the converged horizon only; observed 9/19 (Wilson 95% 0.27-0.68) excludes the converged 0.82 |
+| Ordinal agreement | Ordering of arms | functional endpoint, v0.5.0, adhesion counts (prototype only; not ENDO-TWIN data, `docs/experimental_data.md` section 3) | untreated < HT > mifepristone at the converged horizon only; observed 9/19 (Wilson 95% 0.27-0.68) excludes the converged 0.82 |
 | RNA-endpoint verdicts | Predicted CNT -> HT switch vs end-of-treatment RNA | v0.5.1, E-MTAB-15842 | 0 concordant, 0 discordant of 27 nodes |
 | Paired transient difference bands | Effect of a rule change on dynamics | U5b (v0.5.1), C5 (v0.5.2), 20 replicates on disjoint seed blocks | C5: proliferation +0.043 to +0.167 (phase mean), 7 of 7 hormone-exposed cells beyond tolerance |
 | Seed reproducibility | Run-to-run spread and seed structure | seed probe, v0.5.0; endpoint replicates | consecutive seeds give stratified, overlapping draws (an estimator caution, not biology) |

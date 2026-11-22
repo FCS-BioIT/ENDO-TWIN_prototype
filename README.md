@@ -40,8 +40,8 @@ predictions prospectively in ADOC, a human endometrium-on-chip.
    - a 56-node, 89-dependency executable network with exact structural analysis;
    - literature curation through screening (147 papers), registration (95
      Crossref-verified references) and edge-level grading (276 evidence rows);
-   - integration of the published ADOC secreted-protein, adhesion and
-     single-cell data (28,212 cells);
+   - integration of the published ADOC secreted-protein and single-cell data
+     (28,212 cells);
    - pre-registered simulation studies and identifiability analyses;
    - and a frank record of what the prototype cannot do: no calibration, no
      validation, and alias classes that current assays cannot resolve.
@@ -76,8 +76,8 @@ disagree. Prototype figures refer to the version named; ENDO-TWIN figures to
 | **Evidence provenance** | **276** edge-level evidence rows (one per edge, paper and experiment); **247** active rows on **85** edges citing **35** papers; **37** rows graded from full text on **27** edges; **74** of **85** declared v0.6.0 edges cite a non-review primary paper; **39** citation adjudications after full-text reading (**32** retractions, **7** attachments) |
 | **Regulatory network** (prototype v0.6.0) | **56** nodes, **89** dependencies (**76** activating, **13** inhibitory); **29** distinct Boolean functions in **7** alias classes; **20** of 89 dependencies absorbed or never binding; **17** phenotype-inert nodes |
 | **Boolean modelling** | **8** model versions (v0.1.0 to v0.6.0); **11** Gate 3a candidate rule variants; a **10**-member rule family evaluated; **14** candidate nodes adjudicated; **2** executable rules changed by the literature re-audit (v0.5.2 C1, C5) |
-| **Experimental evidence** | ADOC secreted proteins: **62** rows, **39** observed values (PRL, IGFBP-1, PAEP); legacy adhesion endpoint on **39** embryos; scRNA-seq E-MTAB-15842: **28,212** cells, **3** donors, **6** samples, **20,441** epithelial and **7,771** stromal cells, **7** cell-state labels |
-| **Simulations and analyses** | **25** completed prototype analyses with committed results (structural, identifiability, design, concordance, endpoint replicates, pre-registered kinetic readouts, paired transients, cascades, scRNA audits) |
+| **Experimental evidence** | ADOC secreted proteins: **62** rows, **39** observed values (PRL, IGFBP-1, PAEP); scRNA-seq E-MTAB-15842: **28,212** cells, **3** donors, **6** samples, **20,441** epithelial and **7,771** stromal cells, **7** cell-state labels |
+| **Simulations and analyses** | **25** completed prototype analyses with committed results (including structural, identifiability, design, concordance, paired-transient, cascade and scRNA analyses) |
 | **Sensitivity and identifiability** | Prototype: matched-unit design reaches **8** of 32 latent observation classes (v0.5.0); identifiability-driven design (v0.6.0) finds that no single perturbation de-aliases the model; transition-rate sensitivity not run. ENDO-TWIN: **720** of **720** steady-state predictions unchanged under **30** random rate sets |
 | **Software verification** | **2,566** automated tests in this repository (**2,503** passed, **0** failed, **63** skipped); **2,767** at the prototype source commit; **2,415** on the 2026-10-16 benchmark |
 | **Model evaluation** | Structural and software verification, and ordinal or directional comparison with ADOC data. **No calibration and no independent validation** (section 5) |
@@ -188,7 +188,6 @@ those of the whole supplement, not of ovarian hormones alone.
 | PRL | ELISA (manuscript Methods) | 18 rows: 10 observed, 8 not detected; days 0, 3, 6 | basal outlet, stromal-attributed; column-to-chip mapping lost | construction marker; provisional mapping |
 | IGFBP-1 | ELISA (manuscript Methods) | 30 rows: 19 observed, 11 not detected; days 0, 3, 6 | apical and basal; compartment-ambiguous; chip mapping lost | diagnostic (non-inversion) |
 | PAEP | ELISA per manuscript Methods; the source workbook does not name the assay | 14 rows: 10 observed, 4 missing; E2-only vs full regimen | outlet unverified | used to build the secretory rule, so agreement is circular |
-| Stable embryo adhesion (legacy) | flushing assay | untreated 0/12, treated 9/19, mifepristone 1/8 | **embryos, not donors** | ordinal diagnostic; mifepristone held out |
 | scRNA-seq E-MTAB-15842 | 10x single-cell RNA-seq | 28,212 cells; 3 donors × control/treated; 7 cell states | donor-level; states nearly determined by condition | node-support audit, KLF12 prior, RNA-endpoint concordance |
 
 The manuscript reports three independent donors for the secreted-protein
@@ -196,9 +195,15 @@ measurements, but the committed data cannot reconstruct which donor each value
 came from. Chips are not biological replicates.
 
 **Construction versus evaluation.** The regimen, the scRNA expression programmes
-and the three secreted markers were used to build the network. The mifepristone
-adhesion arm was held out. Only the RNA-endpoint concordance was evaluation, and
-it found 0 concordant and 0 discordant predictions among 27 nodes.
+and the three secreted markers were used to build the network. Only the
+RNA-endpoint concordance was evaluation, and it found 0 concordant and 0
+discordant predictions among 27 nodes.
+
+**Embryo adhesion is not ENDO-TWIN data.** the prototype used the published adhesion
+counts as an ordinal check. ENDO-TWIN uses them neither to build nor to validate
+the model: in all three adhesion conditions every node reaches the same steady
+state under all 12 hypothesis scenarios, so the data cannot separate them
+([`docs/experimental_data.md`](docs/experimental_data.md), section 3).
 
 **New data are planned, not generated.** ENDO-TWIN will produce 42
 compartment-resolved bulk RNA-seq libraries, Ki67/EdU, pSMAD1/5/8 and viability
@@ -216,20 +221,9 @@ never as cell fractions.
 |---|---|---|
 | Structural, identifiability and design audit | v0.5.0 | 59 nodes, 35 functions; a matched-unit design reaches 8 of 32 latent classes; PAEP and IGFBP-1 carry the same design information |
 | Model-data concordance (60 curated rows) | v0.4.0 | 3 directional, 1 partial, 1 disagreement, 0 quantitative agreement |
-| Functional endpoint, 50 replicate lineages | v0.5.0 | Ordering untreated < treated > mifepristone at the converged horizon only |
-| Pre-registered kinetic readouts (C3a) | v0.5.2 | Persistent fixed-point suppression (about −0.82); cannot distinguish delay from block |
 | HAND2-relay paired transient (C5) | v0.5.1 vs v0.5.2 | Identical composed functions; proliferation difference +0.04 to +0.17 in 7 of 7 treated cells |
 | Experiment selection, 112 candidate arms | v0.4.0, v0.5.1 | One prospective arm frozen (E2 dropout) |
 | RNA-endpoint concordance | v0.5.1 | 0 concordant, 0 discordant of 27 nodes |
-
-![Stable embryo adhesion: ADOC observation vs MaBoSS simulation (legacy v0.5.0)](docs/assets/adoc_functional_endpoint_v0.5.0.png)
-
-> **Legacy figure, prototype `v0.5.0`** (embryo-adhesion endpoint; not an
-> ENDO-TWIN result). Observed per-embryo proportions with Wilson 95% intervals
-> (chip and donor clustering ignored; not reconstructable) against MaBoSS
-> estimates (mean ± SD over 50 runs on disjoint seed blocks; reproducibility,
-> not biological uncertainty). It supports only the ordering. Data:
-> `docs/endpoint/`. Reproduce: `pixi run render-endpoint`.
 
 ### ENDO-TWIN mainline (`endotwin-v0.1.0`)
 
@@ -268,7 +262,7 @@ scenarios; [`discrimination.tsv`](endotwin/results/endotwin-v0.1.0/discriminatio
    2.7 dimensionless units, and both end at 0.000. In 20 random sets of
    transition rates the delay persists every time. The prototype record (right
    panel, v0.5.2 minus v0.5.1, 20 replicates) shows the same effect in the
-   adhesion model.
+   prototype network.
 4. **Why it matters.** An explicit intercellular relay carries a time cost.
    Steady-state readouts cannot reveal how a mechanism is wired; dynamics can.
 5. **Discriminating measurement.** Time-resolved epithelial Ki67/EdU after

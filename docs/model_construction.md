@@ -41,7 +41,9 @@ MaBoSS model:
 - **Not carried:** the embryo-adhesion and receptivity module (37 nodes,
   including `OUT_STABLE_ADHESION`, the typed-in interface relays and the inputs
   `IN_HCG` and `IN_EMBRYO_CONDITIONED_SIGNAL`, which no rule read). It remains
-  executable in `models/superset/`.
+  executable in `models/superset/`. The grant measures no adhesion, and the
+  published adhesion arms cannot separate any ENDO-TWIN hypothesis
+  (`docs/experimental_data.md`, section 3).
 - **BMP:** ligand expression (`S_BMP2`) is now separate from receptor/SMAD
   activity (`S_BMP_SMAD`), which a receptor inhibitor can switch off. BMP2 acts
   on decidualisation and HAND2 only through `S_BMP_SMAD`.

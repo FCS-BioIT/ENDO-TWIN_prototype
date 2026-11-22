@@ -14,6 +14,7 @@ pin files by path and SHA-256.
 | Prototype front page (2026-10-21), verbatim; its links are relative to the repository root | [`PROTOTYPE_README_2026-10-21.md`](PROTOTYPE_README_2026-10-21.md) |
 | Planning ledgers | [`IMPLEMENTATION_PLAN.md`](IMPLEMENTATION_PLAN.md), [`IMPLEMENTATION_STATUS.md`](IMPLEMENTATION_STATUS.md), [`REQUIREMENTS_COVERAGE.tsv`](REQUIREMENTS_COVERAGE.tsv), [`TASK_CONTRACT.md`](TASK_CONTRACT.md) |
 | Model versions v0.1.0-v0.6.0, including the adhesion module | `models/` |
+| Embryo-adhesion endpoint: observed counts, replicate simulations, C3a pre-registered kinetic readouts | `config/calibration.yaml`, `docs/endpoint/`, `docs/c3_kinetic_readouts/`, figure `docs/assets/adoc_functional_endpoint_v0.5.0.png` |
 | Code (simulation, interventions, evidence, audits, reporting) | `src/dt_adoc/` |
 | Protocols, observation mappings, intervention library | `config/` |
 | Literature and evidence registers | `context/` |
@@ -33,4 +34,6 @@ the prototype Git history and must be run in the source repository at
 
 A result produced by a prototype model version is always quoted with that
 version (for example "v0.5.0 functional-endpoint figure"). It is never presented
-as an ENDO-TWIN result.
+as an ENDO-TWIN result. Embryo adhesion in particular is not ENDO-TWIN data:
+the grant measures no adhesion, and the published adhesion arms cannot separate
+any ENDO-TWIN hypothesis (`docs/experimental_data.md`, section 3).

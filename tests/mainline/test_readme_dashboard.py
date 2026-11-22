@@ -104,7 +104,6 @@ class DashboardMatchesMetrics(unittest.TestCase):
         x = METRICS["experimental_data"]
         for phrase in (
             f"**{x['secreted_protein_rows']}** rows, **{x['secreted_protein_observed_values']}** observed values",
-            f"**{x['adhesion_embryos']}** embryos",
             (
                 f"**{n(x['scrna_cells'])}** cells, **{x['scrna_donors']}** donors, "
                 f"**{x['scrna_samples']}** samples, **{n(x['scrna_epithelial_cells'])}** epithelial and "
@@ -112,6 +111,10 @@ class DashboardMatchesMetrics(unittest.TestCase):
             ),
         ):
             self.assertQuoted(phrase)
+
+    def test_embryo_adhesion_is_not_presented_as_endotwin_evidence(self):
+        # prototype-only endpoint; scope decision in docs/experimental_data.md, section 3.
+        self.assertNotRegex(DASHBOARD.lower(), r"adhesion|embryo")
 
     def test_analyses_sensitivity_and_mainline(self):
         self.assertQuoted(

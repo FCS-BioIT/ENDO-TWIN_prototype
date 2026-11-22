@@ -1,0 +1,415 @@
+{
+  "default": {
+    "absorbed_dependencies": [
+      [
+        "S_PKA",
+        "S_BMP2"
+      ]
+    ],
+    "absorbed_or_never_binding": 1,
+    "activations": 20,
+    "alias_classes": [
+      [
+        "IN_PROGESTIN",
+        "E_PGR",
+        "E_IHH",
+        "S_PGR",
+        "S_NR2F2",
+        "S_BMP2",
+        "S_HAND2"
+      ],
+      [
+        "IN_cAMP",
+        "S_PKA"
+      ],
+      [
+        "IN_IL1B",
+        "S_IL1_SIGNALING"
+      ]
+    ],
+    "dependencies": 23,
+    "distinct_functions": 11,
+    "free_variables": [
+      "IN_E2",
+      "IN_PROGESTIN",
+      "IN_cAMP",
+      "IN_XAV939",
+      "IN_BMPR_INHIBITOR",
+      "IN_IL1B"
+    ],
+    "inhibitions": 3,
+    "never_binding_inhibitions": [],
+    "nodes": 19,
+    "phenotype_inert_nodes": [
+      "IN_XAV939",
+      "E_IHH"
+    ],
+    "readout_inert_nodes": [
+      "IN_XAV939"
+    ],
+    "unread_inputs": [
+      "IN_XAV939"
+    ]
+  },
+  "model_version": "endotwin-v0.1.0",
+  "scenarios": {
+    "INF_decidual_only+Q1_bmp_required+Q2_epithelial_autonomous": {
+      "alias_classes": [
+        [
+          "IN_PROGESTIN",
+          "E_PGR",
+          "E_IHH",
+          "S_PGR",
+          "S_NR2F2",
+          "S_BMP2",
+          "S_HAND2"
+        ],
+        [
+          "IN_cAMP",
+          "S_PKA"
+        ],
+        [
+          "IN_IL1B",
+          "S_IL1_SIGNALING"
+        ]
+      ],
+      "dependencies": 23,
+      "distinct_functions": 11,
+      "phenotype_inert_nodes": [
+        "IN_XAV939",
+        "E_IHH",
+        "S_NR2F2",
+        "S_HAND2",
+        "S_PARACRINE_MITOGEN"
+      ]
+    },
+    "INF_decidual_only+Q1_bmp_required+Q2_relay_plus_direct_v051": {
+      "alias_classes": [
+        [
+          "IN_PROGESTIN",
+          "E_PGR",
+          "E_IHH",
+          "S_PGR",
+          "S_NR2F2",
+          "S_BMP2",
+          "S_HAND2"
+        ],
+        [
+          "IN_cAMP",
+          "S_PKA"
+        ],
+        [
+          "IN_IL1B",
+          "S_IL1_SIGNALING"
+        ]
+      ],
+      "dependencies": 24,
+      "distinct_functions": 11,
+      "phenotype_inert_nodes": [
+        "IN_XAV939",
+        "E_IHH"
+      ]
+    },
+    "INF_decidual_only+Q1_bmp_required+Q2_stromal_relay": {
+      "alias_classes": [
+        [
+          "IN_PROGESTIN",
+          "E_PGR",
+          "E_IHH",
+          "S_PGR",
+          "S_NR2F2",
+          "S_BMP2",
+          "S_HAND2"
+        ],
+        [
+          "IN_cAMP",
+          "S_PKA"
+        ],
+        [
+          "IN_IL1B",
+          "S_IL1_SIGNALING"
+        ]
+      ],
+      "dependencies": 23,
+      "distinct_functions": 11,
+      "phenotype_inert_nodes": [
+        "IN_XAV939",
+        "E_IHH"
+      ]
+    },
+    "INF_decidual_only+Q1_pgr_sufficient+Q2_epithelial_autonomous": {
+      "alias_classes": [
+        [
+          "IN_PROGESTIN",
+          "E_PGR",
+          "E_IHH",
+          "S_PGR",
+          "S_NR2F2",
+          "S_BMP2",
+          "S_HAND2"
+        ],
+        [
+          "IN_cAMP",
+          "S_PKA"
+        ],
+        [
+          "IN_IL1B",
+          "S_IL1_SIGNALING"
+        ]
+      ],
+      "dependencies": 22,
+      "distinct_functions": 11,
+      "phenotype_inert_nodes": [
+        "IN_XAV939",
+        "IN_BMPR_INHIBITOR",
+        "E_IHH",
+        "S_NR2F2",
+        "S_BMP2",
+        "S_BMP_SMAD",
+        "S_HAND2",
+        "S_PARACRINE_MITOGEN"
+      ]
+    },
+    "INF_decidual_only+Q1_pgr_sufficient+Q2_relay_plus_direct_v051": {
+      "alias_classes": [
+        [
+          "IN_PROGESTIN",
+          "E_PGR",
+          "E_IHH",
+          "S_PGR",
+          "S_NR2F2",
+          "S_BMP2",
+          "S_HAND2"
+        ],
+        [
+          "IN_cAMP",
+          "S_PKA"
+        ],
+        [
+          "IN_IL1B",
+          "S_IL1_SIGNALING"
+        ]
+      ],
+      "dependencies": 23,
+      "distinct_functions": 11,
+      "phenotype_inert_nodes": [
+        "IN_XAV939",
+        "IN_BMPR_INHIBITOR",
+        "E_IHH"
+      ]
+    },
+    "INF_decidual_only+Q1_pgr_sufficient+Q2_stromal_relay": {
+      "alias_classes": [
+        [
+          "IN_PROGESTIN",
+          "E_PGR",
+          "E_IHH",
+          "S_PGR",
+          "S_NR2F2",
+          "S_BMP2",
+          "S_HAND2"
+        ],
+        [
+          "IN_cAMP",
+          "S_PKA"
+        ],
+        [
+          "IN_IL1B",
+          "S_IL1_SIGNALING"
+        ]
+      ],
+      "dependencies": 22,
+      "distinct_functions": 11,
+      "phenotype_inert_nodes": [
+        "IN_XAV939",
+        "IN_BMPR_INHIBITOR",
+        "E_IHH"
+      ]
+    },
+    "INF_pgr_depletion+Q1_bmp_required+Q2_epithelial_autonomous": {
+      "alias_classes": [
+        [
+          "IN_PROGESTIN",
+          "E_PGR",
+          "E_IHH"
+        ],
+        [
+          "IN_cAMP",
+          "S_PKA"
+        ],
+        [
+          "IN_IL1B",
+          "S_IL1_SIGNALING"
+        ],
+        [
+          "S_PGR",
+          "S_NR2F2",
+          "S_BMP2",
+          "S_HAND2"
+        ]
+      ],
+      "dependencies": 24,
+      "distinct_functions": 12,
+      "phenotype_inert_nodes": [
+        "IN_XAV939",
+        "E_IHH",
+        "S_NR2F2",
+        "S_HAND2",
+        "S_PARACRINE_MITOGEN"
+      ]
+    },
+    "INF_pgr_depletion+Q1_bmp_required+Q2_relay_plus_direct_v051": {
+      "alias_classes": [
+        [
+          "IN_PROGESTIN",
+          "E_PGR",
+          "E_IHH"
+        ],
+        [
+          "IN_cAMP",
+          "S_PKA"
+        ],
+        [
+          "IN_IL1B",
+          "S_IL1_SIGNALING"
+        ],
+        [
+          "S_PGR",
+          "S_NR2F2",
+          "S_BMP2",
+          "S_HAND2"
+        ]
+      ],
+      "dependencies": 25,
+      "distinct_functions": 12,
+      "phenotype_inert_nodes": [
+        "IN_XAV939",
+        "E_IHH"
+      ]
+    },
+    "INF_pgr_depletion+Q1_bmp_required+Q2_stromal_relay": {
+      "alias_classes": [
+        [
+          "IN_PROGESTIN",
+          "E_PGR",
+          "E_IHH"
+        ],
+        [
+          "IN_cAMP",
+          "S_PKA"
+        ],
+        [
+          "IN_IL1B",
+          "S_IL1_SIGNALING"
+        ],
+        [
+          "S_PGR",
+          "S_NR2F2",
+          "S_BMP2",
+          "S_HAND2"
+        ]
+      ],
+      "dependencies": 24,
+      "distinct_functions": 12,
+      "phenotype_inert_nodes": [
+        "IN_XAV939",
+        "E_IHH"
+      ]
+    },
+    "INF_pgr_depletion+Q1_pgr_sufficient+Q2_epithelial_autonomous": {
+      "alias_classes": [
+        [
+          "IN_PROGESTIN",
+          "E_PGR",
+          "E_IHH"
+        ],
+        [
+          "IN_cAMP",
+          "S_PKA"
+        ],
+        [
+          "IN_IL1B",
+          "S_IL1_SIGNALING"
+        ],
+        [
+          "S_PGR",
+          "S_NR2F2",
+          "S_BMP2",
+          "S_HAND2"
+        ]
+      ],
+      "dependencies": 23,
+      "distinct_functions": 12,
+      "phenotype_inert_nodes": [
+        "IN_XAV939",
+        "IN_BMPR_INHIBITOR",
+        "E_IHH",
+        "S_NR2F2",
+        "S_BMP2",
+        "S_BMP_SMAD",
+        "S_HAND2",
+        "S_PARACRINE_MITOGEN"
+      ]
+    },
+    "INF_pgr_depletion+Q1_pgr_sufficient+Q2_relay_plus_direct_v051": {
+      "alias_classes": [
+        [
+          "IN_PROGESTIN",
+          "E_PGR",
+          "E_IHH"
+        ],
+        [
+          "IN_cAMP",
+          "S_PKA"
+        ],
+        [
+          "IN_IL1B",
+          "S_IL1_SIGNALING"
+        ],
+        [
+          "S_PGR",
+          "S_NR2F2",
+          "S_BMP2",
+          "S_HAND2"
+        ]
+      ],
+      "dependencies": 24,
+      "distinct_functions": 12,
+      "phenotype_inert_nodes": [
+        "IN_XAV939",
+        "IN_BMPR_INHIBITOR",
+        "E_IHH"
+      ]
+    },
+    "INF_pgr_depletion+Q1_pgr_sufficient+Q2_stromal_relay": {
+      "alias_classes": [
+        [
+          "IN_PROGESTIN",
+          "E_PGR",
+          "E_IHH"
+        ],
+        [
+          "IN_cAMP",
+          "S_PKA"
+        ],
+        [
+          "IN_IL1B",
+          "S_IL1_SIGNALING"
+        ],
+        [
+          "S_PGR",
+          "S_NR2F2",
+          "S_BMP2",
+          "S_HAND2"
+        ]
+      ],
+      "dependencies": 23,
+      "distinct_functions": 12,
+      "phenotype_inert_nodes": [
+        "IN_XAV939",
+        "IN_BMPR_INHIBITOR",
+        "E_IHH"
+      ]
+    }
+  }
+}

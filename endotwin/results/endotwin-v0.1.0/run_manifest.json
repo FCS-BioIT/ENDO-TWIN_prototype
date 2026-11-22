@@ -1,0 +1,49 @@
+{
+  "command": "pixi run endotwin-all",
+  "engine": {
+    "backend": "cmaboss",
+    "package": "maboss",
+    "version": "0.8.15"
+  },
+  "inputs_sha256": {
+    "config/interventions.tsv": "5eea13aa29b9863997179ceaeb74567982f8e44d518d9c40df28f45691ca28ab",
+    "config/observation_map.tsv": "fb03bfc7d1d3e99aecf74d8bec4844fefd4c7b173ebc9e75c4a501d7b21d8493",
+    "config/protocols.yaml": "c6b8d1d0ec6396287391f9bf3d045633e559d01dc546c5985c67cfe2d2fd5ba1",
+    "evidence/references.tsv": "7ed65e2192ead1afcd145d5926ba805b5950e887a9615a76910a88c22ce3a656",
+    "model/baseline.cfg": "89a63c123edad8c2a9146394f927225fe6f9ad89a365ea60faaeb9bb524b1039",
+    "model/edges.tsv": "f3af0b880c43e6a888614d9d38ac6213c577792b5c2fae2dcf7857c17973e9be",
+    "model/interface.tsv": "08074c8bb067ea1de21e97f2e3b2cccb90447e350422e7c8ecd44fafa8348c2f",
+    "model/lineage.tsv": "0777d8d58479a9248ff270aae69f9f3c69c62115c7f74ee763c716852141a352",
+    "model/network.bnd": "5af53178925b5d292a0a76ae6565069071ae05695e701bfa8e2a2e3fe32987dd",
+    "model/node_dictionary.tsv": "912c8458f93e3e5264613b3beaa66d2078510ad44a36c24753afbaa611462824",
+    "model/provenance.toml": "cc7c13084a4d5a7d11c3ad745aecdfc6678d71957081831ccc10f22466ddb13e",
+    "model/rule_variants.tsv": "5a9208d06be6ef570a684675d3b7f37bf7c96dd858fca96c16648f81c708f158"
+  },
+  "model_version": "endotwin-v0.1.0",
+  "outputs": [
+    "comparison_directions.tsv",
+    "discrimination.tsv",
+    "dynamics_bmpr_inhibition__Q1_pgr_sufficient.tsv",
+    "dynamics_bmpr_inhibition__Q1_pgr_sufficient_provenance.json",
+    "dynamics_bmpr_inhibition__default.tsv",
+    "dynamics_bmpr_inhibition__default_provenance.json",
+    "dynamics_reference__Q1_pgr_sufficient.tsv",
+    "dynamics_reference__Q1_pgr_sufficient_provenance.json",
+    "dynamics_reference__default.tsv",
+    "dynamics_reference__default_provenance.json",
+    "fixed_point_predictions.tsv",
+    "maboss_confirmation.tsv",
+    "maboss_confirmation_summary.json",
+    "rate_sensitivity.tsv",
+    "rate_sensitivity_summary.json",
+    "relay_rate_robustness.tsv",
+    "relay_transient.tsv",
+    "relay_transient_summary.json",
+    "structure.json"
+  ],
+  "repository_state_at_generation": {
+    "commit": "e00aed55b0dce487d62bf6f6d96ffb563ea65136",
+    "dirty": true
+  },
+  "semantics": "MaBoSS probabilities are simulated trajectory frequencies under the stated rules, unit transition rates (unless stated) and initial conditions; MaBoSS time is dimensionless and not mapped to experimental time. No result here is a biological observation or a validation."
+}

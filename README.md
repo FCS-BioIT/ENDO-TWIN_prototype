@@ -205,7 +205,7 @@ them. Full audit:
 | ADOC data | 62 secreted-protein rows, 39 observed values (PRL, IGFBP-1, PAEP); scRNA-seq with 28,212 cells from 3 donors |
 | ENDO-TWIN v0.2.0 | 39 nodes, 47 dependencies, 17 distinct Boolean functions; 4 hypothesis families, 9 rule variants, 24 scenarios; 12 protocol conditions, 9 comparisons |
 | Robustness | 5,670 of 5,670 steady-state predictions unchanged under 30 random rate sets; all 840 simulated phases reach their exact fixed points |
-| Tests | 2,582 automated tests in this repository (2,519 passed, 0 failed, 63 skipped) |
+| Tests | 2,585 automated tests in this repository (2,522 passed, 0 failed, 63 skipped) |
 <!-- dashboard:end -->
 
 Named nodes are not the same as distinct functions, and simulation runs are
@@ -299,8 +299,8 @@ it says, reproducibly. They say nothing about whether the biology is right.
 
 | Suite | Tests | Result |
 |---|---|---|
-| This repository, `pixi run test` | 2,582 | 2,519 passed, 0 failed, 63 skipped |
-| of which mainline, `pixi run endotwin-test` | 113 | OK |
+| This repository, `pixi run test` | 2,585 | 2,522 passed, 0 failed, 63 skipped |
+| of which mainline, `pixi run endotwin-test` | 116 | OK |
 | Prototype at the source commit | 2,767 | 2,757 passed; the 10 others need local-only data |
 | Prototype benchmark, 2026-10-16 | 2,415 | OK |
 

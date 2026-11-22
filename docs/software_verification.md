@@ -9,8 +9,8 @@ rules are right.
 
 | Run | Tests | Result | Record |
 |---|---|---|---|
-| This repository, complete suite (`pixi run test`) | 2,582 | 2,519 passed, 0 failed, 63 skipped in 947 s (single process) | `docs/verification/endotwin_suite_records.json`, log `docs/verification/endotwin_suite.log.gz` |
-| ENDO-TWIN mainline only (`pixi run endotwin-test`) | 113 | OK | same record |
+| This repository, complete suite (`pixi run test`) | 2,585 | 2,522 passed, 0 failed, 63 skipped in 940 s (single process) | `docs/verification/endotwin_suite_records.json`, log `docs/verification/endotwin_suite.log.gz` |
+| ENDO-TWIN mainline only (`pixi run endotwin-test`) | 116 | OK | same record |
 | Prototype at the source commit `b1de5f9`, fresh clone, before any change | 2,767 | 2,757 passed, 1 failed, 9 skipped in 1,980 s | `docs/verification/source_baseline_b1de5f9.json`, log alongside |
 | Prototype benchmark, 2026-10-16 (owner's working copy) | 2,415 | OK (1 skip) in 1,958 s | `docs/verification/cache_benchmark_record.json` |
 
@@ -100,4 +100,4 @@ final commit except for the files that report its outcome: this document,
 `README.md`, `docs/verification/endotwin_suite_records.json`, the compressed log
 and `docs/research_foundation_metrics.json`. After those files were written,
 the mainline tests, lint and format checks were re-run on the final tree
-(113 of 113 mainline tests OK; `pixi run test-guards`: 198 guard tests OK, checkout unchanged; `pixi run lint` and `pixi run format-check` pass).
+(116 of 116 mainline tests OK; `pixi run test-guards`: 198 guard tests OK, checkout unchanged; `pixi run lint` and `pixi run format-check` pass).

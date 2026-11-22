@@ -2,10 +2,10 @@
   "endotwin_full_suite": {
     "status": "final: run on the committed tree recorded in tested_tree",
     "command": "pixi run test (python -B -m unittest discover -s tests -v), single process",
-    "tested_tree": "0224b7abe1396b5cbbedced4677536611a7e2e5f",
+    "tested_tree": "134db5b54ebf881b8e437b42e5e4039a724b0b08",
     "local_only_evidence_present": "data/combined-dataset-patient-integration.rds, the gitignored annotation workbook, context/literature/pdfs/ and output/review_inbox/ were hard-linked from the owner's prototype working copy (gitignored, never committed), as in the prototype 2026-10-16 benchmark",
     "ran": 2585,
-    "seconds": 940.437,
+    "seconds": 934.092,
     "result_line": "OK (skipped=63)",
     "failed": 0,
     "skipped": 63,
@@ -21,7 +21,7 @@
       "requires the prototype's source Git history: recorded commit 7a7eb34a4f7e is absent from this history-free repository (docs/ORIGIN.md)": 1
     },
     "log": "docs/verification/endotwin_suite.log.gz",
-    "log_sha256_uncompressed": "e538230a36adc643f7fcc8ac66f296b376fefe0289e661740ef9d5c3d25134d3",
+    "log_sha256_uncompressed": "3b5c052e6c644dd405f50e0e55b3ed50a3e666f3a96d98b9bfad324c79d32051",
     "log_note": "Temporary-directory paths are replaced by <tmp> and the checkout path by a relative path; nothing else is altered.",
     "files_changed_after_run": [
       "README.md",

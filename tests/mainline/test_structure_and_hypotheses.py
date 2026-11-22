@@ -212,6 +212,16 @@ class InflammationHypotheses(unittest.TestCase):
         self.assertEqual(_fp(["INF_decidual_only"], self.il1b)["E_FGFR_ERK"], 0)
         self.assertEqual(_fp(["INF_pgr_depletion"], self.il1b)["E_FGFR_ERK"], 1)
 
+    def test_il1b_inputs_are_inert_without_exposure(self):
+        for selection in MODEL.scenarios():
+            rules = MODEL.rules_for(selection)
+            self.assertEqual(
+                fixed_point(rules, HT)["OUT_STROMAL_DECIDUALIZATION"],
+                fixed_point(
+                    MODEL.rules_for({**selection, "INF": "INF_decidual_only"}), HT
+                )["OUT_STROMAL_DECIDUALIZATION"],
+            )
+
 
 class Foxo1Hypotheses(unittest.TestCase):
     foxo1i: ClassVar[dict[str, int]] = {**HT, "IN_FOXO1_INHIBITOR": 1}
@@ -244,16 +254,6 @@ class HedgehogReception(unittest.TestCase):
         self.assertEqual(_fp(inputs=hormone_only)["S_BMP2"], 1)
         state = _fp(inputs={**hormone_only, "IN_SMO_INHIBITOR": 1})
         self.assertEqual((state["S_BMP2"], state["S_BMP_SMAD"]), (0, 0))
-
-    def test_il1b_inputs_are_inert_without_exposure(self):
-        for selection in MODEL.scenarios():
-            rules = MODEL.rules_for(selection)
-            self.assertEqual(
-                fixed_point(rules, HT)["OUT_STROMAL_DECIDUALIZATION"],
-                fixed_point(
-                    MODEL.rules_for({**selection, "INF": "INF_decidual_only"}), HT
-                )["OUT_STROMAL_DECIDUALIZATION"],
-            )
 
 
 class AdhesionConditionsAreUninformative(unittest.TestCase):

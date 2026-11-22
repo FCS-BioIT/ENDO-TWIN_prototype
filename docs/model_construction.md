@@ -58,7 +58,7 @@ than a renamed copy of an existing node.
 | PRL and IGFBP-1 separated; new FOX family | FOXO1 activity inhibition collapses IGFBP1 but not PRL (ET-024); FOXO1 alone is inert on the PRL enhancer (ET-026); IRF4 knockdown attenuates PRL (ET-027) | A cheap discriminating experiment: FOXO1 inhibitor, read by the existing PRL ELISA |
 | `S_WNT4` between BMP/SMAD and decidualisation | BMP2 raises WNT4 (ET-008); SMAD1/5 knockdown lowers WNT4 (ET-013) | Q1's BMP route has a transcript readout |
 | Hedgehog reception `S_HH_SIGNALING` and `IN_SMO_INHIBITOR` | Human IHH targets (ET-009); stromal Smo in mouse (ET-028) | The prototype refused this node as an exact alias of IHH; the inhibitor gives it a determinant, and the `S_PKA -> S_BMP2` edge is no longer absorbed |
-| ERα in both compartments; the mitogen needs stromal ERα | Stromal ERα mediates E2's mitogenic effect on the epithelium (Cooke 1997, ET-029, abstract level) | The paracrine model of E2 action, which Q2 is about, is explicit |
+| ERα in both compartments; the mitogen needs stromal ERα | Stromal ERα mediates E2's mitogenic effect on the epithelium (Cooke 1997, ET-029, read in full) | The paracrine model of E2 action, which Q2 is about, is explicit |
 | Epithelial `E_FGFR_ERK` | FGFR blockade lowers epithelial phospho-ERK1/2 and Ki67 in Hand2-deficient mouse uterus (ET-005) | A receptor step and a readout (epithelial phospho-ERK1/2) for the paracrine route |
 | IL-1β split into JNK and ERK1/2 | JNK route (ET-016); ERK1/2-dependent PR depletion (ET-015) | The two INF hypotheses now name their kinase; NF-κB was not added because the only source is not endometrial (ET-017) |
 
@@ -148,3 +148,4 @@ share trajectories (`docs/maboss_estimator_semantics.md`).
 | OQ-06 | Does PRL need FOXO1? | FOX family; the sources disagree (ET-022, ET-027 versus ET-024, ET-026) |
 | OQ-07 | Is Hedgehog reception needed for NR2F2 in human stroma? | No human evidence (the prototype's GAP-014); the SMO inhibitor comparison under the hormone-only regimen would test it |
 | OQ-08 | Which rates and initial conditions apply? | None estimated; steady-state predictions are rate-invariant, transients are not |
+| OQ-09 | Should proliferation still require epithelial ERα? | Cooke 1997 (read in full) finds epithelial ERα neither necessary nor sufficient in mouse. The `E_ESR1` term changes no prediction (it equals the E2 input, like stromal ERα), so it is queued for removal in the next model revision rather than in a new version on its own |

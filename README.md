@@ -251,7 +251,11 @@ Main limitations:
 - The SMO and FOXO1 inhibitors are candidates, not part of the funded protocol.
 - XAV939 is in the regimen but no rule reads it, since we dont know which
   compartment it reaches.
-- The IL-1β papers and Cooke 1997 were read at abstract level.
+- The IL-1β papers were read at abstract level only; no full text was
+  reachable.
+- The proliferation rule still requires epithelial ERα, which Cooke 1997
+  (read in full) shows is not needed in mouse. The term changes no prediction
+  and goes in the next model revision.
 - Outputs are Boolean and time is dimensionless. Transients depend on unknown
   rates; steady states do not.
 

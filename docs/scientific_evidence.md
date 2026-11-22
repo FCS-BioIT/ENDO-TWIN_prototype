@@ -135,7 +135,7 @@ OUT_EPITHELIAL_PROLIFERATION
 
 - Mechanism: E2 drives epithelial proliferation through stromal, not
   epithelial, ERα in mouse tissue recombinants (Cooke et al. 1997, ET-029,
-  abstract level). Progesterone induces stromal HAND2, which represses stromal
+  read in full: epithelial ERα was neither necessary nor sufficient). Progesterone induces stromal HAND2, which represses stromal
   FGFs; FGFR blockade (PD173074) lowers epithelial phospho-FRS2, phospho-ERK1/2
   and Ki67 in Hand2-deficient mouse uterus (Li et al. 2011, ET-005). In human
   stromal cells HAND2 siRNA raises FGF9 only (Murata et al. 2019, ET-007), which
@@ -143,8 +143,9 @@ OUT_EPITHELIAL_PROLIFERATION
   the node stands for the stromal mitogenic route.
 - What the model assumes: no primary paper in the corpus supports the
   epithelial-autonomous route; it is included because Q2 requires the
-  comparison. Whether epithelial ERα is needed beside the stromal route is not
-  resolved here.
+  comparison. The default rule still requires epithelial ERα, which Cooke et al.
+  contradict in mouse; the term changes no prediction and is queued for removal
+  (OQ-09 in `docs/model_construction.md`).
 - Predictions: stromal HAND2 knockdown under the full regimen raises
   proliferation only under the stromal hypotheses; neutralising the mitogen
   during E2 priming lowers proliferation only under the stromal hypotheses;

@@ -64,13 +64,17 @@ evidence did not support it (U3, U4, U4b; `docs/v05_mechanistic_integration_plan
 
 ## Evidence added for ENDO-TWIN
 
-`endotwin/evidence/references.tsv` lists 20 references used by the mainline.
-Fourteen are corpus papers (DOIs checked against `references.tsv` by a test), and one is the in-house ADOC article.
-Liao et al. 2024 was read in full in the prototype but only staged. Four IL-1beta and
-NF-kappaB papers (Frank 1995, Yu 2019, Taylor 2024, Kalkhoven 1996) are new.
-They were DOI-verified against Crossref on 2026-11-22 and read at abstract level
-only. This is recorded in the `evidence_depth` column and must be upgraded by
-full-text reading before WP3 relies on them.
+`endotwin/evidence/references.tsv` lists 29 references used by the mainline.
+Twenty-two are corpus papers (DOIs checked against `references.tsv` by a test),
+eight of them added for v0.2.0 from the prototype's full-text PRL/IGFBP-1/FOXO1 unit,
+and one is the in-house ADOC article. Liao et al. 2024 was read in full in
+the prototype but only staged. Cooke et al. 1997 is new and was read in full on
+2026-11-22. Four IL-1beta and NF-kappaB papers (Frank 1995, Yu 2019, Taylor 2024,
+Kalkhoven 1996) are new and were DOI-verified against Crossref on 2026-11-22;
+they remain read at abstract level only, because no full text was reachable
+(Taylor 2024 sits behind a browser check and a login on the publisher site, and
+Yu 2019 has no open copy). This is recorded in the `evidence_depth` column and
+must be upgraded by full-text reading before WP3 relies on them.
 
 ## Gaps relevant to ENDO-TWIN
 

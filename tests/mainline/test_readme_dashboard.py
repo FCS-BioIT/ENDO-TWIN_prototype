@@ -19,7 +19,7 @@ DASHBOARD = README.split("<!-- dashboard:start -->", 1)[1].split(
     "<!-- dashboard:end -->", 1
 )[0]
 METRICS = json.loads(OUT.read_text(encoding="utf-8"))
-RESULTS = ROOT / "endotwin/results/endotwin-v0.1.0"
+RESULTS = ROOT / "endotwin/results/endotwin-v0.2.0"
 
 
 def n(value: int) -> str:
@@ -125,7 +125,7 @@ class DashboardMatchesMetrics(unittest.TestCase):
         )
         rates = json.loads((RESULTS / "rate_sensitivity_summary.json").read_text())
         self.assertQuoted(
-            f"{rates['records_converged']} of {rates['records']} steady-state predictions "
+            f"{n(rates['records_converged'])} of {n(rates['records'])} steady-state predictions "
             f"unchanged under {rates['samples']} random rate sets"
         )
         confirm = json.loads((RESULTS / "maboss_confirmation_summary.json").read_text())

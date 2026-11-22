@@ -42,7 +42,7 @@ SPEC = textwrap.dedent(
     """
     prediction_id: TEST-Q1-BMPRI
     purpose: WP2_prospective_G1
-    model_version: endotwin-v0.1.0
+    model_version: endotwin-v0.2.0
     comparison: Q1_bmpr_inhibition
     primary_readout: RO-PRL
     secondary_readouts: [RO-PSMAD158, RO-KI67]
@@ -70,9 +70,12 @@ class ObservationMap(unittest.TestCase):
 
     def test_grant_readouts_map_to_the_right_nodes(self):
         expected = {
-            "RO-PRL": "OUT_STROMAL_DECIDUALIZATION",
-            "RO-IGFBP1": "OUT_STROMAL_DECIDUALIZATION",
-            "RO-PAEP": "OUT_EPITHELIAL_SECRETORY",
+            "RO-PRL": "X_PRL",
+            "RO-IGFBP1": "X_IGFBP1",
+            "RO-PAEP": "X_PAEP",
+            "RO-RNA-PRL": "S_PRL",
+            "RO-RNA-IGFBP1": "S_IGFBP1",
+            "RO-BULK-DECID": "OUT_STROMAL_DECIDUALIZATION",
             "RO-KI67": "OUT_EPITHELIAL_PROLIFERATION",
             "RO-EDU": "OUT_EPITHELIAL_PROLIFERATION",
             "RO-PSMAD158": "S_BMP_SMAD",
@@ -97,6 +100,22 @@ class ObservationMap(unittest.TestCase):
             self.assertRegex(
                 self.obs[readout]["data_status"], "planned|not yet measured"
             )
+
+    def test_every_readout_node_has_an_observation_row_and_back(self):
+        mapped = {r["model_node"] for r in self.obs.values() if r["model_node"]}
+        self.assertEqual(mapped, set(MODEL.readout_nodes))
+
+    def test_secreted_protein_and_transcript_are_distinct_readouts(self):
+        for protein, rna in (("RO-PRL", "RO-RNA-PRL"), ("RO-IGFBP1", "RO-RNA-IGFBP1")):
+            self.assertEqual(
+                MODEL.compartment(self.obs[protein]["model_node"]), "extracellular"
+            )
+            self.assertEqual(MODEL.compartment(self.obs[rna]["model_node"]), "stroma")
+
+    def test_candidate_readouts_are_not_in_the_funded_plan(self):
+        for row in self.obs.values():
+            if row["mapping_status"] == "candidate":
+                self.assertEqual(row["data_status"], "not in the funded plan")
 
     def test_deconvolution_readouts_are_relative_contributions(self):
         for readout in ("RO-BULK-DECID", "RO-BULK-SECR"):

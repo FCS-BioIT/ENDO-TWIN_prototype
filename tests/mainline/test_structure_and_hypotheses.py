@@ -30,7 +30,7 @@ from endotwin.structure import (
 
 MODEL = load_model()
 PROTOCOLS = load_protocols(MODEL)
-RESULTS = ROOT / "endotwin/results/endotwin-v0.1.0"
+RESULTS = ROOT / "endotwin/results/endotwin-v0.2.0"
 HT = {"IN_E2": 1, "IN_PROGESTIN": 1, "IN_cAMP": 1, "IN_XAV939": 1}
 
 
@@ -76,10 +76,30 @@ class MainlineStructure(unittest.TestCase):
         progesterone_class = next(
             c for c in self.summary.alias_classes if "IN_PROGESTIN" in c
         )
-        self.assertIn("S_BMP2", progesterone_class)
-        self.assertNotIn("S_BMP_SMAD", progesterone_class)
+        for node in ("S_BMP2", "S_BMP_SMAD", "S_HH_SIGNALING", "S_IRF4"):
+            self.assertNotIn(node, progesterone_class)
         cols = columns(MODEL.rules)
         self.assertNotEqual(cols.values["S_BMP2"], cols.values["S_BMP_SMAD"])
+
+    def test_candidate_inhibitors_give_their_targets_a_determinant(self):
+        cols = columns(MODEL.rules).values
+        self.assertNotEqual(cols["X_IHH"], cols["S_HH_SIGNALING"])
+        self.assertNotEqual(cols["S_PKA"], cols["S_FOXO1"])
+        self.assertNotEqual(cols["S_IGFBP1"], cols["S_PRL"])
+
+    def test_no_dependency_is_absorbed_or_never_binding(self):
+        self.assertEqual(self.summary.absorbed_dependencies, ())
+        self.assertEqual(self.summary.never_binding_inhibitions, ())
+
+    def test_relay_nodes_are_declared_aliases_of_their_producers(self):
+        classes = [set(c) for c in self.summary.alias_classes]
+        for pair in (
+            {"S_BMP2", "X_BMP2"},
+            {"OUT_EPITHELIAL_SECRETORY", "X_PAEP"},
+            {"S_PRL", "X_PRL"},
+            {"S_IGFBP1", "X_IGFBP1"},
+        ):
+            self.assertTrue(any(pair <= c for c in classes), pair)
 
     def test_xav939_is_declared_but_read_by_no_rule(self):
         self.assertEqual(self.summary.unread_inputs, ("IN_XAV939",))
@@ -107,6 +127,7 @@ class Q1BmpHypotheses(unittest.TestCase):
         for variant in ("Q1_bmp_required", "Q1_pgr_sufficient"):
             pert = _fp([variant], {**HT, "IN_BMPR_INHIBITOR": 1})
             self.assertEqual((pert["S_BMP2"], pert["S_BMP_SMAD"]), (1, 0), variant)
+            self.assertEqual(pert["S_WNT4"], 0, variant)
             self.assertEqual(pert["OUT_EPITHELIAL_PROLIFERATION"], 0, variant)
 
     def test_cyclic_amp_is_required_in_both(self):
@@ -119,7 +140,7 @@ class Q1BmpHypotheses(unittest.TestCase):
 
 class Q2ParacrineHypotheses(unittest.TestCase):
     knockdown: ClassVar[dict[str, int]] = {"S_HAND2": 0}
-    block: ClassVar[dict[str, int]] = {"S_PARACRINE_MITOGEN": 0}
+    block: ClassVar[dict[str, int]] = {"X_PARACRINE_MITOGEN": 0}
     e2_only: ClassVar[dict[str, int]] = {"IN_E2": 1}
 
     def test_hand2_knockdown_separates_stromal_from_autonomous(self):
@@ -176,6 +197,48 @@ class InflammationHypotheses(unittest.TestCase):
         self.assertEqual(_fp(["INF_decidual_only"], self.il1b)["S_BMP_SMAD"], 1)
         self.assertEqual(_fp(["INF_pgr_depletion"], self.il1b)["S_BMP_SMAD"], 0)
 
+    def test_both_kinase_routes_are_engaged_in_both_hypotheses(self):
+        for variant in ("INF_decidual_only", "INF_pgr_depletion"):
+            state = _fp([variant], self.il1b)
+            self.assertEqual((state["S_JNK"], state["S_ERK1_2"]), (1, 1), variant)
+
+    def test_pgr_depletion_releases_the_stromal_mitogen(self):
+        self.assertEqual(_fp(["INF_decidual_only"], self.il1b)["E_FGFR_ERK"], 0)
+        self.assertEqual(_fp(["INF_pgr_depletion"], self.il1b)["E_FGFR_ERK"], 1)
+
+
+class Foxo1Hypotheses(unittest.TestCase):
+    foxo1i: ClassVar[dict[str, int]] = {**HT, "IN_FOXO1_INHIBITOR": 1}
+
+    def test_igfbp1_falls_in_every_scenario(self):
+        for selection in MODEL.scenarios():
+            state = fixed_point(MODEL.rules_for(selection), self.foxo1i)
+            self.assertEqual(
+                (state["S_IGFBP1"], state["X_IGFBP1"]),
+                (0, 0),
+                scenario_label(selection),
+            )
+            self.assertEqual(state["OUT_STROMAL_DECIDUALIZATION"], 1)
+
+    def test_prl_separates_the_two_foxo1_hypotheses(self):
+        self.assertEqual(_fp(["FOX_prl_foxo1_dependent"], self.foxo1i)["X_PRL"], 0)
+        self.assertEqual(_fp(["FOX_prl_foxo1_independent"], self.foxo1i)["X_PRL"], 1)
+        for variant in ("FOX_prl_foxo1_dependent", "FOX_prl_foxo1_independent"):
+            self.assertEqual(_fp([variant])["X_PRL"], 1, variant)
+
+
+class HedgehogReception(unittest.TestCase):
+    def test_smo_inhibition_is_compensated_by_camp_in_the_supplemented_regimen(self):
+        state = _fp(inputs={**HT, "IN_SMO_INHIBITOR": 1})
+        self.assertEqual((state["S_HH_SIGNALING"], state["S_NR2F2"]), (0, 0))
+        self.assertEqual((state["S_BMP2"], state["S_BMP_SMAD"]), (1, 1))
+
+    def test_without_camp_bmp2_depends_on_hedgehog_reception(self):
+        hormone_only = {"IN_E2": 1, "IN_PROGESTIN": 1}
+        self.assertEqual(_fp(inputs=hormone_only)["S_BMP2"], 1)
+        state = _fp(inputs={**hormone_only, "IN_SMO_INHIBITOR": 1})
+        self.assertEqual((state["S_BMP2"], state["S_BMP_SMAD"]), (0, 0))
+
     def test_il1b_inputs_are_inert_without_exposure(self):
         for selection in MODEL.scenarios():
             rules = MODEL.rules_for(selection)
@@ -192,7 +255,7 @@ class AdhesionConditionsAreUninformative(unittest.TestCase):
 
     Backs the scope decision in docs/experimental_data.md, section 3: under
     untreated, full regimen and full regimen with mifepristone, every node has
-    the same steady state in all 12 scenarios, so no readout of the steady state
+    the same steady state in all 24 scenarios, so no readout of the steady state
     (an adhesion proxy included) could discriminate them.
     """
 
@@ -207,7 +270,7 @@ class AdhesionConditionsAreUninformative(unittest.TestCase):
 
     def test_every_scenario_reaches_the_same_state_in_every_adhesion_arm(self):
         scenarios = MODEL.scenarios()
-        self.assertEqual(len(scenarios), 12)
+        self.assertEqual(len(scenarios), 24)
         for name, (inputs, forced) in self.CONDITIONS.items():
             states = {
                 tuple(sorted(fixed_point(MODEL.rules_for(sel), inputs, forced).items()))

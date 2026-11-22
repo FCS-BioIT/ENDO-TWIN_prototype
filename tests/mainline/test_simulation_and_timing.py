@@ -25,7 +25,7 @@ from endotwin.structure import fixed_point
 MODEL = load_model()
 PROTOCOLS = load_protocols(MODEL)
 FAST = SimulationSettings(sample_count=500, seed=3)
-RESULTS = ROOT / "endotwin/results/endotwin-v0.1.0"
+RESULTS = ROOT / "endotwin/results/endotwin-v0.2.0"
 
 
 def run(condition_id, settings=FAST, variants=()):
@@ -55,6 +55,8 @@ class ProtocolDefinitions(unittest.TestCase):
                 "IN_cAMP": 1,
                 "IN_XAV939": 1,
                 "IN_BMPR_INHIBITOR": 0,
+                "IN_SMO_INHIBITOR": 0,
+                "IN_FOXO1_INHIBITOR": 0,
                 "IN_IL1B": 0,
             },
         )
@@ -203,7 +205,7 @@ class CommittedResults(unittest.TestCase):
     def test_animation_matches_its_provenance_record(self):
         from PIL import Image
 
-        gif = ROOT / "docs/assets/endotwin/endotwin_pathway_dynamics_v0.1.0.gif"
+        gif = ROOT / "docs/assets/endotwin/endotwin_pathway_dynamics_v0.2.0.gif"
         sidecar = json.loads(
             gif.with_name(gif.stem + "_provenance.json").read_text(encoding="utf-8")
         )
@@ -216,7 +218,7 @@ class CommittedResults(unittest.TestCase):
             "il1b_exposure__INF_pgr_depletion",
         ):
             self.assertIn(
-                f"endotwin/results/endotwin-v0.1.0/dynamics_{tag}.tsv",
+                f"endotwin/results/endotwin-v0.2.0/dynamics_{tag}.tsv",
                 sidecar["inputs_sha256"],
             )
 

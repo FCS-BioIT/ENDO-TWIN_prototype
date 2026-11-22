@@ -18,6 +18,8 @@ from dt_adoc.model.topology import parse_bnd_rules
 from endotwin.model import dependencies, load_model, read_tsv
 
 MODEL = load_model()
+V010 = ROOT / "endotwin/models/endotwin-v0.1.0/network.bnd"
+V010_LINEAGE = ROOT / "endotwin/models/endotwin-v0.1.0/lineage.tsv"
 V060 = ROOT / "models/superset/adoc-literature-superset-v0.6.0/network.bnd"
 SOURCE_COMMIT = "b1de5f90582f02291789eb72753fa5ab1f2d8c88"
 EVIDENCE_CLASSES = {
@@ -47,18 +49,30 @@ class NodeTables(unittest.TestCase):
 
     def test_every_node_has_a_known_compartment_and_layer(self):
         for node, info in MODEL.node_info.items():
-            self.assertIn(info["compartment"], {"medium", "epithelium", "stroma"}, node)
+            self.assertIn(
+                info["compartment"],
+                {"medium", "epithelium", "extracellular", "stroma"},
+                node,
+            )
             self.assertIn(
                 info["layer"],
                 {
                     "experimental_input",
                     "epithelial_intracellular",
                     "stromal_intracellular",
-                    "intercompartmental_signal",
+                    "extracellular_ligand",
+                    "secreted_protein",
                     "functional_output",
                 },
                 node,
             )
+            prefix = {
+                "medium": "IN_",
+                "epithelium": ("E_", "OUT_"),
+                "extracellular": "X_",
+                "stroma": ("S_", "OUT_"),
+            }
+            self.assertTrue(node.startswith(prefix[info["compartment"]]), node)
             if node.startswith("IN_"):
                 self.assertEqual(info["layer"], "experimental_input")
                 self.assertEqual(MODEL.rules[node], node)
@@ -68,11 +82,19 @@ class NodeTables(unittest.TestCase):
         self.assertEqual(
             readouts,
             {
-                "OUT_EPITHELIAL_SECRETORY": "PAEP",
+                "OUT_EPITHELIAL_SECRETORY": "secretory signature",
                 "OUT_EPITHELIAL_PROLIFERATION": "Ki67;EdU",
-                "OUT_STROMAL_DECIDUALIZATION": "PRL;IGFBP-1",
+                "OUT_STROMAL_DECIDUALIZATION": "decidual signature",
             },
         )
+        # The grant's secreted readouts sit on their own extracellular nodes.
+        for node, readout in (
+            ("X_PAEP", "PAEP"),
+            ("X_PRL", "PRL"),
+            ("X_IGFBP1", "IGFBP-1"),
+        ):
+            self.assertEqual(MODEL.node_info[node]["readouts"], readout)
+            self.assertEqual(MODEL.node_info[node]["layer"], "secreted_protein")
 
     def test_bmp_ligand_and_pathway_activity_are_separate_nodes(self):
         self.assertEqual(MODEL.node_info["S_BMP2"]["entity_type"], "ligand_expression")
@@ -82,6 +104,9 @@ class NodeTables(unittest.TestCase):
         self.assertEqual(MODEL.node_info["S_BMP_SMAD"]["readouts"], "pSMAD1/5/8")
         self.assertIn("IN_BMPR_INHIBITOR", MODEL.rules["S_BMP_SMAD"])
         self.assertNotIn("IN_BMPR_INHIBITOR", MODEL.rules["S_BMP2"])
+        # The receptor reads the secreted ligand pool, not the expression node.
+        self.assertIn("X_BMP2", MODEL.rules["S_BMP_SMAD"])
+        self.assertEqual(MODEL.rules["X_BMP2"], "S_BMP2")
 
     def test_config_starts_every_node_off_and_observable(self):
         cfg = (MODEL.root / "baseline.cfg").read_text()
@@ -135,60 +160,60 @@ class EvidenceTable(unittest.TestCase):
             (e["source"], e["target"])
             for e in MODEL.edges
             if e["in_default_network"] == "true"
-            and e["crossing"] in {"epithelium_to_stroma", "stroma_to_epithelium"}
+            and e["crossing"]
+            in {
+                "epithelium_to_extracellular",
+                "extracellular_to_stroma",
+                "stroma_to_extracellular",
+                "extracellular_to_epithelium",
+            }
         }
         declared = {(i["signal_node"], i["receiving_node"]) for i in MODEL.interface}
         self.assertEqual(crossing, declared)
 
 
 class Lineage(unittest.TestCase):
+    """v0.2.0 maps every node of its parent v0.1.0; v0.1.0 maps every v0.6.0 node."""
+
     rows = read_tsv(MODEL.root / "lineage.tsv")
+    v010 = parse_bnd_rules(V010)
     v060 = parse_bnd_rules(V060)
 
-    def test_every_v060_node_has_one_lineage_row(self):
-        self.assertEqual(sorted(r["v060_node"] for r in self.rows), sorted(self.v060))
+    def test_every_v010_node_has_one_lineage_row(self):
+        self.assertEqual(sorted(r["v010_node"] for r in self.rows), sorted(self.v010))
 
-    def test_recorded_v060_rules_are_the_real_ones(self):
+    def test_recorded_v010_rules_are_the_real_ones(self):
         for row in self.rows:
-            if row["v060_rule"] != "(composite)":
-                self.assertEqual(
-                    row["v060_rule"], self.v060[row["v060_node"]], row["v060_node"]
-                )
+            self.assertEqual(
+                row["v010_rule"], self.v010[row["v010_node"]], row["v010_node"]
+            )
 
-    def test_unchanged_and_renamed_rows_keep_their_logic(self):
-        renames = {"S_FGF_MITOGENIC": "S_PARACRINE_MITOGEN"}
+    def test_unchanged_rows_keep_their_logic_and_modified_rows_say_why(self):
         for row in self.rows:
+            self.assertEqual(MODEL.rules[row["endotwin_node"]], row["endotwin_rule"])
             if row["change"] == "unchanged":
                 self.assertEqual(
-                    MODEL.rules[row["endotwin_node"]],
-                    row["v060_rule"],
-                    row["v060_node"],
+                    row["endotwin_rule"], row["v010_rule"], row["v010_node"]
                 )
-            if row["change"] in {"modified", "renamed", "merged_and_renamed"}:
-                self.assertEqual(
-                    MODEL.rules[row["endotwin_node"]],
-                    row["endotwin_rule"],
-                    row["v060_node"],
-                )
-                expected = row["v060_rule"]
-                for old, new in renames.items():
-                    expected = expected.replace(old, new)
-                if row["change"] == "renamed":
-                    self.assertEqual(
-                        MODEL.rules[row["endotwin_node"]], expected, row["v060_node"]
-                    )
-
-    def test_legacy_only_nodes_are_absent_from_the_mainline(self):
-        for row in self.rows:
-            if row["change"] == "not_carried":
-                self.assertNotIn(row["v060_node"], MODEL.rules)
+            else:
+                self.assertEqual(row["change"], "modified")
+                self.assertNotEqual(row["endotwin_rule"], row["v010_rule"])
+                self.assertTrue(row["note"], row["v010_node"])
 
     def test_node_dictionary_lineage_agrees_with_lineage_table(self):
+        changes = {r["endotwin_node"]: r["change"] for r in self.rows}
         for node, info in MODEL.node_info.items():
             if info["lineage_change"] == "new":
-                self.assertNotIn(node, self.v060)
-            elif info["lineage_change"] == "unchanged":
-                self.assertEqual(MODEL.rules[node], self.v060[node], node)
+                self.assertNotIn(node, self.v010)
+            else:
+                self.assertEqual(info["lineage_change"], changes[node], node)
+
+    def test_parent_lineage_still_covers_every_v060_node(self):
+        parent = read_tsv(V010_LINEAGE)
+        self.assertEqual(sorted(r["v060_node"] for r in parent), sorted(self.v060))
+        for row in parent:
+            if row["v060_rule"] != "(composite)":
+                self.assertEqual(row["v060_rule"], self.v060[row["v060_node"]])
 
 
 class Provenance(unittest.TestCase):

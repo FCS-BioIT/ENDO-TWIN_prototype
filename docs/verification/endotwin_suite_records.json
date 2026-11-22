@@ -1,0 +1,55 @@
+{
+  "endotwin_full_suite": {
+    "status": "final: run on the committed tree recorded in tested_tree",
+    "command": "pixi run test (python -B -m unittest discover -s tests -v), single process",
+    "tested_tree": "4ba6825e2f74d31712c5286d6138544f48f4c8ac",
+    "local_only_evidence_present": "data/combined-dataset-patient-integration.rds, the gitignored annotation workbook, context/literature/pdfs/ and output/review_inbox/ were hard-linked from the owner's prototype working copy (gitignored, never committed), as in the prototype 2026-10-16 benchmark",
+    "ran": 2566,
+    "seconds": 936.913,
+    "result_line": "OK (skipped=63)",
+    "failed": 0,
+    "skipped": 63,
+    "passed": 2503,
+    "history_bound_skips": 63,
+    "local_data_skips": 0,
+    "failures_and_errors": [],
+    "skip_reasons": {
+      "requires the prototype's source Git history: commit(s) 0c7da9c174b6, ef34c1079267 absent from this history-free repository (docs/ORIGIN.md); passed at the source commit (docs/verification/source_baseline_b1de5f9.json)": 44,
+      "requires the prototype's source Git history: commit(s) 97f88f55ce62 absent from this history-free repository (docs/ORIGIN.md); passed at the source commit (docs/verification/source_baseline_b1de5f9.json)": 13,
+      "requires the prototype's source Git history: commit(s) 97f88f55ce62, 51b8bd11bc79 absent from this history-free repository (docs/ORIGIN.md); passed at the source commit (docs/verification/source_baseline_b1de5f9.json)": 4,
+      "requires the prototype's source Git history: evidence-root commit 91f79ed is not available in this clone (shallow history or a synthetic snapshot); blob identity unchecked": 1,
+      "requires the prototype's source Git history: recorded commit 7a7eb34a4f7e is absent from this history-free repository (docs/ORIGIN.md)": 1
+    },
+    "log": "docs/verification/endotwin_suite.log.gz",
+    "log_sha256_uncompressed": "6cd544c56d2fdcb5ce881d637583161fa73695857570ab0c1e2a36a4d88dd6ea",
+    "log_note": "Temporary-directory paths are replaced by <tmp> and the checkout path by a relative path; nothing else is altered.",
+    "files_changed_after_run": [
+      "README.md",
+      "docs/ORIGIN.md",
+      "docs/research_foundation_metrics.json",
+      "docs/software_verification.md",
+      "docs/verification/endotwin_suite.log.gz",
+      "docs/verification/endotwin_suite_records.json"
+    ],
+    "post_run_checks": "On the final tree: pixi run endotwin-test 97 OK; pixi run test-guards 198 OK, checkout unchanged; pixi run lint and pixi run format-check pass. Only documentation and verification-record files changed after the run (list above)."
+  },
+  "endotwin_mainline_tests": {
+    "command": "pixi run endotwin-test",
+    "ran": 97,
+    "result_line": "OK"
+  },
+  "source_baseline": {
+    "source_commit": "b1de5f90582f02291789eb72753fa5ab1f2d8c88",
+    "ran": 2767,
+    "passed": 2757,
+    "failed": 1,
+    "skipped": 9,
+    "record": "docs/verification/source_baseline_b1de5f9.json"
+  },
+  "historical_benchmark": {
+    "date": "2026-10-16",
+    "ran": 2415,
+    "result_line": "OK (skipped=1)",
+    "record": "docs/verification/cache_benchmark_record.json"
+  }
+}

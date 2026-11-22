@@ -1,0 +1,40 @@
+node_id	compartment	layer	entity_type	label	biological_meaning	readouts	v010_node	lineage_change
+IN_E2	medium	experimental_input	experimental_condition	Oestradiol	E2 present in the culture medium (published regimen: 10 nM).		IN_E2	unchanged
+IN_PROGESTIN	medium	experimental_input	experimental_condition	Progestin	Progesterone (hormone-only regimen) or MPA (published regimen: 1 uM) present.		IN_PROGESTIN	unchanged
+IN_cAMP	medium	experimental_input	experimental_condition	cAMP analogue	8-Br-cAMP present (published regimen: 250 uM).		IN_cAMP	unchanged
+IN_XAV939	medium	experimental_input	experimental_condition	XAV939	Tankyrase inhibitor present (published regimen: 10 uM). Read by no rule: which ADOC compartment it acts on, and through what, is not established (the prototype's U4b).		IN_XAV939	unchanged
+IN_BMPR_INHIBITOR	medium	experimental_input	experimental_condition	BMP receptor inhibitor	BMP type I receptor inhibitor present (WP1 Task 1.4; compound to be selected).		IN_BMPR_INHIBITOR	unchanged
+IN_SMO_INHIBITOR	medium	experimental_input	experimental_condition	Smoothened inhibitor	Candidate perturbation, not in the funded protocol: a Smoothened antagonist that blocks Hedgehog reception. Gives the reception step a determinant of its own.			new
+IN_FOXO1_INHIBITOR	medium	experimental_input	experimental_condition	FOXO1 inhibitor	Candidate perturbation, not in the funded protocol: FOXO1 activity inhibitor (AS1842856, used in human ESC by Ujvari 2017).			new
+IN_IL1B	medium	experimental_input	experimental_condition	IL-1beta	IL-1beta present (G2 inflammation model; dose not fixed).		IN_IL1B	unchanged
+E_ESR1	epithelium	epithelial_intracellular	protein_activity	Epithelial ERalpha activity	Ligand-activated oestrogen receptor alpha signalling in epithelial cells.			new
+E_PGR	epithelium	epithelial_intracellular	protein_activity	Epithelial PGR activity	Ligand-activated progesterone receptor signalling in epithelial cells.		E_PGR	unchanged
+E_IHH	epithelium	epithelial_intracellular	ligand_expression	Epithelial IHH expression	Indian hedgehog expression in epithelial cells (not the secreted ligand pool).	IHH mRNA	E_IHH	unchanged
+E_FGFR_ERK	epithelium	epithelial_intracellular	protein_activity	Epithelial FGFR-ERK1/2 activity	Epithelial FGF receptor signalling to ERK1/2 in response to the stromal paracrine mitogen.	epithelial phospho-ERK1/2		new
+OUT_EPITHELIAL_SECRETORY	epithelium	functional_output	cell_state_program	Epithelial secretory differentiation	Secretory differentiation programme of the epithelium.	secretory signature	OUT_EPITHELIAL_SECRETORY	modified
+OUT_EPITHELIAL_PROLIFERATION	epithelium	functional_output	cell_state_program	Epithelial proliferation	E2-driven epithelial proliferation.	Ki67;EdU	OUT_EPITHELIAL_PROLIFERATION	modified
+X_IHH	extracellular	extracellular_ligand	secreted_ligand	IHH ligand	Secreted IHH available to stromal cells across the ADOC membrane.			new
+X_PARACRINE_MITOGEN	extracellular	extracellular_ligand	secreted_ligand	Paracrine mitogen ligand	Secreted stromal mitogen (FGF family; FGF9 is the only one shown to respond in human ESC) available to the epithelium.			new
+X_BMP2	extracellular	extracellular_ligand	secreted_ligand	BMP2 ligand	Secreted BMP2 available to stromal BMP receptors (autocrine and paracrine).			new
+X_PAEP	extracellular	secreted_protein	secreted_protein	Secreted PAEP	Glycodelin (PAEP) secreted into the outlet medium.	PAEP		new
+X_PRL	extracellular	secreted_protein	secreted_protein	Secreted PRL	Prolactin secreted into the basal outlet medium.	PRL		new
+X_IGFBP1	extracellular	secreted_protein	secreted_protein	Secreted IGFBP-1	IGFBP-1 secreted into the outlet medium (apical and basal outlets).	IGFBP-1		new
+S_ESR1	stroma	stromal_intracellular	protein_activity	Stromal ERalpha activity	Ligand-activated oestrogen receptor alpha signalling in stromal cells.			new
+S_PGR	stroma	stromal_intracellular	protein_activity	Stromal PGR activity	Ligand-activated progesterone receptor signalling in stromal cells.		S_PGR	unchanged
+S_PKA	stroma	stromal_intracellular	protein_activity	Stromal cAMP/PKA	cAMP-dependent protein kinase signalling in stromal cells.		S_PKA	unchanged
+S_CEBPB	stroma	stromal_intracellular	transcription_factor_activity	Stromal C/EBPbeta	C/EBPbeta binding at decidual gene promoters, induced by cAMP.			new
+S_FOXO1	stroma	stromal_intracellular	transcription_factor_activity	Stromal FOXO1 activity	Nuclear FOXO1 activity in stromal cells (cAMP-driven; progestin attenuation is partial and not encoded).	nuclear FOXO1		new
+S_IRF4	stroma	stromal_intracellular	gene_expression	Stromal IRF4	IRF4, a decidual transcription regulator whose PR binding site needs FOXO1.	IRF4 mRNA		new
+S_HH_SIGNALING	stroma	stromal_intracellular	protein_activity	Stromal Hedgehog reception	PTCH1/SMO/GLI signalling in stromal cells in response to IHH.	GLI1 mRNA;PTCH1 mRNA		new
+S_NR2F2	stroma	stromal_intracellular	transcription_factor_activity	Stromal COUP-TFII	NR2F2 response downstream of Hedgehog reception and PGR.	NR2F2 mRNA	S_NR2F2	modified
+S_BMP2	stroma	stromal_intracellular	ligand_expression	Stromal BMP2 expression	BMP2 ligand expression (not the secreted ligand, not pathway activity).	BMP2 mRNA	S_BMP2	unchanged
+S_BMP_SMAD	stroma	stromal_intracellular	protein_activity	BMP receptor/SMAD1/5/8 activity	BMP receptor signalling and SMAD1/5/8 phosphorylation.	pSMAD1/5/8	S_BMP_SMAD	modified
+S_WNT4	stroma	stromal_intracellular	gene_expression	Stromal WNT4	WNT4 expression downstream of BMP/SMAD signalling.	WNT4 mRNA		new
+S_HAND2	stroma	stromal_intracellular	transcription_factor_activity	Stromal HAND2	HAND2 activity in stromal cells.	HAND2 mRNA	S_HAND2	unchanged
+S_PARACRINE_MITOGEN	stroma	stromal_intracellular	ligand_expression	Stromal mitogen expression	Expression of the stromal paracrine mitogen (FGF family): induced through stromal ERalpha, repressed by HAND2.	FGF9 mRNA	S_PARACRINE_MITOGEN	modified
+S_IL1_SIGNALING	stroma	stromal_intracellular	protein_activity	Stromal IL-1 receptor signalling	IL-1 receptor (IL1R1) signalling in stromal cells.		S_IL1_SIGNALING	unchanged
+S_JNK	stroma	stromal_intracellular	protein_activity	Stromal JNK	IL-1beta-activated c-Jun N-terminal kinase signalling.	phospho-JNK		new
+S_ERK1_2	stroma	stromal_intracellular	protein_activity	Stromal ERK1/2	IL-1beta-activated ERK1/2 signalling in stromal cells.	stromal phospho-ERK1/2		new
+OUT_STROMAL_DECIDUALIZATION	stroma	functional_output	cell_state_program	Stromal decidualization	Decidual differentiation programme of the stroma.	decidual signature	OUT_STROMAL_DECIDUALIZATION	modified
+S_IGFBP1	stroma	stromal_intracellular	gene_expression	Stromal IGFBP1 expression	IGFBP1 transcription in decidualising stroma.	IGFBP1 mRNA		new
+S_PRL	stroma	stromal_intracellular	gene_expression	Stromal PRL expression	PRL transcription in decidualising stroma.	PRL mRNA		new

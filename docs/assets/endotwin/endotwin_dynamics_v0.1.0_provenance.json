@@ -1,0 +1,13 @@
+{
+  "figure": "docs/assets/endotwin/endotwin_dynamics_v0.1.0.png",
+  "inputs_sha256": {
+    "endotwin/results/endotwin-v0.1.0/dynamics_bmpr_inhibition__Q1_pgr_sufficient.tsv": "2895d79aeca2a6420b608b72fe95cfa2f363028f50977b466a6f62334b69b770",
+    "endotwin/results/endotwin-v0.1.0/dynamics_bmpr_inhibition__default.tsv": "eaf419c6e7776aaaf01b6b3733de5cbe55dfba20314a7ef4480599e963556bb4",
+    "endotwin/results/endotwin-v0.1.0/dynamics_reference__default.tsv": "e04e269204b9ff95ad76aaaf1691eb61bfccbccb713541cb685cb0038d97e477"
+  },
+  "limitations": "Model predictions, not observations. Time is dimensionless; magnitudes are trajectory frequencies, not concentrations.",
+  "main_result": "Under BMP receptor inhibition the two Q1 hypotheses predict opposite decidualisation outcomes with identical pSMAD1/5/8 loss.",
+  "model_version": "endotwin-v0.1.0",
+  "regenerate": "pixi run endotwin-figures",
+  "simulation": "10,000 trajectories, seed 1, unit rates, joint state carried across phases"
+}

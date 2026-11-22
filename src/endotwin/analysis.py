@@ -26,7 +26,7 @@ from dataclasses import dataclass
 from endotwin.model import Model, scenario_label
 from endotwin.protocols import ProtocolSet, forced_nodes
 from endotwin.simulate import SimulationSettings, simulate_condition
-from endotwin.structure import fixed_point
+from endotwin.structure import NotAcyclicError, fixed_point, topological_order
 
 DIRECTION_TOLERANCE = 1e-9
 
@@ -490,5 +490,84 @@ def relay_rate_robustness(
         "max_final_difference": max(
             abs(r["final_relay"] - r["final_relay_plus_direct"]) for r in rows
         ),
+    }
+    return rows, summary
+
+
+def initial_condition_sensitivity(
+    model: Model,
+    protocols: ProtocolSet,
+    comparison_id: str,
+    selection: Mapping[str, str],
+    node: str,
+    expected: str,
+    *,
+    samples: int = 5,
+    sample_count: int = 1000,
+    seed: int = 11,
+    duration_scale: float = 2.0,
+) -> tuple[list[dict[str, object]], dict[str, object]]:
+    """Does a comparison's direction on ``node`` survive random initial states?
+
+    Two parts. Structurally, an acyclic network has exactly one fixed point for
+    given inputs, so steady-state directions cannot depend on the initial
+    state. Empirically, every non-input node starts ON with an independent
+    uniform random probability, both matched conditions are simulated (phases
+    lengthened by ``duration_scale``), and the end-of-phase direction is
+    compared with the exact one (threshold 0.05, as for rates).
+    """
+    rules = model.rules_for(selection)
+    try:
+        topological_order(rules)
+        acyclic = True
+    except NotAcyclicError:
+        acyclic = False
+    comp = protocols.comparisons[comparison_id]
+    rng = random.Random(seed)
+    free = set(model.inputs)
+    rows: list[dict[str, object]] = []
+    for s in range(samples):
+        initial = {n: round(rng.random(), 6) for n in rules if n not in free}
+        settings = SimulationSettings(
+            sample_count=sample_count,
+            seed=3000 + s,
+            initial_probabilities=initial,
+            duration_scale=duration_scale,
+        )
+        pert = simulate_condition(
+            model,
+            protocols.conditions[comp.perturbed],
+            protocols.interventions,
+            selection,
+            settings,
+        )
+        ctrl = simulate_condition(
+            model,
+            protocols.conditions[comp.control],
+            protocols.interventions,
+            selection,
+            settings,
+        )
+        p_phase = next(p for p in pert.phases if p.phase_id == comp.phase_perturbed)
+        c_phase = next(p for p in ctrl.phases if p.phase_id == comp.phase)
+        delta = p_phase.final[node] - c_phase.final[node]
+        observed = direction(delta, tolerance=0.05)
+        rows.append(
+            {
+                "sample": s,
+                "delta": round(delta, 6),
+                "direction": observed,
+                "agrees": observed == expected,
+                "both_converged": p_phase.converged and c_phase.converged,
+            }
+        )
+    summary = {
+        "acyclic_network": acyclic,
+        "samples": samples,
+        "sample_count": sample_count,
+        "initial_distribution": "every non-input node ON with an independent uniform(0, 1) probability",
+        "duration_scale": duration_scale,
+        "agreeing_samples": sum(r["agrees"] for r in rows),
+        "stable": acyclic and all(r["agrees"] for r in rows),
     }
     return rows, summary

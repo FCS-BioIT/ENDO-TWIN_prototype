@@ -283,7 +283,35 @@ def cmd_all(args) -> None:
 def cmd_freeze(args) -> None:
     from endotwin.predictions import freeze
 
-    print(relative(freeze(Path(args.spec), allow_dirty=args.allow_dirty)))
+    if not args.check:
+        print(relative(freeze(Path(args.spec), allow_dirty=args.allow_dirty)))
+        return
+    import tempfile
+
+    # Dry run: the full eligibility analysis, written to a throwaway folder.
+    with tempfile.TemporaryDirectory() as tmp:
+        record = freeze(
+            Path(args.spec), out_root=Path(tmp), allow_dirty=True, check_only=True
+        )
+        payload = json.loads((record / "predictions.json").read_text())
+    sens = payload["sensitivity"]
+    print(
+        json.dumps(
+            {
+                "prediction_id": payload["prediction_id"],
+                "comparison": payload["comparison"]["id"],
+                "predictions": payload["predictions"],
+                "stable_under_rule_variants": sens["stable_under_rule_variants"],
+                "stable_under_rates": sens["stable_under_rates"],
+                "stable_under_initial_conditions": sens[
+                    "stable_under_initial_conditions"
+                ],
+                "eligible": sens["eligible"],
+                "note": "check only: nothing was frozen",
+            },
+            indent=2,
+        )
+    )
 
 
 def cmd_verify(args) -> None:
@@ -348,6 +376,11 @@ def main(argv: list[str] | None = None) -> None:
     p = sub.add_parser("freeze")
     p.add_argument("spec")
     p.add_argument("--allow-dirty", action="store_true")
+    p.add_argument(
+        "--check",
+        action="store_true",
+        help="run the eligibility analysis without writing a frozen record",
+    )
     p.set_defaults(func=cmd_freeze)
     p = sub.add_parser("verify-frozen")
     p.add_argument("record")

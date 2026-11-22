@@ -29,6 +29,7 @@ import yaml
 from endotwin.analysis import (
     comparison_directions,
     exact_predictions,
+    initial_condition_sensitivity,
     rate_sensitivity,
     readout_nodes,
 )
@@ -126,8 +127,15 @@ def freeze(
     out_root: Path = PREDICTIONS / "frozen",
     allow_dirty: bool = False,
     model: Model | None = None,
+    check_only: bool = False,
 ) -> Path:
     spec = load_spec(spec_path)
+    donors = (spec.get("donor_policy") or {}).get("development_donors") or []
+    if spec["purpose"] == "WP2_prospective_G1" and not donors and not check_only:
+        raise FreezeError(
+            "a WP2 record must list every WP1 development donor (pseudonymised) so "
+            "that evaluation can refuse them; use the check mode until they are known"
+        )
     model = model or load_model(spec["model_version"])
     if model.version != spec["model_version"]:
         raise FreezeError("model version does not match the spec")
@@ -217,11 +225,24 @@ def freeze(
         if r["comparison"] == comp_id and r["readout_node"] == primary_node
     ]
     stable_rates = all(r["agrees"] for r in primary_rate if r["both_converged"])
-    eligible = stable_rules and stable_rates
+    init_rows, init_summary = initial_condition_sensitivity(
+        model,
+        protocols,
+        comp_id,
+        selection,
+        primary_node,
+        primary_dir,
+        samples=int(sens.get("initial_condition_samples", 5)),
+        sample_count=int(sens.get("rate_sample_count", 1000)),
+        seed=int(sens.get("initial_condition_seed", 11)),
+    )
+    stable_initial = bool(init_summary["stable"])
+    eligible = stable_rules and stable_rates and stable_initial
     if sens.get("require_stable", True) and not eligible:
         raise FreezeError(
             "primary prediction is not stable under the declared sensitivity analysis "
-            f"(rules stable: {stable_rules}, rates stable: {stable_rates}); not eligible"
+            f"(rules stable: {stable_rules}, rates stable: {stable_rates}, "
+            f"initial conditions stable: {stable_initial}); not eligible"
         )
 
     staging = target.with_name(target.name + ".partial")
@@ -256,6 +277,9 @@ def freeze(
             "stable_under_rule_variants": stable_rules,
             "rate_summary": rate_summary,
             "stable_under_rates": stable_rates,
+            "initial_condition_summary": init_summary,
+            "initial_condition_samples": init_rows,
+            "stable_under_initial_conditions": stable_initial,
             "eligible": eligible,
         },
         "agreement_criteria": spec["agreement_criteria"],

@@ -29,6 +29,7 @@ sensitivity:                         # the primary prediction must be stable und
   vary_rule_families: [Q2, INF]      # families whose alternatives must not change the primary direction
   rate_samples: 30
   rate_sample_count: 2000
+  initial_condition_samples: 5        # random initial states; the network must also be acyclic
   require_stable: true
 donor_policy:
   development_donors: []             # pseudonymised codes of every donor used in WP1

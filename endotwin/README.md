@@ -6,7 +6,7 @@
 | `models/endotwin-v0.1.0/` | The previous version (19 nodes), kept because v0.2.0's `lineage.tsv` maps every node back to it |
 | `config/` | Protocols and timing, interventions, observation map, planned data schemas |
 | `evidence/` | References used by the mainline rules, with evidence depth and Crossref check |
-| `predictions/` | Template and (future) frozen records of prospective predictions |
+| `predictions/` | Template, the two checked WP2 drafts, and (future) frozen records of prospective predictions |
 | `results/endotwin-v0.2.0/` | Every committed result for the current version; regenerate with `pixi run endotwin-all` |
 | `results/endotwin-v0.1.0/` | Results of the previous version, frozen as committed (its configuration is in Git history, not in `config/`) |
 

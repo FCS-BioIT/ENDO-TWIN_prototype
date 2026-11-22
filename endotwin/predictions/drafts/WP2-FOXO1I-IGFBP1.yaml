@@ -1,0 +1,36 @@
+# DRAFT, NOT FROZEN. Alternative WP2 prediction (SO2, Task 2.1) if the
+# supplemented regimen is kept for WP2; see docs/wp2_prediction_selection.md.
+# Weaker on the proposal's "beyond the direct target" criterion: IGFBP1 is a
+# direct FOXO1 target gene. PRL is reported as a secondary readout because it
+# separates the two FOX hypotheses, but it cannot be primary (rule-dependent).
+# Same conditions as the recommended draft before freezing.
+
+prediction_id: WP2-FOXO1I-IGFBP1
+purpose: WP2_prospective_G1
+model_version: endotwin-v0.2.0
+comparison: FOX_foxo1_inhibition    # FOXO1 inhibitor (e.g. AS1842856) vs supplemented regimen
+primary_readout: RO-IGFBP1          # predicted: down
+secondary_readouts:
+  - RO-FOXO1-NUC   # target engagement: nuclear FOXO1 down
+  - RO-PRL         # down under FOX_prl_foxo1_dependent, no change under the alternative
+  - RO-PSMAD158    # no change (needs equivalence)
+  - RO-KI67        # no change (needs equivalence)
+rule_variants: {}
+agreement_criteria:
+  min_effect_log2: 0.5
+  min_evaluable_donors: 4
+  min_consistent_donors: 4
+  equivalence_margin_log2: 0.3
+simulation:
+  sample_count: 5000
+  seed: 1
+  replicates: 5
+sensitivity:
+  vary_rule_families: [Q1, Q2, INF, FOX]
+  rate_samples: 30
+  rate_sample_count: 2000
+  initial_condition_samples: 5
+  require_stable: true
+donor_policy:
+  development_donors: []   # FILL IN at the end of WP1: every WP1 donor code
+  evaluation_groups: [G1]

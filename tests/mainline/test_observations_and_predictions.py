@@ -29,6 +29,7 @@ from endotwin.predictions import (
     load_spec,
     verify,
 )
+from endotwin.protocols import load_protocols
 
 MODEL = load_model()
 CRITERIA = AgreementCriteria(
@@ -57,6 +58,7 @@ SPEC = textwrap.dedent(
       vary_rule_families: [Q2, INF]
       rate_samples: 2
       rate_sample_count: 200
+      initial_condition_samples: 2
       require_stable: true
     donor_policy:
       development_donors: [D01, D02, D03, D04]
@@ -181,6 +183,17 @@ class FreezingWorkflow(unittest.TestCase):
         self.assertTrue((self.record / "model" / "network.bnd").is_file())
         self.assertTrue(verify(self.record)["intact"])
 
+    def test_record_checks_rules_rates_and_initial_conditions(self):
+        sens = json.loads((self.record / "predictions.json").read_text())["sensitivity"]
+        self.assertTrue(sens["stable_under_rule_variants"])
+        self.assertTrue(sens["stable_under_rates"])
+        self.assertTrue(sens["stable_under_initial_conditions"])
+        summary = sens["initial_condition_summary"]
+        self.assertTrue(summary["acyclic_network"])
+        self.assertEqual(summary["samples"], 2)
+        self.assertEqual(summary["agreeing_samples"], 2)
+        self.assertTrue(verify(self.record)["intact"])
+
     def test_frozen_records_are_never_overwritten(self):
         with self.assertRaises(FreezeError):
             freeze(
@@ -251,7 +264,41 @@ class FreezingWorkflow(unittest.TestCase):
             freeze(spec, out_root=self.tmp / "frozen", allow_dirty=True, model=MODEL)
 
 
+class Wp2DonorGuard(unittest.TestCase):
+    def test_wp2_record_needs_the_development_donors(self):
+        tmp = Path(tempfile.mkdtemp(prefix="endotwin_donor_guard_"))
+        try:
+            spec = tmp / "no_donors.yaml"
+            spec.write_text(
+                SPEC.replace("TEST-Q1-BMPRI", "TEST-NO-DONORS").replace(
+                    "development_donors: [D01, D02, D03, D04]", "development_donors: []"
+                )
+            )
+            with self.assertRaises(FreezeError):
+                freeze(spec, out_root=tmp / "frozen", allow_dirty=True, model=MODEL)
+            self.assertFalse((tmp / "frozen" / "TEST-NO-DONORS").exists())
+        finally:
+            shutil.rmtree(tmp, ignore_errors=True)
+
+
 class Template(unittest.TestCase):
+    def test_wp2_drafts_are_valid_and_not_yet_freezable(self):
+        drafts = sorted((ROOT / "endotwin/predictions/drafts").glob("*.yaml"))
+        self.assertEqual(len(drafts), 2)
+        protocols = load_protocols(MODEL)
+        obs = load_observation_map(MODEL)
+        for path in drafts:
+            spec = load_spec(path)
+            self.assertEqual(spec["purpose"], "WP2_prospective_G1")
+            self.assertIn(spec["comparison"], protocols.comparisons)
+            for readout in [spec["primary_readout"], *spec["secondary_readouts"]]:
+                self.assertTrue(obs[readout]["model_node"], readout)
+            # Development donors are only known at the end of WP1.
+            self.assertEqual(spec["donor_policy"]["development_donors"], [])
+            self.assertFalse(
+                (ROOT / "endotwin/predictions/frozen" / spec["prediction_id"]).exists()
+            )
+
     def test_committed_template_is_a_valid_spec(self):
         spec = load_spec(
             ROOT / "endotwin/predictions/templates/wp2_prediction_spec.template.yaml"

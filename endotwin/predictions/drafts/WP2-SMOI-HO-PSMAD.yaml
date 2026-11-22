@@ -1,0 +1,38 @@
+# DRAFT, NOT FROZEN. Recommended WP2 prediction (SO2, Task 2.1); see
+# docs/wp2_prediction_selection.md. Freeze only at the end of WP1, after:
+#   1. Task 1.1 has qualified the hormone-only regimen (this comparison needs it);
+#   2. the model version below has been revised with the WP1 data, if needed;
+#   3. development_donors lists every WP1 donor (pseudonymised);
+#   4. the agreement criteria are signed off.
+# Then commit and run `pixi run endotwin-freeze <this file>` on a clean tree.
+# Check eligibility at any time with `pixi run endotwin-freeze --check <this file>`.
+
+prediction_id: WP2-SMOI-HO-PSMAD
+purpose: WP2_prospective_G1
+model_version: endotwin-v0.2.0
+comparison: HH_smo_inhibition_hormone_only   # Smoothened antagonist vs hormone-only control
+primary_readout: RO-PSMAD158                 # predicted: down
+secondary_readouts:
+  - RO-RNA-GLI1    # target engagement (GLI1/PTCH1 transcripts): down
+  - RO-RNA-NR2F2   # NR2F2: down
+  - RO-RNA-BMP2    # BMP2 expression: down
+  - RO-KI67        # epithelial proliferation: no change (needs equivalence)
+rule_variants: {}  # default variant of every family; the primary is the same in all 24 scenarios
+agreement_criteria:
+  min_effect_log2: 0.5
+  min_evaluable_donors: 4
+  min_consistent_donors: 4
+  equivalence_margin_log2: 0.3
+simulation:
+  sample_count: 5000
+  seed: 1
+  replicates: 5
+sensitivity:
+  vary_rule_families: [Q1, Q2, INF, FOX]
+  rate_samples: 30
+  rate_sample_count: 2000
+  initial_condition_samples: 5
+  require_stable: true
+donor_policy:
+  development_donors: []   # FILL IN at the end of WP1: every WP1 donor code
+  evaluation_groups: [G1]

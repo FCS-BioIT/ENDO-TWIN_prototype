@@ -285,9 +285,12 @@ final = run.final("differentiation_supplemented")
 final["X_IGFBP1"], final["X_PRL"]   # (0.0, 1.0)
 ```
 
-To freeze a prediction before WP2, fill in
-`endotwin/predictions/templates/wp2_prediction_spec.template.yaml`, commit, and
-run `pixi run endotwin-freeze <spec>`.
+Two WP2 drafts are ready and checked but not frozen: Smoothened inhibition
+under the hormone-only regimen (pSMAD1/5/8 down, recommended) and FOXO1
+inhibition (IGFBP-1 down). They get frozen at the end of WP1, once the WP1
+donors are known ([docs/wp2_prediction_selection.md](docs/wp2_prediction_selection.md)).
+`pixi run endotwin-freeze --check <spec>` runs the eligibility analysis without
+freezing anything.
 
 ## Tests
 
@@ -323,6 +326,7 @@ repository does not have. They passed at the source commit. See
 [model construction](docs/model_construction.md) ·
 [data](docs/experimental_data.md) ·
 [evaluation](docs/model_evaluation.md) ·
+[WP2 prediction](docs/wp2_prediction_selection.md) ·
 [software verification](docs/software_verification.md) ·
 [legacy prototype](docs/legacy/README.md)
 

@@ -1,0 +1,10 @@
+interface_id	signal_node	sending_compartment	receiving_node	receiving_compartment	carrier	received_input_name	notes
+IF-01	X_PARACRINE_MITOGEN	extracellular	E_FGFR_ERK	epithelium	stromal paracrine mitogen (FGF family; FGF9 in human ESC)	RX_X_PARACRINE_MITOGEN	Reception
+IF-02	E_IHH	epithelium	X_IHH	extracellular	Indian hedgehog (secreted)	RX_E_IHH	Secretion
+IF-03	S_PARACRINE_MITOGEN	stroma	X_PARACRINE_MITOGEN	extracellular	stromal paracrine mitogen (FGF family; FGF9 in human ESC)	RX_S_PARACRINE_MITOGEN	Secretion
+IF-04	S_BMP2	stroma	X_BMP2	extracellular	BMP2 (secreted)	RX_S_BMP2	Secretion
+IF-05	OUT_EPITHELIAL_SECRETORY	epithelium	X_PAEP	extracellular	glycodelin (secreted)	RX_OUT_EPITHELIAL_SECRETORY	Secretion
+IF-06	S_PRL	stroma	X_PRL	extracellular	prolactin (secreted)	RX_S_PRL	Secretion
+IF-07	S_IGFBP1	stroma	X_IGFBP1	extracellular	IGFBP-1 (secreted)	RX_S_IGFBP1	Secretion
+IF-08	X_IHH	extracellular	S_HH_SIGNALING	stroma	Indian hedgehog (secreted)	RX_X_IHH	Reception
+IF-09	X_BMP2	extracellular	S_BMP_SMAD	stroma	BMP2 (secreted)	RX_X_BMP2	Reception

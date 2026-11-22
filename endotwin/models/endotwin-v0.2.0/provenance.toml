@@ -1,0 +1,43 @@
+model_id = "endotwin"
+model_version = "endotwin-v0.2.0"
+status = "mainline_expanded_hypothesis_family"
+created_on = "2026-11-22"
+derived_from_model = "endotwin-v0.1.0"
+derived_from_repository = "https://github.com/fransua-fcs/the private prototype repository"
+derived_from_commit = "b1de5f90582f02291789eb72753fa5ab1f2d8c88"
+calibrated = false
+biologically_validated = false
+physical_time_mapping = false
+transition_rates = "MaBoSS defaults (rate_up = rate_down = 1 for every node); not estimated"
+
+[files]
+network = "network.bnd"
+config = "baseline.cfg"
+node_dictionary = "node_dictionary.tsv"
+edges = "edges.tsv"
+rule_variants = "rule_variants.tsv"
+lineage = "lineage.tsv"
+interface = "interface.tsv"
+references = "../../evidence/references.tsv"
+
+[scope]
+in_scope = [
+  "hormone-responsive epithelial-stromal regulation in the ADOC chip",
+  "ligands and secreted proteins in the shared extracellular space across the ADOC membrane",
+  "stromal decidualisation and its transcriptional mediators (C/EBPbeta, FOXO1, IRF4, WNT4)",
+  "PRL and IGFBP-1 as separate expression and secreted-protein readouts",
+  "epithelial secretory differentiation (PAEP)",
+  "epithelial proliferation through stromal ERalpha, HAND2 and epithelial FGFR-ERK (Ki67, EdU)",
+  "BMP pathway activity (pSMAD1/5/8) and Hedgehog reception (GLI1, PTCH1)",
+  "IL-1beta perturbation through JNK and ERK1/2 (provisional, to be revised with G2 data)",
+]
+out_of_scope = [
+  "embryo adhesion and receptivity (legacy prototype models/superset)",
+  "a complete menstrual cycle, shedding or repair",
+  "patient-specific models",
+  "spatially resolved multicellular simulation",
+]
+
+[changes_from_v010]
+summary = "Extracellular compartment for IHH, BMP2 and the stromal mitogen, and for secreted PAEP, PRL and IGFBP-1; stromal decidual programme split into C/EBPbeta, FOXO1, IRF4 and WNT4; PRL and IGFBP-1 separated (new FOX hypothesis family); oestrogen receptor activity explicit in both compartments; epithelial FGFR-ERK step; Hedgehog reception explicit; IL-1beta split into JNK and ERK1/2 routes; Smoothened and FOXO1 inhibitors added as candidate perturbations."
+lineage_table = "lineage.tsv"

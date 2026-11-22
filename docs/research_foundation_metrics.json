@@ -1,0 +1,522 @@
+{
+  "generated_by": "endotwin.foundation_metrics (pixi run endotwin-metrics)",
+  "prototype_source_commit": "b1de5f90582f02291789eb72753fa5ab1f2d8c88",
+  "literature": {
+    "seed_search_candidates": 129,
+    "seed_search_unique_dois": 75,
+    "bundle_screen_2026_10_21_papers": 147,
+    "bundle_screen_tiers": {
+      "A": 52,
+      "B": 80,
+      "C": 15
+    },
+    "reaudit_2026_09_28_stated_corpus_pdfs": 163,
+    "reaudit_2026_09_28_enumerated_active_pack": 36,
+    "reaudit_2026_09_28_active_pack_breakdown": {
+      "core": 20,
+      "rule_variant": 10,
+      "boundary": 1,
+      "reviews": 5
+    },
+    "registered_references": 95,
+    "registered_unique_dois": 95,
+    "registered_crossref_resolved": 95,
+    "pdf_manifest_entries": 64,
+    "pdf_manifest_full_text_inspected": 62,
+    "active_evidence_manifest_rows": 50,
+    "active_evidence_unique_papers": 49,
+    "note": "The 163-PDF re-audit corpus is stated in the report but not enumerated in the repository; the 147-paper screen is of a different 2026-10-21 bundle; the corpora were never deduplicated against each other, so these counts must not be added."
+  },
+  "evidence": {
+    "experimental_evidence_rows": 276,
+    "active_rows": 247,
+    "active_edges_with_rows": 85,
+    "active_unique_references": 35,
+    "full_text_graded_rows": 37,
+    "full_text_graded_edges": 27,
+    "full_text_graded_references": 21,
+    "graded_best_edge_support": {
+      "direct": 5,
+      "not_demonstrated": 14,
+      "partial": 8
+    },
+    "v060_declared_edges": 85,
+    "v060_declared_edges_with_primary_reference": 74,
+    "v060_edge_confidence": {
+      "assumption": 4,
+      "candidate": 70,
+      "verified": 11
+    },
+    "citation_adjudications": 39,
+    "citation_adjudications_by_action": {
+      "attach": 7,
+      "retract": 32
+    }
+  },
+  "network_versions": {
+    "adoc-core-v0.1.0": {
+      "nodes": 43,
+      "dependencies": 56,
+      "activations": 46,
+      "inhibitions": 10,
+      "cross_compartment_dependencies": 1
+    },
+    "adoc-literature-v0.2.0": {
+      "nodes": 55,
+      "dependencies": 90,
+      "activations": 77,
+      "inhibitions": 13,
+      "cross_compartment_dependencies": 1
+    },
+    "adoc-literature-superset-v0.3.0": {
+      "nodes": 58,
+      "dependencies": 96,
+      "activations": 79,
+      "inhibitions": 17,
+      "cross_compartment_dependencies": 3,
+      "free_variables": 18,
+      "distinct_boolean_functions": 32,
+      "alias_classes": 7,
+      "absorbed_or_never_binding": 20,
+      "phenotype_inert_nodes": 15,
+      "unread_inputs": [
+        "IN_XAV939",
+        "IN_HCG",
+        "IN_EMBRYO_CONDITIONED_SIGNAL"
+      ]
+    },
+    "adoc-literature-superset-v0.4.0": {
+      "nodes": 59,
+      "dependencies": 97,
+      "activations": 79,
+      "inhibitions": 18,
+      "cross_compartment_dependencies": 3,
+      "free_variables": 19,
+      "distinct_boolean_functions": 35,
+      "alias_classes": 8,
+      "absorbed_or_never_binding": 19,
+      "phenotype_inert_nodes": 14,
+      "unread_inputs": [
+        "IN_XAV939",
+        "IN_HCG",
+        "IN_EMBRYO_CONDITIONED_SIGNAL"
+      ]
+    },
+    "adoc-literature-superset-v0.5.0": {
+      "nodes": 59,
+      "dependencies": 97,
+      "activations": 79,
+      "inhibitions": 18,
+      "cross_compartment_dependencies": 3,
+      "free_variables": 19,
+      "distinct_boolean_functions": 35,
+      "alias_classes": 8,
+      "absorbed_or_never_binding": 19,
+      "phenotype_inert_nodes": 14,
+      "unread_inputs": [
+        "IN_XAV939",
+        "IN_HCG",
+        "IN_EMBRYO_CONDITIONED_SIGNAL"
+      ]
+    },
+    "adoc-literature-superset-v0.5.1": {
+      "nodes": 59,
+      "dependencies": 95,
+      "activations": 77,
+      "inhibitions": 18,
+      "cross_compartment_dependencies": 3,
+      "free_variables": 19,
+      "distinct_boolean_functions": 35,
+      "alias_classes": 8,
+      "absorbed_or_never_binding": 19,
+      "phenotype_inert_nodes": 16,
+      "unread_inputs": [
+        "IN_XAV939",
+        "IN_HCG",
+        "IN_EMBRYO_CONDITIONED_SIGNAL"
+      ]
+    },
+    "adoc-literature-superset-v0.5.2": {
+      "nodes": 59,
+      "dependencies": 93,
+      "activations": 76,
+      "inhibitions": 17,
+      "cross_compartment_dependencies": 2,
+      "free_variables": 19,
+      "distinct_boolean_functions": 35,
+      "alias_classes": 8,
+      "absorbed_or_never_binding": 19,
+      "phenotype_inert_nodes": 17,
+      "unread_inputs": [
+        "IN_XAV939",
+        "IN_HCG",
+        "IN_EMBRYO_CONDITIONED_SIGNAL"
+      ]
+    },
+    "adoc-literature-superset-v0.6.0": {
+      "nodes": 56,
+      "dependencies": 89,
+      "activations": 76,
+      "inhibitions": 13,
+      "cross_compartment_dependencies": 2,
+      "free_variables": 16,
+      "distinct_boolean_functions": 29,
+      "alias_classes": 7,
+      "absorbed_or_never_binding": 20,
+      "phenotype_inert_nodes": 17,
+      "unread_inputs": [
+        "IN_XAV939",
+        "IN_HCG",
+        "IN_EMBRYO_CONDITIONED_SIGNAL"
+      ]
+    }
+  },
+  "alternatives_and_adjudication": {
+    "gate3_candidate_rule_variants": 11,
+    "u6b_muc1_family_members": 10,
+    "variant_discrimination_pairs": 9,
+    "v060_rule_variant_ids": 3,
+    "rules_changed_after_literature_reaudit": 2,
+    "rules_changed_after_literature_reaudit_ids": [
+      "v0.5.2 C1 (PAEP readout)",
+      "v0.5.2 C5 (HAND2 stromal relay)"
+    ],
+    "deferred_topology_register_rows": 6,
+    "candidate_node_dispositions": 14,
+    "candidate_node_disposition_counts": {
+      "EVIDENCE_UNVERIFIED": 3,
+      "REJECT": 1,
+      "RETAIN_CATALOG_ONLY": 7,
+      "RULE_VARIANT_ONLY": 1,
+      "WAIT_FOR_EXPERIMENT": 2
+    },
+    "unresolved_mechanisms_v060": 10
+  },
+  "experimental_data": {
+    "secreted_protein_rows": 62,
+    "secreted_protein_states": {
+      "IGFBP-1:no_detectable_secretion": 11,
+      "IGFBP-1:observed": 19,
+      "PAEP:missing": 4,
+      "PAEP:observed": 10,
+      "PRL:no_detectable_secretion": 8,
+      "PRL:observed": 10
+    },
+    "secreted_protein_observed_values": 39,
+    "adhesion_counts": {
+      "adhesion_challenge_basal": "0/12",
+      "adhesion_challenge_hormone_treated": "9/19",
+      "adhesion_challenge_hormone_treated_mifepristone": "1/8"
+    },
+    "adhesion_embryos": 39,
+    "scrna_accession": "E-MTAB-15842",
+    "scrna_cells": 28212,
+    "scrna_samples": 6,
+    "scrna_donors": 3,
+    "scrna_cell_state_labels": 7,
+    "scrna_epithelial_cells": 20441,
+    "scrna_stromal_cells": 7771,
+    "observation_map_rows_v060": 17,
+    "observation_map_status_counts": {
+      "active_constraint": 1,
+      "active_diagnostic": 1,
+      "provisional": 2,
+      "rejected": 7,
+      "reported_only": 6
+    }
+  },
+  "completed_analyses": [
+    {
+      "analysis": "U5 structural, identifiability and design audit",
+      "model_version": "adoc-literature-superset-v0.5.0",
+      "result_file": "docs/u5_structural_audit/u5_audit_summary.json",
+      "exists": true
+    },
+    {
+      "analysis": "U5b readout repair with paired transient comparison",
+      "model_version": "adoc-literature-superset-v0.5.1",
+      "result_file": "docs/v05_u5b_readout_repair.md",
+      "exists": true
+    },
+    {
+      "analysis": "v0.5.2 HAND2-relay and PAEP-readout paired transient comparison",
+      "model_version": "adoc-literature-superset-v0.5.2",
+      "result_file": "docs/v052_paep_hand2/transient_comparison.tsv",
+      "exists": true
+    },
+    {
+      "analysis": "v0.6.0 markerless-intervention gate G8 and structure recount",
+      "model_version": "adoc-literature-superset-v0.6.0",
+      "result_file": "docs/intervention_layer_stage3/structure_counts.json",
+      "exists": true
+    },
+    {
+      "analysis": "Functional-endpoint replicates on disjoint seed blocks",
+      "model_version": "adoc-literature-superset-v0.5.0",
+      "result_file": "docs/endpoint/endpoint_replicates.tsv",
+      "exists": true
+    },
+    {
+      "analysis": "MaBoSS seed-structure probe",
+      "model_version": "adoc-literature-superset-v0.5.0",
+      "result_file": "docs/endpoint/seed_structure_probe.json",
+      "exists": true
+    },
+    {
+      "analysis": "Endpoint convergence finding",
+      "model_version": "adoc-literature-superset-v0.4.0",
+      "result_file": "docs/endpoint_convergence_finding.md",
+      "exists": true
+    },
+    {
+      "analysis": "Model-data concordance (60 curated result rows)",
+      "model_version": "adoc-literature-superset-v0.4.0",
+      "result_file": "docs/concordance/concordance_table.tsv",
+      "exists": true
+    },
+    {
+      "analysis": "C3a pre-registered kinetic readouts",
+      "model_version": "adoc-literature-superset-v0.5.2",
+      "result_file": "docs/c3_kinetic_readouts/classification.tsv",
+      "exists": true
+    },
+    {
+      "analysis": "Progesterone-withdrawal perturbation cascade (historical)",
+      "model_version": "adoc-literature-superset-v0.5.1",
+      "result_file": "docs/perturbation_cascade/historical_v051/aggregate_timecourse.tsv",
+      "exists": true
+    },
+    {
+      "analysis": "Perturbation cascade, two-seed reproducibility (stage C)",
+      "model_version": "adoc-literature-superset-v0.6.0",
+      "result_file": "docs/perturbation_cascade/stage_c/historical_comparison.tsv",
+      "exists": true
+    },
+    {
+      "analysis": "Phase 1B closure and sensitivity inventory",
+      "model_version": "adoc-literature-superset-v0.5.1",
+      "result_file": "docs/phase1b_closure/phase1b_closure_summary.json",
+      "exists": true
+    },
+    {
+      "analysis": "Stage 3 experiment selection (112 candidate fifth arms)",
+      "model_version": "adoc-literature-superset-v0.4.0",
+      "result_file": "docs/experiments/stage3_experiment_design.tsv",
+      "exists": true
+    },
+    {
+      "analysis": "U8 Stage-3 rerank",
+      "model_version": "adoc-literature-superset-v0.5.1",
+      "result_file": "docs/experiments/u8_stage3_rerank/u8_rerank_summary.json",
+      "exists": true
+    },
+    {
+      "analysis": "Experimental identifiability",
+      "model_version": "adoc-literature-superset-v0.4.0",
+      "result_file": "docs/identifiability_analysis.md",
+      "exists": true
+    },
+    {
+      "analysis": "Identifiability-driven experimental design",
+      "model_version": "adoc-literature-superset-v0.6.0",
+      "result_file": "docs/identifiability_design/alias_pairs.tsv",
+      "exists": true
+    },
+    {
+      "analysis": "Design-alias analysis of planned arms",
+      "model_version": "adoc-literature-superset-v0.4.0",
+      "result_file": "docs/design_alias_note.md",
+      "exists": true
+    },
+    {
+      "analysis": "Gate 3a rule-variant discrimination",
+      "model_version": "adoc-literature-superset-v0.4.0",
+      "result_file": "docs/experiments/variant_discrimination.tsv",
+      "exists": true
+    },
+    {
+      "analysis": "U6b MUC1 rule-family evaluation",
+      "model_version": "adoc-literature-superset-v0.5.1",
+      "result_file": "docs/u6b_muc1_reconciliation/family_members.tsv",
+      "exists": true
+    },
+    {
+      "analysis": "Stage 4b veto expressivity (exact)",
+      "model_version": "adoc-literature-superset-v0.6.0",
+      "result_file": "docs/stage4b/v060_veto_expressivity.tsv",
+      "exists": true
+    },
+    {
+      "analysis": "scRNA node-support audit (pre-registered)",
+      "model_version": "adoc-literature-superset-v0.4.0",
+      "result_file": "docs/scrna/node_support_findings.json",
+      "exists": true
+    },
+    {
+      "analysis": "KLF12 prior battery and conditioning sweep",
+      "model_version": "adoc-literature-superset-v0.4.0",
+      "result_file": "docs/scrna/klf12_prior_finding.md",
+      "exists": true
+    },
+    {
+      "analysis": "RNA versus MaBoSS endpoint concordance",
+      "model_version": "adoc-literature-superset-v0.5.1",
+      "result_file": "docs/rna_endpoint_concordance/concordance.tsv",
+      "exists": true
+    },
+    {
+      "analysis": "Observation compartment attribution (C2)",
+      "model_version": "adoc-literature-superset-v0.5.1",
+      "result_file": "docs/c2_observation_compartments/attribution_report.md",
+      "exists": true
+    },
+    {
+      "analysis": "Phase 2B external reference qualification (closed NO_SUITABLE_REFERENCE)",
+      "model_version": "adoc-literature-superset-v0.5.1",
+      "result_file": "docs/phase2b_c4/PHASE2B_CLOSED.md",
+      "exists": true
+    }
+  ],
+  "endotwin_mainline": {
+    "model_version": "endotwin-v0.1.0",
+    "structure": {
+      "nodes": 19,
+      "free_variables": [
+        "IN_E2",
+        "IN_PROGESTIN",
+        "IN_cAMP",
+        "IN_XAV939",
+        "IN_BMPR_INHIBITOR",
+        "IN_IL1B"
+      ],
+      "dependencies": 23,
+      "activations": 20,
+      "inhibitions": 3,
+      "distinct_functions": 11,
+      "alias_classes": [
+        [
+          "IN_PROGESTIN",
+          "E_PGR",
+          "E_IHH",
+          "S_PGR",
+          "S_NR2F2",
+          "S_BMP2",
+          "S_HAND2"
+        ],
+        [
+          "IN_cAMP",
+          "S_PKA"
+        ],
+        [
+          "IN_IL1B",
+          "S_IL1_SIGNALING"
+        ]
+      ],
+      "absorbed_dependencies": [
+        [
+          "S_PKA",
+          "S_BMP2"
+        ]
+      ],
+      "never_binding_inhibitions": [],
+      "absorbed_or_never_binding": 1,
+      "phenotype_inert_nodes": [
+        "IN_XAV939",
+        "E_IHH"
+      ],
+      "readout_inert_nodes": [
+        "IN_XAV939"
+      ],
+      "unread_inputs": [
+        "IN_XAV939"
+      ]
+    },
+    "cross_compartment_dependencies": 2,
+    "edge_evidence_classes": {
+      "adoc_supported": 3,
+      "experimental_definition": 5,
+      "literature_supported": 5,
+      "literature_supported_contested": 1,
+      "literature_supported_route_unresolved": 1,
+      "literature_supported_species_transfer": 1,
+      "literature_supported_topic_level": 4,
+      "simplifying_assumption": 3
+    },
+    "variant_only_edges": 3,
+    "rule_variant_families": {
+      "INF": [
+        "INF_decidual_only",
+        "INF_pgr_depletion"
+      ],
+      "Q1": [
+        "Q1_bmp_required",
+        "Q1_pgr_sufficient"
+      ],
+      "Q2": [
+        "Q2_stromal_relay",
+        "Q2_relay_plus_direct_v051",
+        "Q2_epithelial_autonomous"
+      ]
+    },
+    "rule_variant_scenarios": 12,
+    "references": 20,
+    "protocol_conditions": 9,
+    "matched_comparisons": 6,
+    "interventions": 2
+  },
+  "software_verification": {
+    "endotwin_full_suite": {
+      "status": "final: run on the committed tree recorded in tested_tree",
+      "command": "pixi run test (python -B -m unittest discover -s tests -v), single process",
+      "tested_tree": "4ba6825e2f74d31712c5286d6138544f48f4c8ac",
+      "local_only_evidence_present": "data/combined-dataset-patient-integration.rds, the gitignored annotation workbook, context/literature/pdfs/ and output/review_inbox/ were hard-linked from the owner's prototype working copy (gitignored, never committed), as in the prototype 2026-10-16 benchmark",
+      "ran": 2566,
+      "seconds": 936.913,
+      "result_line": "OK (skipped=63)",
+      "failed": 0,
+      "skipped": 63,
+      "passed": 2503,
+      "history_bound_skips": 63,
+      "local_data_skips": 0,
+      "failures_and_errors": [],
+      "skip_reasons": {
+        "requires the prototype's source Git history: commit(s) 0c7da9c174b6, ef34c1079267 absent from this history-free repository (docs/ORIGIN.md); passed at the source commit (docs/verification/source_baseline_b1de5f9.json)": 44,
+        "requires the prototype's source Git history: commit(s) 97f88f55ce62 absent from this history-free repository (docs/ORIGIN.md); passed at the source commit (docs/verification/source_baseline_b1de5f9.json)": 13,
+        "requires the prototype's source Git history: commit(s) 97f88f55ce62, 51b8bd11bc79 absent from this history-free repository (docs/ORIGIN.md); passed at the source commit (docs/verification/source_baseline_b1de5f9.json)": 4,
+        "requires the prototype's source Git history: evidence-root commit 91f79ed is not available in this clone (shallow history or a synthetic snapshot); blob identity unchecked": 1,
+        "requires the prototype's source Git history: recorded commit 7a7eb34a4f7e is absent from this history-free repository (docs/ORIGIN.md)": 1
+      },
+      "log": "docs/verification/endotwin_suite.log.gz",
+      "log_sha256_uncompressed": "6cd544c56d2fdcb5ce881d637583161fa73695857570ab0c1e2a36a4d88dd6ea",
+      "log_note": "Temporary-directory paths are replaced by <tmp> and the checkout path by a relative path; nothing else is altered.",
+      "files_changed_after_run": [
+        "README.md",
+        "docs/ORIGIN.md",
+        "docs/research_foundation_metrics.json",
+        "docs/software_verification.md",
+        "docs/verification/endotwin_suite.log.gz",
+        "docs/verification/endotwin_suite_records.json"
+      ],
+      "post_run_checks": "On the final tree: pixi run endotwin-test 97 OK; pixi run test-guards 198 OK, checkout unchanged; pixi run lint and pixi run format-check pass. Only documentation and verification-record files changed after the run (list above)."
+    },
+    "endotwin_mainline_tests": {
+      "command": "pixi run endotwin-test",
+      "ran": 97,
+      "result_line": "OK"
+    },
+    "source_baseline": {
+      "source_commit": "b1de5f90582f02291789eb72753fa5ab1f2d8c88",
+      "ran": 2767,
+      "passed": 2757,
+      "failed": 1,
+      "skipped": 9,
+      "record": "docs/verification/source_baseline_b1de5f9.json"
+    },
+    "historical_benchmark": {
+      "date": "2026-10-16",
+      "ran": 2415,
+      "result_line": "OK (skipped=1)",
+      "record": "docs/verification/cache_benchmark_record.json"
+    }
+  }
+}

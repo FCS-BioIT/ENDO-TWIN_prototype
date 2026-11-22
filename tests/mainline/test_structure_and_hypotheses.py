@@ -85,7 +85,13 @@ class MainlineStructure(unittest.TestCase):
         cols = columns(MODEL.rules).values
         self.assertNotEqual(cols["X_IHH"], cols["S_HH_SIGNALING"])
         self.assertNotEqual(cols["S_PKA"], cols["S_FOXO1"])
-        self.assertNotEqual(cols["S_IGFBP1"], cols["S_PRL"])
+        # PRL and IGFBP1 are aliases under the default FOX rule (both need
+        # FOXO1) and separate only under the alternative: that is the FOX test.
+        self.assertEqual(cols["S_IGFBP1"], cols["S_PRL"])
+        alt = columns(
+            MODEL.rules_for(MODEL.selection_from_ids(["FOX_prl_foxo1_independent"]))
+        ).values
+        self.assertNotEqual(alt["S_IGFBP1"], alt["S_PRL"])
 
     def test_no_dependency_is_absorbed_or_never_binding(self):
         self.assertEqual(self.summary.absorbed_dependencies, ())

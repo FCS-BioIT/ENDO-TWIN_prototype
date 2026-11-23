@@ -1,3 +1,5 @@
+![ENDO-TWIN — the human endometrium in silico. From hormonal signals to testable mechanisms: endometrium-on-chip to stochastic Boolean model.](docs/assets/brand/endo-twin-banner.png)
+
 # ENDO-TWIN
 
 A stochastic Boolean model of how ovarian hormones coordinate the epithelium

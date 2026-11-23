@@ -1,0 +1,1906 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1600"
+   height="500"
+   viewBox="0 0 1600 500"
+   version="1.1"
+   id="svg103"
+   sodipodi:docname="endo-twin-banner_together.svg"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   inkscape:export-filename="endo-twin-banner.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview103"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.80389202"
+     inkscape:cx="758.80838"
+     inkscape:cy="159.84734"
+     inkscape:window-width="1920"
+     inkscape:window-height="1043"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg103" />
+  <defs
+     id="defs17">
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#dots-7"
+       id="pattern103"
+       patternTransform="matrix(2.048,0,0,2.048,269.144,45)" />
+    <linearGradient
+       id="bg"
+       x1="0"
+       y1="0"
+       x2="1"
+       y2="1">
+      <stop
+         offset="0%"
+         stop-color="#0C1426"
+         id="stop1" />
+      <stop
+         offset="70%"
+         stop-color="#0B172A"
+         id="stop2" />
+      <stop
+         offset="100%"
+         stop-color="#111B32"
+         id="stop3" />
+    </linearGradient>
+    <linearGradient
+       id="card"
+       x1="0"
+       y1="0"
+       x2="1"
+       y2="1">
+      <stop
+         offset="0%"
+         stop-color="#203450"
+         id="stop4" />
+      <stop
+         offset="55%"
+         stop-color="#111F38"
+         id="stop5" />
+      <stop
+         offset="100%"
+         stop-color="#141D32"
+         id="stop6" />
+    </linearGradient>
+    <linearGradient
+       id="pink"
+       x1="0"
+       y1="0"
+       x2="1"
+       y2="1">
+      <stop
+         offset="0%"
+         stop-color="#FFC3CB"
+         id="stop7" />
+      <stop
+         offset="100%"
+         stop-color="#F77596"
+         id="stop8" />
+    </linearGradient>
+    <linearGradient
+       id="teal"
+       x1="0"
+       y1="0"
+       x2="1"
+       y2="1">
+      <stop
+         offset="0%"
+         stop-color="#8FECDD"
+         id="stop9" />
+      <stop
+         offset="100%"
+         stop-color="#45C5D0"
+         id="stop10" />
+    </linearGradient>
+    <linearGradient
+       id="connector"
+       x1="0"
+       y1="0"
+       x2="1"
+       y2="0">
+      <stop
+         offset="0%"
+         stop-color="#FF8BA4"
+         id="stop11" />
+      <stop
+         offset="45%"
+         stop-color="#A6A9FC"
+         id="stop12" />
+      <stop
+         offset="100%"
+         stop-color="#59DAD2"
+         id="stop13" />
+    </linearGradient>
+    <radialGradient
+       id="glow1">
+      <stop
+         offset="0%"
+         stop-color="#385C87"
+         stop-opacity=".50"
+         id="stop14" />
+      <stop
+         offset="100%"
+         stop-color="#385C87"
+         stop-opacity="0"
+         id="stop15" />
+    </radialGradient>
+    <radialGradient
+       id="glow2">
+      <stop
+         offset="0%"
+         stop-color="#883758"
+         stop-opacity=".32"
+         id="stop16" />
+      <stop
+         offset="100%"
+         stop-color="#883758"
+         stop-opacity="0"
+         id="stop17" />
+    </radialGradient>
+    <pattern
+       id="dots"
+       x="0"
+       y="0"
+       width="26"
+       height="26"
+       patternUnits="userSpaceOnUse">
+      <circle
+         cx="1.5"
+         cy="1.5"
+         r="1"
+         fill="#C7DCF4"
+         opacity=".14"
+         id="circle17" />
+    </pattern>
+    <filter
+       id="blur">
+      <feGaussianBlur
+         stdDeviation="8"
+         id="feGaussianBlur17" />
+    </filter>
+    <filter
+       id="shadow"
+       x="0"
+       y="-0.0020661157"
+       width="1.0020202"
+       height="1.0041322">
+      <feDropShadow
+         dx="0"
+         dy="8"
+         stdDeviation="13"
+         flood-color="#01070F"
+         flood-opacity=".43" />
+    </filter>
+    <linearGradient
+       id="card-4"
+       x1="7"
+       y1="7"
+       x2="493"
+       y2="493"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.048,0,0,2.048,269.144,45)">
+      <stop
+         offset="0%"
+         stop-color="#203450"
+         id="stop25" />
+      <stop
+         offset="55%"
+         stop-color="#111F38"
+         id="stop26" />
+      <stop
+         offset="100%"
+         stop-color="#141D32"
+         id="stop27" />
+    </linearGradient>
+    <pattern
+       id="dots-7"
+       x="0"
+       y="0"
+       width="26"
+       height="26"
+       patternUnits="userSpaceOnUse">
+      <circle
+         cx="1.5"
+         cy="1.5"
+         r="1"
+         fill="#C7DCF4"
+         opacity=".14"
+         id="circle17-4" />
+    </pattern>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#pink"
+       id="linearGradient27"
+       x1="22.497937"
+       y1="348.16964"
+       x2="84.548698"
+       y2="410.2204"
+       gradientTransform="matrix(5.6438954,0,0,0.74315766,269.144,45)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#pink"
+       id="linearGradient28"
+       x1="122.16679"
+       y1="100.21545"
+       x2="168.17766"
+       y2="146.22632"
+       gradientTransform="matrix(1.2908255,0,0,3.2493193,269.144,45)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#pink"
+       id="linearGradient29"
+       x1="177.3127"
+       y1="99.536018"
+       x2="223.63764"
+       y2="145.86096"
+       gradientTransform="matrix(1.282074,0,0,3.2714992,269.144,45)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#pink"
+       id="linearGradient30"
+       x1="231.6247"
+       y1="99.536018"
+       x2="277.94964"
+       y2="145.86096"
+       gradientTransform="matrix(1.282074,0,0,3.2714992,269.144,45)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#pink"
+       id="linearGradient31"
+       x1="283.99812"
+       y1="100.21545"
+       x2="330.00899"
+       y2="146.22632"
+       gradientTransform="matrix(1.2908255,0,0,3.2493193,269.144,45)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#teal"
+       id="linearGradient32"
+       x1="55.333534"
+       y1="442.08273"
+       x2="75.827436"
+       y2="462.57663"
+       gradientTransform="matrix(2.997965,0,0,1.3990504,-160.82414,188.81309)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#teal"
+       id="linearGradient33"
+       x1="94.969964"
+       y1="456.60752"
+       x2="116.78739"
+       y2="478.42495"
+       gradientTransform="matrix(3.1915775,0,0,1.314179,427.38264,-147.87355)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#teal"
+       id="linearGradient34"
+       x1="106.63724"
+       y1="546.8165"
+       x2="129.08718"
+       y2="569.26645"
+       gradientTransform="matrix(3.2841062,0,0,1.2771524,-284.13248,284.36082)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#teal"
+       id="linearGradient35"
+       x1="64.159469"
+       y1="524.61469"
+       x2="85.32548"
+       y2="545.7807"
+       gradientTransform="matrix(3.096285,0,0,1.3546247,511.83694,-185.53007)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#connector"
+       id="linearGradient36"
+       x1="56.793014"
+       y1="694.07745"
+       x2="75.501301"
+       y2="694.07745"
+       gradientTransform="matrix(7.6629144,0,0,0.54735102,269.144,45)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#connector"
+       id="linearGradient37"
+       x1="59.143293"
+       y1="1151.259"
+       x2="77.446298"
+       y2="1151.259"
+       gradientTransform="matrix(7.4969108,0,0,0.55947096,269.144,45)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <rect
+     width="1600"
+     height="500"
+     fill="url(#bg)"
+     id="rect17" />
+  <ellipse
+     cx="270"
+     cy="220"
+     rx="430"
+     ry="370"
+     fill="url(#glow1)"
+     id="ellipse17" />
+  <ellipse
+     cx="1530"
+     cy="60"
+     rx="420"
+     ry="300"
+     fill="url(#glow2)"
+     id="ellipse18" />
+  <path
+     d="M0 0 H1600 V500 H0 Z"
+     fill="url(#dots)"
+     opacity=".48"
+     id="path18" />
+  <!-- quiet technical background far right -->
+  <g
+     opacity=".22"
+     stroke="#6A94B0"
+     stroke-width="2"
+     fill="none"
+     id="g19">
+    <path
+       d="M1340 70 L1435 116 L1563 72 M1435 116 L1505 190 L1550 260 M1505 190 L1390 255 L1470 346 L1590 385 M1390 255 L1340 330 M1550 260 L1590 385"
+       id="path19" />
+  </g>
+  <g
+     opacity=".32"
+     fill="#96B6CB"
+     id="g27">
+    <circle
+       cx="1340"
+       cy="70"
+       r="6"
+       id="circle19" />
+    <circle
+       cx="1435"
+       cy="116"
+       r="8"
+       id="circle20" />
+    <circle
+       cx="1563"
+       cy="72"
+       r="6"
+       id="circle21" />
+    <circle
+       cx="1505"
+       cy="190"
+       r="8"
+       id="circle22" />
+    <circle
+       cx="1390"
+       cy="255"
+       r="7"
+       id="circle23" />
+    <circle
+       cx="1550"
+       cy="260"
+       r="6"
+       id="circle24" />
+    <circle
+       cx="1470"
+       cy="346"
+       r="8"
+       id="circle25" />
+    <circle
+       cx="1590"
+       cy="385"
+       r="6"
+       id="circle26" />
+    <circle
+       cx="1340"
+       cy="330"
+       r="5"
+       id="circle27" />
+  </g>
+  <g
+     transform="translate(45 40) scale(.84)"
+     filter="url(#shadow)"
+     id="g97">
+    <rect
+       x="8"
+       y="8"
+       width="484"
+       height="484"
+       rx="103"
+       fill="url(#card)"
+       stroke="#49617E"
+       stroke-opacity=".65"
+       stroke-width="2"
+       id="rect27" />
+    <rect
+       x="26"
+       y="26"
+       width="448"
+       height="448"
+       rx="89"
+       fill="none"
+       stroke="#B0CCE4"
+       stroke-opacity=".12"
+       stroke-width="1.5"
+       id="rect28" />
+    <ellipse
+       cx="147"
+       cy="131"
+       rx="150"
+       ry="110"
+       fill="#9B4464"
+       opacity=".075"
+       id="ellipse28" />
+    <ellipse
+       cx="360"
+       cy="339"
+       rx="132"
+       ry="112"
+       fill="#1DB2BF"
+       opacity=".065"
+       id="ellipse29" />
+    <path
+       d="M250 104 L250 394"
+       stroke="#B5C8D9"
+       stroke-width="2"
+       stroke-opacity=".35"
+       stroke-dasharray="4 12"
+       stroke-linecap="round"
+       id="path29" />
+    <path
+       d="M66 137 C95 124 109 133 126 137 S170 151 189 139 S211 133 229 138"
+       fill="none"
+       stroke="url(#pink)"
+       stroke-width="8"
+       stroke-linecap="round"
+       id="path30" />
+    <rect
+       x="77"
+       y="159"
+       width="29"
+       height="73"
+       rx="12"
+       fill="url(#pink)"
+       opacity=".94"
+       id="rect30" />
+    <ellipse
+       cx="91.5"
+       cy="200"
+       rx="6.2"
+       ry="9.2"
+       fill="#B74369"
+       opacity=".72"
+       id="ellipse30" />
+    <path
+       d="M85 174 v-5"
+       stroke="#FFE3E3"
+       stroke-width="2.5"
+       stroke-linecap="round"
+       opacity=".70"
+       id="path31" />
+    <rect
+       x="111"
+       y="159"
+       width="29"
+       height="74"
+       rx="12"
+       fill="url(#pink)"
+       opacity=".94"
+       id="rect31" />
+    <ellipse
+       cx="125.5"
+       cy="200"
+       rx="6.2"
+       ry="9.2"
+       fill="#B74369"
+       opacity=".72"
+       id="ellipse31" />
+    <path
+       d="M119 174 v-5"
+       stroke="#FFE3E3"
+       stroke-width="2.5"
+       stroke-linecap="round"
+       opacity=".70"
+       id="path32" />
+    <rect
+       x="145"
+       y="159"
+       width="29"
+       height="74"
+       rx="12"
+       fill="url(#pink)"
+       opacity=".94"
+       id="rect32" />
+    <ellipse
+       cx="159.5"
+       cy="200"
+       rx="6.2"
+       ry="9.2"
+       fill="#B74369"
+       opacity=".72"
+       id="ellipse32" />
+    <path
+       d="M153 174 v-5"
+       stroke="#FFE3E3"
+       stroke-width="2.5"
+       stroke-linecap="round"
+       opacity=".70"
+       id="path33" />
+    <rect
+       x="179"
+       y="159"
+       width="29"
+       height="73"
+       rx="12"
+       fill="url(#pink)"
+       opacity=".94"
+       id="rect33" />
+    <ellipse
+       cx="193.5"
+       cy="200"
+       rx="6.2"
+       ry="9.2"
+       fill="#B74369"
+       opacity=".72"
+       id="ellipse33" />
+    <path
+       d="M187 174 v-5"
+       stroke="#FFE3E3"
+       stroke-width="2.5"
+       stroke-linecap="round"
+       opacity=".70"
+       id="path34" />
+    <path
+       d="M67 244 C93 235 111 252 138 244 S188 235 220 246"
+       fill="none"
+       stroke="#F8A4AE"
+       stroke-width="4"
+       opacity=".65"
+       stroke-dasharray="7 7"
+       stroke-linecap="round"
+       id="path35" />
+    <path
+       d="M76 316 C106 284 136 300 153 323"
+       fill="none"
+       stroke="#60CECE"
+       stroke-width="3.4"
+       stroke-opacity=".46"
+       stroke-linecap="round"
+       id="path36" />
+    <path
+       d="M79 357 C110 328 142 344 184 367"
+       fill="none"
+       stroke="#60CECE"
+       stroke-width="3.4"
+       stroke-opacity=".46"
+       stroke-linecap="round"
+       id="path37" />
+    <path
+       d="M132 289 C145 279 172 279 204 292"
+       fill="none"
+       stroke="#60CECE"
+       stroke-width="3.4"
+       stroke-opacity=".46"
+       stroke-linecap="round"
+       id="path38" />
+    <path
+       d="M142 350 C167 314 199 321 221 337"
+       fill="none"
+       stroke="#60CECE"
+       stroke-width="3.4"
+       stroke-opacity=".46"
+       stroke-linecap="round"
+       id="path39" />
+    <path
+       d="M72 288 C108 277 115 278 144 294"
+       fill="none"
+       stroke="#60CECE"
+       stroke-width="3.4"
+       stroke-opacity=".46"
+       stroke-linecap="round"
+       id="path40" />
+    <path
+       d="M155 378 C174 356 196 354 218 369"
+       fill="none"
+       stroke="#60CECE"
+       stroke-width="3.4"
+       stroke-opacity=".46"
+       stroke-linecap="round"
+       id="path41" />
+    <ellipse
+       cx="96"
+       cy="309"
+       rx="15"
+       ry="7"
+       transform="rotate(-32 96 309)"
+       fill="url(#teal)"
+       id="ellipse41" />
+    <ellipse
+       cx="96"
+       cy="309"
+       rx="5"
+       ry="4.5"
+       fill="#178596"
+       opacity=".72"
+       id="ellipse42" />
+    <ellipse
+       cx="165"
+       cy="300"
+       rx="17"
+       ry="7"
+       transform="rotate(16 165 300)"
+       fill="url(#teal)"
+       id="ellipse43" />
+    <ellipse
+       cx="165"
+       cy="300"
+       rx="5"
+       ry="4.5"
+       fill="#178596"
+       opacity=".72"
+       id="ellipse44" />
+    <ellipse
+       cx="189"
+       cy="348"
+       rx="18"
+       ry="7"
+       transform="rotate(-35 189 348)"
+       fill="url(#teal)"
+       id="ellipse45" />
+    <ellipse
+       cx="189"
+       cy="348"
+       rx="5"
+       ry="4.5"
+       fill="#178596"
+       opacity=".72"
+       id="ellipse46" />
+    <ellipse
+       cx="113"
+       cy="354"
+       rx="16"
+       ry="7"
+       transform="rotate(21 113 354)"
+       fill="url(#teal)"
+       id="ellipse47" />
+    <ellipse
+       cx="113"
+       cy="354"
+       rx="5"
+       ry="4.5"
+       fill="#178596"
+       opacity=".72"
+       id="ellipse48" />
+    <path
+       d="M293 159 L337 179"
+       stroke="#8A94C5"
+       stroke-opacity=".60"
+       stroke-width="4"
+       stroke-linecap="round"
+       id="path48" />
+    <path
+       d="M337 179 L406 154"
+       stroke="#8A94C5"
+       stroke-opacity=".60"
+       stroke-width="4"
+       stroke-linecap="round"
+       id="path49" />
+    <path
+       d="M293 159 L315 235"
+       stroke="#8A94C5"
+       stroke-opacity=".60"
+       stroke-width="4"
+       stroke-linecap="round"
+       id="path50" />
+    <path
+       d="M337 179 L364 244"
+       stroke="#8A94C5"
+       stroke-opacity=".60"
+       stroke-width="4"
+       stroke-linecap="round"
+       id="path51" />
+    <path
+       d="M406 154 L403 221"
+       stroke="#8A94C5"
+       stroke-opacity=".60"
+       stroke-width="4"
+       stroke-linecap="round"
+       id="path52" />
+    <path
+       d="M315 235 L364 244"
+       stroke="#8A94C5"
+       stroke-opacity=".60"
+       stroke-width="4"
+       stroke-linecap="round"
+       id="path53" />
+    <path
+       d="M364 244 L406 221"
+       stroke="#8A94C5"
+       stroke-opacity=".60"
+       stroke-width="4"
+       stroke-linecap="round"
+       id="path54" />
+    <path
+       d="M315 235 L300 331"
+       stroke="#8A94C5"
+       stroke-opacity=".60"
+       stroke-width="4"
+       stroke-linecap="round"
+       id="path55" />
+    <path
+       d="M364 244 L350 300"
+       stroke="#8A94C5"
+       stroke-opacity=".60"
+       stroke-width="4"
+       stroke-linecap="round"
+       id="path56" />
+    <path
+       d="M406 221 L411 342"
+       stroke="#8A94C5"
+       stroke-opacity=".60"
+       stroke-width="4"
+       stroke-linecap="round"
+       id="path57" />
+    <path
+       d="M350 300 L411 342"
+       stroke="#8A94C5"
+       stroke-opacity=".60"
+       stroke-width="4"
+       stroke-linecap="round"
+       id="path58" />
+    <path
+       d="M300 331 L350 300"
+       stroke="#8A94C5"
+       stroke-opacity=".60"
+       stroke-width="4"
+       stroke-linecap="round"
+       id="path59" />
+    <path
+       d="M350 300 L390 362"
+       stroke="#8A94C5"
+       stroke-opacity=".60"
+       stroke-width="4"
+       stroke-linecap="round"
+       id="path60" />
+    <path
+       d="M300 331 L390 362"
+       stroke="#8A94C5"
+       stroke-opacity=".60"
+       stroke-width="4"
+       stroke-linecap="round"
+       id="path61" />
+    <circle
+       cx="293"
+       cy="159"
+       r="19"
+       fill="#FE859C"
+       opacity=".11"
+       id="circle61" />
+    <circle
+       cx="293"
+       cy="159"
+       r="14"
+       fill="#FE859C"
+       stroke="#E9FAFB"
+       stroke-opacity=".28"
+       stroke-width="1.3"
+       id="circle62" />
+    <circle
+       cx="290"
+       cy="155"
+       r="3"
+       fill="#FFFFFF"
+       opacity=".48"
+       id="circle63" />
+    <circle
+       cx="337"
+       cy="179"
+       r="17"
+       fill="#FE859C"
+       opacity=".11"
+       id="circle64" />
+    <circle
+       cx="337"
+       cy="179"
+       r="12"
+       fill="#FE859C"
+       stroke="#E9FAFB"
+       stroke-opacity=".28"
+       stroke-width="1.3"
+       id="circle65" />
+    <circle
+       cx="334"
+       cy="175"
+       r="3"
+       fill="#FFFFFF"
+       opacity=".48"
+       id="circle66" />
+    <circle
+       cx="406"
+       cy="154"
+       r="17"
+       fill="#FFC1C9"
+       opacity=".11"
+       id="circle67" />
+    <circle
+       cx="406"
+       cy="154"
+       r="12"
+       fill="#FFC1C9"
+       stroke="#E9FAFB"
+       stroke-opacity=".28"
+       stroke-width="1.3"
+       id="circle68" />
+    <circle
+       cx="403"
+       cy="150"
+       r="3"
+       fill="#FFFFFF"
+       opacity=".48"
+       id="circle69" />
+    <circle
+       cx="315"
+       cy="235"
+       r="16"
+       fill="#A5A7FF"
+       opacity=".11"
+       id="circle70" />
+    <circle
+       cx="315"
+       cy="235"
+       r="11"
+       fill="#A5A7FF"
+       stroke="#E9FAFB"
+       stroke-opacity=".28"
+       stroke-width="1.3"
+       id="circle71" />
+    <circle
+       cx="312"
+       cy="231"
+       r="3"
+       fill="#FFFFFF"
+       opacity=".48"
+       id="circle72" />
+    <circle
+       cx="364"
+       cy="244"
+       r="20"
+       fill="#A5A7FF"
+       opacity=".11"
+       id="circle73" />
+    <circle
+       cx="364"
+       cy="244"
+       r="15"
+       fill="#A5A7FF"
+       stroke="#E9FAFB"
+       stroke-opacity=".28"
+       stroke-width="1.3"
+       id="circle74" />
+    <circle
+       cx="361"
+       cy="240"
+       r="3"
+       fill="#FFFFFF"
+       opacity=".48"
+       id="circle75" />
+    <circle
+       cx="406"
+       cy="221"
+       r="15"
+       fill="#A5A7FF"
+       opacity=".11"
+       id="circle76" />
+    <circle
+       cx="406"
+       cy="221"
+       r="10"
+       fill="#A5A7FF"
+       stroke="#E9FAFB"
+       stroke-opacity=".28"
+       stroke-width="1.3"
+       id="circle77" />
+    <circle
+       cx="403"
+       cy="217"
+       r="3"
+       fill="#FFFFFF"
+       opacity=".48"
+       id="circle78" />
+    <circle
+       cx="300"
+       cy="331"
+       r="19"
+       fill="#56D9D1"
+       opacity=".11"
+       id="circle79" />
+    <circle
+       cx="300"
+       cy="331"
+       r="14"
+       fill="#56D9D1"
+       stroke="#E9FAFB"
+       stroke-opacity=".28"
+       stroke-width="1.3"
+       id="circle80" />
+    <circle
+       cx="297"
+       cy="327"
+       r="3"
+       fill="#FFFFFF"
+       opacity=".48"
+       id="circle81" />
+    <circle
+       cx="350"
+       cy="300"
+       r="17"
+       fill="#9CF2E7"
+       opacity=".11"
+       id="circle82" />
+    <circle
+       cx="350"
+       cy="300"
+       r="12"
+       fill="#9CF2E7"
+       stroke="#E9FAFB"
+       stroke-opacity=".28"
+       stroke-width="1.3"
+       id="circle83" />
+    <circle
+       cx="347"
+       cy="296"
+       r="3"
+       fill="#FFFFFF"
+       opacity=".48"
+       id="circle84" />
+    <circle
+       cx="411"
+       cy="342"
+       r="20"
+       fill="#56D9D1"
+       opacity=".11"
+       id="circle85" />
+    <circle
+       cx="411"
+       cy="342"
+       r="15"
+       fill="#56D9D1"
+       stroke="#E9FAFB"
+       stroke-opacity=".28"
+       stroke-width="1.3"
+       id="circle86" />
+    <circle
+       cx="408"
+       cy="338"
+       r="3"
+       fill="#FFFFFF"
+       opacity=".48"
+       id="circle87" />
+    <circle
+       cx="390"
+       cy="362"
+       r="14"
+       fill="#56D9D1"
+       opacity=".11"
+       id="circle88" />
+    <circle
+       cx="390"
+       cy="362"
+       r="9"
+       fill="#56D9D1"
+       stroke="#E9FAFB"
+       stroke-opacity=".28"
+       stroke-width="1.3"
+       id="circle89" />
+    <circle
+       cx="387"
+       cy="358"
+       r="3"
+       fill="#FFFFFF"
+       opacity=".48"
+       id="circle90" />
+    <path
+       d="M215 188 C229 188 234 188 246 188 S267 188 280 188"
+       stroke="url(#connector)"
+       stroke-width="5"
+       fill="none"
+       stroke-linecap="round"
+       id="path90" />
+    <path
+       d="M273 181 L283 188 L273 195"
+       fill="none"
+       stroke="#A6A9FC"
+       stroke-width="4"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       id="path91" />
+    <path
+       d="M281 317 C265 317 259 317 250 317 S233 317 219 317"
+       stroke="url(#connector)"
+       stroke-width="5"
+       fill="none"
+       stroke-linecap="round"
+       id="path92" />
+    <path
+       d="M229 310 L216 317 L229 324"
+       fill="none"
+       stroke="#8CBDE5"
+       stroke-width="4"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       id="path93" />
+    <path
+       d="M82 106 H214"
+       stroke="#F78DA1"
+       stroke-width="2.5"
+       opacity=".60"
+       stroke-linecap="round"
+       id="path94" />
+    <path
+       d="M287 106 H414"
+       stroke="#6DDFD6"
+       stroke-width="2.5"
+       opacity=".60"
+       stroke-linecap="round"
+       id="path95" />
+    <path
+       d="M81 406 H213"
+       stroke="#F78DA1"
+       stroke-width="2.5"
+       opacity=".40"
+       stroke-linecap="round"
+       id="path96" />
+    <path
+       d="M287 406 H414"
+       stroke="#6DDFD6"
+       stroke-width="2.5"
+       opacity=".40"
+       stroke-linecap="round"
+       id="path97" />
+  </g>
+  <!-- slender division -->
+  <path
+     d="M495 96 V412"
+     stroke="#A5BBD2"
+     stroke-opacity=".23"
+     stroke-width="2"
+     id="path98" />
+  <text
+     x="557"
+     y="118"
+     font-size="19"
+     letter-spacing="4"
+     fill="#8EADC4"
+     font-family="DejaVu Sans, sans-serif"
+     font-weight="700"
+     id="text98">THE HUMAN ENDOMETRIUM · IN SILICO</text>
+  <text
+     x="548"
+     y="251"
+     font-size="96"
+     font-family="DejaVu Sans, sans-serif"
+     font-weight="800"
+     letter-spacing="-5"
+     fill="#F1F7FC"
+     id="text99">ENDO<tspan
+   fill="#56D9D1"
+   id="tspan98">-TWIN</tspan></text>
+  <rect
+     x="559"
+     y="274"
+     width="74"
+     height="5"
+     rx="2"
+     fill="url(#connector)"
+     id="rect99" />
+  <text
+     x="558"
+     y="332"
+     font-size="29"
+     font-family="DejaVu Sans, sans-serif"
+     fill="#D7E6F0"
+     font-weight="400"
+     id="text100">From hormonal signals to testable mechanisms</text>
+  <g
+     font-family="DejaVu Sans, sans-serif"
+     font-size="19"
+     letter-spacing="1.0"
+     fill="#B6C9D9"
+     id="g102">
+    <rect
+       x="561"
+       y="374"
+       width="266"
+       height="47"
+       rx="23.5"
+       fill="#3a4d61"
+       opacity="0.42"
+       stroke="#8aabc5"
+       stroke-opacity="0.6"
+       id="rect100" />
+    <text
+       x="570"
+       y="405"
+       fill="#e6b5c1"
+       id="text101">ENDOMETRIUM-ON-CHIP</text>
+    <path
+       d="m 842,398 h 42"
+       stroke="#9ab2c9"
+       stroke-width="2"
+       stroke-linecap="round"
+       id="path101" />
+    <path
+       d="m 874,390 10,8 -10,8"
+       stroke="#9ab2c9"
+       stroke-width="2"
+       fill="none"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       id="path102" />
+    <rect
+       x="907"
+       y="374"
+       width="337"
+       height="47"
+       rx="23.5"
+       fill="#294c50"
+       opacity="0.48"
+       stroke="#61babd"
+       stroke-opacity="0.5"
+       id="rect102" />
+    <text
+       x="916"
+       y="405"
+       fill="#93e8e0"
+       id="text102">STOCHASTIC BOOLEAN MODEL</text>
+  </g>
+  <path
+     d="M0 497 H1600"
+     stroke="url(#connector)"
+     stroke-width="3"
+     opacity=".55"
+     id="path103" />
+  <g
+     id="g103"
+     transform="matrix(0.43390641,0,0,0.43390641,-87.467533,8.3141296)">
+    <rect
+       width="1024"
+       height="1024"
+       fill="#0b1424"
+       rx="215.03999"
+       id="rect17-4"
+       x="269.14401"
+       y="45"
+       style="stroke-width:2.048" />
+    <rect
+       width="1024"
+       height="1024"
+       fill="url(#dots)"
+       opacity="0.25"
+       rx="215.03999"
+       id="rect18"
+       x="269.14401"
+       y="45"
+       style="fill:url(#pattern103);stroke-width:2.048" />
+    <rect
+       x="285.52802"
+       y="61.383999"
+       width="991.23199"
+       height="991.23199"
+       rx="210.944"
+       fill="url(#card)"
+       stroke="#49617e"
+       stroke-opacity="0.65"
+       stroke-width="4.096"
+       id="rect19"
+       style="fill:url(#card-4)" />
+    <rect
+       x="322.392"
+       y="98.248001"
+       width="917.50403"
+       height="917.50403"
+       rx="182.272"
+       fill="none"
+       stroke="#b0cce4"
+       stroke-opacity="0.12"
+       stroke-width="3.072"
+       id="rect20" />
+    <ellipse
+       cx="570.20001"
+       cy="313.28799"
+       rx="307.20001"
+       ry="225.28"
+       fill="#9b4464"
+       opacity="0.075"
+       id="ellipse20"
+       style="stroke-width:2.048" />
+    <ellipse
+       cx="1006.424"
+       cy="739.27197"
+       rx="270.336"
+       ry="229.37601"
+       fill="#1db2bf"
+       opacity="0.065"
+       id="ellipse21"
+       style="stroke-width:2.048" />
+    <path
+       d="m 781.144,257.992 v 593.92"
+       stroke="#b5c8d9"
+       stroke-width="4.096"
+       stroke-opacity="0.35"
+       stroke-dasharray="4, 12"
+       stroke-linecap="round"
+       id="path21" />
+    <path
+       d="m 404.312,325.576 c 59.392,-26.624 88.064,-8.192 122.88,0 34.816,8.192 90.112,28.672 129.024,4.096 38.912,-24.576 45.056,-12.288 81.92,-2.048"
+       fill="none"
+       stroke="url(#pink)"
+       stroke-width="16.384"
+       stroke-linecap="round"
+       id="path22"
+       style="stroke:url(#linearGradient27)" />
+    <rect
+       x="426.84"
+       y="370.63199"
+       width="59.391998"
+       height="149.504"
+       rx="24.576"
+       fill="url(#pink)"
+       opacity="0.94"
+       id="rect22"
+       style="fill:url(#linearGradient28);stroke-width:2.048" />
+    <ellipse
+       cx="456.53601"
+       cy="454.60001"
+       rx="12.697599"
+       ry="18.8416"
+       fill="#b74369"
+       opacity="0.72"
+       id="ellipse22"
+       style="stroke-width:2.048" />
+    <path
+       d="m 443.224,401.352 v -10.24"
+       stroke="#ffe3e3"
+       stroke-width="5.12"
+       stroke-linecap="round"
+       opacity="0.7"
+       id="path23" />
+    <rect
+       x="496.47198"
+       y="370.63199"
+       width="59.391998"
+       height="151.552"
+       rx="24.576"
+       fill="url(#pink)"
+       opacity="0.94"
+       id="rect23"
+       style="fill:url(#linearGradient29);stroke-width:2.048" />
+    <ellipse
+       cx="526.16803"
+       cy="454.60001"
+       rx="12.697599"
+       ry="18.8416"
+       fill="#b74369"
+       opacity="0.72"
+       id="ellipse23"
+       style="stroke-width:2.048" />
+    <path
+       d="m 512.856,401.352 v -10.24"
+       stroke="#ffe3e3"
+       stroke-width="5.12"
+       stroke-linecap="round"
+       opacity="0.7"
+       id="path24" />
+    <rect
+       x="566.104"
+       y="370.63199"
+       width="59.391998"
+       height="151.552"
+       rx="24.576"
+       fill="url(#pink)"
+       opacity="0.94"
+       id="rect24"
+       style="fill:url(#linearGradient30);stroke-width:2.048" />
+    <ellipse
+       cx="595.79999"
+       cy="454.60001"
+       rx="12.697599"
+       ry="18.8416"
+       fill="#b74369"
+       opacity="0.72"
+       id="ellipse24"
+       style="stroke-width:2.048" />
+    <path
+       d="m 582.488,401.352 v -10.24"
+       stroke="#ffe3e3"
+       stroke-width="5.12"
+       stroke-linecap="round"
+       opacity="0.7"
+       id="path25" />
+    <rect
+       x="635.73602"
+       y="370.63199"
+       width="59.391998"
+       height="149.504"
+       rx="24.576"
+       fill="url(#pink)"
+       opacity="0.94"
+       id="rect25"
+       style="fill:url(#linearGradient31);stroke-width:2.048" />
+    <ellipse
+       cx="665.43201"
+       cy="454.60001"
+       rx="12.697599"
+       ry="18.8416"
+       fill="#b74369"
+       opacity="0.72"
+       id="ellipse25"
+       style="stroke-width:2.048" />
+    <path
+       d="m 652.12,401.352 v -10.24"
+       stroke="#ffe3e3"
+       stroke-width="5.12"
+       stroke-linecap="round"
+       opacity="0.7"
+       id="path26" />
+    <path
+       d="m 406.36,544.712 c 53.248,-18.432 90.112,16.384 145.408,0 55.296,-16.384 102.4,-18.432 167.936,4.096"
+       fill="none"
+       stroke="#f8a4ae"
+       stroke-width="8.192"
+       opacity="0.65"
+       stroke-dasharray="7, 7"
+       stroke-linecap="round"
+       id="path27" />
+    <path
+       d="m 424.792,692.168 c 61.44,-65.536 122.88,-32.768 157.696,14.336"
+       fill="none"
+       stroke="#60cece"
+       stroke-width="6.9632"
+       stroke-opacity="0.46"
+       stroke-linecap="round"
+       id="path28" />
+    <path
+       d="m 430.936,776.136 c 63.488,-59.392 129.024,-26.624 215.04,20.48"
+       fill="none"
+       stroke="#60cece"
+       stroke-width="6.9632"
+       stroke-opacity="0.46"
+       stroke-linecap="round"
+       id="path29-3" />
+    <path
+       d="m 539.48,636.872 c 26.624,-20.48 81.92,-20.48 147.456,6.144"
+       fill="none"
+       stroke="#60cece"
+       stroke-width="6.9632"
+       stroke-opacity="0.46"
+       stroke-linecap="round"
+       id="path30-0" />
+    <path
+       d="m 559.96,761.8 c 51.2,-73.728 116.736,-59.392 161.792,-26.624"
+       fill="none"
+       stroke="#60cece"
+       stroke-width="6.9632"
+       stroke-opacity="0.46"
+       stroke-linecap="round"
+       id="path31-7" />
+    <path
+       d="m 416.6,634.824 c 73.728,-22.528 88.064,-20.48 147.456,12.288"
+       fill="none"
+       stroke="#60cece"
+       stroke-width="6.9632"
+       stroke-opacity="0.46"
+       stroke-linecap="round"
+       id="path32-8" />
+    <path
+       d="m 586.584,819.144 c 38.912,-45.056 83.968,-49.152 129.024,-18.432"
+       fill="none"
+       stroke="#60cece"
+       stroke-width="6.9632"
+       stroke-opacity="0.46"
+       stroke-linecap="round"
+       id="path33-6" />
+    <ellipse
+       cx="35.783863"
+       cy="821.64508"
+       rx="30.720001"
+       ry="14.336"
+       transform="rotate(-32.000001)"
+       fill="url(#teal)"
+       id="ellipse33-8"
+       style="fill:url(#linearGradient32);stroke-width:2.048" />
+    <ellipse
+       cx="465.75201"
+       cy="677.83197"
+       rx="10.24"
+       ry="9.2159996"
+       fill="#178596"
+       opacity="0.72"
+       id="ellipse34"
+       style="stroke-width:2.048" />
+    <ellipse
+       cx="765.30267"
+       cy="466.52646"
+       rx="34.816002"
+       ry="14.336"
+       transform="rotate(16)"
+       fill="url(#teal)"
+       id="ellipse35"
+       style="fill:url(#linearGradient33);stroke-width:2.048" />
+    <ellipse
+       cx="607.06403"
+       cy="659.40002"
+       rx="10.24"
+       ry="9.2159996"
+       fill="#178596"
+       opacity="0.72"
+       id="ellipse36"
+       style="stroke-width:2.048" />
+    <ellipse
+       cx="102.93952"
+       cy="997.06482"
+       rx="36.863998"
+       ry="14.335999"
+       transform="rotate(-34.999999)"
+       fill="url(#teal)"
+       id="ellipse37"
+       style="fill:url(#linearGradient34);stroke-width:2.048" />
+    <ellipse
+       cx="656.216"
+       cy="757.70398"
+       rx="10.24"
+       ry="9.2159996"
+       fill="#178596"
+       opacity="0.72"
+       id="ellipse38"
+       style="stroke-width:2.048" />
+    <ellipse
+       cx="743.26093"
+       cy="539.46191"
+       rx="32.768002"
+       ry="14.335999"
+       transform="rotate(21)"
+       fill="url(#teal)"
+       id="ellipse39"
+       style="fill:url(#linearGradient35);stroke-width:2.048" />
+    <ellipse
+       cx="500.56799"
+       cy="769.992"
+       rx="10.24"
+       ry="9.2159996"
+       fill="#178596"
+       opacity="0.72"
+       id="ellipse40"
+       style="stroke-width:2.048" />
+    <path
+       d="m 869.208,370.632 90.112,40.96"
+       stroke="#8a94c5"
+       stroke-opacity="0.6"
+       stroke-width="8.192"
+       stroke-linecap="round"
+       id="path40-8" />
+    <path
+       d="m 959.32,411.592 141.312,-51.2"
+       stroke="#8a94c5"
+       stroke-opacity="0.6"
+       stroke-width="8.192"
+       stroke-linecap="round"
+       id="path41-4" />
+    <path
+       d="M 869.208,370.632 914.264,526.28"
+       stroke="#8a94c5"
+       stroke-opacity="0.6"
+       stroke-width="8.192"
+       stroke-linecap="round"
+       id="path42" />
+    <path
+       d="m 959.32,411.592 55.296,133.12"
+       stroke="#8a94c5"
+       stroke-opacity="0.6"
+       stroke-width="8.192"
+       stroke-linecap="round"
+       id="path43" />
+    <path
+       d="m 1100.632,360.392 -6.144,137.216"
+       stroke="#8a94c5"
+       stroke-opacity="0.6"
+       stroke-width="8.192"
+       stroke-linecap="round"
+       id="path44" />
+    <path
+       d="m 914.264,526.28 100.352,18.432"
+       stroke="#8a94c5"
+       stroke-opacity="0.6"
+       stroke-width="8.192"
+       stroke-linecap="round"
+       id="path45" />
+    <path
+       d="m 1014.616,544.712 86.016,-47.104"
+       stroke="#8a94c5"
+       stroke-opacity="0.6"
+       stroke-width="8.192"
+       stroke-linecap="round"
+       id="path46" />
+    <path
+       d="m 914.264,526.28 -30.72,196.608"
+       stroke="#8a94c5"
+       stroke-opacity="0.6"
+       stroke-width="8.192"
+       stroke-linecap="round"
+       id="path47" />
+    <path
+       d="M 1014.616,544.712 985.944,659.4"
+       stroke="#8a94c5"
+       stroke-opacity="0.6"
+       stroke-width="8.192"
+       stroke-linecap="round"
+       id="path48-3" />
+    <path
+       d="m 1100.632,497.608 10.24,247.808"
+       stroke="#8a94c5"
+       stroke-opacity="0.6"
+       stroke-width="8.192"
+       stroke-linecap="round"
+       id="path49-1" />
+    <path
+       d="m 985.944,659.4 124.928,86.016"
+       stroke="#8a94c5"
+       stroke-opacity="0.6"
+       stroke-width="8.192"
+       stroke-linecap="round"
+       id="path50-4" />
+    <path
+       d="M 883.544,722.888 985.944,659.4"
+       stroke="#8a94c5"
+       stroke-opacity="0.6"
+       stroke-width="8.192"
+       stroke-linecap="round"
+       id="path51-9" />
+    <path
+       d="m 985.944,659.4 81.92,126.976"
+       stroke="#8a94c5"
+       stroke-opacity="0.6"
+       stroke-width="8.192"
+       stroke-linecap="round"
+       id="path52-2" />
+    <path
+       d="m 883.544,722.888 184.32,63.488"
+       stroke="#8a94c5"
+       stroke-opacity="0.6"
+       stroke-width="8.192"
+       stroke-linecap="round"
+       id="path53-0" />
+    <circle
+       cx="869.20801"
+       cy="370.63199"
+       r="38.911999"
+       fill="#fe859c"
+       opacity="0.11"
+       id="circle53"
+       style="stroke-width:2.048" />
+    <circle
+       cx="869.20801"
+       cy="370.63199"
+       r="28.672001"
+       fill="#fe859c"
+       stroke="#e9fafb"
+       stroke-opacity="0.28"
+       stroke-width="2.6624"
+       id="circle54" />
+    <circle
+       cx="863.06403"
+       cy="362.44"
+       r="6.1440001"
+       fill="#ffffff"
+       opacity="0.48"
+       id="circle55"
+       style="stroke-width:2.048" />
+    <circle
+       cx="959.32001"
+       cy="411.59201"
+       r="34.816002"
+       fill="#fe859c"
+       opacity="0.11"
+       id="circle56"
+       style="stroke-width:2.048" />
+    <circle
+       cx="959.32001"
+       cy="411.59201"
+       r="24.576"
+       fill="#fe859c"
+       stroke="#e9fafb"
+       stroke-opacity="0.28"
+       stroke-width="2.6624"
+       id="circle57" />
+    <circle
+       cx="953.17603"
+       cy="403.39999"
+       r="6.1440001"
+       fill="#ffffff"
+       opacity="0.48"
+       id="circle58"
+       style="stroke-width:2.048" />
+    <circle
+       cx="1100.632"
+       cy="360.392"
+       r="34.816002"
+       fill="#ffc1c9"
+       opacity="0.11"
+       id="circle59"
+       style="stroke-width:2.048" />
+    <circle
+       cx="1100.632"
+       cy="360.392"
+       r="24.576"
+       fill="#ffc1c9"
+       stroke="#e9fafb"
+       stroke-opacity="0.28"
+       stroke-width="2.6624"
+       id="circle60" />
+    <circle
+       cx="1094.488"
+       cy="352.20001"
+       r="6.1440001"
+       fill="#ffffff"
+       opacity="0.48"
+       id="circle61-6"
+       style="stroke-width:2.048" />
+    <circle
+       cx="914.26398"
+       cy="526.28003"
+       r="32.768002"
+       fill="#a5a7ff"
+       opacity="0.11"
+       id="circle62-8"
+       style="stroke-width:2.048" />
+    <circle
+       cx="914.26398"
+       cy="526.28003"
+       r="22.528"
+       fill="#a5a7ff"
+       stroke="#e9fafb"
+       stroke-opacity="0.28"
+       stroke-width="2.6624"
+       id="circle63-9" />
+    <circle
+       cx="908.12"
+       cy="518.08801"
+       r="6.1440001"
+       fill="#ffffff"
+       opacity="0.48"
+       id="circle64-2"
+       style="stroke-width:2.048" />
+    <circle
+       cx="1014.616"
+       cy="544.71198"
+       r="40.959999"
+       fill="#a5a7ff"
+       opacity="0.11"
+       id="circle65-6"
+       style="stroke-width:2.048" />
+    <circle
+       cx="1014.616"
+       cy="544.71198"
+       r="30.719999"
+       fill="#a5a7ff"
+       stroke="#e9fafb"
+       stroke-opacity="0.28"
+       stroke-width="2.6624"
+       id="circle66-6" />
+    <circle
+       cx="1008.472"
+       cy="536.52002"
+       r="6.1440001"
+       fill="#ffffff"
+       opacity="0.48"
+       id="circle67-4"
+       style="stroke-width:2.048" />
+    <circle
+       cx="1100.632"
+       cy="497.608"
+       r="30.719999"
+       fill="#a5a7ff"
+       opacity="0.11"
+       id="circle68-9"
+       style="stroke-width:2.048" />
+    <circle
+       cx="1100.632"
+       cy="497.608"
+       r="20.48"
+       fill="#a5a7ff"
+       stroke="#e9fafb"
+       stroke-opacity="0.28"
+       stroke-width="2.6624"
+       id="circle69-5" />
+    <circle
+       cx="1094.488"
+       cy="489.41599"
+       r="6.1440001"
+       fill="#ffffff"
+       opacity="0.48"
+       id="circle70-0"
+       style="stroke-width:2.048" />
+    <circle
+       cx="883.54401"
+       cy="722.888"
+       r="38.911999"
+       fill="#56d9d1"
+       opacity="0.11"
+       id="circle71-4"
+       style="stroke-width:2.048" />
+    <circle
+       cx="883.54401"
+       cy="722.888"
+       r="28.672001"
+       fill="#56d9d1"
+       stroke="#e9fafb"
+       stroke-opacity="0.28"
+       stroke-width="2.6624"
+       id="circle72-8" />
+    <circle
+       cx="877.40002"
+       cy="714.69598"
+       r="6.1440001"
+       fill="#ffffff"
+       opacity="0.48"
+       id="circle73-7"
+       style="stroke-width:2.048" />
+    <circle
+       cx="985.94397"
+       cy="659.40002"
+       r="34.816002"
+       fill="#9cf2e7"
+       opacity="0.11"
+       id="circle74-1"
+       style="stroke-width:2.048" />
+    <circle
+       cx="985.94397"
+       cy="659.40002"
+       r="24.576"
+       fill="#9cf2e7"
+       stroke="#e9fafb"
+       stroke-opacity="0.28"
+       stroke-width="2.6624"
+       id="circle75-7" />
+    <circle
+       cx="979.79999"
+       cy="651.20801"
+       r="6.1440001"
+       fill="#ffffff"
+       opacity="0.48"
+       id="circle76-2"
+       style="stroke-width:2.048" />
+    <circle
+       cx="1110.8719"
+       cy="745.41602"
+       r="40.959999"
+       fill="#56d9d1"
+       opacity="0.11"
+       id="circle77-7"
+       style="stroke-width:2.048" />
+    <circle
+       cx="1110.8719"
+       cy="745.41602"
+       r="30.719999"
+       fill="#56d9d1"
+       stroke="#e9fafb"
+       stroke-opacity="0.28"
+       stroke-width="2.6624"
+       id="circle78-2" />
+    <circle
+       cx="1104.728"
+       cy="737.224"
+       r="6.1440001"
+       fill="#ffffff"
+       opacity="0.48"
+       id="circle79-2"
+       style="stroke-width:2.048" />
+    <circle
+       cx="1067.864"
+       cy="786.37598"
+       r="28.672001"
+       fill="#56d9d1"
+       opacity="0.11"
+       id="circle80-6"
+       style="stroke-width:2.048" />
+    <circle
+       cx="1067.864"
+       cy="786.37598"
+       r="18.431999"
+       fill="#56d9d1"
+       stroke="#e9fafb"
+       stroke-opacity="0.28"
+       stroke-width="2.6624"
+       id="circle81-1" />
+    <circle
+       cx="1061.72"
+       cy="778.18402"
+       r="6.1440001"
+       fill="#ffffff"
+       opacity="0.48"
+       id="circle82-0"
+       style="stroke-width:2.048" />
+    <path
+       d="m 709.464,430.024 c 28.672,0 38.912,0 63.488,0 24.576,0 43.008,0 69.632,0"
+       stroke="url(#connector)"
+       stroke-width="10.24"
+       fill="none"
+       stroke-linecap="round"
+       id="path82"
+       style="stroke:url(#linearGradient36)" />
+    <path
+       d="m 828.248,415.688 20.48,14.336 -20.48,14.336"
+       fill="none"
+       stroke="#a6a9fc"
+       stroke-width="8.192"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       id="path83" />
+    <path
+       d="m 844.632,694.216 c -32.768,0 -45.056,0 -63.488,0 -18.432,0 -34.816,0 -63.488,0"
+       stroke="url(#connector)"
+       stroke-width="10.24"
+       fill="none"
+       stroke-linecap="round"
+       id="path84"
+       style="stroke:url(#linearGradient37)" />
+    <path
+       d="m 738.136,679.88 -26.624,14.336 26.624,14.336"
+       fill="none"
+       stroke="#8cbde5"
+       stroke-width="8.192"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       id="path85" />
+    <path
+       d="M 437.08,262.088 H 707.416"
+       stroke="#f78da1"
+       stroke-width="5.12"
+       opacity="0.6"
+       stroke-linecap="round"
+       id="path86" />
+    <path
+       d="m 856.92,262.088 h 260.096"
+       stroke="#6ddfd6"
+       stroke-width="5.12"
+       opacity="0.6"
+       stroke-linecap="round"
+       id="path87" />
+    <path
+       d="M 435.032,876.488 H 705.368"
+       stroke="#f78da1"
+       stroke-width="5.12"
+       opacity="0.4"
+       stroke-linecap="round"
+       id="path88" />
+    <path
+       d="m 856.92,876.488 h 260.096"
+       stroke="#6ddfd6"
+       stroke-width="5.12"
+       opacity="0.4"
+       stroke-linecap="round"
+       id="path89" />
+  </g>
+</svg>

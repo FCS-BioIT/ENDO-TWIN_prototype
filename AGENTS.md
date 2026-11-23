@@ -16,6 +16,26 @@ prospectively. It was derived from an earlier, private prototype (`docs/ORIGIN.m
   records. Do not edit, move or add files under `models/`, `config/`,
   `docs/phase2a/`, `docs/phase1b_closure/`, `docs/scrna/` or
   `docs/experiments/`; put new mainline material under `endotwin/`.
+- **Do not relocate a top-level directory.** This was attempted on 2026-11-23
+  with the owner's permission and rolled back twice. Three separate mechanisms
+  pin paths, and checking only one of them gives false confidence:
+  1. the implementation digest, recomputed from **live globs**
+     (`concordance.simulate.IMPLEMENTATION_GLOBS`) by `unit.test_concordance`,
+     `unit.test_endpoint_figure` and `unit.test_klf12_conditioning_contract`.
+     Editing any globbed file, **including one comment line**, stales eight
+     digest-stamped artifacts, and they cannot all be regenerated here
+     (`klf12_conditioning_settings.json` needs the local-only RDS,
+     `endpoint_run_settings.json` ~100 CPU-minutes);
+  2. standalone frozen-byte constants, such as `FROZEN_MAP_SHA256` in
+     `tests/unit/test_compartment_attribution.py`, which pins
+     `config/observation_model_map.tsv`; and
+  3. closed-phase records that pin paths as well as hashes, such as
+     `docs/phase1b_closure/phase1b_closure_summary.json`.
+  `context/` is blocked by (1), `input_tables/` by (2), `data/` by (1) through
+  `src/dt_adoc/concordance/scrna_audit_cli.py`, and `docs/` additionally
+  contains the closed-phase directories. `models/` must also stay distinct from
+  `endotwin/models/`, which is the mainline. Watch the **skip count** as well as
+  failures: a stale path can turn a passing test into a silent skip.
 
 ## Evidence and data contracts
 

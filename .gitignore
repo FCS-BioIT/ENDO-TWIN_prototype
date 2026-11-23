@@ -63,7 +63,7 @@ context/literature/supplements/
 # pinned by sha256 -- exactly like the RDS above -- but never committed:
 # xl/sharedStrings.xml carries the lab's own cell-source codes and a collection
 # date, and this repository has a shared GitHub remote and an external-bundle
-# export path (scripts/make_chatgpt_results_bundle.sh copies config/, context/,
+# export path (src/scripts/make_chatgpt_results_bundle.sh copies config/, context/,
 # docs/ and input_tables/). Only opaque repository-local donor-group labels plus
 # source-cell coordinates are committed; the crosswalk deliberately does not
 # exist here. See config/source_contract.yaml local_only_verification.

@@ -75,7 +75,11 @@ class Partition(unittest.TestCase):
 
 class ModuleSearchPath(unittest.TestCase):
     def test_the_worker_path_is_the_one_python_dash_m_gives(self) -> None:
-        script_path = [str(ROOT / "src" / "scripts"), "/env/lib/python3.12", "/env/site"]
+        script_path = [
+            str(ROOT / "src" / "scripts"),
+            "/env/lib/python3.12",
+            "/env/site",
+        ]
         self.assertEqual(
             P.unittest_module_path(script_path),
             [str(ROOT), "/env/lib/python3.12", "/env/site"],

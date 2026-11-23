@@ -256,6 +256,17 @@ Main limitations:
 - The proliferation rule still requires epithelial ERα, which Cooke 1997
   (read in full) shows is not needed in mouse. The term changes no prediction
   and goes in the next model revision.
+- **Nothing connects progestin to cAMP/PKA.** `S_PKA` reads only `IN_cAMP`, the
+  8-Br-cAMP reagent, so the model says stromal decidualisation is impossible
+  without it. Tamura 2014 (ET-011, read in full 2026-11-23) does not support
+  that: it never tests a progestin arm, its basal C/EBPβ protein is non-zero,
+  and it treats cAMP as the second messenger of progesterone (ET-030, ET-031),
+  with C/EBPβ rising in late-secretory stroma in vivo without any exogenous
+  cAMP. Unlike the ERα term above, this one **does** change a prediction: every
+  hormone-only result should be read as a floor the model imposes, not as a
+  finding. A progestin→PKA path is the first candidate for the next revision.
+  Consequences for the grant's Task 1.1 and Task 1.4 are worked through in
+  [endotwin/results/grant_v8_design_audit.md](endotwin/results/grant_v8_design_audit.md).
 - Outputs are Boolean and time is dimensionless. Transients depend on unknown
   rates; steady states do not.
 

@@ -29,7 +29,7 @@ class ConfigContractTest(unittest.TestCase):
             "config/personalization.yaml",
             "config/calibration.yaml",
             "config/candidate_score.yaml",
-            "references/upstream_versions.yaml",
+            "context/upstream/upstream_versions.yaml",
         ]:
             payload = yaml.safe_load((ROOT / relative).read_text())
             self.assertIsInstance(payload, dict, relative)

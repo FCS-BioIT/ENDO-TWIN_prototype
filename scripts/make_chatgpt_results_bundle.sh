@@ -186,7 +186,7 @@ copy_file data/README.md "source-data-documentation"
 for root in src scripts models tests; do
     copy_tree "$root" "repo-source"
 done
-for root in docs context config references; do
+for root in docs context config; do
     copy_tree "$root" "scientific-context-and-configuration"
 done
 # Canonical annotated input tables. These supersede the workbook and the

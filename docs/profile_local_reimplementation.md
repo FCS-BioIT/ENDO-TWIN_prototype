@@ -15,7 +15,7 @@ repositories are methodological references, not runtime dependencies.
   `https://github.com/ArnauMontagud/PROFILE_v2` at
   `c3e8c39dacb0cad1ff21a79aa871667356b6bf42`
 
-See [`references/upstream_versions.yaml`](../references/upstream_versions.yaml)
+See [`context/upstream/upstream_versions.yaml`](../context/upstream/upstream_versions.yaml)
 and [`THIRD_PARTY_NOTICES.md`](../THIRD_PARTY_NOTICES.md).
 
 ## Execution Paths Inspected

@@ -198,7 +198,9 @@ def build_parser() -> argparse.ArgumentParser:
         help="Per-trajectory response order after a declared perturbation, "
         "with a matched unperturbed control",
     )
-    cascade.add_argument("--spec", type=Path, default=None, help="perturbations/*.yaml")
+    cascade.add_argument(
+        "--spec", type=Path, default=None, help="context/perturbations/*.yaml"
+    )
     cascade.add_argument(
         "--model",
         dest="model_version",

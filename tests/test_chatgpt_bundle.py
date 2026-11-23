@@ -49,7 +49,7 @@ class ChatGPTBundleTest(unittest.TestCase):
             "context/context.md": "# Context\n",
             "context/literature/README.md": "# Literature\n",
             "context/literature/knowledge-base.yaml": "schema_version: '1.0'\n",
-            "references/upstream_versions.yaml": 'schema_version: "1.0"\n',
+            "context/upstream/upstream_versions.yaml": 'schema_version: "1.0"\n',
             "models/model.bnd": "node A { logic = A; }\n",
             "models/model.cfg": "sample_count = 10;\n",
             "output/results/run-1/table.tsv": "phenotype\tprobability\nA\t0.5\n",
@@ -172,7 +172,7 @@ class ChatGPTBundleTest(unittest.TestCase):
         self.assertIn("context/context.md", names)
         self.assertIn("context/literature/README.md", names)
         self.assertIn("context/literature/knowledge-base.yaml", names)
-        self.assertIn("references/upstream_versions.yaml", names)
+        self.assertIn("context/upstream/upstream_versions.yaml", names)
         self.assertIn("models/model.bnd", names)
         self.assertIn("output/results/run-1/table.tsv", names)
         self.assertIn("output/results/run-1/raw/probtraj.csv", names)

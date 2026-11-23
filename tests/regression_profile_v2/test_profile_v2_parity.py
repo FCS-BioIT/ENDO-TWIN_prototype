@@ -21,7 +21,8 @@ class ProfileV2ParityFixtureTest(unittest.TestCase):
         fixture = json.loads(
             (
                 ROOT
-                / "references"
+                / "context"
+                / "upstream"
                 / "fixtures"
                 / "profile_v2"
                 / "profile_v2_gradient_inhibition_fixture.json"

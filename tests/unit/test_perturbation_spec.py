@@ -149,7 +149,7 @@ class ValidateTests(unittest.TestCase):
         self.assertTrue(all(e["mapping_basis"] for e in rec[1]["effects"]))
 
     def test_committed_specs_validate(self):
-        paths = sorted((ROOT / "perturbations").glob("*.yaml"))
+        paths = sorted((ROOT / "context" / "perturbations").glob("*.yaml"))
         self.assertTrue(paths)
         for path in paths:
             with self.subTest(spec=path.name):

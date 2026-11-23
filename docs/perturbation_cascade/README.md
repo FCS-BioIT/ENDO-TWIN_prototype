@@ -14,7 +14,7 @@ tissue, and nothing licenses a screen: Stage 4b owner decision 6 excludes
 transient differences from screenability, and this tool does not change that.
 
 ```
-pixi run perturb-cascade --spec perturbations/progestin_withdrawal.yaml --n 2000
+pixi run perturb-cascade --spec context/perturbations/progestin_withdrawal.yaml --n 2000
 pixi run perturb-cascade --start hormone_treated_maternal --set IN_PROGESTIN=0 --n 2000
 pixi run perturb-cascade --start hormone_treated_maternal --intervention mifepristone --n 2000
 ```

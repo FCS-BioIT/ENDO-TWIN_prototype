@@ -65,10 +65,12 @@ decisions the table encodes.
 
 ### Discrepancies encoded, not papered over
 
-- `PAEP` carries no assignable time axis: its two data rows are
-  hormone-treatment conditions (`HT (E2 only)`, `HT (E2+P4+XAV939)`), not days,
-  and `resolved_protocol_day`
-  is left empty for every PAEP row rather than guessed. What those two rows are
+- `PAEP` carries no assignable time axis: its two data rows are the workbook's
+  own verbatim labels for hormone-treatment conditions
+  (`HT (E2 only)`, `HT (E2+P4+XAV939)`), not days, and `resolved_protocol_day`
+  is left empty for every PAEP row rather than guessed. The second label is
+  wrong twice: the progestin was MPA 1 uM, not P4, and the label omits cAMP
+  0.25 mM (`config/observation_model_map.tsv`, OM-001). What those two rows are
   was confirmed by the collaborator on 2026-09-18 (`SOFIA-COMM-007`): `HT` is
   hormone treatment, the E2-only row is the proliferative-phase arm and the
   full-hormone row the secretory-phase arm. So **no sampled day is assignable on

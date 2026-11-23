@@ -74,7 +74,7 @@ described as, or read as implying, any of the following:
 
 Use phrasings such as "P(node = ON)", "P(stable adhesion)", and "protocol
 input state" rather than causal or clinical language. See
-`.codex/skills/adoc-result-validator/references/claim-boundaries.md` for the
+`codex/skills/adoc-result-validator/references/claim-boundaries.md` for the
 safe-language rules this figure follows.
 
 ## Figure layout and compartments
@@ -321,7 +321,7 @@ metadata and images within one environment.
   animation. It is not a calibration run, a perturbation screen, or the
   project's structural smoke, and passing this render does not itself confer
   any validation label from
-  `.codex/skills/adoc-result-validator/references/claim-boundaries.md`.
+  `codex/skills/adoc-result-validator/references/claim-boundaries.md`.
 
 ---
 

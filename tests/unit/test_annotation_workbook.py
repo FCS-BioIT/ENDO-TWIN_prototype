@@ -539,7 +539,7 @@ class ManifestRegistrationTest(unittest.TestCase):
         file in data/ is silently invisible to every gate.
         """
         declared = {row["relative_path"] for row in self.manifest}
-        allowed_unmanifested = {"data/README.md"}
+        allowed_unmanifested: set[str] = set()
         on_disk = {
             f"data/{path.name}" for path in (ROOT / "data").iterdir() if path.is_file()
         }

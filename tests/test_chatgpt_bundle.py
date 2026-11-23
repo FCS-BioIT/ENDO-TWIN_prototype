@@ -42,9 +42,9 @@ class ChatGPTBundleTest(unittest.TestCase):
             "pixi.toml": '[workspace]\nname = "synthetic"\n',
             "pixi.lock": "version: 6\n",
             ".gitignore": "output/\n",
-            "data/README.md": "# Data contract\n",
             "data/private.rds": "must not be bundled\n",
             "src/run.py": "print('model')\n",
+            "docs/source_data.md": "# Data contract\n",
             "docs/method.md": "# Method\n",
             "context/context.md": "# Context\n",
             "context/literature/README.md": "# Literature\n",
@@ -182,7 +182,7 @@ class ChatGPTBundleTest(unittest.TestCase):
             "output/smoke/phase1-run-1/tables/phenotype_probabilities.tsv",
             names,
         )
-        self.assertIn("data/README.md", names)
+        self.assertIn("docs/source_data.md", names)
         self.assertIn("docs/assets/adoc_maboss_pathway_dynamics.gif", names)
         self.assertIn("docs/assets/adoc_maboss_pathway_dynamics_preview.png", names)
         self.assertIn("docs/assets/adoc_maboss_pathway_dynamics_metadata.json", names)

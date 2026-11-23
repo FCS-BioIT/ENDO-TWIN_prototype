@@ -248,7 +248,7 @@ bench note does not override an explicit correction.
    file in `data/` in place.
 2. Add a row to `config/data_manifest.tsv` with its real `size_bytes` and
    `sha256`, then verify:
-   `python .codex/skills/adoc-data-audit/scripts/check_data_manifest.py --root . --check-hashes`
+   `python docs/codex/skills/adoc-data-audit/scripts/check_data_manifest.py --root . --check-hashes`
 3. Move the `declared_but_unavailable_artifacts` entry in
    `config/source_contract.yaml` into `source_artifacts` with its real hash.
 4. Re-verify **each** `SOFIA-COMM-*` record against the workbook. **On any

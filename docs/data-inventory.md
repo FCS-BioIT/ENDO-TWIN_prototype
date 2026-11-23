@@ -1,7 +1,7 @@
 # ADOC source data inventory
 
 Source integrity values are in `config/data_manifest.tsv`; source-handling rules
-are in `data/README.md`.
+are in [`source_data.md`](source_data.md).
 
 ## Current sources
 

@@ -92,7 +92,7 @@ v0.1.0; each version's `lineage.tsv` maps every node of its parent.
 | `tests/test_chatgpt_bundle.py`, `scripts/make_chatgpt_results_bundle.sh` | Planning ledgers read from `docs/legacy/`; removed configuration files no longer bundled | |
 | `tests/unit/test_closure_replay.py`, `test_phase1b_closure.py`, `test_phase2a_contract.py`, `test_phase2b_contract.py`, `test_post_closure_adjudications.py`, `test_c3a_kinetic_readout.py`, `test_endpoint_figure.py`, `test_v05_u6_semantics.py`, `test_observation_corrections.py`, `test_generated_date_determinism.py`, `test_test_guards.py` | Declared skip when the prototype commits they read are absent (the guard-list test adjusts its expected count accordingly) | See `docs/software_verification.md` |
 | `scripts/run_test_guards.py`, `scripts/run_test_parallel.py` | Accept exactly that declared skip reason | Any other skip still fails |
-| `.codex/agents/*.toml` | Assistant-vendor model pins removed | Tool configuration only |
+| `docs/codex/agents/*.toml` | Assistant-vendor model pins removed | Tool configuration only (the tree was `.codex/` until 2026-11-23) |
 | `docs/THIRD_PARTY_NOTICES.md` | MaBoSS and PyMaBoSS dependency section appended | |
 | Nine legacy documents under `docs/` and `context/literature/` | Names of AI assistant products removed from authorship and reviewer notes; the review-quality caveats (for example "same-model-family stand-in review, degraded") are kept | At the owner's request. Byte-exact originals are at the source commit |
 
@@ -158,6 +158,25 @@ Only commit identity changed, never content at the tip. Two consequences:
 - Clones, forks or caches taken before 2026-11-23 still hold the superseded
   commits. A force-push does not reach them.
 
+### `.codex/` moved to `docs/codex/`, 2026-11-23
+
+The owner asked for the smallest possible repository root and accepted the
+consequence. `.codex/` is a tool-convention directory: Codex-style tooling
+discovers agents and skills by looking for it **at the repository root**, so
+after this move the three repository-local skills (`adoc-data-audit`,
+`adoc-result-validator`, `maboss-digital-twin`) and the four agent definitions
+are no longer auto-discovered. The owner's global `~/.codex/skills` install is
+untouched, and the two validators that pixi executes keep working because the
+tasks call them by explicit path.
+
+Reverting is one `git mv docs/codex .codex` plus the reference updates in
+`pixi.toml`, `AGENTS.md`, `src/scripts/make_chatgpt_results_bundle.sh`,
+`tests/test_project_validators.py` and `tests/unit/test_manifests.py`.
+
+Mentions under `docs/legacy/` still say `.codex/`; they record the layout as it
+was. `docs/external-skills.md` and `context/references/README.md` refer to
+`~/.codex/` in the owner's home directory, not to this tree, and are unchanged.
+
 ## Licences, data and redistribution
 
 - **This repository is public**, at
@@ -191,7 +210,9 @@ Only commit identity changed, never content at the tip. Two consequences:
   workbook and three published PDFs (Zaragozano et al. 2026, Science Advances;
   Montagud et al. 2022; Montagud 2026). None of it is ours to redistribute and
   `LICENSE` does not cover it, so **`data/` has been untracked since
-  2026-11-23** (`.gitignore`); only `data/README.md` stays tracked. The files
+  2026-11-23** (`.gitignore`), including its README, whose text moved to
+  `docs/source_data.md` so that `data/` does not appear in the repository
+  listing at all. The files
   remain the immutable source layer on the machines that hold them and are
   still pinned by `config/data_manifest.tsv`; a clone obtains them out of band.
 - Those files were tracked between the 2026-11-22 migration and 2026-11-23 and

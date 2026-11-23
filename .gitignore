@@ -26,10 +26,11 @@ chatgpt_results_with_figures.tar.gz
 #
 # This repository has a PUBLIC GitHub remote, and data/ holds material that is
 # not ours to redistribute: three publisher PDFs, the Zaragozano manuscript and
-# supplementary .docx files, and the secreted-protein workbook. The MIT licence
-# in LICENSE covers this repository's own code and documentation, never these
-# files. Everything under data/ is therefore untracked, extending the rule that
-# already applied to the RDS and the annotation workbook below.
+# supplementary .docx files, and the secreted-protein workbook. The licence
+# in LICENSE is an evaluation licence covering this repository's own code and
+# documentation, never these files. Everything under data/ is therefore
+# untracked, including its README, whose text now lives at docs/source_data.md
+# so that data/ does not appear in the repository listing at all.
 #
 # What does NOT change: data/ stays the immutable source layer (AGENTS.md), the
 # files stay on the machines that have them, and config/data_manifest.tsv keeps
@@ -41,12 +42,7 @@ chatgpt_results_with_figures.tar.gz
 # that read data/ need the files restored out of band. The ENDO-TWIN mainline
 # (src/endotwin, tests/mainline, endotwin/) reads nothing under data/ and is
 # unaffected.
-# `data/*`, not `data/`: git does not descend into an excluded directory, so a
-# bare `data/` would make the negation below unreachable.
 data/*
-# The directory's own documentation carries no third-party content and tells a
-# clone what belongs here, so it stays tracked.
-!data/README.md
 
 # MaBoSS generated artifacts
 *.probtraj.csv

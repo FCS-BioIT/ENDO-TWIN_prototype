@@ -141,7 +141,7 @@ cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.cli smoke -
 description = "Run the bounded PROTOTYPE Phase 1 structural smoke via the cmaboss backend"
 
 [tasks.validate-smoke]
-cmd = "python -B .codex/skills/adoc-result-validator/scripts/validate_run_manifest.py output/smoke/phase1-structural-smoke/run_manifest.json --root ."
+cmd = "python -B docs/codex/skills/adoc-result-validator/scripts/validate_run_manifest.py output/smoke/phase1-structural-smoke/run_manifest.json --root ."
 description = "Validate the Phase 1 structural smoke manifest and referenced artifacts"
 
 [tasks.report-smoke]
@@ -325,5 +325,5 @@ cmd = "bash -lc 'set -euo pipefail; PYTHONDONTWRITEBYTECODE=1 python -B -m unitt
 description = "Run the bounded PROFILE and PROFILE_v2 local parity fixtures"
 
 [tasks.all-checks]
-cmd = "bash -lc 'set -euo pipefail; python -B .codex/skills/adoc-data-audit/scripts/check_data_manifest.py --root . --check-hashes; pixi run lint; pixi run format-check; pixi run test; pixi run compile-models; pixi run validate-models; pixi run profile-parity; pixi run smoke; pixi run validate-smoke; pixi run report-smoke'"
+cmd = "bash -lc 'set -euo pipefail; python -B docs/codex/skills/adoc-data-audit/scripts/check_data_manifest.py --root . --check-hashes; pixi run lint; pixi run format-check; pixi run test; pixi run compile-models; pixi run validate-models; pixi run profile-parity; pixi run smoke; pixi run validate-smoke; pixi run report-smoke'"
 description = "Run bounded Phase 0 and Phase 1 validation gates without triggering any full screening workflow"

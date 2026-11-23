@@ -24,7 +24,7 @@ def load_module(name: str, path: Path):
 
 run_manifest = load_module(
     "dt_adoc_run_manifest_validator",
-    ROOT / ".codex/skills/adoc-result-validator/scripts/validate_run_manifest.py",
+    ROOT / "docs/codex/skills/adoc-result-validator/scripts/validate_run_manifest.py",
 )
 
 from dt_adoc.model.provenance import describe_file

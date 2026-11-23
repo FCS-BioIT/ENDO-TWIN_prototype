@@ -23,8 +23,8 @@ Before editing:
 
 1. Read, in this order:
    - `AGENTS.md`
-   - `.codex/harness/data-lineage-contract.md`
-   - `.codex/harness/scientific-review-checklist.md`
+   - `codex/harness/data-lineage-contract.md`
+   - `codex/harness/scientific-review-checklist.md`
    - `context/project-context.md`
    - `docs/roadmap.md`
    - `docs/digital-twin-architecture.md`
@@ -413,7 +413,7 @@ Do not optimize for exact reproduction of 0, 47%, or 12.5%. Do not assign physic
 
 ## Run manifests and outputs
 
-Conform to `.codex/skills/adoc-result-validator/references/run-manifest-contract.md`.
+Conform to `codex/skills/adoc-result-validator/references/run-manifest-contract.md`.
 
 Every smoke or full run must create a repository-relative `run_manifest.json` recording:
 

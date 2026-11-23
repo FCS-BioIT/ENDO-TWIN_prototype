@@ -120,7 +120,7 @@ def validate_archive(archive: Path) -> Report:
                 relative = PurePosixPath(*member_path.parts[1:])
                 if forbidden_path(relative):
                     report.errors.append(f"forbidden file in archive: {relative}")
-                if relative.parts and relative.parts[0] == "data" and str(relative) != "data/README.md":
+                if relative.parts and relative.parts[0] == "data":
                     report.errors.append(f"source data must not be bundled: {relative}")
                 regular_paths.add(str(relative))
         if report.errors:

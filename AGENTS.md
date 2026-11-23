@@ -48,8 +48,8 @@ prospectively. It was derived from an earlier, private prototype (`docs/ORIGIN.m
 - The donor is the independent biological unit. Chips, cells, fields, wells,
   time points and technical replicates are not independent donors.
 - Protect row-level donor metadata; use pseudonymised codes only.
-- Follow `.codex/harness/data-lineage-contract.md` for canonical runs and
-  `.codex/harness/scientific-review-checklist.md` for scientific review.
+- Follow `docs/codex/harness/data-lineage-contract.md` for canonical runs and
+  `docs/codex/harness/scientific-review-checklist.md` for scientific review.
 
 ## Model and claim boundaries
 

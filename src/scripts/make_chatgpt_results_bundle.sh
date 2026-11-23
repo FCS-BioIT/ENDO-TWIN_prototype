@@ -182,7 +182,6 @@ copy_file docs/THIRD_PARTY_NOTICES.md "third-party-provenance"
 copy_file pixi.toml "runtime-and-task-definition"
 copy_file pixi.lock "runtime-lock"
 copy_file .gitignore "generated-file-policy"
-copy_file data/README.md "source-data-documentation"
 
 for root in src scripts models tests; do
     copy_tree "$root" "repo-source"
@@ -230,9 +229,9 @@ fi
 
 if [ "$include_harness" -eq 1 ]; then
     copy_file AGENTS.md "project-agent-policy"
-    copy_tree .codex/harness "project-scientific-contract"
-    copy_tree .codex/agents "project-agent-definition"
-    copy_tree .codex/skills "skill-guidance"
+    copy_tree docs/codex/harness "project-scientific-contract"
+    copy_tree docs/codex/agents "project-agent-definition"
+    copy_tree docs/codex/skills "skill-guidance"
 fi
 
 results_present=0
@@ -393,12 +392,12 @@ results	output/results/	$([ "$results_present" -eq 1 ] && printf 'included_if_el
 smoke_run	${latest_smoke_run:-output/smoke/}	$([ -n "$latest_smoke_run" ] && printf 'included' || printf 'absent')	Exactly one smoke run is bundled. The source_path column records which one, so a reviewer never has to infer it. Selected by $([ -n "$smoke_run_override" ] && printf '--smoke-run' || printf 'newest run_manifest.json mtime').
 protein_readouts	data/proteinas secretadas ADOC.xlsx	$([ "$protein_readout_present" -eq 1 ] && printf 'included_with_full_tsv_exports' || printf 'absent')	The small source workbook is explicitly allowlisted and exported without value transformation.
 visualization	docs/assets/adoc_maboss_pathway_dynamics.*	$viz_state	Pathway-dynamics animation, static preview, run metadata, and one node-probability-trajectory sample; each is reported individually in the manifest.
-harness	AGENTS.md and .codex/	$([ "$include_harness" -eq 1 ] && printf 'included' || printf 'omitted_by_flag')	Agent definitions, skills, harness docs, and the harness validator.
+harness	AGENTS.md and docs/codex/	$([ "$include_harness" -eq 1 ] && printf 'included' || printf 'omitted_by_flag')	Agent definitions, skills, harness docs, and the harness validator.
 visualization_runs	output/visualization/	$([ -d output/visualization ] && printf 'included_without_full_resolution_gif' || printf 'absent')	Animation metadata and the raw node-probability trajectories it was drawn from.
 git_provenance	.git	$([ "$git_provenance_present" -eq 1 ] && printf 'included' || printf 'absent')	Commit, branch, recent log, and whether the worktree was dirty.
 papers	data/*.pdf and data/*.docx	excluded	Paper context is summarized in context/; full papers are not bundled.
 rds	data/*.rds	excluded	RDS objects are always excluded.
-other_source_data	data/	excluded	Other raw source data are excluded; data/README.md remains included.
+other_source_data	data/	excluded	Raw source data are excluded; its documentation is docs/source_data.md, carried with the docs tree.
 EOF
 record_manifest_row "SECTION_STATUS.tsv" "bundle-section-status"
 

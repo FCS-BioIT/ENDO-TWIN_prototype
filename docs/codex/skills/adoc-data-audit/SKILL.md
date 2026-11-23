@@ -7,7 +7,7 @@ description: Audit ADOC source data and preprocessing for scientifically valid M
 
 Inspect source evidence without altering it, then create an explicit,
 reconstructable data contract before patient modeling. Read `AGENTS.md` and
-`.codex/harness/data-lineage-contract.md`.
+`docs/codex/harness/data-lineage-contract.md`.
 
 ## Workflow
 

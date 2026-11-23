@@ -22,11 +22,11 @@ def load_module(name: str, path: Path):
 
 data_manifest = load_module(
     "dt_adoc_data_manifest",
-    ROOT / ".codex/skills/adoc-data-audit/scripts/check_data_manifest.py",
+    ROOT / "docs/codex/skills/adoc-data-audit/scripts/check_data_manifest.py",
 )
 run_manifest = load_module(
     "dt_adoc_run_manifest",
-    ROOT / ".codex/skills/adoc-result-validator/scripts/validate_run_manifest.py",
+    ROOT / "docs/codex/skills/adoc-result-validator/scripts/validate_run_manifest.py",
 )
 
 

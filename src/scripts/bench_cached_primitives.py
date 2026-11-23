@@ -1,6 +1,6 @@
 """Focused benchmarks of the two cached primitives (docs/verification/cache_design.md).
 
-Usage: python -B scripts/bench_cached_primitives.py <tree> <label>
+Usage: python -B src/scripts/bench_cached_primitives.py <tree> <label>
 
 <tree> is any directory holding ``src/`` and ``models/``: this checkout for
 "after", or an extract of the pre-cache commit for "before", e.g.

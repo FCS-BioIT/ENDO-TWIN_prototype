@@ -6,7 +6,7 @@ regenerated without remembering the module path. Every option is forwarded
 unchanged; see ``docs/visualization.md`` for what the figure does and does not
 claim.
 
-    python -B scripts/render_maboss_dynamics.py --model adoc-literature-v0.2.0
+    python -B src/scripts/render_maboss_dynamics.py --model adoc-literature-v0.2.0
 """
 
 from __future__ import annotations

@@ -19,26 +19,26 @@ class ChatGPTBundleTest(unittest.TestCase):
     def setUp(self) -> None:
         self.tmp = tempfile.TemporaryDirectory()
         self.root = Path(self.tmp.name) / "repo"
-        (self.root / "scripts").mkdir(parents=True)
+        (self.root / "src" / "scripts").mkdir(parents=True)
         (self.root / "tests").mkdir()
         shutil.copy(
-            ROOT / "scripts/make_chatgpt_results_bundle.sh",
-            self.root / "scripts/make_chatgpt_results_bundle.sh",
+            ROOT / "src/scripts/make_chatgpt_results_bundle.sh",
+            self.root / "src/scripts/make_chatgpt_results_bundle.sh",
         )
         shutil.copy(
-            ROOT / "scripts/validate_chatgpt_bundle.py",
-            self.root / "scripts/validate_chatgpt_bundle.py",
+            ROOT / "src/scripts/validate_chatgpt_bundle.py",
+            self.root / "src/scripts/validate_chatgpt_bundle.py",
         )
         shutil.copy(
-            ROOT / "scripts/export_protein_readout_tables.py",
-            self.root / "scripts/export_protein_readout_tables.py",
+            ROOT / "src/scripts/export_protein_readout_tables.py",
+            self.root / "src/scripts/export_protein_readout_tables.py",
         )
         for path, content in {
             "README.md": "# Synthetic DT_ADOC\n",
             "docs/legacy/IMPLEMENTATION_PLAN.md": "# Plan\n",
             "docs/legacy/IMPLEMENTATION_STATUS.md": "# Status\n",
             "docs/legacy/REQUIREMENTS_COVERAGE.tsv": "requirement_id\tstatus\nREQ-001\tpassed\n",
-            "THIRD_PARTY_NOTICES.md": "# Notices\n",
+            "docs/THIRD_PARTY_NOTICES.md": "# Notices\n",
             "pixi.toml": '[workspace]\nname = "synthetic"\n',
             "pixi.lock": "version: 6\n",
             ".gitignore": "output/\n",
@@ -110,7 +110,7 @@ class ChatGPTBundleTest(unittest.TestCase):
         result = subprocess.run(
             [
                 "bash",
-                str(self.root / "scripts/make_chatgpt_results_bundle.sh"),
+                str(self.root / "src/scripts/make_chatgpt_results_bundle.sh"),
                 "--output",
                 str(bundle),
             ],
@@ -166,7 +166,7 @@ class ChatGPTBundleTest(unittest.TestCase):
         self.assertIn("docs/legacy/IMPLEMENTATION_PLAN.md", names)
         self.assertIn("docs/legacy/IMPLEMENTATION_STATUS.md", names)
         self.assertIn("docs/legacy/REQUIREMENTS_COVERAGE.tsv", names)
-        self.assertIn("THIRD_PARTY_NOTICES.md", names)
+        self.assertIn("docs/THIRD_PARTY_NOTICES.md", names)
         self.assertIn("pixi.lock", names)
         self.assertIn("docs/method.md", names)
         self.assertIn("context/context.md", names)
@@ -334,6 +334,7 @@ class ChatGPTBundleTest(unittest.TestCase):
         """
         script = (
             Path(__file__).resolve().parents[1]
+            / "src"
             / "scripts"
             / "make_chatgpt_results_bundle.sh"
         ).read_text(encoding="utf-8")
@@ -354,7 +355,7 @@ class ChatGPTBundleTest(unittest.TestCase):
         result = subprocess.run(
             [
                 "bash",
-                str(self.root / "scripts/make_chatgpt_results_bundle.sh"),
+                str(self.root / "src/scripts/make_chatgpt_results_bundle.sh"),
                 "--output",
                 str(bundle),
             ],
@@ -377,7 +378,7 @@ class ChatGPTBundleTest(unittest.TestCase):
             [
                 sys.executable,
                 "-B",
-                str(self.root / "scripts/validate_chatgpt_bundle.py"),
+                str(self.root / "src/scripts/validate_chatgpt_bundle.py"),
                 str(archive_path),
             ],
             text=True,

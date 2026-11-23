@@ -54,7 +54,7 @@ No cubre:
 
 - Las dependencias instaladas (MaBoSS, PyMaBoSS y las demás declaradas en
   `pixi.toml`), que se rigen por sus propias licencias; véase
-  `THIRD_PARTY_NOTICES.md`.
+  `docs/THIRD_PARTY_NOTICES.md`.
 - El contenido de `data/` (artículos de editorial, manuscritos y el libro de
   cálculo de proteínas secretadas), que no es titularidad de la Fundación y que
   no se distribuye con este repositorio: `data/` está fuera del control de
@@ -64,7 +64,7 @@ No cubre:
 This licence covers this repository's own code and documentation. It does not
 cover the installed dependencies (MaBoSS, PyMaBoSS and the others declared in
 `pixi.toml`), which are governed by their own licences — see
-`THIRD_PARTY_NOTICES.md` — nor the contents of `data/` (publisher articles,
+`docs/THIRD_PARTY_NOTICES.md` — nor the contents of `data/` (publisher articles,
 manuscripts and the secreted-protein workbook), which the Foundation does not
 own and which is not distributed with this repository: `data/` has been
 untracked since 2026-11-23. Copies in the Git history before that date remain

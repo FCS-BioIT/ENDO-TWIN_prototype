@@ -1,6 +1,6 @@
 """Run records: a committed record must cover exactly the code under review.
 
-`scripts/run_record.py` is exercised on throwaway git repositories, never on
+`src/scripts/run_record.py` is exercised on throwaway git repositories, never on
 this checkout: the parser on fixed unittest output, the writer's refusal of a
 dirty tree, and the checker on each way a record can fail to cover HEAD.
 """
@@ -22,7 +22,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 _spec = importlib.util.spec_from_file_location(
-    "run_record", ROOT / "scripts" / "run_record.py"
+    "run_record", ROOT / "src" / "scripts" / "run_record.py"
 )
 R = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(R)

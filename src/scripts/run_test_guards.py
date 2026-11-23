@@ -1,4 +1,4 @@
-"""Run the integrity and provenance guards listed in `scripts/test_guards.txt`.
+"""Run the integrity and provenance guards listed in `src/scripts/test_guards.txt`.
 
 This is the fast check behind `pixi run test-guards`. It is an integrity and
 provenance guard, not a substitute for `pixi run test`: the complete suite is
@@ -31,7 +31,7 @@ manager is a separate matter and may need somewhere writable to install:
   (`detached-environments` in `$PIXI_HOME/config.toml`, as shown in
   docs/verification/README.md). Otherwise, run this file directly with an
   existing, pinned interpreter:
-  `PYTHONDONTWRITEBYTECODE=1 <pixi env>/bin/python -B scripts/run_test_guards.py`.
+  `PYTHONDONTWRITEBYTECODE=1 <pixi env>/bin/python -B src/scripts/run_test_guards.py`.
 
 The exact number of tests and subtests executed is printed on the last line.
 """
@@ -49,8 +49,8 @@ from pathlib import Path
 HISTORY_SKIP_PREFIX = "requires the prototype's source Git history"
 #: Guard classes whose module skipped at import for that reason.
 HISTORY_SKIPPED_GUARDS: list[str] = []
-ROOT = Path(__file__).resolve().parents[1]
-GUARDS = ROOT / "scripts" / "test_guards.txt"
+ROOT = Path(__file__).resolve().parents[2]
+GUARDS = ROOT / "src" / "scripts" / "test_guards.txt"
 
 
 def _entries(path: Path) -> list[str]:

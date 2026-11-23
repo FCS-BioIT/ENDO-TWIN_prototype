@@ -93,7 +93,7 @@ v0.1.0; each version's `lineage.tsv` maps every node of its parent.
 | `tests/unit/test_closure_replay.py`, `test_phase1b_closure.py`, `test_phase2a_contract.py`, `test_phase2b_contract.py`, `test_post_closure_adjudications.py`, `test_c3a_kinetic_readout.py`, `test_endpoint_figure.py`, `test_v05_u6_semantics.py`, `test_observation_corrections.py`, `test_generated_date_determinism.py`, `test_test_guards.py` | Declared skip when the prototype commits they read are absent (the guard-list test adjusts its expected count accordingly) | See `docs/software_verification.md` |
 | `scripts/run_test_guards.py`, `scripts/run_test_parallel.py` | Accept exactly that declared skip reason | Any other skip still fails |
 | `.codex/agents/*.toml` | Assistant-vendor model pins removed | Tool configuration only |
-| `THIRD_PARTY_NOTICES.md` | MaBoSS and PyMaBoSS dependency section appended | |
+| `docs/THIRD_PARTY_NOTICES.md` | MaBoSS and PyMaBoSS dependency section appended | |
 | Nine legacy documents under `docs/` and `context/literature/` | Names of AI assistant products removed from authorship and reviewer notes; the review-quality caveats (for example "same-model-family stand-in review, degraded") are kept | At the owner's request. Byte-exact originals are at the source commit |
 
 One frozen document, `docs/stage3_experiment_selection.md`, was **not**
@@ -183,7 +183,7 @@ Only commit identity changed, never content at the tip. Two consequences:
   licence does not undo forks already made, and GitHub's own grant is not
   displaced by it. The alternative — a private repository with the reviewers
   invited — would match the licence's wording more closely and was not taken.
-- `THIRD_PARTY_NOTICES.md` (PROFILE and PROFILE_v2, BSD 3-Clause; a reference
+- `docs/THIRD_PARTY_NOTICES.md` (PROFILE and PROFILE_v2, BSD 3-Clause; a reference
   implementation inspected without copying) is preserved, with a section added
   for MaBoSS (BSD 3-Clause) and PyMaBoSS, which are installed dependencies
   (`pixi.toml`), not vendored.

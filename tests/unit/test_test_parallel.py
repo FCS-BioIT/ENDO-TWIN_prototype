@@ -19,7 +19,7 @@ from pathlib import Path
 from unittest import mock
 
 ROOT = Path(__file__).resolve().parents[2]
-SCRIPT = ROOT / "scripts" / "run_test_parallel.py"
+SCRIPT = ROOT / "src" / "scripts" / "run_test_parallel.py"
 
 _spec = importlib.util.spec_from_file_location("run_test_parallel", SCRIPT)
 P = importlib.util.module_from_spec(_spec)
@@ -75,7 +75,7 @@ class Partition(unittest.TestCase):
 
 class ModuleSearchPath(unittest.TestCase):
     def test_the_worker_path_is_the_one_python_dash_m_gives(self) -> None:
-        script_path = [str(ROOT / "scripts"), "/env/lib/python3.12", "/env/site"]
+        script_path = [str(ROOT / "src" / "scripts"), "/env/lib/python3.12", "/env/site"]
         self.assertEqual(
             P.unittest_module_path(script_path),
             [str(ROOT), "/env/lib/python3.12", "/env/site"],

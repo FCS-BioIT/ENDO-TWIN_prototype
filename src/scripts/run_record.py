@@ -197,7 +197,7 @@ def write_record(root: Path, suite: str) -> int:
             "path": (RUNS / log_name).as_posix(),
             "sha256": sha256_bytes(log_bytes),
         },
-        "attestation": "run on the author's machine by scripts/run_record.py; not an independent CI result",
+        "attestation": "run on the author's machine by src/scripts/run_record.py; not an independent CI result",
     }
     (out_dir / f"{short}.json").write_text(
         json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8"

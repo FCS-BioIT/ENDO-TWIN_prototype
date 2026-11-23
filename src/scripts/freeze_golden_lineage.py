@@ -14,7 +14,7 @@ The script refuses to run while tracked files under src/, models/ or config/
 differ from HEAD, because a reference frozen from uncommitted code could not be
 reconstructed.
 
-    PYTHONPATH=src python -B scripts/freeze_golden_lineage.py
+    PYTHONPATH=src python -B src/scripts/freeze_golden_lineage.py
 """
 
 from __future__ import annotations

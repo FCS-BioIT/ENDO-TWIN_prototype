@@ -52,7 +52,7 @@ import time
 import unittest
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 TESTS = ROOT / "tests"
 WORKER_A_MODULES = frozenset({"unit.test_phase2b_contract"})
 WORKERS = ("A", "B")
@@ -74,7 +74,7 @@ ENVIRONMENT_SKIPS = {
 }
 
 _spec = importlib.util.spec_from_file_location(
-    "run_test_guards", ROOT / "scripts" / "run_test_guards.py"
+    "run_test_guards", ROOT / "src" / "scripts" / "run_test_guards.py"
 )
 GUARDS = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(GUARDS)

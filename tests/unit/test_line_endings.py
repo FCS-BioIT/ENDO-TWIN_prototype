@@ -112,7 +112,7 @@ FROZEN_EVIDENCE_CONVENTION = {
 def git_available() -> bool:
     """True only when ROOT is itself the top of a git work tree.
 
-    `scripts/make_chatgpt_results_bundle.sh` ships `tests/` outside a work tree,
+    `src/scripts/make_chatgpt_results_bundle.sh` ships `tests/` outside a work tree,
     and a suite that errors there reports a tooling gap as a repository defect.
     But `--git-dir` succeeds from *any* enclosing repository, so a bundle
     unpacked inside an unrelated checkout would have made these assertions read

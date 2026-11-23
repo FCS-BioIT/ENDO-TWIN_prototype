@@ -2,7 +2,8 @@
 set -euo pipefail
 
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
-repo_root="$(cd "$script_dir/.." && pwd -P)"
+# src/scripts/ -> repo root is two levels up (moved from scripts/ on 2026-11-23).
+repo_root="$(cd "$script_dir/../.." && pwd -P)"
 cd "$repo_root"
 
 # The harness (AGENTS.md, agents, skills, harness docs, validator) is part of
@@ -15,7 +16,7 @@ max_bundle_bytes=$((60 * 1024 * 1024))
 
 usage() {
     cat <<'EOF'
-Usage: scripts/make_chatgpt_results_bundle.sh [options]
+Usage: src/scripts/make_chatgpt_results_bundle.sh [options]
 
 Create a compact, validated archive for sharing DT_ADOC source, documentation,
 scientific context, models, and available result files with ChatGPT.
@@ -177,7 +178,7 @@ copy_tree() {
 
 copy_file README.md "project-overview"
 # DT-ADOC planning ledgers now live in docs/legacy/ and travel with the docs tree.
-copy_file THIRD_PARTY_NOTICES.md "third-party-provenance"
+copy_file docs/THIRD_PARTY_NOTICES.md "third-party-provenance"
 copy_file pixi.toml "runtime-and-task-definition"
 copy_file pixi.lock "runtime-lock"
 copy_file .gitignore "generated-file-policy"
@@ -316,7 +317,7 @@ if [ -f "$protein_workbook" ]; then
     record_manifest_row \
         "$protein_bundle_dir/proteinas secretadas ADOC.xlsx" \
         "protein-readout-source-workbook"
-    PYTHONDONTWRITEBYTECODE=1 python -B scripts/export_protein_readout_tables.py \
+    PYTHONDONTWRITEBYTECODE=1 python -B src/scripts/export_protein_readout_tables.py \
         --input "$protein_workbook" \
         --output-dir "$bundle_root/$protein_bundle_dir"
     while IFS= read -r -d '' generated; do
@@ -445,6 +446,6 @@ if [ "$size_bytes" -gt "$max_bundle_bytes" ]; then
     exit 1
 fi
 
-PYTHONDONTWRITEBYTECODE=1 python -B scripts/validate_chatgpt_bundle.py "$bundle"
+PYTHONDONTWRITEBYTECODE=1 python -B src/scripts/validate_chatgpt_bundle.py "$bundle"
 printf 'Created %s (%.2f MiB)\n' "$bundle" \
     "$(awk -v bytes="$size_bytes" 'BEGIN {printf "%.2f", bytes / 1024 / 1024}')"

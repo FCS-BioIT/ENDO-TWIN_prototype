@@ -16,7 +16,7 @@ repositories are methodological references, not runtime dependencies.
   `c3e8c39dacb0cad1ff21a79aa871667356b6bf42`
 
 See [`context/upstream/upstream_versions.yaml`](../context/upstream/upstream_versions.yaml)
-and [`THIRD_PARTY_NOTICES.md`](../THIRD_PARTY_NOTICES.md).
+and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
 ## Execution Paths Inspected
 

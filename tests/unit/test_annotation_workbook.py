@@ -480,7 +480,7 @@ class DonorSourceCodePrivacyTest(unittest.TestCase):
         self.assertNotIn("anotaciones", listing)
 
     def test_the_annotation_workbook_is_not_in_the_external_bundle(self) -> None:
-        script = (ROOT / "scripts" / "make_chatgpt_results_bundle.sh").read_text(
+        script = (ROOT / "src" / "scripts" / "make_chatgpt_results_bundle.sh").read_text(
             encoding="utf-8"
         )
         self.assertNotIn("anotaciones", script)

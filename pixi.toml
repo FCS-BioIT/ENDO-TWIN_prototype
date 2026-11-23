@@ -89,7 +89,7 @@ description = "Run only the ENDO-TWIN mainline tests (tests/mainline); the compl
 # ---------------------------------------------------------------------------
 
 [tasks.chatgpt-results-bundle]
-cmd = "bash scripts/make_chatgpt_results_bundle.sh"
+cmd = "bash src/scripts/make_chatgpt_results_bundle.sh"
 description = "Create and validate a compact ChatGPT archive containing source, documentation, context, models, and available results"
 
 [tasks.chatgpt-results-bundle-test]
@@ -101,11 +101,11 @@ cmd = "PYTHONDONTWRITEBYTECODE=1 python -B -m unittest discover -s tests -v"
 description = "Run the complete suite (ENDO-TWIN mainline and prototype foundation): every directory under tests/, integration and biological constraints included. This is the required pre-merge check; `discover -s tests/unit` is not a substitute"
 
 [tasks.test-guards]
-cmd = "PYTHONDONTWRITEBYTECODE=1 python -B scripts/run_test_guards.py"
-description = "Run the fast integrity and provenance guards listed in scripts/test_guards.txt (implementation digests, line endings, frozen evidence, closed phases, the PCSK5 correction, committed-table regeneration). Fails on any failure, failing subtest or skip, or any change to the checkout, and prints the exact number of tests run. Not a substitute for `pixi run test`"
+cmd = "PYTHONDONTWRITEBYTECODE=1 python -B src/scripts/run_test_guards.py"
+description = "Run the fast integrity and provenance guards listed in src/scripts/test_guards.txt (implementation digests, line endings, frozen evidence, closed phases, the PCSK5 correction, committed-table regeneration). Fails on any failure, failing subtest or skip, or any change to the checkout, and prints the exact number of tests run. Not a substitute for `pixi run test`"
 
 [tasks.test-parallel]
-cmd = "PYTHONDONTWRITEBYTECODE=1 python -B scripts/run_test_parallel.py"
+cmd = "PYTHONDONTWRITEBYTECODE=1 python -B src/scripts/run_test_parallel.py"
 description = "Optional: run exactly the `pixi run test` suite as two workers (test_phase2b_contract alone, then everything else), each started through `pixi run` in a 40G memory-capped scope. Fails unless every discovered test ran once, passed and the checkout is unchanged. Not a substitute for `pixi run test`, the required serial pre-merge check"
 
 [tasks.perturb-cascade]
@@ -113,11 +113,11 @@ cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m dt_adoc.cli perturb
 description = "Per-trajectory response order after a declared perturbation, with a matched control (pass --spec or --start/--set)"
 
 [tasks.run-record]
-cmd = "PYTHONDONTWRITEBYTECODE=1 python -B scripts/run_record.py write"
+cmd = "PYTHONDONTWRITEBYTECODE=1 python -B src/scripts/run_record.py write"
 description = "Run lint, format-check, test-guards and the complete serial test suite on the committed HEAD of a clean tree, and write docs/verification/runs/<commit>.json with the gzipped test log; commit both with the PR (pass --suite parallel to record test-parallel instead)"
 
 [tasks.check-run-record]
-cmd = "PYTHONDONTWRITEBYTECODE=1 python -B scripts/run_record.py check"
+cmd = "PYTHONDONTWRITEBYTECODE=1 python -B src/scripts/run_record.py check"
 description = "Pass only if a committed run record covers the code at HEAD: tested at HEAD or an ancestor with only docs/verification/runs/ changed since, every check exited 0, and the committed log matches its SHA-256"
 
 [tasks.lint]

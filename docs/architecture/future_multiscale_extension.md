@@ -60,7 +60,7 @@ covered by `tests/mainline/test_interface.py`. It is a seam, not a simulator.
 
 - No spatial, mechanical or population-level prediction is made by ENDO-TWIN.
 - The prototype once inspected a separate agent-based project for figure
-  rendering only (`THIRD_PARTY_NOTICES.md`); none of its spatial biology,
+  rendering only (`../THIRD_PARTY_NOTICES.md`); none of its spatial biology,
   PhysiBoSS coupling or parameters is used here.
 - Per-cell execution with `RegulatoryUnit` is a software capability, not a
   validated multiscale model.

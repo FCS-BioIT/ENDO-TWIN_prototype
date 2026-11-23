@@ -244,7 +244,7 @@ Assembling the figure required three mappings that are not in the model:
 
 `git@github.com:FCS-BioIT/cb-implant_lock_DT_Ia.git` was read as an
 implementation reference only and is recorded as such in
-[`THIRD_PARTY_NOTICES.md`](../THIRD_PARTY_NOTICES.md). It is **not** a
+[`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md). It is **not** a
 biological authority for DT_ADOC, and none of its Boolean rules, topology or
 parameters were carried over.
 

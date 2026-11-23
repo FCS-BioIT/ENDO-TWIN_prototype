@@ -20,7 +20,7 @@ Expected values come only from the frozen file. Nothing here recomputes them
 from the current implementation. If the inputs or the environment differ from
 the ones recorded, the preconditions below fail and say so: the comparison is
 only meaningful against the inputs it was frozen from. An intended change to
-the simulation means re-freezing with `scripts/freeze_golden_lineage.py`, as a
+the simulation means re-freezing with `src/scripts/freeze_golden_lineage.py`, as a
 reviewed change in its own right.
 """
 
@@ -89,7 +89,7 @@ class TheReferenceIsComparable(unittest.TestCase):
             changed,
             [],
             "model inputs changed since the golden lineage was frozen; if the "
-            "change is intended, re-freeze with scripts/freeze_golden_lineage.py "
+            "change is intended, re-freeze with src/scripts/freeze_golden_lineage.py "
             "as a reviewed change",
         )
 

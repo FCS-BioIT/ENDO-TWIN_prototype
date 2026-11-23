@@ -22,7 +22,7 @@ from pathlib import Path
 from unittest import mock
 
 ROOT = Path(__file__).resolve().parents[2]
-SCRIPT = ROOT / "scripts" / "run_test_guards.py"
+SCRIPT = ROOT / "src" / "scripts" / "run_test_guards.py"
 
 _spec = importlib.util.spec_from_file_location("run_test_guards", SCRIPT)
 G = importlib.util.module_from_spec(_spec)

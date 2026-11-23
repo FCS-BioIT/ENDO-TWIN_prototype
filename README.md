@@ -363,7 +363,7 @@ Full list with DOIs in
 - Taylor RN, et al. Interleukin-1β induces and accelerates human endometrial stromal cell senescence and impairs decidualization via the JNK pathway. *Cell Death Discov* 2024;10:288. doi:10.1038/s41420-024-02048-6
 - Stoll G, et al. MaBoSS 2.0: an environment for stochastic Boolean modeling. *Bioinformatics* 2017;33:2226–2228. doi:10.1093/bioinformatics/btx123
 
-MaBoSS and PyMaBoSS are installed dependencies (`THIRD_PARTY_NOTICES.md`).
+MaBoSS and PyMaBoSS are installed dependencies (`docs/THIRD_PARTY_NOTICES.md`).
 Developed at the Carlos Simón Foundation for Research in Women's Health.
 
 **This repository is public** ([github.com/FCS-BioIT/ENDO-TWIN_prototype](https://github.com/FCS-BioIT/ENDO-TWIN_prototype);
@@ -381,7 +381,7 @@ rights holder's prior written permission. The Spanish text of `LICENSE` is the
 authoritative one.
 
 The licence covers this repository's own code and documentation. It does not
-cover the installed dependencies (`THIRD_PARTY_NOTICES.md`), nor `data/`, which
+cover the installed dependencies (`docs/THIRD_PARTY_NOTICES.md`), nor `data/`, which
 holds publisher PDFs, the Zaragozano manuscript files and the secreted-protein
 workbook that are not the Foundation's to license. Since 2026-11-23 `data/` is
 untracked (`.gitignore`): the files stay the immutable source layer on the

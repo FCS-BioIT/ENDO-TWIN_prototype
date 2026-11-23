@@ -1,6 +1,6 @@
 """Per-module cost from an audit suite profile, tests and class fixtures together.
 
-Usage: python scripts/summarize_profile_modules.py <profile.json[.gz]> <module>...
+Usage: python src/scripts/summarize_profile_modules.py <profile.json[.gz]> <module>...
 
 A profile (e.g. docs/verification/benchmark_raw/baseline_3474s_audit_9b9bf5b_
 profile.json.gz) records each test's ``wall`` under ``tests`` and each

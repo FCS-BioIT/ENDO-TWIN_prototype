@@ -134,20 +134,76 @@ would rewrite historical execution records.
 - Recorded `git_commit` fields in the prototype result metadata name source commits.
   Content digests (SHA-256) still bind those results to the files present here.
 
+## This repository's own history was rewritten once, on 2026-11-23
+
+The commit that gave the earlier prototype a generic name was applied
+retroactively, which rewrote every commit after `387b50a Initial commit`. The
+rewrite was published on 2026-11-23 with `git push --force-with-lease`, so the
+public history before that date — which still carried the prototype's own name
+in `pixi.toml` and task descriptions from the second commit on — was replaced.
+
+| | |
+|---|---|
+| Commits rewritten | 202 of 203; only `387b50a` is shared with the superseded history |
+| End state | unchanged: both tips had tree `10eedbb46b0ffdb5bc809ee96d32a32a1b40503b` |
+| Superseded tip | `55623df` (the rewrite's equivalent is `f7ba0f9`, same subject, author, dates and tree) |
+
+Only commit identity changed, never content at the tip. Two consequences:
+
+- `endotwin/results/endotwin-v0.2.0/run_manifest.json` records
+  `repository_state_at_generation.commit = 7751fda…`, a commit of the superseded
+  history. It was left as committed: the `inputs_sha256` digests, not the commit
+  id, are what bind those results, and `pixi run endotwin-all` reproduces every
+  one of them byte for byte.
+- Clones, forks or caches taken before 2026-11-23 still hold the superseded
+  commits. A force-push does not reach them.
+
 ## Licences, data and redistribution
 
-- The source repository had **no licence file**, and none has been added.
-  Choosing a licence is the owners' decision.
+- **This repository is public**, at
+  `github.com/FCS-BioIT/ENDO-TWIN_prototype`. The remote's name is historical:
+  this repository is the ENDO-TWIN mainline, and the "prototype" named
+  throughout this document is the separate private repository above, which has
+  never been public.
+- The source repository had **no licence file**. This repository carries one
+  from 2026-11-23: `LICENSE`, an **evaluation licence**, not an open-source
+  one. Copyright © 2026 Fundación Carlos Simón, all rights reserved, with a
+  narrow grant to reviewers appointed by the Agencia Estatal de Investigación
+  for the 2026 *Proyectos de Generación de Conocimiento* call — consultation,
+  and the copies and test runs that evaluation needs. Commercial use, use for
+  other purposes, modification (including for one's own use), incorporation
+  into other products and redistribution are all excluded, and the licence
+  covers this repository's own code and documentation only. The Spanish text
+  is authoritative.
+- Being publicly readable on GitHub does not widen that grant. The repository
+  is public **by decision**, so that a reviewer can open the link given in the
+  proposal without access being managed for each one. The accepted consequence
+  is that GitHub's Terms of Service let any user view and fork a public
+  repository: a fork is a redistribution the licence does not permit, the
+  licence does not undo forks already made, and GitHub's own grant is not
+  displaced by it. The alternative — a private repository with the reviewers
+  invited — would match the licence's wording more closely and was not taken.
 - `THIRD_PARTY_NOTICES.md` (PROFILE and PROFILE_v2, BSD 3-Clause; a reference
   implementation inspected without copying) is preserved, with a section added
   for MaBoSS (BSD 3-Clause) and PyMaBoSS, which are installed dependencies
   (`pixi.toml`), not vendored.
 - `data/` holds the in-house ADOC manuscript files, the secreted-protein
   workbook and three published PDFs (Zaragozano et al. 2026, Science Advances;
-  Montagud et al. 2022; Montagud 2026). The repository is private. Before any
-  public release, check the redistribution terms of the three PDFs and the
-  status of the unpublished manuscript files; `data/` is otherwise immutable
-  source evidence and is pinned by `config/data_manifest.tsv`.
+  Montagud et al. 2022; Montagud 2026). None of it is ours to redistribute and
+  `LICENSE` does not cover it, so **`data/` has been untracked since
+  2026-11-23** (`.gitignore`); only `data/README.md` stays tracked. The files
+  remain the immutable source layer on the machines that hold them and are
+  still pinned by `config/data_manifest.tsv`; a clone obtains them out of band.
+- Those files were tracked between the 2026-11-22 migration and 2026-11-23 and
+  **remain in the Git history and on the public remote**. Untracking does not
+  retract them, and forks or caches made in that window are not reachable from
+  here. Removing them from history would rewrite every commit and break the
+  SHA-256 chains in the closed-phase records; that was weighed and not done.
+- Accepted consequence, already true for the gitignored RDS and annotation
+  workbook: a fresh clone cannot pass `check_data_manifest.py --check-hashes`,
+  and the prototype tests that read `data/` need the files restored. The
+  ENDO-TWIN mainline (`src/endotwin`, `endotwin/`, `tests/mainline`) reads
+  nothing under `data/`.
 
 ## Scientific limitations inherited from the prototype
 

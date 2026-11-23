@@ -351,6 +351,27 @@ Full list with DOIs in
 - Stoll G, et al. MaBoSS 2.0: an environment for stochastic Boolean modeling. *Bioinformatics* 2017;33:2226–2228. doi:10.1093/bioinformatics/btx123
 
 MaBoSS and PyMaBoSS are installed dependencies (`THIRD_PARTY_NOTICES.md`).
-Developed at the Carlos Simón Foundation for Research in Women's Health. No
-licence has been chosen yet and the repository is private; read
-`docs/ORIGIN.md` before redistributing anything under `data/`.
+Developed at the Carlos Simón Foundation for Research in Women's Health.
+
+**This repository is public** ([github.com/FCS-BioIT/ENDO-TWIN_prototype](https://github.com/FCS-BioIT/ENDO-TWIN_prototype);
+despite the remote's name this is the ENDO-TWIN mainline, and the "prototype" of
+[docs/ORIGIN.md](docs/ORIGIN.md) is a different, private repository).
+
+**Public to read is not open source.** Copyright © 2026 Fundación Carlos Simón,
+all rights reserved. [LICENSE](LICENSE) grants reviewers appointed by the
+Agencia Estatal de Investigación the right to consult the code and to make the
+copies and run the tests needed to evaluate ENDO-TWIN in the 2026 *Proyectos de
+Generación de Conocimiento* call, and nothing further: no commercial use, no use
+for other purposes, no modification (not even for your own use), no
+incorporation into other products, no redistribution. Anything else needs the
+rights holder's prior written permission. The Spanish text of `LICENSE` is the
+authoritative one.
+
+The licence covers this repository's own code and documentation. It does not
+cover the installed dependencies (`THIRD_PARTY_NOTICES.md`), nor `data/`, which
+holds publisher PDFs, the Zaragozano manuscript files and the secreted-protein
+workbook that are not the Foundation's to license. Since 2026-11-23 `data/` is
+untracked (`.gitignore`): the files stay the immutable source layer on the
+machines that hold them, pinned by SHA-256 in `config/data_manifest.tsv`, and a
+clone obtains them out of band. Copies committed before that date remain in the
+Git history; untracking does not retract them.

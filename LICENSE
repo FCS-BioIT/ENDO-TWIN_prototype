@@ -1,0 +1,71 @@
+ENDO-TWIN — Licencia de evaluación / Evaluation licence
+=======================================================
+
+El texto en español es el único auténtico. The English text below is a
+courtesy translation; in case of discrepancy the Spanish version prevails.
+
+
+ESPAÑOL (texto auténtico)
+-------------------------
+
+Copyright © 2026 Fundación Carlos Simón (Carlos Simón Foundation for Research
+in Women's Health). Todos los derechos reservados.
+
+Se autoriza a los revisores designados por la Agencia Estatal de Investigación
+(AEI) a consultar el código y realizar las copias y pruebas estrictamente
+necesarias para evaluar el proyecto ENDO-TWIN en la convocatoria 2026 de
+«Proyectos de Generación de Conocimiento».
+
+Esta autorización no permite explotar comercialmente el software, utilizarlo
+para fines ajenos a la evaluación, modificarlo —incluido para uso propio—,
+incorporarlo a otros productos ni redistribuirlo.
+
+Cualquier permiso adicional requiere autorización previa y escrita del titular,
+sin perjuicio de los derechos legalmente irrenunciables y las obligaciones de
+conservación aplicables al procedimiento.
+
+
+ENGLISH (courtesy translation)
+------------------------------
+
+Copyright © 2026 Fundación Carlos Simón (Carlos Simón Foundation for Research
+in Women's Health). All rights reserved.
+
+Reviewers appointed by the Spanish State Research Agency (Agencia Estatal de
+Investigación, AEI) are authorised to consult the code and to make the copies
+and run the tests strictly necessary to evaluate the ENDO-TWIN project in the
+2026 "Proyectos de Generación de Conocimiento" call.
+
+This authorisation does not permit commercial exploitation of the software, its
+use for purposes other than that evaluation, its modification — including for
+the user's own use — its incorporation into other products, or its
+redistribution.
+
+Any further permission requires the prior written authorisation of the rights
+holder, without prejudice to legally inalienable rights and to the record-keeping
+obligations applicable to the procedure.
+
+
+ALCANCE / SCOPE
+---------------
+
+Esta licencia cubre el código y la documentación propios de este repositorio.
+No cubre:
+
+- Las dependencias instaladas (MaBoSS, PyMaBoSS y las demás declaradas en
+  `pixi.toml`), que se rigen por sus propias licencias; véase
+  `THIRD_PARTY_NOTICES.md`.
+- El contenido de `data/` (artículos de editorial, manuscritos y el libro de
+  cálculo de proteínas secretadas), que no es titularidad de la Fundación y que
+  no se distribuye con este repositorio: `data/` está fuera del control de
+  versiones desde el 2026-11-23 (`.gitignore`, `docs/ORIGIN.md`). Las copias
+  incluidas en el historial de Git anterior a esa fecha permanecen en él.
+
+This licence covers this repository's own code and documentation. It does not
+cover the installed dependencies (MaBoSS, PyMaBoSS and the others declared in
+`pixi.toml`), which are governed by their own licences — see
+`THIRD_PARTY_NOTICES.md` — nor the contents of `data/` (publisher articles,
+manuscripts and the secreted-protein workbook), which the Foundation does not
+own and which is not distributed with this repository: `data/` has been
+untracked since 2026-11-23. Copies in the Git history before that date remain
+there.

@@ -6,7 +6,7 @@ sandbox_mode = "read-only"
 developer_instructions = """
 Perform a strict read-only scientific audit.
 
-Read AGENTS.md, maboss-digital-twin, and adoc-result-validator.
+Read docs/AGENTS.md, maboss-digital-twin, and adoc-result-validator.
 Follow the global Agent Harness task contract and handoff format.
 Verify node and edge definitions, sign and direction, evidence provenance, logical rules, update assumptions, initial conditions, transition-rate interpretation, phenotype definitions, and patient mapping.
 Check identifiability, circular validation, threshold sensitivity, rate sensitivity, Monte Carlo uncertainty, held-out validation, and model-to-claim alignment.

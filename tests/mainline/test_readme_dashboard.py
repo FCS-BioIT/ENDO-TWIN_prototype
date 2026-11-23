@@ -14,7 +14,12 @@ if str(ROOT / "src") not in sys.path:
 
 from endotwin.foundation_metrics import OUT, SUITE_RECORDS, compute
 
-README = (ROOT / "README.md").read_text(encoding="utf-8")
+#: The front page moved from the repository root into docs/ on 2026-11-23 to
+#: shrink the root listing; GitHub still renders docs/README.md on the
+#: repository home page. Its relative links therefore resolve against docs/,
+#: not against the root.
+README_DIR = ROOT / "docs"
+README = (README_DIR / "README.md").read_text(encoding="utf-8")
 DASHBOARD = README.split("<!-- dashboard:start -->", 1)[1].split(
     "<!-- dashboard:end -->", 1
 )[0]
@@ -169,7 +174,7 @@ class ReadmeHygiene(unittest.TestCase):
             if target.startswith(("http://", "https://", "#")):
                 continue
             path = target.split("#", 1)[0]
-            self.assertTrue((ROOT / path).exists(), target)
+            self.assertTrue((README_DIR / path).exists(), target)
 
     def test_claims_stay_conservative(self):
         self.assertIn("No calibration and no independent validation", README)

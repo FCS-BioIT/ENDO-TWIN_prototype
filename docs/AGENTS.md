@@ -4,6 +4,13 @@ ENDO-TWIN builds a mechanistic, stochastic Boolean (MaBoSS) model of human
 endometrial hormonal regulation in the ADOC endometrium-on-chip, and tests it
 prospectively. It was derived from an earlier, private prototype (`docs/ORIGIN.md`).
 
+> **This file is no longer discovered automatically.** It moved from the
+> repository root to `docs/AGENTS.md` on 2026-11-23 at the owner's request, to
+> shrink the root listing. Coding agents look for `AGENTS.md` at the root, so
+> nothing loads these instructions for you any more: read this file at the start
+> of any session that touches the model, the evidence or `data/`. The same move
+> took `README.md` and `LICENSE` into `docs/` (`docs/ORIGIN.md` §root tidying).
+
 ## Repository layout
 
 - **Mainline (active work):** `src/endotwin/` (code), `endotwin/models/`
@@ -36,6 +43,11 @@ prospectively. It was derived from an earlier, private prototype (`docs/ORIGIN.m
   contains the closed-phase directories. `models/` must also stay distinct from
   `endotwin/models/`, which is the mainline. Watch the **skip count** as well as
   failures: a stale path can turn a passing test into a silent skip.
+  **Single files are a different case.** `README.md`, `LICENSE` and this file
+  moved into `docs/` on 2026-11-23 and `.ruff.toml` was deleted outright (its
+  two exclusions are now arguments in `pixi.toml`). None of them was pinned by
+  any of the three mechanisms, and each move was a handful of path edits. What
+  the rule above forbids is moving a **directory** that frozen bytes name.
 
 ## Evidence and data contracts
 

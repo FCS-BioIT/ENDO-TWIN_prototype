@@ -1,4 +1,4 @@
-![ENDO-TWIN — the human endometrium in silico. From hormonal signals to testable mechanisms: endometrium-on-chip to stochastic Boolean model.](docs/assets/brand/endo-twin-banner.png)
+![ENDO-TWIN — the human endometrium in silico. From hormonal signals to testable mechanisms: endometrium-on-chip to stochastic Boolean model.](assets/brand/endo-twin-banner.png)
 
 # ENDO-TWIN
 
@@ -8,9 +8,9 @@ endometrium-on-chip.
 
 This repository is the computational side of the ENDO-TWIN project (AEI
 PID2026, Carlos Simón Foundation). It grew out of an earlier, private prototype
-of the same group ([docs/ORIGIN.md](docs/ORIGIN.md)).
+of the same group ([docs/ORIGIN.md](ORIGIN.md)).
 
-![endotwin-v0.2.0 network through the ADOC protocol with IL-1β](docs/assets/endotwin/endotwin_pathway_dynamics_v0.2.0.gif)
+![endotwin-v0.2.0 network through the ADOC protocol with IL-1β](assets/endotwin/endotwin_pathway_dynamics_v0.2.0.gif)
 
 *`endotwin-v0.2.0` running the ADOC protocol: basal culture, E2 priming, then
 differentiation with IL-1β. Node colour is the fraction of 10,000 MaBoSS
@@ -41,7 +41,7 @@ can perturb one side and read the other.
 
 ## The model
 
-![endotwin-v0.2.0 network](docs/assets/endotwin/endotwin_network_v0.2.0.png)
+![endotwin-v0.2.0 network](assets/endotwin/endotwin_network_v0.2.0.png)
 
 `endotwin-v0.2.0` has 39 nodes in four compartments, simulated as one MaBoSS
 network:
@@ -64,7 +64,7 @@ readout or a perturbation the project can use. The RNA nodes map to the planned
 bulk RNA-seq, and the secreted nodes to the outlet ELISAs. Some nodes have the
 same Boolean function as their neighbour, for example a ligand and its secreted
 pool. We keep them on purpose and list them in
-[docs/model_construction.md](docs/model_construction.md).
+[docs/model_construction.md](model_construction.md).
 
 We dont know the kinetic parameters of these pathways, and wont know them for a
 while. A Boolean rule is something you can trace back to a paper. MaBoSS adds
@@ -127,18 +127,18 @@ So we keep two rules: JNK only, or JNK plus PR depletion
 level only.
 
 Every edge has an evidence class and references in
-[edges.tsv](endotwin/models/endotwin-v0.2.0/edges.tsv). More in
-[docs/scientific_evidence.md](docs/scientific_evidence.md).
+[edges.tsv](../endotwin/models/endotwin-v0.2.0/edges.tsv). More in
+[docs/scientific_evidence.md](scientific_evidence.md).
 
 ## What the model predicts
 
-![Reference regimen and BMP receptor inhibition](docs/assets/endotwin/endotwin_dynamics_v0.2.0.png)
+![Reference regimen and BMP receptor inhibition](assets/endotwin/endotwin_dynamics_v0.2.0.png)
 
 *Under BMP receptor inhibition both Q1 rules lose pSMAD1/5/8, but only the
 BMP-required rule loses secreted PRL. 10,000 trajectories, seed 1, unit rates.*
 
 Which experiment separates which hypothesis. These are exact results across
-all 24 scenarios ([discrimination.tsv](endotwin/results/endotwin-v0.2.0/discrimination.tsv)):
+all 24 scenarios ([discrimination.tsv](../endotwin/results/endotwin-v0.2.0/discrimination.tsv)):
 
 | Perturbation | Readout | Separates | Predicted |
 |---|---|---|---|
@@ -162,7 +162,7 @@ A few things are easy to miss:
 
 ## Steady states are not enough: the HAND2 relay
 
-![HAND2 relay transient](docs/assets/endotwin/endotwin_relay_transient_v0.2.0.png)
+![HAND2 relay transient](assets/endotwin/endotwin_relay_transient_v0.2.0.png)
 
 There are two ways to write the stromal route of Q2:
 
@@ -188,14 +188,14 @@ prediction.
 The earlier prototype, wich focused on embryo adhesion in ADOC, gave us the literature work,
 the data integration and the tooling. We rebuilt the model around Q1 and Q2.
 Embryo adhesion is not used: its three conditions cannot separate any of our
-hypotheses ([docs/experimental_data.md](docs/experimental_data.md)). The old
+hypotheses ([docs/experimental_data.md](experimental_data.md)). The old
 models and analyses stay in the repository as legacy material
-([docs/legacy/README.md](docs/legacy/README.md)).
+([docs/legacy/README.md](legacy/README.md)).
 
 The numbers below are recomputed from the repository by
 `src/endotwin/foundation_metrics.py`. A test fails if the table drifts from
 them. Full audit:
-[docs/RESEARCH_FOUNDATION_AUDIT.md](docs/RESEARCH_FOUNDATION_AUDIT.md).
+[docs/RESEARCH_FOUNDATION_AUDIT.md](RESEARCH_FOUNDATION_AUDIT.md).
 
 <!-- dashboard:start -->
 | | |
@@ -220,12 +220,12 @@ priming, then E2 + MPA + 8-Br-cAMP + XAV939), outlet ELISAs for PRL, IGFBP-1
 and PAEP, and scRNA-seq (E-MTAB-15842). These were used to build the network,
 so agreeing with them is not validation. We cant reconstruct which donor each
 protein value came from. Details:
-[docs/experimental_data.md](docs/experimental_data.md).
+[docs/experimental_data.md](experimental_data.md).
 
 The project will produce 42 compartment-resolved bulk RNA-seq libraries, plus
 Ki67/EdU, pSMAD1/5/8 and viability. Each RNA node of the model already has its
 gene readout in
-[observation_map.tsv](endotwin/config/observation_map.tsv). Schemas and
+[observation_map.tsv](../endotwin/config/observation_map.tsv). Schemas and
 validators are ready in `endotwin/config/data_schemas/`. No new data exist yet.
 
 ## Status and limits
@@ -241,7 +241,7 @@ prediction under the stated rules and unit rates.
   interfaces.
 - **Planned:** calibration and prospective validation (WP1–WP4).
 - **Future, not funded:** multiscale coupling with PhysiBoSS
-  ([notes](docs/architecture/future_multiscale_extension.md)). The compartment
+  ([notes](architecture/future_multiscale_extension.md)). The compartment
   split already gives three networks coupled only through ligand pools.
 
 Main limitations:
@@ -268,7 +268,8 @@ Main limitations:
   hormone-only result should be read as a floor the model imposes, not as a
   finding. A progestin→PKA path is the first candidate for the next revision.
   Consequences for the grant's Task 1.1 and Task 1.4 are worked through in
-  [endotwin/results/grant_v8_design_audit.md](endotwin/results/grant_v8_design_audit.md).
+  `endotwin/results/grant_v8_design_audit.md`, a working report that is
+  deliberately uncommitted and so is not on the public remote.
 - Outputs are Boolean and time is dimensionless. Transients depend on unknown
   rates; steady states do not.
 
@@ -305,7 +306,7 @@ final["X_IGFBP1"], final["X_PRL"]   # (0.0, 1.0)
 Two WP2 drafts are ready and checked but not frozen: Smoothened inhibition
 under the hormone-only regimen (pSMAD1/5/8 down, recommended) and FOXO1
 inhibition (IGFBP-1 down). They get frozen at the end of WP1, once the WP1
-donors are known ([docs/wp2_prediction_selection.md](docs/wp2_prediction_selection.md)).
+donors are known ([docs/wp2_prediction_selection.md](wp2_prediction_selection.md)).
 `pixi run endotwin-freeze --check <spec>` runs the eligibility analysis without
 freezing anything.
 
@@ -323,7 +324,7 @@ it says, reproducibly. They say nothing about whether the biology is right.
 
 The 63 skips are legacy checks that need the prototype git history, wich this
 repository does not have. They passed at the source commit. See
-[docs/software_verification.md](docs/software_verification.md).
+[docs/software_verification.md](software_verification.md).
 
 ## Plan
 
@@ -336,21 +337,21 @@ repository does not have. They passed at the source commit. See
 
 ## Documentation
 
-[Origin](docs/ORIGIN.md) ·
-[foundation audit](docs/RESEARCH_FOUNDATION_AUDIT.md) ·
-[literature curation](docs/literature_curation.md) ·
-[evidence per rule](docs/scientific_evidence.md) ·
-[model construction](docs/model_construction.md) ·
-[data](docs/experimental_data.md) ·
-[evaluation](docs/model_evaluation.md) ·
-[WP2 prediction](docs/wp2_prediction_selection.md) ·
-[software verification](docs/software_verification.md) ·
-[legacy prototype](docs/legacy/README.md)
+[Origin](ORIGIN.md) ·
+[foundation audit](RESEARCH_FOUNDATION_AUDIT.md) ·
+[literature curation](literature_curation.md) ·
+[evidence per rule](scientific_evidence.md) ·
+[model construction](model_construction.md) ·
+[data](experimental_data.md) ·
+[evaluation](model_evaluation.md) ·
+[WP2 prediction](wp2_prediction_selection.md) ·
+[software verification](software_verification.md) ·
+[legacy prototype](legacy/README.md)
 
 ## References and licence
 
 Full list with DOIs in
-[endotwin/evidence/references.tsv](endotwin/evidence/references.tsv).
+[endotwin/evidence/references.tsv](../endotwin/evidence/references.tsv).
 
 - Zaragozano S, et al. Modeling human embryo adhesion using a microfluidic platform. *Sci Adv* 2026;12:eadz2249. doi:10.1126/sciadv.adz2249
 - Liao Z, et al. Impaired BMP signaling pathways disrupt decidualization in endometriosis. *Commun Biol* 2024;7:227. doi:10.1038/s42003-024-05898-z
@@ -368,16 +369,16 @@ Developed at the Carlos Simón Foundation for Research in Women's Health.
 
 **This repository is public** ([github.com/FCS-BioIT/ENDO-TWIN_prototype](https://github.com/FCS-BioIT/ENDO-TWIN_prototype);
 despite the remote's name this is the ENDO-TWIN mainline, and the "prototype" of
-[docs/ORIGIN.md](docs/ORIGIN.md) is a different, private repository).
+[docs/ORIGIN.md](ORIGIN.md) is a different, private repository).
 
 **Public to read is not open source.** Copyright © 2026 Fundación Carlos Simón,
-all rights reserved. [LICENSE](LICENSE) grants reviewers appointed by the
+all rights reserved. [docs/LICENSE](LICENSE) grants reviewers appointed by the
 Agencia Estatal de Investigación the right to consult the code and to make the
 copies and run the tests needed to evaluate ENDO-TWIN in the 2026 *Proyectos de
 Generación de Conocimiento* call, and nothing further: no commercial use, no use
 for other purposes, no modification (not even for your own use), no
 incorporation into other products, no redistribution. Anything else needs the
-rights holder's prior written permission. The Spanish text of `LICENSE` is the
+rights holder's prior written permission. The Spanish text of `docs/LICENSE` is the
 authoritative one.
 
 The licence covers this repository's own code and documentation. It does not

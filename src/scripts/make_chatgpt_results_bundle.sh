@@ -6,7 +6,7 @@ script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
 repo_root="$(cd "$script_dir/../.." && pwd -P)"
 cd "$repo_root"
 
-# The harness (AGENTS.md, agents, skills, harness docs, validator) is part of
+# The harness (docs/AGENTS.md, agents, skills, harness docs, validator) is part of
 # how this repository is meant to be read, so a reviewer gets it by default.
 include_harness=1
 bundle=""
@@ -22,7 +22,7 @@ Create a compact, validated archive for sharing DT_ADOC source, documentation,
 scientific context, models, and available result files with ChatGPT.
 
 Options:
-  --include-harness  Include AGENTS.md and repository-local Codex harness files
+  --include-harness  Include docs/AGENTS.md and the repository-local Codex harness
                      (default).
   --no-harness       Omit the harness files.
   --smoke-run PATH   Bundle this specific smoke run directory instead of the
@@ -112,6 +112,27 @@ is_forbidden_path() {
     return 1
 }
 
+# The front page moved to docs/README.md on 2026-11-23 to shrink the repository
+# root listing. The bundle still carries it at the BUNDLE root, because
+# validate_chatgpt_bundle.py's REQUIRED_FILES expects README.md there; the copy
+# under docs/ is skipped so the file is not shipped twice.
+is_relocated_root_file() {
+    [ "$1" = "docs/README.md" ]
+}
+
+# Harness material. It used to sit at the repository root (AGENTS.md) and in a
+# dotted directory (.codex/), neither of which `copy_tree docs` could reach, so
+# --no-harness worked by construction. Both now live under docs/, so the
+# exclusion has to be explicit or --no-harness would ship them regardless.
+is_harness_path() {
+    case "$1" in
+        docs/AGENTS.md|docs/codex/*)
+            return 0
+            ;;
+    esac
+    return 1
+}
+
 is_eligible_source() {
     local path="$1"
     case "$path" in
@@ -152,6 +173,10 @@ copy_file() {
 
     [ -f "$path" ] || return 0
     is_forbidden_path "$path" && return 0
+    is_relocated_root_file "$path" && return 0
+    if [ "$include_harness" -ne 1 ] && is_harness_path "$path"; then
+        return 0
+    fi
     if [ "$profile" = "result" ]; then
         is_eligible_result "$path" || return 0
     else
@@ -176,16 +201,28 @@ copy_tree() {
     done < <(find "$root" -type f -print0 | sort -z)
 }
 
-copy_file README.md "project-overview"
+# docs/README.md is carried at the BUNDLE root (see is_relocated_root_file).
+if [ -f docs/README.md ] && [ ! -e "$bundle_root/README.md" ]; then
+    cp -p -- docs/README.md "$bundle_root/README.md"
+    record_manifest_row "README.md" "project-overview"
+fi
 # DT-ADOC planning ledgers now live in docs/legacy/ and travel with the docs tree.
 copy_file docs/THIRD_PARTY_NOTICES.md "third-party-provenance"
 copy_file pixi.toml "runtime-and-task-definition"
 copy_file pixi.lock "runtime-lock"
 copy_file .gitignore "generated-file-policy"
 
-for root in src scripts models tests; do
+for root in src models tests; do
     copy_tree "$root" "repo-source"
 done
+# Before the docs tree, so that the harness files keep their own manifest roles
+# rather than the generic one: copy_file keeps the first copy of a path.
+if [ "$include_harness" -eq 1 ]; then
+    copy_file docs/AGENTS.md "project-agent-policy"
+    copy_tree docs/codex/harness "project-scientific-contract"
+    copy_tree docs/codex/agents "project-agent-definition"
+    copy_tree docs/codex/skills "skill-guidance"
+fi
 for root in docs context config; do
     copy_tree "$root" "scientific-context-and-configuration"
 done
@@ -225,13 +262,6 @@ target_path.write_text(
 )
 PY
     record_manifest_row "docs/legacy/REQUIREMENTS_COVERAGE.tsv" "implementation-ledger-generated"
-fi
-
-if [ "$include_harness" -eq 1 ]; then
-    copy_file AGENTS.md "project-agent-policy"
-    copy_tree docs/codex/harness "project-scientific-contract"
-    copy_tree docs/codex/agents "project-agent-definition"
-    copy_tree docs/codex/skills "skill-guidance"
 fi
 
 results_present=0
@@ -392,7 +422,7 @@ results	output/results/	$([ "$results_present" -eq 1 ] && printf 'included_if_el
 smoke_run	${latest_smoke_run:-output/smoke/}	$([ -n "$latest_smoke_run" ] && printf 'included' || printf 'absent')	Exactly one smoke run is bundled. The source_path column records which one, so a reviewer never has to infer it. Selected by $([ -n "$smoke_run_override" ] && printf '--smoke-run' || printf 'newest run_manifest.json mtime').
 protein_readouts	data/proteinas secretadas ADOC.xlsx	$([ "$protein_readout_present" -eq 1 ] && printf 'included_with_full_tsv_exports' || printf 'absent')	The small source workbook is explicitly allowlisted and exported without value transformation.
 visualization	docs/assets/adoc_maboss_pathway_dynamics.*	$viz_state	Pathway-dynamics animation, static preview, run metadata, and one node-probability-trajectory sample; each is reported individually in the manifest.
-harness	AGENTS.md and docs/codex/	$([ "$include_harness" -eq 1 ] && printf 'included' || printf 'omitted_by_flag')	Agent definitions, skills, harness docs, and the harness validator.
+harness	docs/AGENTS.md and docs/codex/	$([ "$include_harness" -eq 1 ] && printf 'included' || printf 'omitted_by_flag')	Agent definitions, skills, harness docs, and the harness validator.
 visualization_runs	output/visualization/	$([ -d output/visualization ] && printf 'included_without_full_resolution_gif' || printf 'absent')	Animation metadata and the raw node-probability trajectories it was drawn from.
 git_provenance	.git	$([ "$git_provenance_present" -eq 1 ] && printf 'included' || printf 'absent')	Commit, branch, recent log, and whether the worktree was dirty.
 papers	data/*.pdf and data/*.docx	excluded	Paper context is summarized in context/; full papers are not bundled.

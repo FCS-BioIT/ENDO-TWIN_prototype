@@ -120,12 +120,32 @@ description = "Run lint, format-check, test-guards and the complete serial test 
 cmd = "PYTHONDONTWRITEBYTECODE=1 python -B src/scripts/run_record.py check"
 description = "Pass only if a committed run record covers the code at HEAD: tested at HEAD or an ancestor with only docs/verification/runs/ changed since, every check exited 0, and the committed log matches its SHA-256"
 
+# Ruff carries no configuration file. `.ruff.toml` was deleted from the
+# repository root on 2026-11-23 to shrink the root listing, and its two
+# exclusions moved onto the command lines below, where they are visible at the
+# point of use. Everything else is ruff's default.
+#
+# Accepted consequence: a bare `ruff check` or an editor integration no longer
+# sees these exclusions and will report findings in the files named below.
+# `pixi run lint` and `pixi run format-check` are the checks of record.
 [tasks.lint]
-cmd = "ruff check src tests"
+# src/scripts/ moved here from the repository root on 2026-11-23. It was never
+# inside `ruff check src tests` before that move and it does not pass: 7 lint
+# findings and 4 files the formatter would rewrite. Excluding it keeps the
+# checked set exactly what it was, so the move stays a pure relocation. The
+# findings are real and deserve their own pass.
+cmd = "ruff check --extend-exclude src/scripts src tests"
 description = "Run static lint checks on PROTOTYPE source and tests"
 
 [tasks.format-check]
-cmd = "ruff format --check src tests"
+# Beyond src/scripts/, two files are left out of the formatter because
+# reformatting them is not free: their exact bytes are recorded elsewhere.
+# conditions.py is inside concordance.simulate.IMPLEMENTATION_GLOBS, so any byte
+# change moves the implementation digest and forces regenerating the
+# digest-stamped artifacts (docs/verification/README.md);
+# compartment_attribution.py is hash-pinned by the closed C2 overlay
+# (docs/c2_observation_compartments/attribution_summary.json).
+cmd = "ruff format --check --extend-exclude src/scripts,src/dt_adoc/protocols/conditions.py,src/dt_adoc/observations/compartment_attribution.py src tests"
 description = "Check Python formatting for PROTOTYPE source and tests"
 
 [tasks.compile-models]

@@ -6,7 +6,7 @@ sandbox_mode = "read-only"
 developer_instructions = """
 Audit data evidence without changing source files.
 
-Read AGENTS.md, adoc-data-audit, and docs/codex/harness/data-lineage-contract.md.
+Read docs/AGENTS.md, adoc-data-audit, and docs/codex/harness/data-lineage-contract.md.
 Follow the global Agent Harness task contract and handoff format.
 Distinguish patient, sample, time point, compartment, well, technical replicate, and measurement.
 Preserve blank, zero, below-detection, missing, and excluded states.

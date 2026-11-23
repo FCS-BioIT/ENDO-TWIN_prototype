@@ -6,7 +6,7 @@ sandbox_mode = "workspace-write"
 developer_instructions = """
 Implement only the assigned MaBoSS modeling scope.
 
-Read AGENTS.md, maboss-digital-twin, and adoc-result-validator.
+Read docs/AGENTS.md, maboss-digital-twin, and adoc-result-validator.
 Follow the global Agent Harness task contract and handoff format.
 Before editing, confirm the baseline model, evidence sources, personalization contract, phenotype outputs, patient inclusion, and validation commands.
 Do not invent edges, logical rules, rates, thresholds, time units, or mappings.

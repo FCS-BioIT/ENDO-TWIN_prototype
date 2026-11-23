@@ -22,9 +22,9 @@ The implementation must:
 Before editing:
 
 1. Read, in this order:
-   - `AGENTS.md`
-   - `codex/harness/data-lineage-contract.md`
-   - `codex/harness/scientific-review-checklist.md`
+   - `docs/AGENTS.md`
+   - `docs/codex/harness/data-lineage-contract.md`
+   - `docs/codex/harness/scientific-review-checklist.md`
    - `context/project-context.md`
    - `docs/roadmap.md`
    - `docs/digital-twin-architecture.md`
@@ -503,7 +503,7 @@ Keep expensive full screening out of the default task. Before any full screen, e
 
 Update or add:
 
-- `README.md`: installation, tasks, scope, claim boundary, quick start;
+- `docs/README.md`: installation, tasks, scope, claim boundary, quick start;
 - `docs/implementation.md`: architecture and package flow;
 - `docs/profile_local_reimplementation.md`: upstream parity and deviations;
 - `docs/model_building.md`: evidence-to-node/edge/rule process;

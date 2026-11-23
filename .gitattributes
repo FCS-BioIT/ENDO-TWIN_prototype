@@ -31,7 +31,7 @@
 
 # Binary types, declared so git does not attempt textual diffs or merges on
 # them. This changes presentation only; -text above already prevents conversion.
-# data/ is immutable source evidence (AGENTS.md) and is protected here without
+# data/ is immutable source evidence (docs/AGENTS.md) and is protected here without
 # being modified: one tracked PDF contains byte sequences that a text-mode
 # checkout on another platform could otherwise mangle.
 *.pdf   binary

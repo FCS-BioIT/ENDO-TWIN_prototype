@@ -8,7 +8,7 @@ boundaries.
 
 ## Required sequence
 
-1. Read `AGENTS.md`, `context/project-context.md`, `models/README.md`, and this file.
+1. Read `docs/AGENTS.md`, `context/project-context.md`, `models/README.md`, and this file.
 2. Load `context/literature/knowledge-base.yaml` as the source of candidate
    mechanisms. Join `REF-*` identifiers to `references.tsv`.
 3. Compare candidate nodes with `models/specs/nodes.tsv` using

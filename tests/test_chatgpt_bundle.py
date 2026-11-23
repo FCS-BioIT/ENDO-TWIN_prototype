@@ -34,7 +34,7 @@ class ChatGPTBundleTest(unittest.TestCase):
             self.root / "src/scripts/export_protein_readout_tables.py",
         )
         for path, content in {
-            "README.md": "# Synthetic DT_ADOC\n",
+            "docs/README.md": "# Synthetic DT_ADOC\n",
             "docs/legacy/IMPLEMENTATION_PLAN.md": "# Plan\n",
             "docs/legacy/IMPLEMENTATION_STATUS.md": "# Status\n",
             "docs/legacy/REQUIREMENTS_COVERAGE.tsv": "requirement_id\tstatus\nREQ-001\tpassed\n",
@@ -46,6 +46,12 @@ class ChatGPTBundleTest(unittest.TestCase):
             "src/run.py": "print('model')\n",
             "docs/source_data.md": "# Data contract\n",
             "docs/method.md": "# Method\n",
+            # Harness material. Both used to be unreachable by `copy_tree docs`
+            # -- AGENTS.md sat at the repository root and the Codex files in a
+            # dotted directory -- so --no-harness worked by construction. They
+            # moved under docs/ on 2026-11-23 and the exclusion is now explicit.
+            "docs/AGENTS.md": "# Agent policy\n",
+            "docs/codex/harness/data-lineage-contract.md": "# Lineage\n",
             "context/context.md": "# Context\n",
             "context/literature/README.md": "# Literature\n",
             "context/literature/knowledge-base.yaml": "schema_version: '1.0'\n",
@@ -105,14 +111,17 @@ class ChatGPTBundleTest(unittest.TestCase):
     def tearDown(self) -> None:
         self.tmp.cleanup()
 
-    def make_bundle(self) -> tuple[subprocess.CompletedProcess[str], Path]:
-        bundle = self.root / "share.tar.gz"
+    def make_bundle(
+        self, *extra: str, output: str = "share.tar.gz"
+    ) -> tuple[subprocess.CompletedProcess[str], Path]:
+        bundle = self.root / output
         result = subprocess.run(
             [
                 "bash",
                 str(self.root / "src/scripts/make_chatgpt_results_bundle.sh"),
                 "--output",
                 str(bundle),
+                *extra,
             ],
             cwd=self.root,
             text=True,
@@ -120,6 +129,44 @@ class ChatGPTBundleTest(unittest.TestCase):
             check=False,
         )
         return result, bundle
+
+    def bundle_names(self, *extra: str, output: str = "share.tar.gz") -> set[str]:
+        result, bundle = self.make_bundle(*extra, output=output)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        with tarfile.open(bundle, "r:gz") as archive:
+            return {
+                member.name.removeprefix("DT_ADOC_chatgpt_bundle/")
+                for member in archive.getmembers()
+                if member.isfile()
+            }
+
+    def test_the_front_page_rides_at_the_bundle_root(self) -> None:
+        """docs/README.md is the repository front page since 2026-11-23.
+
+        validate_chatgpt_bundle.py requires README.md at the bundle root, so the
+        bundle keeps it there and must not also ship the docs/ copy.
+        """
+        names = self.bundle_names()
+        self.assertIn("README.md", names)
+        self.assertNotIn("docs/README.md", names)
+
+    def test_harness_files_are_omitted_only_when_the_flag_says_so(self) -> None:
+        """--no-harness must still omit the harness after the docs/ move.
+
+        `copy_tree docs` now reaches docs/AGENTS.md and docs/codex/, which it
+        could not before, so the flag only works while the exclusion is
+        explicit. Without this test it would silently become a no-op.
+        """
+        included = self.bundle_names()
+        self.assertIn("docs/AGENTS.md", included)
+        self.assertIn("docs/codex/harness/data-lineage-contract.md", included)
+
+        omitted = self.bundle_names("--no-harness", output="no-harness.tar.gz")
+        self.assertNotIn("docs/AGENTS.md", omitted)
+        self.assertNotIn("docs/codex/harness/data-lineage-contract.md", omitted)
+        # The rest of the docs tree still travels, so the flag is not a blunt
+        # "drop docs/" switch.
+        self.assertIn("docs/method.md", omitted)
 
     def test_bundle_contents_manifest_and_exclusions(self) -> None:
         result, bundle = self.make_bundle()

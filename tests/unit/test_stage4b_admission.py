@@ -207,7 +207,10 @@ class MustRefuseTest(_Sandbox):
         self.assertFalse(
             adjudication._resolves(ROOT, "../../../../../../etc/passwd", set())
         )
-        self.assertTrue(adjudication._resolves(ROOT, "README.md#x", set()))
+        # Positive control, differing from the negative case above only in that
+        # the file exists. It is docs/README.md, not README.md: the front page
+        # moved into docs/ on 2026-11-23 (docs/ORIGIN.md).
+        self.assertTrue(adjudication._resolves(ROOT, "docs/README.md#x", set()))
 
     def test_c5_a_subset_of_an_any_of_node(self) -> None:
         self.add(Compound("g13_cd98", ("E_CD98_CD9",), ("SLC3A2@activity",)))

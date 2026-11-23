@@ -6,7 +6,7 @@ sandbox_mode = "read-only"
 developer_instructions = """
 Validate artifacts without modifying them.
 
-Read AGENTS.md and adoc-result-validator.
+Read docs/AGENTS.md and adoc-result-validator.
 Follow the global Agent Harness validation levels and handoff format.
 Inspect manifests and actual files, not filenames alone.
 Check hashes, versions, seeds, trajectory counts, time settings, patient inclusion, perturbation definitions, missingness, normalization, convergence or Monte Carlo stability, and sensitivity analyses.

@@ -7,7 +7,7 @@ description: Design, implement, and critically review patient-contextualized sto
 
 Build an auditable chain from biological evidence to a baseline logical network,
 patient context, stochastic simulation, and evidence-bounded claim. Read
-`AGENTS.md` before using this skill.
+`docs/AGENTS.md` before using this skill.
 
 ## Non-negotiable boundaries
 

@@ -6,7 +6,7 @@ description: Audit ADOC source data and preprocessing for scientifically valid M
 # DT_ADOC Data Audit
 
 Inspect source evidence without altering it, then create an explicit,
-reconstructable data contract before patient modeling. Read `AGENTS.md` and
+reconstructable data contract before patient modeling. Read `docs/AGENTS.md` and
 `docs/codex/harness/data-lineage-contract.md`.
 
 ## Workflow

@@ -170,12 +170,50 @@ untouched, and the two validators that pixi executes keep working because the
 tasks call them by explicit path.
 
 Reverting is one `git mv docs/codex .codex` plus the reference updates in
-`pixi.toml`, `AGENTS.md`, `src/scripts/make_chatgpt_results_bundle.sh`,
+`pixi.toml`, `docs/AGENTS.md`, `src/scripts/make_chatgpt_results_bundle.sh`,
 `tests/test_project_validators.py` and `tests/unit/test_manifests.py`.
 
 Mentions under `docs/legacy/` still say `.codex/`; they record the layout as it
 was. `docs/external-skills.md` and `context/references/README.md` refer to
 `~/.codex/` in the owner's home directory, not to this tree, and are unchanged.
+
+**A defect this move introduced, found and fixed on 2026-11-23.** The bundle
+export gates the harness behind `--include-harness`
+(`src/scripts/make_chatgpt_results_bundle.sh`). That gate used to hold by
+construction: `AGENTS.md` sat at the root and the harness in a dotted directory,
+neither of which `copy_tree docs` could reach. Once both lived under `docs/`,
+`--no-harness` shipped them anyway and nothing failed. The exclusion is now
+explicit (`is_harness_path`) and
+`tests/test_chatgpt_bundle.test_harness_files_are_omitted_only_when_the_flag_says_so`
+fails without it. The general lesson is the one in `docs/AGENTS.md`: moving a
+path can put a file **inside** the reach of a rule that never saw it before,
+which no test asserts and no diff shows.
+
+### `README.md`, `LICENSE` and `AGENTS.md` moved to `docs/`; `.ruff.toml` deleted, 2026-11-23
+
+The same request, taken as far as it goes. The repository root is now twelve
+tracked entries: `.gitattributes`, `.gitignore`, `pixi.lock`, `pixi.toml` and
+the eight top-level directories. Each of the four files was unpinned by all
+three mechanisms in `docs/AGENTS.md`, so each move was a handful of path edits
+rather than a rollback.
+
+| Was | Is | What it costs |
+|---|---|---|
+| `README.md` | `docs/README.md` | Nothing on GitHub: a repository with no root `README.md` falls back to `docs/README.md` and renders it on the front page. A clone no longer shows the front page in its root listing. Its relative links now resolve against `docs/`, which is why `](docs/x)` became `](x)` and `](endotwin/x)` became `](../endotwin/x)`. |
+| `LICENSE` | `docs/LICENSE` | GitHub's **sidebar licence chip** is expected to disappear. The `root`/`docs`/`.github` fallback that GitHub documents is for `README`, `CONTRIBUTING` and `CODE_OF_CONDUCT`; detection of a licence runs Licensee, which scores files in the project root only. Unverified against this repository, because it can only be seen after a push. The file is unchanged, the front page links it, and reverting is one `git mv` if the chip is wanted back. |
+| `AGENTS.md` | `docs/AGENTS.md` | Real, and the same shape as the `.codex/` loss above: coding agents look for `AGENTS.md` at the root, so the evidence, data and claim rules are no longer loaded automatically. A banner at the top of the file says so. |
+| `.ruff.toml` | deleted | Its two exclusions are now `--extend-exclude` arguments on the `lint` and `format-check` tasks in `pixi.toml`, where they are visible at the point of use. A bare `ruff check` outside pixi no longer sees them and will report findings in `src/scripts/`. Verified load-bearing: 308 files are formatted without the exclusions against 302 with, exactly the six documented. |
+
+What did **not** move, and why: `.gitattributes` (its `* -text` freeze is
+repo-wide, and a per-directory copy in each of the eight trees is worse than one
+file), `.gitignore` (the root patterns cover `.pixi/`, `output/` and `data/*`; a
+`data/.gitignore` would put `data/` back in the listing it was removed from),
+`pixi.toml` and `pixi.lock` (pixi resolves its manifest from the root), and the
+eight directories, four of which are pinned and four of which are the source,
+test, documentation and mainline trees.
+
+Reverting any one of the four is a `git mv` plus the references listed in that
+commit.
 
 ## Licences, data and redistribution
 
@@ -185,7 +223,7 @@ was. `docs/external-skills.md` and `context/references/README.md` refer to
   throughout this document is the separate private repository above, which has
   never been public.
 - The source repository had **no licence file**. This repository carries one
-  from 2026-11-23: `LICENSE`, an **evaluation licence**, not an open-source
+  from 2026-11-23: `docs/LICENSE`, an **evaluation licence**, not an open-source
   one. Copyright © 2026 Fundación Carlos Simón, all rights reserved, with a
   narrow grant to reviewers appointed by the Agencia Estatal de Investigación
   for the 2026 *Proyectos de Generación de Conocimiento* call — consultation,
@@ -209,7 +247,7 @@ was. `docs/external-skills.md` and `context/references/README.md` refer to
 - `data/` holds the in-house ADOC manuscript files, the secreted-protein
   workbook and three published PDFs (Zaragozano et al. 2026, Science Advances;
   Montagud et al. 2022; Montagud 2026). None of it is ours to redistribute and
-  `LICENSE` does not cover it, so **`data/` has been untracked since
+  `docs/LICENSE` does not cover it, so **`data/` has been untracked since
   2026-11-23** (`.gitignore`), including its README, whose text moved to
   `docs/source_data.md` so that `data/` does not appear in the repository
   listing at all. The files

@@ -30,7 +30,7 @@ from dt_adoc.concordance.simulate import (
 ADAPTER = "src/dt_adoc/maboss_adapter.py"
 #: Files that must stay outside the digest: an unrelated module the suite
 #: already asserts is not globbed (test_compartment_attribution), and prose.
-UNRELATED = ("src/dt_adoc/observations/compartment_attribution.py", "README.md")
+UNRELATED = ("src/dt_adoc/observations/compartment_attribution.py", "docs/README.md")
 
 
 class AdapterIsDigested(unittest.TestCase):

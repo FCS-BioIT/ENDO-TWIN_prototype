@@ -104,9 +104,16 @@ prospectively. It was derived from an earlier, private prototype (`docs/ORIGIN.m
   belong in the proposal text.
 - **Adding a node means touching two hard-coded tables.** `LAYOUT` in
   `src/endotwin/figures.py` and `FRIENDLY` in `src/endotwin/animation.py` both
-  raise `KeyError` on an unknown node, and `pixi run endotwin-all` reports exit
-  status 0 even when the figure step dies that way, so check the log for a
-  traceback rather than trusting the exit code.
+  raise `KeyError` on an unknown node, which kills the figure step near the end
+  of `endotwin-all` after the expensive MaBoSS work has already been written.
+- **Read the exit status of the right command.** `endotwin-all` propagates
+  failure correctly (the CLI exits non-zero and pixi passes it through); a note
+  here previously claimed otherwise and was wrong. What hides it is the shell:
+  in `pixi run endotwin-all > log 2>&1; echo $?; tail log` the status belongs to
+  `tail`, not to pixi, and a background runner reports the same. Capture the
+  status immediately, or use `&&`/`set -o pipefail`. Also note that stderr is
+  unbuffered while redirected stdout is not, so a traceback appears at the TOP
+  of such a log even though it happened last.
 - Keep smoke and full outputs separate. Record model and configuration hashes,
   software versions, seeds, trajectory counts and time settings.
 - Do not load the multi-gigabyte RDS merely to test runtime availability.

@@ -21,8 +21,8 @@
    "requires the prototype's source Git history: recorded commit 7a7eb34a4f7e is absent from this history-free repository (docs/ORIGIN.md)": 1
   },
   "log": "docs/verification/endotwin_suite.log.gz",
-  "log_sha256_uncompressed": "2312eca15c4f9562b050d8aab28f1ecbe7e4b19b581a72cecaf281e86558bca4",
-  "log_note": "Temporary-directory paths are replaced by <tmp> and the checkout path by a relative path; nothing else is altered.",
+  "log_sha256_uncompressed": "7de0dd33b9645428cc00018f407b6fcf09b82c2f6510c5369dd75cdaf9444d31",
+  "log_note": "The archived log IS this run: its last lines read 'Ran 2613 tests in 948.076s / OK (skipped=63)'. It contains no absolute paths, so unlike the run it replaces it needed no path rewriting. The GNU time instrumentation line was stripped, being measurement of the run rather than output of it.",
   "files_changed_after_run": [
    "README.md",
    "docs/research_foundation_metrics.json",
@@ -30,11 +30,13 @@
    "docs/verification/endotwin_suite.log.gz",
    "docs/verification/endotwin_suite_records.json"
   ],
-  "post_run_checks": "On the final tree: pixi run endotwin-test 116 OK; pixi run test-guards 198 OK, checkout unchanged; pixi run lint and pixi run format-check pass. Only documentation and verification-record files changed after the run (list above).",
+  "post_run_checks": "Verified on the tested tree ad19a2e, which was clean: pixi run endotwin-test 140 OK; pixi run lint and pixi run format-check pass. pixi run test-guards was NOT re-run for this record.",
   "wall_seconds_note": "948.076 s is unittest's own figure. The whole `pixi run test` process took 971.64 s wall, the difference being pixi environment activation.",
   "cpu_seconds": 1036.5,
   "cpu_seconds_note": "user 1006.36 + system 30.12, measured with GNU time over the whole process tree. CPU EXCEEDS wall because some tests spawn subprocesses (pixi, MaBoSS, git), so a little work already overlaps; the ratio is 1.07 and the suite is otherwise serial. Per-module wall and CPU: docs/verification/module_times.json.",
-  "max_rss_kb": 9655212
+  "max_rss_kb": 9655212,
+  "post_run_checks_superseded": "An earlier value of this field read 'pixi run endotwin-test 116 OK; pixi run test-guards 198 OK, checkout unchanged'. Those figures belong to a HISTORICAL run, not to this one: the mainline suite was 116 tests then and is 140 now. Kept so the change is visible rather than silent.",
+  "measurement_provenance": "Every figure in this record comes from ONE run of `pixi run test` on ad19a2e: ran/passed/skipped, seconds, cpu_seconds and max_rss_kb alike. The per-module figures in module_times.json come from a SEPARATE, differently instrumented run and must not be mixed with these: that run measured 975.03 s wall, 1,039.6 s CPU and 9,665,684 KB peak."
  },
  "endotwin_mainline_tests": {
   "command": "pixi run endotwin-test",

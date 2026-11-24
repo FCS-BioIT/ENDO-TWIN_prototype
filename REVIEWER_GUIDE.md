@@ -53,7 +53,9 @@ part of ENDO-TWIN. The derivation is documented in [`docs/ORIGIN.md`](docs/ORIGI
 ## 4. Falsifiable predictions
 
 **Q1 — BMP dependence.** Competing explanations: decidualisation requires
-BMP/SMAD through WNT4, or progesterone receptor signalling suffices.
+BMP/SMAD through WNT4, or PGR- and cAMP-responsive mechanisms sustain it
+independently of BMP/SMAD (the alternative keeps the cAMP/PKA–C/EBPβ
+requirement; it is not progesterone alone).
 Perturbation: BMP type-I receptor inhibitor during differentiation. Primary
 functional readout: secreted PRL and IGFBP-1. Discriminating result: both rules
 lose pSMAD1/5/8, but **only the BMP-required rule loses PRL and IGFBP-1**.
@@ -86,7 +88,7 @@ evaluated.
 
 ```bash
 pixi install                      # linux-64; pixi.lock pins Python 3.12, MaBoSS 0.8.15
-pixi run endotwin-smoke           # clean-clone check, ~1 min, needs no private data
+pixi run endotwin-smoke           # clean-clone check, 0.4 s; no private data
 pixi run endotwin-test            # 140 mainline tests, ~35 s
 pixi run endotwin-all             # every result, figure and the verification report
 ```

@@ -9,11 +9,14 @@ Every month the secretory endometrium performs two coordinated switches:
 progesterone halts oestrogen-driven epithelial proliferation, and the stroma
 decidualises. Thousands of genes move. Which interactions actually *drive* the
 switches, and how the two tissue compartments signal to each other, is still
-disputed — and both switches fail in endometriosis, where decidualisation is
-impaired. ENDO-TWIN encodes the leading competing explanations as alternative
+disputed. These coordinated responses can become disrupted in endometriosis,
+where impaired decidualisation and altered progesterone responsiveness have been
+reported. ENDO-TWIN encodes the leading competing explanations as alternative
 rules in one executable model, then identifies the specific experiment whose
 outcome separates them in ADOC, an endometrium-on-chip in which epithelium and
 stroma occupy physically separate compartments.
+
+**[Independent scientific review — evidence, predictions and reproducibility](../REVIEWER_GUIDE.md)**
 
 ![endotwin-v0.3.0 running the ADOC protocol](assets/endotwin/endotwin_pathway_dynamics_v0.3.0.gif)
 
@@ -23,14 +26,23 @@ trajectories in which a node is ON. Epithelium and stroma communicate only
 through the shared extracellular space in the middle. Model predictions in
 dimensionless time; rebuild with `pixi run endotwin-figures`.*
 
+> **From an established experimental platform to a mechanistic digital twin.**
+> ENDO-TWIN builds on our published human endometrium-on-chip: Zaragozano S,
+> Pardo-Figuerez M, Monteagudo-Sanchez A, *et al.*
+> [Modeling human embryo adhesion using a microfluidic platform](https://doi.org/10.1126/sciadv.adz2249).
+> *Science Advances* 2026;12:eadz2249. That study established the platform, its
+> hormonal regimen and its outlet readouts; it does **not** test or validate the
+> model presented here.
+
 ---
 
 ## Two unresolved questions, and the experiments that decide them
 
-**Q1 — Is BMP/SMAD signalling *necessary* for stromal decidualisation,** or can
-progesterone-associated mechanisms sustain it independently? Human SMAD1/5
-knockdown impairs decidualisation and BMP2 rescues it; but progesterone- and
-cAMP-responsive routes could in principle carry the programme alone.
+**Q1 — Is BMP/SMAD signalling *necessary* for stromal decidualisation,** or do
+PGR- and cAMP-responsive mechanisms sustain it independently of BMP/SMAD? Human
+SMAD1/5 knockdown impairs decidualisation and BMP2 rescues it. The alternative
+is not progesterone acting alone: it retains the same cAMP/PKA–C/EBPβ
+requirement, and differs only in whether BMP/SMAD through WNT4 is also needed.
 
 **Q2 — Does progesterone suppress epithelial proliferation through a *stromal
 paracrine relay*,** or through an epithelium-autonomous mechanism? In mouse,
@@ -50,7 +62,7 @@ alternatives can say which measurement would.
 
 | Question | Competing explanations | Discriminating perturbation | Functional readout | Predicted split |
 |---|---|---|---|---|
-| **Q1** | BMP/SMAD through WNT4 is required *vs* PGR signalling suffices | BMP type-I receptor inhibitor, during differentiation | Secreted **PRL** and **IGFBP-1** | Both rules lose pSMAD1/5/8; **only the BMP-required rule loses PRL and IGFBP-1** |
+| **Q1** | BMP/SMAD through WNT4 is required *vs* PGR- and cAMP-responsive mechanisms sustain decidualisation independently of BMP/SMAD | BMP type-I receptor inhibitor, during differentiation | Secreted **PRL** and **IGFBP-1** | Both rules lose pSMAD1/5/8; **only the BMP-required rule loses PRL and IGFBP-1** |
 | **Q2** | Stromal paracrine relay *vs* epithelium-autonomous | Stromal **HAND2** knockdown, or paracrine blockade **during E2 priming** | Epithelial **Ki67 / EdU** | Proliferation **rises** after HAND2 knockdown under the relay rule; **unchanged** under the autonomous rule |
 
 **Timing changes the answer for Q2.** The paracrine blockade is informative only

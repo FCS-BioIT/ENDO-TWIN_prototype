@@ -21,16 +21,18 @@ commit is normally an ancestor of HEAD. `tested_tree` in
 
 ## Where the suite's time goes, and how far it parallelises
 
-Measured 2026-11-24 by timing every test module in one process;
+**Two different runs, kept apart.** The suite totals come from the recorded
+`pixi run test` on `ad19a2e`. The per-module breakdown comes from a separate,
+differently instrumented run that executed the same tests module by module;
 [`verification/module_times.json`](verification/module_times.json) has all 139
-modules with wall and CPU time each.
+modules. Figures from the two must not be combined.
 
-| | |
-|---|---|
-| Wall time, complete suite | **948 s** (`pixi run test`, single process) |
-| CPU time, complete suite | **1,037 s** (user 1,006 s + system 30 s) |
-| Peak resident memory | **9.7 GB** |
-| Longest single module | **128 s** — `unit.test_v05_u6b_muc1_reconciliation` (36 tests) |
+| | Recorded suite run (`ad19a2e`) | Module-timing run |
+|---|---|---|
+| Wall time | **948 s** (971.6 s for the whole process, the difference being pixi activation) | 975.0 s |
+| CPU time | **1,036.5 s** (user 1,006.4 + system 30.1) | 1,039.6 s |
+| Peak resident memory | 9.66 GB | 9.67 GB |
+| Longest single module | — | **128 s**, `unit.test_v05_u6b_muc1_reconciliation` (36 tests) |
 
 CPU time slightly **exceeds** wall time because some tests spawn subprocesses
 (`pixi run`, MaBoSS, `git`), so a little work already overlaps. The ratio is

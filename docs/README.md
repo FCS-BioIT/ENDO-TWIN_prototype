@@ -124,7 +124,7 @@ workstation (20-core x86-64, Linux); they will differ on other hardware.
 | `pixi run endotwin-smoke` | Clean-clone check: model loads, every scenario runs, committed predictions recompute | **< 1 s** |
 | `pixi run endotwin-test` | Active ENDO-TWIN model tests (140) | **≈ 35 s** |
 | `pixi run endotwin-all` | Regenerate every result, figure and the verification report | **≈ 7 min** |
-| `pixi run test` | Complete suite, legacy prototype tests included | **945 s — 15 min 45 s** |
+| `pixi run test` | Complete suite, legacy prototype tests included | **948 s — 15 min 48 s** |
 
 The complete suite is **2,613 tests: 2,550 passed, 0 failed, 63 skipped.** The
 63 skips are legacy checks that replay commits of the prototype's Git history,

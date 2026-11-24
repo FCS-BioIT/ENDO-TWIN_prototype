@@ -523,10 +523,10 @@
     "endotwin_full_suite": {
       "status": "final: run on the committed tree recorded in tested_tree",
       "command": "pixi run test (python -B -m unittest discover -s tests -v), single process",
-      "tested_tree": "ab40e1f7e04bfcd346f12faa66ba8ee398dd2c04",
+      "tested_tree": "ad19a2eb6299f1082b00fe20976895f650da3e15",
       "local_only_evidence_present": "data/combined-dataset-patient-integration.rds, the gitignored annotation workbook, context/literature/pdfs/ and output/review_inbox/ were hard-linked from the owner's prototype working copy (gitignored, never committed), as in the prototype's 2026-10-16 benchmark",
       "ran": 2613,
-      "seconds": 945.096,
+      "seconds": 948.076,
       "result_line": "OK (skipped=63)",
       "failed": 0,
       "skipped": 63,
@@ -551,7 +551,11 @@
         "docs/verification/endotwin_suite.log.gz",
         "docs/verification/endotwin_suite_records.json"
       ],
-      "post_run_checks": "On the final tree: pixi run endotwin-test 116 OK; pixi run test-guards 198 OK, checkout unchanged; pixi run lint and pixi run format-check pass. Only documentation and verification-record files changed after the run (list above)."
+      "post_run_checks": "On the final tree: pixi run endotwin-test 116 OK; pixi run test-guards 198 OK, checkout unchanged; pixi run lint and pixi run format-check pass. Only documentation and verification-record files changed after the run (list above).",
+      "wall_seconds_note": "948.076 s is unittest's own figure. The whole `pixi run test` process took 971.64 s wall, the difference being pixi environment activation.",
+      "cpu_seconds": 1036.5,
+      "cpu_seconds_note": "user 1006.36 + system 30.12, measured with GNU time over the whole process tree. CPU EXCEEDS wall because some tests spawn subprocesses (pixi, MaBoSS, git), so a little work already overlaps; the ratio is 1.07 and the suite is otherwise serial. Per-module wall and CPU: docs/verification/module_times.json.",
+      "max_rss_kb": 9655212
     },
     "endotwin_mainline_tests": {
       "command": "pixi run endotwin-test",

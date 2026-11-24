@@ -14,7 +14,7 @@ commit is normally an ancestor of HEAD. `tested_tree` in
 
 | Run | Tests | Result | Record |
 |---|---|---|---|
-| This repository, complete suite (`pixi run test`), at commit `TESTED_COMMIT` | 2,613 | 2,550 passed, 0 failed, 63 skipped in 945 s wall (single process) | `docs/verification/endotwin_suite_records.json`, log `docs/verification/endotwin_suite.log.gz` |
+| This repository, complete suite (`pixi run test`), at commit `ad19a2e` | 2,613 | 2,550 passed, 0 failed, 63 skipped in 948 s wall, 1,037 s CPU (single process) | `docs/verification/endotwin_suite_records.json`, log `docs/verification/endotwin_suite.log.gz` |
 | ENDO-TWIN mainline only (`pixi run endotwin-test`) | 140 | OK | same record |
 | Prototype at the source commit `b1de5f9`, fresh clone, before any change | 2,767 | 2,757 passed, 1 failed, 9 skipped in 1,980 s | `docs/verification/source_baseline_b1de5f9.json`, log alongside |
 | Prototype benchmark, 2026-10-16 (owner's working copy) | 2,415 | OK (1 skip) in 1,958 s | `docs/verification/cache_benchmark_record.json` |
@@ -27,14 +27,14 @@ modules with wall and CPU time each.
 
 | | |
 |---|---|
-| Wall time, complete suite | **945 s** (`pixi run test`, single process) |
-| CPU time, complete suite | **1,040 s** (user 1,009 s + system 30 s) |
+| Wall time, complete suite | **948 s** (`pixi run test`, single process) |
+| CPU time, complete suite | **1,037 s** (user 1,006 s + system 30 s) |
 | Peak resident memory | **9.7 GB** |
 | Longest single module | **128 s** — `unit.test_v05_u6b_muc1_reconciliation` (36 tests) |
 
 CPU time slightly **exceeds** wall time because some tests spawn subprocesses
 (`pixi run`, MaBoSS, `git`), so a little work already overlaps. The ratio is
-1.10, so the suite is otherwise serial.
+1.07, so the suite is otherwise serial.
 
 **The parallel ceiling is set by the longest module**, because whole modules
 must stay together for their fixtures. Ideal packings of the measured times:

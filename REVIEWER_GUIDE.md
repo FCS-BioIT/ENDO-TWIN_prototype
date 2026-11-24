@@ -47,7 +47,7 @@ part of ENDO-TWIN. The derivation is documented in [`docs/ORIGIN.md`](docs/ORIGI
 | Specific experiments separate specific hypotheses | exact directions for every comparison × scenario | [`discrimination.tsv`](endotwin/results/endotwin-v0.3.0/discrimination.tsv) |
 | Conclusions survive rate uncertainty | 5,670 of 5,670 predicted directions unchanged under 30 random rate sets | [`rate_sensitivity.tsv`](endotwin/results/endotwin-v0.3.0/rate_sensitivity.tsv) |
 | Simulation matches exact computation | 1,680 phase records, worst deviation 0.0005 | [`maboss_confirmation.tsv`](endotwin/results/endotwin-v0.3.0/maboss_confirmation.tsv) |
-| The whole thing is audited automatically | 2,613 tests, 0 failed, 63 skipped (commit `TESTED_COMMIT`) | [`verification_report.md`](endotwin/results/endotwin-v0.3.0/verification_report.md), [`tests/`](tests/) |
+| The whole thing is audited automatically | 2,613 tests, 0 failed, 63 skipped (commit `ad19a2e`) | [`verification_report.md`](endotwin/results/endotwin-v0.3.0/verification_report.md), [`tests/`](tests/) |
 | Candidate WP2 perturbations are screened exhaustively | all 32 internal nodes × 2 states × 48 scenarios | [`wp2_candidate_screen.tsv`](endotwin/results/endotwin-v0.3.0/wp2_candidate_screen.tsv) |
 
 ## 4. Falsifiable predictions

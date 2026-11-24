@@ -13,6 +13,7 @@ if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
 from endotwin.foundation_metrics import OUT, SUITE_RECORDS, compute
+from endotwin.model import load_model
 
 #: The front page moved from the repository root into docs/ on 2026-11-23 to
 #: shrink the root listing; GitHub still renders docs/README.md on the
@@ -24,7 +25,9 @@ DASHBOARD = README.split("<!-- dashboard:start -->", 1)[1].split(
     "<!-- dashboard:end -->", 1
 )[0]
 METRICS = json.loads(OUT.read_text(encoding="utf-8"))
-RESULTS = ROOT / "endotwin/results/endotwin-v0.2.0"
+#: Follows the model version rather than naming one: a pinned path would keep
+#: passing against the previous version's results after a version bump.
+RESULTS = ROOT / "endotwin/results" / load_model().version
 
 
 def n(value: int) -> str:

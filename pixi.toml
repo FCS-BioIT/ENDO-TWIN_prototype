@@ -56,6 +56,14 @@ description = "Random per-node transition rates: stability of predicted directio
 cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m endotwin.cli figures"
 description = "Redraw the ENDO-TWIN figures and the README animation from committed result tables (no MaBoSS)"
 
+[tasks.endotwin-verification-report]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m endotwin.cli verification-report"
+description = "Assemble endotwin/results/<version>/verification_report.md from the committed results: structural facts, reproducibility, sensitivity, evidence, hypothesis separation and pending predictions (also run by endotwin-all)"
+
+[tasks.endotwin-benchmark]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m endotwin.cli benchmark"
+description = "Measure wall and CPU time for representative MaBoSS workloads and write endotwin/results/benchmarks/ (repository planning only; machine-specific)"
+
 [tasks.endotwin-metrics]
 cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m endotwin.cli metrics"
 description = "Recompute docs/research_foundation_metrics.json from the committed files"

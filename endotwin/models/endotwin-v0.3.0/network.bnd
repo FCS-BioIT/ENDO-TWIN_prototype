@@ -1,0 +1,172 @@
+// ENDO-TWIN mainline regulatory network, endotwin-v0.3.0
+//
+// Derived from endotwin-v0.1.0 (itself derived from the prototype adoc-literature-superset-v0.6.0,
+// source commit b1de5f90582f02291789eb72753fa5ab1f2d8c88). v0.2.0 adds an extracellular
+// compartment for the ligands and secreted proteins that cross the ADOC membrane, splits
+// the stromal decidual programme into its curated transcriptional mediators (C/EBPbeta,
+// FOXO1, IRF4, WNT4), separates the IL-1beta JNK and ERK1/2 routes, and adds two
+// candidate perturbations (Smoothened and FOXO1 inhibitors). Every dependency's evidence
+// class is in edges.tsv, every change from v0.1.0 in lineage.tsv. This file is the
+// executable source of truth; the alternatives in rule_variants.tsv are applied in memory.
+//
+// Prefixes: IN_ inputs | E_ epithelium | X_ extracellular | S_ stroma | OUT_ functional outputs.
+
+Node IN_E2 {
+  logic = IN_E2;
+}
+
+Node IN_PROGESTIN {
+  logic = IN_PROGESTIN;
+}
+
+Node IN_cAMP {
+  logic = IN_cAMP;
+}
+
+Node IN_XAV939 {
+  logic = IN_XAV939;
+}
+
+Node IN_BMPR_INHIBITOR {
+  logic = IN_BMPR_INHIBITOR;
+}
+
+Node IN_SMO_INHIBITOR {
+  logic = IN_SMO_INHIBITOR;
+}
+
+Node IN_FOXO1_INHIBITOR {
+  logic = IN_FOXO1_INHIBITOR;
+}
+
+Node IN_IL1B {
+  logic = IN_IL1B;
+}
+
+Node E_ESR1 {
+  logic = IN_E2;
+}
+
+Node E_PGR {
+  logic = IN_PROGESTIN;
+}
+
+Node E_IHH {
+  logic = E_PGR;
+}
+
+Node E_FGFR_ERK {
+  logic = X_PARACRINE_MITOGEN;
+}
+
+Node OUT_EPITHELIAL_SECRETORY {
+  logic = E_ESR1 and E_PGR;
+}
+
+Node OUT_EPITHELIAL_PROLIFERATION {
+  logic = E_ESR1 and E_FGFR_ERK;
+}
+
+Node X_IHH {
+  logic = E_IHH;
+}
+
+Node X_PARACRINE_MITOGEN {
+  logic = S_PARACRINE_MITOGEN;
+}
+
+Node X_BMP2 {
+  logic = S_BMP2;
+}
+
+Node X_PAEP {
+  logic = OUT_EPITHELIAL_SECRETORY;
+}
+
+Node X_PRL {
+  logic = S_PRL;
+}
+
+Node X_IGFBP1 {
+  logic = S_IGFBP1;
+}
+
+Node S_ESR1 {
+  logic = IN_E2;
+}
+
+Node S_PGR {
+  logic = IN_PROGESTIN;
+}
+
+Node S_CAMP_AUTOCRINE {
+  logic = S_ESR1 and S_PGR;
+}
+
+Node S_PKA {
+  logic = IN_cAMP;
+}
+
+Node S_CEBPB {
+  logic = S_PKA;
+}
+
+Node S_FOXO1 {
+  logic = S_PKA and not IN_FOXO1_INHIBITOR;
+}
+
+Node S_IRF4 {
+  logic = S_PGR and S_FOXO1;
+}
+
+Node S_HH_SIGNALING {
+  logic = X_IHH and not IN_SMO_INHIBITOR;
+}
+
+Node S_NR2F2 {
+  logic = S_HH_SIGNALING and S_PGR;
+}
+
+Node S_BMP2 {
+  logic = (S_PGR and S_PKA) or S_NR2F2;
+}
+
+Node S_BMP_SMAD {
+  logic = X_BMP2 and not IN_BMPR_INHIBITOR;
+}
+
+Node S_WNT4 {
+  logic = S_BMP_SMAD;
+}
+
+Node S_HAND2 {
+  logic = S_BMP_SMAD or S_PGR;
+}
+
+Node S_PARACRINE_MITOGEN {
+  logic = S_ESR1 and not S_HAND2;
+}
+
+Node S_IL1_SIGNALING {
+  logic = IN_IL1B;
+}
+
+Node S_JNK {
+  logic = S_IL1_SIGNALING;
+}
+
+Node S_ERK1_2 {
+  logic = S_IL1_SIGNALING;
+}
+
+Node OUT_STROMAL_DECIDUALIZATION {
+  logic = S_PGR and S_CEBPB and S_WNT4 and not S_JNK;
+}
+
+Node S_IGFBP1 {
+  logic = OUT_STROMAL_DECIDUALIZATION and S_FOXO1;
+}
+
+Node S_PRL {
+  logic = OUT_STROMAL_DECIDUALIZATION and S_IRF4;
+}

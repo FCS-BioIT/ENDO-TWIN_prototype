@@ -25,7 +25,9 @@ from endotwin.structure import fixed_point
 MODEL = load_model()
 PROTOCOLS = load_protocols(MODEL)
 FAST = SimulationSettings(sample_count=500, seed=3)
-RESULTS = ROOT / "endotwin/results/endotwin-v0.2.0"
+#: Follows the model version rather than naming one: a pinned path would keep
+#: passing against the previous version's results after a version bump.
+RESULTS = ROOT / "endotwin/results" / MODEL.version
 
 
 def run(condition_id, settings=FAST, variants=()):
@@ -205,7 +207,8 @@ class CommittedResults(unittest.TestCase):
     def test_animation_matches_its_provenance_record(self):
         from PIL import Image
 
-        gif = ROOT / "docs/assets/endotwin/endotwin_pathway_dynamics_v0.2.0.gif"
+        version = MODEL.version.removeprefix("endotwin-")
+        gif = ROOT / f"docs/assets/endotwin/endotwin_pathway_dynamics_{version}.gif"
         sidecar = json.loads(
             gif.with_name(gif.stem + "_provenance.json").read_text(encoding="utf-8")
         )
@@ -218,7 +221,7 @@ class CommittedResults(unittest.TestCase):
             "il1b_exposure__INF_pgr_depletion",
         ):
             self.assertIn(
-                f"endotwin/results/endotwin-v0.2.0/dynamics_{tag}.tsv",
+                f"endotwin/results/{MODEL.version}/dynamics_{tag}.tsv",
                 sidecar["inputs_sha256"],
             )
 

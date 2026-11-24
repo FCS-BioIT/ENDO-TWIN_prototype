@@ -20,6 +20,6 @@ rates and initial conditions. They are not concentrations, not cell fractions an
 not clinical probabilities, and MaBoSS time is not experimental time.
 """
 
-DEFAULT_MODEL_VERSION = "endotwin-v0.2.0"
+DEFAULT_MODEL_VERSION = "endotwin-v0.3.0"
 
 __all__ = ["DEFAULT_MODEL_VERSION"]

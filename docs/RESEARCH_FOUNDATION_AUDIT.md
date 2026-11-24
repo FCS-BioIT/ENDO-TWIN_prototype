@@ -133,7 +133,7 @@ pinned to:
 | Absorbed or never-binding dependencies | 0 |
 | Readout-inert nodes | 1 (`IN_XAV939`, declared and read by no rule) |
 | Evidence classes of the 47 default dependencies | 26 literature-supported (13 direct, 5 topic-level, 3 species transfer, 3 route-unresolved, 2 contested), 6 ADOC-supported, 9 experimental definitions, 6 simplifying assumptions (3 of them secretion relays) |
-| Rule-variant families | 4 (Q1 BMP, Q2 paracrine, INF inflammation, FOX FOXO1-PRL); 9 variants; 24 scenarios |
+| Rule-variant families | 5 (Q1 BMP, Q2 paracrine, INF inflammation, FOX FOXO1-PRL, CAM cAMP source); 11 variants; 48 scenarios |
 | Protocols | 12 conditions, 9 matched comparisons, 2 interventions |
 | Exact predictions | every condition x scenario fixed point; MaBoSS reaches all 840 phase fixed points (max deviation 0.000) |
 | Rate sensitivity | 30 random rate sets: 5,670 of 5,670 steady-state directions unchanged |

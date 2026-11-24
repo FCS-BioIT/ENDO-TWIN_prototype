@@ -266,6 +266,21 @@ def cmd_metrics(args) -> None:
     print("wrote docs/research_foundation_metrics.json")
 
 
+def cmd_verification_report(args) -> None:
+    from endotwin.verification import write_report
+
+    path = write_report(args.model)
+    print(f"wrote {relative(path)}")
+
+
+def cmd_benchmark(args) -> None:
+    from endotwin.benchmark import write_report
+
+    json_path, md_path = write_report(args.model)
+    print(f"wrote {relative(json_path)}")
+    print(f"wrote {relative(md_path)}")
+
+
 def cmd_all(args) -> None:
     ns = argparse.Namespace
     m = args.model
@@ -278,6 +293,8 @@ def cmd_all(args) -> None:
     cmd_figures(ns(model=m))
     cmd_manifest(ns(model=m))
     cmd_metrics(ns(model=m))
+    # Last: it reads the artifacts every step above has just written.
+    cmd_verification_report(ns(model=m))
 
 
 def cmd_freeze(args) -> None:
@@ -372,6 +389,8 @@ def main(argv: list[str] | None = None) -> None:
     sub.add_parser("manifest").set_defaults(func=cmd_manifest)
     sub.add_parser("figures").set_defaults(func=cmd_figures)
     sub.add_parser("metrics").set_defaults(func=cmd_metrics)
+    sub.add_parser("verification-report").set_defaults(func=cmd_verification_report)
+    sub.add_parser("benchmark").set_defaults(func=cmd_benchmark)
     sub.add_parser("all").set_defaults(func=cmd_all)
     p = sub.add_parser("freeze")
     p.add_argument("spec")

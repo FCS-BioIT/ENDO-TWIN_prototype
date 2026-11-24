@@ -1,0 +1,20 @@
+v010_node	endotwin_node	change	v010_rule	endotwin_rule	note
+IN_E2	IN_E2	unchanged	IN_E2	IN_E2	
+IN_PROGESTIN	IN_PROGESTIN	unchanged	IN_PROGESTIN	IN_PROGESTIN	
+IN_cAMP	IN_cAMP	unchanged	IN_cAMP	IN_cAMP	
+IN_XAV939	IN_XAV939	unchanged	IN_XAV939	IN_XAV939	
+IN_BMPR_INHIBITOR	IN_BMPR_INHIBITOR	unchanged	IN_BMPR_INHIBITOR	IN_BMPR_INHIBITOR	
+IN_IL1B	IN_IL1B	unchanged	IN_IL1B	IN_IL1B	
+E_PGR	E_PGR	unchanged	IN_PROGESTIN	IN_PROGESTIN	
+E_IHH	E_IHH	unchanged	E_PGR	E_PGR	
+S_PGR	S_PGR	unchanged	IN_PROGESTIN	IN_PROGESTIN	
+S_PKA	S_PKA	unchanged	IN_cAMP	IN_cAMP	
+S_NR2F2	S_NR2F2	modified	E_IHH and S_PGR	S_HH_SIGNALING and S_PGR	Hedgehog reception made explicit (S_HH_SIGNALING, fed by the extracellular IHH pool).
+S_BMP2	S_BMP2	unchanged	(S_PGR and S_PKA) or S_NR2F2	(S_PGR and S_PKA) or S_NR2F2	
+S_BMP_SMAD	S_BMP_SMAD	modified	S_BMP2 and not IN_BMPR_INHIBITOR	X_BMP2 and not IN_BMPR_INHIBITOR	Reads the extracellular BMP2 ligand pool instead of BMP2 expression.
+S_HAND2	S_HAND2	unchanged	S_BMP_SMAD or S_PGR	S_BMP_SMAD or S_PGR	
+S_PARACRINE_MITOGEN	S_PARACRINE_MITOGEN	modified	not S_HAND2	S_ESR1 and not S_HAND2	Mitogen expression now needs stromal ERalpha (ET-029) as well as HAND2 absence.
+S_IL1_SIGNALING	S_IL1_SIGNALING	unchanged	IN_IL1B	IN_IL1B	
+OUT_EPITHELIAL_SECRETORY	OUT_EPITHELIAL_SECRETORY	modified	IN_E2 and E_PGR	E_ESR1 and E_PGR	E2 acts through epithelial ERalpha; PAEP readout moved to the secreted X_PAEP node.
+OUT_EPITHELIAL_PROLIFERATION	OUT_EPITHELIAL_PROLIFERATION	modified	IN_E2 and S_PARACRINE_MITOGEN	E_ESR1 and E_FGFR_ERK	E2 acts through epithelial ERalpha; the stromal mitogen acts through epithelial FGFR-ERK.
+OUT_STROMAL_DECIDUALIZATION	OUT_STROMAL_DECIDUALIZATION	modified	S_PGR and S_PKA and S_BMP_SMAD and not S_IL1_SIGNALING	S_PGR and S_CEBPB and S_WNT4 and not S_JNK	cAMP acts through C/EBPbeta, BMP/SMAD through WNT4, IL-1beta through JNK. PRL and IGFBP-1 readouts moved to their own expression and secreted nodes.

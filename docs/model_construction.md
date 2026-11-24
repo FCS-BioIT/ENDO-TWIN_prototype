@@ -1,6 +1,6 @@
-# Model construction: endotwin-v0.2.0
+# Model construction: endotwin-v0.3.0
 
-`endotwin/models/endotwin-v0.2.0/` is the ENDO-TWIN mainline network. It is a
+`endotwin/models/endotwin-v0.3.0/` is the ENDO-TWIN mainline network. It is a
 hypothesis family for WP1, not a calibrated or validated model. The previous
 version, `endotwin-v0.1.0` (19 nodes), stays in the repository because the v0.2.0
 lineage table maps every node back to it.
@@ -20,9 +20,9 @@ lineage table maps every node back to it.
 
 ## Architecture
 
-![endotwin-v0.2.0 network](assets/endotwin/endotwin_network_v0.2.0.png)
+![endotwin-v0.3.0 network](assets/endotwin/endotwin_network_v0.2.0.png)
 
-39 nodes in four compartments, run as one integrated MaBoSS model:
+40 nodes in four compartments, run as one integrated MaBoSS model:
 
 1. **Culture medium** (8 inputs): `IN_E2`, `IN_PROGESTIN` (P4 or MPA),
    `IN_cAMP`, `IN_XAV939`, `IN_BMPR_INHIBITOR`, `IN_IL1B`, and two candidate
@@ -79,17 +79,27 @@ hypothesis (`docs/experimental_data.md`, section 3).
 | Q2 | `OUT_EPITHELIAL_PROLIFERATION` | `Q2_stromal_relay` (default), `Q2_relay_plus_direct_v051`, `Q2_epithelial_autonomous` | Does progesterone suppress epithelial proliferation through stromal paracrine signalling? |
 | INF | `S_PGR` | `INF_decidual_only` (default), `INF_pgr_depletion` | Does IL-1β act on decidualisation only (JNK), or also deplete stromal PGR (ERK1/2)? |
 | FOX | `S_PRL` | `FOX_prl_foxo1_dependent` (default), `FOX_prl_foxo1_independent` | Does PRL induction need FOXO1, or only IGFBP1? |
+| CAM | `S_PKA` | `CAM_exogenous_only` (default), `CAM_hormone_autocrine` | Is stromal PKA reachable only through the 8-Br-cAMP supplement, or also by an endogenous autocrine route under extended hormone exposure? |
 
-Families own disjoint nodes, so any combination is well defined: 2 x 3 x 2 x 2 =
-24 scenarios, all executable (`Model.scenarios()`). A default is only the variant
-written in `network.bnd`, not a preferred conclusion.
+Families own disjoint nodes, so any combination is well defined:
+2 x 3 x 2 x 2 x 2 = 48 scenarios, all executable (`Model.scenarios()`). A
+default is only the variant written in `network.bnd`, not a preferred
+conclusion.
+
+CAM is the one family whose non-default variant also needs a NODE that the
+default network does not read: `S_CAMP_AUTOCRINE`. It is computed under every
+scenario and consumed only by `CAM_hormone_autocrine`, which is why the
+default network of endotwin-v0.3.0 is logically identical to endotwin-v0.2.0
+and every default prediction is unchanged. The node exists so that the
+hypothesis is an indirect, autocrine route rather than a direct
+`S_PGR -> S_PKA` edge, which the evidence does not support (`E3-01`, `E3-03`).
 
 ## Exact structure (default variants)
 
-From `endotwin/results/endotwin-v0.2.0/structure.json`, by exhaustive
+From `endotwin/results/endotwin-v0.3.0/structure.json`, by exhaustive
 enumeration of the 2^8 input assignments:
 
-- 39 nodes, 47 dependencies (42 activating, 5 inhibitory), 17 distinct Boolean
+- 40 nodes, 49 dependencies (44 activating, 5 inhibitory), 17 distinct Boolean
   functions.
 - No absorbed dependency and no inhibition that never binds (v0.1.0 had one
   absorbed edge).

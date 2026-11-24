@@ -2,15 +2,15 @@
 
 | Directory | Content |
 |---|---|
-| `models/endotwin-v0.2.0/` | The current executable network and its dictionaries ([`docs/model_construction.md`](../docs/model_construction.md)) |
+| `models/endotwin-v0.3.0/` | The current executable network and its dictionaries ([`docs/model_construction.md`](../docs/model_construction.md)) |
 | `models/endotwin-v0.1.0/` | The previous version (19 nodes), kept because v0.2.0's `lineage.tsv` maps every node back to it |
 | `config/` | Protocols and timing, interventions, observation map, planned data schemas |
 | `evidence/` | References used by the mainline rules, with evidence depth and Crossref check |
 | `predictions/` | Template, the two checked WP2 drafts, and (future) frozen records of prospective predictions |
-| `results/endotwin-v0.2.0/` | Every committed result for the current version; regenerate with `pixi run endotwin-all` |
+| `results/endotwin-v0.3.0/` | Every committed result for the current version; regenerate with `pixi run endotwin-all` |
 | `results/endotwin-v0.1.0/` | Results of the previous version, frozen as committed (its configuration is in Git history, not in `config/`). The v0.1.0 model text files were later edited to remove the prototype's private name (comments and notes only; no rule changed), so their digests no longer match that manifest |
 
-`results/endotwin-v0.2.0/run_manifest.json` binds the results to the SHA-256 of
+`results/endotwin-v0.3.0/run_manifest.json` binds the results to the SHA-256 of
 every model and configuration file they were computed from. A test fails if any
 of those files changes without regenerating the results.
 

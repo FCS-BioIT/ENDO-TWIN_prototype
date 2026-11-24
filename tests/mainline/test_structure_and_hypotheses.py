@@ -30,7 +30,9 @@ from endotwin.topology import parse_bnd_rules
 
 MODEL = load_model()
 PROTOCOLS = load_protocols(MODEL)
-RESULTS = ROOT / "endotwin/results/endotwin-v0.2.0"
+#: Follows the model version rather than naming one: a pinned path would keep
+#: passing against the previous version's results after a version bump.
+RESULTS = ROOT / "endotwin/results" / MODEL.version
 HT = {"IN_E2": 1, "IN_PROGESTIN": 1, "IN_cAMP": 1, "IN_XAV939": 1}
 
 
@@ -109,7 +111,21 @@ class MainlineStructure(unittest.TestCase):
 
     def test_xav939_is_declared_but_read_by_no_rule(self):
         self.assertEqual(self.summary.unread_inputs, ("IN_XAV939",))
-        self.assertEqual(self.summary.readout_inert_nodes, ("IN_XAV939",))
+
+    def test_exactly_two_nodes_carry_nothing_to_any_readout(self):
+        """Both are deliberate, and for different reasons.
+
+        ``IN_XAV939`` is an applied reagent with no defensible edge
+        (docs/curation_increment_01_xav939.md). ``S_CAMP_AUTOCRINE`` is the
+        endogenous route to stromal PKA, which only ``CAM_hormone_autocrine``
+        reads, so under the DEFAULT variant it is computed and ignored.
+
+        A third entry here would mean a node had quietly stopped mattering.
+        """
+        self.assertEqual(
+            self.summary.readout_inert_nodes,
+            ("IN_XAV939", "S_CAMP_AUTOCRINE"),
+        )
 
     def test_committed_structure_is_current(self):
         committed = json.loads((RESULTS / "structure.json").read_text())
@@ -261,7 +277,7 @@ class AdhesionConditionsAreUninformative(unittest.TestCase):
 
     Backs the scope decision in docs/experimental_data.md, section 3: under
     untreated, full regimen and full regimen with mifepristone, every node has
-    the same steady state in all 24 scenarios, so no readout of the steady state
+    the same steady state in all 48 scenarios, so no readout of the steady state
     (an adhesion proxy included) could discriminate them.
     """
 
@@ -276,7 +292,7 @@ class AdhesionConditionsAreUninformative(unittest.TestCase):
 
     def test_every_scenario_reaches_the_same_state_in_every_adhesion_arm(self):
         scenarios = MODEL.scenarios()
-        self.assertEqual(len(scenarios), 24)
+        self.assertEqual(len(scenarios), 48)
         for name, (inputs, forced) in self.CONDITIONS.items():
             states = {
                 tuple(sorted(fixed_point(MODEL.rules_for(sel), inputs, forced).items()))

@@ -1,0 +1,36 @@
+{
+  "area_between_curves_mean": 3.003202167523071,
+  "area_between_curves_sd": 0.019376801268119193,
+  "composed_function_identical": true,
+  "condition": "reference",
+  "final_mean_relay": 0.0,
+  "final_mean_relay_plus_direct": 0.0,
+  "half_time_relay": 5.7,
+  "half_time_relay_plus_direct": 2.7,
+  "interpretation": "Both representations compute the same Boolean function, so their fixed points are identical; the explicit relay delays the fall of epithelial proliferation after progestin onset. The difference is a transient under unit rates in dimensionless time, not a calibrated temporal prediction.",
+  "model_version": "endotwin-v0.3.0",
+  "peak_mean_difference": 0.5517134132091257,
+  "peak_time": 3.9,
+  "phase": "differentiation_supplemented",
+  "rates": "MaBoSS defaults (1 for every node)",
+  "readout": "OUT_EPITHELIAL_PROLIFERATION",
+  "replicates": 10,
+  "replicates_with_positive_area": 10,
+  "sample_count": 5000,
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110
+  ],
+  "variants": {
+    "relay": "Q2_stromal_relay",
+    "relay_plus_direct": "Q2_relay_plus_direct_v051"
+  }
+}

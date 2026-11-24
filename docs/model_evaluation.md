@@ -19,9 +19,9 @@ exists.
 
 | Metric | What it measures | Analysis, version, data | Result |
 |---|---|---|---|
-| Distinct composed Boolean functions; alias classes | Whether named nodes are distinct hypotheses | The prototype's U5 (v0.5.0), stage 3 (v0.6.0); ENDO-TWIN structure | v0.6.0: 56 nodes, 29 functions, 7 classes; endotwin-v0.2.0: 39 nodes, 17 functions, 10 multi-node classes, each justified in `docs/model_construction.md` |
-| Absorbed and never-binding dependencies | Declared edges that cannot change their target | same | v0.6.0: 20 of 89; endotwin-v0.2.0: 0 of 47 |
-| Phenotype-inert nodes | Nodes that cannot change any output | same | v0.6.0: 17 (including the model nodes of all three ELISA analytes); endotwin-v0.2.0: 14, mostly readout nodes such as the secreted proteins, which by definition change no output; only `IN_XAV939` is readout-inert |
+| Distinct composed Boolean functions; alias classes | Whether named nodes are distinct hypotheses | The prototype's U5 (v0.5.0), stage 3 (v0.6.0); ENDO-TWIN structure | v0.6.0: 56 nodes, 29 functions, 7 classes; endotwin-v0.3.0: 40 nodes, 17 functions, 10 multi-node classes, each justified in `docs/model_construction.md` |
+| Absorbed and never-binding dependencies | Declared edges that cannot change their target | same | v0.6.0: 20 of 89; endotwin-v0.3.0: 0 of 47 |
+| Phenotype-inert nodes | Nodes that cannot change any output | same | v0.6.0: 17 (including the model nodes of all three ELISA analytes); endotwin-v0.3.0: 14, mostly readout nodes such as the secreted proteins, which by definition change no output; only `IN_XAV939` is readout-inert |
 | Latent observation classes | What a matched-unit design could identify | U5 identifiability, v0.5.0 | 8 of 32 latent classes reachable with every proposed arm and readout |
 | Design-effective states | States distinguishable under a planned design | design alias, v0.4.0 | 19 of 35 (as declared); PAEP and IGFBP-1 carry the same design information |
 | Rule-variant discriminability | Whether competing rules predict different readouts | Gate 3a, v0.4.0; ENDO-TWIN discrimination table | Gate 3a: 9 pairs, no usable assay node; ENDO-TWIN: every family has a robust discriminating comparison (below) |
@@ -40,7 +40,7 @@ adhesion model.
 
 ## ENDO-TWIN v0.2.0 findings (model predictions, not observations)
 
-From `endotwin/results/endotwin-v0.2.0/discrimination.tsv`. "Robust" means the
+From `endotwin/results/endotwin-v0.3.0/discrimination.tsv`. "Robust" means the
 two variants predict different directions whatever variants the other families
 take.
 

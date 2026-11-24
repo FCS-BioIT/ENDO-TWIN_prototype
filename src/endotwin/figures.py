@@ -89,6 +89,14 @@ def _tsv(path: Path) -> list[dict[str, str]]:
 
 #: Shared by the static figure and the animation. Data units; compartments are
 #: laid out as in ADOC: epithelium | shared extracellular space | stroma.
+#: Drawn dashed: present in the network and computed, but read by no rule of
+#: the DEFAULT variant of every family, so they carry nothing to any readout
+#: here. IN_XAV939 is an applied reagent the model is silent about
+#: (docs/curation_increment_01_xav939.md); S_CAMP_AUTOCRINE is the endogenous
+#: cAMP route, which only CAM_hormone_autocrine reads. Dashing them keeps the
+#: figure from implying either one acts in the default network.
+INERT_IN_DEFAULT = {"IN_XAV939", "S_CAMP_AUTOCRINE"}
+
 LAYOUT = {
     "IN_XAV939": (1.1, 9.4),
     "IN_E2": (3.2, 9.4),
@@ -112,6 +120,10 @@ LAYOUT = {
     "X_IGFBP1": (6.6, -0.8),
     "S_ESR1": (9.75, 2.4),
     "S_PGR": (13.85, 4.0),
+    # Directly left of S_PKA, which it feeds, mirroring IN_cAMP feeding the same
+    # node from above: the two routes to PKA, exogenous and endogenous, meet
+    # there. Inert in the default network (CAM_exogenous_only).
+    "S_CAMP_AUTOCRINE": (15.9, 7.2),
     "S_PKA": (17.95, 7.2),
     "S_CEBPB": (20.0, 2.4),
     "S_FOXO1": (17.95, 4.0),
@@ -286,7 +298,7 @@ def network_figure(version: str) -> Path:
                 fc=TINT[comp],
                 ec=EDGE[comp],
                 lw=2.2 if is_out else 1.0,
-                linestyle="--" if node == "IN_XAV939" else "-",
+                linestyle="--" if node in INERT_IN_DEFAULT else "-",
                 zorder=2,
             )
         )
@@ -320,7 +332,7 @@ def network_figure(version: str) -> Path:
         XLIM[0] + 0.2,
         YLIM[0] + 0.02,
         "Arrowhead = activation, bar = inhibition; bold arrows cross compartments. Heavy border = functional output. Italic = a readout "
-        "(full list in node_dictionary.tsv).\nBold label = new or changed versus endotwin-v0.1.0. Dashed box = IN_XAV939, declared but read by no rule. "
+        "(full list in node_dictionary.tsv).\nBold label = new or changed versus endotwin-v0.1.0. Dashed box = present but read by no default rule. "
         "Default rule of every hypothesis family; alternatives in rule_variants.tsv.",
         fontsize=6.8,
         color=INK_2,

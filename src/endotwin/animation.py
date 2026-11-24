@@ -73,6 +73,7 @@ FRIENDLY = {
     "X_IGFBP1": "IGFBP-1\n(secreted)",
     "S_ESR1": "ER\u03b1",
     "S_PGR": "PGR",
+    "S_CAMP_AUTOCRINE": "Endogenous\ncAMP",
     "S_PKA": "PKA",
     "S_CEBPB": "C/EBP\u03b2",
     "S_FOXO1": "FOXO1",

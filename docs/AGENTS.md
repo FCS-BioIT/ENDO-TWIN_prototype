@@ -94,7 +94,19 @@ prospectively. It was derived from an earlier, private prototype (`docs/ORIGIN.m
 ## Validation
 
 - `pixi run endotwin-test` for the mainline; `pixi run test` is the complete
-  suite. `pixi run endotwin-all` regenerates every mainline result and figure.
+  suite. `pixi run endotwin-all` regenerates every mainline result and figure,
+  ending with the scientific verification report
+  (`endotwin/results/<version>/verification_report.md`, also available on its own
+  as `pixi run endotwin-verification-report`).
+- `pixi run endotwin-benchmark` measures representative workloads into
+  `endotwin/results/benchmarks/`. Those timings are for repository planning
+  (`docs/computational_resources.md`) and are machine-specific; they do not
+  belong in the proposal text.
+- **Adding a node means touching two hard-coded tables.** `LAYOUT` in
+  `src/endotwin/figures.py` and `FRIENDLY` in `src/endotwin/animation.py` both
+  raise `KeyError` on an unknown node, and `pixi run endotwin-all` reports exit
+  status 0 even when the figure step dies that way, so check the log for a
+  traceback rather than trusting the exit code.
 - Keep smoke and full outputs separate. Record model and configuration hashes,
   software versions, seeds, trajectory counts and time settings.
 - Do not load the multi-gigabyte RDS merely to test runtime availability.

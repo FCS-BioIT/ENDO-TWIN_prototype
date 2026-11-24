@@ -133,9 +133,18 @@ def _phase(
 def load_protocols(model: Model, path: Path | None = None) -> ProtocolSet:
     path = path or CONFIG / "protocols.yaml"
     payload = yaml.safe_load(path.read_text(encoding="utf-8"))
-    if payload.get("model_version") != model.version:
+    # ``model_version`` may name one version or several. A protocol file is valid
+    # for more than one model version exactly when none of the experimental
+    # INPUT nodes it sets has changed; endotwin-v0.3.0 adds an internal node and
+    # a rule-variant family only, so it reuses v0.2.0's protocols unchanged. The
+    # list keeps both versions reproducible from one tree, which a bare version
+    # bump would not: the older results could no longer be regenerated.
+    declared = payload.get("model_version")
+    accepted = [declared] if isinstance(declared, str) else list(declared or [])
+    if model.version not in accepted:
         raise ProtocolError(
-            f"{path} is written for {payload.get('model_version')}, not {model.version}"
+            f"{path} is written for {', '.join(map(str, accepted)) or None}, "
+            f"not {model.version}"
         )
     interventions = load_interventions(model)
     default_duration = float(payload.get("default_relative_duration", 20.0))

@@ -84,7 +84,7 @@ Code coverage was not measured.
 - **Environment.** `pixi.lock` pins every package (Python 3.12.13, maboss
   0.8.15, ruff 0.16.0); it is byte-identical to the source commit.
 - **Content-addressed provenance.** ENDO-TWIN results carry the SHA-256 of
-  their inputs (`endotwin/results/endotwin-v0.2.0/run_manifest.json`). Prototype
+  their inputs (`endotwin/results/endotwin-v0.3.0/run_manifest.json`). Prototype
   results carry implementation digests and input hashes.
 - **Determinism.** Fixed seeds give identical outputs; reported results use
   disjoint seed blocks for replicates.

@@ -378,9 +378,9 @@
     }
   ],
   "endotwin_mainline": {
-    "model_version": "endotwin-v0.2.0",
+    "model_version": "endotwin-v0.3.0",
     "structure": {
-      "nodes": 39,
+      "nodes": 40,
       "free_variables": [
         "IN_E2",
         "IN_PROGESTIN",
@@ -391,8 +391,8 @@
         "IN_FOXO1_INHIBITOR",
         "IN_IL1B"
       ],
-      "dependencies": 47,
-      "activations": 42,
+      "dependencies": 49,
+      "activations": 44,
       "inhibitions": 5,
       "distinct_functions": 17,
       "alias_classes": [
@@ -428,7 +428,8 @@
         ],
         [
           "OUT_EPITHELIAL_SECRETORY",
-          "X_PAEP"
+          "X_PAEP",
+          "S_CAMP_AUTOCRINE"
         ],
         [
           "X_BMP2",
@@ -461,6 +462,7 @@
         "X_PAEP",
         "X_PRL",
         "X_IGFBP1",
+        "S_CAMP_AUTOCRINE",
         "S_FOXO1",
         "S_IRF4",
         "S_HH_SIGNALING",
@@ -469,7 +471,8 @@
         "S_PRL"
       ],
       "readout_inert_nodes": [
-        "IN_XAV939"
+        "IN_XAV939",
+        "S_CAMP_AUTOCRINE"
       ],
       "unread_inputs": [
         "IN_XAV939"
@@ -483,11 +486,15 @@
       "literature_supported_contested": 2,
       "literature_supported_route_unresolved": 3,
       "literature_supported_species_transfer": 3,
-      "literature_supported_topic_level": 5,
+      "literature_supported_topic_level": 7,
       "simplifying_assumption": 6
     },
-    "variant_only_edges": 3,
+    "variant_only_edges": 4,
     "rule_variant_families": {
+      "CAM": [
+        "CAM_exogenous_only",
+        "CAM_hormone_autocrine"
+      ],
       "FOX": [
         "FOX_prl_foxo1_dependent",
         "FOX_prl_foxo1_independent"
@@ -506,8 +513,8 @@
         "Q2_epithelial_autonomous"
       ]
     },
-    "rule_variant_scenarios": 24,
-    "references": 31,
+    "rule_variant_scenarios": 48,
+    "references": 35,
     "protocol_conditions": 12,
     "matched_comparisons": 9,
     "interventions": 2

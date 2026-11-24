@@ -9,9 +9,9 @@ simulated prediction -> experimental readout.**
 |---|---|
 | Paper | `endotwin/evidence/references.tsv` (ET-xxx; corpus papers link to `context/literature/references.tsv` REF-xxx, DOI-checked by a test) |
 | Finding | `finding_used_by_endotwin` column of the same table; for inherited edges, the prototype experimental evidence table `context/evidence/edge_experimental_evidence.tsv` |
-| Interaction | `endotwin/models/endotwin-v0.2.0/edges.tsv`: one row per dependency, with sign, compartment crossing, evidence class, references, mechanism, assumption and the v0.1.0 edge it descends from |
-| Boolean function | `endotwin/models/endotwin-v0.2.0/network.bnd` (default) and `rule_variants.tsv` (alternatives); `tests/mainline/test_model_integrity.py` requires the edge table to equal the dependencies derived from the rules |
-| Prediction | `endotwin/results/endotwin-v0.2.0/fixed_point_predictions.tsv`, `comparison_directions.tsv`, `discrimination.tsv` |
+| Interaction | `endotwin/models/endotwin-v0.3.0/edges.tsv`: one row per dependency, with sign, compartment crossing, evidence class, references, mechanism, assumption and the v0.1.0 edge it descends from |
+| Boolean function | `endotwin/models/endotwin-v0.3.0/network.bnd` (default) and `rule_variants.tsv` (alternatives); `tests/mainline/test_model_integrity.py` requires the edge table to equal the dependencies derived from the rules |
+| Prediction | `endotwin/results/endotwin-v0.3.0/fixed_point_predictions.tsv`, `comparison_directions.tsv`, `discrimination.tsv` |
 | Readout | `endotwin/config/observation_map.tsv` |
 
 ## Evidence classes
@@ -20,17 +20,17 @@ Every dependency carries exactly one class (`edges.tsv`, column
 `evidence_class`). The class says what kind of support exists, not how strong
 the biology is in general.
 
-| Class | Meaning | Count in the default network (47) |
+| Class | Meaning | Count in the default network (49) |
 |---|---|---|
 | `literature_supported` | Primary literature supports the interaction in a relevant system | 13 |
-| `literature_supported_topic_level` | Inherited from a prototype topic-level evidence record; where full-text graded, the cited papers did **not** demonstrate this specific edge | 5 |
+| `literature_supported_topic_level` | Inherited from a prototype topic-level evidence record, or supported only by a review read in full; where full-text graded, the cited papers did **not** demonstrate this specific edge | 7 |
 | `literature_supported_species_transfer` | Supported in mouse only, applied to human | 3 |
 | `literature_supported_contested` | Supported, but the subject of a competing hypothesis (Q1, FOX) | 2 |
 | `literature_supported_route_unresolved` | The phenotype is supported; the intracellular route is not (IL-1β) | 3 |
 | `adoc_supported` | Supported by ADOC observations (expression or secretion) | 6 |
 | `experimental_definition` | Definitional effect of an experimental input on its target (ligand on receptor, inhibitor on its target) | 9 |
 | `simplifying_assumption` | A modelling choice, stated as such (3 of them are secretion relays) | 6 |
-| `alternative_hypothesis` | Present only in a rule variant | 3 (variant-only) |
+| `alternative_hypothesis` | Present only in a rule variant | 4 (variant-only) |
 
 ## The rules most relevant to the grant questions
 
@@ -107,6 +107,41 @@ S_PRL    = OUT_STROMAL_DECIDUALIZATION                // variant, PRL FOXO1-inde
 - Status: the inhibitor is a candidate WP2 perturbation, not in the funded
   protocol. The prototype refused this module because no ADOC perturbation could
   separate its nodes; the inhibitor and the planned RNA-seq now can.
+
+### Where stromal cAMP comes from (CAM, new in v0.3.0)
+
+```
+S_PKA            = IN_cAMP                        // default, reagent only
+S_PKA            = IN_cAMP or S_CAMP_AUTOCRINE    // variant, endogenous route too
+S_CAMP_AUTOCRINE = S_ESR1 and S_PGR
+S_CEBPB          = S_PKA
+```
+
+- **The requirement is not in question.** Activated PKA is required for
+  differentiation-dependent transcription of the decidual prolactin gene
+  (ET-034), and cAMP pathway activation is needed for PGR to take
+  transcriptional control of decidua-specific gene networks, very few genes
+  being *acutely* progestin-responsive in undifferentiated stromal cells
+  (ET-032, read in full). `S_CEBPB = S_PKA` stands.
+- **The sourcing is.** Extended treatment with oestradiol and a progestin raises
+  cAMP production and induces decidual markers, and that induction is blocked by
+  a PKA inhibitor (ET-032, citing ET-033 and ET-031). Until v0.3.0 the model had
+  no way to express this, so it predicted decidualisation to be impossible
+  without the reagent.
+- **Why a node and not an edge.** Progesterone *potentiates* prostaglandin- and
+  forskolin-driven adenylyl cyclase rather than producing cAMP by itself
+  (ET-035). A direct `S_PGR -> S_PKA` edge would assert a regulatory interaction
+  nobody has shown; `S_CAMP_AUTOCRINE` carries the indirection explicitly.
+- **Evidence depth is honest.** ET-032 is a review read in full; ET-033, ET-034
+  and ET-035 are registered at `cited_in_full_text_review`, because no copy is
+  in the local library. That is enough for an alternative variant and not enough
+  to change the default.
+- **Two limits the model cannot argue away.** The literature separates the routes
+  by *speed*, and a Boolean model with dimensionless time cannot: under the
+  variant the hormone-only fixed point is decidualised at any rate, and whether a
+  finite phase reaches it is a free parameter. And `S_CAMP_AUTOCRINE` shares an
+  alias class with `OUT_EPITHELIAL_SECRETORY` and `X_PAEP`, so the route is not
+  independently measurable — only its functional consequence is.
 
 ### Hedgehog reception (new node in v0.2.0)
 

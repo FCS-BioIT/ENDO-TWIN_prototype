@@ -1,4 +1,4 @@
-# ENDO-TWIN experimental protocols for endotwin-v0.2.0.
+# ENDO-TWIN experimental protocols for endotwin-v0.2.0 and endotwin-v0.3.0.
 #
 # A condition is an ordered list of phases. Each phase sets the experimental
 # inputs (unlisted inputs are OFF) and may apply interventions from
@@ -11,7 +11,9 @@
 # physical_duration records the experimental protocol for traceability only.
 
 schema_version: 1
-model_version: endotwin-v0.2.0
+# Valid for both versions: v0.3.0 adds an internal node and a rule-variant
+# family, and changes no experimental input, so the protocols are unchanged.
+model_version: [endotwin-v0.2.0, endotwin-v0.3.0]
 default_relative_duration: 30.0
 
 regimens:

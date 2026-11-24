@@ -1,0 +1,53 @@
+model_id = "endotwin"
+model_version = "endotwin-v0.3.0"
+status = "mainline_expanded_hypothesis_family"
+created_on = "2026-11-24"
+derived_from_model = "endotwin-v0.2.0"
+derived_from_repository = "a private repository of the same group"
+derived_from_commit = "b1de5f90582f02291789eb72753fa5ab1f2d8c88"
+calibrated = false
+biologically_validated = false
+physical_time_mapping = false
+transition_rates = "MaBoSS defaults (rate_up = rate_down = 1 for every node); not estimated. This matters more in v0.3.0 than in v0.2.0: the CAM family distinguishes an exogenous from an endogenous route to stromal PKA, and the literature distinguishes them by SPEED (acute versus extended hormone exposure). With no mapping from MaBoSS time to hours, that kinetic distinction is NOT represented. See [changes_from_v020]."
+
+[files]
+network = "network.bnd"
+config = "baseline.cfg"
+node_dictionary = "node_dictionary.tsv"
+edges = "edges.tsv"
+rule_variants = "rule_variants.tsv"
+lineage = "lineage.tsv"
+interface = "interface.tsv"
+references = "../../evidence/references.tsv"
+
+[scope]
+in_scope = [
+  "hormone-responsive epithelial-stromal regulation in the ADOC chip",
+  "ligands and secreted proteins in the shared extracellular space across the ADOC membrane",
+  "stromal decidualisation and its transcriptional mediators (C/EBPbeta, FOXO1, IRF4, WNT4)",
+  "PRL and IGFBP-1 as separate expression and secreted-protein readouts",
+  "epithelial secretory differentiation (PAEP)",
+  "epithelial proliferation through stromal ERalpha, HAND2 and epithelial FGFR-ERK (Ki67, EdU)",
+  "BMP pathway activity (pSMAD1/5/8) and Hedgehog reception (GLI1, PTCH1)",
+  "IL-1beta perturbation through JNK and ERK1/2 (provisional, to be revised with G2 data)",
+]
+out_of_scope = [
+  "embryo adhesion and receptivity (legacy prototype models/superset)",
+  "a complete menstrual cycle, shedding or repair",
+  "patient-specific models",
+  "spatially resolved multicellular simulation",
+]
+
+[changes_from_v010]
+summary = "Extracellular compartment for IHH, BMP2 and the stromal mitogen, and for secreted PAEP, PRL and IGFBP-1; stromal decidual programme split into C/EBPbeta, FOXO1, IRF4 and WNT4; PRL and IGFBP-1 separated (new FOX hypothesis family); oestrogen receptor activity explicit in both compartments; epithelial FGFR-ERK step; Hedgehog reception explicit; IL-1beta split into JNK and ERK1/2 routes; Smoothened and FOXO1 inhibitors added as candidate perturbations."
+lineage_table = "lineage.tsv"
+
+[changes_from_v020]
+summary = "One node and one hypothesis family. S_CAMP_AUTOCRINE carries an endogenous, autocrine route from extended oestrogen-plus-progestin exposure to stromal cAMP; the CAM family chooses whether stromal PKA reads it. The default variant CAM_exogenous_only keeps S_PKA = IN_cAMP, so the DEFAULT NETWORK IS LOGICALLY IDENTICAL TO endotwin-v0.2.0 and every default prediction is unchanged. Nothing else was touched."
+lineage_table = "lineage.tsv"
+scenarios = "Five families now, so the scenario space doubles from 24 to 48."
+
+[changes_from_v020.what_the_model_cannot_say]
+kinetics = "ET-032 licenses the autocrine route for EXTENDED exposure and denies it for ACUTE exposure. A Boolean model with dimensionless time cannot hold that distinction: under CAM_hormone_autocrine the hormone-only fixed point is decidualized regardless of transition rates, and whether it is reached inside a finite phase depends entirely on an uncalibrated rate. The variant therefore encodes the EXISTENCE of the route, not its speed."
+asymmetry = "This makes the hormone-only arm informative in one direction only. Observing PRL/IGFBP-1 under E2 + progestin without 8-Br-cAMP falsifies CAM_exogenous_only. Not observing them discriminates nothing, because CAM_hormone_autocrine predicts the same outcome whenever the route is slower than the exposure window."
+identifiability = "S_CAMP_AUTOCRINE computes IN_E2 and IN_PROGESTIN, which is the same Boolean function as OUT_EPITHELIAL_SECRETORY and X_PAEP, so all three sit in ONE ALIAS CLASS. Endogenous stromal cAMP tone is therefore NOT independently measurable in this model, despite being a different compartment and different biology from epithelial PAEP secretion. The CAM family consequently cannot be tested by assaying cAMP; it is tested only by its functional consequence, decidualization under the hormone-only regimen. A measured divergence between stromal cAMP and epithelial PAEP would falsify the aliasing rather than be excluded by it."

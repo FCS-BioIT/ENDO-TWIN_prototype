@@ -1,15 +1,27 @@
-# DRAFT, NOT FROZEN. Recommended WP2 prediction (SO2, Task 2.1); see
-# docs/wp2_prediction_selection.md. Freeze only at the end of WP1, after:
-#   1. Task 1.1 has qualified the hormone-only regimen (this comparison needs it);
-#   2. the model version below has been revised with the WP1 data, if needed;
-#   3. development_donors lists every WP1 donor (pseudonymised);
-#   4. the agreement criteria are signed off.
-# Then commit and run `pixi run endotwin-freeze <this file>` on a clean tree.
-# Check eligibility at any time with `pixi run endotwin-freeze --check <this file>`.
+# DRAFT, NOT FROZEN -- and WITHDRAWN as the recommended candidate on 2026-11-24.
+#
+# Kept for provenance, not for freezing. Reassessed against
+# MemoriaCT-individual_Digital Twin_v10 and endotwin-v0.3.0; see
+# docs/wp2_prediction_selection.md. It fails Task 2.1 on two independent counts:
+#
+#   1. NO FUNCTIONAL PREDICTION. v10 requires "an informative downstream
+#      functional response beyond its direct molecular target". pSMAD1/5/8 is
+#      PATHWAY ACTIVITY. Every functional readout -- decidualization, PRL,
+#      IGFBP-1, Ki67, PAEP -- is no_change under both CAM variants.
+#   2. NOT RULE-ROBUST ANY MORE. The new CAM hypothesis family (endotwin-v0.3.0)
+#      splits the primary: pSMAD1/5/8 falls under CAM_exogenous_only but is
+#      unchanged under CAM_hormone_autocrine, because endogenous PKA then
+#      supplies BMP2 through E2-28.
+#
+# The one readout that survives both CAM variants is NR2F2, which is in the same
+# alias class as S_HH_SIGNALING and is therefore target engagement, not a
+# downstream response.
+#
+# Do not freeze. Do not delete: the rejection is part of the WP2 record.
 
 prediction_id: WP2-SMOI-HO-PSMAD
 purpose: WP2_prospective_G1
-model_version: endotwin-v0.2.0
+model_version: endotwin-v0.3.0
 comparison: HH_smo_inhibition_hormone_only   # Smoothened antagonist vs hormone-only control
 primary_readout: RO-PSMAD158                 # predicted: down
 secondary_readouts:
@@ -17,7 +29,7 @@ secondary_readouts:
   - RO-RNA-NR2F2   # NR2F2: down
   - RO-RNA-BMP2    # BMP2 expression: down
   - RO-KI67        # epithelial proliferation: no change (needs equivalence)
-rule_variants: {}  # default variant of every family; the primary is the same in all 24 scenarios
+rule_variants: {}  # default variant of every family; the primary is the same in all 48 scenarios
 agreement_criteria:
   min_effect_log2: 0.5
   min_evaluable_donors: 4

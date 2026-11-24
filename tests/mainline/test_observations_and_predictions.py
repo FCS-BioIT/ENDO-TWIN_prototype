@@ -43,7 +43,7 @@ SPEC = textwrap.dedent(
     """
     prediction_id: TEST-Q1-BMPRI
     purpose: WP2_prospective_G1
-    model_version: endotwin-v0.2.0
+    model_version: endotwin-v0.3.0
     comparison: Q1_bmpr_inhibition
     primary_readout: RO-PRL
     secondary_readouts: [RO-PSMAD158, RO-KI67]

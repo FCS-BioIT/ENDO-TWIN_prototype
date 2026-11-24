@@ -4,9 +4,16 @@ An optional, faster way to run exactly the tests `pixi run test` runs. It does
 not replace `pixi run test`, which stays the required serial pre-merge check.
 
 The split is the one benchmarked on 2026-10-19 (docs/verification/README.md):
-worker A runs `unit.test_phase2b_contract`, the longest module, and worker B
-runs every other module. Whole modules stay together, in discovery order, so
-module and class fixtures run as they do serially.
+worker A runs `unit.test_phase2b_contract` and worker B runs every other
+module. Whole modules stay together, in discovery order, so module and class
+fixtures run as they do serially.
+
+STALE, measured 2026-11-24: that module was the longest in the PROTOTYPE, where
+its Git history exists. Here it skips in ~0.2 s, so worker A idles and this
+runner gives no speedup at all. The real critical path is
+`unit.test_v05_u6b_muc1_reconciliation` at 128 s; see
+docs/verification/module_times.json. Re-splitting needs the pinning test in
+unit.test_test_parallel to move with it.
 
 A run passes only when all of these hold, and never on partial output:
 

@@ -39,10 +39,26 @@ it is not an independent CI result.
 ## `pixi run test-parallel` — optional, the same suite on two workers
 
 Runs exactly the tests `pixi run test` runs, in two processes: worker A runs
-`unit.test_phase2b_contract`, the longest module (about 1,000 s, the floor), and
-worker B runs every other module. It is a faster way to run the complete
-suite, not a replacement for `pixi run test`, which stays the required
-pre-merge check. `scripts/run_test_parallel.py` describes the checks.
+`unit.test_phase2b_contract` and worker B runs every other module. It is not a
+replacement for `pixi run test`, which stays the required pre-merge check.
+`src/scripts/run_test_parallel.py` describes the checks.
+
+> **The split no longer speeds anything up here, and the rationale behind it is
+> no longer true in this repository.** It was chosen because
+> `unit.test_phase2b_contract` was the longest module, about 1,000 s, in the
+> *prototype*, where its Git history exists. This repository is history-free by
+> design (`docs/ORIGIN.md`), so that module skips in about 0.2 s: worker A
+> finishes immediately and worker B carries the whole suite. Measured speedup
+> today: **1.00x**.
+>
+> [`module_times.json`](module_times.json) records every module's wall and CPU
+> time, measured 2026-11-24. The real critical path is
+> `unit.test_v05_u6b_muc1_reconciliation` at **128 s**, which is the floor for
+> any split that keeps whole modules together. Ideal packings from that data:
+> 2 workers 474 s (2.0x), 4 workers 237 s (4.0x), 8 workers 128 s (7.4x), and
+> nothing beyond 8 — the critical path binds. Re-splitting is therefore worth
+> doing, and is a deliberate change: `WORKER_A_MODULES` is pinned by
+> `unit.test_test_parallel`, so the test moves with it.
 
 * Each worker is started through `pixi run` with inherited activation cleared
   (PATH, CONDA_PREFIX, PIXI_PROJECT_*, PYTHONPATH), its own TMPDIR and the

@@ -19,6 +19,44 @@ commit is normally an ancestor of HEAD. `tested_tree` in
 | Prototype at the source commit `b1de5f9`, fresh clone, before any change | 2,767 | 2,757 passed, 1 failed, 9 skipped in 1,980 s | `docs/verification/source_baseline_b1de5f9.json`, log alongside |
 | Prototype benchmark, 2026-10-16 (owner's working copy) | 2,415 | OK (1 skip) in 1,958 s | `docs/verification/cache_benchmark_record.json` |
 
+## Where the suite's time goes, and how far it parallelises
+
+Measured 2026-11-24 by timing every test module in one process;
+[`verification/module_times.json`](verification/module_times.json) has all 139
+modules with wall and CPU time each.
+
+| | |
+|---|---|
+| Wall time, complete suite | **945 s** (`pixi run test`, single process) |
+| CPU time, complete suite | **1,040 s** (user 1,009 s + system 30 s) |
+| Peak resident memory | **9.7 GB** |
+| Longest single module | **128 s** — `unit.test_v05_u6b_muc1_reconciliation` (36 tests) |
+
+CPU time slightly **exceeds** wall time because some tests spawn subprocesses
+(`pixi run`, MaBoSS, `git`), so a little work already overlaps. The ratio is
+1.10, so the suite is otherwise serial.
+
+**The parallel ceiling is set by the longest module**, because whole modules
+must stay together for their fixtures. Ideal packings of the measured times:
+
+| Workers | Makespan | Speedup |
+|---|---|---|
+| 1 (today) | 948 s | 1.0x |
+| 2 | 474 s | 2.0x |
+| 4 | 237 s | 4.0x |
+| 8 | 128 s | 7.4x |
+| 16 | 128 s | 7.4x — no further gain |
+
+Beyond eight workers nothing improves: the 128 s critical path binds. Memory is
+not the constraint on this machine (125 GB total against a 9.7 GB serial peak),
+though per-worker peaks would need checking before fixing a worker count.
+
+**`pixi run test-parallel` currently delivers none of this.** Its split gives
+worker A a single module that was the longest in the prototype and that skips in
+about 0.2 s here, so worker B runs everything: measured speedup **1.00x**. The
+split is worth redoing against the measured times, and doing so is a deliberate
+change, because `WORKER_A_MODULES` is pinned by `unit.test_test_parallel`.
+
 The 10 non-passes at the source commit all need files that are local-only by
 design and absent from any clone: the 3.4 GB scRNA RDS and the gitignored
 annotation workbook (1 failure, 7 skips), the literature PDFs (1 skip) and a local

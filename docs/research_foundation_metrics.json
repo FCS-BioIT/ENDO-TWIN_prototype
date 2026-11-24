@@ -523,14 +523,14 @@
     "endotwin_full_suite": {
       "status": "final: run on the committed tree recorded in tested_tree",
       "command": "pixi run test (python -B -m unittest discover -s tests -v), single process",
-      "tested_tree": "ac4d98fa1e42f0e85c99eb45e7f4c5d6b2ab0ac2",
+      "tested_tree": "ab40e1f7e04bfcd346f12faa66ba8ee398dd2c04",
       "local_only_evidence_present": "data/combined-dataset-patient-integration.rds, the gitignored annotation workbook, context/literature/pdfs/ and output/review_inbox/ were hard-linked from the owner's prototype working copy (gitignored, never committed), as in the prototype's 2026-10-16 benchmark",
-      "ran": 2587,
-      "seconds": 936.121,
+      "ran": 2604,
+      "seconds": 951.147,
       "result_line": "OK (skipped=63)",
       "failed": 0,
       "skipped": 63,
-      "passed": 2524,
+      "passed": 2541,
       "history_bound_skips": 63,
       "local_data_skips": 0,
       "failures_and_errors": [],
@@ -555,7 +555,7 @@
     },
     "endotwin_mainline_tests": {
       "command": "pixi run endotwin-test",
-      "ran": 116,
+      "ran": 131,
       "result_line": "OK"
     },
     "source_baseline": {

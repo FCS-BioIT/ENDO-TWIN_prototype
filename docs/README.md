@@ -244,7 +244,7 @@ them. Full audit:
 | ADOC data | 62 secreted-protein rows, 39 observed values (PRL, IGFBP-1, PAEP); scRNA-seq with 28,212 cells from 3 donors |
 | ENDO-TWIN v0.3.0 | 40 nodes, 49 dependencies, 17 distinct Boolean functions; 5 hypothesis families, 11 rule variants, 48 scenarios; 12 protocol conditions, 9 comparisons |
 | Robustness | 5,670 of 5,670 steady-state predictions unchanged under 30 random rate sets; all 1680 simulated phases reach their exact fixed points |
-| Tests | 2,587 automated tests in this repository (2,524 passed, 0 failed, 63 skipped) |
+| Tests | 2,604 automated tests in this repository (2,541 passed, 0 failed, 63 skipped) |
 <!-- dashboard:end -->
 
 Named nodes are not the same as distinct functions, and simulation runs are
@@ -348,10 +348,12 @@ final = run.final("differentiation_supplemented")
 final["X_IGFBP1"], final["X_PRL"]   # (0.0, 1.0)
 ```
 
-Two WP2 drafts are ready and checked but not frozen: Smoothened inhibition
-under the hormone-only regimen (pSMAD1/5/8 down, recommended) and FOXO1
-inhibition (IGFBP-1 down). They get frozen at the end of WP1, once the WP1
-donors are known ([docs/wp2_prediction_selection.md](wp2_prediction_selection.md)).
+Two WP2 drafts exist and **neither is eligible**. The Smoothened draft is
+withdrawn (no functional prediction, and the CAM family splits its pathway
+prediction); the FOXO1 draft is the closest, but its robust readout is the
+direct target gene and its informative readout is rule-dependent. Nothing is
+frozen, and nothing should be before the end of WP1
+([docs/wp2_prediction_selection.md](wp2_prediction_selection.md)).
 `pixi run endotwin-freeze --check <spec>` runs the eligibility analysis without
 freezing anything.
 
@@ -362,8 +364,8 @@ it says, reproducibly. They say nothing about whether the biology is right.
 
 | Suite | Tests | Result |
 |---|---|---|
-| This repository, `pixi run test` | 2,587 | 2,524 passed, 0 failed, 63 skipped |
-| of which mainline, `pixi run endotwin-test` | 116 | OK |
+| This repository, `pixi run test` | 2,604 | 2,541 passed, 0 failed, 63 skipped |
+| of which mainline, `pixi run endotwin-test` | 131 | OK |
 | Prototype at the source commit | 2,767 | 2,757 passed; the 10 others need local-only data |
 | Prototype benchmark, 2026-10-16 | 2,415 | OK |
 

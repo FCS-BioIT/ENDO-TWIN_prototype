@@ -208,6 +208,7 @@ if [ -f docs/README.md ] && [ ! -e "$bundle_root/README.md" ]; then
 fi
 # DT-ADOC planning ledgers now live in docs/legacy/ and travel with the docs tree.
 copy_file docs/THIRD_PARTY_NOTICES.md "third-party-provenance"
+copy_file REVIEWER_GUIDE.md "reviewer-guide"
 copy_file pixi.toml "runtime-and-task-definition"
 copy_file pixi.lock "runtime-lock"
 copy_file .gitignore "generated-file-policy"

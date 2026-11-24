@@ -16,7 +16,7 @@ of those files changes without regenerating the results.
 
 | Result | Content |
 |---|---|
-| `structure.json` | Exact structure of the default network and of all 24 rule-variant scenarios |
+| `structure.json` | Exact structure of the default network and of all 48 rule-variant scenarios |
 | `fixed_point_predictions.tsv` | Fixed point of every phase of every condition under every scenario |
 | `comparison_directions.tsv`, `discrimination.tsv` | Predicted directions per matched comparison, and which comparisons separate which hypotheses |
 | `maboss_confirmation.tsv` | MaBoSS end-of-phase probabilities versus exact fixed points (2,000 trajectories) |

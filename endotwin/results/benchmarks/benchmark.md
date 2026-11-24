@@ -19,9 +19,9 @@ median of 3 repeats.
 
 | Trajectories | Wall (s) | CPU (s) | CPU s per trajectory |
 |---|---|---|---|
-| 2,000 | 0.293 | 0.293 | 1.46e-04 |
-| 10,000 | 0.992 | 0.992 | 9.92e-05 |
-| 50,000 | 4.745 | 4.744 | 9.49e-05 |
+| 2,000 | 0.315 | 0.315 | 1.57e-04 |
+| 10,000 | 1.015 | 1.015 | 1.01e-04 |
+| 50,000 | 4.482 | 4.474 | 8.95e-05 |
 
 Per-trajectory cost falls as the batch grows, because fixed setup is
 amortised. The ensemble is embarrassingly parallel across scenarios, rate
@@ -30,17 +30,42 @@ the binding resource is concurrency, not per-run speed.
 
 ## Extrapolated — planning assumptions, not measurements
 
-Unit: **0.992013 CPU-seconds** per condition run at 10,000 trajectories (measured).
+Unit: **1.014523 CPU-seconds** per condition run at 10,000 trajectories (measured).
+
+### Funded analyses
+
+The analyses v10 actually describes: rule comparison across every scenario, systematic sensitivity analysis, and single-perturbation screening for intervention selection.
 
 | Factor | Value | Basis |
 |---|---|---|
-| `pairwise_perturbations` | 2,016 | DERIVED from the model: 32 internal (non-input) nodes, each forcible ON or OFF, give 64 single perturbations and 64*63/2 = 2016 unordered pairs. It remains a PLANNING ASSUMPTION that pairs are screened at all; nothing in the funded work plan commits to it. |
+| `single_perturbations` | 64 | DERIVED: 32 internal (non-input) nodes, each forcible ON or OFF. v10 funds perturbation screening for intervention selection (WP4) and targeted perturbations testing selected dependencies before the WP2 freeze. It describes single perturbations, not combinations. |
 | `scenarios` | 48 | MEASURED from the model: one variant per hypothesis family. |
-| `rate_sets` | 1,000 | PLANNING ASSUMPTION. The committed ensemble uses 30; 1000 is a uncertainty-quantification target, not a current practice. |
-| `donors` | 30 | PLANNING ASSUMPTION for per-donor parameterisation. The funded plan names 5 G1 donors for WP2 and 21 chips for RNA-seq. |
-| `campaigns_per_project` | 4 | PLANNING ASSUMPTION: one full recomputation per major model revision over four years. |
+| `conditions` | 12 | MEASURED from endotwin/config/protocols.yaml. |
+| `rate_sets` | 100 | PLANNING ASSUMPTION, and the weakest number here. v10 funds 'systematic sensitivity analyses' of rules, rates and initial conditions but states no ensemble size; current practice is 30. |
+| `model_revisions` | 10 | PLANNING ASSUMPTION: WP1 versions the model repeatedly before the WP2 freeze, and WP3/WP4 revise it again. |
 
-**Product: 11,612,160,000 condition runs ≈ 3,199,837 CPU-hours.**
+**36,864,000 condition runs ≈ 10,389 CPU-hours.**
+
+### Illustrative only — NOT the funded workload
+
+A larger campaign no work package commits to, shown so that the gap between the funded plan and a much bigger number is visible.
+
+| Factor | Value | Basis |
+|---|---|---|
+| `pairwise_perturbations` | 2,016 | NOT FUNDED. 64*63/2 = 2016 unordered pairs. Combinatorial screening is a plausible future direction, especially for WP4 synergy, but no work package commits to it and no code here performs it. |
+| `scenarios` | 48 | MEASURED from the model: one variant per hypothesis family. |
+| `conditions` | 12 | MEASURED from endotwin/config/protocols.yaml. |
+| `rate_sets` | 1,000 | NOT FUNDED at this size: a full uncertainty-quantification target, against 30 in current practice. |
+| `model_revisions` | 10 | PLANNING ASSUMPTION: WP1 versions the model repeatedly before the WP2 freeze, and WP3/WP4 revise it again. |
+
+**11,612,160,000 condition runs ≈ 3,272,447 CPU-hours.**
+
+### Excluded on purpose
+
+- `per_donor_models`: v10 states the plan informs a COMMON G1 model initialisation 'without fitting donor-specific models', so a donor multiplier is excluded from both columns.
+
+### Caveats
 
 - Single-condition timing on an otherwise idle machine. Real campaigns additionally pay model loading, protocol resolution, result assembly and I/O per batch, and spot-instance retries.
-- The product of five planning factors is not a measurement. Changing any one changes the total proportionally.
+- A product of planning factors is not a measurement. Changing any one changes its total proportionally.
+- These are CPU-hours consumed: not vCPU-hours provisioned, not elapsed time, not money. See docs/computational_resources.md.

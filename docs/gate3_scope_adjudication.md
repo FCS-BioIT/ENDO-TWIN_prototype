@@ -316,7 +316,7 @@ and fitting it would import assay penetrance into mechanism.
 
 ### 8a. Gate 3a, after the first discrimination pass
 
-Computed in [`variant_discrimination.md`](variant_discrimination.md). Three
+Computed in [`variant_discrimination.md`](experiments/variant_discrimination.md). Three
 distinctions are kept apart there, because collapsing any of them overstates a
 candidate: structural vs experimental separability; discrimination in a
 **current arm** vs one needing a **new controlled input**; and a difference in a
@@ -437,7 +437,7 @@ CD98-b predicts **OFF** and CD98-c predicts **ON** — opposite predictions from
 one readout.
 
 > **Refined by the Gate-3a pass**
-> ([`variant_discrimination.md`](variant_discrimination.md)). The contrast above
+> ([`variant_discrimination.md`](experiments/variant_discrimination.md)). The contrast above
 > is true but incomplete: **CD98-b is not discriminable from v0.4 in any
 > recorded arm at all**, because its only new disjunct is `IN_HCG`, which is
 > false everywhere. Its recorded 35 → 36 structural gain is real and

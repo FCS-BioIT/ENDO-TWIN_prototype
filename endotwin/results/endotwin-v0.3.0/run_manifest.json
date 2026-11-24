@@ -48,10 +48,11 @@
     "relay_transient.tsv",
     "relay_transient_summary.json",
     "structure.json",
-    "verification_report.md"
+    "verification_report.md",
+    "wp2_candidate_screen.tsv"
   ],
   "repository_state_at_generation": {
-    "commit": "32c5289d112420acdc741c1bfa814120626bdda7",
+    "commit": "9b32e9e53cae2be4a7bca8d2b69723d04b842815",
     "dirty": true
   },
   "semantics": "MaBoSS probabilities are simulated trajectory frequencies under the stated rules, unit transition rates (unless stated) and initial conditions; MaBoSS time is dimensionless and not mapped to experimental time. No result here is a biological observation or a validation."

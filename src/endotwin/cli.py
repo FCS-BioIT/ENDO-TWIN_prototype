@@ -273,6 +273,13 @@ def cmd_verification_report(args) -> None:
     print(f"wrote {relative(path)}")
 
 
+def cmd_wp2_screen(args) -> None:
+    from endotwin.wp2_screen import write
+
+    path = write(args.model)
+    print(f"wrote {relative(path)}")
+
+
 def cmd_benchmark(args) -> None:
     from endotwin.benchmark import write_report
 
@@ -291,10 +298,13 @@ def cmd_all(args) -> None:
     cmd_rates(ns(model=m, samples=30, relay_samples=20))
     cmd_reference(ns(model=m, samples=REFERENCE_SAMPLES, seed=1))
     cmd_figures(ns(model=m))
-    cmd_manifest(ns(model=m))
     cmd_metrics(ns(model=m))
-    # Last: it reads the artifacts every step above has just written.
+    cmd_wp2_screen(ns(model=m))
+    # Reads the artifacts every step above has just written.
     cmd_verification_report(ns(model=m))
+    # LAST, deliberately: run_manifest.json lists every file in the results
+    # directory, so anything written after it would be missing from that list.
+    cmd_manifest(ns(model=m))
 
 
 def cmd_freeze(args) -> None:
@@ -390,6 +400,7 @@ def main(argv: list[str] | None = None) -> None:
     sub.add_parser("figures").set_defaults(func=cmd_figures)
     sub.add_parser("metrics").set_defaults(func=cmd_metrics)
     sub.add_parser("verification-report").set_defaults(func=cmd_verification_report)
+    sub.add_parser("wp2-screen").set_defaults(func=cmd_wp2_screen)
     sub.add_parser("benchmark").set_defaults(func=cmd_benchmark)
     sub.add_parser("all").set_defaults(func=cmd_all)
     p = sub.add_parser("freeze")

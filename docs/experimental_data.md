@@ -66,7 +66,7 @@ them, to build the model or to validate it:
 - **They cannot separate the hypotheses.** Under untreated, HT and HT plus
   mifepristone (modelled either as progesterone receptor activity forced off in
   both compartments or as progestin removal), every node of `endotwin-v0.3.0`
-  reaches the same steady state in all 24 rule-variant scenarios
+  reaches the same steady state in all 48 rule-variant scenarios
   (`AdhesionConditionsAreUninformative` in
   `tests/mainline/test_structure_and_hypotheses.py`). Any readout computed from
   the steady state, an adhesion proxy included, is therefore identical for the

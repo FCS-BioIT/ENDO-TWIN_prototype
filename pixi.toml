@@ -60,6 +60,14 @@ description = "Redraw the ENDO-TWIN figures and the README animation from commit
 cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m endotwin.cli verification-report"
 description = "Assemble endotwin/results/<version>/verification_report.md from the committed results: structural facts, reproducibility, sensitivity, evidence, hypothesis separation and pending predictions (also run by endotwin-all)"
 
+[tasks.endotwin-smoke]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m unittest tests.mainline.test_smoke -v"
+description = "Clean-clone smoke test: the model loads, every scenario is executable, the committed fixed points recompute, and the reviewer-facing outputs exist. No MaBoSS, no private data, no prototype Git history; seconds"
+
+[tasks.endotwin-wp2-screen]
+cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m endotwin.cli wp2-screen"
+description = "Exhaustive single-perturbation screen over every internal node, regimen and rule-variant scenario, for WP2 candidate selection (exact fixed points, no MaBoSS)"
+
 [tasks.endotwin-benchmark]
 cmd = "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -B -m endotwin.cli benchmark"
 description = "Measure wall and CPU time for representative MaBoSS workloads and write endotwin/results/benchmarks/ (repository planning only; machine-specific)"

@@ -7,10 +7,15 @@ rules are right.
 
 ## Test runs
 
+Each row names the commit it was run on. A row is **not** a claim about the
+current HEAD: documentation-only commits land after a suite run, so the tested
+commit is normally an ancestor of HEAD. `tested_tree` in
+`docs/verification/endotwin_suite_records.json` is authoritative.
+
 | Run | Tests | Result | Record |
 |---|---|---|---|
-| This repository, complete suite (`pixi run test`) | 2,587 | 2,524 passed, 0 failed, 63 skipped in 936 s (single process) | `docs/verification/endotwin_suite_records.json`, log `docs/verification/endotwin_suite.log.gz` |
-| ENDO-TWIN mainline only (`pixi run endotwin-test`) | 116 | OK | same record |
+| This repository, complete suite (`pixi run test`), at commit `TESTED_COMMIT` | 2,613 | 2,550 passed, 0 failed, 63 skipped in 945 s wall (single process) | `docs/verification/endotwin_suite_records.json`, log `docs/verification/endotwin_suite.log.gz` |
+| ENDO-TWIN mainline only (`pixi run endotwin-test`) | 140 | OK | same record |
 | Prototype at the source commit `b1de5f9`, fresh clone, before any change | 2,767 | 2,757 passed, 1 failed, 9 skipped in 1,980 s | `docs/verification/source_baseline_b1de5f9.json`, log alongside |
 | Prototype benchmark, 2026-10-16 (owner's working copy) | 2,415 | OK (1 skip) in 1,958 s | `docs/verification/cache_benchmark_record.json` |
 

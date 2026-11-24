@@ -10,6 +10,12 @@ This repository is the computational side of the ENDO-TWIN project (AEI
 PID2026, Carlos Simón Foundation). It grew out of an earlier, private prototype
 of the same group ([docs/ORIGIN.md](ORIGIN.md)).
 
+> **[Independent scientific review — evidence, predictions and reproducibility](../REVIEWER_GUIDE.md)**
+> A three-minute guide for evaluators: what the executable model contains, which
+> claims have a file behind them, which predictions are falsifiable and how to
+> reproduce them, and what has **not** been validated. Backed by the generated
+> [scientific verification report](../endotwin/results/endotwin-v0.3.0/verification_report.md).
+
 ![endotwin-v0.3.0 network through the ADOC protocol with IL-1β](assets/endotwin/endotwin_pathway_dynamics_v0.3.0.gif)
 
 *`endotwin-v0.3.0` running the ADOC protocol: basal culture, E2 priming, then
@@ -244,7 +250,7 @@ them. Full audit:
 | ADOC data | 62 secreted-protein rows, 39 observed values (PRL, IGFBP-1, PAEP); scRNA-seq with 28,212 cells from 3 donors |
 | ENDO-TWIN v0.3.0 | 40 nodes, 49 dependencies, 17 distinct Boolean functions; 5 hypothesis families, 11 rule variants, 48 scenarios; 12 protocol conditions, 9 comparisons |
 | Robustness | 5,670 of 5,670 steady-state predictions unchanged under 30 random rate sets; all 1680 simulated phases reach their exact fixed points |
-| Tests | 2,604 automated tests in this repository (2,541 passed, 0 failed, 63 skipped) |
+| Tests | 2,613 automated tests in this repository (2,550 passed, 0 failed, 63 skipped) |
 <!-- dashboard:end -->
 
 Named nodes are not the same as distinct functions, and simulation runs are
@@ -288,12 +294,25 @@ Main limitations:
 - Where graded, the IHH–NR2F2–BMP2 edges are weakly supported by their papers.
   No human study shows that Hedgehog reception is needed for NR2F2.
 - The SMO and FOXO1 inhibitors are candidates, not part of the funded protocol.
-- XAV939 is in the regimen but no rule reads it: a literature search found no
-  study testing XAV939 or canonical-WNT manipulation in endometrial epithelium
-  or stroma, and every candidate edge was rejected
-  ([curation_increment_01_xav939.md](curation_increment_01_xav939.md)). The
-  model is **silent** about XAV939, which is not the same as predicting it does
-  nothing: no response under the supplemented regimen may be read as
+- XAV939 is in the regimen but no rule reads it. The curated search
+  ([curation_increment_01_xav939.md](curation_increment_01_xav939.md)) found
+  four different things, and they must not be run together:
+  - **Canonical-WNT modulation in human endometrial epithelium: evidence
+    exists.** Downregulating WNT in human endometrial organoids increases
+    secretory and ciliated differentiation (ET-019, Garcia-Alonso et al. 2021). It
+    perturbs the *pathway*, not XAV939, and the stated result is confounded
+    with NOTCH.
+  - **XAV939's mechanism: established, but not in endometrium.** It inhibits
+    tankyrase 1/2, stabilising AXIN and so degrading β-catenin (ET-018, Huang
+    et al. 2009), in other systems.
+  - **XAV939 in ADOC: nothing.** No study tests the chain from the reagent to
+    an endometrial readout, which is why the composite edge was rejected rather
+    than admitted as inferred.
+  - **Stromal decidualisation: searched, nothing found.** That is a recorded
+    negative result, not an untested gap.
+
+  So the model is **silent** about XAV939, which is not the same as predicting
+  it does nothing: no response under the supplemented regimen may be read as
   hormone-driven. `tests/mainline/test_unmodelled_inputs.py` holds that line.
 - The IL-1β papers were read at abstract level only; no full text was
   reachable.
@@ -364,8 +383,8 @@ it says, reproducibly. They say nothing about whether the biology is right.
 
 | Suite | Tests | Result |
 |---|---|---|
-| This repository, `pixi run test` | 2,604 | 2,541 passed, 0 failed, 63 skipped |
-| of which mainline, `pixi run endotwin-test` | 131 | OK |
+| This repository, `pixi run test` | 2,613 | 2,550 passed, 0 failed, 63 skipped |
+| of which mainline, `pixi run endotwin-test` | 140 | OK |
 | Prototype at the source commit | 2,767 | 2,757 passed; the 10 others need local-only data |
 | Prototype benchmark, 2026-10-16 | 2,415 | OK |
 

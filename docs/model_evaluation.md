@@ -82,7 +82,7 @@ Further predictions:
   This reproduces the recorded prototype result (v0.5.1 vs v0.5.2) in the new
   model, with the converged-horizon check the prototype lacked.
 
-![Dynamics](assets/endotwin/endotwin_dynamics_v0.2.0.png)
+![Dynamics](assets/endotwin/endotwin_dynamics_v0.3.0.png)
 
 ![HAND2 relay](assets/endotwin/endotwin_relay_transient_v0.2.0.png)
 

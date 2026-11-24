@@ -149,8 +149,26 @@ as it stands.
 | `Q1` | 2 | yes | no | yes |
 | `Q2` | 3 | yes | no | yes |
 
-**4 of 5 families are separated by an arm the work plan funds.**
+**4 of 5 families are separated STRUCTURALLY by an arm the work plan funds** -- that is, the competing rules give different fixed points on a readout that arm measures. Read that with the three senses below: it is not a claim that the difference would be visible within the experimental exposure window.
 Separable only by a candidate perturbation that is not in the funded protocol: `FOX`. The work plan as written does not decide it, so any prediction resting on that family stays conditional.
+
+### 'Distinguishable' has three senses, and only the first is computed
+
+| Sense | What it means | Established here? |
+|---|---|---|
+| **Structural** | the competing rules give different Boolean fixed points | yes, by exhaustive enumeration |
+| **Identifiable** | the difference lands on a readout the funded plan actually measures | yes where the table above says a functional readout; alias classes are the limit |
+| **Biologically discriminable** | the difference would appear within the experimental exposure window | **not established** -- MaBoSS time is dimensionless and no rate is calibrated |
+
+The table above reports the first two. A family can be structurally separated and still fail to separate in a real 96-hour experiment.
+
+### Recorded limits on these separations
+
+Read from the model's own `provenance.toml`, so a family that records a caveat there cannot have it quietly dropped from this report.
+
+- **kinetics** — ET-032 licenses the autocrine route for EXTENDED exposure and denies it for ACUTE exposure. A Boolean model with dimensionless time cannot hold that distinction: under CAM_hormone_autocrine the hormone-only fixed point is decidualized regardless of transition rates, and whether it is reached inside a finite phase depends entirely on an uncalibrated rate. The variant therefore encodes the EXISTENCE of the route, not its speed.
+- **asymmetry** — This makes the hormone-only arm informative in one direction only. Observing PRL/IGFBP-1 under E2 + progestin without 8-Br-cAMP falsifies CAM_exogenous_only. Not observing them discriminates nothing, because CAM_hormone_autocrine predicts the same outcome whenever the route is slower than the exposure window.
+- **identifiability** — S_CAMP_AUTOCRINE computes IN_E2 and IN_PROGESTIN, which is the same Boolean function as OUT_EPITHELIAL_SECRETORY and X_PAEP, so all three sit in ONE ALIAS CLASS. Endogenous stromal cAMP tone is therefore NOT independently measurable in this model, despite being a different compartment and different biology from epithelial PAEP secretion. The CAM family consequently cannot be tested by assaying cAMP; it is tested only by its functional consequence, decidualization under the hormone-only regimen. A measured divergence between stromal cAMP and epithelial PAEP would falsify the aliasing rather than be excluded by it.
 
 **These are model scenarios, not biological replicates.** A scenario is
 one combination of competing rules, enumerated exhaustively on a computer.

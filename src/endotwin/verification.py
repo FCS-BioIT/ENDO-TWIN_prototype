@@ -24,6 +24,8 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
+import tomllib
+
 from endotwin import DEFAULT_MODEL_VERSION
 from endotwin.model import load_model, read_tsv
 
@@ -102,10 +104,26 @@ def _section_structure(structure: dict[str, Any], model: Any) -> str:
     return "".join(out)
 
 
+def _engine() -> dict[str, str]:
+    """Ask the engine directly rather than reading it out of the manifest.
+
+    This is what lets ``cmd_all`` write the manifest LAST, so that its ``outputs``
+    list covers every file in the results directory including this report. Taking
+    it from the manifest instead would force the manifest to be written first, and
+    it would then always be missing whatever came after it.
+    """
+    try:
+        from endotwin.simulate import engine_report
+
+        return engine_report()
+    except (ImportError, RuntimeError):  # pragma: no cover - MaBoSS absent
+        return {}
+
+
 def _section_reproducibility(
     confirmation: dict[str, Any], manifest: dict[str, Any]
 ) -> str:
-    engine = manifest.get("engine", {})
+    engine = _engine() or manifest.get("engine", {})
     out = [_h("2. Computational reproducibility"), "\n"]
     out.append(
         "The network is acyclic, so each protocol phase has exactly one fixed\n"
@@ -204,6 +222,34 @@ def _section_evidence(edges: list[dict[str, str]], refs: list[dict[str, str]]) -
     return "".join(out)
 
 
+def _what_the_model_cannot_say(model: Any) -> list[tuple[str, str]]:
+    """Caveats the model version records about its own discriminating power.
+
+    Any table in ``provenance.toml`` named ``what_the_model_cannot_say`` is
+    surfaced verbatim. Reading them rather than restating them here means a new
+    hypothesis family that records a limit gets it published automatically, and
+    cannot have it dropped from this report by an edit over here.
+    """
+    path = MODELS / model.version / "provenance.toml"
+    if not path.is_file():
+        return []
+    payload = tomllib.loads(path.read_text(encoding="utf-8"))
+
+    found: list[tuple[str, str]] = []
+
+    def walk(node: Any) -> None:
+        if not isinstance(node, dict):
+            return
+        for key, value in node.items():
+            if key == "what_the_model_cannot_say" and isinstance(value, dict):
+                found.extend((k, str(v)) for k, v in value.items())
+            else:
+                walk(value)
+
+    walk(payload)
+    return found
+
+
 def _unfunded_inputs(model: Any) -> set[str]:
     """Inputs the node dictionary itself marks as outside the funded protocol.
 
@@ -280,8 +326,11 @@ def _section_discrimination(discrimination: list[dict[str, str]], model: Any) ->
     unresolved = [f for f in families if not by_family.get(f)]
     candidate_families = [f for f in families if by_family.get(f) and not funded.get(f)]
     out.append(
-        f"\n**{n_funded} of {len(families)} families are separated by an arm the "
-        "work plan funds.**\n"
+        f"\n**{n_funded} of {len(families)} families are separated STRUCTURALLY "
+        "by an arm the work plan funds** -- that is, the competing rules give "
+        "different fixed points on a readout that arm measures. Read that with "
+        "the three senses below: it is not a claim that the difference would be "
+        "visible within the experimental exposure window.\n"
     )
     if candidate_families:
         out.append(
@@ -300,6 +349,29 @@ def _section_discrimination(discrimination: list[dict[str, str]], model: Any) ->
             + ", ".join(f"`{f}`" for f in unresolved)
             + ".\n"
         )
+    out.append(
+        "\n### 'Distinguishable' has three senses, and only the first is computed\n\n"
+        "| Sense | What it means | Established here? |\n|---|---|---|\n"
+        "| **Structural** | the competing rules give different Boolean fixed points |"
+        " yes, by exhaustive enumeration |\n"
+        "| **Identifiable** | the difference lands on a readout the funded plan "
+        "actually measures | yes where the table above says a functional readout; "
+        "alias classes are the limit |\n"
+        "| **Biologically discriminable** | the difference would appear within the "
+        "experimental exposure window | **not established** -- MaBoSS time is "
+        "dimensionless and no rate is calibrated |\n\n"
+        "The table above reports the first two. A family can be structurally "
+        "separated and still fail to separate in a real 96-hour experiment.\n"
+    )
+    cannot = _what_the_model_cannot_say(model)
+    if cannot:
+        out.append(
+            "\n### Recorded limits on these separations\n\n"
+            "Read from the model's own `provenance.toml`, so a family that records "
+            "a caveat there cannot have it quietly dropped from this report.\n\n"
+        )
+        for key, text in cannot:
+            out.append(f"- **{key}** — {text}\n")
     out.append(
         "\n**These are model scenarios, not biological replicates.** A scenario is\n"
         "one combination of competing rules, enumerated exhaustively on a computer.\n"

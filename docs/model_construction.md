@@ -13,14 +13,14 @@ lineage table maps every node back to it.
 | `baseline.cfg` | Default settings: all nodes start OFF, none internal (so the joint state can be carried between phases) |
 | `node_dictionary.tsv` | Compartment, layer, entity type (expression, protein activity, secreted ligand or protein, programme, condition), readouts, lineage |
 | `edges.tsv` | One row per dependency (47 default, 3 variant-only) with evidence class, references, mechanism and assumption |
-| `rule_variants.tsv` | Alternative rules, in four families that each own distinct nodes |
+| `rule_variants.tsv` | Alternative rules, in five families that each own distinct nodes |
 | `lineage.tsv` | Every v0.1.0 node: unchanged or modified, with the reason |
 | `interface.tsv` | The nine crossings between a cell compartment and the shared extracellular space |
 | `provenance.toml` | Source model and commit; `calibrated = false`, `biologically_validated = false`, `physical_time_mapping = false` |
 
 ## Architecture
 
-![endotwin-v0.3.0 network](assets/endotwin/endotwin_network_v0.2.0.png)
+![endotwin-v0.3.0 network](assets/endotwin/endotwin_network_v0.3.0.png)
 
 40 nodes in four compartments, run as one integrated MaBoSS model:
 

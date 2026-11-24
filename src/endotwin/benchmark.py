@@ -110,6 +110,7 @@ def environment(version: str) -> dict[str, Any]:
         "model_version": version,
         "nodes": len(model.nodes),
         "free_variables": len(model.inputs),
+        "conditions": len(load_protocols(model).conditions),
         "families": len(model.families()),
         "scenarios": len(model.scenarios()),
         "engine": engine,
@@ -120,53 +121,101 @@ def environment(version: str) -> dict[str, Any]:
     }
 
 
+def _product(factors: dict[str, dict[str, Any]]) -> int:
+    runs = 1
+    for f in factors.values():
+        runs *= int(f["value"])
+    return runs
+
+
 def scaling(measurements: list[Measurement], env: dict[str, Any]) -> dict[str, Any]:
-    """Extrapolate a campaign cost. Every factor below is an ASSUMPTION."""
+    """Two extrapolations, kept apart because they answer different questions.
+
+    **funded** costs the analyses the proposal actually describes. **illustrative**
+    costs a larger campaign nobody has committed to, and exists only to show what
+    reaching a much bigger number would take. Mixing them is how a compute budget
+    stops being checkable, so they never share a total.
+
+    One factor is deliberately absent from both: per-donor model fitting. v10 is
+    explicit that the inferred activities "inform a common G1 model
+    initialisation ... without fitting donor-specific models", so a donor
+    multiplier would contradict the proposal rather than extrapolate it.
+    """
     per_run = {m.sample_count: m.median_cpu for m in measurements}
     unit = per_run.get(10000) or next(iter(per_run.values()))
     internal = env["nodes"] - env["free_variables"]
     singles = 2 * internal  # each internal node forced ON or OFF
     pairs = singles * (singles - 1) // 2
-    factors = {
+
+    scenarios = {
+        "value": env["scenarios"],
+        "basis": "MEASURED from the model: one variant per hypothesis family.",
+    }
+    conditions = {
+        "value": env["conditions"],
+        "basis": "MEASURED from endotwin/config/protocols.yaml.",
+    }
+    revisions = {
+        "value": 10,
+        "basis": "PLANNING ASSUMPTION: WP1 versions the model repeatedly before the "
+        "WP2 freeze, and WP3/WP4 revise it again.",
+    }
+
+    funded = {
+        "single_perturbations": {
+            "value": singles,
+            "basis": f"DERIVED: {internal} internal (non-input) nodes, each forcible "
+            "ON or OFF. v10 funds perturbation screening for intervention selection "
+            "(WP4) and targeted perturbations testing selected dependencies before "
+            "the WP2 freeze. It describes single perturbations, not combinations.",
+        },
+        "scenarios": scenarios,
+        "conditions": conditions,
+        "rate_sets": {
+            "value": 100,
+            "basis": "PLANNING ASSUMPTION, and the weakest number here. v10 funds "
+            "'systematic sensitivity analyses' of rules, rates and initial "
+            "conditions but states no ensemble size; current practice is 30.",
+        },
+        "model_revisions": revisions,
+    }
+    illustrative = {
         "pairwise_perturbations": {
             "value": pairs,
-            "basis": f"DERIVED from the model: {internal} internal (non-input) "
-            f"nodes, each forcible ON or OFF, give {singles} single perturbations "
-            f"and {singles}*{singles - 1}/2 = {pairs} unordered pairs. It remains "
-            "a PLANNING ASSUMPTION that pairs are screened at all; nothing in the "
-            "funded work plan commits to it.",
+            "basis": f"NOT FUNDED. {singles}*{singles - 1}/2 = {pairs} unordered "
+            "pairs. Combinatorial screening is a plausible future direction, "
+            "especially for WP4 synergy, but no work package commits to it and no "
+            "code here performs it.",
         },
-        "scenarios": {
-            "value": env["scenarios"],
-            "basis": "MEASURED from the model: one variant per hypothesis family.",
-        },
+        "scenarios": scenarios,
+        "conditions": conditions,
         "rate_sets": {
             "value": 1000,
-            "basis": "PLANNING ASSUMPTION. The committed ensemble uses 30; 1000 is "
-            "a uncertainty-quantification target, not a current practice.",
+            "basis": "NOT FUNDED at this size: a full uncertainty-quantification "
+            "target, against 30 in current practice.",
         },
-        "donors": {
-            "value": 30,
-            "basis": "PLANNING ASSUMPTION for per-donor parameterisation. The "
-            "funded plan names 5 G1 donors for WP2 and 21 chips for RNA-seq.",
-        },
-        "campaigns_per_project": {
-            "value": 4,
-            "basis": "PLANNING ASSUMPTION: one full recomputation per major model "
-            "revision over four years.",
-        },
+        "model_revisions": revisions,
     }
-    runs = 1
-    for f in factors.values():
-        runs *= int(f["value"])
-    cpu_hours = runs * unit / 3600.0
+
+    def cost(factors: dict[str, dict[str, Any]]) -> dict[str, Any]:
+        runs = _product(factors)
+        return {
+            "factors": factors,
+            "condition_runs": runs,
+            "cpu_hours": round(runs * unit / 3600.0, 1),
+        }
+
     return {
         "unit_cpu_seconds_per_condition_run": round(unit, 6),
         "unit_basis": "MEASURED: median CPU seconds for one 3-phase condition at "
         "10,000 trajectories.",
-        "factors": factors,
-        "total_condition_runs": runs,
-        "extrapolated_cpu_hours": round(cpu_hours, 1),
+        "funded": cost(funded),
+        "illustrative": cost(illustrative),
+        "excluded_factors": {
+            "per_donor_models": "v10 states the plan informs a COMMON G1 model "
+            "initialisation 'without fitting donor-specific models', so a donor "
+            "multiplier is excluded from both columns."
+        },
         "caveats": [
             (
                 "Single-condition timing on an otherwise idle machine. Real "
@@ -174,8 +223,12 @@ def scaling(measurements: list[Measurement], env: dict[str, Any]) -> dict[str, A
                 "result assembly and I/O per batch, and spot-instance retries."
             ),
             (
-                "The product of five planning factors is not a measurement. "
-                "Changing any one changes the total proportionally."
+                "A product of planning factors is not a measurement. Changing any "
+                "one changes its total proportionally."
+            ),
+            (
+                "These are CPU-hours consumed: not vCPU-hours provisioned, not "
+                "elapsed time, not money. See docs/computational_resources.md."
             ),
         ],
     }
@@ -235,15 +288,40 @@ def write_report(version: str = DEFAULT_MODEL_VERSION) -> tuple[Path, Path]:
     lines.append("\n## Extrapolated — planning assumptions, not measurements\n\n")
     lines.append(
         f"Unit: **{extrapolation['unit_cpu_seconds_per_condition_run']} CPU-seconds** "
-        "per condition run at 10,000 trajectories (measured).\n\n"
+        "per condition run at 10,000 trajectories (measured).\n"
     )
-    lines.append("| Factor | Value | Basis |\n|---|---|---|\n")
-    for name, f in extrapolation["factors"].items():
-        lines.append(f"| `{name}` | {f['value']:,} | {f['basis']} |\n")
-    lines.append(
-        f"\n**Product: {extrapolation['total_condition_runs']:,} condition runs ≈ "
-        f"{extrapolation['extrapolated_cpu_hours']:,.0f} CPU-hours.**\n\n"
-    )
+    for key, heading, intro in (
+        (
+            "funded",
+            "Funded analyses",
+            (
+                "The analyses v10 actually describes: rule comparison across every "
+                "scenario, systematic sensitivity analysis, and single-perturbation "
+                "screening for intervention selection."
+            ),
+        ),
+        (
+            "illustrative",
+            "Illustrative only — NOT the funded workload",
+            (
+                "A larger campaign no work package commits to, shown so that the gap "
+                "between the funded plan and a much bigger number is visible."
+            ),
+        ),
+    ):
+        block = extrapolation[key]
+        lines.append(f"\n### {heading}\n\n{intro}\n\n")
+        lines.append("| Factor | Value | Basis |\n|---|---|---|\n")
+        for name, f in block["factors"].items():
+            lines.append(f"| `{name}` | {f['value']:,} | {f['basis']} |\n")
+        lines.append(
+            f"\n**{block['condition_runs']:,} condition runs ≈ "
+            f"{block['cpu_hours']:,.0f} CPU-hours.**\n"
+        )
+    lines.append("\n### Excluded on purpose\n\n")
+    for name, why in extrapolation["excluded_factors"].items():
+        lines.append(f"- `{name}`: {why}\n")
+    lines.append("\n### Caveats\n\n")
     for c in extrapolation["caveats"]:
         lines.append(f"- {c}\n")
     md_path = OUT / "benchmark.md"

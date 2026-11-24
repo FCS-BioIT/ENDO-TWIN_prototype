@@ -106,6 +106,13 @@ prospectively. It was derived from an earlier, private prototype (`docs/ORIGIN.m
   `src/endotwin/figures.py` and `FRIENDLY` in `src/endotwin/animation.py` both
   raise `KeyError` on an unknown node, which kills the figure step near the end
   of `endotwin-all` after the expensive MaBoSS work has already been written.
+- **Never run `ruff format` on a path directly.** The exclusions live on the
+  `lint` and `format-check` command lines in `pixi.toml`, not in a config file,
+  so `ruff format src/` silently reformats the two byte-pinned files
+  (`protocols/conditions.py`, `observations/compartment_attribution.py`) and all
+  of `src/scripts/`. This happened on 2026-11-24; six files had to be restored.
+  Use `pixi run format-check` to check, and pass the same `--extend-exclude`
+  list if you must format.
 - **Read the exit status of the right command.** `endotwin-all` propagates
   failure correctly (the CLI exits non-zero and pixi passes it through); a note
   here previously claimed otherwise and was wrong. What hides it is the shell:
